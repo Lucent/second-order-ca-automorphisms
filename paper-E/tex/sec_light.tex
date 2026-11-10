@@ -1,0 +1,135 @@
+\section{Lemma L at every radius}\label{cl:sec:light}
+
+For $f\in\{91,94,95\}$ a block map that commutes with $F_f$ is determined by what it does on the fixed points of $\sh^{\pm1}F_f$. We give the argument for $f\in\{91,94\}$ and extend it to $95$ in Lemma~\ref{cl:lem:climb95} and Corollary~\ref{cl:cor:95}. Except where $95$ is named, $f\in\{91,94\}$, $F=F_f$, and
+\[
+\Phi^+=\{c:\sh F(c)=c\},\qquad\Phi^-=\{c:\sh^{-1}F(c)=c\}.
+\]
+Write $f(a,b,c)=a\oplus c\oplus N(a,b,c)$. Then $N=N_{91}$ is the indicator of $abc=000$ and $N=N_{94}$ that of $abc=010$; both are invariant under $(a,b,c)\mapsto(c,b,a)$. The spacetime relation becomes
+\begin{equation}\label{cl:eq:wave}
+Y(t+1,i)\oplus Y(t-1,i)\oplus Y(t,i-1)\oplus Y(t,i+1)=N\bigl(Y(t,i-1),Y(t,i),Y(t,i+1)\bigr),
+\end{equation}
+a discrete wave equation with a source, and $\Phi_f$ is the set of sequences with no triple in the support of $N$: no $000$ for $91$, no $010$ for $94$. By Lemma~\ref{cl:lem:Z2} and its proof, the diagrams of the points of $\Phi^+$ are the $Y(t,i)=\varphi(i-t)$ and those of $\Phi^-$ the $Y(t,i)=\varphi(i+t)$, $\varphi\in\Phi_f$; both sets are invariant under $\sh$ and $F$.
+
+\begin{theorem}[Lemma L]\label{cl:thm:L}
+Let $f\in\{91,94\}$. A block map $h$ of any radius that commutes with $F_f$ and fixes every point of $\Phi^+\cup\Phi^-$ is the identity.
+\end{theorem}
+
+\begin{corollary}\label{cl:cor:res}
+Let $f\in\{91,94\}$. Two block maps commuting with $F_f$ that agree on $\Phi^+\cup\Phi^-$ are equal, and the restriction homomorphism
+\[
+\Aut(X_{F_f})\to\Aut(\Phi^+,\sh)\times\Aut(\Phi^-,\sh),\qquad h\mapsto(h|_{\Phi^+},h|_{\Phi^-}),
+\]
+is injective.
+\end{corollary}
+
+Invertibility of $h$ is not assumed. The restriction is defined because an automorphism commutes with $\sh^{\pm1}F$ and therefore maps $\Phi^\pm$ onto itself. The proof occupies the rest of this section. Its idea is that every finite perturbation of a valid periodic background splits, after finitely many steps, into a left-moving and a right-moving light-speed wave, so that every window of a late row is a window of $\Phi^+\cup\Phi^-$.
+
+\emph{Light-cone coordinates.} Put $q=t-i$ and $p=t+i$, and write $Y[q,p]$ for $Y(t,i)$; the lattice is $\{[q,p]:q\equiv p\pmod2\}$, the lines $q=\mathrm{const}$ are right-moving light rays and the lines $p=\mathrm{const}$ left-moving ones. A point $C=[q,p]$ has the neighbours $\mathsf N=[q+1,p+1]=(t+1,i)$, $\mathsf S=[q-1,p-1]=(t-1,i)$, $\mathsf W=[q+1,p-1]=(t,i-1)$ and $\mathsf E=[q-1,p+1]=(t,i+1)$, and \eqref{cl:eq:wave} reads $Y(\mathsf N)\oplus Y(\mathsf S)\oplus Y(\mathsf W)\oplus Y(\mathsf E)=N(Y(\mathsf W),Y(C),Y(\mathsf E))$. We say that $Y$ \emph{fires} at $C$ if the right side is $1$.
+
+Fix $q_0\equiv p_0\pmod2$ and the quadrant $G=\{[q,p]:q\ge q_0,\ p\ge p_0\}$. For $q\ge q_0$ let $A(q)=Y[q,p]$ with $p\in\{p_0,p_0+1\}$, $p\equiv q$, and for $p\ge p_0$ let $B(p)=Y[q,p]$ with $q\in\{q_0,q_0+1\}$, $q\equiv p$; these are the values on two thick boundary rays of $G$, which meet in the two corners $[q_0,p_0]$ and $[q_0+1,p_0+1]$. For $P=[q,p]\in G$ let $\nu(P)$ be the value of $Y$ at the corner $[q_0+e,p_0+e]$ with $e\equiv q-q_0\pmod2$. Every point $[q,p]$ of $G$ with $q\ge q_0+2$ and $p\ge p_0+2$ is the point $\mathsf N$ of the centre $[q-1,p-1]$, whose $\mathsf S$, $\mathsf W$, $\mathsf E$ lie in $G$, so
+\begin{equation}\label{cl:eq:goursat}
+Y[q,p]=Y[q,p-2]\oplus Y[q-2,p-2]\oplus Y[q-2,p]\oplus N\bigl(Y[q,p-2],Y[q-1,p-1],Y[q-2,p]\bigr),
+\end{equation}
+and $Y$ on $G$ is determined by $A$ and $B$, by induction on $q+p$.
+
+\begin{lemma}[d'Alembert formula]\label{cl:lem:dalembert}
+For $P=[q,p]\in G$,
+\begin{multline*}
+Y(P)=A(q)\oplus B(p)\oplus\nu(P)\\
+\oplus\#\{\text{firings at centres }[q',p']\text{ with }q_0<q'<q,\ p_0<p'<p,\ q'\not\equiv q\}\pmod2.
+\end{multline*}
+\end{lemma}
+
+\begin{proof}
+Let $Y'(P)=Y(P)\oplus A(q)\oplus B(p)\oplus\nu(P)$. On the two boundary rays $Y'=0$: for instance, if $p\in\{p_0,p_0+1\}$ then $Y(P)=A(q)$, and $B(p)$ is the value at the corner $[q_0+e,p_0+e]$ with $p_0+e=p$, which is $\nu(P)$ because $q\equiv p$. For a centre $C=[q,p]$ with $q>q_0$, $p>p_0$, the $A$-terms of $\mathsf N,\mathsf S,\mathsf W,\mathsf E$ cancel in pairs ($\mathsf N,\mathsf W$ have first coordinate $q+1$, and $\mathsf S,\mathsf E$ have $q-1$), so do the $B$-terms, and $\nu$ is the same at all four points. So $Y'(\mathsf N)\oplus Y'(\mathsf S)\oplus Y'(\mathsf W)\oplus Y'(\mathsf E)$ is $1$ exactly if $Y$ fires at $C$. Let $\chi(P)$ be the count in the statement. For a centre $C=[q,p]$ the four sets counted by $\chi(\mathsf N)$, $\chi(\mathsf W)$, $\chi(\mathsf E)$, $\chi(\mathsf S)$ consist of the centres $[q',p']$ with $q'\equiv q$ and $q'\le q$, $p'\le p$; $q'\le q$, $p'\le p-2$; $q'\le q-2$, $p'\le p$; and $q'\le q-2$, $p'\le p-2$ (and $q'>q_0$, $p'>p_0$), so modulo $2$ they add up to the single centre $C$. Hence $\chi$ satisfies the same relation as $Y'$, and it vanishes on the boundary rays. By induction on $q+p$, $Y'=\chi$ on $G$.
+\end{proof}
+
+\emph{Finite perturbations.} Call $\beta=(\beta_0,\beta_1)\in\{0,1\}^2$ a \emph{valid background} if $Y_\beta(t,i)=\beta_{(t+i)\bmod2}$ solves \eqref{cl:eq:wave}. The left side of \eqref{cl:eq:wave} vanishes for $Y_\beta$, so $\beta$ is valid if and only if neither $(\beta_0,\beta_1,\beta_0)$ nor $(\beta_1,\beta_0,\beta_1)$ is in the support of $N$: the valid backgrounds are $11$, $01$, $10$ for $91$ and $00$, $11$ for $94$. Let $b_\beta$ be the configuration with diagram $Y_\beta$. A \emph{finite perturbation} of $\beta$ is a configuration that differs from $b_\beta$ in finitely many cells. Finite perturbations of a fixed valid background are dense in $\A^{\Z}$. Let $c$ be one; since $\sh b_\beta=b_{(\beta_1,\beta_0)}$ and $(\beta_1,\beta_0)$ is again valid, we may shift $c$ and assume that it differs from $b_\beta$ only in cells of $[0,w)$, for some $w\ge1$. Let $Y=Y_c$. For $t\ge0$, $Y(t,i)$ depends only on $c_{[i-t,i+t]}$, so $Y=Y_\beta$ at every point with $t\ge0$ and $p<0$ or $q\le-w$. We take
+\[
+p_0=-2,\qquad q_0\in\{-w-1,-w-2\}\ \text{even}.
+\]
+Then $q_0\equiv p_0$, the ray carrying $A$ lies in $\{p\le-1\}$, and the ray carrying $B$ lies in $\{q\le-w\}$. Hence $A(q)=\beta_{q\bmod2}$ for $q\ge2$ and $B(p)=\beta_{p\bmod2}$ for $p\ge w+2$ (these are the points of the rays with $t\ge0$), and every point with $t\ge0$ at which $Y\ne Y_\beta$ lies in $G$.
+
+\emph{Column and row steps.} For $k\ge0$ let $Z_k(p)$, $p\ge p_0$, be $Y[q,p]$ for the $q\in\{q_0+k,q_0+k+1\}$ with $q\equiv p$; so $Z_0=B$. The words $Z_k$ and $Z_{k+1}$ differ only on the class $U_k=\{p\ge p_0:p\equiv q_0+k\}$, where $Z_k(p)=Y[q_0+k,p]$ and $Z_{k+1}(p)=Y[q_0+k+2,p]$. Let $p_b$ be the least element of $U_k$ and $D(p)=Z_{k+1}(p)\oplus Z_k(p)$ for $p\in U_k$. Then $D(p_b)=A(q_0+k+2)\oplus A(q_0+k)$, and \eqref{cl:eq:goursat} at $[q_0+k+2,p]$ gives, for $p\in U_k$, $p\ge p_b+2$,
+\begin{equation}\label{cl:eq:colstep}
+D(p)=D(p-2)\oplus N\bigl(Z_{k+1}(p-2),Z_k(p-1),Z_k(p)\bigr),\qquad Z_{k+1}(p)=Z_k(p)\oplus D(p),
+\end{equation}
+where the $N$-term is the firing at the centre $[q_0+k+1,p-1]$. Since $A(q)=\beta_{q\bmod2}$ for $q\ge2$, $D(p_b)=0$ for all $k\ge k_0=2-q_0$. Exchanging the roles of $q$ and $p$, and using that $N$ is invariant under reversal of the triple, gives the row step from the words $Z'_\ell(q)$, $q\ge q_0$, built from the rays $p\in\{p_0+\ell,p_0+\ell+1\}$, with $Z'_0=A$; it has the same form \eqref{cl:eq:colstep}, and its initial value $B(p_0+\ell+2)\oplus B(p_0+\ell)$ vanishes for $\ell\ge\ell_0=w+2-p_0$.
+
+For a word $Z$ on $\{p\ge p_0\}$, a \emph{defect} is a position $p\ge p_0+2$ with $(Z(p-2),Z(p-1),Z(p))$ in the support of $N$, and $\eta(Z)$ is the least defect ($\infty$ if there is none).
+
+\begin{lemma}[defect climbing]\label{cl:lem:climb}
+Let $N\in\{N_{91},N_{94}\}$, let $Z$ be a word on $\{p\ge p_0\}$, let $U$ be one of the two residue classes modulo $2$ in $\{p\ge p_0\}$, with least element $p_b$, and let $Z'$ be obtained from $Z$ by the step \eqref{cl:eq:colstep} on $U$ with $D(p_b)=0$ (so $Z'=Z$ off $U$). Put $\eta=\eta(Z)$.
+\begin{enumerate}
+\item[(i)] $Z'=Z$ on $\{p<\eta\}$, no $N$-term of \eqref{cl:eq:colstep} with $p<\eta$ is $1$, and $\eta(Z')\ge\eta$.
+\item[(ii)] If $\eta\in U$ then $\eta(Z')\ge\eta+3$; if $\eta\notin U$ then $\eta(Z')=\eta$.
+\item[(iii)] If $Z''$ is obtained from $Z'$ by the step on the other class, then $\eta(Z'')\ge\eta+3$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) For $p\in U$, $p<\eta$, induction on $p$ gives $D(p)=0$: if $D(p-2)=0$ then $Z'(p-2)=Z(p-2)$, so the $N$-term is $N(Z(p-2),Z(p-1),Z(p))=0$, as $p$ is not a defect. A defect of $Z'$ below $\eta$ would use only positions where $Z'=Z$, so it would be a defect of $Z$.
+
+(ii) Let $\eta\in U$. Then $D(\eta-2)=0$ by (i), and the $N$-term at $\eta$ is $N(Z(\eta-2),Z(\eta-1),Z(\eta))=1$, so $D(\eta)=1$ and $Z'(\eta)=1\oplus Z(\eta)=1$, because the last letter of $000$ and of $010$ is $0$. A triple of $Z'$ ending at $\eta$, $\eta+1$ or $\eta+2$ contains the position $\eta$, with value $1$, in its third, second or first place. For $N_{91}$ no such triple is $000$. For $N_{94}$, a $1$ in the first or third place is not compatible with $010$, and the triple with $1$ in the second place begins with $Z'(\eta-1)=Z(\eta-1)$, the middle letter of the defect $010$ of $Z$ at $\eta$, which is $1$. With (i), $\eta(Z')\ge\eta+3$. Next let $\eta\notin U$. Then $\eta$ and $\eta-2$ are not in $U$, and $\eta-1<\eta$, so by (i) the three letters of the defect at $\eta$ are unchanged, and $\eta(Z')=\eta$ by (i).
+
+(iii) If $\eta\in U$, then $\eta(Z'')\ge\eta(Z')\ge\eta+3$ by (ii) and (i). If $\eta\notin U$, then $\eta(Z')=\eta$ lies in the other class, and (ii) for the second step gives $\eta(Z'')\ge\eta+3$.
+\end{proof}
+
+\begin{lemma}[finitely many firings]\label{cl:lem:fire}
+In the setting above there are $a^*,b^*$ such that every firing of $Y$ at a centre $[q',p']$ with $q'>q_0$, $p'>p_0$ has $q'-q_0\le a^*$ and $p'-p_0\le b^*$.
+\end{lemma}
+
+\begin{proof}
+A firing at such a centre is the $N$-term of the column step $k=q'-q_0-1$ at $p=p'+1$, and of the row step $\ell=p'-p_0-1$ at $q=q'+1$. Put $x=q'-q_0$ and $y=p'-p_0$, and $\eta_k=\eta(Z_k)$. The steps with $k\ge k_0$ satisfy the hypothesis of Lemma~\ref{cl:lem:climb}, so $\eta_k$ is nondecreasing for $k\ge k_0$, $\eta_{k+2}\ge\eta_k+3$, and $\eta_{k_0}\ge p_0+2$. A firing in step $k\ge k_0$ lies at height $p'+1\ge\eta_k\ge p_0+2+3\lfloor(k-k_0)/2\rfloor$ by Lemma~\ref{cl:lem:climb}(i). Hence there is a constant $c_1$ with $y\ge\frac32x-c_1$ whenever $x\ge k_0+1$, and likewise, from the row steps, a constant $c_2$ with $x\ge\frac32y-c_2$ whenever $y\ge\ell_0+1$. If both hypotheses hold, then $x\ge\frac94x-\frac32c_1-c_2$, so $x$ is bounded, and then $y\le\frac23(x+c_2)$ is bounded. If only one holds, the other coordinate is bounded by assumption and the inequality bounds the first; if neither holds, both are bounded.
+\end{proof}
+
+The proof needs only that the product of the two climbing rates, $\frac32\cdot\frac32$, exceeds $1$.
+
+\begin{proposition}[separation]\label{cl:prop:sep}
+Let $c$ be a finite perturbation of a valid background and $R\ge0$. There is $T$ such that for every $t\ge T$ and every $i$, the window $F^t(c)_{[i-R,i+R]}$ equals the window at the same position of some point of $\Phi^+\cup\Phi^-$.
+\end{proposition}
+
+\begin{proof}
+Use the setting above, and put $Q^*=\max(q_0+a^*+2,\,2)$ and $P^*=\max(p_0+b^*+2,\,w+2)$; so $Q^*$ and $P^*$ exceed the firing box of Lemma~\ref{cl:lem:fire} and the initial segments of $A$ and $B$ that are not background.
+
+Let $[q,p]\in G$ with $q\ge Q^*$. In Lemma~\ref{cl:lem:dalembert}, $A(q)=\beta_{q\bmod2}=\beta_{p\bmod2}$; $\nu$ depends on $q\bmod2=p\bmod2$; and since every firing has $q'<q$, the count is that of the firings with $p_0<p'<p$ and $p'\not\equiv p$. So $Y[q,p]=\varphi^-(p)$ depends only on $p$. Put $\varphi^-(p)=\beta_{p\bmod2}$ for $p<p_0$. Then $Y[q,p]=\varphi^-(p)$ at every point with $q\ge Q^*$ and $t\ge0$, since such points with $p<p_0$ are background. Moreover $\varphi^-\in\Phi_f$: given $p$, take a centre $C=[q,p]$ with $q\ge Q^*+1$ and $t\ge1$; its row triple is $(\varphi^-(p-1),\varphi^-(p),\varphi^-(p+1))$, and $Y$ does not fire at $C$, because for $p>p_0$ the centre lies in $G$ with $q-q_0>a^*$, and for $p\le p_0$ the triple is a triple of the valid background. Let $d^-\in\Phi^-$ be the point with diagram $\varphi^-(t+i)$; it agrees with $Y$ on $\{q\ge Q^*,\ t\ge0\}$. In the same way, with $B$ in place of $A$, $Y[q,p]=\varphi^+(q)$ on $\{p\ge P^*,\ t\ge0\}$, where $\varphi^+(q)=\beta_{q\bmod2}$ for $q<q_0$, the sequence $\varphi(k)=\varphi^+(-k)$ lies in $\Phi_f$, and the point $d^+\in\Phi^+$ with diagram $\varphi(i-t)=\varphi^+(t-i)$ agrees with $Y$ on $\{p\ge P^*,\ t\ge0\}$.
+
+The window $F^t(c)_{[i-R,i+R]}$ consists of the values of $Y$ at $(t-1,j)$ and $(t,j)$, $|j-i|\le R$. These points have $q\ge t-1-i-R$ and $p\ge t-1+i-R$, and the two lower bounds add up to $2t-2-2R$. Let $T=R+2+\lceil(Q^*+P^*)/2\rceil$. For $t\ge T$ all these points satisfy $q\ge Q^*$, or all satisfy $p\ge P^*$, and $t-1\ge0$. In the first case the window is that of $F^t(d^-)\in\Phi^-$, in the second that of $F^t(d^+)\in\Phi^+$, at the same position.
+\end{proof}
+
+\begin{proposition}[decay between two half-lines]\label{cl:prop:Fprime}
+Let $f\in\{91,94,95\}$, and let $c$ agree with some $\psi\in\Phi^-$ on $(-\infty,-L)$ and with some $\varphi\in\Phi^+$ on $(L,\infty)$. Then $Y_c$ fires only finitely often in $t\ge0$, and there are $C$, $T$ such that for $t\ge T$, $F^t(c)$ agrees with a point of $\Phi^-$ on $(-\infty,t/2-C]$ and with a point of $\Phi^+$ on $[-t/2+C,\infty)$.
+\end{proposition}
+
+\begin{proof}
+Let $g=3$ for $91$ and $94$ and $g=4$ for $95$ (Lemmas~\ref{cl:lem:climb}(iii) and~\ref{cl:lem:climb95}). Take the quadrant $G$ with corner $[q_0,p_0]=[L+2,-L-2]$, the point $t=0$, $i=-L-2$, and the quadrant $G'$ with corner $[-L-2,L+2]$. For $t\ge0$, $Y(t,i)$ depends only on $c_{[i-t,i+t]}$, so the ray of $G$ carrying $A$ lies where $Y=Y_\psi$, which is a function $\psi(p)$ of $p$; with $p\in\{p_0,p_0+1\}$ determined by the parity of $q$, $A$ is $2$-periodic, and $D(p_b)=A(q_0+k+2)\oplus A(q_0+k)=0$ at every column step. Likewise the ray of $G'$ carrying $B$ lies where $Y=\varphi(-q)$, and the row steps of $G'$ start with $D(p_b)=0$. As in the proof of Lemma~\ref{cl:lem:fire}, every firing of $G$ at $[q',p']$ has $p'-p_0\ge\frac g2(q'-q_0)-g$; applying this to the reflection $i\mapsto-i$, which commutes with $F$ because $N$ is invariant under reversal and exchanges $q$ and $p$, every firing of $G'$ has $q'+L+2\ge\frac g2(p'+L+2)-g$. A firing at a centre $(t,i)$ with $t\ge0$ reads $Y$ at $(t,i-1)$, $(t,i)$, $(t,i+1)$, which depend only on $c_{[i-1-t,i+1+t]}$, so firings in $t\ge0$ lie in $|i|\le L+t+1$; outside $G\cup G'$ this region has $t<L+2$. In $G\setminus G'$ the coordinate $p'$ is bounded, hence by the inequality so is $q'$, and symmetrically in $G'\setminus G$; in $G\cap G'$ the two inequalities together bound both coordinates because $g/2>1$. So there are finitely many firings.
+
+For the second statement let $T_0\ge1$ exceed the time of every firing in $t\ge0$, and let $H=\{[q,p]:q+p\ge2T_0-2\}$, the rows $t\ge T_0-1$. At every centre of $H$ with $t\ge T_0$ the relation \eqref{cl:eq:wave} has right side $0$, so $Y[q+1,p+1]\oplus Y[q+1,p-1]=Y[q-1,p+1]\oplus Y[q-1,p-1]$. Fix one of the two sublattices $q\equiv p\equiv e\pmod2$. Its points in the rows $T_0-1$ and $T_0$ form a staircase on which each point adds one new value of $q$ or of $p$, so there are functions $u,v$ with $Y[q,p]=u(q)\oplus v(p)$ there; $u(q)\oplus v(p)$ satisfies the same relation, and the rows $T_0-1$, $T_0$ determine $Y$ on all later rows, so $Y=u(q)\oplus v(p)$ on the sublattice in $H$. For $t\ge0$, $Y(t,i)$ depends only on $c_{[i-t,i+t]}$, so $Y=Y_\psi$, a function of $p$, on $\{p<-L,\ t\ge0\}$. Let $q_1=2T_0+L+2$. Two points $[q,p]$, $[q',p]$ of the sublattice with $q,q'\ge q_1$ and $p$ the element of $\{-L-1,-L-2\}$ congruent to $e$ lie in $H$ and in this region, so $u(q)=u(q')$: $u$ is constant on $\{q\ge q_1\}$ in each sublattice. Hence $Y[q,p]=\psi'(p)$ on $\{q\ge q_1\}\cap H$ for a sequence $\psi'$ defined on all of $\Z$. Given $p$, take a centre $[q,p]$ with $q\ge q_1+1$ and $t\ge T_0$; its points $\mathsf N,\mathsf E$ share $p+1$ and $\mathsf S,\mathsf W$ share $p-1$, so the left side of \eqref{cl:eq:wave} vanishes and the triple $(\psi'(p-1),\psi'(p),\psi'(p+1))$ is not in the support of $N$; so $\psi'\in\Phi_f$, and the point $d^-\in\Phi^-$ with diagram $\psi'(t+i)$ agrees with $Y$ on $\{q\ge q_1\}\cap H$. For $t\ge T_0$ and $i\le t/2-C$ with $C=q_1+1$, the points $(t-1,i)$ and $(t,i)$ have $q\ge t/2+C-1\ge q_1$ and lie in $H$, so $F^t(c)_i=F^t(d^-)_i$; thus $T=T_0$ and $C=q_1+1$ work. The statement on $[-t/2+C,\infty)$ follows by applying this to the reflection $i\mapsto-i$, which exchanges $q$ and $p$ and $\Phi^+$ and $\Phi^-$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{cl:thm:L} and Corollary~\ref{cl:cor:res}]
+Let $h$ have radius $R$ and local rule $\hat h$, let $c$ be a finite perturbation of a valid background, and take $T$ from Proposition~\ref{cl:prop:sep}. For each $i$ the window of $F^T(c)$ at $i$ is the window at $i$ of some $e\in\Phi^+\cup\Phi^-$, so $h(F^T(c))_i=\hat h(e_{[i-R,i+R]})=h(e)_i=e_i=F^T(c)_i$. Hence $F^T(h(c))=h(F^T(c))=F^T(c)$, and $h(c)=c$ because $F$ is bijective. Finite perturbations are dense and $h$ is continuous, so $h=\mathrm{id}$. If $g_1,g_2$ commute with $F$ and agree on $\Phi^+\cup\Phi^-$, the same argument gives $g_1(F^T(c))=g_2(F^T(c))$, hence $g_1(c)=g_2(c)$, for every finite perturbation $c$, and so $g_1=g_2$. For automorphisms, apply the first statement to $h_1^{-1}h_2$.
+\end{proof}
+
+The proof also shows that $91$R and $94$R have no glider and no static particle on a valid background: no finite perturbation stays inside a bounded region.
+
+\emph{Rule $95$.} For $f=95$ write again $f(a,b,c)=a\oplus c\oplus N(a,b,c)$. Then $N=N_{95}$ is the indicator of $a=c=0$, that is of the triples $000$ and $010$; it is invariant under reversal, and $11$ is the only valid background. Lemmas~\ref{cl:lem:dalembert} and~\ref{cl:lem:climb}(i) hold for every $N$ with these proofs; (ii) fails for $N_{95}$, and we replace (iii) by the following.
+
+\begin{lemma}[climbing for $95$]\label{cl:lem:climb95}
+Let $N=N_{95}$, and let $Z$, $U$, $p_b$, $Z'$, $Z''$ and $\eta$ be as in Lemma~\ref{cl:lem:climb}. Then $\eta(Z')\ge\eta$ and $\eta(Z'')\ge\eta+4$.
+\end{lemma}
+
+\begin{proof}
+Since $N_{95}(a,b,c)=[a=c=0]$ does not read $b$, the $N$-term $N(Z'(p-2),Z(p-1),Z(p))$ of \eqref{cl:eq:colstep} involves only positions of $U$, and whether $p$ is a defect depends only on $Z(p-2)$, $Z(p)$, which lie in the same class. So the step on $U$ changes only $Z|_U$ and depends only on $Z|_U$, and the defects of $Z$ in the other class are defects of $Z'$. Let $\eta_U$ be the least defect of $Z$ in $U$ ($\infty$ if none). As in Lemma~\ref{cl:lem:climb}(i), $D(p)=0$ and $Z'(p)=Z(p)$ for $p\in U$, $p<\eta_U$. At $\eta_U$ the $N$-term is $N(Z(\eta_U-2),\cdot,Z(\eta_U))=1$, so $D(\eta_U)=1$ and $Z'(\eta_U)=1\oplus Z(\eta_U)=1$. The $N$-term at $\eta_U+2$ has first letter $Z'(\eta_U)=1$, so it vanishes. The positions $\eta_U$ and $\eta_U+2$ are therefore not defects of $Z'$: the first has last letter $Z'(\eta_U)=1$, the second first letter $1$. Positions of $U$ below $\eta_U$ are not defects of $Z'$, since $Z'=Z$ there. Hence $\eta_U(Z')\ge\eta_U+4$, while the other class is unchanged; in particular $\eta(Z')\ge\eta$. The second step treats the other class $U'$ in the same way, so $\eta_U(Z'')=\eta_U(Z')\ge\eta_U+4$ and $\eta_{U'}(Z'')\ge\eta_{U'}(Z)+4$, and $\eta(Z'')=\min(\eta_U(Z''),\eta_{U'}(Z''))\ge\eta+4$.
+\end{proof}
+
+\begin{corollary}\label{cl:cor:95}
+Theorem~\ref{cl:thm:L} and Corollary~\ref{cl:cor:res} hold for $f=95$.
+\end{corollary}
+
+\begin{proof}
+The proofs of Lemma~\ref{cl:lem:fire}, Proposition~\ref{cl:prop:sep}, Theorem~\ref{cl:thm:L} and Corollary~\ref{cl:cor:res} carry over verbatim, with the valid background $11$, Lemma~\ref{cl:lem:climb}(i) and Lemma~\ref{cl:lem:climb95} in place of Lemma~\ref{cl:lem:climb}, and the rate $2$ in place of $\frac32$ (the product $2\cdot2$ exceeds $1$).
+\end{proof}
+
+For $95$ the two sublattices $t+i$ even and odd evolve independently, since $f_{95}=\overline{a\wedge c}$ does not read $b$ \cite[p.~386]{Takesue1989}; but the map that advances one sublattice by two steps commutes with $\sh^2$ and $\sh^{\pm1}F$ and not with $\sh$ or $F$, so it is not an automorphism. The decoupling is used in the proof of Theorem~\ref{cl:thm:KR95} and in Section~\ref{cl:sec:95}.
+

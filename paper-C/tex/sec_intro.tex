@@ -1,0 +1,121 @@
+\section{Introduction}\label{sec:intro}
+
+Let $\A$ be a finite alphabet and $\sh$ the left shift on $\A^{\Z}$. By the Curtis--Hedlund--Lyndon theorem \cite{Hedlund1969} the endomorphisms of the full shift are the block maps, and the automorphisms are the invertible block maps. The group $\Aut(\A^{\Z})$ is enormous: it contains every finite group and free groups \cite{BLR1988}, and every countable, locally finite, residually finite group \cite{KimRoush1990}, and its center consists of the powers of the shift \cite{Ryan1972}. A reversible cellular automaton $F\in\Aut(\A^{\Z})$ determines a two-dimensional subshift, its \emph{spacetime} $X_F\subset\A^{\Z^2}$, whose rows are the configurations $F^n(c)$, $n\in\Z$ \cite{CFK2019}. Its automorphism group is the centralizer of $F$ in $\Aut(\A^{\Z})$ (Lemma~\ref{lem:spacetime}), and it always contains $\langle\sh,F\rangle$. This paper is about automata for which it is much larger.
+
+The automata we consider are the second-order elementary rules, built by the second-order technique of Fredkin \cite{TM1990,Wolfram2002}; as a family they were introduced and studied systematically by Takesue \cite{Takesue1987,Takesue1989}, under the name of elementary reversible cellular automata. For an elementary rule $f\colon\{0,1\}^3\to\{0,1\}$ define, on the alphabet $\A=\{0,1\}^2$ with cells written $(x,y)$,
+\begin{equation}\label{eq:F}
+F_f(c)_i=\bigl(y_i,\;x_i\oplus f(y_{i-1},y_i,y_{i+1})\bigr).
+\end{equation}
+Reading $y$ as the current row and $x$ as the previous one, this is the recursion $y_{t+1}=y_{t-1}\oplus f(y_t)$, which is reversible for every $f$, with $F_f^{-1}(c)_i=\bigl(y_i\oplus f(x_{i-1},x_i,x_{i+1}),\,x_i\bigr)$. Following Takesue \cite{Takesue1987}, one writes $f$R for this automaton; $37$R, $54$R and $110$R are Wolfram's standard examples of reversible automata with complex behaviour \cite[Chapter~9]{Wolfram2002}. Under reflection and the cellwise complement the $256$ rules fall into $88$ conjugacy classes, the classes of Takesue \cite[Table~I]{Takesue1989}, and $\Aut(X_{F_f})$ depends only on the class (Section~\ref{sec:prelim}).
+
+For some of these automata the automorphism group is as small as possible. For rule $30$, for all non-affine rules permutive in an outer variable, and for the classes of $63$ and $187$, $\Aut(X_{F_f})=\langle\sh,F_f\rangle\cong\Z^2$ \cite{PaperB}; the same holds for the classes of $110$, $14$, $46$ and $79$ \cite{PaperA}. The classification of all $88$ classes is the subject of \cite{PaperD}. Here we study the opposite behaviour. The spacetime $X_F$ has zero $\Z^2$-entropy, so Hochman's theorem that positive entropy forces every finite group into the automorphism group of a $\Z^2$ shift of finite type \cite{Hochman2010} never applies to it, and something else must supply the room. In every case we find, it is a local structure.
+
+For most of the classes treated here the local structure is a \emph{wall} in the sense of Takesue \cite[Section~4]{Takesue1989}: a pattern, fixed or periodic in time, that appears at a fixed position irrespective of its surroundings. Takesue relates walls to local conservation laws, exhibits walls in $40$ of the $88$ classes (the $38$ classes of \cite[Fig.~2, Table~III]{Takesue1989} and those of $27$ and $59$), and observes that the two sides of a wall cannot communicate, so that a large system with walls is divided into parts that do not interact and is not mixing. This observation precedes the formalism of blocking words and equicontinuity points \cite{Kurka1997,BT2000}, of which walls are instances (Remark~\ref{hw:kurka}). The walls of the second-order elementary automata are therefore known, and we refer to \cite{Takesue1989} for them. What this paper adds is their consequence for the automorphism group: the embeddings of $\bigoplus_mS_m$ by permutations along trains of walls; a proof that the list of fixed walls is complete for words of every length; a bit hidden in words built from the periodic walls, with the flips that it gives; the census of rule $59$R at radius $2$; and the results on rule $54$. Where there are no walls, it adds the results on the linear and affine rules.
+
+\subsection*{Fixed walls}
+The basic mechanism is a word that the automaton fixes in every context.
+
+\begin{theorem}\label{thm:walls}
+Let $F$ be a reversible cellular automaton of radius $1$ on $\A^{\Z}$ and $W$ a nonempty word such that $F(c)$ contains $W$ at every position at which $c$ contains $W$. Let $C\subseteq\A$ be the set of symbols $s$ for which $W\,s\,W$ contains $W$ only at its two ends. If $|C|\ge2$, then $\Aut(X_F)$ contains a copy of $\bigoplus_{m\ge1}S_m$, hence of every finite group.
+\end{theorem}
+
+The copies of $W$ act as walls. A symbol between two walls evolves by a fixed permutation of $C$, whatever lies beyond the walls, so the contents of a run of such cells can be permuted without disturbing the dynamics. For the second-order elementary automata such words are known: the shortest fixed words of the $31$ classes of Table~\ref{tab:walls}, and the word $0330$ for the class of $133$, are the fixed walls (i)--(ix) of Takesue \cite[Fig.~2, Table~III and p.~391]{Takesue1989}, who examined the words of length at most $6$. We verify the hypothesis $|C|\ge2$ for them, and we prove that no other class has a fixed word of any length (Proposition~\ref{cl:prop:133}).
+
+\begin{corollary}\label{cor:48}
+For the $81$ elementary rules $f$ in the $31$ classes listed in Table~\ref{tab:walls}, $\Aut(X_{F_f})$ contains every finite group. These include $54$, $37$, $22$ and $73$. For the class $\{133,161\}$ the same holds, through the fixed word $0330$ of length $4$. No other elementary rule has a word of any length fixed by $F_f$ in every context.
+\end{corollary}
+
+\subsection*{Rule 54}
+Rule $54$ is, with rule $110$, one of the two elementary rules that Wolfram placed in class~4 \cite{Wolfram1984}. The two second-order automata behave in opposite ways: $\Aut(X_{F_{110}})=\langle\sh,F_{110}\rangle$ \cite{PaperA}, while for $54$R the pattern $33$ (writing $3$ for the cell $(1,1)$) is a wall, the wall (iv) of \cite[Table~III]{Takesue1989}, and the walls give the following.
+
+\begin{theorem}\label{thm:finite}
+For every $m\ge1$ there is an injective homomorphism $\Psi_m\colon S_m\to\Aut(X_{F_{54}})$ whose image consists of block maps of radius at most $3m+3$, and the images for different $m$ commute, so $\bigoplus_{m\ge1}S_m$ embeds in $\Aut(X_{F_{54}})$.
+\end{theorem}
+
+The relabellings of the segments between walls are automorphisms of smaller radius.
+
+\begin{theorem}\label{thm:54}
+Let $F=F_{54}$. The pattern $33$ is a wall: for every configuration $c$, $F(c)$ has $33$ at positions $(i,i+1)$ if and only if $c$ does, and $F$ acts on each maximal wall-free segment of $c$ as a function of that segment alone. For $L\ge1$ let $S_L$ be the set of admissible contents of a walled segment of length $L$, let $F_L\colon S_L\to S_L$ be the induced permutation and $C_L$ its centralizer in $\Sym(S_L)$. Then there is an injective homomorphism
+\[
+\Phi\colon\bigoplus_{L\ge1}C_L\longrightarrow\Aut(X_F),
+\]
+and $\Phi(\varphi)$ has radius at most $L+1$ for $\varphi\in C_L$. Each $C_L$ contains $F_L$, which has order $o_L\ge 2$, and $C_2\cong(\Z/3)^3\rtimes S_3$ is nonabelian. Consequently $\Aut(X_{F_{54}})$ contains an infinitely generated subgroup, so it is not virtually $\Z^d$ for any $d$, and it is not abelian.
+\end{theorem}
+
+The smallest of these automorphisms is $D=\Phi(F_1)$, of radius $2$ and order $3$, which acts as the $3$-cycle $0\to1\to2\to0$ on every cell that is a single-cell segment between two walls and as the identity elsewhere. At radius $2$ an exhaustive computation shows that the walls account for everything: the automorphisms of radius at most $2$ are exactly the $13$ maps $\sh^aF^b$ with $|a|+|b|\le2$ and the $10$ maps $F^bD^k$ with $|b|\le 2$, $k\in\{1,2\}$ (Theorem~\ref{thm:54census}). At radius $3$ there are automorphisms that do not preserve the walls.
+
+\begin{theorem}\label{thm:tau}
+Let $F=F_{54}$, $\pi$ the $3$-cycle $0\mapsto1\mapsto2\mapsto0$ on $\{0,1,2\}$, and let $\tau\colon\A^{\Z}\to\A^{\Z}$ be the map that, in every occurrence of the pattern $3\,3\,3\,s\,3\,3$ with $s\ne3$, replaces the third $3$ by $\pi(s)$, in every occurrence of $3\,3\,a\,s\,3\,3$ with $s\ne3$ and $a=\pi(s)$ replaces $a$ by $3$, and leaves every other cell unchanged. Then $\tau$ is a block map of radius $3$, $\tau^2=\mathrm{id}$, $\tau$ commutes with $F$, $\tau$ does not preserve walls, and $\tau D\ne D\tau$. Hence $\tau\in\Aut(X_F)$ lies outside the subgroup generated by $\sh$, $F$ and the wall relabellings, and $\langle\tau,D\rangle$ is a nonabelian subgroup of $\Aut(X_F)$.
+\end{theorem}
+
+A singleton segment and a two-cell segment of the form $(\pi(s),s)$ both evolve as a $3$-cycle, so the boundary between a long wall and the singleton next to it can be moved by one cell without disturbing the dynamics. A partial enumeration of the automorphisms of radius $3$ (Section~\ref{sec:54r3}) finds that every automorphism it produces differs from some $\sh^aF^b$ only on windows that contain a wall, and that most of them, like $\tau$, do not preserve walls.
+
+\subsection*{Walls that are not fixed}
+A wall need not be fixed in every context. Takesue's list contains walls that are periodic in time and not fixed \cite[Section~4]{Takesue1989}: for $27$R and $59$R, runs of cells in the same phase of a clock of period $3$, obtained from a local conservation law on pairs of adjacent cells \cite[(4.1)--(4.3)]{Takesue1989}; for $179$R, pairs of cells of period $3$; and for $127$R, $223$R, $126$R and $219$R, pairs of cells of period $4$ \cite[Fig.~2 and Table~III, walls (xii), (xiii), (xv), (xvi)]{Takesue1989}. None of these seven classes has a word fixed in every context, so Theorem~\ref{thm:walls} does not apply to them. In Section~\ref{sec:hidden} we give a general mechanism (Theorem~\ref{hw:general}) for walls whose image never depends on the context, except at cells that do not matter, and which carry one bit that $F$ cannot see. Permuting these hidden bits along chains of walls gives every finite group again. For $59$R the walls with a hidden bit are words of four cells that consist of two of Takesue's pairs whose phases differ (Theorem~\ref{hw:59}); for the class of $27$ they are words of six cells of the same kind (Theorem~\ref{hw:27}); and for $127$, $179$ and $223$ they are words of five cells, two of his periodic pairs with one cell between them, which are fixed by a power of $F$ (Proposition~\ref{hw:tp}). For $219$R and $126$R the walls are runs of cells bound by a relation that $F$ preserves, namely runs of his pairs, and they rotate through the alphabet in every context; permuting the cars between them again embeds every finite group (Theorem~\ref{hw:219}, Proposition~\ref{hw:126}).
+
+\subsection*{The affine rules 90 and 165}
+For the linear rules the centralizer is a vector space and can be computed by Gaussian elimination over $\F_2$.
+
+\begin{theorem}\label{thm:90}
+Let $F=F_{90}$, let $\Lam=\F_2[s,s^{-1}]$ act on $\F_2^{\Z}$ through $s=\sh$, and let $M=\begin{psmallmatrix}0&1\\1&p\end{psmallmatrix}$ with $p=s+s^{-1}$, so that $F(x,y)=M(x,y)^{\mathsf T}$.
+\begin{enumerate}
+\item[(a)] The affine block maps commuting with $F$ are the maps $c\mapsto (aI+bM)c+k$ with $a,b\in\Lam$ and $k\in\{(0,0)^{\Z},(1,1)^{\Z}\}$. Those of radius at most $R$ form an $\F_2$-space of dimension $4R+1$.
+\item[(b)] The maps $u=x+s^{-1}y$ and $w=x+sy$ are factor maps onto the binary full shift with $u\circ F=\sh^{-1}\circ u$ and $w\circ F=\sh\circ w$; the maps $\iota(v)=(v,s^{-1}v)$ and $\iota'(v)=(v,sv)$ are embeddings with $F\circ\iota=\iota\circ\sh^{-1}$ and $F\circ\iota'=\iota'\circ\sh$. For every block map $h$ of the binary full shift, $\iota\circ h\circ u$ and $\iota'\circ h\circ w$ commute with $F$.
+\item[(c)] For every $R\ge1$ the $\F_2$-span of the affine commuting maps of radius at most $R$ and of the maps in (b) of radius at most $R$ has dimension exactly $2^{2R}+1$. For $R\le3$ this span is the whole space of block maps of radius at most $R$ commuting with $F$, so that space has dimension $5$, $17$ and $65$ for $R=1,2,3$.
+\end{enumerate}
+\end{theorem}
+
+The automorphisms of $X_{F_{90}}$ of radius at most $2$ are all affine (Section~\ref{sec:linear}), and rule $90$ has no blocking word \cite{Kurka1997,BT2000}, hence no wall of any of the kinds above (Corollary~\ref{lin:noblock}). Nevertheless the eigen-factors of Theorem~\ref{thm:90}(b) carry marker automorphisms of the binary full shift into $X_{F_{90}}$: by Theorem~\ref{lin:movers}, $(\bigoplus_mS_m)^2$ embeds in $\Aut(X_{F_{90}})$ and in $\Aut(X_{F_{165}})$.
+
+\subsection*{The other affine rules}
+For the affine rules whose characteristic polynomial $t^2+pt+1$ is irreducible and whose spacetime action is mixing, the isomorphism rigidity theorem of Kitchens and Schmidt \cite{KS2000} forces every automorphism to be affine (Lemma~\ref{aff:lem:R}), and the automorphism group becomes a unit group, which we compute. Write $\kappa$ for the cellwise complement.
+
+\begin{theorem}\label{thm:affine}
+Every automorphism of $X_{F_f}$ is affine for the rules $f$ of the four classes below, and:
+\begin{enumerate}
+\item for $f\in\{170,240\}$, $\Aut(X_{F_f})=\langle F,h\rangle\cong\Z^2$ with $h=\mathrm{id}+F$, and $h^2=\sh^{\pm1}F$, so $\langle\sh,F\rangle$ has index $2$; for $f\in\{15,85\}$ the same holds with $h(c)=c+F(c)+(1,1)^{\Z}$;
+\item for $f\in\{60,102\}$, $\Aut(X_{F_f})=\langle\sh,F\rangle\times\langle\kappa\rangle\cong\Z^2\times\Z/2$;
+\item for $f\in\{153,195\}$, $\Aut(X_{F_f})=\langle\sh,F\rangle\times\langle\kappa\rangle\cong\Z^2\times\Z/2$;
+\item for $f=150$, $\Aut(X_{F_f})=\langle\sh,F,h\rangle\cong\Z^3$ with $h=\mathrm{id}+\sh F$; for $f=105$ the same holds with $h(c)=c+\sh F(c)+(1,1)^{\Z}$.
+\end{enumerate}
+\end{theorem}
+
+For $170$ the spacetime, with the action of $F$ and $\mathrm{id}+F$, is conjugate to Ledrappier's three-dot shift, with $\langle\sh,F\rangle$ acting as a subgroup of index $2$ of its shift action (Remark~\ref{aff:rem:ledrappier}). The hypotheses fail exactly for the other affine classes, those of $0$, $51$, $90$, $165$ and $255$, and each of them has non-affine automorphisms (Remark~\ref{aff:rem:consist}). For $255$, $F$ adds $1$ modulo $4$ in every cell, and $\Aut(X_{F_{255}})\cong\Z/4\times\mathcal G_4$, where $\mathcal G_4$ is a group of automorphisms of the full shift on $\Z/4$ that contains $\bigoplus_mS_m$ (Proposition~\ref{aff:prop:255}).
+
+\subsection*{Summary}
+Collecting these results, the following $42$ classes of second-order elementary automata, comprising $102$ rules, have the property that $\bigoplus_{m\ge1}S_m$ embeds in $\Aut(X_{F_f})$, so that $\Aut(X_{F_f})$ contains every finite group and is not virtually $\Z^n$ for any $n$:
+\begin{itemize}
+\item the $31$ classes ($81$ rules) of Table~\ref{tab:walls}, with a word of length at most $3$ fixed in every context, and the class of $133$ ($2$ rules), with one of length $4$ (Theorem~\ref{thm:walls}, Corollary~\ref{cor:48});
+\item the classes of $59$ and $27$ ($8$ rules), with hidden-bit walls (Theorems~\ref{hw:59} and~\ref{hw:27});
+\item the classes of $127$, $179$ and $223$ ($6$ rules), with time-periodic walls (Proposition~\ref{hw:tp});
+\item the classes of $219$ and $126$ ($2$ rules), with rotating walls (Theorem~\ref{hw:219}, Proposition~\ref{hw:126});
+\item the affine classes of $90$ and $165$ ($2$ rules), where $(\bigoplus_mS_m)^2$ embeds (Theorem~\ref{lin:movers});
+\item the affine class of $255$ ($1$ rule), through marker permutations of the difference sequence (Proposition~\ref{aff:prop:255}).
+\end{itemize}
+The first four items comprise $39$ classes. Their walls are those of Takesue or are built from them, and with the class of $255$, which also has walls in his list, they are the $40$ classes in which he exhibits walls \cite[Section~4]{Takesue1989}.
+Apart from the description $\Aut(X_{F_{255}})\cong\Z/4\times\mathcal G_4$, we do not determine the whole automorphism group in these cases. For the other $46$ classes, the status of each is recorded in \cite{PaperD}: for the class of $95$ the automorphism group is determined in \cite{PaperE}, and it also contains $\bigoplus_{m\ge1}S_m$, through automorphisms that permute moving particles and not through a wall; $11$ classes have $\Aut(X_{F_f})=\langle\sh,F_f\rangle\cong\Z^2$ \cite{PaperA,PaperB,PaperE}, the four affine classes of Theorem~\ref{thm:affine} have the groups given there, two further classes have the cellwise symmetry $\kappa$, and for $28$ classes an exhaustive search finds no automorphism outside $\langle\sh,F_f\rangle$ of radius at most $3$.
+
+\subsection*{Blocking words and linearity}
+In the nonlinear examples of this paper the automorphisms outside $\langle\sh,F\rangle$ all come from blocking words with a degree of freedom next to the blocking column (Remark~\ref{hw:kurka}). The following remark records what the affine rules say about the converse.
+
+\begin{remark}\label{rem:dichotomy}
+Without a hypothesis on $f$, the absence of a blocking word does not force $\Aut(X_{F_f})$ to be virtually $\Z^2$. The affine rules $90$ and $165$ have no blocking word (Corollary~\ref{lin:noblock}), yet $(\bigoplus_mS_m)^2$ embeds in their automorphism groups (Theorem~\ref{lin:movers}). Rule $150$ is a counterexample of a different kind. It has no blocking word, and its commuting block maps of radius at most $3$ are all linear (Proposition~\ref{prop:150}); but $\mathrm{id}+\sh F_{150}$ is an automorphism outside $\langle\sh,F_{150}\rangle$, and $\langle\sh,F_{150},\mathrm{id}+\sh F_{150}\rangle\cong\Z^3$ (Proposition~\ref{prop:150Z3}), so $\Aut(X_{F_{150}})$ is not virtually $\Z^2$; in fact $\Aut(X_{F_{150}})=\langle\sh,F_{150},\mathrm{id}+\sh F_{150}\rangle$ (Theorem~\ref{thm:affine}). In all three the room comes from linearity, not from a local structure. For $150$ the light-speed window graphs are strongly connected for every size computed, while for $90$ and $165$ they are not (Remark~\ref{lin:rem:window}); so linearity, and not only the failure of a light-speed condition, can produce extra automorphisms.
+\end{remark}
+
+Nor does the absence of a blocking word force $\Aut(X_{F_f})$ to be virtually $\Z^2$ when $f$ is not affine: the rule $95$ is not affine, $F_{95}$ has no blocking word, and $\Aut(X_{F_{95}})$ contains every finite group \cite{PaperE}. There the room comes from automorphisms that permute particles moving at light speed, and neither from a local structure nor from linearity. We do not know another example of this kind among the elementary rules.
+
+\begin{question}\label{q:dichotomy}
+Let $f$ be an elementary rule that is not affine and does not belong to the class of $95$. If the second-order automaton $F_f$ has no blocking word \cite{Kurka1997,BT2000}, is $\Aut(X_{F_{f}})$ virtually $\Z^2$?
+\end{question}
+
+Having no blocking word is stronger than having no word fixed in every context; the rules of Section~\ref{sec:hidden} show that the difference matters (Remark~\ref{hw:kurka}). For $110$R and $30$R, whose automorphism groups are $\Z^2$ \cite{PaperA,PaperB}, a single changed cell produces a difference that spreads in both directions at linear speed, whereas in $54$R it spreads only a few cells (Table~\ref{tab:spread}).
+
+\subsection*{Related work}
+\emph{Large automorphism groups.} The automorphism group of a mixing one-dimensional shift of finite type contains every finite group \cite{BLR1988}. In two dimensions Ward showed the same under strong irreducibility and gave a mixing zero-entropy $\Z^2$ shift of finite type whose automorphism group is only the shift action \cite{Ward1994}, and Hochman showed that positive entropy suffices \cite{Hochman2010}. Hochman also notes that zero entropy does not prevent a large automorphism group, with the example of a shift whose columns are constant; that shift is the spacetime of the identity automaton, whose centralizer is all of $\Aut(\A^{\Z})$. Theorems~\ref{thm:walls} and~\ref{thm:finite} are of the same kind as that example, but for nonlinear automata of infinite order with rich dynamics, and the room comes from a conserved local structure rather than from trivial dynamics. For linear automata the algebraic theory of Kitchens and Schmidt applies \cite{KS1989}; their isomorphism rigidity theorem \cite{KS2000} is what determines the automorphism groups in Theorem~\ref{thm:affine}, and for Ledrappier's shift \cite{Ledrappier1978} the automorphism group is $\Z^2$ \cite{KS1992,Ward1994,BRY2018}; Theorem~\ref{lin:movers} shows that for the linear automaton $F_{90}$ the group of all, not necessarily affine, automorphisms of the spacetime is much larger than its affine part.
+
+\emph{Centralizers of cellular automata.} Ryan's theorem identifies the centralizer of the whole automorphism group of a full shift with the powers of the shift \cite{Ryan1972}, and finitary versions find finite sets of automorphisms with the same centralizer \cite{Salo2019Ryan,Kopra2022}. These compute centralizers of large sets of automata. Centralizers of single automata, which is what spacetime automorphism groups are, are not covered by them, and since conjugacy of reversible automata is undecidable \cite{Salo2020} no general method for them can be expected. The term blocking word is due to Blanchard and Tisseur \cite{BT2000}; the relation of blocking words to equicontinuity is in the proof of \cite[Theorem~3]{Kurka1997}, and the resulting classification of cellular automata is \cite[Corollary~2]{Kurka1997}. For the second-order elementary automata, that a wall separates the two sides of a configuration was observed by Takesue \cite{Takesue1987}, \cite[Section~4]{Takesue1989}, before these notions were introduced.
+
+\emph{Rule 54.} The particles and collisions of the elementary rule $54$ were catalogued by Boccara, Nasser and Roger \cite{BNR1991} and by Mart\'inez, Adamatzky, Chen and Chua \cite{MAM2013}. A different reversible automaton, introduced by Bobenko, Bordemann, Gunn and Pinkall \cite{BBGP1993} and studied extensively as an integrable model of statistical mechanics \cite{BKP2021}, is also called Rule~54 because it uses the same local function $b\oplus(a\vee c)$, but it updates the two sublattices alternately in place. In the present notation it is one of the two sublattices of a spacetime diagram of $250$R, the conjugate of $95$R under the cellwise complement \cite{BKP2021}: it is the half system of the class of $95$, whose automorphism group is determined in \cite{PaperE}. It is not the second-order automaton $F_{54}$ studied here, which has the extra term from the previous row; its solitons move at speed $\pm1$, while in $F_{54}$ the structures that carry the automorphisms are the stationary walls.
+
+\subsection*{Organisation}
+Section~\ref{sec:prelim} fixes notation, proves Lemma~\ref{lem:spacetime}, and shows that $\langle\sh,F_f\rangle\cong\Z^2$ unless $f$ reads only its middle argument. Section~\ref{sec:method} describes the SAT encoding of the commutation condition, the invertibility test and the verification. Section~\ref{sec:54} treats rule $54$ and proves Theorems~\ref{thm:finite}, \ref{thm:54} and~\ref{thm:tau}. Section~\ref{sec:walls} proves Theorem~\ref{thm:walls} and Corollary~\ref{cor:48}, including the class of $133$. Section~\ref{sec:hidden} treats walls with hidden bits, rules $59$ and $27$, the time-periodic walls of rules $127$, $179$ and $223$, the rotating walls of rules $219$ and $126$, and blocking words. Section~\ref{sec:linear} treats the linear rules $90$ and $150$ and proves that $(\bigoplus_mS_m)^2$ embeds in the automorphism groups of $90$R and $165$R. Section~\ref{sec:affine} proves Theorem~\ref{thm:affine} and treats rule $255$. Section~\ref{sec:questions} lists open questions. The appendix describes the computations.

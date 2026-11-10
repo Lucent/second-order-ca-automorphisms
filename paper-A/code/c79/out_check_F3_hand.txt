@@ -1,0 +1,7 @@
+L ok: the table and part (b) of the lemma, and the mirror rule, on all states: 8064 cases
+1 ok: 64 sectors of 12 configurations, each strongly connected
+2 ok: every irregular configuration reaches a sector (at most 4 moves)
+3 ok: every irregular configuration outside E is reached from a sector
+4 ok: the formula for (tau',mu'), the table of J and the closed walks
+5 ok: the proof joins 295272 pairs (c,c'), the same as breadth-first search; no move leads into E from outside
+hand proof of (F*_3) confirmed on Gamma_3: True

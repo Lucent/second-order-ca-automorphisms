@@ -1,0 +1,4 @@
+H4 violations 0
+rule27 d 3 fails 0 nontrivial 330
+rule27 d 6 fails 0 nontrivial 303
+rule27 d 7 fails 0 nontrivial 301

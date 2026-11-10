@@ -1,0 +1,35 @@
+rule 175 R=1 type P: 16 variables, 16 equalities, 32 constraints of four entries, 256 clauses [0.0s]
+  all solutions: 1; {'named': 1, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 1, found: 1; failures of the recheck: 0 [0.0s]
+rule 175 R=1 type S: 16 variables, 8 equalities, 32 constraints of four entries, 240 clauses [0.0s]
+  all solutions: 4; {'named': 4, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 4, found: 4; failures of the recheck: 0 [0.0s]
+rule 175 R=1: both types together {'named': 5, 'const': 0, 'other': 0}; 2R^2+2R+1 = 5
+rule 175 R=2 type P: 64 variables, 32 equalities, 128 constraints of four entries, 1072 clauses [0.0s]
+  all solutions: 9; {'named': 9, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 9, found: 9; failures of the recheck: 0 [0.0s]
+rule 175 R=2 type S: 64 variables, 72 equalities, 128 constraints of four entries, 1152 clauses [0.0s]
+  all solutions: 4; {'named': 4, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 4, found: 4; failures of the recheck: 0 [0.0s]
+rule 175 R=2: both types together {'named': 13, 'const': 0, 'other': 0}; 2R^2+2R+1 = 13
+rule 175 R=3 type P: 256 variables, 288 equalities, 512 constraints of four entries, 4656 clauses [0.0s]
+  all solutions: 9; {'named': 9, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 9, found: 9; failures of the recheck: 0 [0.1s]
+rule 175 R=3 type S: 256 variables, 128 equalities, 512 constraints of four entries, 4336 clauses [0.0s]
+  all solutions: 16; {'named': 16, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 16, found: 16; failures of the recheck: 0 [0.1s]
+rule 175 R=3: both types together {'named': 25, 'const': 0, 'other': 0}; 2R^2+2R+1 = 25
+rule 175 R=4 type P: 1024 variables, 512 equalities, 2048 constraints of four entries, 17392 clauses [0.0s]
+  all solutions: 25; {'named': 25, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 25, found: 25; failures of the recheck: 0 [0.2s]
+rule 175 R=4 type S: 1024 variables, 1152 equalities, 2048 constraints of four entries, 18672 clauses [0.0s]
+  all solutions: 16; {'named': 16, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 16, found: 16; failures of the recheck: 0 [0.1s]
+rule 175 R=4: both types together {'named': 41, 'const': 0, 'other': 0}; 2R^2+2R+1 = 41
+rule 175 R=5 type P: 4096 variables, 4608 equalities, 8192 constraints of four entries, 74736 clauses [0.1s]
+  all solutions: 25; {'named': 25, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 25, found: 25; failures of the recheck: 0 [0.4s]
+rule 175 R=5 type S: 4096 variables, 2048 equalities, 8192 constraints of four entries, 69616 clauses [0.1s]
+  all solutions: 36; {'named': 36, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 36, found: 36; failures of the recheck: 0 [0.5s]
+rule 175 R=5: both types together {'named': 61, 'const': 0, 'other': 0}; 2R^2+2R+1 = 61
+rule 175 R=6 type P: 16384 variables, 8192 equalities, 32768 constraints of four entries, 278512 clauses [0.4s]
+  all solutions: 49; {'named': 49, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 49, found: 49; failures of the recheck: 0 [2.2s]
+rule 175 R=6 type S: 16384 variables, 18432 equalities, 32768 constraints of four entries, 298992 clauses [0.3s]
+  all solutions: 36; {'named': 36, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 36, found: 36; failures of the recheck: 0 [1.7s]
+rule 175 R=6: both types together {'named': 85, 'const': 0, 'other': 0}; 2R^2+2R+1 = 85
+rule 175 R=7 type P: 65536 variables, 73728 equalities, 131072 constraints of four entries, 1196016 clauses [1.5s]
+  all solutions: 49; {'named': 49, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 49, found: 49; failures of the recheck: 0 [11.7s]
+rule 175 R=7 type S: 65536 variables, 32768 equalities, 131072 constraints of four entries, 1114096 clauses [1.3s]
+  all solutions: 64; {'named': 64, 'const': 0, 'other': 0}; maps sigma^a F^b of this type: 64, found: 64; failures of the recheck: 0 [13.3s]
+rule 175 R=7: both types together {'named': 113, 'const': 0, 'other': 0}; 2R^2+2R+1 = 113

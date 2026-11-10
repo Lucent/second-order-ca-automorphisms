@@ -1,0 +1,142 @@
+\section{Rule 91R}\label{cl:sec:91}
+
+For $f=91$ Lemma~L holds (Theorem~\ref{cl:thm:L}), so that $\Aut(X_{F_{91}})$ embeds in $\Aut(\Phi^+,\sh)\times\Aut(\Phi^-,\sh)$ (Corollary~\ref{cl:cor:res}), but the group is not determined. This section records how far the arguments of Sections~\ref{cl:sec:scatter} and~\ref{cl:sec:94} go for this rule.
+
+\emph{What the bare defects give.} Let $f=91$, so that $N$ is the indicator of $000$, the valid backgrounds are $11$, $01$ and $10$, and $\Phi_{91}$ is the set of sequences without $000$. As for $95$, let $\Delta^+_a\in\Phi^+$ and $\Delta^-_b\in\Phi^-$ be the \emph{bare defects}, the points whose diagrams are $1$ except for the value $0$ at $q=a$, resp.\ at $p=b$. A sequence is \emph{$3$-sparse} if any two of its zeros are at distance at least $3$, and a point of $\Phi^\pm$ is $3$-sparse if its diagram is.
+
+\begin{lemma}[free superposition]\label{cl:lem:91free}
+Let $f=91$ and let $(P,X)$ be a placed pair with background $11$ and corner $[q_0,p_0]$, with diagrams $\pi(q)$ and $\xi(p)$. Suppose that there is no centre $[q,p]$ with $q>q_0$, $p>p_0$ and
+\begin{equation}\label{cl:eq:91compl}
+\pi(q+1)\ne\xi(p-1),\qquad\pi(q)\ne\xi(p),\qquad\pi(q-1)\ne\xi(p+1).
+\end{equation}
+Then $Y_{P,X}[q,p]=\pi(q)\oplus\xi(p)\oplus1$ on the quadrant $G$, $Y_{P,X}$ does not fire, and if the left tail of $P$ and the right tail of $X$ are $11$, then $\mathcal S(P,X)=(X,P)$. This applies whenever $\pi$ and $\xi$ are $3$-sparse; in particular $\mathcal S(\Delta^+_a,\Delta^-_b)=(\Delta^-_b,\Delta^+_a)$ for all $a,b\in\Z$.
+\end{lemma}
+
+\begin{proof}
+Let $Y_\emptyset=\pi(q)\oplus\xi(p)\oplus1$ on $G$. As in the proof of Lemma~\ref{cl:lem:pair}, $Y_\emptyset$ has the boundary values $\pi$ and $\xi$, and it is the solution of \eqref{cl:eq:goursat} if it fires at no centre $[q,p]$ with $q>q_0$, $p>p_0$. It fires at $[q,p]$ exactly if its values at $\mathsf W=[q+1,p-1]$, $[q,p]$ and $\mathsf E=[q-1,p+1]$ are $0$, which is \eqref{cl:eq:91compl}. If the tails are $11$, then $Y_\emptyset=\xi(p)$ for all large $q$ and $Y_\emptyset=\pi(q)$ for all large $p$, so $\mathcal S(P,X)=(X,P)$. If $\pi$ and $\xi$ are $3$-sparse, each of the triples $(\pi(q+1),\pi(q),\pi(q-1))$ and $(\xi(p-1),\xi(p),\xi(p+1))$ contains at most one $0$, so they cannot differ in all three places.
+\end{proof}
+
+So, in contrast to $94$ and $95$ (Lemmas~\ref{cl:lem:pair} and~\ref{cl:lem:pair95}), two bare defects of $91$ cross without a delay in both parities. The next two lemmas describe the first two rays of a probe whose first zero is isolated.
+
+\begin{lemma}[one exact ray for $91$]\label{cl:lem:91ray}
+Let $f=91$, let $G$ be the quadrant with corner $[q_0,p_0]$, and let $Y$ be the solution of \eqref{cl:eq:goursat} on $G$ with boundary values $A$, $B$ such that
+\[
+A(q)=1\ \ (q_0\le q<a_1),\qquad A(a_1)=0,\qquad a_1\ge q_0+2,\qquad B(p_0)=B(p_0+1)=1,
+\]
+and $B$ contains no $000$. Then $Y[q,p]=B(p)$ for $q_0\le q\le a_1-1$. If there is no $x\equiv a_1\pmod2$ with $B(x-1)=B(x)=0$, then $Y$ fires at no centre $[a_1-1,p']$ with $p'>p_0$, and $Y[a_1,p]=1\oplus B(p)$ for all $p\equiv a_1$. Otherwise it fires at exactly one such centre, $[a_1-1,x_1-1]$, where $x_1$ is the least such $x$.
+\end{lemma}
+
+\begin{proof}
+The function $[q,p]\mapsto B(p)$ satisfies \eqref{cl:eq:goursat}, because $B$ contains no $000$, and it has the boundary values $1$ and $B$; by Goursat causality, $Y[q,p]=B(p)$ for $q_0\le q\le a_1-1$. Let $U=\{p\ge p_0:p\equiv a_1\}$, with least element $p_b$, and $D(p)=Y[a_1,p]\oplus B(p)$ for $p\in U$. Then $D(p_b)=A(a_1)\oplus B(p_b)=1$, and for $p\in U$, $p\ge p_b+2$, \eqref{cl:eq:goursat} at $[a_1,p]$ gives $D(p)=D(p-2)\oplus n(p)$ with $n(p)=N(Y[a_1,p-2],B(p-1),B(p))$, the firing at the centre $[a_1-1,p-1]$. If $D(p-2)=1$, then $Y[a_1,p-2]=1\oplus B(p-2)$, and $n(p)=1$ if and only if $B(p-2)=1$ and $B(p-1)=B(p)=0$; since $B$ contains no $000$ and $B(p_0)=B(p_0+1)=1$, this holds if and only if $B(p-1)=B(p)=0$. If $D(p-2)=0$, then $n(p)=N(B(p-2),B(p-1),B(p))=0$. So $D=1$ and $n=0$ on $U$ below $x_1$, $n(x_1)=1$ and $D(x_1)=0$ if $x_1$ exists, and after $x_1$ there are no further firings.
+\end{proof}
+
+\begin{lemma}[the second ray]\label{cl:lem:91ray2}
+In the setting of Lemma~\ref{cl:lem:91ray} suppose in addition that $A(a_1+1)=1$, that $B$ has no two adjacent zeros, and that $B(p)=1$ for all large $p$. Then $Y$ fires at finitely many centres $[a_1,p']$ with $p'>p_0$, and their number is odd if and only if $B$ has a zero $x\equiv a_1+1\pmod2$ and the last such zero $x$ satisfies $B(x-2)=0$. More precisely, with $D'(p)=Y[a_1+1,p]\oplus B(p)$ for $p\equiv a_1+1$: $D'$ vanishes below the first zero of $B$ in this class, $D'(p)=1\oplus B(p-2)$ at every zero $p$ of $B$ in this class, and $D'(p)=D'(p-2)$ at all other $p$.
+\end{lemma}
+
+\begin{proof}
+Since $B$ has no two adjacent zeros, Lemma~\ref{cl:lem:91ray} gives $Y[a_1-1,p]=B(p)$ and $Y[a_1,p]=1\oplus B(p)$. Let $U'=\{p\ge p_0:p\equiv a_1+1\}$, with least element $p_b'$. Then $D'(p_b')=A(a_1+1)\oplus A(a_1-1)=0$, and \eqref{cl:eq:goursat} at $[a_1+1,p]$ gives, for $p\in U'$, $p\ge p_b'+2$,
+\[
+D'(p)=D'(p-2)\oplus n'(p),\qquad n'(p)=N\bigl(B(p-2)\oplus D'(p-2),\,1\oplus B(p-1),\,B(p)\bigr),
+\]
+where $n'(p)$ is the firing at the centre $[a_1,p-1]$. If $B(p)=1$, then $n'(p)=0$. If $B(p)=0$, then $B(p-1)=1$, and $n'(p)=1$ if and only if $B(p-2)=D'(p-2)$; in both cases $D'(p-2)\in\{0,1\}$ this gives $D'(p)=1\oplus B(p-2)$. The number of firings on the ray has the parity of $D'(p)\oplus D'(p_b')=D'(p)$ for large $p$, which is $1\oplus B(x-2)$ for the last zero $x\in U'$, and $0$ if there is none.
+\end{proof}
+
+\begin{proposition}\label{cl:prop:91KR}
+Let $h\in\Aut(X_{F_{91}})$, of radius $R$, and $r=R+1$. Then $h(b_{11})=b_{11}$, and for all $a,b\in\Z$ the points $E=h\Delta^+_a$ and $D=h\Delta^-_b$ are different from $b_{11}$, their diagrams $\pi_E$ and $\delta$ are $1$ outside $[a-r,a+r]$, resp.\ $[b-r,b+r]$,
+\[
+\mathcal S(h\Delta^+_a,h\Delta^-_b)=(h\Delta^-_b,h\Delta^+_a),
+\]
+and each of the sequences $\omega\in\{\pi_E,\delta\}$ has the following properties:
+\begin{enumerate}
+\item[(i)] $\omega$ has no two adjacent zeros;
+\item[(ii)] if $x$ is the last zero of $\omega$ in its class modulo $2$, then $\omega(x-2)=1$, and if $x$ is the first zero of $\omega$ in its class, then $\omega(x+2)=1$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+By the paragraph before Lemma~\ref{cl:lem:inter}, $h(b_{11})=b_{\beta''}$ for a valid background $\beta''$; since $\sh b_{11}=b_{11}$ and $h$ commutes with $\sh$, $\beta''_0=\beta''_1$, so $\beta''=11$. By \eqref{cl:eq:loc}, $\pi_E(q)=1$ for $|q-a|>r$ and $\delta(p)=1$ for $|p-b|>r$, and $E,D\ne b_{11}$ because $h$ is injective. Let $D_b=h\Delta^-_b$, with diagram $\delta_b$; then $\delta_{b+1}(p)=\delta_b(p-1)$. By Lemmas~\ref{cl:lem:91free} and~\ref{cl:lem:inter}, $\mathcal S(E,D_b)=(D_b,E)$ for every $b$, and we take the corner at $[q_0,p_0]$ with $q_0\le a-r-2$, $p_0\le b-r-2$. Let $Y=Y_{E,D_b}$. As in Step~3 of the proof of Theorem~\ref{cl:thm:KR94}, Lemma~\ref{cl:lem:scatter}(ii) and Lemma~\ref{cl:lem:dalembert}, with $A(q)=\pi_E(q)$, $B(p)=\delta_b(p)=1$ for large $p$ and $\nu=1$, show that for every $q\ge q_0$ the number of firings of $Y$ on the ray $q'=q+1$ is even.
+
+Let $a_1$ be the least zero of $\pi_E$. By Lemma~\ref{cl:lem:91ray}, the number of firings on the ray $a_1-1$ is $1$ if $\delta_b$ has two adjacent zeros $x-1,x$ with $x\equiv a_1$, and $0$ otherwise; so there are no such zeros. Applying this to $b$ and $b+1$ shows that $\delta$ has no two adjacent zeros. The map $\mathrm{rev}\,h\,\mathrm{rev}$ is an automorphism of radius $R$ (Step~6 of that proof), and $(\mathrm{rev}\,h\,\mathrm{rev})\Delta^-_a=\mathrm{rev}\,E$ has the diagram $\pi_E(p)$; so $\pi_E$ has no two adjacent zeros either. This is (i). Now $A=\pi_E$ and $B=\delta_b$ satisfy the hypotheses of Lemma~\ref{cl:lem:91ray2}, so the last zero $x\equiv a_1+1$ of $\delta_b$, if there is one, has $\delta_b(x-2)=1$; with $b$ and $b+1$ this gives the first half of (ii) for $\delta$, and with $\mathrm{rev}\,h\,\mathrm{rev}$ for $\pi_E$. Finally $\mu h\mu$ is an automorphism of radius $R$ (proof of Lemma~\ref{cl:lem:closure}), $\mu$ maps $\Delta^\pm_a$ to $\Delta^\pm_{-1-a}$, and $(\mu h\mu)\Delta^-_b=\mu D_{-1-b}$ has the diagram $p\mapsto\delta_{-1-b}(-1-p)$, a reflection of $\delta$; the first half of (ii) for $\mu h\mu$ is the second half for $h$.
+\end{proof}
+
+\begin{remark}[kink rigidity for $91$ is open]\label{cl:rem:91}
+The analogue of Theorems~\ref{cl:thm:KR94} and~\ref{cl:thm:KR95} for $91$ would say that $h\Delta^\pm_a=\Delta^\pm_{a+\alpha^\pm}$. Proposition~\ref{cl:prop:91KR} is as far as the argument of those theorems goes, for the following reason. The exact-ray lemma has an analogue (Lemma~\ref{cl:lem:91ray}), and no train is needed, since a bare defect already crosses a bare defect unchanged; but by Lemma~\ref{cl:lem:91free} the relation $\mathcal S(E,D_b)=(D_b,E)$, which is all that the crossing of two bare defects gives, holds for every pair of $3$-sparse points with tails $11$, so it cannot show that $E$ and $D$ have a single zero, and it gives no relation between $\alpha^+$ and $\alpha^-$. A computation (computer-assisted: exact, two independent programs; Appendix~\ref{app:stated}) shows that among the $778$ objects of $\Phi^-$ on the background $11$ with core of length at most $12$, those that the bare defect crosses unchanged in both parities are exactly the $41$ that are $3$-sparse; so one expects that (i) and (ii) can be sharpened to: $\pi_E$ and $\delta$ are $3$-sparse. For the same reason the analogue for $91$ of the scattering closure of Definition~\ref{cl:def:CL}, the smallest set that contains $b_{11}$ and the bare defects and has the properties (C0)--(C3), is not all of $\Phi^+\cup\Phi^-$: for $L\ge3$ it is the set $\mathcal D_L$ of the points of $\Phi^+\cup\Phi^-$ whose zeros are pairwise at distance at least $L$. Indeed, every word of length $L$ of a point of $\mathcal D_L$ is a word of $b_{11}$ or of a bare defect, so $\mathcal D_L$ is contained in the closure by (C0); and $\mathcal D_L$ has the four properties: (C0) and (C1) are clear; a point of $\mathcal D_L$ whose diagram is eventually $2$-periodic has both tails $11$ and is $3$-sparse, so (C2) holds by Lemma~\ref{cl:lem:91free}; and if $(P,X)$ is a placed pair with $\mathcal S(P,X)=(\Gamma,\Omega)$ and $\Gamma,\Omega\in\mathcal D_L$, then $(\mu\Omega,\mu\Gamma)$ is a placed pair of $3$-sparse points, so $(\mu X,\mu P)=\mathcal S(\mu\Omega,\mu\Gamma)=(\mu\Gamma,\mu\Omega)$ by Proposition~\ref{cl:prop:dual} and Lemma~\ref{cl:lem:91free}, and $X=\Gamma$, $P=\Omega$ lie in $\mathcal D_L$. A proof of $\Aut(X_{F_{91}})=\langle\sh,F\rangle$ along the lines of Sections~\ref{cl:sec:scatter} and~\ref{cl:sec:94} therefore has to start from points that are not $3$-sparse: the object $1^\infty001^\infty$ and the kinks between the three backgrounds. Their crossings with a bare defect are not free (computed): for instance the bare defect $\Delta^+_a$ leaves the object with zeros at $b,b+1$, $b\equiv a$, unchanged and emerges with two zeros at distance $2$, and for $b\not\equiv a$ the crossing creates a region of the background $(01)^\infty$ that grows at light speed in both directions.
+
+Unlike $95$R (Section~\ref{cl:sec:95}), $91$R is not a system of freely moving particles with delays: the crossings just described change the shapes and the tails of the two points; see also \cite[pp.~113--116]{Takesue1997}, where the collisions of the quasi-particles of $91$R are analysed, with the conclusion that $91$R is not a soliton automaton. Two of the additive conserved quantities of $F_{91}$, with densities on two adjacent cells, are $Q_2(c)=\#\{i:y_i\ne x_{i+1}\}-\#\{i:x_i\ne y_{i+1}\}$, which is conserved for every rule with $f(a,b,c)=1$ whenever $a\ne c$, in particular for $91$, $94$ and $95$, because at every firing the values at $\mathsf W$ and $\mathsf E$ agree, and $Q_1(c)=\#\{i:c_i\ne(1,1)\}-\#\{i:c_i\ne c_{i+1},\ c_i\ne(1,1)\ne c_{i+1}\}$ (Lemma~\ref{cl:lem:91Q1} below), which on a point of $\Phi^\pm$ with tails $11$ counts the maximal blocks of its diagram that contain a $0$ and no $11$. Both are in the literature. Here $-Q_2$ is the energy (d) of \cite[Table~IV]{Takesue1989}, in the second of the two forms given there, and the quantity (4.12) of \cite{Takesue1995}; and $Q_1$ is, up to an affine change, the energy (b) of $91$R and $123$R in \cite[Table~IV]{Takesue1989}, whose sum over a period $N$ is $2N-2Q_1$, and the quantity \cite[(40)]{Takesue1997}. The additive conserved quantities of the second-order elementary automata are determined for densities on two adjacent cells in \cite[Table~II]{Takesue1989} and on at most three adjacent cells in \cite[Tables~3--5]{HT1991}, and counted for densities on at most four adjacent cells in \cite[Table~1]{Takesue1997}; $91$R has a third quantity, with density on three cells, found in \cite[Table~4 and p.~321]{HT1991}; see also \cite{Takesue1995}.
+\end{remark}
+
+The conservation of $Q_1$ is a finite local identity. In \cite{Takesue1989,HT1991,Takesue1997} this quantity results from the solution of the linear conservation conditions, and no verification is written out; since \cite{Takesue1997} is in Japanese and uses a different normalisation, we include one.
+
+\begin{lemma}[{\cite[Table~IV(b)]{Takesue1989}; \cite[Table~4]{HT1991}; \cite[(40)]{Takesue1997}}]\label{cl:lem:91Q1}
+Let $f=91$, and let $c$ be a spatially periodic configuration, the two counts in $Q_1$ being taken over one period, or a finite perturbation of $b_{11}$. Then $Q_1(F(c))=Q_1(c)$.
+\end{lemma}
+
+\begin{proof}
+Write $c_i=(u_i,m_i)$, so that $F(c)_i=(m_i,v_i)$ with $v_i=u_i\oplus s_i$ and $s_i=f(m_{i-1},m_i,m_{i+1})$. The two conditions that define $Q_1$ are invariant under the exchange of the two bits in every cell, so $Q_1(F(c))$ is the value of $Q_1$ on the configuration with the cells $(v_i,m_i)$. Since $f(a,b,c)=a\oplus c\oplus N(a,b,c)$ with $N$ the indicator of $000$,
+\begin{itemize}
+\item[($\alpha$)] if $m_i=1$, then $s_i=1$ if and only if exactly one of $m_{i-1}$, $m_{i+1}$ is $0$;
+\item[($\beta$)] if $m_i=0$, then $s_i=1$ if and only if at least one of $m_{i-1}$, $m_{i+1}$ is $0$.
+\end{itemize}
+We express $Q_1(c)$ through the rows $u$ and $m$. A cell with $m_i=0$ is different from $(1,1)$, and a cell with $m_i=1$ is different from $(1,1)$ if and only if $u_i=0$. Let $c_i$ and $c_{i+1}$ both be different from $(1,1)$. If $m_i=m_{i+1}=1$, both are $(0,1)$, and they are equal. If exactly one of $m_i$, $m_{i+1}$ is $1$, they are different. If $m_i=m_{i+1}=0$, they are different if and only if $u_i\ne u_{i+1}$. So a pair of adjacent cells of which exactly one, the cell $j$, has $m_j=1$ contributes $-(1-u_j)$ to $Q_1$, and collecting, for each $j$ with $m_j=1$, the terms that contain $u_j$ gives
+\[
+Q_1(c)=\#\{i:m_i=0\}+\sum_{j:\,m_j=1}(1-e_j)(1-u_j)-\#\{i:\ m_i=m_{i+1}=0,\ u_i\ne u_{i+1}\},
+\]
+where $e_j\in\{0,1,2\}$ is the number of zeros among $m_{j-1}$ and $m_{j+1}$; in the periodic case the indices are taken over one period, and for a finite perturbation of $b_{11}$ all three terms are finite. The same formula with $v$ in place of $u$ gives $Q_1(F(c))$. The first term does not contain $u$. In the second, $v_j\ne u_j$ only if $e_j=1$, by ($\alpha$), and then the coefficient $1-e_j$ vanishes. In the third, if $m_i=m_{i+1}=0$ then $s_i=s_{i+1}=1$ by ($\beta$), so $v_i\ne v_{i+1}$ if and only if $u_i\ne u_{i+1}$. Hence $Q_1(F(c))=Q_1(c)$.
+\end{proof}
+
+For $94$ and $95$ the quantity $Q_1$ is not conserved (Appendix~\ref{app:stated}).
+
+\subsection{Responses to probes}\label{cl:sec:IR}
+
+Let $f\in\{91,94\}$. An automorphism $h$ of $X_{F_f}$ is determined by its restrictions to $\Phi^+$ and $\Phi^-$ (Corollary~\ref{cl:cor:res}), and the following remark relates the restriction to $\Phi^-$ of an automorphism that is the identity on $\Phi^+$ to the scattering of probes. For $94$ the group is determined by Theorem~\ref{cl:thm:dens}, and nothing in the other sections depends on this subsection; we state the results for both rules because the proofs are the same.
+
+\begin{remark}[responses]\label{cl:rem:IR}
+Let $h\in\Aut(X_{F_f})$ fix every point of $\Phi^+$, let $X$ be a $\Phi^-$ object and $P$ a probe for $X$. By Lemma~\ref{cl:lem:inter}, $\mathcal S(P,hX)=\mathcal S(hP,hX)=(h\Gamma_P(X),\Omega_X(P))$. Here $hX$ is again a $\Phi^-$ object with the tails of $X$, by \eqref{cl:eq:loc} and because $h$ fixes the backgrounds, which lie in $\Phi^+$; so $P$ is a probe for $hX$. So $hX$ has the same responses as $X$, and $h$ commutes with the maps $\Gamma_P$. The automorphism $\sh F$ is of this kind, and it acts on $\Phi^-$ as $\sh^2$. A description of the objects that have the same responses as a given one therefore bears on $\Aut(X_{F_{91}})$. Two statements in this direction are proved below. Proposition~\ref{cl:prop:pump} shows that no finite family of probes distinguishes all the objects that differ in the length of a stretch of the background inside their cores. Corollary~\ref{cl:cor:Sh1} concerns the following statement.
+\begin{itemize}
+\item[(Sh)] Every $\Phi^-$ object $X$ with $\operatorname{supp}X\ge1$ has a probe $P$ with $\operatorname{supp}\Gamma_PX<\operatorname{supp}X$.
+\end{itemize}
+If (Sh) holds and $h$ in addition fixes the bare kinks of $\Phi^-$, then $h=\mathrm{id}$: by Corollary~\ref{cl:cor:Sh1} every object $X$ with $\operatorname{supp}X\ge1$ has a probe $P$ with $\Gamma_P(X)$ a bare kink, so $\mathcal S(P,hX)=(\Gamma_P(X),\Omega_X(P))=\mathcal S(P,X)$ and $hX=X$, since $\mathcal S$ is injective (Proposition~\ref{cl:prop:dual}); every word of $\Phi_f$ is a word of an object, so $h$ fixes every point of $\Phi^-$, as in the proof of (C0) in Lemma~\ref{cl:lem:closure}, and $h=\mathrm{id}$ by Theorem~\ref{cl:thm:L}. In a search over probes (computer-assisted; Appendix~\ref{app:stated}), (Sh) holds for $94$ for every object with core of length at most $23$, with probes with core of length at most $24$, and for $91$ for every object with core of length at most $16$, with probes with core of length at most $20$. We do not know whether (Sh) holds for $91$ or for $94$.
+\end{remark}
+
+\begin{proposition}[gap pumping]\label{cl:prop:pump}
+Let $f\in\{91,94,95\}$ and let $\beta$ be a valid background. Let $s\in\Z$, let $u$ be a sequence on $(-\infty,s)$ and $v$ a sequence on $[s,\infty)$, both eventually $2$-periodic, and for $g\ge0$ let
+\[
+\xi_g(p)=u(p)\ \ (p<s),\qquad \xi_g(p)=\beta_{p\bmod2}\ \ (s\le p<s+g),\qquad \xi_g(p)=v(p-g)\ \ (p\ge s+g).
+\]
+Let $\mathcal I$ be the set of $g\ge2$ with $\xi_g\in\Phi_f$, and for $g\in\mathcal I$ let $X_g\in\Phi^-$ be the point with diagram $\xi_g(p)$; so $X_g=\cdots U\,w_g\,V\cdots$, where $w_g$ is a word of length $g$ of the background $\beta$ between fixed words $U$ and $V$. Let $\mathcal P\subset\Phi^+$ be finite, and suppose that for every $P\in\mathcal P$ there is a corner $[q_0,p_0]$ with $p_0+1<s$ at which $(P,X_g)$ is a placed pair; this condition does not depend on $g$. Then there is $g_0$ such that for all $g\ge g_0$ with $g,g+2\in\mathcal I$ and all $P\in\mathcal P$, writing $\mathcal S(P,X_g)=(\Gamma_g,\Omega_g)$ and $\gamma_g$ for the diagram of $\Gamma_g$,
+\[
+\Omega_{g+2}=\Omega_g,\qquad \gamma_{g+2}(p)=\gamma_g(p)\ \ (p<s+g),\qquad \gamma_{g+2}(p)=\gamma_g(p-2)\ \ (p\ge p_2),
+\]
+for some $p_2<s+g$ that depends only on $P$. In particular, for probes, $X_g$ and $X_{g+2}$ have the same responses to every probe in $\mathcal P$.
+\end{proposition}
+
+\begin{proof}
+It suffices to treat one $P\in\mathcal P$, with diagram $\pi(q)$ and corner $[q_0,p_0]$, and to take the largest of the resulting $g_0$. We may assume $\mathcal I\ne\emptyset$. Let $\xi_\infty(p)=u(p)$ for $p<s$ and $\xi_\infty(p)=\beta_{p\bmod2}$ for $p\ge s$. Every triple of $\xi_\infty$ is a triple of $\xi_g$ for any $g\in\mathcal I$ or a triple of the background $\beta$, so $\xi_\infty\in\Phi_f$; let $X_\infty\in\Phi^-$ be the point with diagram $\xi_\infty(p)$. Then $(P,X_\infty)$ is a placed pair with corner $[q_0,p_0]$, whose right tail is $\beta$. Let $Y_\infty$ and $Y_g$ be the diagrams of $(P,X_\infty)$ and $(P,X_g)$. By Lemma~\ref{cl:lem:scatter}(i) there is $b^*$ such that every firing of $Y_\infty$ is at a centre $[q',p']$ with $p'\le b^*$.
+
+\emph{Causality.} Since $\xi_g=\xi_\infty$ on $(-\infty,s+g)$, Goursat causality gives $Y_g=Y_\infty$ on $G\cap\{p<s+g\}$, and outside $G$ the two diagrams are given by the same values of $\pi$, $\xi_g$ and $\xi_\infty$ there. So $Y_g=Y_\infty$ on $\{p<s+g\}$.
+
+\emph{A strip without firings.} Let $p_1=\max(s,b^*+1)$ and $[q,p]\in G$ with $p\ge p_1$. By Lemma~\ref{cl:lem:dalembert},
+\[
+Y_\infty[q,p]=\pi(q)\oplus\beta_{p\bmod2}\oplus\nu\oplus n(q),
+\]
+where $\nu$ depends only on $q\bmod 2$ and $n(q)$ is the parity of the number of firings at centres $[q',p']$ with $q'<q$ and $q'\not\equiv q$; it does not depend on $p$, because every firing has $p'\le b^*<p$. Points with $q<q_0$ and $p\ge s$ carry $\beta_{p\bmod2}$. Hence $Y_\infty[q,p+2]=Y_\infty[q,p]$ whenever $p\ge p_1$, and by causality $Y_g[q,p+2]=Y_g[q,p]$ whenever $p\ge p_1$ and $p+2<s+g$. In this strip $Y_g$ agrees with $Y_\infty$, which does not fire at centres with $p'>b^*$, and it is $2$-periodic along the rays $q=\mathrm{const}$.
+
+\emph{Translation by $2$.} Choose $p_2\ge p_1+2$ with $p_2\equiv q_0\pmod 2$, let $g_0=p_2+2-s$, and let $g\ge g_0$ with $g,g+2\in\mathcal I$; so $p_2+1<s+g$. The function $Z[q,p]=Y_g[q,p-2]$ is a diagram, since $[q,p]\mapsto[q,p+2]$ is the translation $(t,i)\mapsto(t+1,i+1)$. On the quadrant $G_1=\{q\ge q_0,\ p\ge p_2\}$ both $Z$ and $Y_{g+2}$ satisfy \eqref{cl:eq:goursat}. They have the same values on its two boundary rays. On the ray $p\in\{p_2,p_2+1\}$, $q\ge q_0$: here $p<s+g$ and $p-2\ge p_1$, so $Y_{g+2}[q,p]=Y_\infty[q,p]=Y_\infty[q,p-2]=Y_g[q,p-2]$. On the ray $q\in\{q_0,q_0+1\}$, $p\ge p_2$: here $Y_{g+2}[q,p]=\xi_{g+2}(p)$ and $Z[q,p]=\xi_g(p-2)$, and $\xi_{g+2}(p)=\xi_g(p-2)$ for $p\ge p_2$, since both are $v(p-g-2)$ when $p\ge s+g+2$ and both are $\beta_{p\bmod2}$ when $s+2\le p<s+g+2$. Hence $Y_{g+2}=Z$ on $G_1$, and also on $\{q<q_0,\ p\ge p_2\}$, where both are $\xi_{g+2}(p)=\xi_g(p-2)$. So
+\[
+Y_{g+2}[q,p]=Y_g[q,p-2]\qquad(p\ge p_2).
+\]
+Reading $o$ on a half-plane $\{p\ge p_1'\}$ with $p_1'$ large (Lemma~\ref{cl:lem:scatter}(ii)) gives $\Omega_{g+2}=\Omega_g$. Reading $\gamma$ on a half-plane $\{q\ge q_1\}$ gives $\gamma_{g+2}(p)=\gamma_g(p-2)$ for $p\ge p_2$, and $\gamma_{g+2}(p)=\gamma_g(p)$ for $p<s+g$ by causality.
+\end{proof}
+
+The proposition concerns stretches of the background inside the core, between fixed words $U$ and $V$; then $\operatorname{supp}X_g$ grows with $g$, and the $X_g$ are pairwise distinct modulo $\sh^2$. (If the stretch is part of a tail, $X_{g+2}$ is $X_g$ or $\sh^{-2}X_g$, and the statement is immediate.) It shows that no finite family of probes separates all pairs $(X_g,X_{g+2})$, but it gives no bound on $g_0$ in terms of the probes, and so no bound on the length of a separating probe in terms of $g$. Since moving a probe by two steps along its rays changes its responses only by a translation (Lemma~\ref{cl:lem:scatter}(iii)), the probes on a given background of support at most $\ell$ give finitely many responses up to translation. Hence, for every $\ell$ and every family $(X_g)$ as in the proposition with the stretch inside the core, the pairs $(X_g,X_{g+2})$ with $g$ large have the same responses to all probes of support at most $\ell$: an argument that separates objects by their responses must use probes of unbounded support. Proposition~\ref{cl:prop:pump} holds for $91$, $94$ and $95$ alike.
+
+The statement (Sh) can be restated with a single probe.
+
+\begin{corollary}\label{cl:cor:Sh1}
+Let $f\in\{91,94\}$. The statement (Sh) holds if and only if every $\Phi^-$ object $X$ with $\operatorname{supp}X\ge1$ has a probe $P$ such that $\Gamma_P(X)$ is a bare kink.
+\end{corollary}
+
+\begin{proof}
+If $\Gamma_P(X)$ is a bare kink, then $\operatorname{supp}\Gamma_P(X)=0<\operatorname{supp}X$. Conversely, assume (Sh), and let $X_0=X$. As long as $\operatorname{supp}X_k\ge1$, choose a probe $P_{k+1}$ for $X_k$ with $\operatorname{supp}X_{k+1}<\operatorname{supp}X_k$, where $X_{k+1}=\Gamma_{P_{k+1}}(X_k)$. By Lemma~\ref{cl:lem:scatter}(ii), $\Gamma_P$ preserves the left tail, so $X_{k+1}$ has the left tail $\lambda$ of $X$, and the probes for $X_{k+1}$ are again the links of $\Phi^+$ with both tails $\lambda$. The process stops at some $X_n$ with $\operatorname{supp}X_n=0$. Since $\operatorname{supp}X\ge1$, $X$ is not a background, and by Corollary~\ref{cl:cor:dual}(2) and induction on $k$ no $X_k$ is a background; so $X_n$ is a bare kink. By Lemma~\ref{cl:lem:scatter}(iii) we may move each $P_{k+1}$ to the left by an even number of steps without changing $X_{k+1}$, and then Lemma~\ref{cl:lem:scatter}(iv), applied $n-1$ times, shows that the single probe $P=P_n*\cdots*P_1$, the composite of these probes, satisfies $\Gamma_P(X)=X_n$.
+\end{proof}

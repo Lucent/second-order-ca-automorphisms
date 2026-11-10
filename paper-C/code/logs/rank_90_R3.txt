@@ -1,0 +1,5 @@
+rule 90R R=3: 32768 table bits, 65536 distinct equalities, 4096 classes [0s]
+  62974 distinct nonzero xor-equations over 4096 classes (64 words/row) [2s]
+    col 0/4096, rank 1 [0s]
+    col 2048/4096, rank 2048 [1s]
+=== rule 90R R=3: classes 4096, rank 4031, kernel dim 65 (predicted for 90R: 2^(2R)+1 = 65) [4s]

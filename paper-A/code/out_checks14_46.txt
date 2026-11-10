@@ -1,0 +1,6 @@
+(1) Psi F14 = F42 Psi: 2000 random configurations, 0 mismatches
+(1) images of eta_p, zeta_p, lambda_p, |p| <= 10: 0 mismatches
+(2) collision formula, 1 <= N <= 30: 0 mismatches
+(3) bond bits of 46 under F and rho, 256 cases: 0 failures
+time 0.9 s
+ALL CHECKS PASSED

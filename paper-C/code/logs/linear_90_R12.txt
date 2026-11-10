@@ -1,0 +1,7 @@
+
+=== 90R radius 1: 128 unknowns, 1144 distinct equations, rank 123, kernel dim 5 => exactly 2^5 = 32 commuting block maps (predicted 4R+1 = 5); rows 0.0s, elimination 0.0s
+  all 5 basis maps commute (independent re-check); 5/5 affine => all 2^5 solutions are affine over F_2
+  theory: linear maps aI+bM of radius 1: 16; invertible among them (det a unit): 5; with the constant (1,1) added: 32 maps, 10 invertible
+  full classification of all 32 maps (0.2s): {'named': 5, 'const': 2, 'other': 25, 'invertible': 10, 'layerwise-same': 16, 'layer-separable': 0, 'cross': 0, 'joint': 16, 'affine': 32}; named expected 5
+
+=== 90R radius 2: 2048 unknowns, 19960 distinct equations, rank 2031, kernel dim 17 => exactly 2^17 = 131072 commuting block maps (predicted 4R+1 = 9); rows 0.1s, elimination 2.0s

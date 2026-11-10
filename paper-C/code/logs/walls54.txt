@@ -1,0 +1,15 @@
+rules with f(.11)=f(11.)=0: 32 [0, 1, 2, 3, 4, 5, 6, 7, 16, 17, 18, 19, 20, 21, 22, 23, 32, 33, 34, 35, 36, 37, 38, 39, 48, 49, 50, 51, 52, 53, 54, 55]
+33 blocks preserved exactly by F (all 4-windows): True
+F on 3 s 3: {0: 1, 1: 2, 2: 0, 3: 3}
+L=1: period of 0^L = 3; order of F on all 4^L contents = 3 (max orbit 3)
+L=2: period of 0^L = 3; order of F on all 4^L contents = 3 (max orbit 3)
+L=3: period of 0^L = 6; order of F on all 4^L contents = 6 (max orbit 6)
+L=4: period of 0^L = 9; order of F on all 4^L contents = 90 (max orbit 15)
+L=5: period of 0^L = 18; order of F on all 4^L contents = 2520 (max orbit 30)
+L=6: period of 0^L = 21; order of F on all 4^L contents = 102702600 (max orbit 99)
+L=7: period of 0^L = 18; order of F on all 4^L contents = 4354384834800 (max orbit 270)
+L=8: period of 0^L = 21; order of F on all 4^L contents = ? (max orbit ?)
+L=9: period of 0^L = 30; order of F on all 4^L contents = ? (max orbit ?)
+L=10: period of 0^L = 33; order of F on all 4^L contents = ? (max orbit ?)
+D_1: commutes=True, entries differing from identity=3, in named=False
+D_2: commutes=True, entries differing from identity=3, in named=False

@@ -1,0 +1,36 @@
+
+=== rule 150R, radius R=1: 128 variables, 17766 clauses, encode 0.0s, enumeration 0.0s, 16 solutions
+  classification 0.1s: {'named': 5, 'const': 1, 'other': 10, 'invertible': 0, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 16}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+    const (0,0)        inv=None  layerwise-same   affine=True  table=0000000000000000000000000000000000000000000000000000000000000000
+    sigma^-1 F^0       inv=None  layerwise-same   affine=True  table=0000000000000000111111111111111122222222222222223333333333333333
+    sigma^0 F^-1       inv=None  joint            affine=True  table=0022220033111133002222003311113322000022113333112200002211333311
+    sigma^0 F^0        inv=None  layerwise-same   affine=True  table=0000111122223333000011112222333300001111222233330000111122223333
+    sigma^0 F^1        inv=None  joint            affine=True  table=0101323210102323101023230101323201013232101023231010232301013232
+    sigma^1 F^0        inv=None  layerwise-same   affine=True  table=0123012301230123012301230123012301230123012301230123012301230123
+    OTHER              inv=None  layerwise-same   affine=True  table=0123103223013210103201233210230123013210012310323210230110320123
+    OTHER              inv=None  joint            affine=True  table=0101232332321010101032322323010101012323323210101010323223230101
+    OTHER              inv=None  joint            affine=True  table=0101323210102323010132321010232323231010323201012323101032320101
+    OTHER              inv=None  joint            affine=True  table=0022331111332200113322000022331100223311113322001133220000223311
+    OTHER              inv=None  layerwise-same   affine=True  table=0123103223013210012310322301321001231032230132100123103223013210
+    OTHER              inv=None  layerwise-same   affine=True  table=0123012301230123103210321032103223012301230123013210321032103210
+    OTHER              inv=None  layerwise-same   affine=True  table=0000111122223333111100003333222222223333000011113333222211110000
+    OTHER              inv=None  joint            affine=True  table=0022220033111133113333112200002200222200331111331133331122000022
+    OTHER              inv=None  joint            affine=True  table=0022331111332200002233111133220022001133331100222200113333110022
+    OTHER              inv=None  joint            affine=True  table=0101232332321010010123233232101023230101101032322323010110103232
+
+=== rule 150R, radius R=2: 2048 variables, 294246 clauses, encode 0.7s, enumeration 7.2s, 256 solutions
+  classification 19.4s: {'named': 13, 'const': 1, 'other': 242, 'invertible': 0, 'layerwise-same': 32, 'layer-separable': 0, 'cross': 0, 'joint': 224, 'affine': 256}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+    const (0,0)        inv=None  layerwise-same   affine=True
+    sigma^-1 F^-1      inv=None  joint            affine=True
+    sigma^-1 F^0       inv=None  layerwise-same   affine=True
+    sigma^-1 F^1       inv=None  joint            affine=True
+    sigma^-2 F^0       inv=None  layerwise-same   affine=True
+    sigma^0 F^-1       inv=None  joint            affine=True
+    sigma^0 F^-2       inv=None  joint            affine=True
+    sigma^0 F^0        inv=None  layerwise-same   affine=True
+    sigma^0 F^1        inv=None  joint            affine=True
+    sigma^0 F^2        inv=None  joint            affine=True
+    sigma^1 F^-1       inv=None  joint            affine=True
+    sigma^1 F^0        inv=None  layerwise-same   affine=True
+    sigma^1 F^1        inv=None  joint            affine=True
+    sigma^2 F^0        inv=None  layerwise-same   affine=True

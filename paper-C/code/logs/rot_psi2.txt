@@ -1,0 +1,13 @@
+T1 commutation on all 4^15 windows: failures 0 (windows where Psi changes the centre: 49152)
+T2 occurrence lemma on structured 22-windows: tested 7851737088, Psi nontrivial on [q-3,q+6] in 5235652608, failures 0
+T3 period  1: rings 4, Psi nontrivial on 0, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period  2: rings 16, Psi nontrivial on 0, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period  3: rings 64, Psi nontrivial on 0, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period  4: rings 256, Psi nontrivial on 0, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period  5: rings 1024, Psi nontrivial on 0, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period  6: rings 4096, Psi nontrivial on 0, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period  7: rings 16384, Psi nontrivial on 168, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period  8: rings 65536, Psi nontrivial on 192, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period  9: rings 262144, Psi nontrivial on 216, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period 10: rings 1048576, Psi nontrivial on 240, failures (Psi^2!=id or F Psi != Psi F) 0
+T3 period 11: rings 4194304, Psi nontrivial on 1056, failures (Psi^2!=id or F Psi != Psi F) 0

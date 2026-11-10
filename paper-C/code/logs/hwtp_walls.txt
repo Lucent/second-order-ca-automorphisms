@@ -1,0 +1,6 @@
+127 |W|= 8 single orbit P= 8 True context-free F,F^-1: True F^P fixes (random contexts): True iota diff positions {(2,)} H1: True edges agree: True H2 failures 0 overlap offsets seen [3, 4, 5]
+   orbit ['03112', '12230', '30021', '21103', '03312', '12330', '30221', '21003']
+179 |W|= 6 single orbit P= 6 True context-free F,F^-1: True F^P fixes (random contexts): True iota diff positions {(2,)} H1: True edges agree: True H2 failures 0 overlap offsets seen [4, 5]
+   orbit ['01110', '12321', '20302', '01310', '12221', '20002']
+223 |W|= 8 single orbit P= 8 True context-free F,F^-1: True F^P fixes (random contexts): True iota diff positions {(2,)} H1: True edges agree: True H2 failures 0 overlap offsets seen [3, 4, 5]
+   orbit ['00122', '11300', '33211', '22133', '00322', '11200', '33011', '22033']

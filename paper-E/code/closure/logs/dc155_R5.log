@@ -1,0 +1,37 @@
+rule 155 R 5 base 96 of 4194304
+pass 1 added 113 remaining 4194095
+pass 2 added 120 remaining 4193975
+pass 3 added 351 remaining 4193624
+pass 4 added 935 remaining 4192689
+pass 5 added 2116 remaining 4190573
+pass 6 added 4866 remaining 4185707
+pass 7 added 5604 remaining 4180103
+pass 8 added 8870 remaining 4171233
+pass 9 added 10717 remaining 4160516
+pass 10 added 9658 remaining 4150858
+pass 11 added 14002 remaining 4136856
+pass 12 added 16423 remaining 4120433
+pass 13 added 20979 remaining 4099454
+pass 14 added 26543 remaining 4072911
+pass 15 added 35333 remaining 4037578
+pass 16 added 49108 remaining 3988470
+pass 17 added 58322 remaining 3930148
+pass 18 added 79189 remaining 3850959
+pass 19 added 100566 remaining 3750393
+pass 20 added 132796 remaining 3617597
+pass 21 added 175745 remaining 3441852
+pass 22 added 237848 remaining 3204004
+pass 23 added 320229 remaining 2883775
+pass 24 added 414223 remaining 2469552
+pass 25 added 508922 remaining 1960630
+pass 26 added 564370 remaining 1396260
+pass 27 added 545405 remaining 850855
+pass 28 added 431426 remaining 419429
+pass 29 added 263172 remaining 156257
+pass 30 added 112038 remaining 44219
+pass 31 added 34556 remaining 9663
+pass 32 added 8081 remaining 1582
+pass 33 added 1390 remaining 192
+pass 34 added 177 remaining 15
+pass 35 added 15 remaining 0
+COMPLETE after 35 passes

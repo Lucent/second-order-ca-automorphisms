@@ -1,0 +1,4 @@
+iota_I commutation / wall-set invariance failures: 0  total walls seen 317674
+Theorem 6.14: commute failures 0 hom/inverse failures 0 nontrivial 200 of 200; trains(len>=2) seen 19465
+injectivity witness: A-walls exactly at the m centres, no B walls: OK
+radius 2m+2 violations 0

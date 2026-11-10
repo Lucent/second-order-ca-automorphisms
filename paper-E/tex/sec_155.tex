@@ -1,0 +1,65 @@
+\section{Rule 155R: where the method stops}\label{cl:sec:155}
+
+The method of Section~\ref{cl:sec:light} fails for the class of $155$, for which $\Phi_f$ also has positive entropy; the automorphism group of this class is not known \cite{PaperD}. For $f=155$ we have $f(a,b,c)=a\oplus c\oplus N(a,b,c)$ with $N$ the indicator of $\{000,110,111\}$; so $\Phi_{155}$ is the set of sequences with none of these triples, and, since $11$ can be followed by neither letter, no point of $\Phi_{155}$ contains $11$. With the definitions above, the valid backgrounds are $01$ and $10$.
+
+\begin{proposition}[the edge bit of $155$R]\label{cl:prop:155}
+Let $f=155$, let $\beta$ be a valid background, $s\in\Z$, and let $c$ agree with $b_\beta$ on $(-\infty,s)$. Then $Y_c(t,s-t)=Y_c(0,s)$ for all $t\ge0$. If moreover $\beta_{(s-1)\bmod2}=1$ and $Y_c(0,s)=1$, then $Y_c$ fires at the centre $(t,s-t)$ for every $t\ge0$, and $F^t(c)_{s-t}=(1,1)$ for every $t\ge1$, while no point of $\Phi^+\cup\Phi^-$ has a cell $(1,1)$. In particular the conclusion of Proposition~\ref{cl:prop:sep} fails for $f=155$ on a dense set of finite perturbations of the valid backgrounds: for each of them and for every $R\ge0$ and every $T$ there are $t\ge T$ and $i$ such that $F^t(c)_{[i-R,i+R]}$ is not the window at the same position of any point of $\Phi^+\cup\Phi^-$.
+\end{proposition}
+
+\begin{proof}
+Write $Y=Y_c$. For $t\ge0$ and $i<s-t$, $Y(t,i)$ depends only on $c_{[i-t,i+t]}$, so $Y(t,i)=\beta_{(t+i)\bmod2}$. The relation \eqref{cl:eq:wave} at the centre $(t,s-t-1)$ reads
+\begin{multline*}
+Y(t+1,s-t-1)=Y(t-1,s-t-1)\oplus Y(t,s-t-2)\oplus Y(t,s-t)\\
+\oplus N\bigl(Y(t,s-t-2),Y(t,s-t-1),Y(t,s-t)\bigr).
+\end{multline*}
+The first two terms on the right are background values at points with $t+i\equiv s$, so they cancel, and the first two arguments of $N$ are $(\beta_{s\bmod2},\beta_{(s+1)\bmod2})$, which is $01$ or $10$; $N(0,1,\cdot)=N(1,0,\cdot)=0$. So $Y(t+1,s-(t+1))=Y(t,s-t)$, and induction gives the first statement. Under the further hypotheses the triple at the centre $(t,s-t)$ is $(Y(t,s-t-1),Y(t,s-t),\cdot)=(\beta_{(s-1)\bmod2},1,\cdot)=(1,1,\cdot)$, which fires, and for $t\ge1$ the cell $F^t(c)_{s-t}=(Y(t-1,s-t),Y(t,s-t))$ is $(\beta_{(s-1)\bmod2},1)=(1,1)$. The points of $\Phi^\pm$ have cells $(\varphi(i\pm1),\varphi(i))$ with $\varphi\in\Phi_{155}$ (Lemma~\ref{cl:lem:Z2}), and $\varphi$ contains no $11$. For every $t\ge1$, every window of radius $R\ge0$ of $F^t(c)$ at $s-t$ contains the cell $(1,1)$; so for every $T$, with $t=\max(T,1)$ and $i=s-t$, the window $F^t(c)_{[i-R,i+R]}$ is not a window of $\Phi^+\cup\Phi^-$. Given a finite perturbation of $b_\beta$ and a finite set of cells, choosing $s$ to the left of these cells and of every cell where it differs from $b_\beta$, with $\beta_{(s-1)\bmod2}=1$ and changing only $c_s$ gives such a configuration that agrees with the given one on the set; so these configurations are dense.
+\end{proof}
+
+\begin{remark}[$155$R]\label{cl:rem:155}
+So Lemma~\ref{cl:lem:fire} and Proposition~\ref{cl:prop:sep} are false for $155$: a front carrying a fixed pair $11$ fires at every step, and the windows it leaves behind are not windows of $\Phi^+\cup\Phi^-$. The method of Section~\ref{cl:sec:light} cannot give Lemma~L for $155$. Lemma~L itself, the statement of Theorem~\ref{cl:thm:L} with $f=155$, is not refuted, since a configuration that fails to separate may still be fixed by every $h$ that fixes $\Phi^+\cup\Phi^-$. For $R\le6$ it holds (computer-assisted): the window closure of Appendix~\ref{app:closure}, with the windows of $\Phi^+\cup\Phi^-$ as base, forces every window of radius $R\le6$. In the base, words of $\Phi_{155}$ must be pruned to those that extend to bi-infinite points, because $011$ is an allowed triple that cannot be continued. The firing of such a front is confined to the left of the perturbation: on the right the rule is transparent (Proposition~\ref{cl:prop:155W} below).
+\end{remark}
+
+\begin{proposition}[right transparency of $155$R]\label{cl:prop:155W}
+Let $f=155$, $w\in\Z$, and let $c$ agree on $[w,\infty)$ with a point of $\Phi^+$. Put $Y=Y_c$ and $E(t)=Y(t,w)$ for $t\ge-1$. Then for every $t\ge0$:
+\begin{enumerate}
+\item[(a)] $Y(t,i)=Y(t-1,i-1)$ for every $i\ge w+1$;
+\item[(b)] $Y$ does not fire at any centre $(t,i)$ with $i\ge w+1$;
+\item[(c)] $E(t+1)=0$ if $E(t)=1$; $E(t+1)=1$ if $E(t-1)=E(t)=0$; and $E(t+1)=Y(t,w-1)$ if $E(t-1)=1$ and $E(t)=0$;
+\item[(d)] $F^t(c)$ agrees on $[w,\infty)$ with a point of $\Phi^+$; in particular, for every $R\ge0$ and every $i\ge w+R$, the window $F^t(c)_{[i-R,i+R]}$ is the window at the same position of a point of $\Phi^+$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+A sequence on $\Z$ lies in $\Phi_{155}$ if and only if it contains neither $11$ nor $000$: the triples $110$ and $111$ contain $11$, and a bi-infinite sequence that contains $11$ contains $110$ or $111$. Let $\varphi\in\Phi_{155}$ be the sequence of the given point of $\Phi^+$, so that $c_i=(\varphi(i+1),\varphi(i))$ for $i\ge w$ (Lemma~\ref{cl:lem:Z2}). Define $u$ on $\Z$ by $u(k)=\varphi(k)$ for $k\ge w+1$ and $u(w-t)=E(t)$ for $t\ge-1$; the two definitions agree at $k=w+1$, since $E(-1)=Y(-1,w)=\varphi(w+1)$, and $u(w)=E(0)=\varphi(w)$. We show by induction on $t\ge0$ that
+\begin{itemize}
+\item[$(P_t)$] $Y(\tau,i)=u(i-\tau)$ for $-1\le\tau\le t$ and $i\ge w$, and
+\item[$(Q_t)$] the word $u|_{[w-t,\infty)}$ contains neither $11$ nor $000$.
+\end{itemize}
+$(P_0)$ is the hypothesis on $c$, and $(Q_0)$ holds because $\varphi\in\Phi_{155}$. Assume $(P_t)$ and $(Q_t)$. For $i\ge w+1$ the relation \eqref{cl:eq:wave} at the centre $(t,i)$ and $(P_t)$ give
+\[
+Y(t+1,i)=u(i-t+1)\oplus u(i-t-1)\oplus u(i-t+1)\oplus N\bigl(u(i-t-1),u(i-t),u(i-t+1)\bigr).
+\]
+The triple starts at $i-t-1\ge w-t$, so by $(Q_t)$ it is not in the support of $N$; hence $Y$ does not fire at $(t,i)$, which is (b), and $Y(t+1,i)=u(i-t-1)$. Together with $Y(t+1,w)=E(t+1)=u(w-t-1)$ this is $(P_{t+1})$. At the centre $(t,w)$ put $a=Y(t,w-1)$; by $(P_t)$, $Y(t-1,w)=E(t-1)$ and $Y(t,w+1)=u(w-t+1)=E(t-1)$, so \eqref{cl:eq:wave} gives
+\[
+E(t+1)=a\oplus N\bigl(a,E(t),E(t-1)\bigr).
+\]
+If $E(t)=1$, then $N(a,1,\cdot)=a$ and $E(t+1)=0$. If $E(t)=0$, then $N(a,0,x)=1$ exactly when $a=x=0$, so $E(t+1)=1$ if $E(t-1)=0$ and $E(t+1)=a$ if $E(t-1)=1$. This is (c). The only triple of $u|_{[w-t-1,\infty)}$ that is not a triple of $u|_{[w-t,\infty)}$ is $E(t+1)E(t)E(t-1)$, and by (c) neither $E(t+1)E(t)=11$ nor $E(t+1)E(t)E(t-1)=000$; this is $(Q_{t+1})$. Statement (a) is $u(i-t)=u((i-1)-(t-1))$ for $i-1\ge w$.
+
+For (d), a word on $[k,\infty)$ with neither $11$ nor $000$ extends to a sequence on $\Z$ with neither, by putting $\cdots0101$ in front of it if it begins with $0$ and $\cdots1010$ if it begins with $1$. Let $\varphi'\in\Phi_{155}$ be such an extension of $u|_{[w-t,\infty)}$, and let $d\in\Phi^+$ be the point with diagram $\varphi'(i-\tau)$. By $(P_t)$, $F^t(d)_i=(\varphi'(i-t+1),\varphi'(i-t))=(Y(t-1,i),Y(t,i))=F^t(c)_i$ for $i\ge w$, and $F^t(d)\in\Phi^+$. A window centred at $i\ge w+R$ lies in $[w,\infty)$.
+\end{proof}
+
+\begin{corollary}\label{cl:cor:155W}
+Let $f=155$.
+\begin{enumerate}
+\item[(1)] If $c$ agrees on $[w,\infty)$ with a point of $\Phi^-$, then for every $t\le0$ the configuration $F^t(c)$ agrees on $[w,\infty)$ with a point of $\Phi^-$, and $Y_c$ does not fire at any centre $(t,i)$ with $t\le-1$ and $i\ge w+1$.
+\item[(2)] Let $c$ be a finite perturbation of a valid background $\beta$ that differs from $b_\beta$ only in cells of $[0,w)$. Then $Y_c$ fires only at centres $(t,i)$ with $i\le w$, for all $t\in\Z$. If $h$ is a block map of radius $R$ that commutes with $F$ and fixes every point of $\Phi^+\cup\Phi^-$, then $Y_{h(c)}(t,i)=Y_c(t,i)$ for all $t\in\Z$ and $i\ge w+R$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(1) The time reversal $\rho(x,y)=(y,x)$ satisfies $\rho F\rho=F^{-1}$, and $Y_{\rho(c)}(t,i)=Y_c(-1-t,i)$. By Lemma~\ref{cl:lem:Z2}, $\rho$ maps $\Phi^-$ onto $\Phi^+$. So $\rho(c)$ agrees on $[w,\infty)$ with a point of $\Phi^+$, and Proposition~\ref{cl:prop:155W}(b),(d) for $\rho(c)$ give the claim, since $F^{-t}(c)=\rho F^t(\rho(c))$ and $Y_c$ fires at $(-1-t,i)$ exactly when $Y_{\rho(c)}$ fires at $(t,i)$, the relation \eqref{cl:eq:wave} being symmetric in $t\pm1$.
+
+(2) The diagram $\beta_{(t+i)\bmod2}=\beta_{(i-t)\bmod2}$ of $b_\beta$ is of both forms $\varphi(i-t)$ and $\varphi(i+t)$, so $b_\beta\in\Phi^+\cap\Phi^-$, and $c$ agrees with it on $[w,\infty)$. Proposition~\ref{cl:prop:155W}(b) excludes firings at $i\ge w+1$ for $t\ge0$, and (1) for $t\le-1$. For $t\ge0$, by Proposition~\ref{cl:prop:155W}(d), $F^t(c)$ agrees on $[w,\infty)$ with some $e\in\Phi^+$, so for $i\ge w+R$, $F^t(h(c))_i=h(F^t(c))_i=h(e)_i=e_i=F^t(c)_i$. For $t\le0$ the same argument applies with (1) and $\Phi^-$, since $h$ also commutes with $F^{-1}$. The $y$-bits of these cells are the values of the two diagrams at $(t,i)$.
+\end{proof}
+
+Proposition~\ref{cl:prop:155W} and Proposition~\ref{cl:prop:155} show an asymmetry between the two sides of a perturbation. To the left, a front carrying a fixed pair $11$ fires at every step; to the right, the medium $\Phi^+$ is transparent: nothing fires, the profile is transported at light speed, and every block map that fixes $\Phi^\pm$ acts as the identity there (Corollary~\ref{cl:cor:155W}(2)). For $91$ and $94$ the reflection $i\mapsto-i$ commutes with $F$, because $N$ is invariant under reversal of the triple, and Proposition~\ref{cl:prop:Fprime} uses it to pass from one side to the other. For $155$ the reversal of $\operatorname{supp}N=\{000,110,111\}$ is $\{000,011,111\}$, so there is no such symmetry. Lemma~L for $155$ is therefore a question about the left fronts only. Appendix~\ref{app:155} describes the eventually periodic left fronts (Lemma~\ref{cl:lem:155strip}) and formulates a hypothesis on them that Lemma~L implies (Remark~\ref{cl:rem:155G1}).

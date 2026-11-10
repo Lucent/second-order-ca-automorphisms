@@ -1,0 +1,5 @@
+rule 110: 3000 move tests (table and edge), 3000 cone tests, 375 bounce tests
+rule 42: 3000 move tests (table and edge), 3000 cone tests, 375 bounce tests
+rule 46: 3000 move tests (table and edge), 3000 cone tests, 375 bounce tests
+time 2.0 s
+ALL CHECKS PASSED

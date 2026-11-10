@@ -1,0 +1,205 @@
+\section{The linear rules 90 and 150}\label{sec:linear}
+
+For a linear rule $f(a,b,c)=\alpha a\oplus\beta b\oplus\gamma c$ the automaton $F_f$ is $\F_2$-linear, and in terms of the ring $\Lam=\F_2[s,s^{-1}]$ acting on $\F_2^{\Z}$ by $s=\sh$ it is the matrix
+\[
+M=\begin{pmatrix}0&1\\1&p\end{pmatrix},\qquad p=\alpha s^{-1}+\beta+\gamma s,
+\]
+acting on column vectors $(x,y)^{\mathsf T}$; indeed $f(y_{i-1},y_i,y_{i+1})=(py)_i$. Rule $90$ has $p=s+s^{-1}$ and rule $150$ has $p=s+1+s^{-1}$. The characteristic polynomial of $M$ is $t^2+pt+1$.
+
+\begin{lemma}\label{lem:commutant}
+Let $K=\F_2(s)$. If $t^2+pt+1$ has distinct roots in $K$, or is irreducible over $K$, then the matrices in $M_2(\Lam)$ commuting with $M$ are exactly $aI+bM$ with $a,b\in\Lam$. Among these, those whose entries all lie in the span of $s^{-R},\dots,s^{R}$ are those with $a\in\operatorname{span}(s^{-R},\dots,s^R)$ and $b\in\operatorname{span}(s^{-R+1},\dots,s^{R-1})$, an $\F_2$-space of dimension $4R$.
+\end{lemma}
+
+\begin{proof}
+In both cases $M$ is not scalar and its minimal polynomial over $K$ has degree $2$, so its commutant in $M_2(K)$ is $K[M]=\{aI+bM:a,b\in K\}$. If $aI+bM=\begin{psmallmatrix}a&b\\b&a+bp\end{psmallmatrix}$ has entries in $\Lam$ then $a,b\in\Lam$. For the radius count, $b$ must lie in the span of $s^{-R},\dots,s^R$, and then $a+bp$ lies in that span if and only if the terms of $bp$ of degree $\pm(R+1)$ vanish, that is, $b$ has no term $s^{\pm R}$ (for rule $90$ and rule $150$ alike, since $p$ has both $s$ and $s^{-1}$); then $a$ ranges over the span of $s^{-R},\dots,s^{R}$ freely.
+\end{proof}
+
+For rule $90$, $t^2+(s+s^{-1})t+1=(t+s)(t+s^{-1})$ has the distinct roots $s^{\pm1}$. For rule $150$ the polynomial is irreducible over $K$: a root would be integral over $\Lam$, hence in $\Lam$, and the product of the two roots being $1$ makes it a unit $s^k$, but then $s^k+s^{-k}=s+1+s^{-1}$ is impossible.
+
+\begin{proof}[Proof of Theorem~\ref{thm:90}]
+(a) An affine block map has the form $c\mapsto Nc+k$ with $N$ a linear block map and $k=g(0)$ a constant configuration, $k\in\{0^{\Z},1^{\Z},2^{\Z},3^{\Z}\}$. It commutes with $F=M$ if and only if $NM=MN$ and $Mk=k$. For a constant $k=(x,y)^{\Z}$ one has $F(k)=(y,x\oplus f(y,y,y))^{\Z}=(y,x)^{\Z}$ since $f(y,y,y)=0$ for rule $90$, so $k$ is fixed if and only if $x=y$, that is, $k\in\{(0,0)^{\Z},(1,1)^{\Z}\}$. Combined with Lemma~\ref{lem:commutant} this gives dimension $4R+1$.
+
+(b) The row vector $(1,s^{-1})$ satisfies $(1,s^{-1})M=(s^{-1},1+s^{-1}p)=(s^{-1},s^{-2})=s^{-1}(1,s^{-1})$, which is $u\circ F=\sh^{-1}\circ u$ for $u(x,y)=x+s^{-1}y$; similarly $(1,s)M=s(1,s)$. The column vector $(1,s^{-1})^{\mathsf T}$ satisfies $M(1,s^{-1})^{\mathsf T}=(s^{-1},1+ps^{-1})^{\mathsf T}=s^{-1}(1,s^{-1})^{\mathsf T}$, which is $F\circ\iota=\iota\circ\sh^{-1}$, and similarly for $\iota'$. Both $u$ and $w$ are surjective onto $\F_2^{\Z}$ (choose $y=0$). For a block map $h$ of the binary full shift, which commutes with $\sh^{\pm1}$,
+\[
+(\iota h u)F=\iota h\sh^{-1}u=\iota\sh^{-1}hu=F\iota hu,
+\]
+and likewise for $\iota'hw$.
+
+(c) Fix $R\ge1$ and let $A_R$ be the space in (a), $U_R$ the span of the maps $\iota hu$ with $h$ a polynomial in the variables $u_j$, $j\in J_U=[-(R-2),R]$, and $W_R$ the span of the $\iota'hw$ with $h$ a polynomial in $w_k$, $k\in J_W=[-R,R-2]$; the index ranges are those for which $\iota hu$ and $\iota'hw$ have radius at most $R$, since $(\iota hu)(c)_i=(h(u)_i,h(u)_{i-1})$ and $u_{i+j}=x_{i+j}\oplus y_{i+j-1}$. The linear forms $u_j$ ($j\in J_U$) and $w_k$ ($k\in J_W$) on the $2(2R+1)$ coordinates of a window are jointly linearly independent: a relation $\sum a_ju_j+\sum b_kw_k=0$ gives $a_m=b_m$ from the coefficient of $x_m$ and $a_{m+1}=b_{m-1}$ from that of $y_m$, with $a,b$ extended by zero outside their ranges; so $a_{m+1}=a_{m-1}$ for all $m\in\Z$. Since $R\notin J_W$ and $R-1\notin J_W$, we have $b_R=b_{R-1}=0$, hence $a_R=b_R=0$ and $a_{R-1}=b_{R-1}=0$; descending with $a_{m-1}=a_{m+1}$ gives $a_m=0$ for all $m\le R$, hence for all $m$, and then $b_m=a_m=0$ for all $m$. Consequently distinct monomials in the $u_j$ give linearly independent functions, $\dim U_R=2^{|J_U|}=2^{2R-1}$, likewise $\dim W_R=2^{2R-1}$, and a polynomial in the $u$'s equals a polynomial in the $w$'s only if both are constant, so $U_R\cap W_R$ is spanned by the constant map onto $(1,1)^{\Z}$ and $\dim(U_R+W_R)=2^{2R}-1$. An element $\iota hu+\iota'h'w$ is affine if and only if $h$ and $h'$ are affine, again by independence of the variables, so $A_R\cap(U_R+W_R)=(A_R\cap U_R)+(A_R\cap W_R)$, where $A_R\cap U_R$ consists of the $\iota hu$ with $h$ affine and has dimension $|J_U|+1=2R$, likewise $\dim(A_R\cap W_R)=2R$, and the two meet in the constants. Therefore
+\[
+\dim(A_R+U_R+W_R)=(4R+1)+(2^{2R}-1)-(4R-1)=2^{2R}+1 .
+\]
+This is a lower bound for $\dim\Cent_R(F)$, since all three families commute with $F$. The Gaussian elimination of Section~\ref{sec:method} gives $\dim\Cent_R(F)=5,17,65$ for $R=1,2,3$, and a direct rank computation on the tables of the three families, each table re-verified to commute, gives the same numbers, so the span is everything for $R\le3$.
+\end{proof}
+
+\begin{conjecture}
+$\dim_{\F_2}\Cent_R(F_{90})=2^{2R}+1$ for every $R$; equivalently, every block map commuting with $F_{90}$ is a sum of an affine commuting map, a map $\iota hu$ and a map $\iota'h'w$.
+\end{conjecture}
+
+The invertible elements are few. At $R=1$ the $32$ commuting maps contain $10$ invertible ones, all affine, namely the $5$ maps $\sh^aF^b$ and the $5$ further maps $(aI+bM)c+k$ whose determinant $a^2+abp+b^2$ is a unit of $\Lam$. The maps $\iota hu$ and $\iota'hw$ are never injective, since they factor through $u$ or $w$. (The maps $\mathrm{id}+\iota hu$ can be injective; see Section~\ref{lin:sec:movers}.) At $R=2$ the enumeration of all $2^{17}$ commuting maps, with the pair-graph test applied to the $98{,}222$ balanced ones, finds exactly $26$ invertible maps, all affine: the $13$ maps $\sh^aF^b$ and the $13$ further maps $(aI+bM)c+k$ with unit determinant. So every automorphism of $X_{F_{90}}$ of radius at most $2$ is affine. This does not persist: by Theorem~\ref{lin:movers}, $X_{F_{90}}$ has non-affine automorphisms, and its automorphism group contains every finite group.
+
+\begin{proposition}\label{prop:150}
+For $R\le3$, $\Cent_R(F_{150})$ consists exactly of the $2^{4R}$ linear maps $(aI+bM)c$ of Lemma~\ref{lem:commutant}.
+\end{proposition}
+
+\begin{proof}
+Lemma~\ref{lem:commutant} gives $2^{4R}$ linear commuting maps, and since $f(1,1,1)=1$ the only fixed point of $F_{150}$ is $(0,0)^{\Z}$, so there is no further constant. Gaussian elimination gives $\dim\Cent_R(F_{150})=4,8,12$ for $R=1,2,3$.
+\end{proof}
+
+So the non-affine commuting maps of $F_{90}$ are explained entirely by the two eigen-factors onto the binary shift, and the rule without eigen-factors has none, at least through radius $3$. Both results also confirm the encoding: for the linear rules the SAT enumeration at $R\le2$ and the elimination agree, and the $2^{2R}+1$ and $4R$ patterns are exactly what the algebra predicts.
+
+\begin{table}[t]
+\caption{Block maps of radius at most $R$ commuting with $F_{90}$ and $F_{150}$. ``Named'' are the maps $\sh^aF^b$ with $|a|+|b|\le R$; ``other'' are maps that are neither named nor constant; the last two columns count the invertible commuting maps, that is, the automorphisms of radius at most $R$, and those outside $\langle\sh,F\rangle$; for $150$R, $h=\mathrm{id}+\sh F$ as in Proposition~\ref{prop:150Z3}.}
+\label{tab:census}
+\centering
+\begin{tabular}{llrrrrrl}
+\toprule
+rule & $R$ & commuting & named & constants & other & invertible & outside $\langle\sh,F\rangle$\\
+\midrule
+90R & 1 & $2^{5}$ & 5 & 2 & 25 & 10 & $5$, all affine\\
+90R & 2 & $2^{17}$ & 13 & 2 & rest & 26 & $13$, all affine\\
+90R & 3 & $2^{65}$ & 25 & 2 & rest & --- & ---\\
+150R & 1 & $2^{4}$ & 5 & 1 & 10 & 9 & $4$, all in $\langle\sh,F,h\rangle$\\
+150R & 2 & $2^{8}$ & 13 & 1 & rest & 43 & $30$, all in $\langle\sh,F,h\rangle$\\
+150R & 3 & $2^{12}$ & 25 & 1 & rest & 115 & $90$, all in $\langle\sh,F,h\rangle$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The commuting maps of $F_{150}$ are all linear through radius $3$, but its automorphism group is still larger than $\langle\sh,F_{150}\rangle$. In $M_2(\Lam)$ the shift is the scalar matrix $sI$ and $F_{150}$ is $M$; under the ring isomorphism $\Lam[M]\cong\Lam[t]/(t^2+pt+1)$ the commutant of Lemma~\ref{lem:commutant} becomes a subring of the field $L=K[t]/(t^2+pt+1)$, a quadratic extension of $K=\F_2(s)$, and composition of commuting linear maps becomes multiplication in $L$.
+
+\begin{proposition}\label{prop:150Z3}
+Let $F=F_{150}$ and $h=\mathrm{id}+\sh F$. Then $h\in\Aut(X_F)$, $h\notin\langle\sh,F\rangle$, and $(a,b,e)\mapsto\sh^aF^bh^e$ is an isomorphism $\Z^3\to\langle\sh,F,h\rangle$. Moreover $F$ has no blocking word. In particular $\Aut(X_{F_{150}})$ is not virtually $\Z^2$.
+\end{proposition}
+
+\begin{proof}
+The map $h$ has matrix $I+sM$, so it is a block map commuting with $F$ and $\sh$. It is invertible, because $\det(I+sM)=1+sp+s^2=1+s(s+1+s^{-1})+s^2=s$ is a unit of $\Lam$, so the inverse matrix has entries in $\Lam$. By Lemma~\ref{lem:spacetime}, $h\in\Aut(X_F)$.
+
+For independence, identify $\sh^aF^bh^e$ with the element $s^at^b(1+st)^e$ of $L^\times$, where $t$ is the image of $M$; the identification is an injective homomorphism on the commuting linear invertible maps, since $I$ and $M$ are linearly independent over $\Lam$. Suppose $s^at^b(1+st)^e=1$. Let $N\colon L^\times\to K^\times$ be the norm, which is the determinant: $N(s)=s^2$, $N(t)=\det M=1$ and $N(1+st)=s$. So $s^{2a+e}=1$, and $e=-2a$. Put $u=(1+st)^2s^{-1}$; the relation becomes $t^b=u^a$. Since $t^2=pt+1$, we have $t^{-1}=t+p$, and a direct computation with $sp=s^2+s+1$ and $(s^2+s+1)p=s^3+s+s^{-1}$ gives
+\[
+u=s^{-1}+s+(s^2+s+1)t=s^3+(s^2+s+1)t^{-1},\qquad ut=s^3t+s^2+s+1 .
+\]
+Let $v$ be a valuation of $L$ extending a valuation of $K$ with $v(s)=e_0>0$. Then $v(p)=-e_0$, and since $t\cdot t^{-1}=1$ and $t+t^{-1}=p$, one of $v(t)$, $v(t^{-1})$ is $-e_0$ and the other $e_0$. If $v(t)=-e_0$, the second expression gives $v(u)=\min(3e_0,e_0)=e_0$; if $v(t)=e_0$, the first gives $v(u)=-e_0$, since $v(s^{-1})=-e_0$ and the other terms have positive valuation. In both cases $v(u)=-v(t)$, and $t^b=u^a$ gives $b=-a$, so $(ut)^a=1$. The element $ut$ is not a root of unity: a root of unity in $L$ is algebraic over $\F_2$, so it lies in the algebraic closure of $\F_2$ in $L$, a finite field $\F_q$ with $[\F_q:\F_2]\le[L:K]=2$; every element of $\F_4$ has trace over $K$ in $\F_2$, while the trace of $ut$ is $s^3(t+t^{-1})=s^3p=s^4+s^3+s^2$. Hence $a=0$, and then $b=e=0$. So the homomorphism $\Z^3\to\langle\sh,F,h\rangle$ is injective. In particular $h\notin\langle\sh,F\rangle$.
+
+For the blocking words, let $u$ be a word, $q$ a position in it, and $x$ a configuration containing $u$ on $[0,|u|)$. For $N\ge|u|$ let $x'$ be $x$ with the $y$-bit of the cell $N$ complemented, and let $\Delta=Y_x\oplus Y_{x'}$. By linearity $\Delta$ satisfies $\Delta(t+1,i)=\Delta(t-1,i)\oplus\Delta(t,i-1)\oplus\Delta(t,i)\oplus\Delta(t,i+1)$, with $\Delta(-1,\cdot)=0$ and $\Delta(0,\cdot)$ the unit vector at $N$. By induction on $t\ge0$, $\Delta(t,i)=0$ for $i<N-t$ and $\Delta(t,N-t)=1$: at $i<N-t-1$ all four terms vanish, and at $i=N-t-1$ only $\Delta(t,N-t)=1$ is nonzero. For $t=N-q$ this gives $F^{N-q}(x)_q\ne F^{N-q}(x')_q$, so $u$ is not blocking with column $q$.
+
+Finally, if $\Aut(X_F)$ had a finite-index subgroup isomorphic to $\Z^2$, it would meet $\langle\sh,F,h\rangle\cong\Z^3$ in a subgroup of finite index in $\Z^3$, hence of rank $3$, inside $\Z^2$; this is impossible.
+\end{proof}
+
+In fact $\Aut(X_{F_{150}})=\langle\sh,F,h\rangle$: every automorphism of $X_{F_{150}}$ is affine (Lemma~\ref{aff:lem:R}), so it is a map $aI+bM$ whose determinant $a^2+abp+b^2$ is a unit of $\Lam$, and these maps are exactly the elements $s^at^b(1+st)^e$ (Lemma~\ref{aff:lem:units} and Theorem~\ref{thm:affine}(4)).
+
+\begin{remark}\label{lin:rem:window}
+For $M\ge0$ let $\Lambda_M$ be the light-speed window graph of $F$: its vertices are the words $\omega\in\A^{M+1}$, and for every configuration $\tilde c$ with $\tilde c_{[p,p+M]}=\omega$ it has an edge from $\omega$ to the word $F(\tilde c)_{[p+1,p+M+1]}$, which depends only on $\omega$ and on $\tilde c_{p+M+1},\tilde c_{p+M+2}$. Its strong connectivity for every $M$ is one of the hypotheses of the rigidity theorems of \cite{PaperB}. A direct construction of $\Lambda_M$ from the local rule (Appendix~\ref{app:stated}) finds it strongly connected for $M\le4$ for the affine rules $15$, $60$, $105$, $150$, $195$ and $240$, and not strongly connected for $90$ and $165$. So for $150$ the extra automorphisms of Proposition~\ref{prop:150Z3} are not detected by these graphs; they come from linearity.
+\end{remark}
+
+\subsection{Every finite group for 90R and 165R}\label{lin:sec:movers}
+
+The maps $\iota hu$ of Theorem~\ref{thm:90}(b) are never invertible, but a map $\mathrm{id}+\iota hu$ can be. Here we show that such maps carry two commuting copies of $\bigoplus_mS_m$, for rule $90$ and for its complement $165$.
+
+Throughout this subsection $F$ is $F_{90}$ or $F_{165}$, and $\varepsilon=0$ or $1$ accordingly. Since $165(a,b,c)=1\oplus a\oplus c$, we have $F_{165}(c)=F_{90}(c)+\varepsilon(0,1)^{\Z}$, with cellwise addition in $\F_2^2$. Binary configurations $v\in\F_2^{\Z}$ are added cellwise, $\mathbf 1=1^{\Z}$, $\bar v=v+\mathbf 1$, and $(\sh v)_n=v_{n+1}$. Define
+\[
+d(c)_n=x_{n+1}+y_{n+2},\qquad e(c)_n=y_n+x_{n+1},\qquad \iota(v)_i=(v_{i-1},v_i),\qquad \iota'(v)_i=(v_{i+1},v_i);
+\]
+thus $\iota$ is the embedding of Theorem~\ref{thm:90}(b), and $d=\sh w$, $e=\sh u$ for its factor maps $w$ and $u$.
+
+\begin{lemma}\label{lin:coords}
+\begin{enumerate}
+\item[(a)] $d$ and $e$ are $\F_2$-linear block maps $\A^{\Z}\to\F_2^{\Z}$ commuting with $\sh$, $d$ reads the cells $n+1,n+2$ and $e$ the cells $n,n+1$, and both are surjective.
+\item[(b)] $d(F(c))=\sh d(c)+\varepsilon\mathbf 1$ and $e(F(c))=\sh^{-1}e(c)+\varepsilon\mathbf 1$.
+\item[(c)] $F_{90}\circ\iota=\iota\circ\sh$ and $F_{90}\circ\iota'=\iota'\circ\sh^{-1}$.
+\item[(d)] $d\circ\iota=\mathrm{id}+\sh^2$, $e\circ\iota=0$, $d\circ\iota'=0$ and $e\circ\iota'=\mathrm{id}+\sh^2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) is clear; for surjectivity take $y=0$. Write $F(c)_i=(y_i,\,x_i+y_{i-1}+y_{i+1}+\varepsilon)$. Then $d(F(c))_n=y_{n+1}+x_{n+2}+y_{n+1}+y_{n+3}+\varepsilon=d(c)_{n+1}+\varepsilon$, and $e(F(c))_n=x_n+y_{n-1}+y_{n+1}+\varepsilon+y_{n+1}=e(c)_{n-1}+\varepsilon$, which is (b). For (c), $F_{90}(\iota v)_i=(v_i,\,v_{i-1}+v_{i-1}+v_{i+1})=(v_i,v_{i+1})=\iota(\sh v)_i$ and $F_{90}(\iota'v)_i=(v_i,\,v_{i+1}+v_{i-1}+v_{i+1})=(v_i,v_{i-1})=\iota'(\sh^{-1}v)_i$. For (d), $d(\iota v)_n=v_n+v_{n+2}$, $e(\iota v)_n=v_n+v_n=0$, $d(\iota'v)_n=v_{n+2}+v_{n+2}=0$ and $e(\iota'v)_n=v_n+v_{n+2}$.
+\end{proof}
+
+\begin{definition}\label{lin:def:integral}
+Let $\mathcal G$ be the set of automorphisms $\psi$ of the binary full shift with $\psi(0^{\Z})=0^{\Z}$ for which there is a block map $J\colon\F_2^{\Z}\to\F_2^{\Z}$ with $J(0^{\Z})=0^{\Z}$ and
+\[
+\psi(z)=z+J(z)+\sh^2J(z)\qquad(z\in\F_2^{\Z}),
+\]
+that is, $\psi=\mathrm{id}+(\mathrm{id}+\sh^2)J$. We call $J=J_\psi$ the \emph{integral} of $\psi$. Let $\mathcal G^{\kappa}\subseteq\mathcal G$ consist of the $\psi$ with $J_\psi(\bar z)=J_\psi(z)$ for all $z$; such $\psi$ satisfy $\psi(\bar z)=\overline{\psi(z)}$.
+\end{definition}
+
+\begin{lemma}\label{lin:integral}
+The integral is unique. $\mathcal G$ is a group, with $J_{\psi\chi}=J_\chi+J_\psi\circ\chi$ and $J_{\psi^{-1}}=J_\psi\circ\psi^{-1}$, and $\mathcal G^{\kappa}$ is a subgroup.
+\end{lemma}
+
+\begin{proof}
+Let $K$ be a block map of radius $r$ with $K(0^{\Z})=0^{\Z}$ and $(\mathrm{id}+\sh^2)K=0$, so that every $K(z)$ is invariant under $\sh^2$. Given $z$ and $n$, let $z'$ agree with $z$ on $[n-r,n+r]$ and vanish on $[n+2N-r,n+2N+r]$ for some large $N$. Then $K(z)_n=K(z')_n=K(z')_{n+2N}=K(0^{\Z})_n=0$. So $K=0$, which gives uniqueness. For $\psi,\chi\in\mathcal G$, $(\mathrm{id}+\sh^2)(J_\chi+J_\psi\circ\chi)=(\chi+\mathrm{id})+(\psi\chi+\chi)=\psi\chi+\mathrm{id}$, and $J_\chi+J_\psi\circ\chi$ is a block map vanishing at $0^{\Z}$; so $\psi\chi\in\mathcal G$ with the stated integral. Similarly $(\mathrm{id}+\sh^2)(J_\psi\circ\psi^{-1})=(\psi+\mathrm{id})\circ\psi^{-1}=\mathrm{id}+\psi^{-1}$, so $\psi^{-1}\in\mathcal G$. If $J_\psi$ and $J_\chi$ are invariant under $z\mapsto\bar z$, then $\psi$ and $\chi$ commute with it, since $\psi(\bar z)=\bar z+(\mathrm{id}+\sh^2)J_\psi(z)=\overline{\psi(z)}$, and hence so are $J_\chi+J_\psi\circ\chi$ and $J_\psi\circ\psi^{-1}$.
+\end{proof}
+
+\begin{theorem}\label{lin:movers}
+For $\psi\in\mathcal G$ define
+\[
+\Phi_\psi(c)=c+\iota\bigl(J_\psi(d(c))\bigr),\qquad \Phi'_\psi(c)=c+\iota'\bigl(J_\psi(e(c))\bigr).
+\]
+Let $H=\mathcal G$ if $F=F_{90}$ and $H=\mathcal G^{\kappa}$ if $F=F_{165}$. Then $(\psi,\chi)\mapsto\Phi_\psi\Phi'_\chi$ is an injective homomorphism $H\times H\to\Aut(X_F)$. The group $\bigoplus_{m\ge1}S_m$ embeds in $\mathcal G^{\kappa}$ (Lemma~\ref{lin:markers}), so $(\bigoplus_{m\ge1}S_m)^2$ embeds in $\Aut(X_{F_{90}})$ and in $\Aut(X_{F_{165}})$. In particular both groups contain every finite group, are nonabelian, and are not virtually $\Z^n$ for any $n$.
+\end{theorem}
+
+\begin{proof}
+\emph{Locality.} $\Phi_\psi$ and $\Phi'_\psi$ are composites and sums of block maps commuting with $\sh$, so they are block maps.
+
+\emph{The coordinates.} By linearity of $d$ and $e$ and Lemma~\ref{lin:coords}(d),
+\[
+d\circ\Phi_\psi=\psi\circ d,\qquad e\circ\Phi_\psi=e,\qquad d\circ\Phi'_\psi=d,\qquad e\circ\Phi'_\psi=\psi\circ e .
+\]
+For instance $d(\Phi_\psi(c))=d(c)+(\mathrm{id}+\sh^2)J_\psi(d(c))=\psi(d(c))$.
+
+\emph{Commutation.} Write $F=F_{90}+k$ with $k=\varepsilon(0,1)^{\Z}$, and recall that $J_\psi$ commutes with $\sh$. By Lemma~\ref{lin:coords}(c), $F(\Phi_\psi(c))=F(c)+F_{90}\iota J_\psi(d(c))=F(c)+\iota\sh J_\psi(d(c))$. By Lemma~\ref{lin:coords}(b), $\Phi_\psi(F(c))=F(c)+\iota J_\psi(\sh d(c)+\varepsilon\mathbf 1)$, and $J_\psi(\sh d(c)+\varepsilon\mathbf 1)=J_\psi(\sh d(c))=\sh J_\psi(d(c))$: for $\varepsilon=0$ trivially, and for $\varepsilon=1$ because $\psi\in\mathcal G^{\kappa}$. So $F\Phi_\psi=\Phi_\psi F$. The same computation with $\iota'$, $e$ and $\sh^{-1}$ gives $F\Phi'_\psi=\Phi'_\psi F$.
+
+\emph{Homomorphism and invertibility.} By the coordinate identities, the linearity of $\iota$ and Lemma~\ref{lin:integral},
+\[
+\Phi_\psi(\Phi_\chi(c))=c+\iota J_\chi(d(c))+\iota J_\psi(\chi(d(c)))=c+\iota J_{\psi\chi}(d(c))=\Phi_{\psi\chi}(c),
+\]
+and $\Phi_{\mathrm{id}}=\mathrm{id}$ since $J_{\mathrm{id}}=0$. So $\Phi_\psi$ is invertible with inverse $\Phi_{\psi^{-1}}$; here the invertibility of $\psi=\mathrm{id}+(\mathrm{id}+\sh^2)J_\psi$ is what makes $\Phi_\psi$ invertible. With the commutation, $\Phi_\psi\in\Aut(X_F)$ by Lemma~\ref{lem:spacetime}, and $\psi\mapsto\Phi_\psi$ is a homomorphism $H\to\Aut(X_F)$. The same holds for $\psi\mapsto\Phi'_\psi$.
+
+\emph{The two movers commute.} Since $d\circ\Phi'_\chi=d$ and $e\circ\Phi_\psi=e$,
+\[
+\Phi_\psi\Phi'_\chi(c)=c+\iota'J_\chi(e(c))+\iota J_\psi(d(c))=\Phi'_\chi\Phi_\psi(c).
+\]
+So $(\psi,\chi)\mapsto\Phi_\psi\Phi'_\chi$ is a homomorphism $H\times H\to\Aut(X_F)$.
+
+\emph{Injectivity.} If $\Phi_\psi\Phi'_\chi=\mathrm{id}$, then applying $d$ gives $\psi(d(c))=d(c)$ for every $c$, so $\psi=\mathrm{id}$ because $d$ is surjective; applying $e$ gives $\chi=\mathrm{id}$.
+
+The remaining statements follow from Lemma~\ref{lin:markers}, with $\mathcal G^{\kappa}\subseteq\mathcal G$, and from the argument in the proof of Theorem~\ref{thm:54}.
+\end{proof}
+
+It remains to produce automorphisms of the binary full shift with integrals. They come from marker permutations whose changes have zero sum on the even and on the odd positions of each segment.
+
+\begin{lemma}\label{lin:markers}
+For $L\ge1$ let $U_L$ be the set of words $u\in\{0,1\}^L$ with $u_0=u_{L-1}=0$, with no factor $11$ and no factor $000$, and with $\sum_{k\ \mathrm{even}}u_k\equiv\sum_{k\ \mathrm{odd}}u_k\equiv0\pmod2$. A \emph{frame} of $z\in\F_2^{\Z}$ of length $L$ at $p$ is a position $p$ with $z_{[p,p+L+6)}=111\,u\,111$ (a positive frame) or $z_{[p,p+L+6)}=000\,\bar u\,000$ (a negative frame) for some $u\in U_L$, its \emph{content}; its \emph{segment} is $[p+3,p+L+2]$. For a family $\rho=(\rho_L)_{L\ge1}$ of permutations $\rho_L\in\Sym(U_L)$, all but finitely many equal to the identity, let $\psi_\rho(z)$ be obtained from $z$ by replacing the content $u$ of every frame of length $L$ by $\rho_L(u)$, that is, writing $\rho_L(u)$ on the segment of a positive frame and $\overline{\rho_L(u)}$ on that of a negative one. Then $\rho\mapsto\psi_\rho$ is an injective homomorphism $\bigoplus_L\Sym(U_L)\to\mathcal G^{\kappa}$. Moreover $|U_{4N+11}|\ge N+1$ for $N\ge0$, so $\bigoplus_{m\ge1}S_m$ embeds in $\mathcal G^{\kappa}$.
+\end{lemma}
+
+\begin{proof}
+(i) \emph{No run of three equal symbols meets a segment.} In a positive frame every $1$ of the segment has two neighbours $0$, since $u$ has no $11$ and starts and ends with $0$; and the cells next to the segment are $1$, so a run $000$ meeting the segment would lie inside it, which $u$ excludes. Negative frames are the complements.
+
+(ii) \emph{Segments of distinct frames are disjoint, at least three cells apart.} Two frames at the same position have the same sign, given by $z_p$, and if their lengths were $L<L'$, then the cell $p+L+3$, which lies in a run of three, would lie in the segment $[p+3,p+L'+2]$ of the longer one, contradicting (i). Let $p<q$ be frames, of lengths $L_p$ and $L_q$. The run $z_{[q,q+3)}$ is disjoint from the segment of $p$ by (i), and $q+2>p+2$, so $q\ge p+L_p+3$. Hence the segment of $q$ starts at $q+3\ge p+L_p+6$, at least three cells after the end $p+L_p+2$ of the segment of $p$.
+
+(iii) \emph{$\psi_\rho$ preserves frames.} Let $z'=\psi_\rho(z)$. By (i) and (ii), $\psi_\rho$ changes only cells of segments and leaves the runs of three equal symbols in place, so every frame of $z$ is a frame of $z'$, of the same length and sign, with content $\rho_L(u)$; note that $\rho_L(u)\in U_L$ again satisfies (i). Conversely let $p$ be a frame of $z'$. If its segment meets the segment of a frame $q$ of $z$, then $q$ is also a frame of $z'$, and $p=q$ by (ii) applied to $z'$. Otherwise $z=z'$ on the segment of $p$, and also on the two runs of $p$: a cell of one of them that lay in a segment of some frame of $z$ would lie in a segment of the same frame of $z'$, contradicting (i) for $z'$. So $p$ is a frame of $z$. Hence $z$ and $z'$ have the same frames, with the same lengths and signs, and the contents of $z'$ are the images under $\rho$ of those of $z$.
+
+(iv) \emph{Group law.} By (iii), $\psi_\rho\psi_{\rho'}=\psi_{\rho\rho'}$ and $\psi_{\mathrm{id}}=\mathrm{id}$; and $\psi_\rho$ is a block map commuting with $\sh$, since a cell reads the frame containing it in its segment, of length at most $\max\{L:\rho_L\ne\mathrm{id}\}+6$. So each $\psi_\rho$ is an automorphism. It fixes $0^{\Z}$, which has no frames, and if $\rho_L(u)\ne u$ then $\psi_\rho$ moves the configuration $0^{\Z}$ with $111\,u\,111$ written at $0$; so $\rho\mapsto\psi_\rho$ is injective. The frames of $\bar z$ are those of $z$ with the signs exchanged and the same contents, so $\psi_\rho(\bar z)=\overline{\psi_\rho(z)}$.
+
+(v) \emph{The integral.} Let $\delta=z+\psi_\rho(z)$. It vanishes outside segments, and on the segment $[a,a+L-1]$ of a frame with content $u$ it is $\delta_{a+k}=u_k+\rho_L(u)_k$, for either sign. Define $J(z)_{a+k}=\sum\{\delta_{a+k'}:\ k\le k'\le L-1,\ k'\equiv k\pmod 2\}$ for $0\le k\le L-1$ on each segment, and $J(z)_n=0$ outside segments. This is a block map with $J(0^{\Z})=0^{\Z}$, and $J(\bar z)=J(z)$, since $\bar z$ has the same segments and the same $\delta$. We check $J(z)_n+J(z)_{n+2}=\delta_n$ for every $n$. If $n$ and $n+2$ lie in one segment, this is the definition. If $n=a+k$ lies in a segment and $n+2$ does not, then $k\ge L-2$, $J(z)_n=\delta_n$, and $n+2$ lies in no segment by (ii), so $J(z)_{n+2}=0$. If $n$ lies in no segment, then $\delta_n=J(z)_n=0$, and either $n+2$ lies in no segment, or by (ii) $n+2\in\{a,a+1\}$ for the start $a$ of a segment; then $J(z)_{n+2}$ is the sum of $\delta$ over the even, respectively odd, positions of that segment, which is $0$ because $u$ and $\rho_L(u)$ both lie in $U_L$. Thus $\psi_\rho=\mathrm{id}+(\mathrm{id}+\sh^2)J$, and $\psi_\rho\in\mathcal G^{\kappa}$.
+
+(vi) \emph{Counting.} For $0\le i\le N$ the word $0\,(10)^{2i+1}\,100\,10\,100\,(10)^{2(N-i)}$ has length $4N+11$, starts and ends with $0$, and has no factor $11$ or $000$. Its $1$'s lie at the odd positions $1,3,\dots,4i+1$, then at $4i+3$, $4i+6$ and $4i+8$, and then at the $2(N-i)$ odd positions $4i+11,\dots$; so $4N+2$ of them are at odd and $2$ at even positions, and the word lies in $U_{4N+11}$. These $N+1$ words are distinct. Embedding $S_m$ in $\Sym(U_{4m+7})$ for each $m$ gives $\bigoplus_mS_m\hookrightarrow\bigoplus_L\Sym(U_L)\hookrightarrow\mathcal G^{\kappa}$.
+\end{proof}
+
+\begin{sloppypar}
+\begin{example}\label{lin:ex:S3}
+A smaller instance uses frames $111\,u\,111$ and $000\,\bar u\,000$ with $u$ in $U=\{0010110,\,0101010,\,0110100\}$, which are not in $U_7$ but all have even-position sum $0$ and odd-position sum $1$. For $\rho\in S_3$, $\psi_\rho$ replaces $u_i$ by $u_{\rho(i)}$, and $J_\rho$ is defined on each segment by the formula in Lemma~\ref{lin:markers}(v). Exhaustive checks on the binary full shift (computer-assisted; Appendix~\ref{app:stated}) show that distinct frames share no segment cell (two frames can overlap only in a shared run, at offset $10$), that $\psi_\rho$ preserves the frames and permutes the contents, on all $2^{31}$ windows of length $31$, that $d+J_\rho(d)+\sh^2J_\rho(d)=\psi_\rho(d)$ on all $2^{21}$ windows, and that $J_\rho(\bar d)=J_\rho(d)$. So $\psi_\rho\in\mathcal G^{\kappa}$, and $\rho\mapsto\Phi_{\psi_\rho}$ embeds $S_3$ in $\Aut(X_{F_{90}})$ and in $\Aut(X_{F_{165}})$ by maps of cell radius $11$. The maps $\Phi_{\psi_{(01)}}$ and $\Phi_{\psi_{(12)}}$ do not commute.
+\end{example}
+\end{sloppypar}
+
+The maps $\Phi_\psi$ have the form $\mathrm{id}+\iota\circ h\circ u'$ with $u'=d$ a factor map and $h=J_\psi$. In the classification of \cite{PaperD}, rules $90$ and $165$, which are affine, are listed among the classes whose automorphism group contains every finite group.
+
+\begin{corollary}\label{lin:noblock}
+For $f\in\{90,165\}$, $F_f$ has no blocking word, and in particular no word fixed in every context, and $\Aut(X_{F_f})$ is not virtually $\Z^2$.
+\end{corollary}
+
+\begin{proof}
+Let $u$ be a word, $q$ a position in it, and $x$ a configuration containing $u$ on $[0,|u|)$. For $N\ge|u|+q$ let $e_N\in\F_2^{\Z}$ be the unit vector at $N$, and $x'=x+\iota(e_N)$, which differs from $x$ only at the cells $N$ and $N+1$ and so also contains $u$ on $[0,|u|)$. Since $F^n$ differs from $F_{90}^n$ by a constant, Lemma~\ref{lin:coords}(c) gives $F^n(x')-F^n(x)=F_{90}^n(\iota(e_N))=\iota(\sh^ne_N)=\iota(e_{N-n})$, whose $y$-bit at $q$ is $1$ for $n=N-q$. So $F^{N-q}(x')_q\ne F^{N-q}(x)_q$, and $u$ is not blocking with column $q$. A word fixed in every context is blocking. The last statement is Theorem~\ref{lin:movers}.
+\end{proof}
+

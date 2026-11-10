@@ -1,0 +1,2 @@
+F_3 states 1152 edges 2688 claimed form holds (directed, all tails): False [(1, 288, False), (2, 288, False), (3, 288, False), (4, 216, False), (5, 72, True)]
+F_4 states 4608 edges 13824 claimed form holds (directed, all tails): True [(1, 1152, True), (2, 1152, True), (3, 1152, True), (4, 864, True), (5, 288, True)]

@@ -1,0 +1,60 @@
+# Paper A: statements and the computations that accompany them
+
+*Reversible rule 110 has no hidden symmetries: six families of second-order cellular automata settled by edge moves.*
+
+**Every theorem, proposition and lemma of this paper is proved by hand; no computer is used in any proof** (Theorem 1.1 and all the statements listed below). The paper has no computer-assisted statement. Its Appendix A ("Computer checks") specifies confirmations of statements proved by hand; the table lists every one of them. Statement numbers are those of `tex/main.pdf`.
+
+- Paths are relative to `paper-A/`. Commands in `code/` are run from `code/`, commands in `code/c79/` from `code/c79/`.
+- Each program stops with an error (or prints `FAILURE` and exits with a nonzero status) if a check fails.
+- Tier **quick**: run by `make check` (68 s in total on one core, peak memory 0.6 GB), which runs the command in a scratch copy and compares its output with the committed file, ignoring lines of the form `time ... s`. Tier **full**: run by `code/run_all.sh` (5 min, peak memory 2.8 GB) and `code/c79/run_all.sh` (9 min, peak memory 0.3 GB), which run every command of the table, including the quick ones, and rewrite the `out_*.txt` files. The committed outputs were reproduced with these two scripts, identically except for the `time` lines.
+- Times are for one core, Python 3.12 and gcc 15.2, on the machine used for the checks.
+
+## Classes of 110, 14 and 46 (Appendix A.1)
+
+| Statement in the paper | Status | Program | Command | Expected output | Time, memory | Tier |
+|---|---|---|---|---|---|---|
+| Theorem 4.10 (classes of the moves for 110), Theorem 5.4 (A), (B) (42; with equality in (B)), Theorem 5.13 (46): the orbits of the moves on the light-cone window [r-3k+1, r], k ≤ 4, by union–find, every move evaluated under four paddings | confirmation only | `code/base_cases.c`, `code/moves.h` | `gcc -O2 -Wall -o base_cases base_cases.c; for r in 110 42 46; do for k in 1 2 3 4; do ./base_cases $r $k cone; done; done` | `code/out_base_cone.txt`; every line ends with `mismatches 0; ...`, last line `ALL CHECKS PASSED` | 17 s, 0.6 GB | quick |
+| The same three theorems on the window [r-k, r] with six fillings to the left: k ≤ 10 (110, 42), k ≤ 8 (46) | confirmation only | `code/base_cases.c` | `for k in 5 6 7 8 9 10; do ./base_cases 110 $k short; ./base_cases 42 $k short; done; for k in 4 5 6 7 8; do ./base_cases 46 $k short; done` | `code/out_base_short.txt`; last line `ALL CHECKS PASSED` | 70 s | full |
+| Theorems 4.10 and 5.4: the proofs run as algorithms (all configurations on [r-k-2, r], k ≤ 5, with three random fillings; 300 random configurations for k = 6, 7, 8); the words of moves replayed with the tables of Lemma 4.4 (edge moves) and Lemma 5.2 | confirmation only (exhaustive for k ≤ 5, random for k = 6..8) | `code/checkA_constructive.py` | `python3 checkA_constructive.py 5 8 300` | `code/out_checkA.txt`; last line `ALL CHECKS PASSED` | 3 min | full |
+| Theorems 4.10 and 5.4: every step of the proofs, with moves computed from probes and debris and orbits computed by search, k ≤ 5 | confirmation only | `code/checkB_probes.py` | `python3 checkB_probes.py 5 1` | `code/out_checkB.txt`; ten lines `rule ... theorem (T) ok; ...`, then `ALL CHECKS PASSED` | 19 s | quick |
+| Lemma 4.4 and Lemma 5.2 (move tables for 110, 42, 46) against moves computed from probes and debris (Lemma 4.3(b)), 1500 random configurations per rule; the cone of the moves; Lemma 4.1(c) (bounce formula) | confirmation only (random) | `code/probes.py` | `python3 probes.py 1500` | `code/out_probes.txt`; per rule `3000 move tests (table and edge), 3000 cone tests, 375 bounce tests`; `ALL CHECKS PASSED` | 2 s | quick |
+| The conjugacy Ψ F_14 = F_42 Ψ with equation (7); Lemma 5.8 (collision formula), 1 ≤ N ≤ 30; invariance of the bond bits of 46 under F and ρ, all values of four consecutive cells | confirmation only (the conjugacy on 2000 random configurations; the other two exhaustive in the stated range) | `code/checks14_46.py` | `python3 checks14_46.py` | `code/out_checks14_46.txt`; four lines with `0 mismatches` / `0 failures`; `ALL CHECKS PASSED` | 1 s | quick |
+| Figures 2–6 (drawn from exact simulations; the formulas they illustrate are checked in the same run) | confirmation only | `code/figures.py` (needs NumPy and matplotlib) | `python3 figures.py` | `code/out_figures.txt`, last line `all figure checks passed`; writes six files `tex/figs/fig_*.pdf` (the five figures of the paper and `fig_windows.pdf`, which the paper does not include) | 2 s | quick |
+
+## Classes of 24 and 189 (Appendix A.2)
+
+| Statement in the paper | Status | Program | Command | Expected output | Time, memory | Tier |
+|---|---|---|---|---|---|---|
+| Formulas (8), the allowed triples, the identity of Lemma 6.5(a) (all arguments); operator identities of Lemma 6.1(a),(b) and Lemma 6.5(a) (200 random configurations); the kinks and Lemma 6.3(b),(c), Lemma 6.5(c), Lemma 6.7(a) (random data); Lemma 6.9 (bounce), 500 random cases | confirmation only (random where stated) | `code/checks24_rules.py` (uses `code/eng24.py`) | `python3 checks24_rules.py` | `code/out_checks24_rules.txt`; last lines `bounce lemma ok {0: 331, 1: 169}`, `ALL CHECKS PASSED` | 5 s | quick |
+| Lemma 6.14 (moves of 66 and of 46) and Lemma 6.13(d) on 400 random tailed configurations; Lemma 6.4 (fixed points of σ^n F^n on the first 14 cells of a window: 66 with n = 1..5, 189 with n = 4) | confirmation only (random; the search for Lemma 6.4 exhaustive on its window) | `code/checks24_moves.py` | `python3 checks24_moves.py` | `code/out_checks24_moves.txt`; six lines `... prefixes 15 expected 15 equal True`; `ALL CHECKS PASSED` | 3 s | quick |
+| Directly for 66, k ≤ 3: a composite of moves at the times abs(m) ≤ k-1 reaches a configuration whose y-row differs at r-k+1 and r-k+2 (60 random tailed configurations) | confirmation only (random) | `code/checks24_ctrl.py` | `python3 checks24_ctrl.py` | `code/out_checks24_ctrl.txt`: `direct 66 controllability k<=3 ok`, `ALL CHECKS PASSED` | < 1 s | quick |
+
+## Class of 79 (Appendix A.3)
+
+The programs use NumPy. The libraries `engine.py`, `graphs.py` (three-valued move engine and the graphs Γ^93_L of Appendix A.3.1, Lemma A.1) and `core.py` (exact simulation) are used by the programs below.
+
+| Statement in the paper | Status | Program | Command | Expected output (last line) | Time, memory | Tier |
+|---|---|---|---|---|---|---|
+| Lemma 7.18 (the moves at the times 0,…,3), table and part (b), and the proof of Proposition 7.19 (F*_3) followed step by step on Γ^93_3 (Table 1, the 64 sectors, Steps 2–4, equation (28)); the pairs joined are the 295,272 pairs of the proposition | confirmation only | `code/c79/check_F3_hand.py` | `python3 check_F3_hand.py` and `python3 check_F3_hand.py core` | `code/c79/out_check_F3_hand.txt`, `code/c79/out_check_F3_hand_core.txt`: `hand proof of (F*_3) confirmed on Gamma_3: True` | < 1 s, 1 s | quick |
+| Proposition 7.19 and the statement after its proof (sharpness), by breadth-first search on Γ^93_3 (1152 states, 2688 edges) | confirmation only | `code/c79/c_F3.py` | `python3 c_F3.py` | `code/c79/out_c_F3.txt`: `(F*_3) holds on Gamma_3: True` | < 1 s | quick |
+| The same search on Γ^93_3 built by a second engine and by exact simulation | confirmation only | `code/c79/check_F3_second.py` (uses `engine2.py`, `graphs2.py`, `exact2.py`) | `python3 check_F3_second.py` | `code/c79/out_check_F3_second.txt`: `(F*_3) holds on both graphs: True` | 8 s | quick |
+| Lemma 7.5 (kinks): the vacuum, the F-orbits of the configurations of period 2, the identities of (a), the graph of Fix(σ^{∓1}F^3) for (c) | confirmation only | `code/c79/check_kinks.py` (uses `base.py`) | `python3 check_kinks.py` | `code/c79/out_check_kinks.txt`: `kinks ok: W lies in the big component, which has no exit; the constant loops have no exits; each vacuum pair has exactly one kink to a constant` | 1 s | quick |
+| Lemma 7.11 (moves from kinks): the identity for r in {0, 1}, every phase, every edge cell, -3r-35 ≤ j ≤ -3r, every input sequence in column r-1 | confirmation only | `code/c79/check_gluing.py` (uses `glue.py`, `kinks.py`) | `python3 check_gluing.py` | `code/c79/out_check_gluing.txt`: `near-glue cases 216 branches 24896 failures 0` | 8 s | quick |
+| Lemma 7.11 and its time reversal on random whole configurations (40 forward and 40 time-reversed probes) | confirmation only (random) | `code/c79/check_farglue.py` | `python3 check_farglue.py 1 40` | `code/c79/out_check_farglue.txt`: `rho far-glue tests 40 bad 0` | 1.5 min | full |
+| The engine of Appendix A.3.1 against exact simulation: 630 moves on random configurations | confirmation only (random) | `code/c79/check_engine.py` | `python3 check_engine.py` | `code/c79/out_check_engine.txt`: `z bad 0` | 1 s | quick |
+| The graphs Γ^93_3 and Γ^93_4 built by exact simulation equal those of the engine (2688 and 13,824 edges) | confirmation only | `code/c79/check_graphs_exact.py` (uses `exact_moves.py`) | `python3 check_graphs_exact.py` | `code/c79/out_check_graphs_exact.txt`: `L 4 engine graph == exact-simulation graph, 13824 edges` | 2 s | quick |
+| Theorem 7.20, the step: the classes of ≈ by a closure on the 64 states of {0,1}^6 for each exterior cell | confirmation only | `code/c79/check_closure64.py` | `python3 check_closure64.py` | `code/c79/out_check_closure64.txt`: `(1, 1) symmetric True classes [(64, [0, 1])]` | < 1 s | quick |
+| Proposition 7.16 (H_2) and Proposition 7.17 (H_3), the proofs run as recipes (all level-4 states; all level-6 states, 2 completed at level 7; Lemma 7.15(b)), and on 1500 random whole configurations | confirmation only | `code/c79/check_H2H3.py` (uses `recipe_H2.py`, `recipe_H3.py`, `recipe_states.py`) | `python3 check_H2H3.py 11 1500` | `code/c79/out_check_H2H3.txt`: `(H_2) and (H_3) recipes on random whole configurations: (configuration, time) pairs 10500` | 3.7 min | full |
+| Theorem 7.20 at k = 4, (F^93_4), from Proposition 7.19: the transfer and Steps 1, 2, 4, all level-4 states; the closure joins each of the five sets into one class | confirmation only | `code/c79/check_F4steps.py` | `python3 check_F4steps.py` | `code/c79/out_check_F4steps.txt`: `closure: Proposition (F*_3) for b, Fb, F^-1 b joins each of the five sets of (F_4) into one class: [(((0, 0), False), 864, True), (((0, 0), True), 288, True), (((0, 1), None), 1152, True), (((1, 0), None), 1152, True), (((1, 1), None), 1152, True)]` | 3.5 min | full |
+| The greatest bisimulation of Γ^93_L with respect to the edge values: the diagonal for L = 3, not for L = 2; with Lemma 7.13 a second proof of (H_4) | confirmation only | `code/c79/check_bisim.py` | `python3 check_bisim.py 3`, `python3 check_bisim.py 2` | `code/c79/out_check_bisim_L3.txt`: `diagonal: True pairs 1152`; `code/c79/out_check_bisim_L2.txt`: `offdiag pairs 1372 differ at distances from edge [1, 2]` | < 1 s each | quick |
+| Theorem 7.20 at k = 4 directly: each of the five sets is strongly connected and closed in Γ^93_4 (4608 states, 13,824 edges); for k = 3 the test fails for four of the five sets | confirmation only | `code/c79/check_F4_graph.py` | `python3 check_F4_graph.py 3 4` | `code/c79/out_check_F4_graph.txt`: `F_4 states 4608 edges 13824 claimed form holds (directed, all tails): True [(1, 1152, True), (2, 1152, True), (3, 1152, True), (4, 864, True), (5, 288, True)]` | < 1 s | quick |
+
+## Computations cited from another paper
+
+| Statement in the paper | Status | Where |
+|---|---|---|
+| Introduction and Section 8: for rule 110 and radius at most 4, the SAT enumeration finds no block map commuting with F_110 other than the maps σ^a F^b and the two constant maps | cited from paper D; not used in any proof of paper A | no program in `paper-A/code`; see `paper-D/CLAIMS.md` and `paper-D/code/census/` |
+
+## Counts
+
+23 rows of confirmations (25 commands): 18 rows (20 commands) in the quick tier, 5 rows (5 commands) in the full tier; one further row cites paper D. No statement of the appendix is without a program in this release.

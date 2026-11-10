@@ -1,0 +1,13 @@
+front: rule 110, front at (t0,q)=(4,11); zero wake and speed-1 front verified for t<=33; U=7
+wrote figs/fig_front.pdf
+bounce: rule 110, e=0, N=14, phi=1, U(c)=-13 = 2e-N+phi verified
+bounce: formula U=2e-N+phi also verified on 440 random cases (N-e=1..11)
+wrote figs/fig_bounce.pdf
+probe: rule 110, n=2, eps=1, separation time n+2+eps=5; F^sP = F^sD |_| eta_(r+s-n-1-eps) and agreement of diagrams on columns <= r at rows >= n+1+eps verified; also on 100 random cases
+wrote figs/fig_probe.pdf
+cone: rule 110, m=3; edge cell at time m (0, 1) -> (1, 0) (table of the move lemma); differences of the diagrams lie in the cone t-m>=r-i or m-1-t>=r-i
+wrote figs/fig_cone.pdf
+wrote figs/fig_windows.pdf
+collision: rule 14, diagram of E(0,N) = [N-1-|t-N+1| < i < N] verified for N=2..39
+wrote figs/fig_collision14.pdf
+all figure checks passed

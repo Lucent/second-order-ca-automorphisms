@@ -1,0 +1,168 @@
+\section{Affine rules}\label{sec:affine}
+
+The $16$ affine elementary rules $f(a,b,c)=\varepsilon\oplus\alpha a\oplus\beta b\oplus\gamma c$ form nine classes:
+\[
+\{0\},\ \{255\},\ \{51,204\},\ \{90\},\ \{165\},\qquad \{15,85,170,240\},\ \{60,102\},\ \{153,195\},\ \{105,150\}.
+\]
+In each of the first five, $\bigoplus_mS_m$ embeds in $\Aut(X_{F_f})$: for $0$ and $51$ through fixed walls (Table~\ref{tab:walls}), for $90$ and $165$ by Theorem~\ref{lin:movers}, and for $255$ by Proposition~\ref{aff:prop:255} below. For the last four we prove Theorem~\ref{thm:affine}: every automorphism is affine, and the automorphism group is determined. The proof uses the isomorphism rigidity theorem of Kitchens and Schmidt \cite{KS2000}, which we state in Section~\ref{aff:sec:KS}; everything else is proved here.
+
+\subsection{Affine commuting maps}\label{aff:sec:setting}
+
+Let $f$ be affine, with $\Lam=\F_2[s,s^{-1}]$, $p=\alpha s^{-1}+\beta+\gamma s$ and $M=\begin{psmallmatrix}0&1\\1&p\end{psmallmatrix}$ as in Section~\ref{sec:linear}. Then $F_f(c)=Mc+k_0$ with $k_0=(0,\varepsilon)^{\Z}$. Put $q=t^2+pt+1\in\Lam[t]$ and
+\[
+\mathcal O=\Lam[t]/(q).
+\]
+Since $t(t+p)=1$ in $\mathcal O$, $t$ is a unit, and $\mathcal O$ is also the quotient of $\F_2[s^{\pm1},t^{\pm1}]$ by $q$. The ring $\Lam[M]=\{aI+bM:a,b\in\Lam\}$ is free over $\Lam$ with basis $I,M$, since the entries of $aI+bM$ are $a$, $b$, $b$, $a+bp$, and $M^2=pM+I$; so $a+bt\mapsto aI+bM$ is a ring isomorphism $\mathcal O\cong\Lam[M]$, under which $\sh$ corresponds to $s$ and the linear part of $F_f$ to $t$. We use it to identify the two rings. The proof of Lemma~\ref{lem:commutant} uses only that $M$ is not scalar, so for every affine rule the matrices in $M_2(\Lam)$ commuting with $M$ are the elements of $\Lam[M]$; in particular they commute with each other. On a constant configuration $k$ an element $a\in\Lam$ acts as the sum $a(1)$ of its coefficients, and $N\in\Lam[M]$ acts as the $2\times2$ matrix $N(1)$ over $\F_2$ obtained by putting $s=1$.
+
+\begin{lemma}\label{aff:lem:comm}
+Let $f$ be affine, $N\in M_2(\Lam)$ and $k$ a constant configuration. The block map $\varphi(c)=Nc+k$ commutes with $F_f$ if and only if $N\in\Lam[M]$ and $(N+I)k_0=(M+I)k$. The automorphisms of $X_{F_f}$ that are affine, that is, of this form, form a group $\Aut_{\mathrm{aff}}(X_{F_f})$, and $\varphi\mapsto N$ is a homomorphism from it to the abelian group $\Lam[M]^{\times}$ whose kernel consists of the translations $c\mapsto c+k$ with $(M+I)k=0$, at most four maps. In particular $\Aut_{\mathrm{aff}}(X_{F_f})$ is metabelian.
+\end{lemma}
+
+\begin{proof}
+$\varphi(F_f(c))=NMc+Nk_0+k$ and $F_f(\varphi(c))=MNc+Mk+k_0$; these agree for all $c$ if and only if $NM=MN$ (compare the parts depending on $c$) and $Nk_0+k=Mk+k_0$. If $\varphi$ is invertible, then so is the continuous additive map $c\mapsto Nc=\varphi(c)+k$, which commutes with $\sh$; its inverse is again continuous, additive and commutes with $\sh$, so by Curtis--Hedlund--Lyndon it is a block map with an $\F_2$-linear local rule, that is, a matrix $N'\in M_2(\Lam)$ with $NN'=N'N=I$. So $N$ is invertible in $M_2(\Lam)$, the inverse $c\mapsto N'(c+k)$ of $\varphi$ is again affine and commutes with $F_f$, and $N'=N^{-1}\in\Lam[M]$. The composite of $c\mapsto Nc+k$ and $c\mapsto N'c+k'$ has linear part $NN'$, and the map with linear part $I$ and constant $k$ commutes with $F_f$ if and only if $(M+I)k=0$.
+\end{proof}
+
+So a class with $\bigoplus_mS_m\le\Aut(X_{F_f})$ always has automorphisms that are not affine, since $\bigoplus_mS_m$ is not solvable. This applies to the first five classes above.
+
+\subsection{The rigidity theorem}\label{aff:sec:KS}
+
+Let $\beta$ be an action of $\Z^d$ by continuous automorphisms of a compact abelian group $G$, with normalised Haar measure $\lambda_G$. The action is \emph{irreducible} if every closed $\beta$-invariant subgroup $H\subsetneq G$ is finite, and \emph{mixing} if it is mixing with respect to $\lambda_G$. A \emph{measurable conjugacy} between two such actions $(G,\beta)$ and $(G',\beta')$ is a measure-preserving map $\varphi\colon(G,\lambda_G)\to(G',\lambda_{G'})$, invertible modulo null sets, with $\varphi\circ\beta^{v}=\beta'^{v}\circ\varphi$ almost everywhere for every $v\in\Z^d$.
+
+\begin{theorem}[Kitchens--Schmidt \cite{KS2000}; see also {\cite[Theorem~8.4]{Schmidt2002}}]\label{aff:thm:KS}
+Let $d\ge2$, and let $(G,\beta)$ and $(G',\beta')$ be irreducible and mixing actions of $\Z^d$ by continuous automorphisms of compact zero-dimensional abelian groups. Then every measurable conjugacy $\varphi$ between them is affine almost everywhere: there are a continuous surjective group homomorphism $A\colon G\to G'$ and $g'\in G'$ with $\varphi(g)=A(g)+g'$ for $\lambda_G$-almost every $g$.
+\end{theorem}
+
+We apply it with $d=2$ and $G=G'=\A^{\Z}=(\F_2^2)^{\Z}$. The dual group $\widehat G$ consists of the characters $\chi_{\xi,\eta}(x,y)=(-1)^{\sum_i(\xi_ix_i+\eta_iy_i)}$ with $\xi,\eta\in\F_2^{\Z}$ finitely supported, and we identify $\xi$ with $\sum_i\xi_is^i\in\Lam$.
+
+\begin{lemma}\label{aff:lem:dual}
+Let $f$ be affine with linear part $M$. Under $\chi\mapsto\chi\circ\sh$ and $\chi\mapsto\chi\circ M$, the group $\widehat G$ is an $\F_2[s^{\pm1},t^{\pm1}]$-module, with $s$ acting as $\chi\mapsto\chi\circ\sh$ and $t$ as $\chi\mapsto\chi\circ M$, and it is isomorphic to $\mathcal O$ with $s$ and $t$ acting by multiplication.
+\end{lemma}
+
+\begin{proof}
+For finitely supported $\xi$ and any $x$, $\sum_i\xi_ix_{i+1}=\sum_i\xi_{i-1}x_i$, so $\chi_{\xi,\eta}\circ\sh=\chi_{s\xi,s\eta}$; and since $(py)_i=\alpha y_{i-1}+\beta y_i+\gamma y_{i+1}$, $\sum_i\eta_i(py)_i=\sum_i(p\eta)_iy_i$. Hence $\chi_{\xi,\eta}(M(x,y))=\chi_{\xi,\eta}(y,x+py)=\chi_{\eta,\xi+p\eta}(x,y)$, so $\chi\circ M$ corresponds to the matrix $M$ acting on the column $(\xi,\eta)^{\mathsf T}\in\Lam^2$. The vector $e_1=(1,0)^{\mathsf T}$ has $Me_1=(0,1)^{\mathsf T}$, so $a+bt\mapsto(aI+bM)e_1=(a,b)^{\mathsf T}$ is a bijection $\mathcal O\to\Lam^2$ compatible with $s$ and $t$.
+\end{proof}
+
+\subsection{Every automorphism is affine}\label{aff:sec:R}
+
+\begin{lemma}\label{aff:lem:R}
+Let $f$ be affine with linear part $M$, and suppose:
+\begin{enumerate}
+\item[(R1)] $q=t^2+pt+1$ is irreducible over $K=\F_2(s)$;
+\item[(R2)] $s^at^b\ne1$ in $\mathcal O$ for $(a,b)\ne(0,0)$;
+\item[(R3)] there is $m\ge1$ with $F_f^m=M^m$ such that the subring $S=\Lam[t^m,t^{-m}]$ of $\mathcal O$ has finite index in $\mathcal O$ as an additive group.
+\end{enumerate}
+Then every automorphism of $X_{F_f}$ is affine: it has the form $c\mapsto Nc+k$ with $N\in\Lam[M]^{\times}=\mathcal O^{\times}$ and $k$ a constant configuration with $(N+I)k_0=(M+I)k$. Consequently $\Aut(X_{F_f})=\Aut_{\mathrm{aff}}(X_{F_f})$.
+\end{lemma}
+
+For a linear rule (R3) holds with $m=1$ and $S=\mathcal O$.
+
+\begin{proof}
+Let $\beta$ be the $\Z^2$-action on $G=\A^{\Z}$ generated by $\sh$ and $F_f^m=M^m$, which act by continuous automorphisms. By Lemma~\ref{aff:lem:dual}, $\widehat G$ is $\mathcal O$, with the generators of $\beta$ acting by multiplication by $s$ and $t^m$. By (R1), $\mathcal O$, which is free over $\Lam$ with basis $1,t$, embeds in the field $K[t]/(q)$, so it is a domain.
+
+\emph{Irreducibility.} The map $t\mapsto t+p$ is a ring automorphism of $\mathcal O$, since $t+p$ is again a root of $q$. For $n=a+bt\ne0$ put $\bar n=a+b(t+p)$; then $n\bar n=a^2+abp+b^2=:\nu$ lies in $\Lam$ and is nonzero, as $\mathcal O$ is a domain. So $\nu\mathcal O\subseteq n\mathcal O$, and $\mathcal O/\nu\mathcal O\cong(\Lam/\nu\Lam)^2$ is finite, since $\Lam/\nu\Lam\cong\F_2[s]/(\nu_0)$ for the polynomial $\nu_0$ obtained from $\nu$ by removing powers of $s$. Hence $\mathcal O/n\mathcal O$ is finite, and so is $n\mathcal O/nS\cong\mathcal O/S$ by (R3); so $\mathcal O/nS$ is finite. Now let $H\subsetneq G$ be closed and $\beta$-invariant. Its annihilator $H^\perp\subseteq\widehat G$ is nonzero, and it is invariant under $s^{\pm1}$ and $t^{\pm m}$, hence an $S$-submodule of $\mathcal O$. Choosing $0\ne n\in H^\perp$ we get $nS\subseteq H^\perp$, so $\widehat H\cong\mathcal O/H^\perp$ is finite, and $H$ is finite.
+
+\emph{Mixing.} For characters $\chi,\psi$, $\int(\chi\circ\beta^v)\,\overline{\psi}\,d\lambda_G$ is $1$ if $\chi\circ\beta^v=\psi$ and $0$ otherwise. If $\chi\ne1$ corresponds to $0\ne n\in\mathcal O$ and $\chi\circ\beta^{(a,b)}=\chi\circ\beta^{(a',b')}$, then $(s^{a-a'}t^{m(b-b')}-1)s^{a'}t^{mb'}n=0$, so $s^{a-a'}t^{m(b-b')}=1$ and $(a,b)=(a',b')$ by (R2). So for $\chi\ne1$ the equation $\chi\circ\beta^v=\psi$ has at most one solution $v$, while for $\chi=1$ it holds for all $v$ or none according as $\psi=1$. Hence $\int(\chi\circ\beta^v)\overline\psi\,d\lambda_G\to\int\chi\,d\lambda_G\int\overline\psi\,d\lambda_G$ as $|v|\to\infty$, for all characters. By linearity this holds for trigonometric polynomials, which are dense in $L^2(\lambda_G)$, and since each $\beta^v$ preserves $\lambda_G$ it holds for all $L^2$ functions; this is mixing.
+
+\emph{Haar measure.} Haar measure on $G$ is the uniform Bernoulli measure. Let $\varphi\in\Aut(X_{F_f})$, a block map of some radius $r$ that is onto. By Hedlund \cite[Theorem~5.4]{Hedlund1969}, for an onto block map of the full $4$-shift every word of length $n$ has exactly $4^{2r}$ preimages of length $n+2r$ under the local rule; so the preimage of a cylinder of length $n$ is a union of $4^{2r}$ cylinders of length $n+2r$ and has the same measure $4^{-n}$. Hence $\varphi$ preserves $\lambda_G$. It commutes with $\sh$ and $F_f$, hence with $\beta$, so it is a measurable conjugacy of $(G,\beta)$ with itself.
+
+\emph{Conclusion.} By Theorem~\ref{aff:thm:KS} there are a continuous surjective homomorphism $A\colon G\to G$ and $k\in G$ with $\varphi=A+k$ almost everywhere. Both sides are continuous, and a nonempty open set has positive measure, so $\varphi=A+k$ everywhere. Then $k=\varphi(0^{\Z})$ is fixed by $\sh$, hence constant, and $A=\varphi-k$ commutes with $\sh$ and is bijective, since $\varphi$ is. A continuous additive map of $G$ commuting with $\sh$ is a block map with an $\F_2$-linear local rule (Curtis--Hedlund--Lyndon), that is, a matrix $N\in M_2(\Lam)$. Lemma~\ref{aff:lem:comm} gives $N\in\Lam[M]$, $N$ invertible there, and the condition on $k$.
+\end{proof}
+
+\subsection{The unit groups}\label{aff:sec:units}
+
+\begin{lemma}\label{aff:lem:units}
+\begin{enumerate}
+\item For $p=s^{\pm1}$ \textup{(}rules $170$ and $240$\textup{)}, $\mathcal O\cong\F_2[t,t^{-1},(1+t)^{-1}]$ with $s^{\pm1}=(1+t)^2t^{-1}$, and $\mathcal O^{\times}=t^{\Z}(1+t)^{\Z}\cong\Z^2$.
+\item For $p=1+s^{\pm1}$ \textup{(}rules $102$ and $60$\textup{)}, $\mathcal O\cong\F_2[t,t^{-1},(1+t+t^2)^{-1}]$ with $s^{\pm1}=(1+t+t^2)t^{-1}$, and $\mathcal O^{\times}=s^{\Z}t^{\Z}\cong\Z^2$.
+\item For $p=s+1+s^{-1}$ \textup{(}rule $150$\textup{)}, $\mathcal O^{\times}=s^{\Z}t^{\Z}(1+st)^{\Z}\cong\Z^3$.
+\end{enumerate}
+In all three cases \textup{(R1)} and \textup{(R2)} hold.
+\end{lemma}
+
+\begin{proof}
+(1) Take $p=s$; the case $p=s^{-1}$ follows by the automorphism $s\mapsto s^{-1}$ of $\Lam$. Let $B=\F_2[t,t^{-1},(1+t)^{-1}]$ and $u=(1+t)^2t^{-1}\in B$. The homomorphism $\Lam[t]\to B$ with $s\mapsto u$, $t\mapsto t$ is onto, since $(1+t)^{-1}=(1+t)t^{-1}u^{-1}$, and it kills $q$, since $t^2+ut+1=t^2+(1+t)^2+1=0$. The induced map $\mathcal O\to B$ sends $a+bt$ to $a(u)+b(u)t$, and it is injective: $u$ is transcendental over $\F_2$ and $[\F_2(t):\F_2(u)]=2$, so $1$ and $t$ are linearly independent over $\F_2(u)$. So $\mathcal O\cong B$. The ring $B$ is a localisation of $\F_2[t]$, hence a unique factorisation domain whose units are the products of powers of the inverted primes $t$ and $1+t$. Since $\mathcal O$ is a domain, $q$ is prime in $\Lam[t]$, and being monic it is irreducible over $K$ by Gauss's lemma; this is (R1). In $B$, $s^at^b=(1+t)^{2a}t^{b-a}$, which is $1$ only for $a=b=0$; this is (R2).
+
+(2) The same argument with $u=(1+t+t^2)t^{-1}$, which satisfies $t^2+(1+u)t+1=0$, and the prime $1+t+t^2$ of $\F_2[t]$; here $(1+t+t^2)^{-1}=t^{-1}u^{-1}$, the units are $t^{\Z}(1+t+t^2)^{\Z}=t^{\Z}(st)^{\Z}=s^{\Z}t^{\Z}$, and $s^at^b=(1+t+t^2)^at^{b-a}$.
+
+(3) Irreducibility (R1) was shown in Section~\ref{sec:linear}. Multiplying $q$ by $s$, $\mathcal O$ is the coordinate ring of the affine curve $s^2t+st^2+st+s+t=0$ in the torus $st\ne0$. Let $E\subset\mathbb P^2$ be the cubic
+\[
+s^2t+st^2+stz+sz^2+tz^2=0 .
+\]
+Its partial derivatives in characteristic $2$ are $t^2+tz+z^2$, $s^2+sz+z^2$ and $st$; if all vanish, then $s=0$ or $t=0$, and either case forces $s=t=z=0$. So $E$ is smooth, hence an elliptic curve over $\F_2$, geometrically irreducible, with function field the fraction field of $\mathcal O$; in particular $\F_2$ is algebraically closed in it, and a function on $E$ without poles is a constant in $\F_2$. The points of $E$ over $\overline{\F}_2$ outside the affine torus $\{z\ne0,\ s\ne0,\ t\ne0\}$ are, since $s=0$ forces $tz^2=0$, $t=0$ forces $sz^2=0$, and $z=0$ forces $st(s+t)=0$,
+\[
+P_0=(0:0:1),\quad P_1=(1:0:0),\quad P_2=(0:1:0),\quad P_3=(1:1:0);
+\]
+these are the four points of $E(\F_2)$. Put $g=1+st$. Its norm is $(1+st)(1+st^{-1})=1+sp+s^2=s$, so $g\in\mathcal O^{\times}$. The divisors of $s=s/z$, $t=t/z$ and $g=(z^2+st)/z^2$ are
+\[
+\operatorname{div}s=P_0+P_2-P_1-P_3,\qquad \operatorname{div}t=P_0+P_1-P_2-P_3,\qquad \operatorname{div}g=P_1+P_2-2P_3 .
+\]
+Indeed, the line $s=0$ meets $E$ where $tz^2=0$, that is at $P_0$ simply and at $P_2$ doubly; the line $t=0$ meets $E$ at $P_0$ simply and at $P_1$ doubly; the line $z=0$ meets $E$ simply at $P_1,P_2,P_3$. For $g$: $g$ has no zero or pole on the affine part, it equals $1$ at $P_0$, and its numerator $z^2+st$ is $1$ at $P_3$, so $g$ has a double pole at $P_3$. At $P_1$, in the chart $s=1$ the curve is $t(1+t+z+z^2)=z^2$, so $z$ is a local parameter, $t=z^2w^{-1}$ with $w=1+t+z+z^2$, and $z^2+t=z^2(1+w)w^{-1}$ with $1+w=t+z+z^2$ of order $1$; so $g=(z^2+t)/z^2$ has a simple zero at $P_1$, and by the symmetry $s\leftrightarrow t$ of $E$ and $g$ also at $P_2$.
+
+Let $\mathcal D$ be the group of divisors of degree $0$ supported on $\{P_0,\dots,P_3\}$, which is free of rank $3$, and define $\theta\colon\mathcal D\to\Z/4$ by $\theta(\sum n_iP_i)=2n_0+n_1-n_2$. It vanishes on the three divisors above (on $\operatorname{div}t$ the value is $4$), and it is onto. The three divisors span a subgroup $L\subseteq\ker\theta$ of index $|\det|=4$ in $\mathcal D$, in the basis $P_0-P_3,P_1-P_3,P_2-P_3$, where they are $(1,-1,1)$, $(1,1,-1)$ and $(0,1,1)$. Since $\ker\theta$ also has index $4$, $L=\ker\theta$. In particular $s,t,g$ generate a free abelian group $W$ of rank $3$, and $\operatorname{div}\colon W\to L$ is an isomorphism.
+
+Now let $u\in\mathcal O^{\times}$. Both $u$ and $u^{-1}$ are regular on the affine curve, so $D=\operatorname{div}u\in\mathcal D$. The values $\theta(P_i-P_3)$ are $2,1,3,0$ for $i=0,1,2,3$, so there is an $i$ with $D-(P_i-P_3)\in\ker\theta=L$, say $D-(P_i-P_3)=\operatorname{div}w$ with $w\in W$. Then $P_i-P_3=\operatorname{div}(u/w)$ is principal, and on an elliptic curve a divisor $P-P'$ is principal only if $P=P'$ \cite[Cor.~III.3.5]{Silverman2009}. So $i=3$, $u/w$ has no zeros or poles, and $u/w\in\F_2^{\times}=\{1\}$. Hence $\mathcal O^{\times}=W$. Finally (R2) holds since $\operatorname{div}(s^at^b)=(a+b,\,b-a,\,a-b)$ in the basis above vanishes only for $a=b=0$.
+\end{proof}
+
+\subsection{The automorphism groups}\label{aff:sec:groups}
+
+For $p(1)=1$, that is, when $f$ has an odd number of linear terms, conjugation by the cellwise complement $\kappa(c)=c+(1,1)^{\Z}$ relates the two members of a pair $\{f,255-f\}$: on constants $M(1)=\begin{psmallmatrix}0&1\\1&1\end{psmallmatrix}$, so $(M+I)(1,1)^{\Z}=(0,1)^{\Z}$, and hence
+\begin{equation}\label{aff:eq:kappa}
+F_{255-f}=\kappa\,F_f\,\kappa\qquad\text{when }f\text{ is linear and }p(1)=1 .
+\end{equation}
+Since $\kappa$ is a homeomorphism commuting with $\sh$, $\varphi\mapsto \kappa\varphi\kappa$ is an isomorphism $\Aut(X_{F_f})\to\Aut(X_{F_{255-f}})$. This relates $170$ to $85$, $240$ to $15$ and $150$ to $105$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:affine}]
+(1) Let $f\in\{170,240\}$. By Lemma~\ref{aff:lem:units}(1), Lemma~\ref{aff:lem:R} applies with $m=1$. Since $p(1)=1$, $M(1)+I=\begin{psmallmatrix}1&1\\1&0\end{psmallmatrix}$ is invertible, so the only constant with $(M+I)k=0$ is $0^{\Z}$, and $\varphi\mapsto N$ is an isomorphism $\Aut(X_F)\to\mathcal O^{\times}=t^{\Z}(1+t)^{\Z}$, under which $F\mapsto t$ and $h=\mathrm{id}+F\mapsto1+t$. So $(a,b)\mapsto F^ah^b$ is an isomorphism $\Z^2\to\Aut(X_F)$. As $s^{\pm1}=(1+t)^2t^{-1}$, $h^2=\sh^{\pm1}F$, so $\langle\sh,F\rangle=\langle F,h^2\rangle$ has index $2$. For $f\in\{15,85\}$ conjugate by $\kappa$, using \eqref{aff:eq:kappa}: $\kappa h\kappa(c)=c+Mc+M(1,1)^{\Z}$, which is $c+F_f(c)+(1,1)^{\Z}$ because $F_f(c)=Mc+(0,1)^{\Z}$ and $M(1,1)^{\Z}=(1,0)^{\Z}$.
+
+(2) Let $f\in\{60,102\}$. By Lemma~\ref{aff:lem:units}(2), Lemma~\ref{aff:lem:R} applies with $m=1$, and $\mathcal O^{\times}=s^{\Z}t^{\Z}$ consists of the linear parts of the maps $\sh^aF^b$. Since $p(1)=0$, $M(1)=\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}$, and the constants with $(M+I)k=0$ are $0^{\Z}$ and $(1,1)^{\Z}$. So $\varphi\mapsto N$ is onto $\mathcal O^\times$, with kernel $\{\mathrm{id},\kappa\}$, and it is split by $s^at^b\mapsto\sh^aF^b$. The involution $\kappa$ commutes with every automorphism, since $N(1,1)^{\Z}=(1,1)^{\Z}$ for $N=s^at^b$; so $\Aut(X_F)=\langle\sh,F\rangle\times\langle\kappa\rangle$.
+
+(3) Let $f\in\{153,195\}$, with linear parts $102$ and $60$, so $\mathcal O$ and $\mathcal O^{\times}=s^{\Z}t^{\Z}$ are as in (2). On constants $M(1)$ is the transposition of the two bits and $k_0=(0,1)^{\Z}$, so $(I+M+M^2+M^3)k_0=0$ and $F^4=M^4$. In $\mathcal O$, $t^4=p^3t+p^2+1$ and $t^{-4}=(t+p)^4=p^3t+p^4+p^2+1$, so $S=\Lam[t^{4},t^{-4}]$ is contained in $\Lam\oplus\Lam p^3t$; the latter is a subring, as $(p^3t)^2=p^4\cdot p^3t+p^6$, and it is generated by $t^{\pm4}$ over $\Lam$, so $S=\Lam\oplus\Lam p^3t$ and $\mathcal O/S\cong\Lam/p^3\Lam$, a group of order $8$. So Lemma~\ref{aff:lem:R} applies with $m=4$. For $N=s^at^b$, $(N+I)k_0=(M(1)^b+I)(0,1)$ is $0$ for even $b$ and $(1,1)$ for odd $b$, and $(M+I)(x,y)^{\Z}=(x+y,x+y)^{\Z}$; so for each $N$ there are exactly two constants $k$, differing by $(1,1)^{\Z}$, and the automorphisms with linear part $s^at^b$ are $\sh^aF^b$ and $\kappa\sh^aF^b$. The involution $\kappa$ commutes with $F$ (Section~\ref{sec:prelim}), and $\kappa\notin\langle\sh,F\rangle$ since its linear part is $I$. As in (2), $\Aut(X_F)=\langle\sh,F\rangle\times\langle\kappa\rangle$.
+
+(4) Let $f=150$. By Lemma~\ref{aff:lem:units}(3), Lemma~\ref{aff:lem:R} applies with $m=1$; as in (1) there is no nonzero constant with $(M+I)k=0$, so $\varphi\mapsto N$ is an isomorphism onto $\mathcal O^{\times}=s^{\Z}t^{\Z}(1+st)^{\Z}$, under which $\sh\mapsto s$, $F\mapsto t$ and $h=\mathrm{id}+\sh F\mapsto1+st$. For $f=105$ conjugate by $\kappa$: $\kappa h\kappa(c)=c+\sh(Mc)+(1,0)^{\Z}=c+\sh F_{105}(c)+(1,1)^{\Z}$.
+
+In all four classes every automorphism is affine by Lemma~\ref{aff:lem:R}. The statements for the remaining members follow by reflection, which conjugates $F_{170}$ to $F_{240}$, $F_{85}$ to $F_{15}$, $F_{102}$ to $F_{60}$ and $F_{153}$ to $F_{195}$.
+\end{proof}
+
+\begin{remark}\label{aff:rem:ledrappier}
+For $f=170$ the ring $\mathcal O\cong\F_2[t^{\pm1},(1+t)^{-1}]$ is also $\F_2[u_1^{\pm1},u_2^{\pm1}]/(1+u_1+u_2)$, with $u_1=t$ and $u_2=1+t$, the dual module of Ledrappier's shift $\{z\in\F_2^{\Z^2}:z_v+z_{v+e_1}+z_{v+e_2}=0\}$ \cite{Ledrappier1978}. By duality, $X_{F_{170}}$ with the action of $F$ and $h=\mathrm{id}+F$ is conjugate to Ledrappier's shift with its two coordinate shifts; explicitly, $c\mapsto(y(F^ah^b(c)_0))_{(a,b)\in\Z^2}$ satisfies the three-dot relation because $h^{b+1}=h^b+Fh^b$. Under this conjugacy $\langle\sh,F\rangle$ is the restriction of the Ledrappier action to the subgroup of index $2$ generated by $e_1$ and $2e_2-e_1$, and Theorem~\ref{thm:affine}(1) says that $\Aut(X_{F_{170}})$ is the full Ledrappier action.
+\end{remark}
+
+\begin{remark}\label{aff:rem:consist}
+The hypotheses of Lemma~\ref{aff:lem:R} fail for the five other affine classes, and each of them has automorphisms that are not affine (Lemma~\ref{aff:lem:comm} and the remark after it). For $90$ and $165$, $q=(t+s)(t+s^{-1})$ is reducible; for $0$ and $255$, $p=0$ and $q=(t+1)^2$; for $51$ and $204$, $p=1$ and $q=t^2+t+1$ is irreducible over $K$, but $t^3=1$ in $\mathcal O$, so (R2) fails and the action is not mixing. So among the affine rules, (R1) and (R2) hold exactly for the classes whose automorphisms are all affine.
+\end{remark}
+
+\begin{remark}\label{aff:rem:endo}
+Lemma~\ref{aff:lem:R} concerns automorphisms. Whether every block map commuting with $F_f$, invertible or not, is affine for the classes of Theorem~\ref{thm:affine} is open. By Lemma~\ref{aff:lem:comm} the affine commuting block maps of radius at most $R$ form an affine $\F_2$-space of dimension $4R+1$ for $170$, $4R+2$ for $102$, $4R+1$ for $153$ and $4R$ for $150$: the linear parts $aI+bM$ of radius at most $R$ have $a$ of degree in $[-R,R]$ and $b$ of degree in $[-R,R-1]$ for $p=s$ and $p=1+s$, and in $[-R+1,R-1]$ for $150$, as a direct check of the entries $a$, $b$, $b$, $a+bp$ shows; the constants are $0^{\Z}$ only for $170$ and $150$, and $0^{\Z}$, $(1,1)^{\Z}$ for $102$; and for $153$ the condition $(N+I)k_0=(M+I)k$ cuts the linear parts by one affine condition, $a(1)+b(1)=1$, and leaves two constants for each. For $R\le3$ the elimination of Section~\ref{sec:method} gives exactly these dimensions for the space of all commuting block maps (Appendix~\ref{app:census}), so for these rules every commuting block map of radius at most $3$ is affine.
+\end{remark}
+
+\subsection{Rule 255}\label{aff:sec:255}
+
+For $f=255$, $F(x,y)=(y,1\oplus x)$ permutes the cells as $(0,0)\mapsto(0,1)\mapsto(1,1)\mapsto(1,0)\mapsto(0,0)$. Relabel the cells by $\Z/4$, writing $0,1,2,3$ for these four values in this order; then a configuration becomes $x\in(\Z/4)^{\Z}$, and $F(x)=x+\mathbf 1$ adds $1$ in every cell. So $\Aut(X_{F_{255}})$ is the group of automorphisms of the full shift on $\Z/4$ that commute with adding the constant $\mathbf 1$, and $\langle\sh,F\rangle=\langle\sh\rangle\times\langle F\rangle\cong\Z\times\Z/4$. Let $\Delta\colon(\Z/4)^{\Z}\to(\Z/4)^{\Z}$, $\Delta(x)_i=x_{i+1}-x_i$, that is $\Delta=\sh-\mathrm{id}$. It is an onto block map whose fibres are the cosets of the four constant configurations.
+
+\begin{definition}\label{aff:def:G4}
+Let $\mathcal G_4$ be the set of automorphisms $\psi$ of the full shift $(\Z/4)^{\Z}$ for which there is a block map $J$ of $(\Z/4)^{\Z}$ with $\psi=\mathrm{id}+(\sh-\mathrm{id})J$.
+\end{definition}
+
+Every $\psi\in\mathcal G_4$ preserves the sum over a period of every spatially periodic configuration, since $(\sh-\mathrm{id})J(z)$ has sum $0$ over a period of $z$.
+
+\begin{proposition}\label{aff:prop:255}
+Let $F=F_{255}$. For $\varphi\in\Aut(X_F)$ there is a unique $\tilde\varphi\in\mathcal G_4$ with $\Delta\circ\varphi=\tilde\varphi\circ\Delta$, and a unique $\epsilon(\varphi)\in\Z/4$ with $\varphi(0^{\Z})=\epsilon(\varphi)^{\Z}$. The map $\varphi\mapsto(\epsilon(\varphi),\tilde\varphi)$ is an isomorphism
+\[
+\Aut(X_{F_{255}})\;\cong\;\Z/4\times\mathcal G_4 ,
+\]
+with $\Z/4=\langle F\rangle$. Moreover $\bigoplus_{m\ge1}S_m$ embeds in $\mathcal G_4$, so $\Aut(X_{F_{255}})$ contains every finite group.
+\end{proposition}
+
+\begin{proof}
+\emph{The map $\varphi\mapsto\tilde\varphi$.} Since $\varphi(x+\mathbf c)=\varphi(x)+\mathbf c$ for every constant $\mathbf c$, the configuration $\varphi(x)-x$ depends only on the coset $x+\{\text{constants}\}$, that is on $\Delta x$: there is a map $J$ with $\varphi(x)=x+J(\Delta x)$. It commutes with $\sh$, and $J(z)_0=\varphi(x)_0-x_0$ depends on $x_{[-r,r]}$ only up to adding a constant, that is on $z_{[-r,r-1]}$; so $J$ is a block map. Then $\Delta\varphi(x)=\Delta x+(\sh-\mathrm{id})J(\Delta x)$, so $\tilde\varphi=\mathrm{id}+(\sh-\mathrm{id})J$ satisfies $\Delta\varphi=\tilde\varphi\Delta$, and it is unique because $\Delta$ is onto. It is onto because $\varphi$ is, and injective: if $\tilde\varphi(\Delta x)=\tilde\varphi(\Delta x')$, then $\varphi(x')=\varphi(x)+\mathbf c=\varphi(x+\mathbf c)$ for a constant $\mathbf c$, so $x'=x+\mathbf c$ and $\Delta x'=\Delta x$. So $\tilde\varphi\in\mathcal G_4$, and $\varphi\mapsto\tilde\varphi$ is a homomorphism, again because $\Delta$ is onto.
+
+\emph{Kernel.} If $\tilde\varphi=\mathrm{id}$, then $(\sh-\mathrm{id})J=0$, so every $J(z)$ is constant. If $J$ has radius $r$, then for any $z,z'$ and large $n$ a configuration $z''$ agreeing with $z$ on $[-r,r]$ and with $z'$ on $[n-r,n+r]$ gives $J(z)_0=J(z'')_0=J(z'')_n=J(z')_n=J(z')_0$, so $J$ is a constant $\mathbf c$ and $\varphi=F^{c}$. So the kernel is $\langle F\rangle\cong\Z/4$.
+
+\emph{Onto $\mathcal G_4$.} Let $\psi=\mathrm{id}+(\sh-\mathrm{id})J\in\mathcal G_4$ and $\varphi(x)=x+J(\Delta x)$. This is a block map commuting with $\sh$ and with adding constants, and $\Delta\varphi=\psi\Delta$. It is injective: $\varphi(x)=\varphi(x')$ gives $\psi(\Delta x)=\psi(\Delta x')$, so $x'=x+\mathbf c$, and then $\varphi(x')=\varphi(x)+\mathbf c$ forces $\mathbf c=0$. It is onto: given $w$, choose $x$ with $\Delta x=\psi^{-1}(\Delta w)$; then $\Delta\varphi(x)=\Delta w$, so $\varphi(x)=w+\mathbf c$ and $\varphi(x-\mathbf c)=w$. So $\varphi\in\Aut(X_F)$ and $\tilde\varphi=\psi$.
+
+\emph{Splitting.} $\varphi(0^{\Z})$ is fixed by $\sh$, hence constant, and $\varphi\chi(0^{\Z})=\varphi(\epsilon(\chi)^{\Z})=\varphi(0^{\Z})+\epsilon(\chi)^{\Z}$, so $\epsilon$ is a homomorphism to $\Z/4$; it maps $F^c$ to $c$, so it is an isomorphism on the kernel $\langle F\rangle$, which is central. Hence $\Aut(X_F)=\langle F\rangle\times\ker\epsilon$, and $\varphi\mapsto\tilde\varphi$ maps $\ker\epsilon$ isomorphically onto $\mathcal G_4$.
+
+\emph{Markers.} For $L\ge1$ let $V_L$ be the set of words $u\in\{1,2,3\}^L$ with $\sum_ku_k\equiv0\pmod4$. Call a \emph{segment} of $z\in(\Z/4)^{\Z}$ of length $L$ an interval $[a,a+L-1]$ on which $z$ has no $0$, with $z_{a-1}=z_{a+L}=0$; distinct segments are disjoint and separated by a $0$. For $\rho=(\rho_L)_L$ with $\rho_L\in\Sym(V_L)$, all but finitely many the identity, let $\psi_\rho(z)$ replace the content $u$ of every segment of length $L$ with $u\in V_L$ by $\rho_L(u)$. It changes only nonzero cells to nonzero values, so it preserves the set of zeros, hence the segments, their lengths and the property $u\in V_L$. So $\psi_\rho\psi_{\rho'}=\psi_{\rho\rho'}$, each $\psi_\rho$ is an automorphism of the full shift, a block map of radius at most $\max\{L:\rho_L\ne\mathrm{id}\}$, and $\rho\mapsto\psi_\rho$ is injective, since $\psi_\rho$ moves the configuration $0^{\infty}u\,0^{\infty}$ when $\rho_L(u)\ne u$. Let $\delta=\psi_\rho(z)-z$; on a segment $[a,a+L-1]$ it has sum $0$ modulo $4$, because $u$ and $\rho_L(u)$ lie in $V_L$, and it vanishes off segments. Put $J(z)_{a+j}=\sum_{0\le k<j}\delta_{a+k}$ for $0\le j\le L-1$ on every segment, and $J(z)_n=0$ off segments. This is a block map, and $J(z)_{n+1}-J(z)_n=\delta_n$ for every $n$: inside a segment by definition, at its last cell because the sum of $\delta$ over the segment is $0$, and at the $0$ before a segment because $J$ vanishes at the first cell of a segment. So $\psi_\rho=\mathrm{id}+(\sh-\mathrm{id})J\in\mathcal G_4$, and $\bigoplus_L\Sym(V_L)$ embeds in $\mathcal G_4$. The $2^m$ words of length $2m$ made of the blocks $13$ and $31$ lie in $V_{2m}$, so $S_m$ embeds in $\Sym(V_{2m})$, and $\bigoplus_mS_m$ embeds in $\mathcal G_4$.
+\end{proof}
+
+So $\Aut(X_{F_{255}})$ contains every finite group and is not virtually $\Z^n$ for any $n$. Through $\varphi\mapsto\tilde\varphi$, its automorphism group is, up to the central factor $\langle F\rangle$, the group $\mathcal G_4$ of automorphisms of the full shift on $\Z/4$ whose displacement $\psi-\mathrm{id}$ is a difference $(\sh-\mathrm{id})J$ of a block map.

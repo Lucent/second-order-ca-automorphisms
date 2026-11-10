@@ -1,0 +1,5 @@
+rule 250 R=3 type P: 256 variables, 288 equalities, 512 constraints of four entries, 4534 clauses [0.0s]
+  all solutions: 10; {'named': 9, 'const': 1, 'other': 0}; maps sigma^a F^b of this type: 9, found: 9; failures of the recheck: 0 [0.1s]
+rule 250 R=3 type S: 256 variables, 128 equalities, 512 constraints of four entries, 4214 clauses [0.0s]
+  all solutions: 37; {'named': 16, 'const': 1, 'other': 20}; maps sigma^a F^b of this type: 16, found: 16; failures of the recheck: 0 [0.2s]
+rule 250 R=3: both types together {'named': 25, 'const': 2, 'other': 20}; 2R^2+2R+1 = 25

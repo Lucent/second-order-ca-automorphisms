@@ -1,0 +1,12 @@
+rule 110 k=1: 4 contexts, 5 classes in total, theorem (T) ok; steps (S) checked so far 0; transfer (L) 0
+rule 110 k=2: 4 contexts, 5 classes in total, theorem (T) ok; steps (S) checked so far 72; transfer (L) 144
+rule 110 k=3: 4 contexts, 5 classes in total, theorem (T) ok; steps (S) checked so far 360; transfer (L) 2448
+rule 110 k=4: 4 contexts, 5 classes in total, theorem (T) ok; steps (S) checked so far 1512; transfer (L) 39312
+rule 110 k=5: 4 contexts, 5 classes in total, theorem (T) ok; steps (S) checked so far 6120; transfer (L) 629136
+rule 42 k=1: 4 contexts, 5 classes in total, theorem (T) ok; steps (S) checked so far 0; transfer (L) 0
+rule 42 k=2: 4 contexts, 6 classes in total, theorem (T) ok; steps (S) checked so far 60; transfer (L) 144
+rule 42 k=3: 4 contexts, 7 classes in total, theorem (T) ok; steps (S) checked so far 300; transfer (L) 2448
+rule 42 k=4: 4 contexts, 8 classes in total, theorem (T) ok; steps (S) checked so far 1260; transfer (L) 39312
+rule 42 k=5: 4 contexts, 9 classes in total, theorem (T) ok; steps (S) checked so far 5100; transfer (L) 629136
+time 17.5 s
+ALL CHECKS PASSED

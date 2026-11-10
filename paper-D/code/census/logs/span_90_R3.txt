@@ -1,0 +1,3 @@
+R=1: |A|=5 |U|=2 |W|=2; all commute: True; rank(A)=5, rank(U)=2, rank(W)=2, rank(A+U+W)=5, 2^(2R)+1=5
+R=2: |A|=9 |U|=8 |W|=8; all commute: True; rank(A)=9, rank(U)=8, rank(W)=8, rank(A+U+W)=17, 2^(2R)+1=17
+R=3: |A|=13 |U|=32 |W|=32; all commute: True; rank(A)=13, rank(U)=32, rank(W)=32, rank(A+U+W)=65, 2^(2R)+1=65

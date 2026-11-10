@@ -1,0 +1,26 @@
+    ... 1000 solutions after 42s
+    ... 2000 solutions after 71s
+    ... 3000 solutions after 100s
+    ... 4000 solutions after 132s
+    ... 5000 solutions after 160s
+    ... 6000 solutions after 178s
+    ... 7000 solutions after 196s
+    ... 8000 solutions after 215s
+    ... 9000 solutions after 233s
+    ... 10000 solutions after 251s
+    ... 11000 solutions after 268s
+    ... 12000 solutions after 286s
+    ... 13000 solutions after 302s
+    ... 14000 solutions after 319s
+    ... 15000 solutions after 333s
+    ... 16000 solutions after 343s
+    ... 17000 solutions after 353s
+    ... 18000 solutions after 363s
+    ... 19000 solutions after 373s
+    ... 20000 solutions after 384s
+
+=== rule 54R, radius R=2: 2048 variables, 294244 clauses, encode 0.6s, enumeration 383.7s, 20000 solutions (CAPPED)
+  classification 1468.1s: {'named': 1, 'const': 2, 'other': 19997, 'invertible': 0, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 19997, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: False
+    const (0,0)        inv=None  layerwise-same   affine=True
+    const (1,1)        inv=None  layerwise-same   affine=True
+    sigma^-2 F^0       inv=None  layerwise-same   affine=True

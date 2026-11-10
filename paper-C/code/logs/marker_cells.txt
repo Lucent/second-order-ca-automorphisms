@@ -1,0 +1,23 @@
+exact identity (90, 'F affine, linear part F90') : True
+exact identity (90, 'd(Fc) = sigma d(c) + eps') : True
+exact identity (90, 'e(Fc) = sigma^-1 e(c) + eps') : True
+exact identity (165, 'F affine, linear part F90') : True
+exact identity (165, 'd(Fc) = sigma d(c) + eps') : True
+exact identity (165, 'e(Fc) = sigma^-1 e(c) + eps') : True
+exact identity F90(iota v) = iota(sigma v) : True
+exact identity F90(iota' v) = iota'(sigma^-1 v) : True
+exact identity d(iota v) = v + sigma^2 v : True
+exact identity e(iota v) = 0 : True
+exact identity d(iota' v) = 0 : True
+exact identity e(iota' v) = v + sigma^2 v : True
+  90R ALL rings of period 10, complement-symmetric frames: rings 1048576 x 10, failures {'comm': 0, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 491520, rings where (01),(12) do not commute 122880
+  90R ALL rings of period 11, complement-symmetric frames: rings 4194304 x 11, failures {'comm': 0, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 1081344, rings where (01),(12) do not commute 270336
+  90R planted a-frames (both signs): rings 3000 x 240, failures {'comm': 0, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 16984, rings where (01),(12) do not commute 3489
+  90R planted b-frames (both signs): rings 3000 x 240, failures {'comm': 0, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 16816, rings where (01),(12) do not commute 3449
+  165R ALL rings of period 10, complement-symmetric frames: rings 1048576 x 10, failures {'comm': 0, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 491520, rings where (01),(12) do not commute 122880
+  165R ALL rings of period 11, complement-symmetric frames: rings 4194304 x 11, failures {'comm': 0, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 1081344, rings where (01),(12) do not commute 270336
+  165R planted a-frames (both signs): rings 3000 x 240, failures {'comm': 0, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 17044, rings where (01),(12) do not commute 3504
+  165R planted b-frames (both signs): rings 3000 x 240, failures {'comm': 0, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 16983, rings where (01),(12) do not commute 3489
+negative control: 165R with 111-frames only (J not complement-symmetric)
+  165R planted, plain frames: rings 3000 x 240, failures {'comm': 16939, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 15953, rings where (01),(12) do not commute 3256
+  165R ALL rings period 10, plain frames: rings 1048576 x 10, failures {'comm': 491520, 'inv': 0, 'hom': 0, 'ab': 0}, nontrivial applications 245760, rings where (01),(12) do not commute 61440

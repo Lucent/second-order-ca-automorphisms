@@ -1,0 +1,4 @@
+Gamma_3 by engine2.py == Gamma_3 by exact simulation: True edges 2688
+engine2 states 1152 (F*_3): True  no state outside E reaches E: True
+exact states 1152 (F*_3): True  no state outside E reaches E: True
+(F*_3) holds on both graphs: True

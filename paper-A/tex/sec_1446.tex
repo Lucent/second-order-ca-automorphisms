@@ -1,0 +1,269 @@
+\section{Rules 14R and 46R}\label{cl:sec:1446}
+
+The method of Section~\ref{cl:sec:110} decides two further classes, $\{14,42,84,112\}$ and $\{46,116\}$. In the class of $14$ we work with the rule $42$, which is obtained from $14$ by reflection followed by complementation. Except in Lemma~\ref{cl:lem:fix14} to Proposition~\ref{cl:prop:rel14}, where $f=14$, in this section $f\in\{42,46\}$, $F=F_f$, and $\rho(x,y)=(y,x)$, so that $\rho F\rho=F^{-1}$. The values on $000,\dots,111$ are
+\[
+f_{42}(a,b,c)=c\wedge\neg(a\wedge b):\ 0,1,0,1,0,1,0,0;\qquad f_{46}:\ 0,1,1,1,0,1,0,0,
+\]
+so $42$ differs from $110$ on $010$ and $110$, and $46$ differs from $110$ on $110$ only. All three rules satisfy
+\begin{equation}\label{cl:eq:K1}
+f(a,0,c)=c,\qquad f(a,1,1)=\neg a,
+\end{equation}
+and so $f(a,0,0)=0$, $f(a,0,1)=1$, $f(0,1,1)=1$ and $f(0,0,0)=f(1,1,1)=0$. In addition $f_{42}(a,b,0)=0$, while $f_{46}(a,1,c)=\neg a$ and $f_{46}(a,b,0)=b\wedge\neg a$.
+
+\subsection{The shared steps}\label{cl:sec:shared}
+
+\begin{lemma}[the shared steps]\label{cl:lem:shared}
+Let $f\in\{42,46\}$.
+\begin{enumerate}
+\item The allowed triples of $f$ are $000,001,010,011,111$ for $42$ and $000,001,011,111$ for $46$. None begins with $10$, so $\Phi_f=\Phi_{110}$. Moreover $f$ satisfies \eqref{eq:K}, so Lemma~\ref{cl:lem:kinks} and Propositions~\ref{cl:prop:offsets} and~\ref{cl:prop:reduce} hold for $F$, with $(\mathrm Z_{R'})$ stated for $F$.
+\item If $c$ is $0$-tailed with $e(c)=e$, then the columns of $Y_c$ to the right of $e$ vanish, column $e$ is never $0$ in two consecutive rows, and $e(F^tc)=e$ for all $t\in\Z$. Column $e$ obeys $Y_c(t+1,e)=Y_c(t-1,e)$ for $42$ and $Y_c(t+1,e)=Y_c(t-1,e)\oplus\bigl(Y_c(t,e)\wedge\neg Y_c(t,e-1)\bigr)$ for $46$.
+\item Define $\mathcal H$, $(\mathrm H_k)$, the probes $P_n$, the debris $D_n$, the moves $M_m$, $\bar M_m$, $(\mathrm{CTRL}_k)$ and $\mathcal O_k(c)$ as in Section~\ref{cl:sec:110}, with $F_f$ in place of $F_{110}$. Then Lemma~\ref{cl:lem:bounce}, Proposition~\ref{cl:prop:H1}, Lemma~\ref{cl:lem:probe}, and the implication from $(\mathrm H_{R+1})$ to Lemma~K at radius $R$ hold for $F$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) A triple $(a_1,a_2,a_3)$ is allowed if $a_1\oplus a_3=f(a_1,a_2,a_3)$; read off the values. Condition \eqref{eq:K} concerns the values on $000$, $001$, $011$, $100$, $101$ and $111$, on which $f_{42}$ and $f_{46}$ agree with $f_{110}$.
+
+(2) If rows $t-1$ and $t$ vanish on the columns $i>e$, then so does row $t+1$, as $Y(t+1,i)=Y(t-1,i)\oplus f(Y(t,i-1),0,0)=0$, and likewise row $t-2$; this gives the first statement by induction in both time directions. If $Y(t-1,e)=Y(t,e)=0$ for some $t$, the same computation at column $e$, whose right neighbour vanishes, gives $Y(t+1,e)=Y(t-2,e)=0$, so column $e$ vanishes and $c_e=(Y(-1,e),Y(0,e))=(0,0)$, a contradiction. So the edge cell $(Y(t-1,e),Y(t,e))$ of $F^tc$ is never $(0,0)$, and $e(F^tc)=e$. The recurrences are the relation at $(t,e)$ with $f_{42}(a,b,0)=0$ and $f_{46}(a,b,0)=b\wedge\neg a$.
+
+(3) The proofs of Section~\ref{cl:sec:110} use the following properties of $f$, all of which hold by \eqref{cl:eq:K1} and~(2). Lemma~\ref{cl:lem:bounce}: $f(1,1,1)=0$, $f(0,1,1)=1$, $f(a,0,1)=1$, $f(a,0,0)=0$, $f(a,0,c)=c$, $f(a,1,1)=\neg a$, and that the edge column is never $0$ twice in a row. Lemma~\ref{cl:lem:probe}(a) and~(c): the gluing facts (i) and~(ii), which use $f(a,0,0)=0$ and $f(a,0,1)=1$. Lemma~\ref{cl:lem:probe}(b): in addition $f(a,1,1)=\neg a$, $f(0,1,1)=1$, $f(1,1,1)=0$, and that the edge column is never $0$ twice in a row, which is~(2). The implication from $(\mathrm H_{R+1})$ to Lemma~K uses nothing about $f$. The proof of Proposition~\ref{cl:prop:H1} uses Lemma~\ref{cl:lem:bounce} and, in its last step, the recurrence of the edge column, which for $46$ is not autonomous: it reads the cell to the left of the edge. That step is replaced as follows. The proof shows $e(hd)=e$ and $Y_{hd}(s,e)=Y_d(s,e)$ for every $s\ge2R$, for every $0$-tailed $d$ with $e(d)=e$. For $T\in\Z$ the configuration $F^{-T}d$ is $0$-tailed with edge $e$, and $hF^{-T}d=F^{-T}hd$; applied to it, the identity gives $Y_{hd}(s-T,e)=Y_d(s-T,e)$ for all $s\ge2R$ and all $T$, that is, at all times.
+\end{proof}
+
+\subsection{Edge moves for 42 and 46}\label{cl:sec:moves1446}
+
+The moves differ from those of $110$.
+
+\begin{lemma}[edge moves for $42$ and $46$]\label{cl:lem:moves1446}
+Let $b$ be $0$-tailed with $e(b)=r$, let $m\in\Z$, and let $(x_i,y_i)$ be the cells of $F^mb$, as in Lemma~\ref{cl:lem:edgemove}. Then $M_m(b)$ and $\bar M_m(b)$ are $0$-tailed with edge $r$, and $F^mM_m(b)$ and $F^m\bar M_m(b)$ agree with $F^mb$ at every cell except the edge cell, where $(x_r,y_r)$ changes as follows.
+\begin{enumerate}
+\item[(a)] For $42$: under $M_m$, $01$ becomes $10$, and $(1,y_r)$ becomes $(1,y_r\oplus1\oplus x_{r-1})$; under $\bar M_m$, $10$ becomes $01$, and $(x_r,1)$ becomes $(x_r\oplus1\oplus y_{r-1},1)$.
+\item[(b)] For $46$: under $M_m$, $01$ becomes $10$, and $M_m(b)=b$ if $x_r=1$; under $\bar M_m$, $10$ becomes $01$, and $\bar M_m(b)=b$ if $y_r=1$.
+\item[(c)] $hM_m=M_mh$ and $h\bar M_m=\bar M_mh$ on $0$-tailed configurations with edge $r$, for every $h\in\mathcal H$ and $m\in\Z$. Every move is undone by a move at the same time. The moves at time $m$ connect $x_ry_r=01$ with $10$; for $42$ they connect $11$ with $01$ or $10$ if and only if $(x_{r-1},y_{r-1})\ne(1,1)$, and for $46$ they never change an edge cell $11$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Follow the proof of Lemma~\ref{cl:lem:edgemove}(a), with $n=m-2$, $P=P_n(b)$, $D=D_n(b)$ and $\varepsilon$ as there. The case $x_r=0$ of that proof uses only $f(a,0,1)=1$, $f(a,0,0)=0$, the values $Y_P(n+2,r)=0$ and $Y_P(n+3,r)=1$ of Lemma~\ref{cl:lem:probe}(b), and that the edge column is never $0$ twice in a row, and it gives $01\to10$ for both rules. If $x_r=1$, then $\varepsilon=0$, and rows $m-1$, $m$ of $D$ are $x$ and $y$ on the columns $\le r$, except that $Y_D(m,r)=Y(m-2,r)\oplus f(x_{r-1},1,1)=Y(m-2,r)\oplus\neg x_{r-1}$, while $y_r=Y(m-2,r)\oplus f(x_{r-1},1,0)$, which is $Y(m-2,r)$ for $42$ and $Y(m-2,r)\oplus\neg x_{r-1}$ for $46$. This is the statement for $M_m$; the statement for $\bar M_m$ follows by $\rho$, as in Lemma~\ref{cl:lem:edgemove}(b), and the commutation in~(c) is proved as in Lemma~\ref{cl:lem:edgemove}(c), from Lemma~\ref{cl:lem:probe}(b) and~(c). The moves $01\to10$ and $10\to01$ are inverse to each other, and for $42$ the moves $1y\to1\bar y$ (when $x_{r-1}=0$) and $x1\to\bar x1$ (when $y_{r-1}=0$) are involutions, since a move does not change the cell $(x_{r-1},y_{r-1})$. The last statement is read off from (a) and~(b).
+\end{proof}
+
+So the moves of $42$ are those of $110$ with the conditions on the left neighbour complemented, $1y\to1\bar y$ if $x_{r-1}=0$ and $x1\to\bar x1$ if $y_{r-1}=0$, and for $46$ only the moves $01\leftrightarrow10$ remain. With Lemma~\ref{cl:lem:moves1446} in place of Lemma~\ref{cl:lem:edgemove}, and Lemma~\ref{cl:lem:shared}(2) in place of Section~\ref{cl:sec:tail}, the proofs of Lemma~\ref{cl:lem:clean}, Proposition~\ref{cl:prop:ctrlstep}, Lemma~\ref{cl:lem:movelocal}(a) and Lemma~\ref{cl:lem:transfer} apply to $F$ without change; Lemma~\ref{cl:lem:clean} uses $f(a,1,1)=\neg a$, and the rest nothing about $f$. As there, a move at time $m$ is determined by its effect on the state at time $m$, so $F^jM_m=M_{m-j}F^j$ and $F^j\bar M_m=\bar M_{m-j}F^j$ for $j\in\Z$, and $\rho M_{-m}\rho=\bar M_m$, so that $\rho\,\mathcal O_k(c)=\mathcal O_k(\rho c)$.
+
+\begin{proposition}[$(\mathrm H_2)$ for $42$ and $46$]\label{cl:prop:H2b}
+For $f\in\{42,46\}$, $(\mathrm H_2)$ holds.
+\end{proposition}
+
+\begin{proof}
+Let $h\in\mathcal H$, let $c$ be $0$-tailed with $e(c)=r$, and put $Y=Y_c$ and $G=Y_{hc}\oplus Y$. By Proposition~\ref{cl:prop:H1}, $G$ vanishes on the columns $\ge r$; we show $G(t,r-1)=0$.
+
+(a) Suppose $Y(t,r)=1$. For $42$, argue as in the proof of Proposition~\ref{cl:prop:H2}(a), with the new edge value $Y(t+1,r)\oplus1\oplus Y(t,r-1)$ of Lemma~\ref{cl:lem:moves1446}(a) in place of $Y(t+1,r)\oplus Y(t,r-1)$. For $46$, the relation at $(t,r)$ reads $Y(t+1,r)\oplus Y(t-1,r)=f(Y(t,r-1),1,0)=\neg Y(t,r-1)$ in both diagrams, and its left side is the same in both, so $G(t,r-1)=0$.
+
+(b) Suppose $Y(t,r)=0$. Then $Y(t+1,r)=1$ by Lemma~\ref{cl:lem:shared}(2), so the edge cell of the state at time $t+1$ is $(0,1)$, for $c$ and, by Proposition~\ref{cl:prop:H1}, for $hc$. The move $M_{t+1}$ replaces it by $(1,0)$ and changes nothing else at time $t+1$. So $b=M_{t+1}c$ has $Y_b(t,r)=1$ and $Y_b(t,r-1)=Y(t,r-1)$, and $M_{t+1}hc$, which is $hb$ by Lemma~\ref{cl:lem:moves1446}(c), has $Y_{hb}(t,r-1)=Y_{hc}(t,r-1)$. By~(a) for $b$, $Y_{hb}(t,r-1)=Y_b(t,r-1)$. Hence $G(t,r-1)=0$.
+\end{proof}
+
+\subsection{Controllability for 42}\label{cl:sec:42}
+
+For $42$ the orbits of the moves are not those of Theorem~\ref{cl:thm:Fk}; the frozen exterior cell is $(1,1)$ instead of $(0,0)$. We prove the part of the orbit structure that $(\mathrm{CTRL}_k)$ needs. As in Section~\ref{cl:sec:110}, $c_{r-k+1}$ is the tip and $c_{r-k}$ the exterior cell of $c$ at level $k$.
+
+\begin{theorem}\label{cl:thm:Fk42}
+Let $f=42$, $k\ge1$, let $c$ be $0$-tailed with $e(c)=r$, and let $\mathcal C$ be the set of configurations $c'$ with $c'_i=c_i$ for $i\notin[r-k+1,r]$ and $c'_r\ne(0,0)$.
+\begin{enumerate}
+\item[(A)] If $c_{r-k}\ne(1,1)$, then $\mathcal O_k(c)=\mathcal C$.
+\item[(B)] If $c_{r-k}=(1,1)$ and $c_{r-k+1}\ne(1,1)$, then $\mathcal O_k(c)$ contains every $c'\in\mathcal C$ with $c'_{r-k+1}\ne(1,1)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+By Lemma~\ref{cl:lem:movelocal}(a), $\mathcal O_k(c)\subseteq\mathcal C$, and by Lemma~\ref{cl:lem:moves1446}(c) the orbits are the classes of an equivalence relation. We prove (A) and (B) together by induction on $k$. For $k=1$, $\mathcal C$ allows only a change of the edge cell, and by Lemma~\ref{cl:lem:moves1446}(c) with $m=0$ and $(x_{r-1},y_{r-1})=c_{r-1}$, the three values $01$, $10$, $11$ are connected if $c_{r-1}\ne(1,1)$, and $01$, $10$ are connected in any case.
+
+Let $k\ge2$ and assume (A) and (B) at level $k-1$ for all $0$-tailed configurations. For $b\in\mathcal C$ write $b_{r-k+j}=(u_j,v_j)$ for $j=0,1,2$, so that $(u_0,v_0)=c_{r-k}$, and let $\alpha$, $\beta$ be as in Lemma~\ref{cl:lem:transfer}(b). For $t\in\{0,1\}^2$ let $C_t$ be the set of $b\in\mathcal C$ with tip $t$; it is nonempty, as the cells $r-k+2,\dots,r$ are free subject to $b_r\ne(0,0)$. We use $f(a,0,c)=c$, $f(0,1,c)=c$ and $f(1,1,c)=0$.
+
+\emph{Step 1.} For $t\ne(1,1)$, $C_t$ lies in one orbit: two elements of $C_t$ agree outside $[r-k+2,r]$, and the exterior cell of either at level $k-1$ is $t\ne(1,1)$, so (A) at level $k-1$ applies.
+
+\emph{Step 2 (tip $(u_1,0)\to(\neg u_1,0)$).} If $b\in C_{(u_1,0)}$, then $\mathcal O_k(b)$ meets $C_{(\neg u_1,0)}$. The exterior cell of $Fb$ at level $k-1$ is $(0,\alpha)\ne(1,1)$, with $\alpha=u_1\oplus f(v_0,0,v_2)=u_1\oplus v_2$. Let $\tilde b$ be $Fb$ with its cell $r-k+2$ replaced by $(\neg v_2,1)$. It agrees with $Fb$ outside $[r-k+2,r]$, and $\tilde b_r\ne(0,0)$ (for $k=2$ the cell $r$ is the new cell, for $k\ge3$ it is the edge cell of $Fb$). By (A) at level $k-1$, $\tilde b\in\mathcal O_{k-1}(Fb)$, so $b'=F^{-1}\tilde b\in\mathcal O_k(b)$ by Lemma~\ref{cl:lem:transfer}(a), and by Lemma~\ref{cl:lem:transfer}(c) with $w=\neg v_2$, $b'_{r-k+1}=(\alpha\oplus f(v_0,0,\neg v_2),0)=(u_1\oplus v_2\oplus\neg v_2,0)=(\neg u_1,0)$.
+
+\emph{Step 3 (tip $(0,v_1)\to(0,\neg v_1)$).} If $b\in C_{(0,v_1)}$, then $\mathcal O_k(b)$ meets $C_{(0,\neg v_1)}$: apply Step~2 to $\rho b$, whose tip is $(v_1,0)$, and then $\rho$, using $\rho\,\mathcal O_k(\rho b)=\mathcal O_k(b)$; $\rho$ maps $\mathcal C$ onto the corresponding set for $\rho c$ and fixes the cells $(0,0)$ and $(1,1)$.
+
+\emph{Step 4 (tip $(1,1)$).} If $v_0=0$, then for every $b\in C_{11}$ the orbit $\mathcal O_k(b)$ meets $C_{01}$; if $u_0=0$, it meets $C_{10}$. Let $v_0=0$. Then $\alpha=1\oplus f(0,1,v_2)=\neg v_2$. Let $\tilde b$ be $Fb$ with its cell $r-k+2$ replaced by $(\neg v_2,v_2)$, which is not $(0,0)$. If $v_2=1$, the exterior cell $(1,\alpha)=(1,0)$ of $Fb$ at level $k-1$ is not $(1,1)$, and (A) at level $k-1$ gives $\tilde b\in\mathcal O_{k-1}(Fb)$. If $v_2=0$, the exterior cell is $(1,1)$, and the tip $(0,\beta)$ of $Fb$ and the tip $(1,0)$ of $\tilde b$ are not $(1,1)$, so (B) at level $k-1$ gives $\tilde b\in\mathcal O_{k-1}(Fb)$. In both cases $b'=F^{-1}\tilde b\in\mathcal O_k(b)$, and $b'_{r-k+1}=(\alpha\oplus f(0,1,\neg v_2),1)=(\neg v_2\oplus\neg v_2,1)=(0,1)$. If $u_0=0$, apply this to $\rho b$, whose exterior cell $(v_0,u_0)$ has $y$-bit $0$, and then $\rho$.
+
+\emph{Conclusion.} By Step~1, each of $C_{00}$, $C_{01}$, $C_{10}$ lies in one orbit; by Step~2 the orbit of $C_{00}$ meets $C_{10}$, and by Step~3 the orbit of $C_{01}$ meets $C_{00}$. So $\mathcal C\setminus C_{11}$ lies in one orbit, and if $c\notin C_{11}$ this orbit is $\mathcal O_k(c)$; this gives (B). If $c_{r-k}\ne(1,1)$, then $v_0=0$ or $u_0=0$, so by Step~4 every element of $C_{11}$ is in the orbit of an element of $C_{01}\cup C_{10}$; hence $\mathcal C$ is one orbit, which is (A).
+\end{proof}
+
+With exterior cell $(1,1)$ the inclusion~(B) is in fact an equality, the classes being the level sets of the length of the run of cells $(1,1)$ that starts at the tip (this has been checked for $k\le4$ and is not used). Only the inclusion is needed.
+
+\begin{corollary}\label{cl:cor:ctrl42}
+For $f=42$, $(\mathrm{CTRL}_k)$ holds for every $k\ge2$, and $(\mathrm H_k)$ holds for every $k\ge1$.
+\end{corollary}
+
+\begin{proof}
+Let $c$ be $0$-tailed with $e(c)=r$. If $c_{r-k}\ne(1,1)$, or $c_{r-k}=(1,1)$ and $c_{r-k+1}\ne(1,1)$, Theorem~\ref{cl:thm:Fk42} at level $k$ gives $c'=Oc$, for a composite $O$ of moves at the times $|m|\le k-1$, with $c'_i=(0,1)$ for $r-k+1\le i\le r$ and $c'=c$ elsewhere. If $c_{r-k}=c_{r-k+1}=(1,1)$, the tip is frozen; then either $c_{r-k+2}=(1,1)$, and $O=\mathrm{id}$ will do, or (B) at level $k-1$, where the exterior cell is $c_{r-k+1}=(1,1)$, gives $c'\in\mathcal O_{k-1}(c)\subseteq\mathcal O_k(c)$ with $c'_{r-k+1}=(1,1)$, $c'_i=(0,1)$ for $r-k+2\le i\le r$, and $c'=c$ elsewhere. (For $k=2$ this is the move $10\to01$ at time $0$.) In each case $Y_{c'}(0,r-k+1)=Y_{c'}(0,r-k+2)=1$, which is $(\mathrm{CTRL}_k)$. With Propositions~\ref{cl:prop:H1} and~\ref{cl:prop:H2b}, Proposition~\ref{cl:prop:ctrlstep} gives $(\mathrm H_k)$ for every $k$.
+\end{proof}
+
+\subsection{The class of 14}\label{cl:sec:14}
+
+The rule $14$ is $f(a,b,c)=\neg a\wedge(b\vee c)$, with values $0,1,1,1,0,0,0,0$ on $000,\dots,111$. So $f(0,0,1)=f(0,1,c)=1$, and $f(1,b,c)=f(0,0,0)=0$. Its automorphisms are normalised by offsets on three families of fixed configurations, related by a collision of kinks. In Lemma~\ref{cl:lem:fix14} to Proposition~\ref{cl:prop:rel14}, $f=14$ and $F=F_{14}$. For $p\in\Z$ let $\eta_p$ be as in Lemma~\ref{cl:lem:kinks}, and put
+\[
+\lambda_p=(1,1)^{(-\infty,p)}(0,0)^{[p,\infty)},\qquad \zeta_p=(0,0)^{(-\infty,p]}(0,1)_{p+1}(1,1)^{[p+2,\infty)},
+\]
+where the subscript $p+1$ marks the position of the cell $(0,1)$; so $\zeta_p=\rho\eta_{p+1}$, with $\rho(x,y)=(y,x)$ the time reversal, which satisfies $\rho F\rho=F^{-1}$ for every $f$.
+
+\begin{lemma}[fixed sets for $14$]\label{cl:lem:fix14}
+The fixed points of $F$ are $(0,0)^{\Z}$, $(1,1)^{\Z}$ and the $\lambda_p$. The fixed points of $\sh F$ are $(0,0)^{\Z}$, $(1,1)^{\Z}$ and the $\eta_p$, and $F\eta_p=\eta_{p+1}$. The fixed points of $\sh^{-1}F$ are $(0,0)^{\Z}$, $(1,1)^{\Z}$ and the $\zeta_p$, and $F\zeta_p=\zeta_{p-1}$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{eq:F}, $F(c)=c$ means that $x_i=y_i$ and $f(y_{i-1},y_i,y_{i+1})=0$ for all $i$. Since $f(0,b,c)=0$ only for $b=c=0$, a bit $y_{i-1}=0$ forces $y_i=y_{i+1}=0$, so $y$ is $0^{\Z}$, $1^{\Z}$ or $1^{(-\infty,p)}0^{[p,\infty)}$; conversely these satisfy the condition, since $f(1,b,c)=f(0,0,0)=0$. With $x=y$ they give the two constants and the $\lambda_p$. For $\sh^{\pm1}F$ we use Lemma~\ref{cl:lem:Z2}. The allowed triples $(a_1,a_2,a_3)$, those with $a_1\oplus a_3=f(a_1,a_2,a_3)$, are $000$, $001$, $011$, $101$ and $111$. No allowed triple has the form $a10$, so in a sequence of $\Phi_{14}$ the word $10$ has no predecessor and never occurs: the sequence is nondecreasing, that is $0^{\Z}$, $1^{\Z}$ or $\varphi(k)=[k>p]$, and these use only the triples $000$, $001$, $011$ and $111$. So $\Phi_{14}=\Phi_{110}$ as a set of sequences, although the allowed triples differ ($14$ allows $101$ where $110$ allows $110$, and the word $10$ has no allowed predecessor for $14$, but no allowed continuation for $110$). Since the bijections of Lemma~\ref{cl:lem:Z2} depend only on $\Phi_f$, the computation in the proof of Lemma~\ref{cl:lem:kinks} applies verbatim: the fixed points of $\sh F$ are the constants and the $\eta_p$, with $F\eta_p=\sh^{-1}\eta_p=\eta_{p+1}$, and those of $\sh^{-1}F$ are the constants and the configurations $d_i=(\varphi(i-1),\varphi(i))$ for $\varphi(k)=[k>p]$, which is $\zeta_p$, with $F\zeta_p=\sh\zeta_p=\zeta_{p-1}$.
+\end{proof}
+
+\begin{proposition}[offsets for $14$]\label{cl:prop:offsets14}
+Every $g\in\Aut(X_F)$ fixes $(0,0)^{\Z}$ and $(1,1)^{\Z}$, and there are integers $o_\lambda(g)$, $o_\eta(g)$, $o_\zeta(g)$ with
+\[
+g\,\lambda_p=\lambda_{p+o_\lambda(g)},\qquad g\,\eta_p=\eta_{p+o_\eta(g)},\qquad g\,\zeta_p=\zeta_{p+o_\zeta(g)}\qquad(p\in\Z).
+\]
+The maps $o_\lambda,o_\eta,o_\zeta\colon\Aut(X_F)\to\Z$ are homomorphisms, $|o_\lambda(g)|,|o_\eta(g)|,|o_\zeta(g)|\le R$ if $g$ has radius $R$, and
+\[
+\bigl(o_\lambda,o_\eta,o_\zeta\bigr)(\sh^mF^n)=\bigl(-m,\;n-m,\;-m-n\bigr).
+\]
+In particular $(m,n)\mapsto\sh^mF^n$ is an isomorphism $\Z^2\to\langle\sh,F\rangle$.
+\end{proposition}
+
+\begin{proof}
+Since $g$ and $g^{-1}$ commute with $\sh$ and $F$, $g$ permutes the fixed points of $F$, of $\sh F$ and of $\sh^{-1}F$, and the two constants, which are the configurations fixed by both $\sh$ and $F$ ($F$ maps $(x,y)^{\Z}$ to $(y,x)^{\Z}$ because $f(0,0,0)=f(1,1,1)=0$). If $g$ exchanged the constants, then $g\lambda_0$, which agrees with $g((1,1)^{\Z})$ far to the left because $g$ is a block map, would be left-asymptotic to $(0,0)^{\Z}$, while by Lemma~\ref{cl:lem:fix14} it is one of the $\lambda_q$, all left-asymptotic to $(1,1)^{\Z}$. So $g$ fixes both constants and permutes each of the three families of Lemma~\ref{cl:lem:fix14}. Put $g\lambda_0=\lambda_u$, $g\eta_0=\eta_v$ and $g\zeta_0=\zeta_w$, and $(o_\lambda,o_\eta,o_\zeta)(g)=(u,v,w)$. Since $\sh\lambda_p=\lambda_{p-1}$, $\sh\eta_p=\eta_{p-1}$ and $\sh\zeta_p=\zeta_{p-1}$, and $g$ commutes with $\sh$, $g\lambda_p=\lambda_{p+u}$, $g\eta_p=\eta_{p+v}$ and $g\zeta_p=\zeta_{p+w}$ for all $p$, and $u$, $v$, $w$ are homomorphisms. If $g$ has radius $R$, then $(g\lambda_0)_i$ is $(1,1)$ for $i<-R$ and $(0,0)$ for $i\ge R$, so $-R\le u\le R$; $(g\eta_0)_i$ is $(0,0)$ for $i<-R$ and $(1,1)$ for $i>R$, so $|v|\le R$; and $(g\zeta_0)_i$ is $(0,0)$ for $i\le-R$ and $(1,1)$ for $i\ge R+2$, so $-R\le w$ and $w+1\le R+1$. The values on $\sh^mF^n$ follow from $F\lambda_p=\lambda_p$, $F\eta_p=\eta_{p+1}$, $F\zeta_p=\zeta_{p-1}$ and the action of $\sh$ just recalled. The map $(m,n)\mapsto\sh^mF^n$ is a homomorphism onto $\langle\sh,F\rangle$, since $\sh$ and $F$ commute; it is injective because $\sh^mF^n=\mathrm{id}$ forces $o_\lambda(\sh^mF^n)=-m=0$ and then $o_\eta(\sh^mF^n)=n=0$.
+\end{proof}
+
+For $N\ge1$ and $p<N$, and for $q\le N-2$, let
+\begin{align*}
+E(p,N)&=(0,0)^{(-\infty,p)}(1,0)_p(1,1)^{(p,N)}(0,0)^{[N,\infty)},\\
+Z(q,N)&=(0,0)^{(-\infty,q]}(0,1)_{q+1}(1,1)^{[q+2,N)}(0,0)^{[N,\infty)}.
+\end{align*}
+So $E(p,N)$ is a kink $\eta_p$ followed by a static kink $\lambda_N$, and $Z(q,N)$ is a kink $\zeta_q$ followed by $\lambda_N$; $\sh^{-k}E(p,N)=E(p+k,N+k)$ and $\sh^{-k}Z(q,N)=Z(q+k,N+k)$.
+
+\begin{lemma}[collision]\label{cl:lem:collision}
+Let $N\ge1$. The diagram of $E(0,N)$ is
+\[
+Y(t,i)=\bigl[\,N-1-|t-N+1|<i<N\,\bigr]\qquad(t,i\in\Z).
+\]
+Consequently $F^tE(0,N)=E(t,N)$ for $t\le N-1$, and $F^tE(0,N)=Z(2N-2-t,N)$ for $t\ge N$: the moving kink $\eta$ is reflected by the static kink $\lambda_N$ as a kink $\zeta$, and $\lambda_N$ does not move.
+\end{lemma}
+
+\begin{proof}
+Let $Q(t,i)=[t<i<N]$. We first show that $Q$ satisfies the spacetime relation $Q(t+1,i)\oplus Q(t-1,i)=f(Q(t,i-1),Q(t,i),Q(t,i+1))$ at every $(t,i)$ with $t\le N-2$. For $i<t$ and for $i>N$ all five values vanish, and $f(0,0,0)=0$. For $i=t$ the left side is $0\oplus1$ and the triple is $(0,0,1)$, since $t+1<N$. For $i=t+1$ the left side is $0\oplus1$ and the triple is $(0,1,\cdot)$. For $t+2\le i\le N-1$ the left side is $1\oplus1$ and the triple begins with $Q(t,i-1)=1$. For $i=N$ the left side is $0\oplus0$ and the triple is $(1,0,0)$. In each case the relation holds, by the values of $f$ recalled above. The rows $-1$ and $0$ of the diagram of $E(0,N)$, its $x$- and $y$-bits, are $[-1<i<N]$ and $[0<i<N]$, which are $Q(-1,\cdot)$ and $Q(0,\cdot)$. Each instance of the relation determines either time neighbour from the other four values, so, by induction forwards to $t=N-1$ and backwards to $t\to-\infty$, $Y=Q$ on all rows $t\le N-1$. In particular the row $N-1$ vanishes. Now $Y'(t,i)=Y(2N-2-t,i)$ also satisfies the relation, which is symmetric in $t\pm1$; it agrees with $Y$ on row $N-1$, and on row $N$ because $Y(N,i)=Y(N-2,i)\oplus f(0,0,0)=Y(N-2,i)$. So $Y'=Y$, and $Y(t,i)=Q(2N-2-t,i)$ for $t\ge N-1$. Together these give the displayed formula. Reading off the cells $(Y(t-1,i),Y(t,i))$ of $F^tE(0,N)$ gives $E(t,N)$ for $t\le N-1$ and, with $q=2N-2-t\le N-2$, the $x$-bits $[q+1<i<N]$ and $y$-bits $[q<i<N]$ of $Z(q,N)$ for $t\ge N$.
+\end{proof}
+
+\figinc[0.38\textwidth]{fig_collision14}{The collision of Lemma~\ref{cl:lem:collision}: the diagram of $E(0,N)$ for rule $14$, $N=12$. The kink $\eta$ moves to the right, is reflected by the static kink $\lambda_N$ (dashed) at time $N-1$, and leaves as $\zeta_{2N-2-t}$; $\lambda_N$ does not move.}{fig:collision}
+
+\begin{proposition}[relation of offsets]\label{cl:prop:rel14}
+Every $g\in\Aut(X_F)$ satisfies $o_\zeta(g)=2o_\lambda(g)-o_\eta(g)$.
+\end{proposition}
+
+\begin{proof}
+Let $g$ have radius $R$, write $(u,v,w)=(o_\lambda,o_\eta,o_\zeta)(g)$, and let $N\ge2R+1$. The configuration $E(0,N)$ agrees with $\eta_0$ on $(-\infty,N-1]$ and with $\lambda_N$ on $[1,\infty)$. So $gE(0,N)$ agrees with $g\eta_0=\eta_v$ on $(-\infty,N-1-R]$ and with $g\lambda_N=\lambda_{N+u}$ on $[R+1,\infty)$, and these half-lines cover $\Z$ because $N\ge2R+1$. Since $|u|,|v|\le R$, $E(v,N+u)$ agrees with $\eta_v$ on $(-\infty,N+u-1]\supseteq(-\infty,N-1-R]$ and with $\lambda_{N+u}$ on $[v+1,\infty)\supseteq[R+1,\infty)$, and $N+u-v\ge N-2R\ge1$. Hence $gE(0,N)=E(v,N+u)=\sh^{-v}E(0,N')$ with $N'=N+u-v\ge1$. In the same way, for $q\le N-2R-2$, $Z(q,N)$ agrees with $\zeta_q$ on $(-\infty,N-1]$ and with $\lambda_N$ on $[q+2,\infty)$, so $gZ(q,N)$ agrees with $\zeta_{q+w}$ on $(-\infty,N-1-R]$ and with $\lambda_{N+u}$ on $[q+R+2,\infty)$, and as before $gZ(q,N)=Z(q+w,N+u)$. Now take $t\ge\max(N,N')+2R+2$, so that $q=2N-2-t\le N-2R-2$. By Lemma~\ref{cl:lem:collision}, applied to $N$ and to $N'$,
+\begin{align*}
+Z(2N-2-t+w,\,N+u)&=gF^tE(0,N)=F^tgE(0,N)=\sh^{-v}F^tE(0,N')\\
+&=\sh^{-v}Z(2N'-2-t,\,N')=Z(2N'-2-t+v,\,N+u).
+\end{align*}
+Comparing the positions of the cell $(0,1)$ gives $2N+w=2N'+v=2N+2u-v$.
+\end{proof}
+
+
+On $\langle\sh,F\rangle$ the relation is the identity $-m-n=2(-m)-(n-m)$ of Proposition~\ref{cl:prop:offsets14}. The proof compares the outgoing kink of the collision before and after applying $g$ (Figure~\ref{fig:collision}). The rules $14$ and $42$ are related by $\Psi=\kappa\circ\mathrm{rev}$, where $\mathrm{rev}(c)_i=c_{-i}$ and $\kappa(x,y)=(1-x,1-y)$: reflection takes $14$ to $84$, $f(a,b,c)\mapsto f(c,b,a)$, and complementation takes $84$ to $42$, $f(a,b,c)\mapsto f(1-a,1-b,1-c)$, so $\Psi F_{14}\Psi^{-1}=F_{42}$. Also $\Psi\sh=\sh^{-1}\Psi$, and a direct check of the cells gives
+\begin{equation}\label{cl:eq:Psi}
+\Psi\eta_p=\rho\eta_{-p},\qquad\Psi\zeta_p=\eta_{-p-1},\qquad\Psi\lambda_p=\lambda_{1-p}\qquad(p\in\Z),
+\end{equation}
+where on the right $\eta_p$ and $\rho\eta_p$ are the kinks of Lemma~\ref{cl:lem:kinks}, which by Lemma~\ref{cl:lem:shared}(1) are the fixed points of $\sh^{\pm1}F_{42}$ other than the constants.
+
+\begin{theorem}\label{cl:thm:14rigid}
+Lemma~K holds for $F_{42}$ at every radius, and every $g\in\Aut(X_{F_{14}})$ equals $\sh^{-o_\lambda(g)}F_{14}^{o_\eta(g)-o_\lambda(g)}$. Hence
+\[
+\Aut(X_{F_f})=\langle\sh,F_f\rangle\cong\Z^2\qquad\text{for }f\in\{14,42,84,112\}.
+\]
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cl:cor:ctrl42}, $(\mathrm H_{R+1})$ holds for $F_{42}$ for every $R$, and by Lemma~\ref{cl:lem:shared}(3) it implies Lemma~K at radius $R$. Let $g\in\Aut(X_{F_{14}})$ have offsets $(o_\lambda,o_\eta,o_\zeta)(g)=(u,v,w)$, and put $T=\sh^{-u}F_{14}^{v-u}$. By Proposition~\ref{cl:prop:offsets14}, $T$ has offsets $u$, $v$ and $2u-v$, and $2u-v=w$ by Proposition~\ref{cl:prop:rel14}. So $h=T^{-1}g$ has $o_\eta(h)=o_\zeta(h)=0$: it fixes every $\eta_p$ and every $\zeta_p$. By \eqref{cl:eq:Psi}, $\tilde h=\Psi h\Psi^{-1}$ is a block map commuting with $F_{42}$ that fixes $\Psi\zeta_{-1}=\eta_0$ and $\Psi\eta_0=\rho\eta_0$, so $\tilde h=\mathrm{id}$ by Lemma~K for $F_{42}$, at the radius of $\tilde h$. Hence $g=T$, and $\langle\sh,F_{14}\rangle\cong\Z^2$ by Proposition~\ref{cl:prop:offsets14}. For the other members of the class, reflection and complementation conjugate $F_{14}$ to $F_f$ and map $\langle\sh,F_{14}\rangle$ onto $\langle\sh,F_f\rangle$.
+\end{proof}
+
+The normalisation by $T$ needs neither the parity step of Proposition~\ref{cl:prop:reduce} nor a larger radius: $T$ has radius at most $|o_\lambda|+|o_\eta-o_\lambda|=\max(|o_\zeta|,|o_\eta|)$, which is at most the radius of $g$. For $42$ alone, Proposition~\ref{cl:prop:reduce} would also do, by Lemma~\ref{cl:lem:shared}(1).
+
+\subsection{Rule 46}\label{cl:sec:46}
+
+For $46$ the moves are only $01\leftrightarrow10$, and the orbits are described exactly by a conserved bit on each pair of adjacent cells. For a configuration $c$ and $i\in\Z$ put
+\[
+\chi_i(c)=[c_i=(0,0)]\oplus[c_{i+1}=(1,1)].
+\]
+That $F_{46}$ conserves a quantity on every pair of adjacent cells is due to Takesue: it is the local conservation law of $46$R of \cite[(4.4)--(4.6)]{Takesue1989}, where it is obtained from the vanishing of the flux (4.6). In the form $\chi_i$ used here, the bond energy (4.5), with its last factor read as $1-2\sigma_{i+1}\hat\sigma_{i+1}$ in the notation there, where $\sigma_i=y_i$ and $\hat\sigma_i=x_i$, is $2(1-\chi_i)$. The next lemma is proved in full, since it is needed in this form and its statements on $\rho$ and on the edge moves are not in \cite{Takesue1989}.
+
+\begin{lemma}[bond bits; cf.\ {\cite[(4.4)--(4.6)]{Takesue1989}}]\label{cl:lem:bond}
+Let $f=46$.
+\begin{enumerate}
+\item $\chi_i(Fc)=\chi_i(c)$ and $\chi_i(\rho c)=\chi_i(c)$ for every configuration $c$ and every $i$.
+\item If $b$ is $0$-tailed with $e(b)=r$, then $\chi_r(b)=0$, and $\chi_i(M_mb)=\chi_i(\bar M_mb)=\chi_i(b)$ for all $i$ and $m$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) Write $c_j=(x_j,y_j)$. By \eqref{eq:F}, $F(c)_i=(0,0)$ if and only if $y_i=0$ and $x_i=f(y_{i-1},0,y_{i+1})=y_{i+1}$, and $F(c)_{i+1}=(1,1)$ if and only if $y_{i+1}=1$ and $x_{i+1}\oplus f(y_i,1,y_{i+2})=x_{i+1}\oplus\neg y_i=1$, that is $x_{i+1}=y_i$. So $\chi_i(Fc)=[y_i=0,\,x_i=y_{i+1}]\oplus[y_{i+1}=1,\,x_{i+1}=y_i]$, to be compared with $\chi_i(c)=[x_i=y_i=0]\oplus[x_{i+1}=y_{i+1}=1]$. For $(y_i,y_{i+1})=(0,0)$ both are $[x_i=0]$; for $(1,0)$ both are $0$; for $(1,1)$ both are $[x_{i+1}=1]$; and for $(0,1)$ they are $[x_i=1]\oplus[x_{i+1}=0]$ and $[x_i=0]\oplus[x_{i+1}=1]$, which are equal. Since $\rho$ exchanges the two bits of every cell, it fixes the conditions $c_i=(0,0)$ and $c_{i+1}=(1,1)$.
+
+(2) $b_r\ne(0,0)$ and $b_{r+1}=(0,0)$, so $\chi_r(b)=0$. By Lemma~\ref{cl:lem:moves1446}(b), $F^mM_mb$ and $F^m\bar M_mb$ differ from $F^mb$ at most in the edge cell, which is $01$ or $10$ before and after a change; so $\chi_{r-1}$ and $\chi_r$ of the state at time $m$ do not change, and no other $\chi_i$ reads the edge cell. By~(1), $\chi_i(F^mb)=\chi_i(b)$.
+\end{proof}
+
+For $46$ the clean reading needs only one target cell, because $f(a,1,c)=\neg a$ does not read $c$.
+
+\begin{lemma}[clean reading for $46$]\label{cl:lem:clean46}
+Let $f=46$ and $k\ge1$, and assume $(\mathrm H_k)$. Let $h\in\mathcal H$, let $b$ be $0$-tailed with $e(b)=r$, and let $O$ be a finite composite of moves $M_m$, $\bar M_m$ with $|m|\le k-1$. If $Y_{Ob}(0,r-k+1)=1$, then $Y_{hb}(0,r-k)=Y_b(0,r-k)$. Consequently, if
+\begin{itemize}
+\item[$(\mathrm{CTRL}'_k)$] \emph{for every $0$-tailed $c$, with $r=e(c)$, there is a finite composite $O$ of moves $M_m$, $\bar M_m$ with $|m|\le k-1$ such that $Y_{Oc}(0,r-k+1)=1$,}
+\end{itemize}
+then $(\mathrm H_k)$ implies $(\mathrm H_{k+1})$.
+\end{lemma}
+
+\begin{proof}
+As in the proof of Lemma~\ref{cl:lem:clean}, with $Y=Y_{Ob}$ and $G'=Y_{hOb}\oplus Y$, the moves leave row $0$ unchanged on the columns $\le r-k$, so $G'(0,r-k)=Y_{hb}(0,r-k)\oplus Y_b(0,r-k)$, and $G'$ vanishes on the columns $\ge r-k+1$ at all times, by $(\mathrm H_k)$ and, for $k=1$, because both diagrams vanish on column $r+1$. The relation \eqref{cl:eq:G} for $G'$ at $(0,r-k+1)$ reads $0=f(Y(0,r-k)\oplus G'(0,r-k),1,\cdot)\oplus f(Y(0,r-k),1,\cdot)$, with the same third argument on both sides, and $f(a,1,c)=\neg a$ gives $G'(0,r-k)=0$. The second statement follows as Proposition~\ref{cl:prop:ctrlstep} follows from Lemma~\ref{cl:lem:clean}.
+\end{proof}
+
+\begin{theorem}\label{cl:thm:Fk46}
+Let $f=46$, $k\ge1$, and let $c$ be $0$-tailed with $e(c)=r$. Then $\mathcal O_k(c)$ is the set of configurations $c'$ with
+\begin{enumerate}
+\item[(i)] $c'_i=c_i$ for every $i\notin[r-k+1,r]$, and $c'_r\ne(0,0)$; and
+\item[(ii)] $\chi_i(c')=\chi_i(c)$ for $r-k\le i\le r-1$.
+\end{enumerate}
+\end{theorem}
+
+Call this set $\mathcal T_k(c)$. Given the exterior cell, condition~(ii) determines, cell by cell from the left, whether each of the cells $r-k+1,\dots,r$ is $(1,1)$, given whether the cell before it is $(0,0)$. So every choice of the cells $r-k+1,\dots,j$ that satisfies the conditions $\chi_i(c')=\chi_i(c)$ for $r-k\le i<j$ (and $c'_r\ne(0,0)$ if $j=r$) extends to an element of $\mathcal T_k(c)$: for $i=j,\dots,r-1$ in turn, take $c'_{i+1}=(1,1)$ if $\chi_i(c)\oplus[c'_i=(0,0)]=1$ and $c'_{i+1}=(0,1)$ otherwise. We call this the \emph{filling}. In particular there are $2^k$ sets $\mathcal T_k(c)$ for each exterior cell.
+
+\begin{proof}
+By Lemma~\ref{cl:lem:movelocal}(a) and Lemma~\ref{cl:lem:bond}, $\mathcal O_k(c)\subseteq\mathcal T_k(c)$. We prove the converse by induction on $k$. For $k=1$, $\mathcal T_1(c)$ consists of the configurations that differ from $c$ at most in the edge cell, with $[c'_r=(1,1)]=[c_r=(1,1)]$; this is $\{c\}$ if $c_r=(1,1)$ and the two configurations with edge cell $01$, $10$ otherwise, and the moves at time $0$ connect these.
+
+Let $k\ge2$ and assume the theorem at level $k-1$. For $b\in\mathcal T_k(c)$ write $b_{r-k+j}=(u_j,v_j)$ for $j=0,1,2$, where $(u_0,v_0)=c_{r-k}$, and let $v_3$ be the $y$-bit of $b_{r-k+3}$ ($v_3=0$ if $k=2$).
+
+\emph{Step 1.} If $b,b'\in\mathcal T_k(c)$ have the same tip, then $b'\in\mathcal O_k(b)$. Indeed $b'$ agrees with $b$ outside $[r-k+2,r]$ and has the same $\chi_i$ for $r-k+1\le i\le r-1$, so $b'\in\mathcal O_{k-1}(b)\subseteq\mathcal O_k(b)$ by the theorem at level $k-1$.
+
+\emph{Step 2.} If $b\in\mathcal T_k(c)$ has tip $(u_1,0)$, then $\mathcal O_k(b)$ contains an element of $\mathcal T_k(c)$ with tip $(\neg u_1,0)$. First, if $(u_2,v_2)=(0,1)$, replace the cell $r-k+2$ by $(1,0)$; this changes no $\chi_i$, since neither cell is $(0,0)$ or $(1,1)$, so by Step~1 we may assume $(u_2,v_2)\ne(0,1)$. The cells $r-k+1$ and $r-k+2$ of $Fb$ are $(v_1,\alpha)=(0,u_1\oplus v_2)$ and $(v_2,\beta)$, where $\alpha=u_1\oplus f(v_0,0,v_2)=u_1\oplus v_2$ and $\beta=u_2\oplus f(0,v_2,v_3)$; if $v_2=1$ then $u_2=1$ and $\beta=u_2\oplus1=0$. So $(v_2,\beta)\ne(1,1)$. Let $\tilde b$ agree with $Fb$ outside $[r-k+2,r]$, with $\tilde b_{r-k+2}=(\neg v_2,v_2)$, and with the cells $r-k+3,\dots,r$ given by the filling for $\mathcal T_{k-1}(Fb)$; this is possible because $[\tilde b_{r-k+2}=(1,1)]=0=[(v_2,\beta)=(1,1)]$, so that $\chi_{r-k+1}(\tilde b)=\chi_{r-k+1}(Fb)$. By the theorem at level $k-1$, applied to the $0$-tailed configuration $Fb$, $\tilde b=O'Fb$ for a composite $O'$ of moves at the times $|m|\le k-2$, so $b'=F^{-1}\tilde b=F^{-1}O'Fb$ is the image of $b$ under the moves at the times $m+1$, and $b'\in\mathcal O_k(b)$. Its tip $(u'_1,v'_1)$ is computed from $Y_{b'}(0,\cdot)$, the $x$-bits of $\tilde b$, and $Y_{b'}(-1,i)=Y_{b'}(1,i)\oplus f(Y_{b'}(0,i-1),Y_{b'}(0,i),Y_{b'}(0,i+1))$: the $x$-bit of $\tilde b_{r-k+1}$ gives $v'_1=0$, and $u'_1=\alpha\oplus f(v_0,0,\neg v_2)=u_1\oplus v_2\oplus\neg v_2=\neg u_1$.
+
+\emph{Step 3.} If $b\in\mathcal T_k(c)$ has tip $(0,v_1)$, then $\mathcal O_k(b)$ contains an element of $\mathcal T_k(c)$ with tip $(0,\neg v_1)$. Apply Step~2 to $\rho b$, which has tip $(v_1,0)$, and then $\rho$, using $\rho\,\mathcal O_k(\rho b)=\mathcal O_k(b)$ and Lemma~\ref{cl:lem:bond}(1).
+
+Finally, $\chi_{r-k}=[c_{r-k}=(0,0)]\oplus[c'_{r-k+1}=(1,1)]$ is fixed on $\mathcal T_k(c)$, so either every element of $\mathcal T_k(c)$ has tip $(1,1)$, and Step~1 gives $\mathcal T_k(c)=\mathcal O_k(c)$, or every tip lies in $\{00,01,10\}$. In the second case Steps~2 and~3 connect the tips $00$ and $10$, and $00$ and $01$, and Step~1 gives $\mathcal T_k(c)\subseteq\mathcal O_k(c)$.
+\end{proof}
+
+\begin{corollary}\label{cl:cor:ctrl46}
+For $f=46$, $(\mathrm{CTRL}'_k)$ holds for every $k\ge1$, and $(\mathrm H_k)$ holds for every $k\ge1$.
+\end{corollary}
+
+\begin{proof}
+By the filling, $\mathcal T_k(c)$ contains a configuration whose tip is $(1,1)$ or $(0,1)$, which has $y$-bit $1$; by Theorem~\ref{cl:thm:Fk46} it is $Oc$ for a composite $O$ of moves at the times $|m|\le k-1$. This is $(\mathrm{CTRL}'_k)$. $(\mathrm H_1)$ is Proposition~\ref{cl:prop:H1}, and Lemma~\ref{cl:lem:clean46} gives $(\mathrm H_{k+1})$ from $(\mathrm H_k)$ for every $k\ge1$.
+\end{proof}
+
+So for $46$ the step $(\mathrm H_2)$ of Proposition~\ref{cl:prop:H2b} is not needed separately.
+
+\begin{theorem}\label{cl:thm:46rigid}
+Lemma~K holds for $F_{46}$ at every radius, every automorphism of $X_{F_{46}}$ with $e^+=e^-=0$ is the identity, and
+\[
+\Aut(X_{F_f})=\langle\sh,F_f\rangle\cong\Z^2\qquad\text{for }f\in\{46,116\}.
+\]
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cl:cor:ctrl46}, $(\mathrm H_{R+1})$ holds for every $R$, and it implies Lemma~K at radius $R$ (Lemma~\ref{cl:lem:shared}(3)). An automorphism with $e^+=e^-=0$ fixes $\eta_0$ and $\rho\eta_0$ by Proposition~\ref{cl:prop:offsets}, which holds for $F_{46}$ by Lemma~\ref{cl:lem:shared}(1), so it is the identity. Proposition~\ref{cl:prop:reduce}, which holds for $F_{46}$ by the same lemma, gives $\Aut(X_{F_{46}})=\langle\sh,F_{46}\rangle\cong\Z^2$, every automorphism having finite radius by Curtis--Hedlund--Lyndon. Reflection, and also complementation, conjugate $F_{46}$ to $F_{116}$.
+\end{proof}
+
+For $46$ no computer is used. The bond bits are a conserved field, the local conservation law of Takesue: $F$ and $\rho$ preserve each $\chi_i$ (Lemma~\ref{cl:lem:bond}). In \cite[p.~389]{Takesue1989} the rules $24$R and $46$R are singled out as having a local conservation law but no walls. By Theorem~\ref{cl:thm:46rigid} this conserved structure yields no automorphism outside $\langle\sh,F\rangle$.
+

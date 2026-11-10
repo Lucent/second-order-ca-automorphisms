@@ -1,0 +1,2 @@
+R=5 type P: {'n': 225, 'const': 1, 'form': 225, 'conserving': 225, 'inj': 25, 'table_equal': 225}
+R=5 type S: {'n': 2916, 'const': 1, 'form': 2916, 'conserving': 2916, 'inj': 36, 'table_equal': 2916}

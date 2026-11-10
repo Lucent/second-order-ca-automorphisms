@@ -1,0 +1,7 @@
+rule 110: 84 backgrounds kept, 192 triples (B,a,b) tested, 96 with a kink; first: [(-1, 1, 1, '0'), (-1, 1, 2, '00'), (-1, 1, 3, '000'), (-1, 1, 4, '0000'), (-1, 1, 5, '00000')]
+rule 14: 6 backgrounds kept, 120 triples (B,a,b) tested, 48 with a kink; first: [(-1, 1, 1, '0'), (-1, 1, 2, '00'), (-1, 1, 3, '000'), (-1, 1, 4, '0000'), (-1, 1, 5, '00000')]
+rule 93: 264 backgrounds kept, 72 triples (B,a,b) tested, 36 with a kink; first: [(-1, 3, 2, '01'), (-1, 3, 2, '02'), (-1, 3, 2, '03'), (-1, 3, 2, '10'), (-1, 3, 2, '20')]
+rule 25: 632 backgrounds kept, 224 triples (B,a,b) tested, 48 with a kink; first: [(-1, 1, 2, '12'), (-1, 1, 2, '21'), (-1, 1, 4, '1212'), (-1, 1, 4, '2121'), (-1, 1, 6, '121212')]
+rule 87: 114 backgrounds kept, 228 triples (B,a,b) tested, 36 with a kink; first: [(-1, 3, 1, '0'), (-1, 3, 1, '1'), (-1, 3, 1, '2'), (-1, 3, 2, '00'), (-1, 3, 2, '11')]
+rule 159: 24 backgrounds kept, 192 triples (B,a,b) tested, 48 with a kink; first: [(-2, 4, 1, '0'), (-2, 4, 1, '1'), (-2, 4, 1, '2'), (-2, 4, 1, '3'), (-2, 4, 2, '00')]
+total number of triples with a kink: 312

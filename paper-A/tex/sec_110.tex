@@ -1,0 +1,276 @@
+\section{Rule 110R: Lemma K}\label{cl:sec:110}
+
+In this section $f=110$ and $F=F_{110}$. The rule is $f(a,b,c)=(b\oplus c)\vee(b\wedge\neg a)$, with values $0,1,1,1,0,1,1,0$ on $000,\dots,111$; it satisfies \eqref{eq:K}. It is permutive in no variable, and in the spacetime relation $Y(t+1,i)\oplus Y(t-1,i)=f(Y(t,i-1),Y(t,i),Y(t,i+1))$ only the two time neighbours enter permutively in every context: $f$ is permutive in $a$ exactly when $(b,c)=(1,1)$, in $c$ exactly when $(a,b)\ne(0,1)$, and in $b$ exactly when $(a,c)\ne(0,1)$. So the front of a difference does not move at a fixed speed. We use the following values of $f$, read off its table:
+\[
+f(a,0,0)=0,\quad f(a,0,1)=1,\quad f(a,1,0)=1,\quad f(a,1,1)=\neg a,\quad f(1,b,c)=b\oplus c.
+\]
+In particular $f(a,b,0)=b$ and $f(0,b,c)=b\vee c$. By Propositions~\ref{cl:prop:offsets} and~\ref{cl:prop:reduce}, it remains to prove $(\mathrm Z_{R'})$ for every $R'$. A zero-offset automorphism fixes $\eta_0$ and $\rho\eta_0$, so $(\mathrm Z_{R'})$ follows from the next statement.
+
+\begin{lemmaK}
+Let $h$ be a block map of radius $R$ that commutes with $F_{110}$ and fixes $\eta_0$ and $\rho\eta_0$. Then $h=\mathrm{id}$.
+\end{lemmaK}
+
+Lemma K holds for every $R$ (Theorem~\ref{cl:thm:110rigid}); the rest of this section proves it. It does not assume that $h$ is invertible. The structure of the proof is shown in Figure~\ref{fig:dep}. If $h$ commutes with $F$ and $c$ is a configuration, put $G=Y_{hc}\oplus Y_c$. Both diagrams satisfy the spacetime relation, so
+\begin{equation}\label{cl:eq:G}
+G(t+1,i)\oplus G(t-1,i)=f\bigl(Y'(t,i-1),Y'(t,i),Y'(t,i+1)\bigr)\oplus f\bigl(Y(t,i-1),Y(t,i),Y(t,i+1)\bigr),
+\end{equation}
+where $Y=Y_c$ and $Y'=Y_{hc}=Y\oplus G$.
+
+\input{fig_dep}
+
+\subsection{Configurations that vanish to the right}\label{cl:sec:tail}
+
+Call $c\in\A^{\Z}$ \emph{$0$-tailed} if $c\ne(0,0)^{\Z}$ and $c_i=(0,0)$ for all large $i$, and let $e(c)$ be the largest $i$ with $c_i\ne(0,0)$, the \emph{edge} of $c$. Recall that $(F^tc)_i=(Y_c(t-1,i),Y_c(t,i))$. Since $f(a,0,0)=0$ and $f(a,b,0)=b$, the columns of $Y_c$ to the right of $e=e(c)$ stay $0$ and column $e$ obeys $Y_c(t+1,e)=Y_c(t-1,e)\oplus Y_c(t,e)$; as this recurrence is reversible, $e(F^tc)=e(c)$ for all $t\in\Z$, and column $e$ runs through the cycle $\dots011011\dots$, never $0$ in two consecutive rows. Let $\mathcal H$ be the set of block maps $h$, of any radius and not necessarily invertible, that commute with $F$ and fix $\eta_0$ and $\rho\eta_0$. Such an $h$ commutes with $\sh$, so it fixes every $\eta_p$ and $\rho\eta_p$, and it fixes $(0,0)^{\Z}$, which $\eta_0$ contains far to the left; and $\rho h\rho\in\mathcal H$, because $\rho F\rho=F^{-1}$. For $k\ge1$ consider
+\begin{itemize}
+\item[$(\mathrm H_k)$] \emph{for every $h\in\mathcal H$ and every $0$-tailed $c$, $Y_{hc}(t,i)=Y_c(t,i)$ for all $t\in\Z$ and all $i\ge e(c)-k+1$.}
+\end{itemize}
+So $(\mathrm H_k)$ says that $hc=c$ on the columns $i\ge e(c)-k+1$ at all times; in particular $hc$ is $0$-tailed with $e(hc)=e(c)$. $(\mathrm H_{R+1})$ implies Lemma K for radius $R$: if $h\in\mathcal H$ has radius $R$ and $w\in\A^{2R+1}$ is not $(0,0)^{2R+1}$, let $c$ be $w$ on $[-R,R]$ and $(0,0)$ elsewhere; then $e(c)\le R$, so $h(w)=(hc)_0=c_0=w_0$; and $h((0,0)^{2R+1})=(0,0)$ because $h$ fixes $(0,0)^{\Z}$.
+
+For $d$ with $d_i=(0,0)$ for $i>r$ and a configuration $\Lambda$ with $\Lambda_i=(0,0)$ for $i\le r$, write $d\sqcup\Lambda$ for the configuration equal to $d$ on $(-\infty,r]$ and to $\Lambda$ on $(r,\infty)$.
+
+\subsection{Fronts and the edge column}\label{cl:sec:fronts}
+
+Since $f(1,1,1)=0$, $F$ and $F^{-1}$ map a configuration that is $(1,1)$ far to the right to another such configuration, so every row of its diagram is $1$ far to the right. We say that such a $c$ has a \emph{front} at $(t_0,q)$ if $Y_c(t_0,q)=0$, $Y_c(t_0,i)=1$ for $i>q$, and $Y_c(t_0-1,i)=1$ for $i\ge q$. The kink $\eta_p$ has $Y_{\eta_p}(t,i)=[i>p+t]$, so it has a front at $(t,p+t)$ for every $t$; the kink $\rho\eta_N$ has $Y_{\rho\eta_N}(t,i)=[i\ge N-t]$, so the rightmost $0$ of its row $t$ is at $N-1-t$.
+
+\begin{lemma}[zero wake and bounce]\label{cl:lem:bounce}
+\begin{enumerate}
+\item[(a)] If $c$ has a front at $(t_0,q)$, then for every $t\ge t_0$ row $t$ of $Y_c$ is $0$ on $[q,q+t-t_0]$ and $1$ on $(q+t-t_0,\infty)$, and $F^tc$ agrees with $\eta_{q+t-t_0}$ on $[q,\infty)$. So $c$ has a front at $(t,q+t-t_0)$ for every $t\ge t_0$, and the integer $U(c)=q-t_0$ does not depend on the front chosen: it is the eventual value of $\mu_t-t$, where $\mu_t$ is the largest $i$ with $Y_c(t,i)=0$. The kink $\rho\eta_N$ has no front.
+\item[(b)] If $c$ has a front and $h\in\mathcal H$, then $hc$ has a front and $U(hc)=U(c)$.
+\item[(c)] \emph{(Bounce.)} Let $d$ be $0$-tailed with $e(d)=e$, let $N\ge e+1$, and let $c=d\sqcup\rho\eta_N$, glued at $r=e$. Then $c$ has a front, and $U(c)=2e-N+\varphi$, where $\varphi=Y_d(N-e-1,e)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Write $Y=Y_c$ and $s=q+t-t_0$, and argue by induction on $t\ge t_0$; at $t=t_0$ the statement about row $t$ is the hypothesis, and row $t_0-1$ is $1$ on $[q,\infty)$. Assume the statement for rows $t-1$ and $t$, and compute row $t+1$ from $Y(t+1,i)=Y(t-1,i)\oplus f(Y(t,i-1),Y(t,i),Y(t,i+1))$. For $i>s+1$ it is $1\oplus f(1,1,1)=1$; for $i=s+1$ it is $1\oplus f(0,1,1)=0$; for $i=s$ it is $1\oplus f(Y(t,s-1),0,1)=0$, since $f(a,0,1)=1$; and for $q\le i<s$ it is $0\oplus f(Y(t,i-1),0,0)=0$, since $f(a,0,0)=0$. As $Y_{\eta_p}(-1,i)=[i\ge p]$ and $Y_{\eta_p}(0,i)=[i>p]$, rows $t-1$ and $t$ are those of $\eta_{s}$ on $[q,\infty)$. So $\mu_t=t+q-t_0$ for $t\ge t_0$, which gives the independence of $U$. For $\rho\eta_N$, $\mu_t=N-1-t$ is decreasing, so it is not of the form $t+U$ for all large $t$.
+
+(b) Let $R$ be the radius of $h$. Since $h$ fixes $\eta_0$, which is $(1,1)$ far to the right, it maps the window $(1,1)^{2R+1}$ to $(1,1)$, so $hc$ is $(1,1)$ far to the right. Let $c$ have a front at $(t_0,q)$, let $t\ge t_0+R$ and $p=q+t-t_0\ge q+R$. By (a), $F^tc$ agrees with $\eta_p$ on $[q,\infty)$, so $F^thc=hF^tc$ agrees with $h\eta_p=\eta_p$ on $[q+R,\infty)$, which contains $p$. Hence $hc$ has a front at $(t,p)$, and $U(hc)=p-t=U(c)$. No inverse of $h$ is used.
+
+(c) Put $Y=Y_c$ and $t_0=N-e-1\ge0$. The configurations $c$ and $d$ agree on $(-\infty,N-1]$, and $F^{\pm1}$ have radius $1$, so the states of $c$ and $d$ at time $t\ge0$ agree on $(-\infty,N-1-t]$; at $t=t_0$ this is $(-\infty,e]$. On $(e,\infty)$, row $t$ of $Y$ is $[i\ge N-t]$, as for $\rho\eta_N$, for $-1\le t\le t_0$: this holds for $t=-1,0$, and for $1\le t+1\le t_0$ the only entry of row $t+1$ on $(e,\infty)$ that reads a column $\le e$ is the one at $e+1$, which is $Y(t-1,e+1)\oplus f(Y(t,e),Y(t,e+1),Y(t,e+2))$ with $Y(t,e+1)=0$, as $e+1<N-t$; and $f(a,0,c)=c$ does not read $a$. So row $t_0$ is $1$ on $(e,\infty)$, row $t_0-1$ is $0$ at $e+1$ and $1$ on $[e+2,\infty)$, $Y(t_0,e)=\varphi$ and $Y(t_0-1,e)=Y_d(t_0-1,e)$. Row $t_0+1$ is $1\oplus f(1,1,1)=1$ on $[e+2,\infty)$ and $0\oplus f(\varphi,1,1)=\neg\varphi$ at $e+1$.
+
+If $\varphi=1$, then $c$ has a front at $(t_0+1,e+1)$, and $U(c)=e+1-(t_0+1)=2e-N+1$. If $\varphi=0$, then $Y(t_0-1,e)=1$, because the edge column of $d$ is never $0$ in two consecutive rows, so $Y(t_0+1,e)=1\oplus f(Y(t_0,e-1),0,1)=0$, and row $t_0+1$ is $1$ on $[e+1,\infty)$. Then $Y(t_0+2,e+1)=1\oplus f(0,1,1)=0$ and $Y(t_0+2,i)=1\oplus f(1,1,1)=1$ for $i\ge e+2$, so $c$ has a front at $(t_0+2,e+1)$, and $U(c)=e+1-(t_0+2)=2e-N$.
+\end{proof}
+
+\figinc[0.6\textwidth]{fig_front}{A front for rule $110$ (Lemma~\ref{cl:lem:bounce}(a)): the diagram of a configuration that is $(1,1)$ to the right of a random block. From the front at $(t_0,q)$ on, row $t$ is $0$ on $[q,q+t-t_0]$ and $1$ beyond, and the front moves to the right at speed $1$. Time increases upwards; black cells are $1$.}{fig:front}
+
+\figinc[0.5\textwidth]{fig_bounce}{The bounce of Lemma~\ref{cl:lem:bounce}(c) for rule $110$: the diagram of $d\sqcup\rho\eta_N$, with $d$ a random $0$-tailed configuration with edge $e$ (marked). The kink $\rho\eta_N$ enters from the right, meets the edge column at time $N-e-1$ and leaves as a front of speed $1$, whose position $U=2e-N+\varphi$ records one value $\varphi$ of the edge column. Time increases upwards; black cells are $1$.}{fig:bounce}
+
+\begin{proposition}[$(\mathrm H_1)$]\label{cl:prop:H1}
+For every $h\in\mathcal H$ and every $0$-tailed $d$, the configuration $hd$ is $0$-tailed with $e(hd)=e(d)$, and $Y_{hd}(t,i)=Y_d(t,i)$ for all $t\in\Z$ and all $i\ge e(d)$. That is, $(\mathrm H_1)$ holds.
+\end{proposition}
+
+\begin{proof}
+Let $R$ be the radius of $h$, $e=e(d)$, $N\ge e+2R+1$, and $c=d\sqcup\rho\eta_N$, glued at $e$. Since $h$ fixes $(0,0)^{\Z}$, $(hd)_i=(0,0)$ for $i>e+R$. For $i\le N-R-1$ the window of $i$ lies in $(-\infty,N-1]$, where $c=d$, so $(hc)_i=(hd)_i$; for $i\ge e+R+1$ it lies in $(e,\infty)$, where $c=\rho\eta_N$, so $(hc)_i=(h\rho\eta_N)_i=(\rho\eta_N)_i$. These ranges cover $\Z$, and on their overlap both $hd$ and $\rho\eta_N$ are $(0,0)$. So $hc=\rho\eta_N$ if $hd=(0,0)^{\Z}$; otherwise $hd$ is $0$-tailed with $e'=e(hd)\le e+R<N$, and $hc=hd\sqcup\rho\eta_N$, glued at $e'$. By Lemma~\ref{cl:lem:bounce}(c), $c$ has a front, so by part~(b) of that lemma $hc$ has a front and $U(hc)=U(c)$; by part~(a), $\rho\eta_N$ has none, so $hd\ne(0,0)^{\Z}$. Part~(c), for $c$ and for $hc$, now gives
+\[
+2e'-N+Y_{hd}(N-e'-1,e')=2e-N+Y_d(N-e-1,e).
+\]
+So $2(e'-e)\in\{-1,0,1\}$, hence $e'=e$, and then $Y_{hd}(s,e)=Y_d(s,e)$ for every $s=N-e-1\ge2R$. Both edge columns obey the reversible recurrence $Y(t+1,e)=Y(t-1,e)\oplus Y(t,e)$, so they agree at all times. To the right of $e$ both diagrams vanish, since $e(F^thd)=e(F^td)=e$ for all $t$.
+\end{proof}
+
+\subsection{Probes and edge moves}\label{cl:sec:probes}
+
+\begin{lemma}[probes and debris]\label{cl:lem:probe}
+Let $h\in\mathcal H$ have radius $R$, let $c$ be $0$-tailed with $e(c)=r$, put $Y=Y_c$, and for $n\in\Z$ let $P_n(c)=F^{-n}(F^nc\sqcup\rho\eta_{r+2})$, the \emph{probe} of $c$ at time $n$.
+\begin{enumerate}
+\item[(a)] $F^nP_n(c)=F^j(F^{n-j}c\sqcup\rho\eta_{r+2+j})$ for every $j\ge0$, and $hP_n(c)=P_n(hc)$.
+\item[(b)] Let $\varepsilon=1$ if $Y(n+1,r)=0$ and $\varepsilon=0$ otherwise. There is a unique $0$-tailed configuration $D=D_n(c)$, the \emph{debris}, with $e(D)=r$ such that
+\[
+F^sP_n(c)=F^sD\sqcup\eta_{r+s-n-1-\varepsilon}\qquad\text{for all }s\ge n+2+\varepsilon.
+\]
+The diagrams of $D$ and of $P=P_n(c)$ agree on the columns $\le r$ at all rows $\ge n+1+\varepsilon$. On the columns $\le r$, the diagram of $P$ equals $Y$ at the rows $n-1$, $n$, $n+1$; at row $n+2$ it equals $Y$ on the columns $\le r-1$. If $\varepsilon=1$, then $Y_P(n+2,r)=0$ and $Y_P(n+3,r)=1$. Finally $hD_n(c)=D_n(hc)$.
+\item[(c)] $\rho$ maps $0$-tailed configurations to $0$-tailed configurations with the same edge, $Y_{\rho c}(t,i)=Y_c(-1-t,i)$, and $\rho h\rho\in\mathcal H$.
+\end{enumerate}
+\end{lemma}
+
+The configuration $F^nc\sqcup\rho\eta_{r+2}$ is the state at time $n$ of $c$ with a kink glued next to its edge; by (b), after time $n+2+\varepsilon$ the glued configuration splits into the debris and an outgoing kink $\eta$, and the debris differs from $c$ only near the edge (Figure~\ref{fig:probe}). The statements about $h$ use $(\mathrm H_1)$, which holds by Proposition~\ref{cl:prop:H1}.
+
+\begin{proof}
+Two gluing facts. (i) If $d_i=(0,0)$ for $i>r$, then $F(d\sqcup\eta_N)=Fd\sqcup\eta_{N+1}$ for $N\ge r+1$, and $F(d\sqcup\rho\eta_N)=Fd\sqcup\rho\eta_{N-1}$ for $N\ge r+3$. Indeed the $y$-component at $r+1$ is $0$ in both glued configurations, so the cells $i\le r$ evolve as in $Fd$; the cells $i\ge r+2$ read only cells $\ge r+1$, which are those of the kink; and the new cell $r+1$ is $(0,0)$, because $f(a,0,0)=0$ and $f(a,0,1)=1$ do not depend on $a$ (for $\eta_N$ the cell $r+1$ is $(1,0)$ if $N=r+1$ and $(0,0)$ otherwise; for $\rho\eta_N$, $N\ge r+3$, the cells $r+1$, $r+2$ are $(0,0)$). Then use $F\eta_N=\eta_{N+1}$ and $F\rho\eta_N=\rho\eta_{N-1}$ (Lemma~\ref{cl:lem:kinks}). (ii) If moreover $(hd)_i=(0,0)$ for $i>r$ and $\Lambda\in\{\eta_N,\rho\eta_N\}$ with $N\ge r+2R+1$, then $h(d\sqcup\Lambda)=hd\sqcup\Lambda$: for $i\le N-R-1$ the window of $i$ lies where $d\sqcup\Lambda=d$, and for $i\ge r+R+1$ it lies where $d\sqcup\Lambda=\Lambda$, and $h\Lambda=\Lambda$; these ranges cover $\Z$, and on $(r,N)$ both $hd$ and $\Lambda$ are $(0,0)$.
+
+(a) The identity is (i) applied $j$ times. Take $j\ge 2R-1$. By Proposition~\ref{cl:prop:H1}, $hF^{n-j}c=F^{n-j}hc$ vanishes to the right of $r$, so by (ii), $h(F^{n-j}c\sqcup\rho\eta_{r+2+j})=F^{n-j}hc\sqcup\rho\eta_{r+2+j}$; apply $F^{j-n}$, which commutes with $h$.
+
+(b) Write $P=P_n(c)$. Rows $n-1$ and $n$ of $Y_P$ are the two rows of $F^nP=F^nc\sqcup\rho\eta_{r+2}$: on the columns $\le r$ they are $Y(n-1,\cdot)$ and $Y(n,\cdot)$; row $n-1$ is $0$ at $r+1,r+2$ and $1$ beyond, and row $n$ is $0$ at $r+1$ and $1$ beyond. By the relation, row $n+1$ of $Y_P$ is $Y(n+1,\cdot)$ on the columns $\le r$, because $Y_P(n,r+1)=0=Y(n,r+1)$, and it is $1$ on the columns $>r$ (at $r+1$ it is $0\oplus f(Y(n,r),0,1)=1$, at $r+2$ it is $0\oplus f(0,1,1)=1$, and beyond $1\oplus f(1,1,1)=1$). Row $n+2$ is $1\oplus f(1,1,1)=1$ on the columns $\ge r+2$ and $0\oplus f(Y(n+1,r),1,1)=\neg Y(n+1,r)=\varepsilon$ at $r+1$; on the columns $\le r-1$ it reads only columns $\le r$ of rows $n$, $n+1$, so it equals $Y(n+2,\cdot)$ there.
+
+If $\varepsilon=0$, the state $F^{n+2}P$ has the cell $(1,0)$ at $r+1$ and $(1,1)$ beyond, so $F^{n+2}P=d\sqcup\eta_{r+1}$, where $d$ agrees with $F^{n+2}P$ on $(-\infty,r]$ and vanishes beyond; its cell $r$ is $(Y(n+1,r),\cdot)=(1,\cdot)\ne(0,0)$. If $\varepsilon=1$, then $Y(n+1,r)=0$, so $Y(n,r)=1$ because the edge column of $c$ is never $0$ twice in a row, and $Y_P(n+2,r)=Y(n,r)\oplus f(Y(n+1,r-1),0,1)=0$. Then $Y_P(n+3,r+1)=Y_P(n+1,r+1)\oplus f(0,1,1)=0$, $Y_P(n+3,i)=1$ for $i\ge r+2$, and $Y_P(n+3,r)=Y_P(n+1,r)\oplus f(Y_P(n+2,r-1),0,1)=1$. So $F^{n+3}P=d\sqcup\eta_{r+1}$ with cell $r$ of $d$ equal to $(0,1)$. In both cases put $D=F^{-(n+2+\varepsilon)}d$; it is $0$-tailed with $e(D)=r$, and (i) gives $F^sP=F^sD\sqcup\eta_{r+s-n-1-\varepsilon}$ for $s\ge n+2+\varepsilon$. Rows $s-1$ and $s$ of a diagram are the two rows of the state at time $s$, so the diagrams of $D$ and $P$ agree on the columns $\le r$ at all rows $\ge n+1+\varepsilon$. If $D'$ is $0$-tailed with $e(D')=r$ and $F^sP=F^sD'\sqcup\eta_{N'}$ for some $s$ and some $N'\ge r+1$, then by (i), applied to $F^sD'$, which vanishes to the right of $r$, $F^{s'}P=F^{s'}D'\sqcup\eta_{N'+s'-s}$ for every $s'\ge s$; for $s'\ge\max(s,n+2+\varepsilon)$, $F^{s'}D'$ and $F^{s'}D$ both agree with $F^{s'}P$ on $(-\infty,r]$ and vanish beyond, so $F^{s'}D'=F^{s'}D$ and $D'=D$; this is the uniqueness.
+
+By Proposition~\ref{cl:prop:H1}, $c'=hc$ is $0$-tailed with $e(c')=r$ and $Y_{c'}(n+1,r)=Y(n+1,r)$, so $c'$ has the same $\varepsilon$. For $s$ so large that $N=r+s-n-1-\varepsilon\ge r+2R+1$, (a), (ii) and Proposition~\ref{cl:prop:H1} for $F^sD$ give $F^sD_n(c')\sqcup\eta_N=F^sP_n(c')=hF^sP=hF^sD\sqcup\eta_N$, hence $F^sD_n(c')=F^shD$ and $hD=D_n(c')$.
+
+(c) $\rho$ exchanges the two rows of every cell, which with $F^t\rho=\rho F^{-t}$ gives the formula for $Y_{\rho c}$; and $\rho h\rho$ commutes with $F$ since $\rho F\rho=F^{-1}$, and fixes $\rho\eta_0$ and $\eta_0$.
+\end{proof}
+
+\figinc[\textwidth]{fig_probe}{A probe and its debris for rule $110$ (Lemma~\ref{cl:lem:probe}). Left: the diagram of the probe $P_n(c)$; the kink glued at time $n$ next to the edge column $r$ leaves as an outgoing kink $\eta$. Right: the debris $D_n(c)$. Here $n=2$ and $\varepsilon=1$; for $s\ge n+2+\varepsilon$, $F^sP_n(c)=F^sD_n(c)\sqcup\eta_{r+s-n-1-\varepsilon}$. On the columns $\le r$ the two diagrams differ only in the shaded cells, all at rows $\le n+\varepsilon$.}{fig:probe}
+
+\emph{Edge moves.} A probe followed by passage to its debris changes a configuration only at its edge cell, at a single time; so does its conjugate by $\rho$; and $h$ commutes with both. For a $0$-tailed $b$ with $e(b)=r$ and $m\in\Z$ write the cells of the state $F^mb$ as $(F^mb)_i=(x_i,y_i)$, so that $x_i=Y_b(m-1,i)$, $y_i=Y_b(m,i)$, and the edge cell is $(x_r,y_r)\ne(0,0)$.
+
+\begin{lemma}[edge moves]\label{cl:lem:edgemove}
+Let $b$ be $0$-tailed with $e(b)=r$, let $m\in\Z$, and let $(x_i,y_i)$ be the cells of $F^mb$. Put $M_m(b)=D_{m-2}(b)$ and $\bar M_m(b)=\rho D_{-m-2}(\rho b)$.
+\begin{enumerate}
+\item[(a)] $M_m(b)$ is $0$-tailed with edge $r$, and $F^mM_m(b)$ agrees with $F^mb$ at every cell except the edge cell, where $(x_r,y_r)$ becomes $(1,0)$ if $(x_r,y_r)=(0,1)$, and becomes $(1,y_r\oplus x_{r-1})$ if $x_r=1$.
+\item[(b)] $\bar M_m(b)$ is $0$-tailed with edge $r$, and $F^m\bar M_m(b)$ agrees with $F^mb$ at every cell except the edge cell, where $(x_r,y_r)$ becomes $(0,1)$ if $(x_r,y_r)=(1,0)$, and becomes $(x_r\oplus y_{r-1},1)$ if $y_r=1$.
+\item[(c)] $hM_m=M_mh$ and $h\bar M_m=\bar M_mh$ on $0$-tailed configurations with edge $r$, for every $h\in\mathcal H$ and every $m\in\Z$.
+\end{enumerate}
+\end{lemma}
+
+So, at any time $m$ and in the notation $x_ry_r$ for the edge cell, the \emph{moves} are $01\to10$ and $10\to01$, always; $1y\to1\bar y$ if $x_{r-1}=1$; and $x1\to\bar x1$ if $y_{r-1}=1$. In the remaining cases (a) and (b) leave $b$ unchanged. By (a) and (b), $M_m$ and $\bar M_m$ are described by their effect on the state at time $m$ alone, without reference to any $h$. Part~(c) is an identity of operators: a composite $O$ of moves is a fixed map, and $hO=Oh$, although the effect of each move depends on the configuration to which it is applied.
+
+\begin{proof}
+(a) Put $n=m-2$, $Y=Y_b$, $P=P_n(b)$ and $D=D_n(b)$, and let $\varepsilon$ be as in Lemma~\ref{cl:lem:probe}(b), so $\varepsilon=1$ exactly when $x_r=Y(m-1,r)=0$. By that lemma $D$ is $0$-tailed with $e(D)=r$, and the diagram of $P$ equals $Y$ on the columns $\le r$ at the rows $m-3,m-2,m-1$, and at row $m$ on the columns $\le r-1$; at $(m,r)$ it is $Y(m-2,r)\oplus f(x_{r-1},x_r,1)$, while $y_r=Y(m-2,r)\oplus f(x_{r-1},x_r,0)=Y(m-2,r)\oplus x_r$.
+
+If $x_r=1$, then $\varepsilon=0$, so the diagrams of $D$ and $P$ agree on the columns $\le r$ at the rows $\ge m-1$. Hence rows $m-1$, $m$ of $D$ are $x$ and $y$ on the columns $\le r$, except that $Y_D(m,r)=Y(m-2,r)\oplus f(x_{r-1},1,1)=Y(m-2,r)\oplus\neg x_{r-1}=y_r\oplus x_{r-1}$. If $x_r=0$, then $y_r=1$, $\varepsilon=1$, and the diagrams of $D$ and $P$ agree on the columns $\le r$ at the rows $\ge m$. Row $m$ of $D$ is that of $P$: it is $y_i$ for $i\le r-1$ and $Y_P(m,r)=0$ at $r$. Row $m-1$ of $D$ follows from rows $m$ and $m+1$ by the relation solved for the earlier row: for $i\le r-1$ the relation reads only columns $\le r$ of these rows, so $Y_D(m-1,i)=Y_P(m-1,i)=x_i$; and, as $Y_D(m,r+1)=0$, $Y_D(m-1,r)=Y_D(m+1,r)\oplus f(y_{r-1},0,0)=Y_P(m+1,r)=1$, the value at $(n+3,r)$ in Lemma~\ref{cl:lem:probe}(b). So the edge cell becomes $(1,0)$ and nothing else changes. In both cases the cells $i>r$ are $(0,0)$ since $e(D)=r$.
+
+(b) By Lemma~\ref{cl:lem:probe}(c), $\rho b$ is $0$-tailed with edge $r$ and $Y_{\rho b}(t,i)=Y_b(-1-t,i)$, so the state of $\rho b$ at time $-m$ has the rows $Y_{\rho b}(-m-1,\cdot)=y$ and $Y_{\rho b}(-m,\cdot)=x$. Apply (a) to $\rho b$ at time $-m$, that is $M_{-m}(\rho b)=D_{-m-2}(\rho b)$, with the roles of $x$ and $y$ exchanged, and then $\rho$, which turns the state at time $-m$ back into the state at time $m$ with its two rows exchanged.
+
+(c) By Proposition~\ref{cl:prop:H1}, $hb$ is again $0$-tailed with edge $r$. Lemma~\ref{cl:lem:probe}(b) gives $hD_n(b)=D_n(hb)$ for every $n$, which is $hM_m=M_mh$. Since $\rho h\rho\in\mathcal H$, the same lemma gives $(\rho h\rho)D_n=D_n(\rho h\rho)$, and therefore $h\bar M_m(b)=\rho(\rho h\rho)D_{-m-2}(\rho b)=\rho D_{-m-2}(\rho hb)=\bar M_m(hb)$.
+\end{proof}
+
+\subsection{The second column and the inductive step}\label{cl:sec:step}
+
+\begin{proposition}[$(\mathrm H_2)$]\label{cl:prop:H2}
+$(\mathrm H_2)$ holds.
+\end{proposition}
+
+\begin{proof}
+Let $h\in\mathcal H$, let $c$ be $0$-tailed with $e(c)=r$, and put $Y=Y_c$ and $G=Y_{hc}\oplus Y$. By Proposition~\ref{cl:prop:H1}, $G$ vanishes on the columns $\ge r$, and it remains to show that $G(t,r-1)=0$ for every $t$.
+
+(a) Suppose $Y(t,r)=1$, and put $m=t+1$, so that the state at time $m$ has the rows $t$ and $t+1$ and its edge cell has $x_r=Y(t,r)=1$. By Lemma~\ref{cl:lem:edgemove}(a), $b=M_mc$ has $Y_b(t+1,r)=Y(t+1,r)\oplus Y(t,r-1)$. By Proposition~\ref{cl:prop:H1}, $Y_{hc}(t,r)=1$ and $Y_{hc}(t+1,r)=Y(t+1,r)$, so the same lemma gives $Y_{M_mhc}(t+1,r)=Y(t+1,r)\oplus Y_{hc}(t,r-1)$. By Lemma~\ref{cl:lem:edgemove}(c), $M_mhc=hb$, and by Proposition~\ref{cl:prop:H1} for $b$, which is $0$-tailed with edge $r$, $Y_{hb}(t+1,r)=Y_b(t+1,r)$. Comparing, $Y_{hc}(t,r-1)=Y(t,r-1)$, that is, $G(t,r-1)=0$.
+
+(b) Suppose $Y(t,r)=0$. Then $Y(t\pm1,r)=1$, since the edge column runs through the cycle $\dots011011\dots$, so $G(t\pm1,r-1)=0$ by (a). Since $f(a,b,0)=b$ and $Y_{hc}(t,r)=Y(t,r)=0$, the relation at $(t,r-1)$ reads $Y(t+1,r-1)\oplus Y(t-1,r-1)=Y(t,r-1)$ in both diagrams, so $G(t,r-1)=G(t+1,r-1)\oplus G(t-1,r-1)=0$.
+\end{proof}
+
+\begin{lemma}[clean reading]\label{cl:lem:clean}
+Let $k\ge2$ and assume $(\mathrm H_k)$. Let $h\in\mathcal H$, let $b$ be $0$-tailed with $e(b)=r$, and let $O$ be a finite composite of moves $M_m$, $\bar M_m$ with $|m|\le k-1$. Then $Y_{Ob}(0,i)=Y_b(0,i)$ and $Y_{Ohb}(0,i)=Y_{hb}(0,i)$ for $i\le r-k$. If moreover $Y_{Ob}(0,r-k+1)=Y_{Ob}(0,r-k+2)=1$, then $Y_{hb}(0,r-k)=Y_b(0,r-k)$.
+\end{lemma}
+
+\begin{proof}
+A move at time $m$ changes the state at time $m$ only at column $r$. Since $F$ and $F^{-1}$ have radius $1$, the states at time $0$ before and after the move differ only on columns $\ge r-|m|\ge r-k+1$, so row $0$ is unchanged on columns $\le r-k$. Applying this to each factor of $O$ in turn, starting from $b$ or from $hb$, which is $0$-tailed with edge $r$ by Proposition~\ref{cl:prop:H1}, gives the first statement. Put $Y=Y_{Ob}$ and $G'=Y_{hOb}\oplus Y$. By Lemma~\ref{cl:lem:edgemove}(c), $hOb=Ohb$, so $G'(0,r-k)=Y_{Ohb}(0,r-k)\oplus Y_{Ob}(0,r-k)=Y_{hb}(0,r-k)\oplus Y_b(0,r-k)$. Since $Ob$ is $0$-tailed with edge $r$, $(\mathrm H_k)$ gives $G'=0$ on columns $\ge r-k+1$ at all times. The relation \eqref{cl:eq:G} for $G'$ at $(0,r-k+1)$ then reads
+\[
+0=f\bigl(Y(0,r-k)\oplus G'(0,r-k),1,1\bigr)\oplus f\bigl(Y(0,r-k),1,1\bigr),
+\]
+where we used $Y(0,r-k+1)=Y(0,r-k+2)=1$ and $r-k+2\le r$. As $f(a,1,1)=\neg a$, $G'(0,r-k)=0$.
+\end{proof}
+
+For $k\ge1$ consider the following statement about $F_{110}$ alone; by the remark after Lemma~\ref{cl:lem:edgemove} it involves no $h$.
+\begin{itemize}
+\item[$(\mathrm{CTRL}_k)$] \emph{for every $0$-tailed $c$, with $r=e(c)$, there is a finite composite $O$ of moves $M_m$, $\bar M_m$ with $|m|\le k-1$ such that $Y_{Oc}(0,r-k+1)=Y_{Oc}(0,r-k+2)=1$.}
+\end{itemize}
+
+\begin{proposition}\label{cl:prop:ctrlstep}
+For $k\ge2$, $(\mathrm{CTRL}_k)$ and $(\mathrm H_k)$ imply $(\mathrm H_{k+1})$.
+\end{proposition}
+
+\begin{proof}
+Let $h\in\mathcal H$, let $c$ be $0$-tailed with $e(c)=r$, and let $t\in\Z$. Then $F^tc$ is $0$-tailed with edge $r$, and $(\mathrm{CTRL}_k)$ applied to $F^tc$ and Lemma~\ref{cl:lem:clean} with $b=F^tc$ give $Y_{hF^tc}(0,r-k)=Y_{F^tc}(0,r-k)$. Since $hF^t=F^th$ and $Y_{F^tc}(0,i)=Y_c(t,i)$, this is $Y_{hc}(t,r-k)=Y_c(t,r-k)$. Together with $(\mathrm H_k)$ this is $(\mathrm H_{k+1})$.
+\end{proof}
+
+\subsection{The controllability theorem}\label{cl:sec:ctrl}
+
+The orbits of the moves can be determined exactly. Recall that $c_i=(Y_c(-1,i),Y_c(0,i))$: the state at time $0$ is $c$ itself. For $k\ge1$ and a $0$-tailed $c$ with $e(c)=r$, let $\mathcal O_k(c)$ be the set of configurations $Oc$, where $O$ ranges over the finite composites of moves $M_m$, $\bar M_m$ with $|m|\le k-1$; we call $c_{r-k+1}$ the \emph{tip} and $c_{r-k}$ the \emph{exterior cell} of $c$ at level $k$.
+
+\begin{lemma}[light cone]\label{cl:lem:movelocal}
+Let $b$ be $0$-tailed with $e(b)=r$, let $m\in\Z$, and let $b'$ be the image of $b$ under $M_m$ or $\bar M_m$.
+\begin{enumerate}
+\item[(a)] $b'$ is $0$-tailed with $e(b')=r$, and for $i\le r$, $Y_{b'}(t,i)\ne Y_b(t,i)$ only if $t-m\ge r-i$ or $m-1-t\ge r-i$. In particular $b'$ agrees with $b$ outside $[r-|m|,r]$.
+\item[(b)] $b$ is the image of $b'$ under $M_m$ or $\bar M_m$. If $(x_r,y_r)$ is the edge cell of the state at time $m$ and $(x_{r-1},y_{r-1})$ the cell to its left, the moves at time $m$ always connect $x_ry_r=01$ with $10$, and they connect $11$ with $01$ or $10$ if and only if $(x_{r-1},y_{r-1})\ne(0,0)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) By Lemma~\ref{cl:lem:edgemove}, the move changes the state at time $m$ only in its edge cell, which stays $\ne(0,0)$, so $b'$ is $0$-tailed with edge $r$. Since $F^{\pm1}$ have radius $1$, the state at time $m+s$ changes only on the columns $\ge r-|s|$; row $t$ is the second row of the state at time $t$ and the first row of the state at time $t+1$, which gives the cone, and at $t=-1,0$ the columns $\ge r-|m|$ (Figure~\ref{fig:cone}).
+
+(b) This is the description of the moves after Lemma~\ref{cl:lem:edgemove}: $01\to10$ under $M_m$ and $10\to01$ under $\bar M_m$ are inverse to each other, and $1y\to1\bar y$ (when $x_{r-1}=1$) and $x1\to\bar x1$ (when $y_{r-1}=1$) are involutions, since a move does not change the cell $(x_{r-1},y_{r-1})$.
+\end{proof}
+
+\figinc[0.45\textwidth]{fig_cone}{The light cone of a move (Lemma~\ref{cl:lem:movelocal}(a)) for rule $110$: the diagrams of $b$ and of $M_mb$ for $m=3$ differ only at the highlighted cells, which lie in the cone $\{t-m\ge r-i\}\cup\{m-1-t\ge r-i\}$ below the edge column $r$; at time $0$ the change is confined to $[r-|m|,r]$.}{fig:cone}
+
+By (b), $\mathcal O_k(c)$ is the class of $c$ under the equivalence relation generated by single moves at the times $|m|\le k-1$; in particular $\mathcal O_k(b)=\mathcal O_k(c)$ for $b\in\mathcal O_k(c)$, and $\mathcal O_{k-1}(c)\subseteq\mathcal O_k(c)$. By (a), every element of $\mathcal O_k(c)$ agrees with $c$ outside $[r-k+1,r]$.
+
+The moves at the times $|m|\le k-1$ contain three families of moves of level $k-1$: those at the times $|m|\le k-2$, applied to $b$ itself, which change only the cells $r-k+2,\dots,r$; and the same moves applied to $Fb$ and to $F^{-1}b$, which can change the tip of $b$. The next lemma says how. It uses nothing about $f$ beyond Lemma~\ref{cl:lem:edgemove}(a),(b).
+
+\begin{lemma}[transfer]\label{cl:lem:transfer}
+Let $k\ge2$, let $b$ be $0$-tailed with $e(b)=r$, write $b_{r-k+j}=(u_j,v_j)$ for $j=0,1,2$, and put $v_3=Y_b(0,r-k+3)$, so that $v_3=0$ if $k=2$. By Section~\ref{cl:sec:tail}, $Fb$ is $0$-tailed with $e(Fb)=r$, so that $\mathcal O_{k-1}(Fb)$ is defined.
+\begin{enumerate}
+\item[(a)] $F^jM_m=M_{m-j}F^j$ and $F^j\bar M_m=\bar M_{m-j}F^j$ for all $j,m\in\Z$, and $\rho M_m\rho=\bar M_{-m}$. Consequently $F^{-1}\mathcal O_{k-1}(Fb)\subseteq\mathcal O_k(b)$ and $\rho\,\mathcal O_k(b)=\mathcal O_k(\rho b)$.
+\item[(b)] The exterior cell of $Fb$ and its tip at level $k-1$ are $(v_1,\alpha)$ and $(v_2,\beta)$, where
+\[
+\alpha=u_1\oplus f(v_0,v_1,v_2),\qquad \beta=u_2\oplus f(v_1,v_2,v_3).
+\]
+\item[(c)] Let $\tilde b$ agree with $Fb$ outside $[r-k+2,r]$, and let $w$ be the $x$-bit of $\tilde b_{r-k+2}$. Then $b'=F^{-1}\tilde b$ agrees with $b$ on $(-\infty,r-k]$, and
+\[
+b'_{r-k+1}=\bigl(\alpha\oplus f(v_0,v_1,w),\ v_1\bigr).
+\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) By Lemma~\ref{cl:lem:edgemove}(a), $F^mM_m(b)$ is obtained from $F^mb$ by a change of the edge cell that is a function of the cells $r-1$ and $r$ of $F^mb$ alone. Applied to $F^jb$ at the time $m-j$, the same description says that $F^{m-j}M_{m-j}(F^jb)$ is obtained in the same way from $F^{m-j}F^jb=F^mb$; so $F^{m-j}M_{m-j}F^jb=F^mM_mb$, that is, $M_{m-j}F^j=F^jM_m$. The same argument with Lemma~\ref{cl:lem:edgemove}(b) applies to $\bar M_m$. By definition, $\bar M_{-m}(b)=\rho D_{m-2}(\rho b)=\rho M_m(\rho b)$. If $\tilde b=O'Fb$ for a composite $O'$ of moves at the times $|m|\le k-2$, then $F^{-1}\tilde b=F^{-1}O'Fb$ is the image of $b$ under the corresponding composite of moves at the times $m+1$, and $|m+1|\le k-1$. Finally, conjugation by $\rho$ maps the set of moves at the times $|m|\le k-1$ onto itself.
+
+(b) The cell $i$ of $Fb$ is $(Y_b(0,i),Y_b(1,i))$, and $Y_b(1,i)=Y_b(-1,i)\oplus f(Y_b(0,i-1),Y_b(0,i),Y_b(0,i+1))$; take $i=r-k+1$ and $i=r-k+2$.
+
+(c) Since $\tilde b=Fb'$, the cell $i$ of $\tilde b$ is $(Y_{b'}(0,i),Y_{b'}(1,i))$. For $i\le r-k+1$ it equals the cell $i$ of $Fb$, so $Y_{b'}(0,i)=Y_b(0,i)$ and $Y_{b'}(1,i)=Y_b(1,i)$; and $Y_{b'}(0,r-k+2)=w$. Hence $Y_{b'}(-1,i)=Y_{b'}(1,i)\oplus f\bigl(Y_{b'}(0,i-1),Y_{b'}(0,i),Y_{b'}(0,i+1)\bigr)$ equals $Y_b(-1,i)$ for $i\le r-k$, and at $i=r-k+1$ it is $Y_b(1,r-k+1)\oplus f(v_0,v_1,w)=\alpha\oplus f(v_0,v_1,w)$, by (b).
+\end{proof}
+
+\begin{theorem}\label{cl:thm:Fk}
+Let $k\ge1$ and let $c$ be $0$-tailed with $e(c)=r$. Then $\mathcal O_k(c)$ is the set $\mathcal S_k(c)$ of configurations $c'$ with
+\begin{enumerate}
+\item[(i)] $c'_i=c_i$ for every $i\notin[r-k+1,r]$, and $c'_r\ne(0,0)$; and
+\item[(ii)] if the exterior cell $c_{r-k}$ is $(0,0)$, then $c'_{r-k+1}=(1,1)$ if and only if $c_{r-k+1}=(1,1)$.
+\end{enumerate}
+In words: the moves at the times $|m|\le k-1$ reach every configuration that agrees with $c$ outside the $k$ cells ending at the edge and whose edge cell is not $(0,0)$, except that a tip $(1,1)$, and the absence of one, cannot be changed when the exterior cell is $(0,0)$.
+\end{theorem}
+
+We call the statement of the theorem for a given $k$ $(\mathrm F_k)$. The constraints (i) and (ii) are invariant (Lemma~\ref{cl:lem:Finv}); $(\mathrm F_1)$ is immediate; and $(\mathrm F_{k-1})$ implies $(\mathrm F_k)$ for every $k\ge2$, by applying $(\mathrm F_{k-1})$ to $b$, to $Fb$ and to $F^{-1}b$, the last two through Lemma~\ref{cl:lem:transfer}.
+
+\begin{lemma}[invariance]\label{cl:lem:Finv}
+Every $c'\in\mathcal O_k(c)$ satisfies (i) and (ii).
+\end{lemma}
+
+\begin{proof}
+(i) is Lemma~\ref{cl:lem:movelocal}(a). For (ii), let $c_{r-k}=(0,0)$ and consider one move at a time $|m|\le k-1$, applied to $b$ with $b_{r-k}=(0,0)$; write $b_{r-k+1}=(u,v)$. If $k=1$, the claim is Lemma~\ref{cl:lem:movelocal}(b) with $m=0$, since then $(x_{r-1},y_{r-1})=b_{r-1}=(0,0)$. Let $k\ge2$. By the cone of Lemma~\ref{cl:lem:movelocal}(a), the cell $b_{r-k}$ never changes, $u=Y_b(-1,r-k+1)$ can change only if $m=k-1$, and $v=Y_b(0,r-k+1)$ only if $m=-(k-1)$. A move at time $m=k-1$ changes neither $v$ nor $Y_b(1,r-k+1)$, and $Y_b(1,r-k+1)=u\oplus f(0,v,Y_b(0,r-k+2))=u\oplus(v\vee Y_b(0,r-k+2))$, as $f(0,b,c)=b\vee c$. So if $v=1$, then $u=1\oplus Y_b(1,r-k+1)$ does not change. Likewise a move at time $-(k-1)$ changes neither $u$ nor $Y_b(-2,r-k+1)=v\oplus(u\vee Y_b(-1,r-k+2))$, so if $u=1$, then $v$ does not change. Hence $u\wedge v$ is invariant.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{cl:thm:Fk}]
+By Lemma~\ref{cl:lem:Finv}, $\mathcal O_k(c)\subseteq\mathcal S_k(c)$. We prove the converse by induction on $k$. For $k=1$, (i) allows only a change of the edge cell, and by Lemma~\ref{cl:lem:movelocal}(b) with $m=0$, $(x_{r-1},y_{r-1})=c_{r-1}$, the three cells $01$, $10$, $11$ form one class if $c_{r-1}\ne(0,0)$, and the classes $\{01,10\}$ and $\{11\}$ if $c_{r-1}=(0,0)$: this is $(\mathrm F_1)$.
+
+Let $k\ge2$ and assume $(\mathrm F_{k-1})$ for all $0$-tailed configurations. If $b\in\mathcal S_k(c)$, then $\mathcal S_k(b)=\mathcal S_k(c)$, so $\mathcal O_k(b)\subseteq\mathcal S_k(c)$ by Lemma~\ref{cl:lem:Finv}. For $b\in\mathcal S_k(c)$ write $b_{r-k+j}=(u_j,v_j)$ for $j=0,1,2$, so that $(u_0,v_0)=c_{r-k}$ and $(u_1,v_1)$ is the tip, and let $\alpha$ be as in Lemma~\ref{cl:lem:transfer}(b). For $t\in\{0,1\}^2$ let $A_t$ be the set of $b\in\mathcal S_k(c)$ with tip $t$. Each $A_t$ allowed by (ii) is nonempty, because the cells $r-k+2,\dots,r$ can be chosen freely subject to $b_r\ne(0,0)$. We use $f(a,0,c)=c$, $f(0,b,c)=b\vee c$ and $f(1,b,c)=b\oplus c$.
+
+\emph{Step 1 (moves of level $k-1$ on $b$).} Let $b,b'\in A_t$, and suppose that $t\ne(0,0)$ or $[b_{r-k+2}=(1,1)]=[b'_{r-k+2}=(1,1)]$. Then $b'\in\mathcal O_k(b)$. Indeed $b'$ agrees with $b$ outside $[r-k+2,r]$ and $b'_r\ne(0,0)$; the exterior cell of $b$ at level $k-1$ is $t$; so $b'\in\mathcal S_{k-1}(b)=\mathcal O_{k-1}(b)\subseteq\mathcal O_k(b)$ by $(\mathrm F_{k-1})$. In particular each of $A_{01}$, $A_{10}$, $A_{11}$ lies in a single orbit.
+
+\emph{Step 2 (tip $(u_1,0)\to(\neg u_1,0)$).} If $b\in A_{(u_1,0)}$, then $\mathcal O_k(b)$ meets $A_{(\neg u_1,0)}$. If $u_1=1$ and $b_{r-k+2}=(0,1)$, we first replace the cell $b_{r-k+2}$ by $(1,0)$; by Step~1, with $t=(1,0)$, this stays in $\mathcal O_k(b)$ (for $k=2$ it is the move $01\to10$ at time $0$). So we may assume that $u_1=0$ or $b_{r-k+2}\ne(0,1)$. As $v_1=0$, Lemma~\ref{cl:lem:transfer}(b) gives $\alpha=u_1\oplus f(v_0,0,v_2)=u_1\oplus v_2$ and $\beta=u_2\oplus(v_2\vee v_3)$. The tip $(v_2,\beta)$ of $Fb$ is $(1,1)$ exactly when $(u_2,v_2)=(0,1)$, and then $\alpha=u_1\oplus1=1$ by our assumption. So if the exterior cell $(0,\alpha)$ of $Fb$ at level $k-1$ is $(0,0)$, the tip of $Fb$ is not $(1,1)$. Let $\tilde b$ be $Fb$ with its cell $r-k+2$ replaced by $(\neg v_2,v_2)$, which is neither $(0,0)$ nor $(1,1)$. Then $\tilde b\in\mathcal S_{k-1}(Fb)$: it agrees with $Fb$ outside $[r-k+2,r]$; $\tilde b_r\ne(0,0)$, since for $k=2$ the cell $r$ is the new cell and for $k\ge3$ it is the edge cell of $Fb$; and if $(0,\alpha)=(0,0)$, neither $Fb$ nor $\tilde b$ has tip $(1,1)$. By $(\mathrm F_{k-1})$, $\tilde b\in\mathcal O_{k-1}(Fb)$, so $b'=F^{-1}\tilde b\in\mathcal O_k(b)$ by Lemma~\ref{cl:lem:transfer}(a), and by Lemma~\ref{cl:lem:transfer}(c) with $w=\neg v_2$,
+\[
+b'_{r-k+1}=\bigl(\alpha\oplus f(v_0,0,\neg v_2),0\bigr)=(u_1\oplus v_2\oplus\neg v_2,\,0)=(\neg u_1,0).
+\]
+
+\emph{Step 3 (tip $(0,v_1)\to(0,\neg v_1)$).} If $b\in A_{(0,v_1)}$, then $\mathcal O_k(b)$ meets $A_{(0,\neg v_1)}$. Since $\rho$ exchanges the two bits of every cell, it maps $\mathcal S_k(c)$ onto $\mathcal S_k(\rho c)$, and $\rho b$ has tip $(v_1,0)$. Step~2 for $\rho b$ gives an element of $\mathcal O_k(\rho b)$ with tip $(\neg v_1,0)$; its image under $\rho$ lies in $\rho\,\mathcal O_k(\rho b)=\mathcal O_k(b)$ (Lemma~\ref{cl:lem:transfer}(a)) and has tip $(0,\neg v_1)$.
+
+\emph{Step 4 (tip $(u_1,1)\to(\neg u_1,1)$ when $v_0=1$).} Let $v_0=1$ and $b\in A_{(u_1,1)}$. Then $\alpha=u_1\oplus f(1,1,v_2)=u_1\oplus\neg v_2$, and the exterior cell $(1,\alpha)$ of $Fb$ at level $k-1$ is not $(0,0)$. Let $\tilde b$ be $Fb$ with its cell $r-k+2$ replaced by $(\neg v_2,1)$. As in Step~2, $\tilde b\in\mathcal S_{k-1}(Fb)$, here because (ii) is void, so $b'=F^{-1}\tilde b\in\mathcal O_k(b)$, and $b'_{r-k+1}=(\alpha\oplus f(1,1,\neg v_2),1)=(u_1\oplus\neg v_2\oplus v_2,1)=(\neg u_1,1)$. If $u_0=1$, the same argument applied to $\rho b$, whose exterior cell is $(v_0,u_0)$, shows as in Step~3 that every $b\in A_{(1,v_1)}$ has an element of $A_{(1,\neg v_1)}$ in its orbit.
+
+\emph{Conclusion.} If $c_{r-k}=(0,0)$ and $c_{r-k+1}=(1,1)$, then $\mathcal S_k(c)=A_{11}$, which lies in one orbit by Step~1. Otherwise $\mathcal S_k(c)\supseteq A_{00}\cup A_{01}\cup A_{10}$. By Step~2 every element of $A_{00}$ is in the orbit of an element of $A_{10}$, and by Step~3 every element of $A_{01}$ is in the orbit of an element of $A_{00}$; as $A_{01}$ and $A_{10}$ each lie in one orbit (Step~1), $A_{00}\cup A_{01}\cup A_{10}$ lies in one orbit. If $c_{r-k}=(0,0)$, this union is $\mathcal S_k(c)$. If $c_{r-k}\ne(0,0)$, then $v_0=1$ or $u_0=1$, $\mathcal S_k(c)$ contains also $A_{11}$, which lies in one orbit, and by Step~4 that orbit meets $A_{01}$ (if $v_0=1$) or $A_{10}$ (if $u_0=1$). In all cases $\mathcal S_k(c)$ lies in one orbit, which contains $c$; so $\mathcal S_k(c)\subseteq\mathcal O_k(c)$, which is $(\mathrm F_k)$.
+\end{proof}
+
+\begin{remark}
+The inductive step applies $(\mathrm F_{k-1})$ only to $b$ and to $F^{\pm1}b$, and changes $F^{\pm1}b$ only in the cells $r-k+2,\dots,r$. It is therefore valid as soon as $r-k+2\le r$, that is for every $k\ge2$, and the induction needs no base case other than $(\mathrm F_1)$.
+\end{remark}
+
+\begin{corollary}\label{cl:cor:ctrl}
+$(\mathrm{CTRL}_k)$ holds for every $k\ge2$, and $(\mathrm H_k)$ holds for every $k\ge1$.
+\end{corollary}
+
+\begin{proof}
+Let $c$ be $0$-tailed with $e(c)=r$, and recall that $Y_{c'}(0,i)$ is the $y$-bit of $c'_i$. Let $c'$ agree with $c$ outside $[r-k+1,r]$, with $c'_{r-k+1}=(1,1)$ if $c_{r-k}=(0,0)$ and $c_{r-k+1}=(1,1)$, $c'_{r-k+1}=(0,1)$ otherwise, and $c'_i=(0,1)$ for $r-k+2\le i\le r$. Then $c'_r\ne(0,0)$ (for $k=2$ the cell $r-k+2$ is the edge cell), and $c'$ satisfies (i) and (ii). By Theorem~\ref{cl:thm:Fk}, $c'=Oc$ for a composite $O$ of moves at times $|m|\le k-1$, and $Y_{Oc}(0,r-k+1)=Y_{Oc}(0,r-k+2)=1$. This is $(\mathrm{CTRL}_k)$, including the case in which the tip $(1,1)$ is frozen. $(\mathrm H_1)$ and $(\mathrm H_2)$ are Propositions~\ref{cl:prop:H1} and~\ref{cl:prop:H2}, and Proposition~\ref{cl:prop:ctrlstep} gives $(\mathrm H_{k+1})$ from $(\mathrm H_k)$ for every $k\ge2$.
+\end{proof}
+
+
+\subsection{Conclusion for the class of 110}\label{cl:sec:110end}
+
+\begin{theorem}\label{cl:thm:110rigid}
+\sloppy Lemma~K holds for every $R$, $(\mathrm Z_{R'})$ holds for every $R'$, and
+\[
+\Aut(X_{F_{110}})=\langle\sh,F_{110}\rangle\cong\Z^2.
+\]
+The same holds for every rule of the class of $110$: $\Aut(X_{F_f})=\langle\sh,F_f\rangle\cong\Z^2$ for $f\in\{62,110,118,124\}$.
+\end{theorem}
+
+\begin{proof}
+By Corollary~\ref{cl:cor:ctrl}, $(\mathrm H_{R+1})$ holds for every $R$, and it implies Lemma K at radius $R$, as shown after the definition of $(\mathrm H_k)$. An automorphism of radius at most $R'$ with $e^+=e^-=0$ fixes $\eta_0$ and $\rho\eta_0$ by Proposition~\ref{cl:prop:offsets}, so it is the identity by Lemma K; this is $(\mathrm Z_{R'})$. By Proposition~\ref{cl:prop:reduce}, $\Aut(X_{F_{110}})=\langle\sh,F_{110}\rangle\cong\Z^2$; every automorphism has finite radius by Curtis--Hedlund--Lyndon, and in the proof of that proposition the case of odd $e^++e^-$ is excluded. For the other members of the class, reflection and complementation conjugate $F_{110}$ to $F_f$ and map $\langle\sh,F_{110}\rangle$ onto $\langle\sh,F_f\rangle$, as recalled in Section~\ref{sec:conj}.
+\end{proof}
+
+No computer is used in the proof for the class of $110$.

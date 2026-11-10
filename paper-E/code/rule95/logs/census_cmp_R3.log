@@ -1,0 +1,21 @@
+   OTHER S phi: w=4 a=-1 tab=01000011 inj False | psi: w=4 a=-2 tab=00000111 inj True
+   OTHER S phi: w=4 a=-1 tab=00100001 inj True | psi: w=4 a=-2 tab=00001110 inj False
+   OTHER S phi: w=4 a=-1 tab=01000011 inj False | psi: w=4 a=-2 tab=00001110 inj False
+   OTHER S phi: w=4 a=-1 tab=01001010 inj True | psi: w=4 a=-2 tab=00001110 inj False
+   OTHER S phi: w=4 a=-1 tab=00001110 inj False | psi: w=4 a=-2 tab=00011000 inj True
+   OTHER S phi: w=4 a=-1 tab=00001110 inj False | psi: w=4 a=-2 tab=00001110 inj False
+   OTHER S phi: w=4 a=-1 tab=00000111 inj True | psi: w=4 a=-2 tab=00001110 inj False
+   OTHER S phi: w=4 a=-1 tab=00001110 inj False | psi: w=4 a=-2 tab=01001010 inj True
+   OTHER S phi: w=4 a=-1 tab=00011000 inj True | psi: w=4 a=-2 tab=01000011 inj False
+   OTHER S phi: w=4 a=-1 tab=00100001 inj True | psi: w=4 a=-2 tab=01000011 inj False
+   OTHER S phi: w=4 a=-1 tab=01000011 inj False | psi: w=4 a=-2 tab=01000011 inj False
+   OTHER S phi: w=4 a=-1 tab=01000011 inj False | psi: w=4 a=-2 tab=00011000 inj True
+   OTHER S phi: w=4 a=-1 tab=01000011 inj False | psi: w=4 a=-2 tab=00100001 inj True
+   OTHER S phi: w=4 a=-1 tab=00011000 inj True | psi: w=4 a=-2 tab=00001110 inj False
+   OTHER S phi: w=4 a=-1 tab=00001110 inj False | psi: w=4 a=-2 tab=00100001 inj True
+   OTHER S phi: w=4 a=-1 tab=00001110 inj False | psi: w=4 a=-2 tab=00000111 inj True
+   OTHER S phi: w=4 a=-1 tab=00000111 inj True | psi: w=4 a=-2 tab=01000011 inj False
+   OTHER S phi: w=4 a=-1 tab=00001110 inj False | psi: w=4 a=-2 tab=01000011 inj False
+   OTHER S phi: w=4 a=-1 tab=01001010 inj True | psi: w=4 a=-2 tab=01000011 inj False
+   OTHER S phi: w=4 a=-1 tab=01000011 inj False | psi: w=4 a=-2 tab=01001010 inj True
+R=3: {'total': 46, 'commute': 46, 'const': 1, 'sublattice': 45, 'form': 45, 'conserving': 45, 'both_injective': 25, 'noninjective': 20, 'table_equal': 45, 'P': 9, 'S': 36} distinct (phi,psi,n): 45

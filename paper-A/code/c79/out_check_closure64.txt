@@ -1,0 +1,4 @@
+(0, 0) symmetric True classes [(48, [0]), (16, [1])]
+(0, 1) symmetric True classes [(64, [0, 1])]
+(1, 0) symmetric True classes [(64, [0, 1])]
+(1, 1) symmetric True classes [(64, [0, 1])]

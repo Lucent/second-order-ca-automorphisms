@@ -1,0 +1,190 @@
+rule 13 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 13 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 13 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 13 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 13 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 14 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 14 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 14 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 14 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 14 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 25 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 25 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 25 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 25 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 25 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 26 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 26 r 2: rank 74 nullity 6 dim_h 5 trivial 4 NONTRIVIAL 1  <--
+rule 26 r 3: rank 302 nullity 18 dim_h 17 trivial 16 NONTRIVIAL 1  <--
+rule 26 r 4: rank 1214 nullity 66 dim_h 65 trivial 64 NONTRIVIAL 1  <--
+rule 26 r 5: rank 4862 nullity 258 dim_h 257 trivial 256 NONTRIVIAL 1  <--
+rule 28 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 28 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 28 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 28 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 28 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 29 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 29 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 29 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 29 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 29 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 31 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 31 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 31 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 31 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 31 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 41 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 41 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 41 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 41 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 41 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 43 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 43 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 43 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 43 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 43 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 46 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 46 r 2: rank 74 nullity 6 dim_h 5 trivial 4 NONTRIVIAL 1  <--
+rule 46 r 3: rank 301 nullity 19 dim_h 18 trivial 16 NONTRIVIAL 2  <--
+rule 46 r 4: rank 1211 nullity 69 dim_h 68 trivial 64 NONTRIVIAL 4  <--
+rule 46 r 5: rank 4855 nullity 265 dim_h 264 trivial 256 NONTRIVIAL 8  <--
+rule 47 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 47 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 47 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 47 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 47 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 57 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 57 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 57 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 57 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 57 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 58 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 58 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 58 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 58 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 58 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 61 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 61 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 61 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 61 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 61 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 62 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 62 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 62 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 62 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 62 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 63 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 63 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 63 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 63 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 63 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 77 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 77 r 2: rank 74 nullity 6 dim_h 5 trivial 4 NONTRIVIAL 1  <--
+rule 77 r 3: rank 300 nullity 20 dim_h 19 trivial 16 NONTRIVIAL 3  <--
+rule 77 r 4: rank 1212 nullity 68 dim_h 67 trivial 64 NONTRIVIAL 3  <--
+rule 77 r 5: rank 4860 nullity 260 dim_h 259 trivial 256 NONTRIVIAL 3  <--
+rule 79 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 79 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 79 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 79 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 79 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 91 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 91 r 2: rank 73 nullity 7 dim_h 6 trivial 4 NONTRIVIAL 2  <--
+rule 91 r 3: rank 300 nullity 20 dim_h 19 trivial 16 NONTRIVIAL 3  <--
+rule 91 r 4: rank 1212 nullity 68 dim_h 67 trivial 64 NONTRIVIAL 3  <--
+rule 91 r 5: rank 4860 nullity 260 dim_h 259 trivial 256 NONTRIVIAL 3  <--
+rule 94 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 94 r 2: rank 74 nullity 6 dim_h 5 trivial 4 NONTRIVIAL 1  <--
+rule 94 r 3: rank 302 nullity 18 dim_h 17 trivial 16 NONTRIVIAL 1  <--
+rule 94 r 4: rank 1214 nullity 66 dim_h 65 trivial 64 NONTRIVIAL 1  <--
+rule 94 r 5: rank 4862 nullity 258 dim_h 257 trivial 256 NONTRIVIAL 1  <--
+rule 95 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 95 r 2: rank 74 nullity 6 dim_h 5 trivial 4 NONTRIVIAL 1  <--
+rule 95 r 3: rank 301 nullity 19 dim_h 18 trivial 16 NONTRIVIAL 2  <--
+rule 95 r 4: rank 1211 nullity 69 dim_h 68 trivial 64 NONTRIVIAL 4  <--
+rule 95 r 5: rank 4859 nullity 261 dim_h 260 trivial 256 NONTRIVIAL 4  <--
+rule 107 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 107 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 107 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 107 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 107 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 109 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 109 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 109 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 109 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 109 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 110 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 110 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 110 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 110 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 110 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 111 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 111 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 111 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 111 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 111 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 123 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 123 r 2: rank 73 nullity 7 dim_h 6 trivial 4 NONTRIVIAL 2  <--
+rule 123 r 3: rank 301 nullity 19 dim_h 18 trivial 16 NONTRIVIAL 2  <--
+rule 123 r 4: rank 1213 nullity 67 dim_h 66 trivial 64 NONTRIVIAL 2  <--
+rule 123 r 5: rank 4861 nullity 259 dim_h 258 trivial 256 NONTRIVIAL 2  <--
+rule 133 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 133 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 133 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 133 r 4: rank 1214 nullity 66 dim_h 65 trivial 64 NONTRIVIAL 1  <--
+rule 133 r 5: rank 4862 nullity 258 dim_h 257 trivial 256 NONTRIVIAL 1  <--
+rule 141 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 141 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 141 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 141 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 141 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 143 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 143 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 143 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 143 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 143 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 151 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 151 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 151 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 151 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 151 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 155 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 155 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 155 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 155 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 155 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 157 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 157 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 157 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 157 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 157 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 159 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 159 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 159 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 159 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 159 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 167 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 167 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 167 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 167 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 167 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 175 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 175 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 175 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 175 r 4: rank 1214 nullity 66 dim_h 65 trivial 64 NONTRIVIAL 1  <--
+rule 175 r 5: rank 4862 nullity 258 dim_h 257 trivial 256 NONTRIVIAL 1  <--
+rule 183 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 183 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 183 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 183 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 183 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 187 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 187 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 187 r 3: rank 303 nullity 17 dim_h 16 trivial 16 NONTRIVIAL 0
+rule 187 r 4: rank 1215 nullity 65 dim_h 64 trivial 64 NONTRIVIAL 0
+rule 187 r 5: rank 4863 nullity 257 dim_h 256 trivial 256 NONTRIVIAL 0
+rule 191 r 1: rank 18 nullity 2 dim_h 1 trivial 1 NONTRIVIAL 0
+rule 191 r 2: rank 75 nullity 5 dim_h 4 trivial 4 NONTRIVIAL 0
+rule 191 r 3: rank 302 nullity 18 dim_h 17 trivial 16 NONTRIVIAL 1  <--
+rule 191 r 4: rank 1213 nullity 67 dim_h 66 trivial 64 NONTRIVIAL 2  <--
+rule 191 r 5: rank 4859 nullity 261 dim_h 260 trivial 256 NONTRIVIAL 4  <--

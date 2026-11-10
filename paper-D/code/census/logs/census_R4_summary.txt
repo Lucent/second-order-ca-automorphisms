@@ -1,0 +1,82 @@
+=== rule 13R radius 4 [minisat22]: 524288 variables, 75496858 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 14R radius 4 [minisat22]: 524288 variables, 75496100 clauses, 43 solutions
+  {'named': 41, 'const': 2, 'other': 0, 'layerwise-same': 11, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 43}; expected named 41; all named found: True
+=== rule 24R radius 4 [minisat22]: 524288 variables, 75495332 clauses, 84 solutions
+  {'named': 41, 'const': 2, 'other': 41, 'layerwise-same': 20, 'joint': 64, 'layer-separable': 0, 'cross': 0, 'commute_ok': 84}; expected named 41; all named found: True
+=== rule 25R radius 4 [minisat22]: 524288 variables, 75496058 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 26R radius 4 [minisat22]: 524288 variables, 75482032 clauses, 43 solutions
+  {'named': 41, 'const': 2, 'other': 0, 'layerwise-same': 11, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 43}; expected named 41; all named found: True
+=== rule 28R radius 4 [minisat22]: 524288 variables, 75496804 clauses, 43 solutions
+  {'named': 41, 'const': 2, 'other': 0, 'layerwise-same': 11, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 43}; expected named 41; all named found: True
+=== rule 29R radius 4 [minisat22]: 524288 variables, 75496922 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 31R radius 4 [minisat22]: 524288 variables, 75496794 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 41R radius 4 [minisat22]: 524288 variables, 75496666 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 43R radius 4 [minisat22]: 524288 variables, 75496922 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 46R radius 4 [minisat22]: 524288 variables, 75496196 clauses, 43 solutions
+  {'named': 41, 'const': 2, 'other': 0, 'layerwise-same': 11, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 43}; expected named 41; all named found: True
+=== rule 47R radius 4 [minisat22]: 524288 variables, 75496922 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 57R radius 4 [minisat22]: 524288 variables, 75497018 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 58R radius 4 [minisat22]: 524288 variables, 75490768 clauses, 43 solutions
+  {'named': 41, 'const': 2, 'other': 0, 'layerwise-same': 11, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 43}; expected named 41; all named found: True
+=== rule 61R radius 4 [minisat22]: 524288 variables, 75497018 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 62R radius 4 [minisat22]: 524288 variables, 75495952 clauses, 43 solutions
+  {'named': 41, 'const': 2, 'other': 0, 'layerwise-same': 11, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 43}; expected named 41; all named found: True
+=== rule 63R radius 4 [minisat22]: 524288 variables, 75496890 clauses, 82 solutions
+  {'named': 41, 'const': 1, 'other': 40, 'layerwise-same': 10, 'joint': 72, 'layer-separable': 0, 'cross': 0, 'commute_ok': 82}; expected named 41; all named found: True
+=== rule 77R radius 4 [minisat22]: 524288 variables, 75493318 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 79R radius 4 [minisat22]: 524288 variables, 75492486 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 91R radius 4 [minisat22]: 524288 variables, 75464870 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 94R radius 4 [minisat22]: 524288 variables, 75474716 clauses, 43 solutions
+  {'named': 41, 'const': 2, 'other': 0, 'layerwise-same': 11, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 43}; expected named 41; all named found: True
+=== rule 95R radius 4 [minisat22]: 524288 variables, 75486342 clauses, 262 solutions
+  {'named': 41, 'const': 1, 'other': 220, 'layerwise-same': 10, 'joint': 252, 'layer-separable': 0, 'cross': 0, 'commute_ok': 262}; expected named 41; all named found: True
+=== rule 107R radius 4 [minisat22]: 524288 variables, 75496774 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 109R radius 4 [minisat22]: 524288 variables, 75496902 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 111R radius 4 [minisat22]: 524288 variables, 75496774 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 123R radius 4 [minisat22]: 524288 variables, 75491526 clauses, 42 solutions
+  {'named': 41, 'const': 1, 'other': 0, 'layerwise-same': 10, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 42}; expected named 41; all named found: True
+=== rule 126R radius 4 [minisat22]: 524288 variables, 75485788 clauses, 1000 solutions
+  {'named': 1, 'const': 1, 'other': 998, 'layerwise-same': 2, 'joint': 998, 'layer-separable': 0, 'cross': 0, 'commute_ok': 1000}; expected named 41; all named found: False
+=== rule 133R radius 4 [minisat22]: 524288 variables, 75496368 clauses, 68 solutions
+  {'named': 41, 'const': 0, 'other': 27, 'layerwise-same': 9, 'joint': 59, 'layer-separable': 0, 'cross': 0, 'commute_ok': 68}; expected named 41; all named found: True
+=== rule 141R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 143R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 151R radius 4 [minisat22]: 524288 variables, 75497040 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 155R radius 4 [minisat22]: 524288 variables, 75494704 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 157R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 159R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 167R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 175R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 183R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 187R radius 4 [minisat22]: 524288 variables, 75496880 clauses, 81 solutions
+  {'named': 41, 'const': 0, 'other': 40, 'layerwise-same': 9, 'joint': 72, 'layer-separable': 0, 'cross': 0, 'commute_ok': 81}; expected named 41; all named found: True
+=== rule 189R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 82 solutions
+  {'named': 41, 'const': 0, 'other': 41, 'layerwise-same': 18, 'joint': 64, 'layer-separable': 0, 'cross': 0, 'commute_ok': 82}; expected named 41; all named found: True
+=== rule 191R radius 4 [minisat22]: 524288 variables, 75497136 clauses, 41 solutions
+  {'named': 41, 'const': 0, 'other': 0, 'layerwise-same': 9, 'joint': 32, 'layer-separable': 0, 'cross': 0, 'commute_ok': 41}; expected named 41; all named found: True
+=== rule 219R radius 4 [minisat22]: 524288 variables, 75485712 clauses, 1000 solutions
+  {'named': 4, 'const': 0, 'other': 996, 'layerwise-same': 4, 'joint': 996, 'layer-separable': 0, 'cross': 0, 'commute_ok': 1000}; expected named 41; all named found: False

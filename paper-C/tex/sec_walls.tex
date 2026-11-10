@@ -1,0 +1,78 @@
+\section{Walls in general}\label{sec:walls}
+
+In this section $F$ is a reversible cellular automaton of radius $1$ on a finite alphabet $\A$. A nonempty word $W$ is \emph{fixed in every context} if $F(c)$ contains $W$ at every position at which $c$ contains $W$.
+
+\begin{lemma}\label{lem:exact}
+Under the hypothesis of Theorem~\ref{thm:walls}, $F$ neither creates nor destroys occurrences of $W$: $F(c)$ contains $W$ at position $i$ if and only if $c$ does.
+\end{lemma}
+
+\begin{proof}
+Fix $n$ and let $P_n$ be the finite set of configurations of spatial period $n$. $F$ maps $P_n$ bijectively to itself, being injective and commuting with $\sh^n$. Write $N(c)$ for the number of positions $i\in\{0,\dots,n-1\}$ at which $c$ contains $W$. By hypothesis $N(F(c))\ge N(c)$ for every $c\in P_n$, and $\sum_{c\in P_n}N(F(c))=\sum_{c\in P_n}N(c)$ because $F$ permutes $P_n$. Hence $N(F(c))=N(c)$, so on $P_n$ the occurrences of $W$ in $F(c)$ are exactly those of $c$. If some configuration $c$ had an occurrence of $W$ in $F(c)$ at a position $i$ where $c$ has none, the same would hold for the periodic configuration obtained by repeating a long enough window of $c$ around $i$, since both properties depend only on $c_{i-1},\dots,c_{i+|W|}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:walls}]
+Let $k=|W|$. A \emph{car} of $c$ is a position $i$ with $c$ containing $W$ at $i-k$ and at $i+1$ and $c_i\in C$; by the definition of $C$ no occurrence of $W$ covers $i$. By Lemma~\ref{lem:exact} the occurrences of $W$ in $F(c)$ are those of $c$, and the cells of each occurrence keep their values, so the neighbours of a car keep their values and the car evolves by a map $\varphi\colon C\to\A$, $\varphi(s)=F(W\,s\,W)$ at the middle position, independent of the rest of $c$. The image $\varphi(s)$ lies in $C$, because an occurrence of $W$ in $W\,\varphi(s)\,W$ other than at its ends would be an occurrence created by $F$. And $\varphi$ is injective, because $F$ is injective on the periodic configurations $(W\,s)^{\infty}$, which differ only at their cars. So $\varphi$ is a permutation of $C$, and $F$ maps cars to cars. Conversely every car of $F(c)$ is a car of $c$: its position is flanked by the same occurrences of $W$, and if the symbol of $c$ there were outside $C$, then $c$ would contain an occurrence of $W$ covering it, which $F$ would preserve. So cars are invariant, and $F$ acts on every car by the same $\varphi$; this uses that the neighbours of a car lie in occurrences of $W$, whose images under $F$ do not depend on the context, which is where the hypothesis ``fixed in every context'' enters. A \emph{train with $m$ cars} is a chain of cars $i_1<\dots<i_m$ with $i_{j+1}=i_j+k+1$, such that $c$ contains $W$ at $i_1-2k$ and at $i_m+k+1$ (two copies of $W$ with no car between them at each end), and that is maximal with these properties. Trains are determined by the occurrences of $W$ and the cars, so they are invariant under $F$. As in the proof of Theorem~\ref{thm:finite}, permuting the cars of every $m$-car train by $\sigma\in S_m$ defines a block map $\Psi_m(\sigma)$ of radius at most $m(k+1)+2k+1$, which is an automorphism commuting with $F$ because $F$ applies the same $\varphi$ to every car. With two distinct symbols $a,b\in C$, the periodic configuration whose period is one $m$-car train with cars $(b,\dots,b,a,b,\dots,b)$ shows that $\sigma$ is recovered from $\Psi_m(\sigma)$. The map $\Psi_m(\sigma)$ preserves the occurrences of $W$, since any occurrence covering a car lies inside $W\,s\,W$ and the new symbol is again in $C$; hence it preserves cars and trains. Maps for different $m$ act on disjoint cells and commute, and the resulting homomorphism of $\bigoplus_mS_m$ is injective, as one sees by evaluating on periodic configurations $(W\,W\,s_1\,W\,s_2\cdots W\,s_m)^{\infty}$ whose only trains have $m$ cars.
+\end{proof}
+
+The train definition here, bounded by two adjacent copies of $W$, differs from the one used for rule $54$ in Theorem~\ref{thm:finite}, where outer walls of length at least $3$ suffice; both definitions work, and the general one is what is needed for words that overlap themselves.
+
+\begin{table}[t]
+\caption{Second-order elementary automata with a word $W$ fixed in every context, one rule per conjugacy class, with the shortest such $W$ (cells written $0$--$3$). The words are the fixed walls (i)--(viii) of Takesue \cite[Fig.~2, Table~III]{Takesue1989}, and the $31$ classes are those of the rules listed there for these walls. Classes are taken under reflection and the cellwise complement $\kappa(x,y)=(1-x,1-y)$, which conjugates $F_f$ to $F_{f'}$ with $f'(a,b,c)=f(1-a,1-b,1-c)$, as in \cite[Table~I]{Takesue1989}; Wolfram's complement $1\oplus f(1-a,1-b,1-c)$ is not a conjugacy of second-order automata \cite[p.~377]{Takesue1989}, and for instance $110$R and $137$R have different numbers of periodic points. The property is constant on each class. For each listed rule $|C|\ge2$. Of the $57$ classes in the last row, only $133=\{133,161\}$ has a fixed word of greater length ($W=0330$, $k=4$, the wall (ix) of \cite{Takesue1989}; Section~\ref{cl:sec:133}).}
+\label{tab:walls}
+\centering\small
+\begin{tabular}{l}
+\toprule
+$W=0$: 0, 4, 12 \qquad $W=3$: 1, 2, 3, 18, 19, 33, 35, 50, 51\\
+$W=30$: 9, 10, 11, 131, 139 \qquad $W=03$: 129 \qquad $W=030$: 73 \qquad $W=303$: 147 \qquad $W=00$: 36\\
+$W=33$: 5, 6, 7, 22, 23, 37, 38, 39, 54, 55\\
+\midrule
+no fixed word of length $\le3$ ($57$ classes): 13--15, 24--31, 41, 43, 45--47, 57--63, 75, 77, 79, 90, 91,\\
+\quad 94, 95, 105, 107, 109, 111, 123, 126, 127, 133, 135, 141, 143, 151, 153, 155, 157, 159, 165, 167,\\
+\quad 175, 179, 183, 187, 189, 191, 219, 223, 255\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\caption{Spread of a single changed cell after $300$ steps, mean over $40$ random configurations of length $801$, and number of trials in which the difference disappeared.}
+\label{tab:spread}
+\centering
+\begin{tabular}{lrrr}
+\toprule
+rule & leftward spread & rightward spread & healed\\
+\midrule
+54R & 15 & 21 & 0\\
+110R & 195 (min 167) & 41 (min 22) & 0\\
+30R & 98 (min 72) & 300 (min 299) & 0\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{proof}[Proof of Corollary~\ref{cor:48}]
+For each rule of Table~\ref{tab:walls} the listed word $W$ is fixed in every context, and the set $C$ of Theorem~\ref{thm:walls} has at least two elements; both are finite checks of the local rule over the $4^2$ contexts of $W$ and the four symbols $s$ in $W\,s\,W$. Theorem~\ref{thm:walls} applies, and by the conjugacy invariance of Section~\ref{sec:prelim} it applies to every rule of the $31$ classes, $81$ rules in all. The class of $133$ is Proposition~\ref{cl:prop:133}(1), and the last statement is Proposition~\ref{cl:prop:133}(3).
+\end{proof}
+
+The walls also confine the spreading of differences: in random configurations of $54$R a single changed cell produces a difference that spreads only a few cells, while in $110$R and $30$R it spreads in both directions at linear speed (Table~\ref{tab:spread}).
+
+\subsection{The class of 133: a wall of length 4}\label{cl:sec:133}
+
+Table~\ref{tab:walls} lists the fixed words of length at most $3$. One more class has a fixed word, of length $4$. It is the wall (ix) of Takesue, who notes that it is not detected with fewer than four cells \cite[Table~III and p.~391]{Takesue1989}. In the next proposition the fixed word of part~(1) is his; the automorphisms of parts~(1) and~(2) and the completeness statement~(3) are what is added. The examination in \cite[Section~4]{Takesue1989} covers the words of at most $6$ cells, and it is accompanied by the conjecture, stated there without proof, that $4$ cells suffice to detect a local conservation law of a second-order elementary automaton. Part~(3) concerns fixed words only, and for them it gives a proof for every length.
+
+\begin{proposition}[the fixed word of $133$R: {\cite[p.~391]{Takesue1989}}]\label{cl:prop:133}
+Let $f\in\{133,161\}$ and $F=F_f$.
+\begin{enumerate}
+\item The word $W=0330$ is fixed by $F_{133}$ in every context, and $W=3003$ is fixed by $F_{161}$ in every context. In both cases the set $C$ of Theorem~\ref{thm:walls} is all of $\A$, so $\bigoplus_mS_m$ embeds in $\Aut(X_F)$.
+\item For $f=133$, let $D$ be the block map of radius $4$ that replaces the middle cell $s$ of every occurrence of $W\,s\,W$ by $F(W\,s\,W)$ at that cell and fixes every other cell. Then $D\in\Aut(X_F)$, $D$ acts on each such cell as the $4$-cycle $0\mapsto1\mapsto3\mapsto2\mapsto0$, $D^4=\mathrm{id}\ne D^2$, and $D\notin\langle\sh,F\rangle$.
+\item Every word fixed by some $F_{f'}$ in every context lies in $\{0,3\}^k$. Among the $57$ classes with no such word of length at most $3$, the class of $133$ is the only one with such a word of any length.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) A cell of a word fixed in every context keeps its value, so by \eqref{eq:F} its two bits agree and $f(y_{j-1},y_j,y_{j+1})=0$ at each of its positions $j$, the outer neighbour bits being arbitrary. For $133$, $f(a,b,c)=1$ exactly on $000$, $010$ and $111$. The $y$-row of $W=0330$ is $0110$, and the triples $(u,0,1)$, $(0,1,1)$, $(1,1,0)$ and $(1,0,v)$, $u,v\in\{0,1\}$, all avoid $000$, $010$ and $111$; so $W$ is fixed in all $16$ contexts. Since $161=\kappa(133)$ and $\kappa$ maps $0330$ to $3003$, the statement for $161$ follows. Finally $W\,s\,W$ contains $W$ only at its two ends for each $s\in\A$, so $C=\A$. Theorem~\ref{thm:walls} applies.
+
+(2) The neighbours of the middle cell $s$ of $W\,s\,W$ have $y$-bit $0$, so it evolves by $(x,y)\mapsto(y,x\oplus f(0,y,0))=(y,x\oplus1)$, the $4$-cycle $0\to1\to3\to2\to0$. So $D$ is the map that applies the car permutation $\varphi$ of the proof of Theorem~\ref{thm:walls} to every car. As there, every length-$4$ window covering a car lies in $W\,s\,W$, and $W\,\varphi(s)\,W$ contains $W$ only at its ends, so $D$ preserves the occurrences of $W$ and the cars, $D^{-1}=D^3$, and $D$ commutes with $F$ because $F$ applies $\varphi$ to every car and the neighbours of a car lie in occurrences of $W$, whose images do not depend on the context. Since $\varphi$ is a $4$-cycle, $D^4=\mathrm{id}\ne D^2$. Suppose $D=\sh^aF^b$. The configuration $0^{\Z}$ contains no $W$, so $D$ fixes it; $F$ acts on constant configurations as the $4$-cycle $0\to1\to3\to2\to0$, and $\sh$ fixes them, so $4\mid b$. On $c=(0330\,0)^{\infty}$, every fifth cell is a car, so $D(c)=F(c)$, and therefore $\sh^aF^{b-1}c=c$. But $F^{b-1}c=(0330\,s)^{\infty}$ with $s=\varphi^{b-1}(0)\ne0$, as $b-1\not\equiv0\pmod4$, and no shift of it equals $c$. So $D\notin\langle\sh,F\rangle$.
+
+(3) The first statement is the first sentence of the proof of (1). With $w$ the $y$-row, a fixed word of length $k\ge2$ is a word $w\in\{0,1\}^k$ with $f(u,w_0,w_1)=0$ and $f(w_{k-2},w_{k-1},v)=0$ for $u,v\in\{0,1\}$ and $f=0$ on its interior triples: a walk through $k-1$ states in a graph on the $4$ pairs $(w_j,w_{j+1})$, from a set of allowed initial pairs to a set of allowed final pairs. If such a walk exists, a shortest one visits each state at most once, so some fixed word has length at most $5$. A search of all lengths $k\le40$ for all $256$ rules therefore decides the question for every length; it finds fixed words for exactly the $81$ rules of Table~\ref{tab:walls} at length at most $3$, and, among the other rules, only for $133$ and $161$, at the lengths $4$, $7$, $8$ and every $k$ with $10\le k\le40$. A brute-force search over all of $\A^k$, $k\le4$, agrees with the reduction to $\{0,3\}^k$. The search is a finite computation, described in Appendix~\ref{app:proofs}.
+\end{proof}
+

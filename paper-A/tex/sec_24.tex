@@ -1,0 +1,337 @@
+\section{The classes of 24 and 189}\label{c24:sec}
+
+The method also decides the classes $\{24,66\}$ and $\{189,231\}$. Here the automorphism group is larger than $\langle\sh,F_f\rangle$ by exactly one element of order $2$, the complement $\kappa(x,y)=(1-x,1-y)$ of Section~\ref{sec:conj}. We work with the rule $66$ throughout and obtain $189$ from it, because the two automata agree after four steps. The proof for $66$ is reduced to the rule $46$ by a factor map. This map takes the configurations behind a stuck edge to those of Section~\ref{cl:sec:46}, takes the kinks of $66$ to the kinks of $46$, and takes the edge moves of $66$ to the edge moves of $46$; so the controllability theorem for $46$ (Theorem~\ref{cl:thm:Fk46}) can be used without change. Since $F_{189}$ commutes with $F_{66}^4$ but not with $F_{66}$, Lemma~K is proved for block maps that commute with a power $F^N$ only.
+
+\subsection{The rules}\label{c24:sec:rules}
+
+In this section $f=66$, $F=F_{66}$ and $F'=F_{189}$, and $\rho(x,y)=(y,x)$ is the time reversal, so that $\rho F\rho=F^{-1}$. The values of $66$ on $000,\dots,111$ are $0,1,0,0,0,0,1,0$, and
+\[
+f(a,b,c)=[a=b]\,(b\oplus c).
+\]
+We use the following consequences:
+\begin{equation}\label{c24:eq:f}
+f(a,b,b)=0,\qquad f(b,b,c)=b\oplus c,\qquad f(a,b,c)=0\ \text{ if }a\ne b,\qquad f(a,b,c)=[a=b]\ \text{ if }b\ne c,
+\end{equation}
+and $f(1-a,1-b,1-c)=f(a,b,c)$. Rule $24$ is the reflection $f(c,b,a)=[b=c](a\oplus b)$, rule $189$ is $1\oplus f$, and rule $231$ is $1\oplus f(c,b,a)$, the reflection of $189$. The four rules are invariant under $f\mapsto f(1-a,1-b,1-c)$, so the classes under reflection and complementation are $\{24,66\}$ and $\{189,231\}$. None of the four rules is permutive in any variable: for $66$, $f(a,0,0)=0$ for both values of $a$, $f(0,b,0)=0$ for both values of $b$, and $f(1,0,c)=0$ for both values of $c$; complementing the output and reflecting do not change permutivity.
+
+\begin{lemma}[the rules]\label{c24:lem:rules}
+\begin{enumerate}
+\item[(a)] $\kappa F=F\kappa$ and $\kappa F'=F'\kappa$, so $\kappa\in\Aut(X_F)$ and $\kappa\in\Aut(X_{F'})$.
+\item[(b)] $F'=\nu F$, where $\nu(x,y)=(x,1-y)$ cellwise. Consequently $F'^2=\kappa F^2$ and $F'^4=F^4$.
+\item[(c)] On the constant configurations $F$ acts by $(x,y)^{\Z}\mapsto(y,x)^{\Z}$: it fixes $(0,0)^{\Z}$ and $(1,1)^{\Z}$ and exchanges $(0,1)^{\Z}$ and $(1,0)^{\Z}$. $F'$ acts by $(x,y)^{\Z}\mapsto(y,1-x)^{\Z}$, which is the $4$-cycle $(0,0)^{\Z}\mapsto(0,1)^{\Z}\mapsto(1,1)^{\Z}\mapsto(1,0)^{\Z}\mapsto(0,0)^{\Z}$.
+\item[(d)] The allowed triples of $66$ (Section~\ref{sec:fixed}) are all triples except $011$ and $100$, and those of $189$ are $011$ and $100$. Consequently $\Phi_{189}=\emptyset$, so $\sh F'$ and $\sh^{-1}F'$ have no fixed points.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) By \eqref{eq:F}, $\kappa F_g\kappa=F_{g'}$ with $g'(a,b,c)=g(1-a,1-b,1-c)$ (Section~\ref{sec:conj}), and $g'=g$ for $g\in\{66,189\}$. (b) By \eqref{eq:F}, $F'(c)_i=(y_i,x_i\oplus1\oplus f(y_{i-1},y_i,y_{i+1}))=\nu F(c)_i$. Since $f$ is invariant under complementing its arguments, $F(\nu c)_i=(1-y_i,\,x_i\oplus f(y_{i-1},y_i,y_{i+1}))$, that is $F\nu=\nu'F$ with $\nu'(x,y)=(1-x,y)$. So $F'^2=\nu F\nu F=\nu\nu'F^2=\kappa F^2$, and $F'^4=\kappa F^2\kappa F^2=F^4$ by~(a). (c) $f(y,y,y)=0$, so $F((x,y)^{\Z})=(y,x)^{\Z}$ and $F'((x,y)^{\Z})=(y,x\oplus1)^{\Z}$. (d) A triple $(a_1,a_2,a_3)$ is allowed for $66$ if $a_1\oplus a_3=f(a_1,a_2,a_3)$: if $a_1=a_2$ both sides are $a_2\oplus a_3$; if $a_1\ne a_2$ the right side is $0$, so the triple is allowed exactly when $a_3=a_1$. This excludes $011$ and $100$ only. The allowed triples of $189$ are the complementary set. A sequence all of whose triples are $011$ or $100$ would contain a triple beginning with $11$ or with $00$.
+\end{proof}
+
+By (d), for $66$ a sequence in $\Phi_{66}$ alternates from its first change on: if $\varphi(k)\ne\varphi(k+1)$, then $\varphi(k+2)=\varphi(k)$. For $\beta\in\{0,1\}$ and $p\in\Z$ let
+\[
+\varphi_{p,\beta}(i)=\begin{cases}\beta,&i\le p,\\ \beta\oplus\bigl((i-p)\bmod 2\bigr),&i\ge p,\end{cases}
+\]
+and let $\alpha(i)=i\bmod2$. Then $\Phi_{66}$ consists of $0^{\Z}$, $1^{\Z}$, $\alpha$, its shift, and the $\varphi_{p,\beta}$: a sequence that changes somewhere either has a leftmost change, after a last position $p$ of a constant run, or changes arbitrarily far to the left and so alternates everywhere; and all these sequences use only allowed triples.
+
+\begin{definition}\label{c24:def:kinks}
+For $p\in\Z$ and $\beta\in\{0,1\}$ let $K_{p,\beta}$ be the configuration with cells $(K_{p,\beta})_i=(\varphi_{p,\beta}(i+1),\varphi_{p,\beta}(i))$, and $L_{p,\beta}=\rho K_{p,\beta}$. Let $A$ be the configuration with cells $A_i=(\alpha(i+1),\alpha(i))$. Explicitly, with $\neg\beta=1-\beta$,
+\[
+K_{p,\beta}=(\beta,\beta)^{(-\infty,p)}\,(\neg\beta,\beta)_p\,(\beta,\neg\beta)_{p+1}\,(\neg\beta,\beta)_{p+2}\cdots,
+\]
+\[
+L_{p,\beta}=(\beta,\beta)^{(-\infty,p)}\,(\beta,\neg\beta)_p\,(\neg\beta,\beta)_{p+1}\cdots,
+\]
+continued with period $2$, and $A$ has the cell $(1,0)$ at even and $(0,1)$ at odd sites.
+\end{definition}
+
+\begin{lemma}[kinks]\label{c24:lem:kinks}
+\begin{enumerate}
+\item[(a)] The fixed points of $\sh F$ are $(0,0)^{\Z}$, $(1,1)^{\Z}$, $A$, $\sh A$ and the $K_{p,\beta}$; the fixed points of $\sh^{-1}F$ are $(0,0)^{\Z}$, $(1,1)^{\Z}$, $A$, $\sh A$ and the $L_{p,\beta}$.
+\item[(b)] $\sh K_{p,\beta}=K_{p-1,\beta}$, $FK_{p,\beta}=K_{p+1,\beta}$, $\sh L_{p,\beta}=L_{p-1,\beta}$, $FL_{p,\beta}=L_{p-1,\beta}$, $\kappa K_{p,\beta}=K_{p,\neg\beta}$ and $\kappa L_{p,\beta}=L_{p,\neg\beta}$. Also $\sh^2A=A\ne\sh A$ and $\rho A=\sh A$.
+\item[(c)] $K_{p,0}$ agrees with $\sh^{-p}A$ on $(p,\infty)$, and $L_{p,0}$ agrees with $\sh^{1-p}A$ on $(p,\infty)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Apply Lemma~\ref{cl:lem:Z2} to the list of $\Phi_{66}$. Under $c_i=(\varphi(i+1),\varphi(i))$ the constants give $(0,0)^{\Z}$ and $(1,1)^{\Z}$, $\alpha$ and its shift give $A$ and $\sh A$, and $\varphi_{p,\beta}$ gives $K_{p,\beta}$. Under $d_i=(\varphi(i-1),\varphi(i))$ an alternating sequence gives the same configuration as before, since $\varphi(i-1)=\varphi(i+1)$, and $\varphi_{p,\beta}$ gives the configuration that is $(\beta,\beta)$ on $(-\infty,p]$ and has the cell $(\beta,\neg\beta)$ at $p+1$, which is $L_{p+1,\beta}$. (b) $\sh^{-1}K_{p,\beta}$ is coded by $i\mapsto\varphi_{p,\beta}(i-1)=\varphi_{p+1,\beta}(i)$, and $FK_{p,\beta}=\sh^{-1}K_{p,\beta}$ by (a). For $L$ use $\rho\sh=\sh\rho$ and $F\rho=\rho F^{-1}$, so $FL_{p,\beta}=\rho F^{-1}K_{p,\beta}=\rho K_{p-1,\beta}$. Complementing $\varphi_{p,\beta}$ gives $\varphi_{p,\neg\beta}$. The cells $A_0=(1,0)$ and $(\sh A)_0=A_1=(0,1)$ differ, and $\rho A_i=(\alpha(i),\alpha(i+1))=A_{i+1}$. (c) For $i>p$, $(K_{p,0})_i=(\alpha(i+1-p),\alpha(i-p))=A_{i-p}$, and $(L_{p,0})_i=(\alpha(i-p),\alpha(i+1-p))=A_{i+1-p}$.
+\end{proof}
+
+The second normalisation needs the fixed points of $\sh^nF^n$ for $n=4$. They are found by hand, for every $n\ge1$.
+
+\begin{lemma}[fixed points of $\sh^{\pm n}F^n$]\label{c24:lem:fixn}
+Let $n\ge1$. The fixed points of $\sh^nF^n$ that agree with $(0,0)^{\Z}$ on a left half-line are $(0,0)^{\Z}$ and the kinks $K_{p,0}$, $p\in\Z$. Consequently those that agree with $(1,1)^{\Z}$ on a left half-line are $(1,1)^{\Z}$ and the $K_{p,1}$; and the fixed points of $\sh^{-n}F^n$ that agree with $(0,0)^{\Z}$ on a left half-line are $(0,0)^{\Z}$ and the $L_{p,0}$. Since $F'^4=F^4$, the case $n=4$ describes these fixed points of $\sh^{\pm4}F'^4$ as well.
+\end{lemma}
+
+\begin{proof}
+The listed configurations are fixed by $\sh F$, or by $\sh^{-1}F$, by Lemma~\ref{c24:lem:kinks}, hence by $\sh^{\pm n}F^n$. Conversely, let $c\ne(0,0)^{\Z}$ be fixed by $\sh^nF^n$, with $c_i=(0,0)$ for $i<i_0$, and let $Y=Y_c$. Since $Y_{F^nc}(t,i)=Y(t+n,i)$ and $Y_{\sh^{-n}c}(t,i)=Y(t,i-n)$, the relation $F^nc=\sh^{-n}c$ says
+\begin{equation}\label{c24:eq:per}
+Y(t+n,i+n)=Y(t,i)\qquad\text{for all }t,i.
+\end{equation}
+As $F^{\pm1}$ have radius $1$ and fix $(0,0)^{\Z}$, row $t$ of $Y$ vanishes on $(-\infty,i_0-|t|)$. When row $t$ is not zero, let $\lambda(t)$ be the least $i$ with $Y(t,i)=1$. We use two instances of \eqref{eq:rel}, which hold at every $(t,i)$ where row $t$ vanishes on $[i-1,i+1]$, respectively at $i=\lambda(t)-1$:
+\begin{equation}\label{c24:eq:lambda}
+Y(t+1,i)=Y(t-1,i)\quad(i\le\lambda(t)-2),\qquad Y(t+1,\lambda(t)-1)\oplus Y(t-1,\lambda(t)-1)=1,
+\end{equation}
+since $f(0,0,0)=0$ and $f(0,0,1)=1$; the first also holds for all $i$ if row $t$ is zero.
+
+\emph{No row is zero.} Suppose row $t$ is zero. Row $t+1$ is not zero, since two consecutive rows determine the diagram; put $a=\lambda(t+1)$. We show $\lambda(t+1+j)=a-j$ for all $j\ge0$. Assume this for $j$; row $t+j$ vanishes on $(-\infty,a-j]$ (it is row $t$ if $j=0$, and $\lambda(t+j)=a-j+1$ otherwise). By \eqref{c24:eq:lambda} at time $t+1+j$, row $t+2+j$ equals row $t+j$, hence $0$, on $(-\infty,a-j-2]$, and $Y(t+2+j,a-j-1)=1\oplus Y(t+j,a-j-1)=1$; so $\lambda(t+2+j)=a-j-1$. By \eqref{c24:eq:per}, row $t+1+n$ is row $t+1$ shifted, so $\lambda(t+1+n)=a+n$, while we have shown $\lambda(t+1+n)=a-n$. This contradicts $n\ge1$.
+
+\emph{The first ones move at speed $1$.} So $\lambda$ is defined everywhere, and $\lambda(t+n)=\lambda(t)+n$ by \eqref{c24:eq:per}. Put $d(t)=\lambda(t+1)-\lambda(t)$, so that $d(t)+\dots+d(t+n-1)=n$ for every $t$. Fix $t$ and let $a=\lambda(t)$. By \eqref{c24:eq:lambda} rows $t\pm1$ agree on $(-\infty,a-2]$, and exactly one of them is $1$ at $a-1$. If one of $\lambda(t\pm1)$ is at most $a-2$, both are, and they are equal. Otherwise one of them is $a-1$ and the other is at least $a$. So one of the following holds:
+\[
+\text{(A) } d(t-1)\ge2,\ d(t)=-d(t-1);\qquad\text{(B) } d(t-1)\le0,\ d(t)=-1;\qquad\text{(C) } d(t-1)=1,\ d(t)\ge0.
+\]
+These conditions determine $d(t)$ from $d(t-1)$ as follows: if $d(t-1)\ge2$, only (A) is possible, and $d(t)\le-2$; if $d(t-1)\le0$, only (B) is possible, and $d(t)=-1$; if $d(t-1)=1$, only (C) is possible, and $d(t)\ge0$. Hence if $d(t_1)\ne1$ for some $t_1$, then $d(t_1+1)\le0$ if $d(t_1)\ge2$, and in both cases $d(t)=-1$ for all $t\ge t_1+2$, contradicting $d(t)+\dots+d(t+n-1)=n$. So $d(t)=1$ for every $t$. With $p=\lambda(0)-1$ we get $\lambda(t)=p+1+t$: row $t$ vanishes on $(-\infty,p+t]$ and is $1$ at $p+t+1$.
+
+\emph{The diagram, diagonal by diagonal.} For $j\ge0$ let $D_j(t)=Y(t,p+t+j)$. Then $D_0=0$ and $D_1=1$. The relation \eqref{eq:rel} at $(t,p+t+j)$, $j\ge1$, reads
+\[
+D_{j-1}(t+1)\oplus D_{j+1}(t-1)=f\bigl(D_{j-1}(t),D_j(t),D_{j+1}(t)\bigr).
+\]
+If $D_{j-1}$ is constant equal to $b$ and $D_j$ is constant equal to $\neg b$, then the right side is $0$ by \eqref{c24:eq:f}, so $D_{j+1}(t-1)=b$ for every $t$. By induction on $j$, $D_j=j\bmod 2$ for all $j\ge0$. So $Y(t,i)=[i>p+t]\,\bigl((i-p-t)\bmod2\bigr)$, which is the diagram of $K_{p,0}$, as $F^tK_{p,0}=K_{p+t,0}$ has the $y$-row $\varphi_{p+t,0}$. Hence $c=K_{p,0}$.
+
+For the consequences: $\kappa$ commutes with $\sh$ and $F$, exchanges $(0,0)^{\Z}$ and $(1,1)^{\Z}$, and maps $K_{p,0}$ to $K_{p,1}$. And $\rho\sh^{-n}F^n\rho=\sh^{-n}F^{-n}$ is the inverse of $\sh^nF^n$, so $\rho$ maps the fixed points of $\sh^nF^n$ onto those of $\sh^{-n}F^n$; it fixes $(0,0)^{\Z}$, preserves agreement with it on a left half-line, and maps $K_{p,0}$ to $L_{p,0}$.
+\end{proof}
+
+\subsection{The factor map to 46}\label{c24:sec:delta}
+
+Let $\delta\colon\A^{\Z}\to\A^{\Z}$ be the block map
+\[
+\delta(c)_i=(x_i\oplus x_{i+1},\ y_i\oplus y_{i+1}),\qquad c_i=(x_i,y_i).
+\]
+Write $F_{46}$ for the automaton of rule $46$ and $\eta_p$ for its kinks (Lemma~\ref{cl:lem:kinks}).
+
+\begin{lemma}[the factor map]\label{c24:lem:delta}
+\begin{enumerate}
+\item[(a)] $f(a,b,c)\oplus f(b,c,d)=f_{46}(a\oplus b,b\oplus c,c\oplus d)$ for all $a,b,c,d$. Consequently $\delta F=F_{46}\delta$ and $\delta F'=F_{46}\delta$.
+\item[(b)] $\delta\sh=\sh\delta$, $\delta\rho=\rho\delta$, $\delta\kappa=\delta$, and $\delta(c)=\delta(c')$ if and only if $c'=c\oplus s^{\Z}$ for a cell $s$. The diagram of $\delta c$ is $Y_{\delta c}(t,i)=Y_c(t,i)\oplus Y_c(t,i+1)$.
+\item[(c)] $\delta K_{p,\beta}=\eta_{p-1}$ and $\delta L_{p,\beta}=\rho\eta_{p-1}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Recall $f_{46}(a,0,c)=c$ and $f_{46}(a,1,c)=\neg a$ (Section~\ref{cl:sec:1446}). If $b=c$, the left side is $0\oplus(b\oplus d)=c\oplus d$, by \eqref{c24:eq:f}, and the right side is $f_{46}(a\oplus b,0,c\oplus d)=c\oplus d$. If $b\ne c$, the left side is $[a=b]\oplus0$, and the right side is $\neg(a\oplus b)=[a=b]$. Now let $\delta(c)=(w,z)$, so $w_i=x_i\oplus x_{i+1}$ and $z_i=y_i\oplus y_{i+1}$. By \eqref{eq:F}, $\delta(Fc)_i=\bigl(z_i,\ w_i\oplus f(y_{i-1},y_i,y_{i+1})\oplus f(y_i,y_{i+1},y_{i+2})\bigr)=\bigl(z_i,\ w_i\oplus f_{46}(z_{i-1},z_i,z_{i+1})\bigr)=F_{46}(\delta c)_i$. For $F'$ the two added constants $1$ cancel. (b) The first three identities are clear. If $\delta c=\delta c'$, then $c_i\oplus c'_i=c_{i+1}\oplus c'_{i+1}$ for all $i$. The $y$-row of $F^t\delta c=\delta F^tc$ is $Y_c(t,i)\oplus Y_c(t,i+1)$. (c) $(K_{p,\beta})_i\oplus(K_{p,\beta})_{i+1}$ is $(0,0)$ for $i<p-1$, $(\beta,\beta)\oplus(\neg\beta,\beta)=(1,0)$ for $i=p-1$, and $(1,1)$ for $i\ge p$, since the cells alternate there. Apply $\rho$.
+\end{proof}
+
+Two parts of this structure are in the literature. The relations $F'^2=\kappa F^2$ and $F'^4=F^4$ of Lemma~\ref{c24:lem:rules}(b) are the correspondence between the orbits of a rule that is invariant under complementing its arguments and those of its complement, due to Takesue \cite[(A.1)--(A.4)]{Takesue1989}, where the classes of $24$ and $189$ are listed as such a pair. And $24$R has a local conservation law, which sorts the pairs of adjacent cells into two classes of eight pairs each \cite[(4.9), (4.10)]{Takesue1989}; for the reflected rule $66$ the two classes are the mirror images, and the bond bit $\chi_i(\delta c)$ of Lemma~\ref{cl:lem:bond} equals $1$ exactly when the pairs $(c_i,c_{i+1})$ and $(c_{i+1},c_{i+2})$ lie in the same class, as one checks on the $64$ words of three cells. So under $\delta$ the conserved bond bits of $46$ correspond to this conservation law. The factor map $\delta$ and its use below are not in \cite{Takesue1989}.
+
+\subsection{Tailed configurations, gluing and the tail flip}\label{c24:sec:tail}
+
+For $\beta\in\{0,1\}$ call $c$ \emph{$\beta$-tailed} if $c\ne(\beta,\beta)^{\Z}$ and $c_i=(\beta,\beta)$ for all large $i$. Then $\beta$ is the \emph{colour} of $c$, and the \emph{edge} $e(c)$ is the largest $i$ with $c_i\ne(\beta,\beta)$. A configuration is \emph{tailed} if it is $\beta$-tailed for some $\beta$. So the $0$-tailed configurations are those of Section~\ref{cl:sec:tail}, and $\kappa$ maps $\beta$-tailed configurations to $\neg\beta$-tailed ones with the same edge. Call a cell \emph{mixed} if it is $(0,1)$ or $(1,0)$. If $c$ is $\beta$-tailed with $e(c)\le r$, or $c=(\beta,\beta)^{\Z}$, and $\Lambda$ is a configuration with $\Lambda_i=(\beta,\beta)$ for $i\le r+1$, write $c\sqcup\Lambda$ for the configuration equal to $c$ on $(-\infty,r]$ and to $\Lambda$ on $(r,\infty)$, \emph{glued at $r$}; it equals $c$ on $(-\infty,r+1]$. For $p\ge r+2$, $K_{p,\beta}$ and $L_{p,\beta}$ are $(\beta,\beta)$ on $(-\infty,r+1]$.
+
+\begin{lemma}[tailed configurations]\label{c24:lem:tail}
+Let $c$ be $\beta$-tailed with $e(c)=e$.
+\begin{enumerate}
+\item[(a)] The columns of $Y_c$ to the right of $e$ are constant equal to $\beta$, column $e$ is never $\beta$ in two consecutive rows, and $F^tc$ is $\beta$-tailed with $e(F^tc)=e$ for all $t\in\Z$.
+\item[(b)] $\delta c$ is $0$-tailed with $e(\delta c)=e$. The map $c\mapsto(\delta c,\beta)$ is a bijection from the tailed configurations with edge $e$ onto the pairs consisting of a $0$-tailed configuration with edge $e$ and a colour.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) If rows $t-1$ and $t$ are $\beta$ on the columns $i>e$, then so is row $t+1$, since $Y(t+1,i)=\beta\oplus f(Y(t,i-1),\beta,\beta)=\beta$ by \eqref{c24:eq:f}, and likewise row $t-2$. By induction in both directions of time, these columns are constant. If $Y(t-1,e)=Y(t,e)=\beta$, the same computation at column $e$ gives $Y(t+1,e)=Y(t-2,e)=\beta$, so column $e$ is constant and $c_e=(\beta,\beta)$, a contradiction. So the cell $(Y(t-1,e),Y(t,e))$ of $F^tc$ is never $(\beta,\beta)$. (b) $(\delta c)_i=(0,0)$ for $i>e$ and $(\delta c)_e=c_e\oplus(\beta,\beta)\ne(0,0)$. Conversely, given a $0$-tailed $w$ with edge $e$ and a colour $\beta$, the configuration $c_i=(\beta,\beta)\oplus\bigoplus_{j\ge i}w_j$ (a finite sum) is the unique $\beta$-tailed configuration with $\delta c=w$, by Lemma~\ref{c24:lem:delta}(b).
+\end{proof}
+
+\begin{lemma}[gluing]\label{c24:lem:glue}
+\begin{enumerate}
+\item[(a)] Let $u$ agree with $K_{p,\beta}$ on $[q,\infty)$, where $p\ge q+1$. Then $Fu$ agrees with $K_{p+1,\beta}$ on $[q,\infty)$. Let $u$ agree with $L_{p,\beta}$ on $[q,\infty)$, where $p\ge q+2$. Then $Fu$ agrees with $L_{p-1,\beta}$ on $[q,\infty)$. No assumption is made on $u$ to the left of $q$.
+\item[(b)] Let $d$ be $\beta$-tailed with $e(d)\le r$, or $d=(\beta,\beta)^{\Z}$. Then $F(d\sqcup K_{p,\beta})=Fd\sqcup K_{p+1,\beta}$ for $p\ge r+2$, and $F(d\sqcup L_{p,\beta})=Fd\sqcup L_{p-1,\beta}$ for $p\ge r+3$, all glued at $r$.
+\item[(c)] Let $h$ be a block map of radius $R$ with $h((\beta,\beta)^{\Z})=(\beta,\beta)^{\Z}$, let $d$ be $\beta$-tailed with $e(d)\le r$, or $d=(\beta,\beta)^{\Z}$, let $\Lambda\in\{K_{p,\beta},L_{p,\beta}\}$ with $p\ge r+2R+1$, and $u=d\sqcup\Lambda$. Then $hu$ agrees with $hd$ on $(-\infty,p-1-R]$ and with $h\Lambda$ on $[r+R+1,\infty)$, and $(hd)_i=(\beta,\beta)$ for $i>r+R$. If moreover $(hd)_i=(\beta,\beta)$ for $i>r$ and $h\Lambda=\Lambda$, then $hu=hd\sqcup\Lambda$, glued at $r$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) For $i\ge q+1$ the cell $(Fu)_i$ reads only cells of $u$ in $[q,\infty)$, so it equals $(FK_{p,\beta})_i=(K_{p+1,\beta})_i$. The cell $(Fu)_q=(y_q,\,x_q\oplus f(y_{q-1},y_q,y_{q+1}))$ has $x_q=y_q=y_{q+1}=\beta$, read off $K_{p,\beta}$ as $q+1\le p$; by $f(a,\beta,\beta)=0$ it is $(\beta,\beta)$, whatever $y_{q-1}$ is, which is the cell of $K_{p+1,\beta}$ at $q$. For $L_{p,\beta}$ the same argument applies, with $x_q=y_q=y_{q+1}=\beta$ because $q+2\le p$, and $(L_{p-1,\beta})_q=(\beta,\beta)$ because $q<p-1$. (b) $u=d\sqcup\Lambda$ agrees with $d$ on $(-\infty,r+1]$, so $Fu$ agrees with $Fd$ on $(-\infty,r]$; by (a) with $q=r+1$, $Fu$ agrees with $F\Lambda$ on $[r+1,\infty)$; and $Fd$ is $\beta$-tailed with edge $e(d)\le r$, by Lemma~\ref{c24:lem:tail}, or $Fd=d=(\beta,\beta)^{\Z}$. (c) The local rule of $h$ maps $(\beta,\beta)^{2R+1}$ to $(\beta,\beta)$, which gives the statement about $hd$. The configuration $u$ equals $d$ on $(-\infty,p-1]$, because both are $(\beta,\beta)$ on $(r,p-1]$, and equals $\Lambda$ on $(r,\infty)$; take the windows of radius $R$. The two half-lines cover $\Z$, as $p-1-R\ge r+R$, and on $(r,p-1-R]$ both $hd$ and $\Lambda$ are $(\beta,\beta)$ under the additional hypotheses.
+\end{proof}
+
+\begin{definition}[tail flip]\label{c24:def:flip}
+Let $b$ be $\beta$-tailed with $e(b)=r$, and let $s\in\Z$ be such that the edge cell $(F^sb)_r$ is mixed. Let $T_s(b)$ be the configuration with $F^sT_s(b)$ equal to $F^sb$ on $(-\infty,r]$ and to $(\neg\beta,\neg\beta)$ on $(r,\infty)$.
+\end{definition}
+
+So $T_s(b)$ is $\neg\beta$-tailed with edge $r$: it is obtained by complementing the tail of the state at time $s$. Clearly $\kappa T_s(b)=T_s(\kappa b)$, and $\rho T_s(b)=T_{-s}(\rho b)$, since $F^{-s}\rho b=\rho F^sb$.
+
+\subsection{The bounce}\label{c24:sec:bounce}
+
+\begin{lemma}[bounce]\label{c24:lem:bounce}
+Let $d$ be $\beta$-tailed with $e(d)=e$, let $p\ge e+2$, $c=d\sqcup L_{p,\beta}$ glued at $e$, $s_0=p-e-2$, and
+\[
+\varepsilon=[\,Y_d(s_0,e)=\beta\,],\qquad U=2e-p+3-\varepsilon.
+\]
+Put $D=d$ if $\varepsilon=0$, and $D=T_{s_0+1}(d)$ if $\varepsilon=1$; in the second case the edge cell of $F^{s_0+1}d$ is $(\beta,\neg\beta)$, so $D$ is defined. Then $D$ is $(\beta\oplus\varepsilon)$-tailed with $e(D)=e$, and
+\[
+F^tc=F^td\sqcup L_{p-t,\beta}\quad(0\le t\le s_0),\qquad F^tc=F^tD\sqcup K_{t+U,\,\beta\oplus\varepsilon}\quad(t\ge s_0+1+\varepsilon),
+\]
+all glued at $e$. In particular $F^tc$ agrees with $K_{t+U,\beta\oplus\varepsilon}$ on $[e+1,\infty)$ for $t\ge s_0+1+\varepsilon$.
+\end{lemma}
+
+So the kink $L_{p,\beta}$, glued to the right of the edge, moves to the left, bounces off the edge and leaves as a kink $K$ moving to the right. If the edge value it meets is $\beta$, the kink comes out with the other colour and one step later, and the tail of the configuration left behind has been complemented.
+
+\begin{proof}
+Since $\kappa$ commutes with $F$, $\delta$ and $T_s$, maps $L_{p,\beta}$, $K_{p,\beta}$ to $L_{p,\neg\beta}$, $K_{p,\neg\beta}$, and complements diagrams, which leaves $\varepsilon$ unchanged, we may assume $\beta=0$. Write $Y=Y_c$. By Lemma~\ref{c24:lem:glue}(b), applied $s_0$ times (the step from $t$ to $t+1$ needs $p-t\ge e+3$), $F^tc=F^td\sqcup L_{p-t,0}$ for $0\le t\le s_0$. So the state at time $s_0$ is $F^{s_0}d\sqcup L_{e+2,0}$. Let $(x_i,y_i)$, $i\le e$, be the cells of $F^{s_0}d$; thus $x_i=Y(s_0-1,i)$, $y_i=Y(s_0,i)$, $(x_e,y_e)\ne(0,0)$ and $\varepsilon=\neg y_e$. On the columns $i>e$, rows $s_0-1$ and $s_0$ are those of $L_{e+2,0}$:
+\[
+Y(s_0-1,i)=[\,i\ge e+3,\ i-e\text{ odd}\,],\qquad Y(s_0,i)=[\,i\ge e+2,\ i-e\text{ even}\,]\qquad(i>e).
+\]
+In particular both rows vanish at $e+1$, as do the rows of $Y_d$. The relation \eqref{eq:rel} at $(s_0,i)$, $i\le e$, reads row $s_0$ on $[i-1,i+1]\subseteq(-\infty,e+1]$ and row $s_0-1$ at $i$, so row $s_0+1$ of $Y$ agrees with that of $Y_d$ on $(-\infty,e]$. On $[e+3,\infty)$ it is the $y$-row of $FL_{e+2,0}=L_{e+1,0}$, which is $[i-e\text{ odd}]$, because these entries read only columns $\ge e+2$. At $e+2$ it is $0\oplus f(0,1,0)=0$, and at $e+1$ it is $0\oplus f(y_e,0,1)=\neg y_e$.
+
+\emph{Case $\varepsilon=0$, that is $y_e=1$.} On $[e+1,\infty)$ the state at time $s_0+1$ has the cells $(Y(s_0,i),Y(s_0+1,i))$, namely $(0,0)$ at $e+1$ and $([i-e\text{ even}],[i-e\text{ odd}])$ for $i\ge e+2$. These are the cells of $K_{e+2,0}$. So $F^{s_0+1}c=F^{s_0+1}d\sqcup K_{e+2,0}$, and Lemma~\ref{c24:lem:glue}(b) gives $F^tc=F^td\sqcup K_{t+e+1-s_0,0}$ for $t\ge s_0+1$. Here $e+1-s_0=2e-p+3=U$.
+
+\emph{Case $\varepsilon=1$, that is $y_e=0$.} Then $x_e=1$, and $Y(s_0+1,e)=x_e\oplus f(y_{e-1},0,0)=1$; so the edge cell of $F^{s_0+1}d$ is $(0,1)$. On $[e+1,\infty)$ row $s_0+1$ is $[i-e\text{ odd}]$, and the state at time $s_0+1$ has the cells $(0,1)$ at $e+1$ and $([i-e\text{ even}],[i-e\text{ odd}])$ for $i\ge e+2$, which are those of $L_{e+1,0}$. Row $s_0+2$ is therefore the $y$-row of $FL_{e+1,0}=L_{e,0}$, that is $[i-e\text{ even}]$, on $[e+2,\infty)$. At $e+1$ it is $Y(s_0,e+1)\oplus f(1,1,0)=1$, and at $e$ it is $Y(s_0,e)\oplus f(Y(s_0+1,e-1),1,1)=0$. So the state at time $s_0+2$ has the cells $(1,0)$ at $e$, $(1,1)$ at $e+1$, and $([i-e\text{ odd}],[i-e\text{ even}])$ for $i\ge e+2$. On $[e+1,\infty)$ these are the cells of $K_{e+2,1}$. Let $D'$ equal $F^{s_0+2}c$ on $(-\infty,e]$ and $(1,1)$ beyond. It is $1$-tailed with edge $e$, as its cell $e$ is $(1,0)$, and $F^{s_0+2}c=D'\sqcup K_{e+2,1}$. Put $D=F^{-s_0-2}D'$. By Lemma~\ref{c24:lem:tail}, $F^{s_0+1}D=F^{-1}D'$ is $1$-tailed with edge $e$. Its $y$-row is the $x$-row of $D'$, which on $(-\infty,e]$ is row $s_0+1$ of $Y$, hence of $Y_d$. Its $x$-row is row $s_0$ of $Y_D$. By \eqref{eq:rel} at $(s_0+1,i)$, solved for the earlier row, this row is $Y(s_0,i)=Y_d(s_0,i)$ for $i\le e-1$, as only columns $\le e$ of rows $s_0+1$ and $s_0+2$ are read. At $e$ it is $Y_D(s_0+2,e)\oplus f(Y_D(s_0+1,e-1),1,1)=0=y_e$. So $F^{s_0+1}D$ agrees with $F^{s_0+1}d$ on $(-\infty,e]$, that is, $D=T_{s_0+1}(d)$. Lemma~\ref{c24:lem:glue}(b) gives $F^tc=F^tD\sqcup K_{t+e-s_0,1}$ for $t\ge s_0+2$. Here $e-s_0=2e-p+2=U$.
+\end{proof}
+
+Since a kink $K_{q,\beta'}$ with $q>j$ is determined by its restriction to $[j,\infty)$, the integer $U$ and the colour $\beta\oplus\varepsilon$ are determined by $c$: they are read off $F^tc$ on $[e+1,\infty)$ for any large $t$.
+
+\subsection{Lemma K for block maps commuting with a power of \texorpdfstring{$F$}{F}}\label{c24:sec:K}
+
+For $N\ge1$ let $\mathcal H_N$ be the set of block maps $h$, of any radius and not necessarily invertible, that commute with $F^N$ and fix $(0,0)^{\Z}$, $(1,1)^{\Z}$, $K_{0,0}$ and $L_{0,0}$. Such an $h$ commutes with $\sh$, so it fixes every $K_{p,0}$ and $L_{p,0}$. We prove:
+
+\begin{lemma}[Lemma K$'$]\label{c24:lem:Kprime}
+Let $N\ge1$ and $h\in\mathcal H_N$. Then $h=\mathrm{id}$.
+\end{lemma}
+
+Only $N=1$ and $N=4$ are used below. The plan is that of Section~\ref{cl:sec:110}, with three changes. The kinks of colour $1$ are not assumed to be fixed: Proposition~\ref{c24:prop:H1} shows that they are. A move does not change the edge cell; it complements the tail. And since $h$ commutes only with $F^N$, the statements about $h$ at time $t$ are reduced to time $0$ by conjugating $h$ with $F^t$, which preserves $\mathcal H_N$.
+
+\begin{lemma}\label{c24:lem:Hclosed}
+Let $h\in\mathcal H_N$ have radius $R$. Then $h$ maps $(\beta,\beta)^{2R+1}$ to $(\beta,\beta)$ for $\beta\in\{0,1\}$; $F^thF^{-t}\in\mathcal H_N$ for every $t\in\Z$; and $\rho h\rho\in\mathcal H_N$.
+\end{lemma}
+
+\begin{proof}
+The first statement holds because $h$ fixes $(\beta,\beta)^{\Z}$. $F^thF^{-t}$ is a block map commuting with $F^N$; it fixes $(0,0)^{\Z}$ and $(1,1)^{\Z}$, which $F$ fixes, and $F^thF^{-t}K_{p,0}=F^thK_{p-t,0}=K_{p,0}$, $F^thF^{-t}L_{p,0}=F^thL_{p+t,0}=L_{p,0}$, by Lemma~\ref{c24:lem:kinks}(b). $\rho h\rho$ commutes with $\rho F^N\rho=F^{-N}$, fixes the two constants, and exchanges the roles of $K_{p,0}$ and $L_{p,0}=\rho K_{p,0}$.
+\end{proof}
+
+\begin{proposition}[$(\mathrm H'_1)$ and the kinks of colour $1$]\label{c24:prop:H1}
+Let $h\in\mathcal H_N$.
+\begin{enumerate}
+\item[(a)] $h$ fixes $K_{p,1}$ and $L_{p,1}$ for every $p$, and $\kappa h\kappa\in\mathcal H_N$.
+\item[(b)] For every tailed $d$, the configuration $hd$ is tailed, with the colour and the edge of $d$, and $F^thd$ agrees with $F^td$ on $[e(d),\infty)$ for every $t\in\Z$; that is, $Y_{hd}(t,i)=Y_d(t,i)$ for all $t$ and all $i\ge e(d)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Let $R$ be the radius of $h$, let $d$ be $0$-tailed with $e(d)=e$, and let $p\ge e+2R+2$. Let $c=d\sqcup L_{p,0}$ be glued at $e$, and let $s_0$, $\varepsilon$, $U$ be as in Lemma~\ref{c24:lem:bounce}, so that $s_0\ge 2R$. By Lemma~\ref{c24:lem:glue}(c), $hd$ is $(0,0)^{\Z}$ or $0$-tailed with $e'=e(hd)\le e+R$. Moreover $hc$ agrees with $hd$ on $(-\infty,p-1-R]$ and with $L_{p,0}$ on $[e+R+1,\infty)$. Since $hd$ and $L_{p,0}$ are $(0,0)$ on $(e+R,p-1]$, it follows that $hc=hd\sqcup L_{p,0}$, glued at $e+R$; this is $L_{p,0}$ if $hd=(0,0)^{\Z}$, and the same configuration glued at $e'$ otherwise. In the second case Lemma~\ref{c24:lem:bounce} applies to $hc$, with $e'$ in place of $e$, and gives $\varepsilon'=[Y_{hd}(p-e'-2,e')=0]$ and $U'=2e'-p+3-\varepsilon'$. In both cases, for $t\in N\Z$ large, $F^thc=hF^tc$. By Lemma~\ref{c24:lem:bounce} for $c$, $F^tc$ agrees with $K_{t+U,\varepsilon}$ on $[e+1,\infty)$, so $hF^tc$ agrees with $hK_{t+U,\varepsilon}$ on $[e+R+1,\infty)$. Hence
+\begin{equation}\label{c24:eq:compare}
+hK_{t+U,\varepsilon}\ \text{agrees with}\ \begin{cases}L_{p-t,0}&\text{if }hd=(0,0)^{\Z},\\ K_{t+U',\varepsilon'}&\text{otherwise,}\end{cases}\quad\text{on }[e+R+1,\infty),\text{ for all large }t\in N\Z.
+\end{equation}
+
+\emph{Step 1: $hd\ne(0,0)^{\Z}$ and $e(hd)=e$.} Column $e$ of $Y_d$ is never $0$ in two consecutive rows (Lemma~\ref{c24:lem:tail}), so we may choose $p\ge e+2R+2$ with $Y_d(s_0,e)=1$, that is $\varepsilon=0$. Then $hK_{t+U,0}=K_{t+U,0}$. For large $t$ this kink is $(0,0)$ on $[e+R+1,e+R+2]$, while $L_{p-t,0}$ has mixed cells there. So $hd\ne(0,0)^{\Z}$, and $K_{t+U,0}$ agrees with $K_{t+U',\varepsilon'}$ on $[e+R+1,\infty)$ for large $t$. Hence $\varepsilon'=0$ and $U'=U$, that is $e'=e$.
+
+\emph{Step 2: the edge column at large times.} Now let $p\ge e+2R+2$ be arbitrary. By Step 1, the second case of \eqref{c24:eq:compare} holds, with $e'=e$. If $\varepsilon=0$, the argument of Step 1 gives $\varepsilon'=0$. If $\varepsilon=1$, then $hK_{t+U,1}=\sh^{-t-U}hK_{0,1}$, so by \eqref{c24:eq:compare} $hK_{0,1}$ agrees with $\sh^{t+U}K_{t+U',\varepsilon'}=K_{U'-U,\varepsilon'}$ on $[e+R+1-t-U,\infty)$, for arbitrarily large $t$; hence $hK_{0,1}=K_{U'-U,\varepsilon'}$. Since $K_{0,1}$ is $(1,1)$ on $(-\infty,0)$ and $h$ fixes $(1,1)^{\Z}$, $hK_{0,1}$ is $(1,1)$ on $(-\infty,-R)$, so $\varepsilon'=1$ and $U'-U=2(e'-e)=0$. In both cases $\varepsilon'=\varepsilon$, that is, $Y_{hd}(s,e)=Y_d(s,e)$ for every $s=p-e-2\ge2R$; and if $\varepsilon=1$ occurs for some $d$ and $p$, then $hK_{0,1}=K_{0,1}$.
+
+\emph{Step 3: (a).} Let $b_0$ have the cell $(0,1)$ at $0$ and $(0,0)$ elsewhere, and let $d_0=F^{-2R-1}b_0$, which is $0$-tailed with edge $0$ (Lemma~\ref{c24:lem:tail}) and has $Y_{d_0}(2R,0)=Y_{b_0}(-1,0)=0$. With $d=d_0$ and $p=2R+2$ we have $\varepsilon=1$, so $h$ fixes $K_{0,1}$, and hence every $K_{p,1}$. The same applies to $\rho h\rho\in\mathcal H_N$ (Lemma~\ref{c24:lem:Hclosed}), so $h$ fixes $\rho K_{p,1}=L_{p,1}$. Now $\kappa h\kappa$ commutes with $F^N$, as $\kappa$ commutes with $F$, and it fixes $(0,0)^{\Z}=\kappa((1,1)^{\Z})$, $(1,1)^{\Z}$, $K_{0,0}=\kappa K_{0,1}$ and $L_{0,0}=\kappa L_{0,1}$; so $\kappa h\kappa\in\mathcal H_N$.
+
+\emph{Step 4: (b).} For $0$-tailed $d$, Steps 1 and 2 give $e(hd)=e$ and $Y_{hd}(s,e)=Y_d(s,e)$ for $s\ge 2R$. For $\ell\in N\Z$, $F^{-\ell}d$ is $0$-tailed with edge $e$ and $hF^{-\ell}d=F^{-\ell}hd$. Applying the same to $F^{-\ell}d$ gives $Y_{hd}(s-\ell,e)=Y_d(s-\ell,e)$ for all $s\ge2R$ and $\ell\in N\Z$, that is, at all times. The columns to the right of $e$ are $0$ in both diagrams, by Lemma~\ref{c24:lem:tail}, and the cells of $F^thd$ are $(Y_{hd}(t-1,i),Y_{hd}(t,i))$. If $d$ is $1$-tailed, apply this to $\kappa h\kappa\in\mathcal H_N$ and the $0$-tailed configuration $\kappa d$, and use $\kappa(\kappa h\kappa)\kappa d=hd$.
+\end{proof}
+
+\emph{Probes and moves.} For a tailed $b$ with colour $\beta$ and $e(b)=r$, and $n\in\Z$, let the \emph{probe} be
+\[
+P_n(b)=F^{-n}\bigl(F^nb\sqcup L_{r+3,\beta}\bigr),
+\]
+glued at $r$. Write $(x_r,y_r)$ for the edge cell of $F^mb$; it is $(\beta,\neg\beta)$, $(\neg\beta,\beta)$ or $(\neg\beta,\neg\beta)$. Define the \emph{moves}
+\[
+M_m(b)=\begin{cases}T_m(b),&(x_r,y_r)=(\beta,\neg\beta),\\ b,&\text{otherwise},\end{cases}\qquad
+\bar M_m(b)=\begin{cases}T_m(b),&(x_r,y_r)=(\neg\beta,\beta),\\ b,&\text{otherwise}.\end{cases}
+\]
+So the moves at time $m$ complement the tail of the state at time $m$ whenever its edge cell is mixed, and they never change a configuration whose edge cell at time $m$ is $(\neg\beta,\neg\beta)$. A move maps a tailed configuration with edge $r$ to a tailed configuration with edge $r$. It is described by its effect on the state at time $m$ alone, so $F^jM_m=M_{m-j}F^j$ and $F^j\bar M_m=\bar M_{m-j}F^j$, and by the remark after Definition~\ref{c24:def:flip}, $\bar M_m=\rho M_{-m}\rho$.
+
+\begin{lemma}[probes and moves]\label{c24:lem:moves}
+Let $h\in\mathcal H_N$, let $b$ be tailed with colour $\beta$ and $e(b)=r$, and let $m\in\Z$.
+\begin{enumerate}
+\item[(a)] Let $\varepsilon=[Y_b(m-1,r)=\beta]$. Then $F^sP_{m-2}(b)=F^sM_m(b)\sqcup K_{s-m+r+2-\varepsilon,\,\beta\oplus\varepsilon}$, glued at $r$, for every $s\ge m+\varepsilon$.
+\item[(b)] $hP_n(b)=P_n(hb)$ for every $n$.
+\item[(c)] $hM_m(b)=M_m(hb)$ and $h\bar M_m(b)=\bar M_m(hb)$.
+\item[(d)] \emph{(Light cone.)} $M_m(b)$ and $\bar M_m(b)$ agree with $b$ on $(-\infty,r-|m|]$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Apply Lemma~\ref{c24:lem:bounce} to $d=F^{m-2}b$, which is $\beta$-tailed with edge $r$, and $p=r+3$. Then $s_0=1$, $\varepsilon=[Y_d(1,r)=\beta]=[Y_b(m-1,r)=\beta]$, $U=r-\varepsilon$, and $D=d$ or $D=T_2(d)=F^{m-2}T_m(b)$. The condition $Y_b(m-1,r)=x_r=\beta$ says that the edge cell of $F^mb$ is $(\beta,\neg\beta)$, so $D=F^{m-2}M_m(b)$ in both cases. Replace $t$ by $s-m+2$.
+
+(b) By Lemma~\ref{c24:lem:glue}(b), $F^nP_n(b)=F^j(F^{n-j}b\sqcup L_{r+3+j,\beta})$ for $j\ge0$. Choose $j\ge2R$ with $j\equiv n\pmod N$, where $R$ is the radius of $h$. By Proposition~\ref{c24:prop:H1}, $hF^{n-j}b$ is $\beta$-tailed with edge $r$, and $h$ fixes $L_{r+3+j,\beta}$, so Lemma~\ref{c24:lem:glue}(c) gives $h(F^{n-j}b\sqcup L_{r+3+j,\beta})=hF^{n-j}b\sqcup L_{r+3+j,\beta}=F^{n-j}hb\sqcup L_{r+3+j,\beta}$, since $n-j\in N\Z$. Apply $F^{j-n}$, which commutes with $h$.
+
+(c) Let $\varepsilon$ be as in (a) and $\beta'=\beta\oplus\varepsilon$. By Proposition~\ref{c24:prop:H1}, $hb$ is $\beta$-tailed with edge $r$ and $Y_{hb}(m-1,r)=Y_b(m-1,r)$, so (a) holds for $hb$ with the same $\varepsilon$ and the same kink. Take $s\in N\Z$ with $s\ge m+1$ and $s-m+r+2-\varepsilon\ge r+2R+1$. By (a), (b) and $hF^s=F^sh$,
+\[
+F^sM_m(hb)\sqcup K=F^sP_{m-2}(hb)=hF^sP_{m-2}(b)=h\bigl(F^sM_m(b)\sqcup K\bigr),
+\]
+where $K=K_{s-m+r+2-\varepsilon,\beta'}$. By Proposition~\ref{c24:prop:H1}, $hF^sM_m(b)$ is $\beta'$-tailed with edge $r$, and $h$ fixes $K$. So, by Lemma~\ref{c24:lem:glue}(c), the right side is $hF^sM_m(b)\sqcup K=F^shM_m(b)\sqcup K$. Comparing on $(-\infty,r]$, the $\beta'$-tailed configurations $F^sM_m(hb)$ and $F^shM_m(b)$ are equal, and so $M_m(hb)=hM_m(b)$. For $\bar M_m=\rho M_{-m}\rho$ use $\rho h\rho\in\mathcal H_N$: $h\bar M_m(b)=\rho(\rho h\rho)M_{-m}(\rho b)=\rho M_{-m}(\rho h\rho\,\rho b)=\bar M_m(hb)$.
+
+(d) $F^mT_m(b)$ differs from $F^mb$ only on $(r,\infty)$, and $F^{-m}$ has radius $|m|$.
+\end{proof}
+
+By (a), $M_m$ is the passage from a probe at time $m-2$ to the configuration it leaves behind, as in Lemma~\ref{cl:lem:edgemove}; by (c) the moves commute with every $h\in\mathcal H_N$, for every $m$. As in Section~\ref{cl:sec:110}, this is an identity of operators defined by $F$ alone. For $46$ write $M^{46}_m$ and $\bar M^{46}_m$ for the moves of Section~\ref{cl:sec:46}. By Lemma~\ref{cl:lem:moves1446}(b) they are given by their effect on the state at time $m$: $M^{46}_m$ changes the edge cell $01$ to $10$ and fixes $b$ if the edge cell has $x$-bit $1$, and $\bar M^{46}_m$ changes $10$ to $01$ and fixes $b$ if the edge cell has $y$-bit $1$; nothing else changes.
+
+\begin{lemma}[moves of $66$ and of $46$]\label{c24:lem:moves46}
+Let $b$ be tailed with $e(b)=r$. Then $\delta M_m(b)=M^{46}_m(\delta b)$ and $\delta\bar M_m(b)=\bar M^{46}_m(\delta b)$ for every $m$. Consequently, if $O$ is a finite composite of moves $M_m$, $\bar M_m$ and $\tilde O$ is the same composite of the moves $M^{46}_m$, $\bar M^{46}_m$, then $\delta(Ob)=\tilde O(\delta b)$.
+\end{lemma}
+
+\begin{proof}
+Let $\beta$ be the colour of $b$ and $(x_r,y_r)$ the edge cell of $F^mb$. By Lemma~\ref{c24:lem:delta}, $F_{46}^m\delta b=\delta F^mb$, whose edge cell, at $r$, is $(x_r\oplus\beta,y_r\oplus\beta)$, by Lemma~\ref{c24:lem:tail}(b). If $(x_r,y_r)=(\beta,\neg\beta)$, this edge cell is $(0,1)$, and $M^{46}_m(\delta b)$ is obtained by changing it to $(1,0)$ at time $m$. On the other hand $F^mM_m(b)=F^mT_m(b)$ has the same cells as $F^mb$ on $(-\infty,r]$ and the tail $(\neg\beta,\neg\beta)$. So $\delta F^mT_m(b)$ agrees with $\delta F^mb$ at the cells $i<r$, its cell $r$ is $(\beta,\neg\beta)\oplus(\neg\beta,\neg\beta)=(1,0)$, and it vanishes beyond. Hence $F_{46}^m\delta M_m(b)=F_{46}^mM^{46}_m(\delta b)$. Otherwise the edge cell of $\delta F^mb$ has $x$-bit $1$, and both sides are unchanged. The case of $\bar M_m$ is the same with $(\neg\beta,\beta)$ and $(1,0)\mapsto(0,1)$. The last statement follows by induction on the length of $O$, since every move maps tailed configurations with edge $r$ to tailed configurations with edge $r$.
+\end{proof}
+
+So, under $\delta$, the moves of $66$ are exactly the moves $01\leftrightarrow10$ of $46$. The colour, which $\delta$ forgets, changes with every nontrivial move.
+
+\emph{The inductive statement.} For $k\ge1$ consider
+\begin{itemize}
+\item[$(\mathrm H'_k)$] \emph{for every $h\in\mathcal H_N$ and every tailed $c$, $(hc)_i=c_i$ for all $i\ge e(c)-k+1$.}
+\end{itemize}
+This is a statement about the state at time $0$. It is the analogue of $(\mathrm H_k)$ of Section~\ref{cl:sec:tail}, stated for block maps commuting with $F^N$. $(\mathrm H'_1)$ is Proposition~\ref{c24:prop:H1}(b).
+
+\begin{lemma}[all times]\label{c24:lem:alltimes}
+Assume $(\mathrm H'_k)$. Then for every $h\in\mathcal H_N$, every tailed $c$ and every $t\in\Z$, $F^thc$ agrees with $F^tc$ on $[e(c)-k+1,\infty)$; that is, $Y_{hc}(t,i)=Y_c(t,i)$ for all $t$ and all $i\ge e(c)-k+1$.
+\end{lemma}
+
+\begin{proof}
+$h_t=F^thF^{-t}$ lies in $\mathcal H_N$ (Lemma~\ref{c24:lem:Hclosed}), and $F^tc$ is tailed with edge $e(c)$ (Lemma~\ref{c24:lem:tail}). $(\mathrm H'_k)$ for $h_t$ and $F^tc$ is the claim, since $h_tF^tc=F^thc$.
+\end{proof}
+
+Conjugating $h$ by $F^t$ amounts to conjugating the moves: $F^{-t}M_mF^t=M_{m+t}$, and $h_t$ commutes with the moves because $h$ does.
+
+\begin{proposition}[the inductive step]\label{c24:prop:step}
+For every $k\ge1$, $(\mathrm H'_k)$ implies $(\mathrm H'_{k+1})$.
+\end{proposition}
+
+\begin{proof}
+\emph{Reading.} Let $h\in\mathcal H_N$ and let $b$ be tailed with $e(b)=r$. We show $Y_{hb}(0,r-k)=Y_b(0,r-k)$. By Lemma~\ref{c24:lem:tail}(b), $\delta b$ is $0$-tailed with edge $r$. By $(\mathrm{CTRL}'_k)$ for $46$ (Lemma~\ref{cl:lem:clean46} and Corollary~\ref{cl:cor:ctrl46}), there is a finite composite $\tilde O$ of moves $M^{46}_m$, $\bar M^{46}_m$ with $|m|\le k-1$ such that $Y_{\tilde O\delta b}(0,r-k+1)=1$. Let $O$ be the same composite of the moves of $66$. By Lemmas~\ref{c24:lem:moves46} and~\ref{c24:lem:delta}(b),
+\[
+Y_{Ob}(0,r-k+1)\oplus Y_{Ob}(0,r-k+2)=Y_{\delta Ob}(0,r-k+1)=1.
+\]
+Put $Y=Y_{Ob}$ and $Y'=Y_{hOb}$. As $Ob$ is tailed with edge $r$, Lemma~\ref{c24:lem:alltimes} gives $Y'=Y$ on the columns $\ge r-k+1$ at all times. So the relation \eqref{eq:rel} at $(0,r-k+1)$, in the two diagrams, gives
+\[
+f\bigl(Y'(0,r-k),\beta_1,\beta_2\bigr)=f\bigl(Y(0,r-k),\beta_1,\beta_2\bigr),\qquad \beta_1=Y(0,r-k+1)\ne\beta_2=Y(0,r-k+2).
+\]
+By \eqref{c24:eq:f}, $f(a,\beta_1,\beta_2)=[a=\beta_1]$, so $Y'(0,r-k)=Y(0,r-k)$. Now $hOb=Ohb$ by Lemma~\ref{c24:lem:moves}(c), and $hb$ is tailed with edge $r$ by Proposition~\ref{c24:prop:H1}. Every factor of $O$ is a move at a time $|m|\le k-1$, so by Lemma~\ref{c24:lem:moves}(d), applied factor by factor, $Ob$ agrees with $b$, and $Ohb$ with $hb$, on $(-\infty,r-k+1]$. Hence $Y_{hb}(0,r-k)=Y'(0,r-k)=Y(0,r-k)=Y_b(0,r-k)$.
+
+\emph{Both rows.} Let $h\in\mathcal H_N$ and let $c$ be tailed with $e(c)=r$. Reading with $b=c$ gives $Y_{hc}(0,r-k)=Y_c(0,r-k)$. Reading with $F^{-1}hF\in\mathcal H_N$ and $b=F^{-1}c$, which is tailed with edge $r$, gives $Y_{hc}(-1,r-k)=Y_{F^{-1}hc}(0,r-k)=Y_{F^{-1}c}(0,r-k)=Y_c(-1,r-k)$. So $(hc)_{r-k}=c_{r-k}$, and with $(\mathrm H'_k)$ this is $(\mathrm H'_{k+1})$.
+\end{proof}
+
+The reading target is the $y$-bit of the cell $r-k+1$ of $\delta(Ob)$. This is exactly the target of $(\mathrm{CTRL}'_k)$ for $46$, so no new controllability theorem is needed. The rule $66$ reads its left argument when the two other arguments differ, as $46$ reads its left argument when the middle one is $1$.
+
+\begin{proof}[Proof of Lemma~\ref{c24:lem:Kprime}]
+By Proposition~\ref{c24:prop:H1} and Proposition~\ref{c24:prop:step}, $(\mathrm H'_k)$ holds for every $k\ge1$. Let $h\in\mathcal H_N$ have radius $R$, and let $w\in\A^{2R+1}$. If $w=(0,0)^{2R+1}$, then $h(w)=(0,0)$ because $h$ fixes $(0,0)^{\Z}$. Otherwise let $c$ be $w$ on $[-R,R]$ and $(0,0)$ elsewhere. It is $0$-tailed with $e(c)\le R$, so $(\mathrm H'_{R+1})$ gives $h(w)=(hc)_0=c_0=w_0$. So $h=\mathrm{id}$.
+\end{proof}
+
+\subsection{Normalisation and the automorphism groups}\label{c24:sec:end}
+
+\begin{lemma}[normalisation]\label{c24:lem:norm}
+Let $N\ge1$ and let $g$ be an invertible block map that commutes with $F^N$ and fixes $(0,0)^{\Z}$ and $(1,1)^{\Z}$. Then $g=\sh^aF^b$ for some $a,b\in\Z$.
+\end{lemma}
+
+\begin{proof}
+Let $R$ be the radius of $g$. Since $g$ and $g^{-1}$ commute with $\sh^NF^N$, $g$ permutes its fixed points. The point $gK_{0,0}$ agrees with $g((0,0)^{\Z})=(0,0)^{\Z}$ on $(-\infty,-R)$, and it is not $(0,0)^{\Z}$ because $g$ is injective. By Lemma~\ref{c24:lem:fixn} with $n=N$, $gK_{0,0}=K_{e^+,0}$ for some $e^+\in\Z$, and then $gK_{p,0}=g\sh^{-p}K_{0,0}=K_{p+e^+,0}$ for every $p$. In the same way, with the fixed points of $\sh^{-N}F^N$, $gL_{p,0}=L_{p+e^-,0}$ for some $e^-$.
+
+\emph{Parity.} By Lemma~\ref{c24:lem:kinks}(c), $gK_{p,0}$ agrees with $g\sh^{-p}A=\sh^{-p}gA$ on $(p+R,\infty)$, and $K_{p+e^+,0}$ agrees with $\sh^{-p-e^+}A$ on $(p+e^+,\infty)$. Both $gA$ and $A$ are fixed by $\sh^2$, and two configurations of period $2$ that agree on a half-line are equal; so $gA=\sh^{-e^+}A$. In the same way, from $L_{p,0}$, $gA=\sh^{-e^-}A$. Since $\sh A\ne A=\sh^2A$, $e^+\equiv e^-\pmod2$.
+
+So $a=-\frac12(e^++e^-)$ and $b=\frac12(e^+-e^-)$ are integers. By Lemma~\ref{c24:lem:kinks}(b), $\sh^aF^b$ maps $K_{p,0}$ to $K_{p+b-a,0}=K_{p+e^+,0}$ and $L_{p,0}$ to $L_{p-a-b,0}=L_{p+e^-,0}$. Put $h=F^{-b}\sh^{-a}g$. It is a block map commuting with $F^N$; it fixes $(0,0)^{\Z}$ and $(1,1)^{\Z}$, which $F$ and $\sh$ fix; and it fixes $K_{0,0}$ and $L_{0,0}$. So $h\in\mathcal H_N$, and $h=\mathrm{id}$ by Lemma~\ref{c24:lem:Kprime}.
+\end{proof}
+
+\begin{theorem}\label{c24:thm:main}
+For $f\in\{24,66,189,231\}$,
+\[
+\Aut(X_{F_f})=\langle\sh,F_f\rangle\times\langle\kappa\rangle\cong\Z^2\times\Z/2,
+\]
+and every automorphism is $\sh^aF_f^b\kappa^j$ for unique $a,b\in\Z$ and $j\in\{0,1\}$.
+\end{theorem}
+
+\begin{proof}
+\emph{The rule $66$.} By Lemma~\ref{c24:lem:rules}(a), $\kappa\in\Aut(X_F)$; it commutes with $\sh$ and $F$, and $\kappa^2=\mathrm{id}$. Let $g\in\Aut(X_F)$. It commutes with $\sh$, so it permutes the fixed points of $\sh$, which are the four constant configurations. It commutes with $F$, so it permutes the constants fixed by $F$, which are $(0,0)^{\Z}$ and $(1,1)^{\Z}$ by Lemma~\ref{c24:lem:rules}(c). Replacing $g$ by $\kappa g$ if necessary, $g$ fixes both, and Lemma~\ref{c24:lem:norm} with $N=1$ gives $g=\sh^aF^b$. So $\Aut(X_F)=\langle\sh,F\rangle\langle\kappa\rangle$. For uniqueness, suppose $\sh^aF^b\kappa^j=\mathrm{id}$. Then $j=0$, since $\sh^aF^b$ fixes $(0,0)^{\Z}$ and $\kappa$ does not; and comparing $\sh^aF^bK_{0,0}=K_{b-a,0}$ and $\sh^aF^bL_{0,0}=L_{-a-b,0}$ with $K_{0,0}$ and $L_{0,0}$ gives $a=b=0$.
+
+\emph{The rule $189$.} Let $g\in\Aut(X_{F'})$. It permutes the four constant configurations by a permutation $\pi$ that commutes with the $4$-cycle $\gamma$ by which $F'$ acts (Lemma~\ref{c24:lem:rules}(c)). Then $\pi\gamma^k(s)=\gamma^k\pi(s)$ for a fixed constant $s$ and all $k$, so $\pi$ is determined by $\pi(s)$, and $\pi=\gamma^j$ for the $j$ with $\gamma^j(s)=\pi(s)$. So $g_1=F'^{-j}g$ fixes all four constants. It commutes with $F'^4=F^4$ (Lemma~\ref{c24:lem:rules}(b)), so Lemma~\ref{c24:lem:norm} with $N=4$ gives $g_1=\sh^aF^b$. Now $F^b$ exchanges $(0,1)^{\Z}$ and $(1,0)^{\Z}$ if $b$ is odd (Lemma~\ref{c24:lem:rules}(c)), while $g_1$ fixes them; so $b$ is even, and $F^b=(F^2)^{b/2}=(\kappa F'^2)^{b/2}=\kappa^{b/2}F'^b$. Hence $g=F'^{j}\sh^a\kappa^{b/2}F'^b\in\langle\sh,F'\rangle\langle\kappa\rangle$, and $\kappa\in\Aut(X_{F'})$ by Lemma~\ref{c24:lem:rules}(a). For uniqueness, suppose $\sh^aF'^b\kappa^j=\mathrm{id}$. On the constants, $\kappa$ acts as $\gamma^2$, so $\gamma^{b+2j}=\mathrm{id}$ and $b\equiv2j\pmod4$. Then $b$ is even, $F'^b\kappa^j=\kappa^{b/2+j}F^b$, and $b/2\equiv j\pmod2$, so $\sh^aF^b=\mathrm{id}$, hence $a=b=0$ by the case of $66$, and then $j=0$ since $2j\equiv0\pmod4$.
+
+\emph{Reflection.} The reflection $\mathrm{rev}$ conjugates $F_{66}$ to $F_{24}$ and $F_{189}$ to $F_{231}$, $\sh$ to $\sh^{-1}$, and $\kappa$ to itself (Section~\ref{sec:conj}). So it carries the statement for $66$ and $189$ to the statement for $24$ and $231$.
+\end{proof}
+
+For the class of $189$ the normalisation cannot use kinks of $\sh^{\pm1}F'$, since there are none (Lemma~\ref{c24:lem:rules}(d)). It uses the kinks of $66$, which are fixed by $\sh^{\pm4}F'^4$ (Lemma~\ref{c24:lem:fixn}). The element $F_{66}$ does not commute with $F'$: on $(0,0)^{\Z}$, $FF'$ gives $(1,0)^{\Z}$ and $F'F$ gives $(0,1)^{\Z}$. Its square $F_{66}^2=\kappa F'^2$ does commute with $F'$, and this is why $b$ is even. No computer is used in this section.

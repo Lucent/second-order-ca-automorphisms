@@ -1,0 +1,8 @@
+66 forbidden [(0, 1, 1), (1, 0, 0)]
+189 allowed [(0, 1, 1), (1, 0, 0)]
+rule identities ok
+operator identities ok
+kinks ok
+gluing ok
+bounce lemma ok {0: 331, 1: 169}
+ALL CHECKS PASSED

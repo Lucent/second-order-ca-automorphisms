@@ -1,0 +1,46 @@
+\section{Front strips of 155R}\label{app:155}
+
+This appendix continues Section~\ref{cl:sec:155}. Throughout, $f=155$ and $F=F_{155}$.
+
+Let $c$ agree with $b_\beta$ on $(-\infty,s)$, as in Proposition~\ref{cl:prop:155}, put $\beta'=\beta_{(s-1)\bmod2}$, and for $j\in\Z$ and $t\ge-1$ let $Z_j(t)=Y_c(t,s-t+j)$, the value at time $t$ on the left-moving light ray $p=s+j$, which we call \emph{line} $j$. For $j<0$ and $t\ge0$, $Z_j(t)=\beta_{(s+j)\bmod2}$, because $Y_c(t,i)$ depends only on $c_{[i-t,i+t]}$; so $Z_{-1}=\beta'$ and $Z_{-2}=1\oplus\beta'$, and $Z_0$ is constant by Proposition~\ref{cl:prop:155}. We call $c$ an \emph{$11$-front} if $Z_0=\beta'=1$ (the case of Proposition~\ref{cl:prop:155}) and a \emph{$00$-front} if $Z_0=\beta'=0$; if $Z_0\ne\beta'$, line $0$ also carries background values. The relation \eqref{cl:eq:wave} at the centre $(t,s-t+j-1)$ reads
+\begin{equation}\label{cl:eq:strip}
+Z_j(t+1)=Z_j(t)\oplus Z_{j-2}(t)\oplus Z_{j-2}(t-1)\oplus N\bigl(Z_{j-2}(t),Z_{j-1}(t),Z_j(t)\bigr)\qquad(t\ge0),
+\end{equation}
+so each line is driven by the two lines to its left; we call $(Z_{j-2}(t),Z_{j-1}(t))$ the \emph{context} of line $j$ at time $t$. For $f=155$, $N(0,0,z)=1\oplus z$, $N(1,1,z)=1$ and $N(0,1,z)=N(1,0,z)=0$.
+
+\begin{lemma}[front strips of $155$R]\label{cl:lem:155strip}
+Let $f=155$ and $c$, $s$, $Z_j$ be as above.
+\begin{enumerate}
+\item[(i)] Let $m\ge1$, and suppose that the lines $Z_j$, $j<m$, are periodic on $t\ge t_0$ with a common period $L$. For $t\ge t_0+1$ put $T_t(z)=z\oplus Z_{m-2}(t)\oplus Z_{m-2}(t-1)\oplus N(Z_{m-2}(t),Z_{m-1}(t),z)$, so that $Z_m(t+1)=T_t(Z_m(t))$ and $T_{t+L}=T_t$, and let $T=T_{t_0+L}\circ\cdots\circ T_{t_0+1}$. Then exactly one of the following holds.
+\begin{itemize}
+\item \emph{Slaved:} the context of line $m$ is $00$ at some $t\ge t_0+1$. Then $T$ is constant, and $Z_m$ is $L$-periodic on $t\ge t_0+L+1$ whatever its values at times $t\le t_0+L$.
+\item \emph{Free:} the context is never $00$ on $t\ge t_0+1$, and $T=\mathrm{id}$. Then $Z_m$ is $L$-periodic on $t\ge t_0+1$, and the two values of $Z_m(t_0+1)$ give two $L$-periodic continuations.
+\item \emph{Doubling:} the context is never $00$ on $t\ge t_0+1$, and $T(z)=1\oplus z$. Then $Z_m(t+L)=1\oplus Z_m(t)$ for $t\ge t_0+1$, so $Z_m$ is $2L$-periodic there and both values of $Z_m(t_0+1)$ lie on one cycle.
+\end{itemize}
+In particular every line is eventually periodic, with a period that is a power of $2$.
+\item[(ii)] Let $j\ge1$, and suppose that $Z_{j-2}$ and $Z_{j-1}$ are constant on $t\ge t_0$, with values $a$ and $b$. Then for $t\ge t_0+1$, $Z_j(t+1)=1$ if $ab=00$, $Z_j(t+1)=1\oplus Z_j(t)$ if $ab=11$, and $Z_j(t+1)=Z_j(t)$ otherwise.
+\item[(iii)] Suppose that the lines $Z_j$, $0\le j<K$, are periodic on $t\ge t_0$ (the front is \emph{recurrent at width $K$}). Let $j_1$ be the least $j<K$ such that $Z_j$ is not constant on $t\ge t_0$, with $j_1=K$ if there is none, and let $\omega=Z_{-2}Z_{-1}\cdots Z_{j_1-1}$ be the word of the constant values. Then $j_1\ge1$, $\omega$ contains no $000$, it contains $11$ at most as its last two letters, and if $j_1<K$ it ends in $11$. Hence either $\omega$ contains neither $11$ nor $000$ and $j_1=K$, so that on the lines $-2,\dots,K-1$ and $t\ge t_0$ the diagram is constant on every line, like the diagram $\varphi(i+t)$ of a point of $\Phi^-$; or $\omega$ ends in $011$, its last letter being on line $J$, and the lines $j\ge J$ satisfy \eqref{cl:eq:strip} with $Z_{J-1}=Z_J=1$ constant, as the lines $j-J\ge0$ of an $11$-front do: the strip is a shifted $11$-front.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) For $ab=00$ the map $z\mapsto z\oplus k\oplus N(a,b,z)$ is the constant $1\oplus k$; for $ab\ne00$, $N(a,b,z)$ does not depend on $z$ and the map is $z\mapsto z\oplus k'$ with $k'$ independent of $z$. So $T$ is constant if some $T_\tau$ with $t_0+1\le\tau\le t_0+L$ is constant, and a translation $z\mapsto z\oplus\varepsilon$ otherwise; the three cases are $T$ constant, $\varepsilon=0$ and $\varepsilon=1$. In the slaved case, if $T_\tau$ is constant, then $Z_m(\tau+1)=T_\tau(Z_m(\tau))=T_{\tau+L}(Z_m(\tau+L))=Z_m(\tau+L+1)$, and since $T_{t+L}=T_t$, $Z_m$ is $L$-periodic from $\tau+1\le t_0+L+1$ on. In the other cases every $T_t$ is a translation, and $Z_m(t+L)=T_{t+L-1}\circ\cdots\circ T_t(Z_m(t))$ for $t\ge t_0+1$; this composition consists of the same translations as $T$, so it equals $T$. The lines $j\le0$ are constant on $t\ge0$, so induction on $m$ gives the last statement.
+
+(ii) For $t\ge t_0+1$, $Z_{j-2}(t)\oplus Z_{j-2}(t-1)=0$ in \eqref{cl:eq:strip}, and the values of $N(a,b,\cdot)$ listed above give the three cases.
+
+(iii) The lines $j\le0$ are constant, so $j_1\ge1$, and $\omega$ begins with $Z_{-2}Z_{-1}\in\{01,10\}$, so a factor $000$ of $\omega$ occupies lines $j-2,j-1,j$ with $1\le j<j_1$, and a factor $11$ that is not at the end of $\omega$ occupies lines $j-2,j-1$ with $1\le j<j_1$. In the first case (ii) would give $Z_j(t)=1$ for $t\ge t_0+2$, contradicting $Z_j=0$ on $t\ge t_0$. In the second case (ii) would make $Z_j$ alternate on $t\ge t_0+1$, which is not constant. If $j_1<K$, the lines $j_1-2$, $j_1-1$ are constant with values $ab$, and if $ab\ne11$, (ii) makes $Z_{j_1}$ constant on $t\ge t_0+2$, hence, being periodic, on $t\ge t_0$; so $ab=11$. In the second alternative the letter before the final $11$ exists and is $0$, since $\omega$ has length at least $3$ and contains no $11$ before its last two letters. For $j\ge J+1$ the relation \eqref{cl:eq:strip} involves only the lines $j-2\ge J-1$, $j-1$ and $j$, and for an $11$-front the lines $-1$ and $0$ are constant $1$; so the shift $j\mapsto j-J$ carries the one system to the other.
+\end{proof}
+
+For the $11$-front the tree of periodic continuations of Lemma~\ref{cl:lem:155strip}(i) begins as follows (computer-assisted): lines $1$ and $2$ are doubling (lines $-1$ and $0$ are constant $1$, so line $1$ alternates by (ii)), lines $3$--$6$ are slaved, line $7$ is free, lines $8$--$10$ are slaved, and at line $11$ one of the two branches doubles while the other is slaved; at line $39$ there are $34$ branches, with periods $8$ and $16$. For the $00$-front there are $220$ periodic continuations at width $K=18$; in $86$ of them $\omega$ contains no $11$, and $134$ are shifted $11$-fronts, $28$ of which have their final $11$ on the last two lines.
+
+\begin{remark}[the front hypothesis (Fr) for $155$R]\label{cl:rem:155G1}
+Let $h$ be a block map of radius $R$ that commutes with $F$ and fixes every point of $\Phi^+\cup\Phi^-$, let $c$, $s$ and $Z_j$ be as above, and put $\Delta=Y_{h(c)}\oplus Y_c$ and $\Delta_j(t)=\Delta(t,s-t+j)$. For $t\ge0$ the cells of $F^t(c)$ to the left of $s-t$ are those of $F^t(b_\beta)$, and $b_\beta\in\Phi^+$, so $\Delta_j(t)=0$ for $j<-R$ and $t\ge0$: the configuration $h(c)$ agrees with $b_\beta$ on $(-\infty,s-R)$, and its front lies at most $R$ cells to the left of that of $c$. Lemma~L for $155$ implies the following hypothesis (Fr): for all such $h$ and $c$ and every $j$, $\Delta_j(t)=0$ for all large $t$; that is, $h$ fixes the eventually periodic front windows of Lemma~\ref{cl:lem:155strip}(i).
+
+Lemma~\ref{cl:lem:155strip}(i) reformulates (Fr). Suppose that (Fr) fails for $c$, and let $m$ be the least $j$ with $\Delta_j(t)\ne0$ for arbitrarily large $t$. Then $m\ge-R$, and there is $t_1$ with $\Delta_j(t)=0$ for all $j<m$ and $t\ge t_1$. So $Y_{h(c)}$ and $Y_c$ have the same lines $j<m$ on $t\ge t_1$, and the difference of the two instances of \eqref{cl:eq:strip} gives, for $t\ge t_1+1$,
+\[
+\Delta_m(t+1)=\Delta_m(t)\cdot\bigl[(Z_{m-2}(t),Z_{m-1}(t))\ne00\bigr],
+\]
+because $N(0,0,z)\oplus N(0,0,z\oplus1)=1$ and $N(a,b,\cdot)$ is constant for $ab\ne00$. So $\Delta_m$ is nonincreasing on $t\ge t_1+1$; since it is nonzero at arbitrarily large $t$, $\Delta_m(t)=1$ for all $t\ge t_1+1$, and the context of line $m$ is never $00$ there. By Lemma~\ref{cl:lem:155strip}(i), line $m$ is free or doubling, and $h(c)$ carries on it the other free continuation, or the other half of the doubled cycle, which is a time shift by $L$. If $m\le0$, the context of line $m$ is the background pair $01$ or $10$, so the line is free; for $m<0$, $h$ moves the front by $-m\le R$ cells to the left, and for $m=0$ it complements the edge bit. Thus (Fr) is equivalent to: for no such $h$ and $c$ is there a line $m\ge-R$, free or doubling for $c$, such that from some time on $\Delta$ vanishes on the lines $j<m$ and is $1$ on line $m$.
+
+The full closure of Remark~\ref{cl:rem:155} does not use front windows. A weaker closure, which uses the relation \eqref{cl:eq:wave} only to force the value at the point $\mathsf S$, one step back in time, from the other four values of a stencil, forces every window for $2\le R\le4$ (computer-assisted; Appendix~\ref{app:stated}) when the windows of the fronts at small offsets, and of their time reversals, are added to the base, and it stalls without them. A proof of (Fr), together with such a closure at every radius (call this (Cl)), would give Lemma~L for $155$.
+\end{remark}

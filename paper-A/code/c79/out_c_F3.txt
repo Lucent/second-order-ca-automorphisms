@@ -1,0 +1,4 @@
+Gamma_3: states 1152 edges 2688 ; states of E 20 per exterior cell [(0, 5), (1, 5), (2, 5), (3, 5)]
+S(xi)\E <= R(xi) <= S(xi) for all states: True
+not used: no state outside E reaches E: True
+(F*_3) holds on Gamma_3: True

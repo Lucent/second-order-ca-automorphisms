@@ -1,0 +1,6 @@
+NEGATIVE CONTROL: TY[777] flipped
+(A) class 0 (y-bit): 2^17 windows, mismatches 8
+(A) class 1 (x-bit): 2^17 windows, mismatches 4
+(B) class 0 (y-bit): 2^29 windows, violations of (sigma h)^2=id: 32768
+(B) class 1 (x-bit): 2^29 windows, violations of (sigma h)^2=id: 16384
+(C) 2^26 fully random windows: commutation mismatches 6073, involution violations 6004

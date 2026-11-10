@@ -1,0 +1,270 @@
+\section{Scattering and kink rigidity for 94R and 95R}\label{cl:sec:scatter}
+
+We now study how a point of $\Phi^+$ placed to the left of a point of $\Phi^-$ scatters off it, and use the scattering to normalise the automorphisms of $X_{F_{94}}$ and $X_{F_{95}}$. For $94$ the normalisation is the first step of the proof of $\Aut(X_{F_{94}})=\langle\sh,F\rangle$ in Section~\ref{cl:sec:94}; for $95$ it is used in Section~\ref{cl:sec:95} to determine the group (Theorem~\ref{cl:thm:95Aut}).
+
+\emph{Placed pairs.} Let $f\in\{91,94,95\}$. The diagram of a point of $\Phi^+$ is a function $\pi(q)$ of $q$ alone and that of a point of $\Phi^-$ a function $\xi(p)$ of $p$ alone, and we describe these points by $\pi$ and $\xi$. A \emph{placed pair} is a pair $(P,X)\in\Phi^+\times\Phi^-$ whose diagrams $\pi(q)$ and $\xi(p)$ are eventually $2$-periodic in both directions, together with a \emph{corner} $[q_0,p_0]$, $q_0\equiv p_0\pmod2$, and a valid background $\beta$ such that
+\[
+\pi(q)=\beta_{q\bmod2}\ \ (q\le q_0+1),\qquad \xi(p)=\beta_{p\bmod2}\ \ (p\le p_0+1).
+\]
+The \emph{left tail} $\beta^L$ of $P$ is the valid background with $\pi(q)=\beta^L_{q\bmod2}$ for all large $q$, and the \emph{right tail} $\beta^R$ of $X$ the one with $\xi(p)=\beta^R_{p\bmod2}$ for all large $p$; they need not be equal to $\beta$. (A $2$-periodic tail of a sequence of $\Phi_f$ is a valid background, since its two triples are not in the support of $N$.) Let $Y_{P,X}$ be the function on the lattice that equals $\pi(q)$ on $\{p<p_0\}$, $\xi(p)$ on $\{q<q_0\}$ (on the intersection both are $\beta_{q\bmod2}$), and on the quadrant $G=\{q\ge q_0,\ p\ge p_0\}$ is the solution of \eqref{cl:eq:goursat} with boundary values $A=\pi$ and $B=\xi$; these agree at the two corners. Then $Y_{P,X}=\pi(q)$ on $\{p\le p_0+1\}$ and $Y_{P,X}=\xi(p)$ on $\{q\le q_0+1\}$. The relation \eqref{cl:eq:wave} holds at every centre $C=[q,p]$: if $p\le p_0$, the points $\mathsf N,\mathsf S,\mathsf W,\mathsf E,C$ lie in $\{p\le p_0+1\}$, where $Y_{P,X}$ is the diagram of $P$; if $q\le q_0$, likewise with $X$; otherwise $\mathsf S,\mathsf W,\mathsf E\in G$ and $Y_{P,X}(\mathsf N)$ is given by \eqref{cl:eq:goursat}. So $Y_{P,X}$ is a diagram. The sets $\{p\le p_0+1\}$ and $\{q\le q_0+1\}$ together contain the rows $t_0-1$ and $t_0$, $t_0=(q_0+p_0)/2$, so $Y_{P,X}$ is the unique diagram that equals $\pi(q)$ on $\{p\le p_0+1\}$ and $\xi(p)$ on $\{q\le q_0+1\}$. In particular it does not change if the corner is replaced by a smaller one, and in the rows $t_0-1$, $t_0$ it is the diagram of $P$ on the columns $i<i_0=(p_0-q_0)/2$ and that of $X$ on $i\ge i_0$. So it is the diagram of the configuration that is $P$ on the left and $X$ on the right, and a point of $\Phi^+$ that is eventually $2$-periodic on both sides, placed far to the left of a point of $\Phi^-$ with the same property whose left tail is the right tail of the former, forms a placed pair with it. We call $Y_{P,X}$ the diagram of the pair. By \eqref{cl:eq:goursat} and induction on $q+p$ we have \emph{Goursat causality}: for $[q,p]\in G$, $Y_{P,X}[q,p]$ depends only on $\pi$ on $[q_0,q]$ and $\xi$ on $[p_0,p]$.
+
+\begin{lemma}[scattering]\label{cl:lem:scatter}
+Let $f\in\{91,94,95\}$, let $(P,X)$ be a placed pair with corner $[q_0,p_0]$, let $\beta^L$ be the left tail of $P$ and $\beta^R$ the right tail of $X$, and let $Y=Y_{P,X}$.
+\begin{enumerate}
+\item[(i)] $Y$ fires at finitely many centres, and each of them is a centre $[q',p']$ with $q'>q_0$ and $p'>p_0$.
+\item[(ii)] There are $q_1\ge q_0$, $p_1\ge p_0$, sequences $\gamma,o\in\Phi_f$ and a valid background $\beta'$ such that $Y[q,p]=\gamma(p)$ whenever $q\ge q_1$, and $Y[q,p]=o(q)$ whenever $p\ge p_1$. Moreover $\gamma(p)=\beta^L_{p\bmod2}$ for $p\le p_0+1$, $o(q)=\beta^R_{q\bmod2}$ for $q\le q_0+1$, $\gamma(p)=\beta'_{p\bmod2}$ for $p\ge p_1$ and $o(q)=\beta'_{q\bmod2}$ for $q\ge q_1$.
+\item[(iii)] For $k\ge0$ let $P_k\in\Phi^+$ have the diagram $\pi(q-2k)$. Then $(P_k,X)$ is a placed pair with corner $[q_0+2k,p_0]$, and $Y_{P_k,X}[q,p]=Y[q-2k,p]$.
+\item[(iv)] Let $\Gamma\in\Phi^-$ have the diagram $\gamma(p)$, let $q_2\ge q_1$ with $q_2\equiv p_0\pmod2$, and let $P'\in\Phi^+$ have a diagram $\pi'(q)$ that is eventually $2$-periodic, with $\pi'(q)=\beta^L_{q\bmod2}$ for $q\le q_2+1$. Let $P'*P\in\Phi^+$ have the diagram equal to $\pi(q)$ for $q\le q_2+1$ and to $\pi'(q)$ for $q\ge q_2$. Then $(P'*P,X)$ is a placed pair with corner $[q_0,p_0]$, $(P',\Gamma)$ is a placed pair with corner $[q_2,p_0]$, and $Y_{P'*P,X}$ equals $Y$ on $\{q\le q_2+1\}$ and $Y_{P',\Gamma}$ on $\{q\ge q_2\}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Let $c$ be the configuration with diagram $Y$. For some $L$, the rows $t_0-1$ and $t_0$ of $Y$ agree with the diagram of $b_{\beta^L}$ at the columns $i\le i_0-L$ (there $p<p_0$ and $q$ is large) and with that of $b_{\beta^R}$ at the columns $i\ge i_0+L$. The diagram $\beta_{(t+i)\bmod2}$ of a background is of both forms $\varphi(i-t)$ and $\varphi(i+t)$, so $b_{\beta^L},b_{\beta^R}\in\Phi^+\cap\Phi^-$. Since the rows $t_0-1$ and $t_0$ of $Y$ are the configuration $F^{t_0}(c)$, the configuration $\sh^{i_0}F^{t_0}(c)$ agrees with $\sh^{i_0}b_{\beta^L}\in\Phi^-$ on $(-\infty,-L]$ and with $\sh^{i_0}b_{\beta^R}\in\Phi^+$ on $[L,\infty)$, which is the hypothesis of Proposition~\ref{cl:prop:Fprime}; so $Y$ fires only finitely often in the rows $t\ge t_0$. A centre $[q',p']$ with $p'\le p_0$ does not fire: its points $\mathsf W,C,\mathsf E$ lie in $\{p\le p_0+1\}$, so its row triple is $(\pi(q'+1),\pi(q'),\pi(q'-1))$, a triple of the sequence $k\mapsto\pi(-k)$ of $\Phi_f$. Likewise a centre with $q'\le q_0$ has the row triple $(\xi(p'-1),\xi(p'),\xi(p'+1))$ and does not fire. The remaining centres lie in the rows $t>t_0$.
+
+(ii) By (i) there is $q_1\ge q_0$ such that every firing has $q'\le q_1-2$ and $\pi(q)=\beta^L_{q\bmod2}$ for $q\ge q_1$. Let $[q,p]\in G$ with $q\ge q_1$. In Lemma~\ref{cl:lem:dalembert}, whose proof does not use the form of $N$, $A(q)=\beta^L_{q\bmod2}=\beta^L_{p\bmod2}$, $\nu$ depends only on $q\bmod2=p\bmod2$, and the firings counted are those with $p'<p$ and $p'\not\equiv p$; so $Y[q,p]$ depends only on $p$. Points with $q\ge q_1$ and $p<p_0$ carry $\pi(q)=\beta^L_{p\bmod2}$. So $Y[q,p]=\gamma(p)$ on $\{q\ge q_1\}$ for a sequence $\gamma$ on $\Z$, and $\gamma(p)=\pi(q)=\beta^L_{p\bmod2}$ for $p\le p_0+1$. A centre $[q,p]$ with $q\ge q_1+1$ does not fire and has the row triple $(\gamma(p-1),\gamma(p),\gamma(p+1))$, so $\gamma\in\Phi_f$. In the same way, with $p_1\ge p_0$ such that every firing has $p'\le p_1-2$ and $\xi(p)=\beta^R_{p\bmod2}$ for $p\ge p_1$, we get $Y[q,p]=o(q)$ on $\{p\ge p_1\}$ with $o\in\Phi_f$ and $o(q)=\xi(p)=\beta^R_{q\bmod2}$ for $q\le q_0+1$. On $\{q\ge q_1,\ p\ge p_1\}$ we have $\gamma(p)=o(q)$; fixing $p$ and varying $q$ in one residue class shows that $o$ is constant on each residue class of $\{q\ge q_1\}$, so $o(q)=\beta'_{q\bmod2}$ there, and then $\gamma(p)=\beta'_{p\bmod2}$ for $p\ge p_1$. As a $2$-periodic tail of $\gamma$, $\beta'$ is valid.
+
+(iii) The map $[q,p]\mapsto[q+2k,p]$ is the translation $(t,i)\mapsto(t+k,i-k)$, so $Y[q-2k,p]$ is a diagram. It equals $\pi(q-2k)$ on $\{p\le p_0+1\}$ and $\xi(p)$ on $\{q\le q_0+2k+1\}$, and $\pi(q-2k)=\beta_{q\bmod2}$ for $q\le q_0+2k+1$. By the uniqueness above it is $Y_{P_k,X}$.
+
+(iv) The diagram of $P'*P$ is well defined, since $\pi$ and $\pi'$ both equal $\beta^L_{q\bmod2}$ at $q_2$ and $q_2+1$, and it lies in $\Phi_f$, since every three consecutive integers lie in $(-\infty,q_2+1]$ or in $[q_2,\infty)$. It equals $\pi$ on $(-\infty,q_0+1]$, so $(P'*P,X)$ is placed at $[q_0,p_0]$; and $\pi'(q)=\beta^L_{q\bmod2}$ for $q\le q_2+1$ and $\gamma(p)=\beta^L_{p\bmod2}$ for $p\le p_0+1$, so $(P',\Gamma)$ is placed at $[q_2,p_0]$. Let $Y''=Y_{P'*P,X}$. By Goursat causality, $Y''=Y$ on $G\cap\{q\le q_2+1\}$, and outside $G$ the two diagrams are given by the same values of $\pi$ and $\xi$ there. On the quadrant $G_2=\{q\ge q_2,\ p\ge p_0\}$, $Y''$ and $Y_{P',\Gamma}$ both satisfy \eqref{cl:eq:goursat}, both equal $\pi'(q)$ on the ray $p\in\{p_0,p_0+1\}$, and both equal $\gamma(p)$ on the ray $q\in\{q_2,q_2+1\}$, where $Y''=Y=\gamma(p)$ because $q_2\ge q_1$. So they agree on $G_2$, and on $\{q\ge q_2,\ p<p_0\}$ both are $\pi'(q)$.
+\end{proof}
+
+For a placed pair $(P,X)$ let $\Gamma\in\Phi^-$ and $\Omega\in\Phi^+$ be the points with diagrams $\gamma(p)$ and $o(q)$, and put $\mathcal S(P,X)=(\Gamma,\Omega)$. A point of $\Phi^-$ is determined by its diagram on a half-plane $\{q\ge q_1\}$, so $\Gamma$ is the unique point of $\Phi^-$ whose diagram agrees with $Y_{P,X}$ on such a half-plane, and likewise for $\Omega$. The point of $\Phi^-$ given by Proposition~\ref{cl:prop:Fprime} for the configuration with diagram $Y_{P,X}$ agrees with $Y_{P,X}$ on a region that meets every line $p=\mathrm{const}$ inside such a half-plane, so $\Gamma$ and $\Omega$ are the outgoing $\Phi^-$ and $\Phi^+$ parts given by that proposition.
+
+\emph{Links, objects and probes.} Let $f\in\{91,94,95\}$. We identify a point of $\Phi^\pm$ with its sequence in $\Phi_f$. A \emph{link} is a point of $\Phi^+$ or $\Phi^-$ that agrees with a $2$-periodic point off a bounded set. A \emph{$\Phi^-$ object} is a point $X\in\Phi^-$ that is eventually $2$-periodic on both sides, with a left tail $\lambda$ and a right tail $\lambda'$ among the valid backgrounds ($0^\infty$, $1^\infty$ for $94$; $1^\infty$, $(01)^\infty$, $(10)^\infty$ for $91$; $1^\infty$ for $95$). Its \emph{support} $\operatorname{supp}X$ is the length of its core, the shortest word $w$ with $X=\cdots\lambda\, w\,\lambda'\cdots$. So $\operatorname{supp}X=0$ exactly when $X$ is a background or, for $91$ and $94$, a \emph{bare kink}, the two different tails abutting at a junction. The core and the support of a link are defined in the same way. A \emph{probe} for $X$ is a link $P\in\Phi^+$ both of whose tails are $\lambda$; then $(P,X)$ is a placed pair at every sufficiently small corner, and we write $\mathcal S(P,X)=(\Gamma_P(X),\Omega_X(P))$ and call $\Omega_X(P)$ the \emph{response} of $X$ to $P$. By Lemma~\ref{cl:lem:scatter}(iii), moving the probe by $2k$ along its rays leaves $\Gamma_P(X)$ unchanged and replaces $o(q)$ by $o(q-2k)$; so $\Gamma_P(X)$ does not depend on how far to the left $P$ is placed, and $\Omega_X(P)$ only up to this translation. By Lemma~\ref{cl:lem:scatter}(iv), a probe $P'$ placed far enough to the left of $P$ acts on $X$ through $\Gamma_P(X)$: $\Gamma_{P'*P}(X)=\Gamma_{P'}(\Gamma_P(X))$.
+
+\emph{Time reversal.} We use the time reversal to invert $\mathcal S$. Let $\mu=\mathrm{rev}\circ\rho$, so that $(\mu c)_i=\rho(c_{-i})$. Since $f(a,b,c)=f(c,b,a)$ for $f\in\{91,94,95\}$, Lemma~\ref{lem:classes} gives $\mathrm{rev}\,F\,\mathrm{rev}=F$, hence $\mu F\mu=F^{-1}$; and $Y_{\mu c}(t,i)=Y_c(-1-t,-i)$, since $F^t(\mathrm{rev}\,c)=\mathrm{rev}\,F^t(c)$ and $Y_{\rho c}(t,i)=Y_c(-1-t,i)$ (Section~\ref{sec:prelim}). In light-cone coordinates $\mu$ is the point reflection $[q,p]\mapsto[-1-q,-1-p]$, which exchanges $\mathsf N$ with $\mathsf S$ and $\mathsf W$ with $\mathsf E$. It maps $\Phi^+$ and $\Phi^-$ to themselves, the diagram $\pi(q)$ to $\pi(-1-q)$ and $\xi(p)$ to $\xi(-1-p)$, and backgrounds to backgrounds. On pairs put $\mu(P,X)=(\mu X,\mu P)$ for $(P,X)\in\Phi^+\times\Phi^-$ and $\mu(\Gamma,\Omega)=(\mu \Omega,\mu\Gamma)$ for $(\Gamma,\Omega)\in\Phi^-\times\Phi^+$.
+
+\begin{proposition}[time-reversal duality]\label{cl:prop:dual}
+Let $f\in\{91,94,95\}$, let $(P,X)$ be a placed pair, and let $\mathcal S(P,X)=(\Gamma,\Omega)$. Then $(\mu \Omega,\mu\Gamma)$ is a placed pair, and
+\[
+\mathcal S(\mu \Omega,\mu\Gamma)=(\mu X,\mu P).
+\]
+Consequently $\mathcal S\mu \mathcal S=\mu$ on placed pairs, $\mathcal S$ is a bijection from the set of placed pairs onto the set of pairs $(\Gamma,\Omega)\in\Phi^-\times\Phi^+$ for which $\mu(\Gamma,\Omega)$ is placed, and $\mathcal S^{-1}=\mu \mathcal S\mu$.
+\end{proposition}
+
+\begin{proof}
+Let $Y=Y_{P,X}$, with corner $[q_0,p_0]$, and take $q_1,p_1,\gamma,o,\beta'$ from Lemma~\ref{cl:lem:scatter}(ii). Put $Y'[q,p]=Y[-1-q,-1-p]$. The relation at a centre $C$ for $Y$ is the relation at the reflected centre for $Y'$, with $\mathsf W$ and $\mathsf E$ exchanged in the argument of $N$; since $N$ is invariant under reversal of the triple, $Y'$ is a diagram (it is $Y_{\mu c}$, $c$ the configuration of $Y$). Let $\pi'(q)=o(-1-q)$ and $\xi'(p)=\gamma(-1-p)$, the diagrams of $\mu \Omega$ and $\mu\Gamma$. Then $Y'=\pi'(q)$ on $\{p\le-1-p_1\}$ and $Y'=\xi'(p)$ on $\{q\le-1-q_1\}$. Choose $q_0'\le-2-q_1$ and $p_0'\le-2-p_1$ with $q_0'\equiv p_0'$. For $q\le q_0'+1$ we have $-1-q\ge q_1$, so $\pi'(q)=\beta'_{(-1-q)\bmod2}$, and likewise $\xi'(p)=\beta'_{(-1-p)\bmod2}$ for $p\le p_0'+1$. So $(\mu \Omega,\mu\Gamma)$ is a placed pair with corner $[q_0',p_0']$, and by uniqueness its diagram is $Y'$. Now $Y=\xi(p)$ on $\{q\le q_0+1\}$, so $Y'=\xi(-1-p)$ on $\{q\ge-2-q_0\}$, a half-plane on which $Y'$ is the diagram of $\mu X$; and $Y=\pi(q)$ on $\{p\le p_0+1\}$, so $Y'=\pi(-1-q)$ on $\{p\ge-2-p_0\}$, the diagram of $\mu P$. By the characterisation of the outgoing parts, $\mathcal S(\mu \Omega,\mu\Gamma)=(\mu X,\mu P)$.
+
+The first statement reads $\mathcal S(\mu(\mathcal S(x)))=\mu(x)$ for every placed pair $x$. Since $\mu$ is an involution, $\mu \mathcal S\mu$ is a left inverse of $\mathcal S$, so $\mathcal S$ is injective. If $y\in\Phi^-\times\Phi^+$ and $\mu(y)$ is placed, then $x=\mu(\mathcal S(\mu(y)))$ is placed by the first statement, and $\mathcal S(x)=\mu(\mu(y))=y$. So the image of $\mathcal S$ is as stated, and $\mu \mathcal S\mu$ is the inverse.
+\end{proof}
+
+\begin{corollary}\label{cl:cor:dual}
+Let $f\in\{91,94,95\}$ and let $(P,X)$ be a placed pair, with $\mathcal S(P,X)=(\Gamma,\Omega)$.
+\begin{enumerate}
+\item[(1)] If $X$ is a background, then $\Gamma$ is the background $b_{\beta^L}$ of the left tail of $P$, and $\Omega=P$.
+\item[(2)] If $\Gamma$ is a background, then so is $X$. In particular, for a probe $P$ and an object $X$, $\Gamma_P(X)$ is a background only if $X$ is.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+(1) A background $X$ in a placed pair is the background $b_\beta$ of the corner. Then $\pi(q)$ is a diagram that equals $\pi(q)$ on $\{p\le p_0+1\}$ and $\beta_{p\bmod2}=\pi(q)$ on $\{q\le q_0+1\}$, so $Y_{P,X}=\pi(q)$ everywhere; reading it on the half-planes of Lemma~\ref{cl:lem:scatter}(ii) gives $\Gamma=b_{\beta^L}$ and $\Omega=P$. (2) If $\Gamma$ is a background, so is $\mu\Gamma$, and by (1) the first component of $\mathcal S(\mu \Omega,\mu\Gamma)$ is a background. By Proposition~\ref{cl:prop:dual} it is $\mu X$, so $X$ is a background.
+\end{proof}
+
+\emph{Crossing kinks for $94$.} For $f=94$ the valid backgrounds are the constants $0$ and $1$, and a point of $\Phi^\pm$ on these backgrounds is described by its \emph{kinks}, the positions $a$ with $\pi(a-1)\ne\pi(a)$, or $b$ with $\xi(b-1)\ne\xi(b)$. The elementary event in the interaction of a probe with an object is the crossing of one kink of each. For an integer $a$ let $\theta_a(k)=1$ if $k\ge a$ and $\theta_a(k)=0$ if $k<a$.
+
+\begin{lemma}[crossing of two kinks]\label{cl:lem:pair}
+Let $f=94$, let $G$ be the quadrant with corner $[q_0,p_0]$, let $m\in\{0,1\}$, $a\ge q_0+2$, $b\ge p_0+2$, and let $Y$ be the solution of \eqref{cl:eq:goursat} on $G$ with $A(q)=m\oplus\theta_a(q)$ and $B(p)=m\oplus\theta_b(p)$.
+\begin{enumerate}
+\item[(i)] If $m=0$, or if $a\not\equiv b\pmod2$, then $Y$ does not fire, and $Y[q,p]=m\oplus\theta_a(q)\oplus\theta_b(p)$.
+\item[(ii)] If $m=1$ and $a\equiv b\pmod2$, then $Y$ fires exactly at the centres $[a-1,b-1]$ and $[a+1,b+1]$, and $Y[q,p]=1$ if $q<a$ and $p<b$ or if $q>a$ and $p>b$, and $Y[q,p]=0$ otherwise.
+\end{enumerate}
+\end{lemma}
+
+Here $A$ carries a $\Phi^+$ kink on the ray $q=a$ and $B$ a $\Phi^-$ kink on the ray $p=b$, and $m$ is the value of the region $\{q<a,\ p<b\}$ between them before they meet. In case (i), for $p\ge b$, $Y[q,p]=\bar m\oplus\theta_a(q)$, and for $q\ge a$, $Y[q,p]=\bar m\oplus\theta_b(p)$: the kinks cross without interacting. In case (ii), $Y[q,p]=\theta_{a+1}(q)$ for $p>b$ and $Y[q,p]=\theta_{b+1}(p)$ for $q>a$: after two firings both kinks continue on the next ray, that is, both are delayed by one step.
+
+\begin{proof}
+For a finite set $\Sigma$ of centres $[q',p']$ with $q'>q_0$ and $p'>p_0$ let $\chi_\Sigma(P)$, for $P=[q,p]\in G$, be the parity of the number of elements $[q',p']\in\Sigma$ with $q'<q$, $p'<p$ and $q'\not\equiv q$, and put $Y_\Sigma=A(q)\oplus B(p)\oplus m\oplus\chi_\Sigma$; here $m=\nu$ is the value at both corners. The proof of Lemma~\ref{cl:lem:dalembert} shows that $Y_\Sigma$ has the boundary values $A$ and $B$ and that $Y_\Sigma(\mathsf N)\oplus Y_\Sigma(\mathsf S)\oplus Y_\Sigma(\mathsf W)\oplus Y_\Sigma(\mathsf E)=1$ exactly when $C\in\Sigma$, at every centre $C=[q,p]$ with $q>q_0$, $p>p_0$. So if the centres at which $Y_\Sigma$ fires are exactly those of $\Sigma$, then $Y_\Sigma$ satisfies \eqref{cl:eq:goursat}, and $Y_\Sigma=Y$. For $N=N_{94}$, $Y_\Sigma$ fires at $C$ when $(Y_\Sigma(\mathsf W),Y_\Sigma(C),Y_\Sigma(\mathsf E))=(0,1,0)$, with $\mathsf W=[q+1,p-1]$ and $\mathsf E=[q-1,p+1]$. The eight cases given by $m$ and the parities of $a$ and $b$ reduce to the two of the statement.
+
+(i) Take $\Sigma=\emptyset$, so $Y_\emptyset\oplus m=\theta_a(q)\oplus\theta_b(p)$. At a centre $C=[q,p]$,
+\[
+Y_\emptyset(\mathsf W)\oplus Y_\emptyset(C)=[q=a-1]\oplus[p=b],\qquad Y_\emptyset(C)\oplus Y_\emptyset(\mathsf E)=[q=a]\oplus[p=b-1],
+\]
+where $[\cdot]$ is $1$ for a true statement and $0$ otherwise, because $\theta_a(q+1)\oplus\theta_a(q)=[q=a-1]$ and $\theta_b(p-1)\oplus\theta_b(p)=[p=b]$. A firing needs both sums to be $1$. If $q=a-1$ this forces $p=b-1$; if $q\ne a-1$ it forces $p=b$ and then $q=a$. So the only candidates are $[a-1,b-1]$ and $[a,b]$, which are lattice points only if $a\equiv b$. At both of them the row triple is $m\oplus(1,0,1)$, since $Y_\emptyset[a-1,b-1]=Y_\emptyset[a,b]=m$, while at the points $\mathsf W$ and $\mathsf E$ of these centres exactly one of $\theta_a(q),\theta_b(p)$ is $1$. This is $(0,1,0)$ only if $m=1$. So under the hypothesis of (i), $Y_\emptyset$ does not fire, and $Y=Y_\emptyset$.
+
+(ii) Take $\Sigma=\{[a-1,b-1],[a+1,b+1]\}$ and write $x=q-a$, $y=p-b$, so $x\equiv y$. The first centre contributes to $\chi_\Sigma$ at the points with $x\ge0$, $y\ge0$, $x$ even, and the second at those with $x\ge2$, $y\ge2$, $x$ even. With $Y_\emptyset=1\oplus\theta_0(x)\oplus\theta_0(y)$ this gives $Y_\Sigma=1$ if $x,y<0$ or $x,y>0$, and $Y_\Sigma=0$ if $\min(x,y)\le0\le\max(x,y)$; for even $x,y\ge0$, for instance, $Y_\Sigma=Y_\emptyset\oplus1\oplus\theta_2(x)\theta_2(y)=\theta_2(x)\theta_2(y)$, and for odd $x,y>0$, $Y_\Sigma=Y_\emptyset=1$. A firing at $C=(x,y)$ needs $Y_\Sigma(C)=1$ and $Y_\Sigma=0$ at $\mathsf W=(x+1,y-1)$ and $\mathsf E=(x-1,y+1)$. If $x,y>0$, then $Y_\Sigma(\mathsf W)=0$ forces $y-1\le0$ and $Y_\Sigma(\mathsf E)=0$ forces $x-1\le0$, so $C=(1,1)$; if $x,y<0$, then $x+1\ge0$ and $y+1\ge0$, so $C=(-1,-1)$. At both centres the triple is indeed $(0,1,0)$, since $(2,0),(0,2),(0,-2),(-2,0)$ all have $\min\le0\le\max$. So $Y_\Sigma$ fires exactly on $\Sigma$, and $Y=Y_\Sigma$.
+\end{proof}
+
+
+\emph{Kink rigidity.} For $94$ and $95$ we now normalise an arbitrary automorphism by an element of $\langle\sh,F\rangle$ so that it fixes the simplest non-periodic points of $\Phi^\pm$, and for $94$ we then show, in Section~\ref{cl:sec:94}, that the normalised automorphism is the identity; for $95$ it need not be, and the normalisation is a step in the determination of the group (Theorem~\ref{cl:thm:95Aut}). Let $f\in\{91,94,95\}$ and let $h$ be a block map of radius $R$ that commutes with $\sh$ and $F$. It commutes with $\sh^{\pm1}F$, so it maps $\Phi^\pm$ into itself; for $Z\in\Phi^+\cup\Phi^-$ we write $hZ$ for $h(Z)$. Since $F^t(c)_j=(Y_c(t-1,j),Y_c(t,j))$ and $F^t(h(c))=h(F^t(c))$, the value $Y_{h(c)}(t,i)$ depends only on the values of $Y_c$ at the points $(s,j)$ with $s\in\{t-1,t\}$ and $|j-i|\le R$, and these points have $q(t,i)-R-1\le q\le q(t,i)+R$ and $p(t,i)-R-1\le p\le p(t,i)+R$. Hence, for configurations $c,d$ and $m\in\Z$:
+\begin{equation}\label{cl:eq:loc}
+\begin{aligned}
+Y_c=Y_d\text{ on }\{p\le m\}&\ \Rightarrow\ Y_{h(c)}=Y_{h(d)}\text{ on }\{p\le m-R\},\\
+Y_c=Y_d\text{ on }\{p\ge m\}&\ \Rightarrow\ Y_{h(c)}=Y_{h(d)}\text{ on }\{p\ge m+R+1\},
+\end{aligned}
+\end{equation}
+and the same with $q$ in place of $p$.
+In particular, if $Z\in\Phi^-$ has the diagram $\xi(p)$ and $hZ$ the diagram $\xi'(p)$, then $\xi'(p)$ depends only on $\xi$ on $[p-R-1,p+R]$, and likewise on $\Phi^+$. Since $Y_{\sh c}[q,p]=Y_c[q-1,p+1]$ and $Y_{F(c)}[q,p]=Y_c[q+1,p+1]$, the shift $\sh$ acts on the diagrams of points of $\Phi^+$ by $\pi(q)\mapsto\pi(q-1)$ and on those of points of $\Phi^-$ by $\xi(p)\mapsto\xi(p+1)$, and $F$ acts by $\pi(q)\mapsto\pi(q+1)$ and $\xi(p)\mapsto\xi(p+1)$; so $h$ commutes with these translations of diagrams. Finally, for a valid background $\beta$ the point $h(b_\beta)$ lies in $\Phi^+\cap\Phi^-$, so its diagram is a function of $q$ alone and of $p$ alone; it therefore depends only on the parity of $q$, and $h(b_\beta)=b_{\beta''}$ for a valid background $\beta''$. A \emph{kink} of a sequence $\omega$ is a position $x$ with $\omega(x-1)\ne\omega(x)$; it is \emph{descending} if $\omega(x-1)=1$ and $\omega(x)=0$, and \emph{ascending} otherwise.
+
+\begin{lemma}[intertwining]\label{cl:lem:inter}
+Let $f\in\{91,94,95\}$, let $h$ be a block map of radius $R$ commuting with $\sh$ and $F$, let $(P,X)$ be a placed pair with corner $[q_0,p_0]$ and background $\beta$, and let $\mathcal S(P,X)=(\Gamma,\Omega)$ and $h(b_\beta)=b_{\beta''}$. Then $(hP,hX)$ is a placed pair with corner $[q_0-R,p_0-R]$ and background $\beta''$, its diagram is $Y_{h(c)}$, where $c$ is the configuration with diagram $Y_{P,X}$, and
+\[
+\mathcal S(hP,hX)=(h\Gamma,h\Omega).
+\]
+\end{lemma}
+
+\begin{proof}
+Write $Y=Y_{P,X}=Y_c$, $Y'=Y_{h(c)}$, and $\pi'$, $\xi'$ for the diagrams of $hP$, $hX$. The diagram of $P$ agrees with that of $b_\beta$ on $\{q\le q_0+1\}$, so by \eqref{cl:eq:loc} the diagram of $hP$ agrees with that of $b_{\beta''}$ on $\{q\le q_0-R+1\}$, that is, $\pi'(q)=\beta''_{q\bmod2}$ for $q\le q_0-R+1$; likewise $\xi'(p)=\beta''_{p\bmod2}$ for $p\le p_0-R+1$. If $\pi$ agrees with the diagram of $b_{\beta^L}$ on $\{q\ge m\}$, then $\pi'$ agrees with the diagram of the background $h(b_{\beta^L})$ on $\{q\ge m+R+1\}$; so $\pi'$, and in the same way $\xi'$, is eventually $2$-periodic in both directions. Since $q_0-R\equiv p_0-R$, $(hP,hX)$ is a placed pair with corner $[q_0-R,p_0-R]$ and background $\beta''$. Next, $Y$ agrees with the diagram of $P$ on $\{p\le p_0+1\}$ and with that of $X$ on $\{q\le q_0+1\}$, so by \eqref{cl:eq:loc} $Y'$ equals $\pi'(q)$ on $\{p\le p_0-R+1\}$ and $\xi'(p)$ on $\{q\le q_0-R+1\}$. By the uniqueness of the diagram of a placed pair, $Y'=Y_{hP,hX}$. Finally, by Lemma~\ref{cl:lem:scatter}(ii), $Y$ agrees with the diagram of $\Gamma$ on a half-plane $\{q\ge q_1\}$ and with that of $\Omega$ on a half-plane $\{p\ge p_1\}$, so $Y'$ agrees with the diagram of $h\Gamma$ on $\{q\ge q_1+R+1\}$ and with that of $h\Omega$ on $\{p\ge p_1+R+1\}$. By the characterisation of the outgoing parts after Lemma~\ref{cl:lem:scatter}, $\mathcal S(hP,hX)=(h\Gamma,h\Omega)$.
+\end{proof}
+
+The next lemma is the counterpart of Lemma~\ref{cl:lem:scatter}(iv) on the side of the object: an object that consists of two parts far apart is crossed by the probe one part at a time.
+
+\begin{lemma}[gluing on the side of the object]\label{cl:lem:glue}
+Let $f\in\{91,94,95\}$, let $(P,X)$ be a placed pair with corner $[q_0,p_0]$, diagram $Y$ and $\mathcal S(P,X)=(\Gamma,\Omega)$, let $\gamma(p)$ and $o(q)$ be the diagrams of $\Gamma$ and $\Omega$, and let $\beta^R$ be the right tail of $X$. Let $p_2\ge p_0$ with $p_2\equiv q_0\pmod2$ be such that
+\[
+\xi(p)=\beta^R_{p\bmod2}\ \ (p\ge p_2),\qquad Y[q,p]=o(q)\ \ (q\ge q_0,\ p\in\{p_2,p_2+1\});
+\]
+by Lemma~\ref{cl:lem:scatter}(ii) this holds for every large $p_2\equiv q_0$. Let $X'\in\Phi^-$ have an eventually $2$-periodic diagram $\xi'(p)$ with $\xi'(p)=\beta^R_{p\bmod2}$ for $p\le p_2+1$, and let $X*X'\in\Phi^-$ have the diagram equal to $\xi(p)$ for $p\le p_2+1$ and to $\xi'(p)$ for $p\ge p_2$. Then $(P,X*X')$ is a placed pair with corner $[q_0,p_0]$, $(\Omega,X')$ is a placed pair with corner $[q_0,p_2]$ and background $\beta^R$, and $Y_{P,X*X'}$ equals $Y$ on $\{p\le p_2+1\}$ and $Y_{\Omega,X'}$ on $\{p\ge p_2\}$. Consequently, if $\mathcal S(\Omega,X')=(\Gamma',\Omega')$ and $\gamma'(p)$ is the diagram of $\Gamma'$, then $\gamma(p)=\gamma'(p)$ for $p\in\{p_2,p_2+1\}$, and $\mathcal S(P,X*X')=(\Gamma*\Gamma',\Omega')$, where $\Gamma*\Gamma'\in\Phi^-$ has the diagram equal to $\gamma(p)$ for $p\le p_2+1$ and to $\gamma'(p)$ for $p\ge p_2$.
+\end{lemma}
+
+\begin{proof}
+The diagram of $X*X'$ is well defined, since $\xi$ and $\xi'$ both equal $\beta^R_{p\bmod2}$ at $p_2$ and $p_2+1$, and it lies in $\Phi_f$, since any three consecutive integers lie in $(-\infty,p_2+1]$ or in $[p_2,\infty)$. It equals $\xi$ on $(-\infty,p_0+1]$, so $(P,X*X')$ is placed at $[q_0,p_0]$. By Lemma~\ref{cl:lem:scatter}(ii), $o(q)=\beta^R_{q\bmod2}$ for $q\le q_0+1$, and $o$ is eventually $2$-periodic; with $\xi'(p)=\beta^R_{p\bmod2}$ for $p\le p_2+1$ this shows that $(\Omega,X')$ is placed at $[q_0,p_2]$, with background $\beta^R$. Let $Y''=Y_{P,X*X'}$. By Goursat causality $Y''=Y$ on $G\cap\{p\le p_2+1\}$, and outside $G$ the two diagrams are given by the same values of $\pi$ and $\xi$; so $Y''=Y$ on $\{p\le p_2+1\}$. On the quadrant $G_2=\{q\ge q_0,\ p\ge p_2\}$, $Y''$ and $Y_{\Omega,X'}$ both satisfy \eqref{cl:eq:goursat}; both equal $\xi'(p)$ on the ray $q\in\{q_0,q_0+1\}$, and both equal $o(q)$ on the ray $p\in\{p_2,p_2+1\}$, where $Y''=Y=o(q)$ by hypothesis. So they agree on $G_2$, and on $\{q<q_0,\ p\ge p_2\}$ both are $\xi'(p)$. For the last statement, read the outgoing parts of $(P,X*X')$ on half-planes $\{q\ge q_1''\}$ and $\{p\ge p_1''\}$ with $q_1''$, $p_1''$ large: on the first, $Y''$ is $\gamma(p)$ for $p\le p_2+1$ and $\gamma'(p)$ for $p\ge p_2$; on the second, $Y''=Y_{\Omega,X'}$ is the diagram of $\Omega'$. On the overlap $p\in\{p_2,p_2+1\}$ both descriptions of $Y''$ on the first half-plane apply, so $\gamma=\gamma'$ there, $\Gamma*\Gamma'$ is well defined, and it lies in $\Phi_f$ because any three consecutive integers lie in $(-\infty,p_2+1]$ or in $[p_2,\infty)$.
+\end{proof}
+
+For the rest of this paragraph let $f=94$, and write $b_0=b_{00}$ and $b_1=b_{11}$ for its two backgrounds. For $a,b\in\Z$ let $K^+_a,\bar K^+_a\in\Phi^+$ be the points with diagrams $\theta_a(q)$ and $1\oplus\theta_a(q)$, and $K^-_b,\bar K^-_b\in\Phi^-$ the points with diagrams $\theta_b(p)$ and $1\oplus\theta_b(p)$. These are the \emph{bare kinks}; together with the backgrounds $b_0$, $b_1$ they are the points of $\Phi^+\cup\Phi^-$ with at most one kink. The crossing lemma gives, at any corner $[q_0,p_0]$ with $q_0\le a-2$, $p_0\le b-2$ and $q_0\equiv p_0$, and by reading $Y$ on the half-planes of Lemma~\ref{cl:lem:scatter}(ii),
+\begin{equation}\label{cl:eq:cross94}
+\mathcal S(K^+_a,K^-_b)=(\bar K^-_b,\bar K^+_a),\qquad
+\mathcal S(\bar K^+_a,\bar K^-_b)=\begin{cases}(K^-_{b+1},K^+_{a+1}),&a\equiv b\pmod2,\\(K^-_b,K^+_a),&a\not\equiv b\pmod2,\end{cases}
+\end{equation}
+the first on the background $00$ by Lemma~\ref{cl:lem:pair}(i) with $m=0$, the second on the background $11$ by Lemma~\ref{cl:lem:pair}(ii) and (i) with $m=1$.
+
+\begin{lemma}[one exact ray]\label{cl:lem:ray}
+Let $f=94$, let $G$ be the quadrant with corner $[q_0,p_0]$, let $\varepsilon\in\{0,1\}$, and let $Y$ be the solution of \eqref{cl:eq:goursat} on $G$ with boundary values $A$, $B$ such that
+\[
+A(q)=\varepsilon\ \ (q_0\le q<a_1),\qquad A(a_1)=1-\varepsilon,\qquad a_1\ge q_0+2,\qquad B(p_0)=B(p_0+1)=\varepsilon,
+\]
+and $(B(p-2),B(p-1),B(p))\ne(0,1,0)$ for all $p\ge p_0+2$. If $B$ has no descending kink $x\ge p_0+1$ with $x\equiv a_1\pmod2$, then $Y$ fires at no centre $[a_1-1,p']$ with $p'>p_0$. Otherwise it fires at exactly one such centre, $[a_1-1,x_1-1]$, where $x_1$ is the least such kink. The same holds with $q$ and $p$ exchanged: if $B(p)=\varepsilon$ for $p_0\le p<b_1$, $B(b_1)=1-\varepsilon$, $b_1\ge p_0+2$, $A(q_0)=A(q_0+1)=\varepsilon$ and $A$ contains no $010$, then $Y$ fires at a centre $[q',b_1-1]$ with $q'>q_0$ exactly once, at $[y_1-1,b_1-1]$, if $A$ has a descending kink $y\equiv b_1$, $y_1$ the least of them, and otherwise never.
+\end{lemma}
+
+\begin{proof}
+Let $Y^\circ$ be the solution with the boundary values $A^\circ(q)=\varepsilon$ for all $q\ge q_0$ and $B$. The function $[q,p]\mapsto B(p)$ has these boundary values, and it satisfies \eqref{cl:eq:goursat}, because $N(B(p-2),B(p-1),B(p))=0$; so $Y^\circ[q,p]=B(p)$. By \eqref{cl:eq:goursat} and induction on $q+p$, $Y$ on $G\cap\{q\le a_1-1\}$ depends only on $A$ on $[q_0,a_1-1]$ and on $B$, so $Y[q,p]=B(p)$ for $q_0\le q\le a_1-1$.
+
+Let $U=\{p\ge p_0:p\equiv a_1\}$, with least element $p_b\in\{p_0,p_0+1\}$, and $D(p)=Y[a_1,p]\oplus B(p)$ for $p\in U$. Then $D(p_b)=A(a_1)\oplus B(p_b)=(1-\varepsilon)\oplus\varepsilon=1$. For $p\in U$ with $p\ge p_b+2$, \eqref{cl:eq:goursat} at $[a_1,p]$, where $[a_1-2,p-2]$, $[a_1-2,p]$ and $[a_1-1,p-1]$ carry $B(p-2)$, $B(p)$, $B(p-1)$, gives
+\[
+D(p)=D(p-2)\oplus n(p),\qquad n(p)=N\bigl(Y[a_1,p-2],B(p-1),B(p)\bigr),
+\]
+and $n(p)$ is the firing at the centre $[a_1-1,p-1]$; these are all the centres $[a_1-1,p']$ with $p'>p_0$. If $D(p-2)=1$, then $Y[a_1,p-2]=1\oplus B(p-2)$, and $n(p)=1$ if and only if $B(p-2)=B(p-1)=1$ and $B(p)=0$; since $B$ contains no $010$, this holds if and only if $p$ is a descending kink of $B$. Every descending kink $x$ of $B$ has $x\ge p_0+2$, as $B(p_0)=B(p_0+1)$. So, by induction along $U$, $D=1$ and $n=0$ on $U\cap[p_b,x_1)$, and $n(x_1)=1$, $D(x_1)=0$ if $x_1$ exists. If $D(p-2)=0$, then $Y[a_1,p-2]=B(p-2)$ and $n(p)=N(B(p-2),B(p-1),B(p))=0$; so after $x_1$ there are no further firings on the ray $a_1-1$. The last statement follows by applying this to the reflection $[q,p]\mapsto[p,q]$, which maps solutions of \eqref{cl:eq:goursat} to solutions, since $N$ is invariant under reversal of the triple, and exchanges $A$ and $B$.
+\end{proof}
+
+For $b\in\Z$ and $g\ge2$ let $T_{b,g}\in\Phi^-$ be the \emph{train} with diagram $\theta_b(p)\oplus\theta_{b+g}(p)$: a plateau $1^g$ on the background $00$, between the ascending kink $b$ and the descending kink $b+g$. It lies in $\Phi_{94}$ because $g\ge2$.
+
+\begin{lemma}[train]\label{cl:lem:train}
+Let $f=94$, $a,b\in\Z$ and $g\ge2$ with $a\not\equiv b+g\pmod2$. Then $(K^+_a,T_{b,g})$ is a placed pair with background $00$ at every corner $[q_0,p_0]$ with $q_0\le a-2$, $p_0\le b-2$ and $q_0\equiv p_0$, and
+\[
+\mathcal S(K^+_a,T_{b,g})=(\Gamma,K^+_a),
+\]
+where $\Gamma$ has the diagram $1\oplus\theta_b(p)\oplus\theta_{b+g}(p)$.
+\end{lemma}
+
+\begin{proof}
+The first statement is clear. Choose the corner with $q_0\equiv p_0\equiv b$. By Lemma~\ref{cl:lem:pair}(i) with $m=0$, the pair $(K^+_a,K^-_b)$ has the diagram $Y=\theta_a(q)\oplus\theta_b(p)$ on $G$, and $\mathcal S(K^+_a,K^-_b)=(\bar K^-_b,\bar K^+_a)$ by \eqref{cl:eq:cross94}. On $\{p\ge b\}$, $Y=1\oplus\theta_a(q)$ is the diagram of $\bar K^+_a$, and $\theta_b(p)=1$ for $p\ge b$; so Lemma~\ref{cl:lem:glue} applies with $X=K^-_b$, $p_2=b$ and $X'=\bar K^-_{b+g}$, whose diagram is $1$ for $p\le b+1$ since $g\ge2$, and $X*X'=T_{b,g}$. The pair $(\bar K^+_a,\bar K^-_{b+g})$ is placed at $[q_0,b]$ with background $11$, and $a\ge q_0+2$, $b+g\ge b+2$, $a\not\equiv b+g$; by \eqref{cl:eq:cross94}, $\mathcal S(\bar K^+_a,\bar K^-_{b+g})=(K^-_{b+g},K^+_a)$. By Lemma~\ref{cl:lem:glue}, $\mathcal S(K^+_a,T_{b,g})=(\bar K^-_b*K^-_{b+g},K^+_a)$, and $\bar K^-_b*K^-_{b+g}$ has the stated diagram.
+\end{proof}
+
+If $a\equiv b+g$, the second crossing in the proof delays the kink of the probe by one step, and the same argument gives $\mathcal S(K^+_a,T_{b,g})=(\Gamma',K^+_{a+1})$ for some $\Gamma'$.
+
+\begin{theorem}[kink rigidity for $94$]\label{cl:thm:KR94}
+Let $h\in\Aut(X_{F_{94}})$, regarded as a block map commuting with $F$ (Lemma~\ref{lem:spacetime}). Then $h$ fixes $b_0$ and $b_1$, and there are integers $\alpha^+\equiv\alpha^-\pmod2$ such that for all $a,b\in\Z$
+\[
+hK^+_a=K^+_{a+\alpha^+},\qquad h\bar K^+_a=\bar K^+_{a+\alpha^+},\qquad hK^-_b=K^-_{b+\alpha^-},\qquad h\bar K^-_b=\bar K^-_{b+\alpha^-}.
+\]
+Consequently, with $x=(\alpha^--\alpha^+)/2$ and $y=(\alpha^++\alpha^-)/2$, the automorphism $\sh^xF^yh$ fixes $b_0$, $b_1$ and every bare kink.
+\end{theorem}
+
+\begin{proof}
+Let $R$ be the radius of $h$ and $r=R+1$. By \eqref{cl:eq:loc}, $h$ acts on the diagrams of $\Phi^\pm$ by sliding block codes of radius at most $r$ that commute with translation.
+
+\emph{Step 0.} By the paragraph before Lemma~\ref{cl:lem:inter}, $h$ maps $b_0$ and $b_1$, the backgrounds of $94$, to backgrounds; since $h$ is injective, there is $\varepsilon\in\{0,1\}$ with $h(b_0)=b_\varepsilon$ and $h(b_1)=b_{1-\varepsilon}$.
+
+\emph{Step 1 (a train that the probe crosses unchanged).} Fix $a,b\in\Z$ and $g\ge2r+2$ with $a\not\equiv b+g\pmod2$. By Lemma~\ref{cl:lem:train}, $\mathcal S(K^+_a,T_{b,g})=(\Gamma,K^+_a)$, and also $\mathcal S(K^+_a,T_{b+1,g-1})=(\Gamma_1,K^+_a)$ for some $\Gamma_1$, since $(b+1)+(g-1)=b+g$.
+
+\emph{Step 2 (intertwining).} Let $E=hK^+_a$, $W=hT_{b,g}$ and $D=hK^-_b$, with diagrams $\pi_E(q)$, $\omega(p)$ and $\delta(p)$. By Lemma~\ref{cl:lem:inter}, $(E,W)$ is a placed pair with background $\varepsilon\varepsilon$, and
+\[
+\mathcal S(E,W)=(h\Gamma,E).
+\]
+Since the diagram of $hZ$ at $p$ depends only on that of $Z$ on $[p-r,p+r]$: $\delta(p)=\varepsilon$ for $p<b-r$ and $\delta(p)=1-\varepsilon$ for $p\ge b+r$; $\omega(p)=\delta(p)$ for $p\le b+g-r-1$ and $\omega(p)=\varepsilon$ for $p\ge b+g+r$; and $\pi_E(q)=\varepsilon$ for $q<a-r$, $\pi_E(q)=1-\varepsilon$ for $q\ge a+r$. As $b+r\le b+g-r-1$, every kink of $\delta$ lies in $[b-r,b+r]$ and is a kink of $\omega$ of the same kind. We may replace the corner of $(E,W)$ by a smaller one $[q_0,p_0]$ with $q_0\le a-r-2$ and $p_0\le b-r-2$.
+
+\emph{Step 3 (every ray fires an even number of times).} Let $Y=Y_{E,W}$. By Lemma~\ref{cl:lem:scatter}(i) every firing of $Y$ is at a centre $[q',p']$ with $q'>q_0$ and $p_0<p'<p^*$, for some $p^*$. Since the outgoing $\Phi^+$ part of $(E,W)$ is $E$, Lemma~\ref{cl:lem:scatter}(ii) gives $Y[q,p]=\pi_E(q)$ for all $q$ and all large $p$. Given $q\ge q_0$, take $p\equiv q$ so large that $p\ge\max(p^*,b+g+r)$ and $Y[q,p]=\pi_E(q)$. In Lemma~\ref{cl:lem:dalembert} at $[q,p]$ we have $A(q)=\pi_E(q)$, $B(p)=\omega(p)=\varepsilon$ and $\nu=\varepsilon$, so $\pi_E(q)=\pi_E(q)\oplus\varepsilon\oplus\varepsilon\oplus\chi(q)$, where $\chi(q)$ is the parity of the number of firings at centres $[q',p']$ with $q_0<q'<q$ and $q'\not\equiv q$. So $\chi(q)=0$ for all $q\ge q_0$, and the number of firings on the ray $q'=q+1$, which is $\chi(q+2)\oplus\chi(q)$ modulo $2$, is even for every $q\ge q_0$.
+
+\emph{Step 4 (no descending kinks in $D$).} Let $a_1$ be the least $q$ with $\pi_E(q)\ne\varepsilon$; then $a-r\le a_1\le a+r$ and $a_1\ge q_0+2$. The pair $(E,W)$ satisfies the hypotheses of Lemma~\ref{cl:lem:ray}, so the number of firings on the ray $a_1-1$ is $1$ if $\omega$ has a descending kink $x\equiv a_1$, and $0$ otherwise. By Step 3 it is $0$; so $\omega$, and hence $\delta$, has no descending kink $x\equiv a_1$. Now repeat Steps 2--4 with $T_{b+1,g-1}$ in place of $T_{b,g}$, which is allowed by Step 1 since $g-1\ge2r+1$. The point $E$, and so $a_1$, is unchanged, and $hK^-_{b+1}$ has the diagram $\delta(p-1)$, because $K^-_{b+1}$ is the translate of $K^-_b$ by one step and $h$ commutes with translation. So $\delta(p-1)$ has no descending kink $\equiv a_1$, that is, $\delta$ has none $\equiv a_1-1$. Hence $\delta$ has no descending kink.
+
+\emph{Step 5 (no background swap; $D$ is bare).} If $\varepsilon=1$, then $\delta(p)=1$ for $p<b-r$ and $\delta(p)=0$ for $p\ge b+r$, so $\delta$ has a descending kink, contrary to Step 4. So $\varepsilon=0$: $h$ fixes $b_0$ and $b_1$. Then $\delta$ is $0$ far to the left and $1$ far to the right and has no descending kink, so it has exactly one kink, $b'$, and $D=K^-_{b'}$. Put $\alpha^-=b'-b$. Since $h$ commutes with translation, $hK^-_{b''}=K^-_{b''+\alpha^-}$ for every $b''$.
+
+\emph{Step 6 (the mirror image).} The map $h'=\mathrm{rev}\,h\,\mathrm{rev}$ is an automorphism of $X_{F_{94}}$ of radius $R$, by Lemma~\ref{lem:classes}, since $f(a,b,c)=f(c,b,a)$. Since $\mathrm{rev}\,F\,\mathrm{rev}=F$, $Y_{\mathrm{rev}\,c}(t,i)=Y_c(t,-i)$, that is, $Y_{\mathrm{rev}\,c}[q,p]=Y_c[p,q]$; so $\mathrm{rev}$ maps the point of $\Phi^+$ with diagram $\pi(q)$ to the point of $\Phi^-$ with diagram $\pi(p)$, and conversely, and $\mathrm{rev}\,K^+_a=K^-_a$. Steps 0--5 for $h'$ give an $\alpha^+$ with $h'K^-_a=K^-_{a+\alpha^+}$ for all $a$, so $hK^+_a=\mathrm{rev}\,h'K^-_a=K^+_{a+\alpha^+}$.
+
+\emph{Step 7 (the other two kinks).} Let $a,b\in\Z$. By \eqref{cl:eq:cross94}, $\mathcal S(K^+_a,K^-_b)=(\bar K^-_b,\bar K^+_a)$, and by Lemma~\ref{cl:lem:inter} and Steps 5 and 6,
+\[
+(h\bar K^-_b,h\bar K^+_a)=\mathcal S(hK^+_a,hK^-_b)=\mathcal S(K^+_{a+\alpha^+},K^-_{b+\alpha^-})=(\bar K^-_{b+\alpha^-},\bar K^+_{a+\alpha^+}),
+\]
+the last by \eqref{cl:eq:cross94} again.
+
+\emph{Step 8 (parity, from the delay on the background $11$).} Take $a\equiv b$. By \eqref{cl:eq:cross94}, $\mathcal S(\bar K^+_a,\bar K^-_b)=(K^-_{b+1},K^+_{a+1})$, so by Lemma~\ref{cl:lem:inter} and Steps 5--7
+\[
+\mathcal S(\bar K^+_{a+\alpha^+},\bar K^-_{b+\alpha^-})=(hK^-_{b+1},hK^+_{a+1})=(K^-_{b+1+\alpha^-},K^+_{a+1+\alpha^+}).
+\]
+If $\alpha^+\not\equiv\alpha^-$, then $a+\alpha^+\not\equiv b+\alpha^-$, and by \eqref{cl:eq:cross94} the left side is $(K^-_{b+\alpha^-},K^+_{a+\alpha^+})$, a contradiction. So $\alpha^+\equiv\alpha^-$, and $x,y$ are integers. By the paragraph before Lemma~\ref{cl:lem:inter}, $\sh^xF^y$ maps the diagram $\pi(q)$ of a point of $\Phi^+$ to $\pi(q-x+y)$ and the diagram $\xi(p)$ of a point of $\Phi^-$ to $\xi(p+x+y)$; so it maps $K^+_{a+\alpha^+}$ to $K^+_{a+\alpha^++x-y}=K^+_a$ and $K^-_{b+\alpha^-}$ to $K^-_{b+\alpha^--x-y}=K^-_b$, and likewise for $\bar K^\pm$. It fixes $b_0$ and $b_1$.
+\end{proof}
+
+\emph{Kink rigidity for $95$.} Let $f=95$, so that $N(a,b,c)=(1\oplus a)(1\oplus c)$ and $11$ is the only valid background. For $a,b\in\Z$ let $\Delta^+_a\in\Phi^+$ and $\Delta^-_b\in\Phi^-$ be the points whose diagrams are $1$ except for the value $0$ at $q=a$, resp.\ at $p=b$; we call them the \emph{bare defects}. They lie in $\Phi^\pm$ because $\Phi_{95}$ is the set of sequences with no two zeros at distance $2$.
+
+Since $N_{95}$ does not read its middle argument, \eqref{cl:eq:goursat} at $[q,p]$ involves only points with first coordinate $\equiv q$ and second $\equiv p\pmod2$, and the lattice splits into the two sublattices $\{q\equiv p\equiv e\}$, $e\in\{0,1\}$. Fix a quadrant $G$ with corner $[q_0,p_0]$, and let $Y$ be a solution of \eqref{cl:eq:goursat} on $G$ with boundary values $A$, $B$ and corner values $1$. For $e\in\{0,1\}$ let $q_e\in\{q_0,q_0+1\}$ and $p_e\in\{p_0,p_0+1\}$ be the elements $\equiv e$, and put, for $j,k\ge0$,
+\[
+u(j,k)=1\oplus Y[q_e+2j,p_e+2k],\qquad x_j=u(j,0)=1\oplus A(q_e+2j),\qquad y_k=u(0,k)=1\oplus B(p_e+2k).
+\]
+So $x_0=y_0=0$, and $x_j=1$ (resp.\ $y_k=1$) exactly at the zeros of $A$ (resp.\ $B$) in the class $e$. For $j,k\ge1$, \eqref{cl:eq:goursat} at $[q_e+2j,p_e+2k]$ reads $1\oplus u_{\mathsf N}=(1\oplus u_{\mathsf W})\oplus(1\oplus u_{\mathsf S})\oplus(1\oplus u_{\mathsf E})\oplus u_{\mathsf W}u_{\mathsf E}$, with $u_{\mathsf N}=u(j,k)$, $u_{\mathsf W}=u(j,k-1)$, $u_{\mathsf E}=u(j-1,k)$, $u_{\mathsf S}=u(j-1,k-1)$; since $a\oplus b\oplus ab=a\vee b$,
+\begin{equation}\label{cl:eq:half95}
+u(j,k)=\bigl(u(j,k-1)\vee u(j-1,k)\bigr)\oplus u(j-1,k-1),
+\end{equation}
+and $Y$ fires at the centre $[q_e+2j-1,p_e+2k-1]$ if and only if $u(j,k-1)=u(j-1,k)=1$. Every centre $[q',p']$ with $q'>q_0$, $p'>p_0$ is of this form for $e\equiv q'+1$ and some $j,k\ge1$. If $A$ and $B$ are diagrams of points of $\Phi^\pm$, then $x$ and $y$ contain no two consecutive $1$s. Call the sequence $k\mapsto u(j,k)$ the \emph{row} $j$.
+
+\begin{lemma}[rows for $95$]\label{cl:lem:rows95}
+Let $u$ be the solution of \eqref{cl:eq:half95} with boundary values $x$, $y$, where $x_0=y_0=0$, neither $x$ nor $y$ contains two consecutive $1$s, and $y_k=0$ for all large $k$.
+\begin{enumerate}
+\item[(0)] If $x_j=0$ for $j\le J$, then $u(j,k)=y_k$ for $j\le J$ and all $k$, and no centre between two of these rows fires. The same holds with the roles of $j$ and $k$, and of $x$ and $y$, exchanged.
+\end{enumerate}
+Let $j_1\ge1$ be the least $j$ with $x_j=1$, and $k_1$ the least $k$ with $y_k=1$ ($k_1=\infty$ if $y=0$).
+\begin{enumerate}
+\item[(i)] $u(j_1,k)=1$ for $k\le k_1$ and $u(j_1,k)=y_k$ for $k>k_1$. In particular $\lim_ku(j_1,k)=1$ if and only if $y=0$.
+\item[(ii)] $\lim_ku(j_1+1,k)=1$ if and only if $y$ has exactly one $1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(0) By induction on $j$ and $k$: $u(j,0)=x_j=0=y_0$, and if $u(j-1,\cdot)=y$ and $u(j,k-1)=y_{k-1}$, then $u(j,k)=(y_{k-1}\vee y_k)\oplus y_{k-1}=y_k$ and the firing term $y_{k-1}y_k$ vanishes, because $y_{k-1}y_k=0$. Equation \eqref{cl:eq:half95} is symmetric in $j$ and $k$.
+
+(i) By (0), row $j_1-1$ is $y$. Write $v(k)=u(j_1,k)$, so $v(0)=1$ and $v(k)=(v(k-1)\vee y_k)\oplus y_{k-1}$. For $1\le k<k_1$, $y_{k-1}=y_k=0$ and $v(k)=v(k-1)=1$. If $k_1<\infty$, then $k_1\ge1$, $y_{k_1-1}=0$ and $v(k_1)=1$; next $y_{k_1+1}=0$ and $v(k_1+1)=v(k_1)\oplus y_{k_1}=0=y_{k_1+1}$; and if $v(k-1)=y_{k-1}$ with $k\ge k_1+2$, then $v(k)=(y_{k-1}\vee y_k)\oplus y_{k-1}=y_k$. The limit follows, since $y$ is eventually $0$.
+
+(ii) Since $x_{j_1}=1$, $x_{j_1+1}=0$. Write $w(k)=u(j_1+1,k)$, so $w(0)=0$ and $w(k)=(w(k-1)\vee v(k))\oplus v(k-1)$, with $v$ from (i). If $y=0$, then $v\equiv1$ and $w\equiv0$. Let $k_1<\infty$. For $1\le k\le k_1$, $v(k)=v(k-1)=1$ and $w(k)=0$. Then $v(k_1+1)=0$ and $v(k_1)=1$ give $w(k_1+1)=1$. Let $k_2$ be the least $k>k_1$ with $y_k=1$ ($k_2=\infty$ if there is none). For $k_1+1<k<k_2$, $v(k)=y_k=0$ and $v(k-1)=y_{k-1}=0$, so $w(k)=w(k-1)=1$; if $k_2=\infty$, the limit is $1$. If $k_2<\infty$, then $k_2\ge k_1+2$, $v(k_2-1)=0$ and $w(k_2)=1$; then $v(k_2+1)=y_{k_2+1}=0$ and $w(k_2+1)=1\oplus1=0=y_{k_2+1}$, and as in (i), $w(k)=y_k$ for all $k\ge k_2+1$, so the limit is $0$.
+\end{proof}
+
+\begin{lemma}[crossing of two defects; cf.\ \cite{BBGP1993}]\label{cl:lem:pair95}
+Let $f=95$, $a,b\in\Z$, and let $[q_0,p_0]$ be a corner with $q_0\le a-2$ and $p_0\le b-2$. Then $(\Delta^+_a,\Delta^-_b)$ is a placed pair with background $11$, and
+\[
+\mathcal S(\Delta^+_a,\Delta^-_b)=\begin{cases}(\Delta^-_b,\Delta^+_a),&a\not\equiv b\pmod2,\\(\Delta^-_{b+2},\Delta^+_{a+2}),&a\equiv b\pmod2.\end{cases}
+\]
+\end{lemma}
+
+\begin{proof}
+Let $Y=Y_{\Delta^+_a,\Delta^-_b}$, and use the notation above on the two sublattices. If $a\not\equiv b$, then on the sublattice of $a$ we have $y=0$, and on that of $b$, $x=0$; by Lemma~\ref{cl:lem:rows95}(0), $u(j,k)=x_j$ on the first and $u(j,k)=y_k$ on the second, so $Y$ equals the diagram of $\Delta^+_a$ on the first sublattice and that of $\Delta^-_b$ on the second, and reading $Y$ on the half-planes of Lemma~\ref{cl:lem:scatter}(ii) gives $(\Delta^-_b,\Delta^+_a)$. Let $a\equiv b\equiv e$. On the other sublattice $x=y=0$ and $Y=1$. On the sublattice $e$, $x$ and $y$ have a single $1$, at $j_0=(a-q_e)/2\ge1$ and $k_0=(b-p_e)/2\ge1$. By Lemma~\ref{cl:lem:rows95}(0) and (i), the rows $j<j_0$ are $y$ and the row $j_0$ is $1$ on $[0,k_0]$ and $0$ after it; by the proof of (ii), with $k_2=\infty$, the row $j_0+1$ is $0$ on $[0,k_0]$ and $1$ after it. For the row $j_0+2$, $z(k)=u(j_0+2,k)$, we have $z(0)=x_{j_0+2}=0$ and $z(k)=(z(k-1)\vee u(j_0+1,k))\oplus u(j_0+1,k-1)$, so $z=0$ on $[0,k_0]$, $z(k_0+1)=1$, $z(k_0+2)=(1\vee1)\oplus1=0$, and then $z(k)=(z(k-1)\vee1)\oplus1=0$ for $k>k_0+2$. So the row $j_0+2$ has a single $1$, at $k_0+1$. Since $x_j=0$ for $j\ge j_0+2$, Lemma~\ref{cl:lem:rows95}(0), applied to the quadrant $\{j\ge j_0+2\}$ with this row as its first row, shows that every later row equals it. Hence $\lim_ju(j,k)=1$ exactly for $k=k_0+1$, and $\lim_ku(j,k)=1$ exactly for $j=j_0+1$. Reading $Y$ on the half-planes of Lemma~\ref{cl:lem:scatter}(ii) gives $\Gamma=\Delta^-_{b+2}$ and $\Omega=\Delta^+_{a+2}$.
+\end{proof}
+
+In the second case $Y$ fires exactly at $[a-1,b-1]$ and $[a+3,b+3]$: both defects are delayed by two steps, the analogue of Lemma~\ref{cl:lem:pair}(ii).
+
+\begin{theorem}[kink rigidity for $95$]\label{cl:thm:KR95}
+Let $h\in\Aut(X_{F_{95}})$. Then $h$ fixes $b_{11}$, and there are integers $\alpha^+\equiv\alpha^-\pmod2$ such that $h\Delta^+_a=\Delta^+_{a+\alpha^+}$ and $h\Delta^-_b=\Delta^-_{b+\alpha^-}$ for all $a,b\in\Z$. Consequently, with $x=(\alpha^--\alpha^+)/2$ and $y=(\alpha^++\alpha^-)/2$, $\sh^xF^yh$ fixes $b_{11}$ and every bare defect.
+\end{theorem}
+
+\begin{proof}
+Let $R$ be the radius of $h$ and $r=R+1$. By the paragraph before Lemma~\ref{cl:lem:inter}, $h(b_{11})$ is a background, so $h(b_{11})=b_{11}$. Fix $a$, let $E=h\Delta^+_a$, with diagram $\pi_E(q)$, and for $b\in\Z$ let $D_b=h\Delta^-_b$, with diagram $\delta_b(p)$. Since $h$ commutes with translation, $\delta_{b+1}(p)=\delta_b(p-1)$, and $h\Delta^+_{a+2}$ has the diagram $\pi_E(q-2)$. By \eqref{cl:eq:loc}, $\pi_E(q)=1$ for $|q-a|>r$ and $\delta_b(p)=1$ for $|p-b|>r$. Since $h$ is injective and $\Delta^+_a\ne b_{11}$, $\pi_E$ has a zero.
+
+Fix $b\not\equiv a$. By Lemmas~\ref{cl:lem:pair95} and~\ref{cl:lem:inter},
+\[
+\text{(T)}\ \ \mathcal S(E,D_b)=(D_b,E),\qquad\text{($\Delta$)}\ \ \mathcal S(E,D_{b+1})=(D_{b+3},h\Delta^+_{a+2}),
+\]
+and we take the corner of both pairs at some $[q_0,p_0]$ with $q_0\le a-r-2$ and $p_0\le b-r-2$. Let $e$ be a class modulo $2$ that contains a zero of $\pi_E$, let $a_1$ be the least such zero, and $j_1=(a_1-q_e)/2\ge1$. On the sublattice $e$ the data $x$ of both pairs satisfy $x_j=0$ for $j<j_1$ and $x_{j_1}=1$, so Lemma~\ref{cl:lem:rows95} applies; the outgoing $\Phi^+$ part $\Omega$, with diagram $o(q)$, has $o(q_e+2j)=1\oplus\lim_ku(j,k)$ by Lemma~\ref{cl:lem:scatter}(ii). In (T), $o=\pi_E$, so $o(a_1)=0$, $\lim_ku(j_1,k)=1$, and by Lemma~\ref{cl:lem:rows95}(i) $\delta_b$ has no zero in the class $e$. In ($\Delta$), $o(q)=\pi_E(q-2)$, so $o(a_1)=\pi_E(a_1-2)=1$ and $o(a_1+2)=\pi_E(a_1)=0$; by Lemma~\ref{cl:lem:rows95}(i) and (ii), $\delta_{b+1}$ has exactly one zero in the class $e$, that is, $\delta_b$ has exactly one zero in the class $1-e$. If $\pi_E$ had zeros in both classes, the first conclusion for the class $1-e$ would contradict the second for the class $e$. So the zeros of $\pi_E$ lie in a single class $e$, and $\delta_b$ has no zero in the class $e$ and exactly one in the class $1-e$: $D_b=\Delta^-_{b'}$ for some $b'$. With $\alpha^-=b'-b$ and translation, $h\Delta^-_{b''}=\Delta^-_{b''+\alpha^-}$ for every $b''$.
+
+As in Step 6 of the proof of Theorem~\ref{cl:thm:KR94}, $\mathrm{rev}\,h\,\mathrm{rev}$ is an automorphism of radius $R$ and $\mathrm{rev}\,\Delta^+_a=\Delta^-_a$, so there is $\alpha^+$ with $h\Delta^+_a=\Delta^+_{a+\alpha^+}$ for all $a$. Finally let $a\equiv b$. By Lemmas~\ref{cl:lem:pair95} and~\ref{cl:lem:inter},
+\[
+\mathcal S(\Delta^+_{a+\alpha^+},\Delta^-_{b+\alpha^-})=(h\Delta^-_{b+2},h\Delta^+_{a+2})=(\Delta^-_{b+2+\alpha^-},\Delta^+_{a+2+\alpha^+}),
+\]
+and if $\alpha^+\not\equiv\alpha^-$ the left side is $(\Delta^-_{b+\alpha^-},\Delta^+_{a+\alpha^+})$ by Lemma~\ref{cl:lem:pair95}. So $\alpha^+\equiv\alpha^-$, and $\sh^xF^y$ maps $\Delta^+_{a+\alpha^+}$ to $\Delta^+_a$ and $\Delta^-_{b+\alpha^-}$ to $\Delta^-_b$, as in Step 8 of that proof.
+\end{proof}
+

@@ -1,0 +1,1 @@
+R=4: {'total': 262, 'commute': 262, 'const': 1, 'sublattice': 261, 'form': 261, 'conserving': 261, 'both_injective': 41, 'noninjective': 220, 'table_equal': 261, 'P': 225, 'S': 36} distinct (phi,psi,n): 261

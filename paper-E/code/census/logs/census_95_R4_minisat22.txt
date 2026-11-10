@@ -1,0 +1,265 @@
+=== rule 95R radius 4 [minisat22]: 524288 variables, 75486342 clauses, encode 333.2s, enumeration 1304.1s, 262 solutions
+  41 named maps built [44s]
+  classification [349s]: {'named': 41, 'const': 1, 'other': 220, 'layerwise-same': 10, 'joint': 252, 'layer-separable': 0, 'cross': 0, 'commute_ok': 262}; expected named 41; all named found: True
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    OTHER            joint
+    const (1,1)      layerwise-same
+    sigma^-1 F^-1    joint
+    sigma^-1 F^-2    joint
+    sigma^-1 F^-3    joint
+    sigma^-1 F^0     layerwise-same
+    sigma^-1 F^1     joint
+    sigma^-1 F^2     joint
+    sigma^-1 F^3     joint
+    sigma^-2 F^-1    joint
+    sigma^-2 F^-2    joint
+    sigma^-2 F^0     layerwise-same
+    sigma^-2 F^1     joint
+    sigma^-2 F^2     joint
+    sigma^-3 F^-1    joint
+    sigma^-3 F^0     layerwise-same
+    sigma^-3 F^1     joint
+    sigma^-4 F^0     layerwise-same
+    sigma^0 F^-1     joint
+    sigma^0 F^-2     joint
+    sigma^0 F^-3     joint
+    sigma^0 F^-4     joint
+    sigma^0 F^0      layerwise-same
+    sigma^0 F^1      joint
+    sigma^0 F^2      joint
+    sigma^0 F^3      joint
+    sigma^0 F^4      joint
+    sigma^1 F^-1     joint
+    sigma^1 F^-2     joint
+    sigma^1 F^-3     joint
+    sigma^1 F^0      layerwise-same
+    sigma^1 F^1      joint
+    sigma^1 F^2      joint
+    sigma^1 F^3      joint
+    sigma^2 F^-1     joint
+    sigma^2 F^-2     joint
+    sigma^2 F^0      layerwise-same
+    sigma^2 F^1      joint
+    sigma^2 F^2      joint
+    sigma^3 F^-1     joint
+    sigma^3 F^0      layerwise-same
+    sigma^3 F^1      joint
+    sigma^4 F^0      layerwise-same

@@ -1,0 +1,2 @@
+219 commutation failures 0 nontrivial 11525 noncommuting S3 pairs 399
+126 commutation failures 0 nontrivial 11389 noncommuting S3 pairs 396

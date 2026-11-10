@@ -1,0 +1,11 @@
+A invariant F,F^-1: True  flip lemma F,F^-1: True  L,C,R context-free: True
+  core map: [((0, 1), (1, 3)), ((0, 3), (1, 2)), ((1, 2), (2, 0)), ((1, 3), (2, 3)), ((2, 0), (0, 1)), ((2, 3), (0, 3))]
+B invariant F,F^-1: True  flip lemma F,F^-1: True  L,C,R context-free: True
+  core map: [((0, 2), (1, 0)), ((0, 3), (1, 3)), ((1, 0), (2, 1)), ((1, 3), (2, 3)), ((2, 1), (0, 3)), ((2, 3), (0, 2))]
+parity 1 True True
+parity 2 True True
+len 5 overlap failures 0 pairs 0 distances(type) []
+len 6 overlap failures 0 pairs 96 distances(type) [(2, 1, 1), (2, 1, 2), (2, 2, 1), (2, 2, 2)]
+len 7 overlap failures 0 pairs 864 distances(type) [(2, 1, 1), (2, 1, 2), (2, 2, 1), (2, 2, 2), (3, 1, 1), (3, 1, 2), (3, 2, 1), (3, 2, 2)]
+len 8 overlap failures 0 pairs 5952 distances(type) [(2, 1, 1), (2, 1, 2), (2, 2, 1), (2, 2, 2), (3, 1, 1), (3, 1, 2), (3, 2, 1), (3, 2, 2)]
+len 9 overlap failures 0 pairs 36096 distances(type) [(2, 1, 1), (2, 1, 2), (2, 2, 1), (2, 2, 2), (3, 1, 1), (3, 1, 2), (3, 2, 1), (3, 2, 2)]

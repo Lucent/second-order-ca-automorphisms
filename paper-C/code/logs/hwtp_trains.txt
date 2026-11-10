@@ -1,0 +1,9 @@
+127 gap 5 commute failures 0 hom failures 0 nontrivial 150 /150
+127 gap 6 commute failures 0 hom failures 0 nontrivial 150 /150
+127 gap 8 commute failures 0 hom failures 0 nontrivial 150 /150
+179 gap 5 commute failures 0 hom failures 0 nontrivial 150 /150
+179 gap 6 commute failures 0 hom failures 0 nontrivial 150 /150
+179 gap 8 commute failures 0 hom failures 0 nontrivial 150 /150
+223 gap 5 commute failures 0 hom failures 0 nontrivial 150 /150
+223 gap 6 commute failures 0 hom failures 0 nontrivial 150 /150
+223 gap 8 commute failures 0 hom failures 0 nontrivial 150 /150

@@ -1,0 +1,119 @@
+rule 110 k=5 mode=short fill=0: vertices 3072, edges 36864, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=5 mode=short fill=1: vertices 3072, edges 36864, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=5 mode=short fill=2: vertices 3072, edges 36864, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=5 mode=short fill=3: vertices 3072, edges 36864, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=5 mode=short fill=4: vertices 3072, edges 36864, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=5 mode=short fill=5: vertices 3072, edges 36864, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 42 k=5 mode=short fill=0: vertices 3072, edges 36864, classes 9, claimed classes 9, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 6
+rule 42 k=5 mode=short fill=1: vertices 3072, edges 36864, classes 9, claimed classes 9, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 6
+rule 42 k=5 mode=short fill=2: vertices 3072, edges 36864, classes 9, claimed classes 9, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 6
+rule 42 k=5 mode=short fill=3: vertices 3072, edges 36864, classes 9, claimed classes 9, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 6
+rule 42 k=5 mode=short fill=4: vertices 3072, edges 36864, classes 9, claimed classes 9, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 6
+rule 42 k=5 mode=short fill=5: vertices 3072, edges 36864, classes 9, claimed classes 9, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 6
+ALL CHECKS PASSED
+rule 110 k=6 mode=short fill=0: vertices 12288, edges 180224, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=6 mode=short fill=1: vertices 12288, edges 180224, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=6 mode=short fill=2: vertices 12288, edges 180224, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=6 mode=short fill=3: vertices 12288, edges 180224, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=6 mode=short fill=4: vertices 12288, edges 180224, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=6 mode=short fill=5: vertices 12288, edges 180224, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 42 k=6 mode=short fill=0: vertices 12288, edges 180224, classes 10, claimed classes 10, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 7
+rule 42 k=6 mode=short fill=1: vertices 12288, edges 180224, classes 10, claimed classes 10, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 7
+rule 42 k=6 mode=short fill=2: vertices 12288, edges 180224, classes 10, claimed classes 10, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 7
+rule 42 k=6 mode=short fill=3: vertices 12288, edges 180224, classes 10, claimed classes 10, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 7
+rule 42 k=6 mode=short fill=4: vertices 12288, edges 180224, classes 10, claimed classes 10, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 7
+rule 42 k=6 mode=short fill=5: vertices 12288, edges 180224, classes 10, claimed classes 10, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 7
+ALL CHECKS PASSED
+rule 110 k=7 mode=short fill=0: vertices 49152, edges 851968, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=7 mode=short fill=1: vertices 49152, edges 851968, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=7 mode=short fill=2: vertices 49152, edges 851968, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=7 mode=short fill=3: vertices 49152, edges 851968, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=7 mode=short fill=4: vertices 49152, edges 851968, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=7 mode=short fill=5: vertices 49152, edges 851968, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 42 k=7 mode=short fill=0: vertices 49152, edges 851968, classes 11, claimed classes 11, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 8
+rule 42 k=7 mode=short fill=1: vertices 49152, edges 851968, classes 11, claimed classes 11, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 8
+rule 42 k=7 mode=short fill=2: vertices 49152, edges 851968, classes 11, claimed classes 11, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 8
+rule 42 k=7 mode=short fill=3: vertices 49152, edges 851968, classes 11, claimed classes 11, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 8
+rule 42 k=7 mode=short fill=4: vertices 49152, edges 851968, classes 11, claimed classes 11, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 8
+rule 42 k=7 mode=short fill=5: vertices 49152, edges 851968, classes 11, claimed classes 11, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 8
+ALL CHECKS PASSED
+rule 110 k=8 mode=short fill=0: vertices 196608, edges 3932160, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=8 mode=short fill=1: vertices 196608, edges 3932160, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=8 mode=short fill=2: vertices 196608, edges 3932160, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=8 mode=short fill=3: vertices 196608, edges 3932160, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=8 mode=short fill=4: vertices 196608, edges 3932160, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=8 mode=short fill=5: vertices 196608, edges 3932160, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 42 k=8 mode=short fill=0: vertices 196608, edges 3932160, classes 12, claimed classes 12, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 9
+rule 42 k=8 mode=short fill=1: vertices 196608, edges 3932160, classes 12, claimed classes 12, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 9
+rule 42 k=8 mode=short fill=2: vertices 196608, edges 3932160, classes 12, claimed classes 12, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 9
+rule 42 k=8 mode=short fill=3: vertices 196608, edges 3932160, classes 12, claimed classes 12, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 9
+rule 42 k=8 mode=short fill=4: vertices 196608, edges 3932160, classes 12, claimed classes 12, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 9
+rule 42 k=8 mode=short fill=5: vertices 196608, edges 3932160, classes 12, claimed classes 12, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 9
+ALL CHECKS PASSED
+rule 110 k=9 mode=short fill=0: vertices 786432, edges 17825792, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=9 mode=short fill=1: vertices 786432, edges 17825792, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=9 mode=short fill=2: vertices 786432, edges 17825792, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=9 mode=short fill=3: vertices 786432, edges 17825792, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=9 mode=short fill=4: vertices 786432, edges 17825792, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=9 mode=short fill=5: vertices 786432, edges 17825792, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 42 k=9 mode=short fill=0: vertices 786432, edges 17825792, classes 13, claimed classes 13, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 10
+rule 42 k=9 mode=short fill=1: vertices 786432, edges 17825792, classes 13, claimed classes 13, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 10
+rule 42 k=9 mode=short fill=2: vertices 786432, edges 17825792, classes 13, claimed classes 13, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 10
+rule 42 k=9 mode=short fill=3: vertices 786432, edges 17825792, classes 13, claimed classes 13, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 10
+rule 42 k=9 mode=short fill=4: vertices 786432, edges 17825792, classes 13, claimed classes 13, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 10
+rule 42 k=9 mode=short fill=5: vertices 786432, edges 17825792, classes 13, claimed classes 13, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 10
+ALL CHECKS PASSED
+rule 110 k=10 mode=short fill=0: vertices 3145728, edges 79691776, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=10 mode=short fill=1: vertices 3145728, edges 79691776, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=10 mode=short fill=2: vertices 3145728, edges 79691776, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=10 mode=short fill=3: vertices 3145728, edges 79691776, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=10 mode=short fill=4: vertices 3145728, edges 79691776, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+rule 110 k=10 mode=short fill=5: vertices 3145728, edges 79691776, classes 5, claimed classes 5, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 42 k=10 mode=short fill=0: vertices 3145728, edges 79691776, classes 14, claimed classes 14, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 11
+rule 42 k=10 mode=short fill=1: vertices 3145728, edges 79691776, classes 14, claimed classes 14, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 11
+rule 42 k=10 mode=short fill=2: vertices 3145728, edges 79691776, classes 14, claimed classes 14, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 11
+rule 42 k=10 mode=short fill=3: vertices 3145728, edges 79691776, classes 14, claimed classes 14, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 11
+rule 42 k=10 mode=short fill=4: vertices 3145728, edges 79691776, classes 14, claimed classes 14, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 11
+rule 42 k=10 mode=short fill=5: vertices 3145728, edges 79691776, classes 14, claimed classes 14, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 11
+ALL CHECKS PASSED
+rule 46 k=4 mode=short fill=0: vertices 768, edges 3584, classes 64, claimed classes 64, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 16 16 16 16
+rule 46 k=4 mode=short fill=1: vertices 768, edges 3584, classes 64, claimed classes 64, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 16 16 16 16
+rule 46 k=4 mode=short fill=2: vertices 768, edges 3584, classes 64, claimed classes 64, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 16 16 16 16
+rule 46 k=4 mode=short fill=3: vertices 768, edges 3584, classes 64, claimed classes 64, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 16 16 16 16
+rule 46 k=4 mode=short fill=4: vertices 768, edges 3584, classes 64, claimed classes 64, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 16 16 16 16
+rule 46 k=4 mode=short fill=5: vertices 768, edges 3584, classes 64, claimed classes 64, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 16 16 16 16
+ALL CHECKS PASSED
+rule 46 k=5 mode=short fill=0: vertices 3072, edges 18432, classes 128, claimed classes 128, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 32 32 32 32
+rule 46 k=5 mode=short fill=1: vertices 3072, edges 18432, classes 128, claimed classes 128, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 32 32 32 32
+rule 46 k=5 mode=short fill=2: vertices 3072, edges 18432, classes 128, claimed classes 128, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 32 32 32 32
+rule 46 k=5 mode=short fill=3: vertices 3072, edges 18432, classes 128, claimed classes 128, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 32 32 32 32
+rule 46 k=5 mode=short fill=4: vertices 3072, edges 18432, classes 128, claimed classes 128, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 32 32 32 32
+rule 46 k=5 mode=short fill=5: vertices 3072, edges 18432, classes 128, claimed classes 128, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 32 32 32 32
+ALL CHECKS PASSED
+rule 46 k=6 mode=short fill=0: vertices 12288, edges 90112, classes 256, claimed classes 256, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 64 64 64 64
+rule 46 k=6 mode=short fill=1: vertices 12288, edges 90112, classes 256, claimed classes 256, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 64 64 64 64
+rule 46 k=6 mode=short fill=2: vertices 12288, edges 90112, classes 256, claimed classes 256, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 64 64 64 64
+rule 46 k=6 mode=short fill=3: vertices 12288, edges 90112, classes 256, claimed classes 256, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 64 64 64 64
+rule 46 k=6 mode=short fill=4: vertices 12288, edges 90112, classes 256, claimed classes 256, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 64 64 64 64
+rule 46 k=6 mode=short fill=5: vertices 12288, edges 90112, classes 256, claimed classes 256, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 64 64 64 64
+ALL CHECKS PASSED
+rule 46 k=7 mode=short fill=0: vertices 49152, edges 425984, classes 512, claimed classes 512, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 128 128 128 128
+rule 46 k=7 mode=short fill=1: vertices 49152, edges 425984, classes 512, claimed classes 512, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 128 128 128 128
+rule 46 k=7 mode=short fill=2: vertices 49152, edges 425984, classes 512, claimed classes 512, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 128 128 128 128
+rule 46 k=7 mode=short fill=3: vertices 49152, edges 425984, classes 512, claimed classes 512, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 128 128 128 128
+rule 46 k=7 mode=short fill=4: vertices 49152, edges 425984, classes 512, claimed classes 512, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 128 128 128 128
+rule 46 k=7 mode=short fill=5: vertices 49152, edges 425984, classes 512, claimed classes 512, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 128 128 128 128
+ALL CHECKS PASSED
+rule 46 k=8 mode=short fill=0: vertices 196608, edges 1966080, classes 1024, claimed classes 1024, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 256 256 256 256
+rule 46 k=8 mode=short fill=1: vertices 196608, edges 1966080, classes 1024, claimed classes 1024, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 256 256 256 256
+rule 46 k=8 mode=short fill=2: vertices 196608, edges 1966080, classes 1024, claimed classes 1024, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 256 256 256 256
+rule 46 k=8 mode=short fill=3: vertices 196608, edges 1966080, classes 1024, claimed classes 1024, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 256 256 256 256
+rule 46 k=8 mode=short fill=4: vertices 196608, edges 1966080, classes 1024, claimed classes 1024, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 256 256 256 256
+rule 46 k=8 mode=short fill=5: vertices 196608, edges 1966080, classes 1024, claimed classes 1024, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 256 256 256 256
+ALL CHECKS PASSED

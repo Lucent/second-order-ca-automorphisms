@@ -1,0 +1,25 @@
+\section{The computation}\label{sec:method}
+
+Several statements below are finite computations of $\Cent_R(F)$ or $\Cent^{\times}_R(F)$ for small $R$. This section describes the method; Appendix~\ref{app:comp} lists what was computed.
+
+\subsection{Commutation as a finite constraint}
+Let $g$ be a block map of radius $R$ with local rule $\gamma$, and $F=F_f$. Both $g\circ F$ and $F\circ g$ are block maps of radius $R+1$, so they are equal if and only if their local rules agree on every window $w\in\A^{2R+3}$. Write $n=2R+1$ and, for a window $w=(w_0,\dots,w_{2R+2})$, let $e_1,e_2,e_3$ be the three subwords of length $n$ starting at positions $0,1,2$ and let $e_L=F(w)$ be the word of length $n$ obtained by applying the local rule of $F$ to $w$. Then
+\[
+(g\circ F)(w)=\gamma(e_L),\qquad (F\circ g)(w)=\Bigl(\gamma(e_2)_y,\ \gamma(e_2)_x\oplus f\bigl(\gamma(e_1)_y,\gamma(e_2)_y,\gamma(e_3)_y\bigr)\Bigr),
+\]
+where $\gamma(e)_x,\gamma(e)_y$ are the two output bits. Writing $X_e,Y_e$ for the two unknown bits of table entry $e$, each window contributes the two constraints
+\begin{equation}\label{eq:constraints}
+X_{e_L}=Y_{e_2},\qquad Y_{e_L}\oplus X_{e_2}=f(Y_{e_1},Y_{e_2},Y_{e_3}).
+\end{equation}
+The first is two binary clauses; the second is a constraint on at most five variables, encoded by its truth table in at most sixteen clauses. Altogether there are $2\cdot4^{2R+1}$ variables and at most $18\cdot4^{2R+3}$ clauses: $17{,}680$ clauses at $R=1$ and $2.9\times10^5$ at $R=2$.
+
+\subsection{Enumeration and verification}
+All solutions are enumerated by repeated solving with blocking clauses, using PySAT \cite{PySAT} with CaDiCaL~1.5.3 \cite{CaDiCaL}. Every table returned by the solver is re-checked, independently of the CNF, by evaluating $g\circ F$ and $F\circ g$ on all $4^{2R+3}$ windows. Each solution is then classified: it is matched against the tables of the maps $\sh^aF^b$ with $|a|+|b|\le R$, which are built directly by composing local rules, and against the constant maps. The program asserts that every $\sh^aF^b$ with $|a|+|b|\le R$ occurs among the solutions, which checks the encoding against the only maps known in advance to commute.
+
+\subsection{Invertibility}
+A block map is an automorphism of $\A^{\Z}$ if and only if it is injective. Injectivity of a block map of radius $R$ is decided exactly by the pair graph: its vertices are the pairs $(u,v)$ of words of length $2R$, with an edge $(u,v)\to(u',v')$ labelled $(a,b)\in\A^2$ whenever $u'$ and $v'$ are $ua$ and $vb$ with the first letter dropped, and $\gamma(ua)=\gamma(vb)$. Then $g$ fails to be injective if and only if a bi-infinite path passes through an off-diagonal vertex, which is decided by iteratively deleting vertices without a predecessor or without a successor. The test was implemented twice, in pure Python and vectorised, and the two implementations were checked to agree at $R=1$; at $R\le2$ every map found injective was also checked to be injective on all spatially periodic configurations of period at most $2R+4$.
+
+When $\Cent_R(F)$ is too large to enumerate, only its invertible part is enumerated. An invertible block map is surjective, and a surjective block map of radius $R$ is \emph{balanced} \cite[Theorem~5.4]{Hedlund1969}: each output symbol occurs exactly $4^{2R}$ times in the table. Balance is added to the CNF as four cardinality constraints, the balanced commuting maps are enumerated, and each is submitted to the pair-graph test. Balance is necessary and the pair-graph test is exact, so this yields $\Cent^{\times}_R(F)$ exactly.
+
+\subsection{Linear rules}
+When $f$ is linear over $\F_2$, the constraints \eqref{eq:constraints} are homogeneous linear equations in the table bits and $\Cent_R(F)$ is an $\F_2$-subspace of table space. Its dimension is computed by Gaussian elimination: the equalities $X_{e_L}=Y_{e_2}$ are merged by union--find, which reduces the $2\cdot4^{2R+1}$ bits to $4^{2R}$ classes, and the remaining equations are reduced by bit-packed elimination. For $R\le2$ the result was cross-checked against the SAT enumeration of all $2^{\dim}$ solutions.

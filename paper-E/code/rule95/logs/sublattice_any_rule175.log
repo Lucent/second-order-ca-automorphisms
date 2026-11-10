@@ -1,0 +1,14 @@
+rule 175 R=1 type=0: clauses=256 solutions=1 named_of_type=1 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=1 type=1: clauses=240 solutions=4 named_of_type=4 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=2 type=0: clauses=1072 solutions=9 named_of_type=9 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=2 type=1: clauses=1152 solutions=4 named_of_type=4 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=3 type=0: clauses=4656 solutions=9 named_of_type=9 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=3 type=1: clauses=4336 solutions=16 named_of_type=16 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=4 type=0: clauses=17392 solutions=25 named_of_type=25 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=4 type=1: clauses=18672 solutions=16 named_of_type=16 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=5 type=0: clauses=74736 solutions=25 named_of_type=25 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=5 type=1: clauses=69616 solutions=36 named_of_type=36 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=0s
+rule 175 R=6 type=0: clauses=278512 solutions=49 named_of_type=49 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=2s
+rule 175 R=6 type=1: clauses=298992 solutions=36 named_of_type=36 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=2s
+rule 175 R=7 type=0: clauses=1196016 solutions=49 named_of_type=49 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=12s
+rule 175 R=7 type=1: clauses=1114096 solutions=64 named_of_type=64 named_missing=0 constants=0 others=0 others_inj_on_periodic<=7=0 (of 0 tested) commut_fail=0 time=13s

@@ -1,0 +1,2 @@
+R=1: solution dim 5; affine solutions dim 5; |U|=1 tables (all commute & in space: True); |W|=2 (True); dim of (affine solutions + U + W) = 5; prediction 2^(2R)+1 = 5; EXACT SPAN: True
+R=2: solution dim 17; affine solutions dim 9; |U|=8 tables (all commute & in space: True); |W|=8 (True); dim of (affine solutions + U + W) = 17; prediction 2^(2R)+1 = 17; EXACT SPAN: True

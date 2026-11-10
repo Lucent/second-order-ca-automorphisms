@@ -1,0 +1,2 @@
+direct 66 controllability k<=3 ok
+ALL CHECKS PASSED

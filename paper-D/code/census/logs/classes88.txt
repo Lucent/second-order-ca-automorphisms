@@ -1,0 +1,91 @@
+88 classes, 256 rules
+  0 [0] affine fixed word: 0; cell permutations: [(0, 2, 1, 3), (3, 1, 2, 0), (3, 2, 1, 0)]
+  1 [1, 128]  fixed word: 3; cell permutations: none
+  2 [2, 8, 16, 64]  fixed word: 3; cell permutations: none
+  3 [3, 17, 136, 192]  fixed word: 3; cell permutations: none
+  4 [4, 32]  fixed word: 0; cell permutations: none
+  5 [5, 160]  fixed word: 33; cell permutations: none
+  6 [6, 20, 40, 96]  fixed word: 33; cell permutations: none
+  7 [7, 21, 168, 224]  fixed word: 33; cell permutations: none
+  9 [9, 65, 130, 144]  fixed word: 30; cell permutations: none
+ 10 [10, 80]  fixed word: 30; cell permutations: none
+ 11 [11, 81, 138, 208]  fixed word: 30; cell permutations: none
+ 12 [12, 34, 48, 68]  fixed word: 0; cell permutations: none
+ 13 [13, 69, 162, 176]  fixed word: none; cell permutations: none
+ 14 [14, 42, 84, 112]  fixed word: none; cell permutations: none
+ 15 [15, 85, 170, 240] affine outer-permutive fixed word: none; cell permutations: none
+ 18 [18, 72]  fixed word: 3; cell permutations: none
+ 19 [19, 200]  fixed word: 3; cell permutations: none
+ 22 [22, 104]  fixed word: 33; cell permutations: none
+ 23 [23, 232]  fixed word: 33; cell permutations: none
+ 24 [24, 66]  fixed word: none; cell permutations: [(3, 2, 1, 0)]
+ 25 [25, 67, 152, 194]  fixed word: none; cell permutations: none
+ 26 [26, 74, 82, 88]  fixed word: none; cell permutations: none
+ 27 [27, 83, 202, 216]  fixed word: none; cell permutations: none
+ 28 [28, 56, 70, 98]  fixed word: none; cell permutations: none
+ 29 [29, 71, 184, 226]  fixed word: none; cell permutations: none
+ 30 [30, 86, 106, 120] outer-permutive fixed word: none; cell permutations: none
+ 31 [31, 87, 234, 248]  fixed word: none; cell permutations: none
+ 33 [33, 132]  fixed word: 3; cell permutations: none
+ 35 [35, 49, 140, 196]  fixed word: 3; cell permutations: none
+ 36 [36]  fixed word: 00; cell permutations: [(3, 2, 1, 0)]
+ 37 [37, 164]  fixed word: 33; cell permutations: none
+ 38 [38, 44, 52, 100]  fixed word: 33; cell permutations: none
+ 39 [39, 53, 172, 228]  fixed word: 33; cell permutations: none
+ 41 [41, 97, 134, 148]  fixed word: none; cell permutations: none
+ 43 [43, 113, 142, 212]  fixed word: none; cell permutations: none
+ 45 [45, 101, 166, 180] outer-permutive fixed word: none; cell permutations: none
+ 46 [46, 116]  fixed word: none; cell permutations: none
+ 47 [47, 117, 174, 244]  fixed word: none; cell permutations: none
+ 50 [50, 76]  fixed word: 3; cell permutations: none
+ 51 [51, 204] affine fixed word: 3; cell permutations: [(1, 2, 0, 3), (2, 0, 1, 3)]
+ 54 [54, 108]  fixed word: 33; cell permutations: none
+ 55 [55, 236]  fixed word: 33; cell permutations: none
+ 57 [57, 99, 156, 198]  fixed word: none; cell permutations: none
+ 58 [58, 78, 92, 114]  fixed word: none; cell permutations: none
+ 59 [59, 115, 206, 220]  fixed word: none; cell permutations: none
+ 60 [60, 102] affine outer-permutive fixed word: none; cell permutations: [(3, 2, 1, 0)]
+ 61 [61, 103, 188, 230]  fixed word: none; cell permutations: none
+ 62 [62, 110, 118, 124]  fixed word: none; cell permutations: none
+ 63 [63, 119, 238, 252]  fixed word: none; cell permutations: none
+ 73 [73, 146]  fixed word: 030; cell permutations: none
+ 75 [75, 89, 154, 210] outer-permutive fixed word: none; cell permutations: none
+ 77 [77, 178]  fixed word: none; cell permutations: none
+ 79 [79, 93, 186, 242]  fixed word: none; cell permutations: none
+ 90 [90] affine outer-permutive fixed word: none; cell permutations: [(3, 2, 1, 0)]
+ 91 [91, 218]  fixed word: none; cell permutations: none
+ 94 [94, 122]  fixed word: none; cell permutations: none
+ 95 [95, 250]  fixed word: none; cell permutations: none
+105 [105, 150] affine outer-permutive fixed word: none; cell permutations: none
+107 [107, 121, 158, 214]  fixed word: none; cell permutations: none
+109 [109, 182]  fixed word: none; cell permutations: none
+111 [111, 125, 190, 246]  fixed word: none; cell permutations: none
+123 [123, 222]  fixed word: none; cell permutations: none
+126 [126]  fixed word: none; cell permutations: [(3, 2, 1, 0)]
+127 [127, 254]  fixed word: none; cell permutations: none
+129 [129]  fixed word: 03; cell permutations: [(3, 2, 1, 0)]
+131 [131, 137, 145, 193]  fixed word: 30; cell permutations: none
+133 [133, 161]  fixed word: none; cell permutations: none
+135 [135, 149, 169, 225] outer-permutive fixed word: none; cell permutations: none
+139 [139, 209]  fixed word: 30; cell permutations: none
+141 [141, 163, 177, 197]  fixed word: none; cell permutations: none
+143 [143, 171, 213, 241]  fixed word: none; cell permutations: none
+147 [147, 201]  fixed word: 303; cell permutations: none
+151 [151, 233]  fixed word: none; cell permutations: none
+153 [153, 195] affine outer-permutive fixed word: none; cell permutations: [(3, 2, 1, 0)]
+155 [155, 203, 211, 217]  fixed word: none; cell permutations: none
+157 [157, 185, 199, 227]  fixed word: none; cell permutations: none
+159 [159, 215, 235, 249]  fixed word: none; cell permutations: none
+165 [165] affine outer-permutive fixed word: none; cell permutations: [(3, 2, 1, 0)]
+167 [167, 173, 181, 229]  fixed word: none; cell permutations: none
+175 [175, 245]  fixed word: none; cell permutations: none
+179 [179, 205]  fixed word: none; cell permutations: none
+183 [183, 237]  fixed word: none; cell permutations: none
+187 [187, 207, 221, 243]  fixed word: none; cell permutations: none
+189 [189, 231]  fixed word: none; cell permutations: [(3, 2, 1, 0)]
+191 [191, 239, 247, 253]  fixed word: none; cell permutations: none
+219 [219]  fixed word: none; cell permutations: [(3, 2, 1, 0)]
+223 [223, 251]  fixed word: none; cell permutations: none
+255 [255] affine fixed word: none; cell permutations: [(1, 3, 0, 2), (2, 0, 3, 1), (3, 2, 1, 0)]
+31 classes and 81 rules with a fixed word of length at most 3
+13 classes with a nontrivial commuting cell permutation

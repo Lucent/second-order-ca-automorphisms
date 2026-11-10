@@ -1,0 +1,262 @@
+== sh91_0101.log
+rule 91 tails 01|01 mode 0: probes 167914 of 167914 admissible
+n=1 objects 1 fail 0 maxneed 2
+n=2 objects 1 fail 0 maxneed 2
+n=3 objects 2 fail 0 maxneed 10
+n=4 objects 2 fail 0 maxneed 2
+n=5 objects 7 fail 0 maxneed 10
+n=6 objects 7 fail 0 maxneed 2
+n=7 objects 24 fail 0 maxneed 11
+n=8 objects 24 fail 0 maxneed 11
+n=9 objects 81 fail 0 maxneed 11
+n=10 objects 81 fail 0 maxneed 8
+n=11 objects 274 fail 0 maxneed 13
+n=12 objects 274 fail 0 maxneed 10
+n=13 objects 927 fail 0 maxneed 13
+n=14 objects 927 fail 0 maxneed 12
+n=15 objects 3136 fail 0 maxneed 13
+n=16 objects 3136 fail 0 maxneed 12
+== sh91_0110.log
+rule 91 tails 01|10 mode 0: probes 27074 of 167914 admissible
+n=1 objects 0 fail 0 maxneed 0
+n=2 objects 1 fail 0 maxneed 5
+n=3 objects 1 fail 0 maxneed 5
+n=4 objects 4 fail 0 maxneed 5
+n=5 objects 4 fail 0 maxneed 9
+n=6 objects 13 fail 0 maxneed 9
+n=7 objects 13 fail 0 maxneed 10
+n=8 objects 44 fail 0 maxneed 10
+n=9 objects 44 fail 0 maxneed 10
+n=10 objects 149 fail 0 maxneed 15
+n=11 objects 149 fail 0 maxneed 15
+n=12 objects 504 fail 0 maxneed 15
+n=13 objects 504 fail 0 maxneed 15
+n=14 objects 1705 fail 0 maxneed 15
+n=15 objects 1705 fail 0 maxneed 15
+n=16 objects 5768 fail 0 maxneed 15
+== sh91_0111.log
+rule 91 tails 01|11 mode 0: probes 76345 of 167914 admissible
+n=1 objects 0 fail 0 maxneed 0
+n=2 objects 1 fail 0 maxneed 2
+n=3 objects 2 fail 0 maxneed 14
+n=4 objects 3 fail 0 maxneed 14
+n=5 objects 6 fail 0 maxneed 14
+n=6 objects 11 fail 0 maxneed 8
+n=7 objects 20 fail 0 maxneed 14
+n=8 objects 37 fail 0 maxneed 14
+n=9 objects 68 fail 0 maxneed 14
+n=10 objects 125 fail 0 maxneed 10
+n=11 objects 230 fail 0 maxneed 14
+n=12 objects 423 fail 0 maxneed 10
+n=13 objects 778 fail 0 maxneed 14
+n=14 objects 1431 fail 0 maxneed 14
+n=15 objects 2632 fail 0 maxneed 14
+n=16 objects 4841 fail 0 maxneed 14
+== sh91_1001.log
+rule 91 tails 10|01 mode 0: probes 27074 of 167914 admissible
+n=1 objects 0 fail 0 maxneed 0
+n=2 objects 0 fail 0 maxneed 0
+n=3 objects 1 fail 0 maxneed 5
+n=4 objects 1 fail 0 maxneed 5
+n=5 objects 4 fail 0 maxneed 7
+n=6 objects 4 fail 0 maxneed 7
+n=7 objects 13 fail 0 maxneed 7
+n=8 objects 13 fail 0 maxneed 7
+n=9 objects 44 fail 0 maxneed 9
+n=10 objects 44 fail 0 maxneed 9
+n=11 objects 149 fail 0 maxneed 9
+n=12 objects 149 fail 0 maxneed 9
+n=13 objects 504 fail 0 maxneed 11
+n=14 objects 504 fail 0 maxneed 9
+n=15 objects 1705 fail 0 maxneed 12
+n=16 objects 1705 fail 0 maxneed 9
+== sh91_1010.log
+rule 91 tails 10|10 mode 0: probes 167914 of 167914 admissible
+n=1 objects 0 fail 0 maxneed 0
+n=2 objects 1 fail 0 maxneed 3
+n=3 objects 1 fail 0 maxneed 2
+n=4 objects 2 fail 0 maxneed 3
+n=5 objects 2 fail 0 maxneed 2
+n=6 objects 7 fail 0 maxneed 5
+n=7 objects 7 fail 0 maxneed 5
+n=8 objects 24 fail 0 maxneed 7
+n=9 objects 24 fail 0 maxneed 5
+n=10 objects 81 fail 0 maxneed 9
+n=11 objects 81 fail 0 maxneed 7
+n=12 objects 274 fail 0 maxneed 9
+n=13 objects 274 fail 0 maxneed 9
+n=14 objects 927 fail 0 maxneed 9
+n=15 objects 927 fail 0 maxneed 9
+n=16 objects 3136 fail 0 maxneed 11
+== sh91_1011.log
+rule 91 tails 10|11 mode 0: probes 76345 of 167914 admissible
+n=1 objects 1 fail 0 maxneed 2
+n=2 objects 0 fail 0 maxneed 0
+n=3 objects 1 fail 0 maxneed 2
+n=4 objects 2 fail 0 maxneed 5
+n=5 objects 3 fail 0 maxneed 5
+n=6 objects 6 fail 0 maxneed 5
+n=7 objects 11 fail 0 maxneed 5
+n=8 objects 20 fail 0 maxneed 7
+n=9 objects 37 fail 0 maxneed 7
+n=10 objects 68 fail 0 maxneed 7
+n=11 objects 125 fail 0 maxneed 9
+n=12 objects 230 fail 0 maxneed 9
+n=13 objects 423 fail 0 maxneed 9
+n=14 objects 778 fail 0 maxneed 9
+n=15 objects 1431 fail 0 maxneed 9
+n=16 objects 2632 fail 0 maxneed 9
+== sh91_1101.log
+rule 91 tails 11|01 mode 0: probes 54021 of 203804 admissible
+n=1 objects 0 fail 0 maxneed 0
+n=2 objects 0 fail 0 maxneed 0
+n=3 objects 2 fail 0 maxneed 9
+n=4 objects 2 fail 0 maxneed 2
+n=5 objects 6 fail 0 maxneed 10
+n=6 objects 6 fail 0 maxneed 10
+n=7 objects 20 fail 0 maxneed 10
+n=8 objects 20 fail 0 maxneed 10
+n=9 objects 68 fail 0 maxneed 10
+n=10 objects 68 fail 0 maxneed 10
+n=11 objects 230 fail 0 maxneed 11
+n=12 objects 230 fail 0 maxneed 11
+n=13 objects 778 fail 0 maxneed 11
+n=14 objects 778 fail 0 maxneed 11
+n=15 objects 2632 fail 0 maxneed 13
+n=16 objects 2632 fail 0 maxneed 13
+== sh91_1110.log
+rule 91 tails 11|10 mode 0: probes 54021 of 203804 admissible
+n=1 objects 1 fail 0 maxneed 2
+n=2 objects 1 fail 0 maxneed 4
+n=3 objects 1 fail 0 maxneed 2
+n=4 objects 3 fail 0 maxneed 5
+n=5 objects 3 fail 0 maxneed 2
+n=6 objects 11 fail 0 maxneed 6
+n=7 objects 11 fail 0 maxneed 6
+n=8 objects 37 fail 0 maxneed 10
+n=9 objects 37 fail 0 maxneed 10
+n=10 objects 125 fail 0 maxneed 12
+n=11 objects 125 fail 0 maxneed 10
+n=12 objects 423 fail 0 maxneed 12
+n=13 objects 423 fail 0 maxneed 12
+n=14 objects 1431 fail 0 maxneed 12
+n=15 objects 1431 fail 0 maxneed 12
+n=16 objects 4841 fail 0 maxneed 13
+== sh91_1111.log
+rule 91 tails 11|11 mode 0: probes 203804 of 203804 admissible
+n=1 objects 1 fail 0 maxneed 2
+n=2 objects 1 fail 0 maxneed 4
+n=3 objects 1 fail 0 maxneed 2
+n=4 objects 3 fail 0 maxneed 5
+n=5 objects 5 fail 0 maxneed 2
+n=6 objects 9 fail 0 maxneed 5
+n=7 objects 17 fail 0 maxneed 5
+n=8 objects 31 fail 0 maxneed 6
+n=9 objects 57 fail 0 maxneed 6
+n=10 objects 105 fail 0 maxneed 8
+n=11 objects 193 fail 0 maxneed 8
+n=12 objects 355 fail 0 maxneed 8
+n=13 objects 653 fail 0 maxneed 9
+n=14 objects 1201 fail 0 maxneed 9
+n=15 objects 2209 fail 0 maxneed 10
+n=16 objects 4063 fail 0 maxneed 11
+== sh94_0000.log
+rule 94 tails 00|00 mode 0: probes 452060 of 452060 admissible
+n=1 objects 0 fail 0 maxneed 0
+n=2 objects 1 fail 0 maxneed 6
+n=3 objects 1 fail 0 maxneed 2
+n=4 objects 1 fail 0 maxneed 6
+n=5 objects 2 fail 0 maxneed 5
+n=6 objects 4 fail 0 maxneed 7
+n=7 objects 7 fail 0 maxneed 9
+n=8 objects 12 fail 0 maxneed 9
+n=9 objects 21 fail 0 maxneed 11
+n=10 objects 37 fail 0 maxneed 10
+n=11 objects 65 fail 0 maxneed 13
+n=12 objects 114 fail 0 maxneed 16
+n=13 objects 200 fail 0 maxneed 16
+n=14 objects 351 fail 0 maxneed 16
+n=15 objects 616 fail 0 maxneed 17
+n=16 objects 1081 fail 0 maxneed 17
+n=17 objects 1897 fail 0 maxneed 17
+n=18 objects 3329 fail 0 maxneed 17
+n=19 objects 5842 fail 0 maxneed 19
+n=20 objects 10252 fail 0 maxneed 20
+n=21 objects 17991 fail 0 maxneed 21
+n=22 objects 31572 fail 0 maxneed 22
+n=23 objects 55405 fail 0 maxneed 22
+== sh94_0011.log
+rule 94 tails 00|11 mode 0: probes 188186 of 452060 admissible
+n=1 objects 0 fail 0 maxneed 0
+n=2 objects 0 fail 0 maxneed 0
+n=3 objects 1 fail 0 maxneed 7
+n=4 objects 2 fail 0 maxneed 13
+n=5 objects 3 fail 0 maxneed 7
+n=6 objects 5 fail 0 maxneed 10
+n=7 objects 9 fail 0 maxneed 13
+n=8 objects 16 fail 0 maxneed 13
+n=9 objects 28 fail 0 maxneed 12
+n=10 objects 49 fail 0 maxneed 15
+n=11 objects 86 fail 0 maxneed 14
+n=12 objects 151 fail 0 maxneed 15
+n=13 objects 265 fail 0 maxneed 16
+n=14 objects 465 fail 0 maxneed 16
+n=15 objects 816 fail 0 maxneed 17
+n=16 objects 1432 fail 0 maxneed 20
+n=17 objects 2513 fail 0 maxneed 20
+n=18 objects 4410 fail 0 maxneed 20
+n=19 objects 7739 fail 0 maxneed 20
+n=20 objects 13581 fail 0 maxneed 21
+n=21 objects 23833 fail 0 maxneed 21
+n=22 objects 41824 fail 0 maxneed 22
+n=23 objects 73396 fail 0 maxneed 22
+== sh94_1100.log
+rule 94 tails 11|00 mode 0: probes 114050 of 793310 admissible
+n=1 objects 0 fail 0 maxneed 0
+n=2 objects 0 fail 0 maxneed 0
+n=3 objects 1 fail 0 maxneed 7
+n=4 objects 2 fail 0 maxneed 15
+n=5 objects 3 fail 0 maxneed 15
+n=6 objects 5 fail 0 maxneed 15
+n=7 objects 9 fail 0 maxneed 15
+n=8 objects 16 fail 0 maxneed 15
+n=9 objects 28 fail 0 maxneed 15
+n=10 objects 49 fail 0 maxneed 15
+n=11 objects 86 fail 0 maxneed 15
+n=12 objects 151 fail 0 maxneed 15
+n=13 objects 265 fail 0 maxneed 15
+n=14 objects 465 fail 0 maxneed 17
+n=15 objects 816 fail 0 maxneed 16
+n=16 objects 1432 fail 0 maxneed 19
+n=17 objects 2513 fail 0 maxneed 17
+n=18 objects 4410 fail 0 maxneed 20
+n=19 objects 7739 fail 0 maxneed 20
+n=20 objects 13581 fail 0 maxneed 20
+n=21 objects 23833 fail 0 maxneed 21
+n=22 objects 41824 fail 0 maxneed 22
+n=23 objects 73396 fail 0 maxneed 24
+== sh94_1111.log
+rule 94 tails 11|11 mode 0: probes 793310 of 793310 admissible
+n=1 objects 1 fail 0 maxneed 4
+n=2 objects 1 fail 0 maxneed 5
+n=3 objects 1 fail 0 maxneed 4
+n=4 objects 2 fail 0 maxneed 5
+n=5 objects 4 fail 0 maxneed 5
+n=6 objects 7 fail 0 maxneed 5
+n=7 objects 12 fail 0 maxneed 10
+n=8 objects 21 fail 0 maxneed 10
+n=9 objects 37 fail 0 maxneed 12
+n=10 objects 65 fail 0 maxneed 12
+n=11 objects 114 fail 0 maxneed 12
+n=12 objects 200 fail 0 maxneed 13
+n=13 objects 351 fail 0 maxneed 14
+n=14 objects 616 fail 0 maxneed 14
+n=15 objects 1081 fail 0 maxneed 15
+n=16 objects 1897 fail 0 maxneed 16
+n=17 objects 3329 fail 0 maxneed 16
+n=18 objects 5842 fail 0 maxneed 16
+n=19 objects 10252 fail 0 maxneed 17
+n=20 objects 17991 fail 0 maxneed 17
+n=21 objects 31572 fail 0 maxneed 18
+n=22 objects 55405 fail 0 maxneed 18
+n=23 objects 97229 fail 0 maxneed 19

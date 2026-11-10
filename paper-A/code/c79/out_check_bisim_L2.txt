@@ -1,0 +1,9 @@
+L 2 states 288 move batches 10
+initial pairs 2752
+removed 892 left 1860
+removed 144 left 1716
+removed 48 left 1668
+removed 8 left 1660
+removed 0 left 1660
+diagonal: False pairs 1660
+offdiag pairs 1372 differ at distances from edge [1, 2]

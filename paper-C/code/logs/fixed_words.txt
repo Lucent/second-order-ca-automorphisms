@@ -1,0 +1,7 @@
+brute force over A^k (k<=4) agrees with the {0,3} reduction for all 256 rules: True
+number of classes: 88
+classes with a fixed word of length <=3: 31 rules: 81
+classes with none of length <=3: 57
+[13, 14, 15, 24, 25, 26, 27, 28, 29, 30, 31, 41, 43, 45, 46, 47, 57, 58, 59, 60, 61, 62, 63, 75, 77, 79, 90, 91, 94, 95, 105, 107, 109, 111, 123, 126, 127, 133, 135, 141, 143, 151, 153, 155, 157, 159, 165, 167, 175, 179, 183, 187, 189, 191, 219, 223, 255]
+  rule 133 (class 133): fixed-word lengths <=40: [4, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18]...
+  rule 161 (class 133): fixed-word lengths <=40: [4, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18]...

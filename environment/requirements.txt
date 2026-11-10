@@ -1,0 +1,5 @@
+# Python 3.12 (the quick checks were run with CPython 3.12.14)
+numpy==2.5.4
+python-sat==1.9.dev21
+scipy==1.18.1
+matplotlib==3.11.2

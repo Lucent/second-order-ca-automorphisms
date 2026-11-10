@@ -1,0 +1,20 @@
+rule 110 k=1: 228 configurations taken to the canonical form, longest word 2, exhaustive on r-k-2..r (+3 random fillings)
+rule 110 k=2: 912 configurations taken to the canonical form, longest word 5, exhaustive on r-k-2..r (+3 random fillings)
+rule 110 k=3: 3648 configurations taken to the canonical form, longest word 20, exhaustive on r-k-2..r (+3 random fillings)
+rule 110 k=4: 14592 configurations taken to the canonical form, longest word 74, exhaustive on r-k-2..r (+3 random fillings)
+rule 110 k=5: 58368 configurations taken to the canonical form, longest word 234, exhaustive on r-k-2..r (+3 random fillings)
+rule 110 k=6: 300 configurations taken to the canonical form, longest word 779, random
+rule 110 k=7: 300 configurations taken to the canonical form, longest word 2085, random
+rule 110 k=8: 300 configurations taken to the canonical form, longest word 6606, random
+rule 110: lift steps used: {(2, 'pre'): 60087, (2, 'step2'): 388424, (2, 'step4'): 55553, (3, 'pre'): 17428, (3, 'step2'): 182539, (3, 'step4'): 26910, (4, 'pre'): 9710, (4, 'step2'): 98380, (4, 'step4'): 16731, (5, 'pre'): 6683, (5, 'step2'): 70389, (5, 'step4'): 12566, (6, 'pre'): 422, (6, 'step2'): 3982, (6, 'step4'): 589, (7, 'pre'): 114, (7, 'step2'): 1158, (7, 'step4'): 197, (8, 'pre'): 29, (8, 'step2'): 279, (8, 'step4'): 48}
+rule 42 k=1: 209 configurations taken to the canonical form, longest word 2, exhaustive on r-k-2..r (+3 random fillings)
+rule 42 k=2: 855 configurations taken to the canonical form, longest word 5, exhaustive on r-k-2..r (+3 random fillings)
+rule 42 k=3: 3420 configurations taken to the canonical form, longest word 25, exhaustive on r-k-2..r (+3 random fillings)
+rule 42 k=4: 13680 configurations taken to the canonical form, longest word 132, exhaustive on r-k-2..r (+3 random fillings)
+rule 42 k=5: 54720 configurations taken to the canonical form, longest word 537, exhaustive on r-k-2..r (+3 random fillings)
+rule 42 k=6: 280 configurations taken to the canonical form, longest word 2117, random
+rule 42 k=7: 278 configurations taken to the canonical form, longest word 6542, random
+rule 42 k=8: 289 configurations taken to the canonical form, longest word 26412, random
+rule 42: lift steps used: {(2, 'step2'): 948071, (2, 'step4'): 226245, (3, 'step2'): 335269, (3, 'step4'): 80309, (4, 'step2'): 136925, (4, 'step4'): 31198, (5, 'step2'): 79275, (5, 'step4'): 15988, (6, 'step2'): 5933, (6, 'step4'): 1437, (7, 'step2'): 1538, (7, 'step4'): 362, (8, 'step2'): 305, (8, 'step4'): 58}
+time 162.8 s
+ALL CHECKS PASSED

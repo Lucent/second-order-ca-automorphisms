@@ -1,0 +1,494 @@
+
+\section{Walls with hidden bits}\label{sec:hidden}
+
+The walls of Sections~\ref{sec:54} and~\ref{sec:walls} are words that $F$ fixes in every context, and the automorphisms of Theorems~\ref{thm:finite} and~\ref{thm:walls} permute the cars that sit between them. A wall need not be fixed for this to work. Walls that are periodic in time and not fixed are in the list of Takesue \cite[Section~4]{Takesue1989}: for $27$R and $59$R the runs of cells in equal phase given by the local conservation law \cite[(4.1)--(4.3)]{Takesue1989}, of period $3$; for $179$R the pairs of cells (xii) and (xiii) of \cite[Fig.~2, Table~III]{Takesue1989}, of period $3$; for $219$R and $223$R the pairs (xv), and for $126$R and $127$R the pairs (xvi), of period $4$. The walls of this section are built from these, and we say in each case how. What is added here is the bit that such a wall can carry, the flips, and the embeddings that result. In this section the wall is a word that moves under $F$, but whose image never depends on the context, except perhaps at cells that do not matter, and which carries one bit that $F$ cannot see. Permuting these hidden bits along chains of walls gives every finite group again. The main example is rule $59$R, which has no word of any length fixed in every context (Lemma~\ref{hw:nofixed}) and whose walls are not fixed by any power of $F$ that we have checked; the general mechanism also covers walls that are fixed by a power of $F$, which we call time-periodic, and these occur for rules $127$R, $179$R and $223$R. A variant of the rule-$59$ walls with windows of length $6$ gives the same conclusion for rule $27$R (Theorem~\ref{hw:27}). Finally, for rules $219$R and $126$R the walls are runs of cells bound by a relation that $F$ preserves, and they rotate through the alphabet in every context; we call them rotating walls (Section~\ref{hw:sec:moving}). All seven classes discussed here, $27$, $59$, $126$, $127$, $179$, $219$ and $223$, lie in the last row of Table~\ref{tab:walls}: none of them has a word of length at most $3$ fixed in every context.
+
+Throughout, $F$ is a reversible cellular automaton of radius $1$ on $\A^{\Z}$, and for a configuration $c$ and integers $i<j$ we write $c_{[i,j)}=c_i c_{i+1}\cdots c_{j-1}$.
+
+\subsection{The general mechanism}\label{hw:sec:general}
+
+Fix $k\ge3$, a set of words $W\subseteq\A^k$, a position $j$ with $1\le j\le k-2$, and an involution $\iota\colon W\to W$ such that $\iota(w)$ differs from $w$ exactly at position $j$, for every $w\in W$. For a configuration $c$ let
+\[
+\Occ(c)=\{i\in\Z:\ c_{[i,i+k)}\in W\}
+\]
+be its set of \emph{occurrences}; for $i\in\Occ(c)$ write $w_i(c)=c_{[i,i+k)}$, and let $\iota_ic$ be the configuration obtained from $c$ by replacing $w_i(c)$ by $\iota(w_i(c))$. Only the cell $i+j$, the \emph{flip cell} of the occurrence, changes. We consider the following hypotheses. Each is stated at position $0$; since $F$ commutes with $\sh$, it then holds at every position.
+\begin{enumerate}
+\item[(W1)] If $0\in\Occ(c)$ then $0\in\Occ(F(c))$, for every $c$.
+\item[(H1)] If $0\in\Occ(c)$ then $F(\iota_0c)=\iota_0F(c)$.
+\item[(H2)] If $0,i\in\Occ(c)$ with $i\ne0$, then $i\in\Occ(\iota_0c)$, and $\iota_0\iota_ic=\iota_i\iota_0c$.
+\item[(H3)] There are $\beta\colon W\to\Z/2$ and $\varepsilon\in\Z/2$ such that $\beta\circ\iota=\beta+1$ and $\beta(w_0(F(c)))=\beta(w_0(c))+\varepsilon$ whenever $0\in\Occ(c)$.
+\item[(H3$'$)] There are $\beta\colon W\to\Z/2$, a surjection $\kappa\colon W\to K$ onto a finite set, and maps $\theta\colon K\to K$, $\varepsilon\colon K\to\Z/2$ such that $\kappa\circ\iota=\kappa$, $\beta\circ\iota=\beta+1$, and whenever $0\in\Occ(c)$,
+\[
+\kappa(w_0(F(c)))=\theta(\kappa(w_0(c))),\qquad \beta(w_0(F(c)))=\beta(w_0(c))+\varepsilon(\kappa(w_0(c))).
+\]
+\item[(H4)] If $0,i\in\Occ(c)$ with $i\ne0$, then $\beta(w_i(\iota_0c))=\beta(w_i(c))$, and under (H3$'$) also $\kappa(w_i(\iota_0c))=\kappa(w_i(c))$.
+\end{enumerate}
+We call $\beta(w_i(c))$ the \emph{bit} and $\kappa(w_i(c))$ the \emph{class} of the occurrence $i$ of $c$. Hypothesis (H3) is the case $|K|=1$ of (H3$'$), and we work with (H3$'$) throughout. In (H2), $\iota_i\iota_0c$ is defined by the first half of (H2), and $\iota_0\iota_ic$ by the first half with $0$ and $i$ exchanged. The bit is ``hidden'' in the sense of (H1): flipping it commutes with $F$, so the rest of the configuration evolves as if it were not there.
+
+\begin{lemma}\label{hw:exact}
+Under \textup{(W1)}, $\Occ(F(c))=\Occ(c)$ and $\Occ(F^{-1}(c))=\Occ(c)$ for every configuration $c$.
+\end{lemma}
+
+\begin{proof}
+This is the proof of Lemma~\ref{lem:exact}, with ``$c$ contains $W$ at $i$'' read as $i\in\Occ(c)$. On the finite set of configurations of spatial period $n$, which $F$ permutes, the number $N(c)$ of occurrences in a period satisfies $N(F(c))\ge N(c)$ by (W1), and summing over the set gives equality, so $\Occ(F(c))=\Occ(c)$ there. For general $c$, whether $i\in\Occ(c)$ and whether $i\in\Occ(F(c))$ depend only on $c_{[i-1,i+k+1)}$, so a counterexample would yield a periodic one.
+\end{proof}
+
+For $c$ and $I\subseteq\Occ(c)$ define $\iota_Ic$ cellwise by
+\[
+(\iota_Ic)_{i+j}=\iota(w_i(c))_j\quad(i\in I),\qquad (\iota_Ic)_n=c_n\quad(n\notin I+j).
+\]
+This is well defined because distinct occurrences have distinct flip cells. Note that $\iota_Ic$ is computed from the words of $c$, all at once.
+
+\begin{lemma}\label{hw:flips}
+Assume \textup{(W1)} and \textup{(H2)}, and let $I,J\subseteq\Occ(c)$.
+\begin{enumerate}
+\item[(a)] $\Occ(\iota_Ic)=\Occ(c)$; in particular flips neither destroy nor create occurrences.
+\item[(b)] $\iota_J\iota_Ic=\iota_{I\triangle J}c$. In particular $\iota_I\iota_Ic=c$.
+\item[(c)] If also \textup{(H3$'$)} and \textup{(H4)} hold, then for every $i\in\Occ(c)$ the class of $i$ in $\iota_Ic$ is its class in $c$, and the bit of $i$ in $\iota_Ic$ is its bit in $c$ plus $[i\in I]$.
+\item[(d)] If also \textup{(H1)} holds, then $F(\iota_Ic)=\iota_IF(c)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{One flip.} Let $i\in\Occ(c)$. The word of $\iota_ic$ at $i$ is $\iota(w_i(c))$, since $\iota$ changes only position $j$; hence $\iota_i\iota_ic=c$. By (H2), every $i'\in\Occ(c)$ lies in $\Occ(\iota_ic)$. Conversely, if $i'\in\Occ(\iota_ic)$ with $i'\ne i$, then (H2) applied to the configuration $\iota_ic$, which has occurrences at $i$ and $i'$, shows that $i'\in\Occ(\iota_i\iota_ic)=\Occ(c)$. So $\Occ(\iota_ic)=\Occ(c)$: flips do not create occurrences, because $\iota$ is an involution.
+
+\emph{Finitely many flips.} Let $I=\{i_1,\dots,i_r\}$ be finite. By the first step every intermediate configuration has occurrence set $\Occ(c)$, so the composition $\iota_{i_1}\circ\dots\circ\iota_{i_r}(c)$ is defined, and by (H2), applied to intermediate configurations, it does not depend on the order. It equals $\iota_Ic$: the cell $i_s+j$ is changed only by $\iota_{i_s}$, and ordering the composition so that $\iota_{i_s}$ acts first shows that this cell becomes $\iota(w_{i_s}(c))_j$; cells outside $I+j$ are never changed. This proves (a) for finite $I$, and (b) follows, since $\iota_J\iota_Ic$ is then a composition of single flips in which those at $I\cap J$ occur twice and cancel. For (c), a single flip at $i_s$ changes the word at $i_s$ to its $\iota$-partner, which has the same class and the other bit, and by (H4), applied to the intermediate configuration, it leaves the bit and class of every other occurrence unchanged. For (d), if $i\in\Occ(y)$ then $F(\iota_iy)=\iota_iF(y)$ by (H1), and $\Occ(F(y))=\Occ(y)$ by Lemma~\ref{hw:exact}; induction on $r$ gives $F(\iota_Ic)=\iota_IF(c)$.
+
+\emph{Infinite sets.} For a finite set $U$ of cells, $\iota_Ic$ agrees on $U$ with $\iota_{I_U}c$, where $I_U=\{i\in I:\ i+j\in U\}$ is finite. Each of (a)--(d) is a statement about finitely many cells at a time (an occurrence reads $k$ cells, a flip reads one window, $F$ reads three cells), so each follows from the finite case applied to suitable finite subsets of $I$ and $J$.
+\end{proof}
+
+\begin{corollary}\label{hw:flipall}
+Under \textup{(W1)}, \textup{(H1)} and \textup{(H2)}, the map $\tau_W(c)=\iota_{\Occ(c)}c$, which flips every occurrence, is an involutive automorphism of $\A^{\Z}$ of radius at most $\max(j,k-1-j)$ commuting with $F$.
+\end{corollary}
+
+\begin{proof}
+Cell $n$ of $\tau_W(c)$ depends only on $c_{[n-j,n-j+k)}$. By Lemma~\ref{hw:flips}(a),(b), $\tau_W(\tau_W(c))=\iota_{\Occ(c)}\iota_{\Occ(c)}c=c$, and by Lemma~\ref{hw:flips}(d) and Lemma~\ref{hw:exact},
+\[
+F(\tau_W(c))=\iota_{\Occ(c)}F(c)=\iota_{\Occ(F(c))}F(c)=\tau_W(F(c)).
+\]
+\end{proof}
+
+\begin{definition}\label{hw:train}
+Fix a gap $d\ge1$ and assume (H3$'$). A \emph{train of length $m$} of $c$ is a set $\{i,i+d,\dots,i+(m-1)d\}\subseteq\Occ(c)$ of occurrences that all have the same class $x$, such that neither $i-d$ nor $i+md$ is an occurrence of class $x$. Its \emph{bit vector} is $(b_1,\dots,b_m)$, where $b_r$ is the bit of $i+(r-1)d$. For $\sigma\in S_m$ let $I_\sigma(c)$ be the set of occurrences $i+(r-1)d$, taken over all trains of length $m$, with $b_{\sigma^{-1}(r)}\ne b_r$, and define
+\[
+\Psi_m(\sigma)(c)=\iota_{I_\sigma(c)}c .
+\]
+\end{definition}
+
+Every occurrence lies in at most one train: the occurrences of a given class $x$ whose positions are congruent modulo $d$ split into maximal arithmetic progressions of step $d$, and the trains are the finite ones among them. An occurrence that lies in an infinite progression, one-sided or two-sided, belongs to no train; nothing below needs these, since $\Psi_m$ touches only trains of length exactly $m$. By Lemma~\ref{hw:flips}(c), $\Psi_m(\sigma)$ replaces the bit vector $b$ of every train of length $m$ by $b\circ\sigma^{-1}=(b_{\sigma^{-1}(1)},\dots,b_{\sigma^{-1}(m)})$ and changes no other bit and no class.
+
+\begin{lemma}\label{hw:trainlemma}
+Assume \textup{(W1)}, \textup{(H1)}, \textup{(H2)}, \textup{(H3$'$)} and \textup{(H4)}, and let $d\ge1$. Then for every $m\ge1$:
+\begin{enumerate}
+\item[(i)] $\Psi_m(\sigma)$ is a block map of radius at most $md+\max(j,k-1-j)$;
+\item[(ii)] $\Psi_m(\sigma)\Psi_m(\rho)=\Psi_m(\sigma\rho)$ and $\Psi_m(\mathrm{id})=\mathrm{id}$, so each $\Psi_m(\sigma)$ is an automorphism of $\A^{\Z}$;
+\item[(iii)] $F\Psi_m(\sigma)=\Psi_m(\sigma)F$, so $\Psi_m(\sigma)\in\Aut(X_F)$ by Lemma~\ref{lem:spacetime};
+\item[(iv)] $\Psi_m(\sigma)$ and $\Psi_{m'}(\rho)$ commute for $m\ne m'$, and $\Psi_{m'}(\rho)$ does not change the bits of the trains of length $m$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Cell $n$ can change only if $n-j=:i$ is an occurrence. Whether $i$ is the $r$-th member of a train of length exactly $m$, and the bits of that train, are decided by the words at $i+td$, $-m\le t\le m$, and these lie in $c_{[n-j-md,\,n-j+md+k)}$. The construction is the same at every position, so $\Psi_m(\sigma)$ commutes with $\sh$.
+
+We show that trains are invariant. By Lemma~\ref{hw:flips}(a),(c), $\iota_Ic$ has the same occurrences, with the same classes, as $c$; so it has the same trains. For $F$: the map $\theta$ is a permutation of $K$. Indeed, given $x\in K$ choose $c$ with $w_0(c)$ of class $x$; then $0\in\Occ(F^{-1}(c))$ by Lemma~\ref{hw:exact}, and $\theta$ maps the class of $0$ in $F^{-1}(c)$ to $x$, so $\theta$ is onto, hence bijective. Since $\Occ(F(c))=\Occ(c)$ and every class is replaced by its image under the injective map $\theta$, two occurrences have the same class in $F(c)$ if and only if they do in $c$. Hence $F(c)$ has the same trains as $c$, and by (H3$'$) the bit vector of a train of class $x$ changes from $b$ to $b+\varepsilon(x)(1,\dots,1)$. The same constant is added to every bit of a train, so the set of $r$ with $b_{\sigma^{-1}(r)}\ne b_r$ is unchanged: $I_\sigma(F(c))=I_\sigma(c)$.
+
+(iii) By Lemma~\ref{hw:flips}(d), $F\Psi_m(\sigma)(c)=F(\iota_{I_\sigma(c)}c)=\iota_{I_\sigma(c)}F(c)=\iota_{I_\sigma(F(c))}F(c)=\Psi_m(\sigma)F(c)$.
+
+(ii) Let $c'=\Psi_m(\rho)(c)=\iota_{I_\rho(c)}c$. It has the trains of $c$, and the bit vector $b$ of each train of length $m$ has become $b\circ\rho^{-1}$. Then $\Psi_m(\sigma)(c')=\iota_{I'}c'$, where $I'$ consists of the members at which $b\circ\rho^{-1}\circ\sigma^{-1}$ differs from $b\circ\rho^{-1}$. By Lemma~\ref{hw:flips}(b), $\Psi_m(\sigma)\Psi_m(\rho)(c)=\iota_{I_\rho(c)\triangle I'}c$, and $I_\rho(c)\triangle I'$ is the set of members at which $b\circ(\sigma\rho)^{-1}$ differs from $b$, which is $I_{\sigma\rho}(c)$. Clearly $I_{\mathrm{id}}(c)=\emptyset$. So $\Psi_m(\sigma^{-1})$ inverts $\Psi_m(\sigma)$, and an invertible block map is an automorphism of $\A^{\Z}$.
+
+(iv) $\Psi_{m'}(\rho)$ flips only members of trains of length $m'$, so by Lemma~\ref{hw:flips}(c) it leaves the trains and the bits of the trains of length $m$ unchanged; hence $I_\sigma(\Psi_{m'}(\rho)(c))=I_\sigma(c)$, and symmetrically. By Lemma~\ref{hw:flips}(b) both composites equal $\iota_{I_\sigma(c)\cup I_\rho(c)}c$.
+\end{proof}
+
+\begin{theorem}\label{hw:general}
+Let $F$ be a reversible cellular automaton of radius $1$ on $\A^{\Z}$, and let $W\subsetneq\A^k$, $j$ and $\iota$ be as above. Assume \textup{(W1)}, \textup{(H1)}, \textup{(H2)}, \textup{(H4)}, and either \textup{(H3)} or \textup{(H3$'$)}. Then for every $d\ge k$ and $m\ge1$ the maps $\Psi_m$ of Definition~\ref{hw:train} form an injective homomorphism $S_m\to\Aut(X_F)$ whose image consists of block maps of radius at most $md+\max(j,k-1-j)$; the images for different $m$ commute, and together they give an embedding of $\bigoplus_{m\ge1}S_m$ in $\Aut(X_F)$. In particular $\Aut(X_F)$ contains every finite group and is not virtually $\Z^n$ for any $n$.
+\end{theorem}
+
+\begin{proof}
+Everything except injectivity is Lemma~\ref{hw:trainlemma}, and (iv) there shows that the $\Psi_m$ assemble to a homomorphism $\Psi$ of the restricted direct sum. Let $g=\Psi((\sigma_{m'})_{m'})$ with $\sigma_m\ne\mathrm{id}$ for some $m$, and choose $r$ with $\sigma_m(r)\ne r$. Pick $w\in W$, a word $z\in\A^k\setminus W$ and a letter $e\in\A$, and let $u_t=\iota(w)$ for $t=r$ and $u_t=w$ for $t\ne r$, $1\le t\le m$. Let $c$ be the configuration of spatial period $(m+1)d$ whose period, starting at position $0$, is
+\[
+u_1\,e^{d-k}\,u_2\,e^{d-k}\cdots u_m\,e^{d-k}\,z\,e^{d-k};
+\]
+this uses $d\ge k$. The positions $0,d,\dots,(m-1)d$ are occurrences, all of the class $\kappa(w)$ because $\kappa\circ\iota=\kappa$, and $md$ and $-d$ are not occurrences because $c_{[md,md+k)}=c_{[-d,-d+k)}=z$. So these positions form a train of length $m$ whose bit vector $b$ has $b_t$ equal to $\beta(w)+[t=r]$. Other occurrences, created by the fillers, may form further trains; this does not matter. By Lemma~\ref{hw:trainlemma}(iv) and the remark before it, the bit vector of this train in $g(c)$ is $b\circ\sigma_m^{-1}$, which differs from $b$ at $\sigma_m(r)$. Since bits are functions of the configuration, $g(c)\ne c$. So $\Psi$ is injective. Every finite group embeds in some $S_m$ by Cayley's theorem. Finally $\bigoplus_mS_m$ is not finitely generated, and every subgroup of a virtually $\Z^n$ group is finitely generated, as in the proof of Theorem~\ref{thm:54}.
+\end{proof}
+
+\begin{remark}\label{hw:H4}
+Hypothesis (H4) cannot be dropped from the argument. (H2) guarantees that a flip at $0$ preserves an overlapping occurrence at $i$ and commutes with the flip there, but the flip cell $j$ may be another letter of the word at $i$, so the word at $i$ can move to a different $\iota$-pair, with a different bit or class. Then the bit vectors after $\Psi_m(\rho)$ need not be $b\circ\rho^{-1}$, and both the homomorphism law and the train structure under (H3$'$) can fail; commutation with $F$ is unaffected, since it uses only $I_\sigma(F(c))=I_\sigma(c)$. Rule $59$ below shows that such overlaps occur: a flip changes the protector of the next wall. There (H4) holds because the bit does not read the protector; it would fail if the class were taken to be the $\iota$-pair of the whole word. Alternatively, (H4) can be avoided by building trains only from occurrences that overlap no other occurrence. That set is preserved by $F$ and by flips, since both preserve $\Occ$, and a flip at such an occurrence changes no other word; the injectivity argument then needs a configuration in which the members of the train are of this kind.
+\end{remark}
+
+\begin{remark}\label{hw:cent}
+The proof uses about $\sigma\in S_m$ only that $b\mapsto b\circ\sigma^{-1}$ is a permutation of $(\Z/2)^m$ commuting with $b\mapsto b+(1,\dots,1)$, which is how $F$ acts on the bit vector of a train when $\varepsilon=1$. For every permutation $\pi$ of $(\Z/2)^m$ commuting with $b\mapsto b+(1,\dots,1)$, replacing the bit vector $b$ of every train of length $m$ by $\pi(b)$ defines an automorphism $\Psi_m(\pi)$ commuting with $F$, by the same proof with $I_\pi(c)$ the set of members of trains of length $m$ at which $\pi(b)$ and $b$ differ, and $\pi\mapsto\Psi_m(\pi)$ is a homomorphism. For injectivity the witness must be a train with an arbitrary bit vector, rather than the vector with one odd bit used for $S_m$. The construction in the proof of Theorem~\ref{hw:general} gives one: choose each $u_t\in\{w,\iota(w)\}$ freely, so that the train at $0,d,\dots,(m-1)d$ has bit vector $b$ with $b_t=\beta(u_t)$, which is arbitrary. Given $\pi\ne\mathrm{id}$, choose $b$ with $\pi(b)\ne b$; then the bit vector of this train in $\Psi_m(\pi)(c)$ is $\pi(b)\ne b$, so $\Psi_m(\pi)(c)\ne c$. For rule $59$ the witness of Theorem~\ref{hw:59} serves in the same way, with the centres $C_t$ chosen freely. So the centralizer of $b\mapsto b+(1,\dots,1)$ in $\Sym((\Z/2)^m)$, which contains $(\Z/2)^m\rtimes S_m$, embeds in $\Aut(X_F)$.
+\end{remark}
+
+Theorem~\ref{hw:general} generalizes the mechanism of Theorem~\ref{thm:walls}, though not its statement, which it does not contain. In Theorem~\ref{thm:walls} the walls are fixed and the permuted information sits in cars between them; here the information is a letter inside the wall, and the rest of the wall moves. The common point is that every cell next to the permuted information has a trajectory that does not depend on the context.
+
+The simplest case is a wall that is a single periodic orbit of $F$ in every context.
+
+\begin{corollary}\label{hw:periodic}
+Let $P=2h$ be even and let $w_0,\dots,w_{P-1}\in\A^k$ be distinct words, indices modulo $P$, such that:
+\begin{enumerate}
+\item[(a)] if $c_{[0,k)}=w_s$ then $F(c)_{[0,k)}=w_{s+1}$, for every $c$ and $s$;
+\item[(b)] $w_{s+h}$ differs from $w_s$ exactly at a position $j$ with $1\le j\le k-2$, the same for all $s$;
+\item[(c)] no configuration has occurrences of $W=\{w_0,\dots,w_{P-1}\}$ at two positions at distance $\delta$ with $1\le\delta\le\max(j,k-1-j)$.
+\end{enumerate}
+Then $\bigoplus_{m\ge1}S_m$ embeds in $\Aut(X_F)$. In particular each $w_s$ is fixed by $F^P$ in every context, and the flip-all map $\tau_W$ of Corollary~\ref{hw:flipall} is an involutive automorphism of radius $\max(j,k-1-j)$.
+\end{corollary}
+
+\begin{proof}
+Let $\iota(w_s)=w_{s+h}=F^h$ on $W$. (W1) is (a). For (H1), let $c_{[0,k)}=w_s$. The configurations $\iota_0c$ and $c$ differ only at cell $j$, so $F(\iota_0c)$ and $F(c)$ differ at most at cells $j-1,j,j+1$, which lie in $[0,k)$ because $j$ is interior. On $[0,k)$, $F(\iota_0c)$ carries $w_{s+h+1}$ by (a), which is what $\iota_0F(c)$ carries there; outside $[0,k)$ both agree with $F(c)$. So $F(\iota_0c)=\iota_0F(c)$. For (H3$'$) take $K=\Z/h$, $\kappa(w_s)=s\bmod h$, $\beta(w_s)=\lfloor s/h\rfloor$ for $0\le s<P$, $\theta(x)=x+1$ and $\varepsilon(x)=[x=h-1]$: then $\kappa\circ\iota=\kappa$, $\beta\circ\iota=\beta+1$, and passing from $w_s$ to $w_{s+1}$ changes $\lfloor s/h\rfloor$ exactly when $s\equiv h-1\pmod h$. For (H2) and (H4): if $0,i\in\Occ(c)$ with $i\ne0$, then $|i|>\max(j,k-1-j)$ by (c), so the flip cell of each of the two occurrences lies outside the window of the other. Hence $\iota_0$ leaves $w_i(c)$ unchanged, the new value it writes at cell $j$ depends only on $w_0(c)$, which $\iota_i$ leaves unchanged, and so (H2) and (H4) hold. Finally $W\ne\A^k$ by (c). Theorem~\ref{hw:general} and Corollary~\ref{hw:flipall} apply.
+\end{proof}
+
+Condition (b) contains the requirement that $w_s$ and $w_{s+h}$ agree at their end positions $0$ and $k-1$; this is sufficient for (H1) but not necessary, since a disagreement at an end letter that the outside neighbour's update ignores would not break (H1). Conditions (a)--(c) are finite checks, but (H2)--(H4) do not follow from (a) and (b) alone, which is why (c) is assumed.
+
+\subsection{Rule 59R: clocks}\label{hw:sec:59}
+
+Rule $59$ is $f(a,b,c)=\lnot b\lor(\lnot a\land c)$. Call a cell $i$ \emph{triggered} in $c$ if $y_{i-1}=0$ and $y_{i+1}=1$, that is $c_{i-1}\in\{0,2\}$ and $c_{i+1}\in\{1,3\}$. Since $f(a,0,c)=1$ and $f(a,1,c)=[a=0,\,c=1]$, \eqref{eq:F} gives, for $F=F_{59}$:
+\begin{equation}\label{hw:clock}
+0\mapsto1,\qquad 2\mapsto0,\qquad 1\mapsto\begin{cases}3&\text{triggered}\\2&\text{otherwise,}\end{cases}\qquad 3\mapsto\begin{cases}2&\text{triggered}\\3&\text{otherwise.}\end{cases}
+\end{equation}
+So every cell is a clock $0\to1\to2\to0$ of period $3$, whose $y$-bit is $1$ exactly at phase $1$; the state $3$ is phase $1$ held, a trigger at phase $1$ holds the clock, and a later trigger releases it. A cell can only be triggered while its $y$-bit is $1$, and only by the pattern ``left neighbour silent, right neighbour firing''. In particular two adjacent cells in the same phase never disturb each other.
+
+Say that a word $u$ of length $n$ is \emph{fixed in every context} if $F(c)_{[0,n)}=u$ for every $c$ with $c_{[0,n)}=u$.
+
+\begin{lemma}\label{hw:nofixed}
+For $F=F_{59}$, no word of any length is fixed in every context.
+\end{lemma}
+
+\begin{proof}
+By \eqref{hw:clock}, a cell with value $0$, $1$ or $2$ changes its value in every context, so a word fixed in every context would be $3^n$. Let $c_{[0,n)}=3^n$, $c_{-1}=0$ and $c_n=1$. The left neighbour of cell $0$ has $y=0$, and its right neighbour (the next $3$, or the outside cell $c_1=1$ when $n=1$) has $y=1$. So cell $0$ is triggered, and $F(c)_0=2$.
+\end{proof}
+
+For $p\in\{0,1,2\}$, expressions such as $p+1$ and $p+2$ are taken modulo $3$ and denote cells in $\{0,1,2\}$. Let
+\begin{align*}
+X_A&=\{\,a\,p\,C\,(p+1)\ :\ p\in\{0,1,2\},\ a\in\{p,3\},\ C\in\{p+1,3\}\,\},\\
+X_B&=\{\,a\,p\,C\,(p+2)\ :\ p\in\{0,1,2\},\ a\in\{p,3\},\ C\in\{p+2,3\}\,\},
+\end{align*}
+two disjoint sets of $12$ words of length $4$. In an \emph{A-wall} the right side is one phase ahead of the left, in a \emph{B-wall} one phase behind. We say $c$ has an A-wall (B-wall) at $i$ if $c_{[i,i+4)}\in X_A$ ($\in X_B$), and call $c_i$, $c_{i+1}$, $c_{i+2}$, $c_{i+3}$ its \emph{protector} $a$, its \emph{left cell} $L=p$, its \emph{centre} $C$ and its \emph{right cell} $R$; the pair $(L,C)$ is its \emph{core}. Write $\delta_A=1$ and $\delta_B=2$, so that $R=L+\delta$ and $C\in\{L+\delta,3\}$.
+
+In this notation the local conservation law of $27$R and $59$R found by Takesue \cite[(4.1), (4.2)]{Takesue1989} says that the set of pairs $a\,p$ with $p\in\{0,1,2\}$ and $a\in\{p,3\}$ is invariant: such a pair remains one in every context. His wall is a run $a\,p\,p\cdots p$ of at least three cells with $a\in\{p,3\}$, in which every cell but the first passes from $p$ to $p+1$ in every context \cite[(4.3)]{Takesue1989}. A word of $X_A\cup X_B$ consists of two such pairs, the protector with the left cell and the centre with the right cell, whose phases differ by $\delta$. The cycles of the cores, the bit carried by the centre and the flips (Lemmas~\ref{hw:59walls}--\ref{hw:59overlap}) are not in \cite{Takesue1989}. For $59$R the invariance of the pairs is contained in the proof of Lemma~\ref{hw:59walls}, in the images of the protector and of the left cell, where it is needed together with the images of the other cells.
+
+\begin{lemma}\label{hw:59walls}
+Let $F=F_{59}$ and $X\in\{A,B\}$. If $c$ has an $X$-wall at $i$ with left cell $p$, then $F(c)$ has an $X$-wall at $i$ with left cell $p+1$, and $F(c)_{i+1},F(c)_{i+2},F(c)_{i+3}$ depend only on the core of $c$ at $i$, not on the rest of $c$. The cores run through the $6$-cycles
+\begin{align*}
+A:&\quad(0,1)\to(1,3)\to(2,3)\to(0,3)\to(1,2)\to(2,0)\to(0,1),\\
+B:&\quad(0,2)\to(1,0)\to(2,1)\to(0,3)\to(1,3)\to(2,3)\to(0,2).
+\end{align*}
+Moreover $F(c)$ has an $X$-wall at $i$ if and only if $c$ does, and the same holds for $F^{-1}$.
+\end{lemma}
+
+\begin{proof}
+By \eqref{hw:clock}, cells with value $0$ or $2$ advance regardless of their neighbours, so only cells with value $1$ or $3$ need attention. The six cases are:
+\[
+\begin{array}{ccccl}
+ & (a,L,C,R) & (a',L',C',R') & C\mapsto C' & \text{triggered}\\ \hline
+A,\,p=0 & (\{0,3\},0,\{1,3\},1) & (\{1,3\},1,\{3,2\},2) & 1\mapsto3,\ 3\mapsto2 & C\\
+A,\,p=1 & (\{1,3\},1,\{2,3\},2) & (\{2,3\},2,\{0,3\},0) & 2\mapsto0,\ 3\mapsto3 & \text{possibly }a\\
+A,\,p=2 & (\{2,3\},2,\{0,3\},0) & (\{0,3\},0,\{1,3\},1) & 0\mapsto1,\ 3\mapsto3 & \text{none}\\
+B,\,p=0 & (\{0,3\},0,\{2,3\},2) & (\{1,3\},1,\{0,3\},0) & 2\mapsto0,\ 3\mapsto3 & \text{none}\\
+B,\,p=1 & (\{1,3\},1,\{0,3\},0) & (\{2,3\},2,\{1,3\},1) & 0\mapsto1,\ 3\mapsto3 & \text{possibly }a\\
+B,\,p=2 & (\{2,3\},2,\{1,3\},1) & (\{0,3\},0,\{2,3\},2) & 1\mapsto3,\ 3\mapsto2 & C
+\end{array}
+\]
+We justify the entries. If $L=1$ (case $p=1$), its left neighbour $a\in\{1,3\}$ has $y=1$, so $L$ is not triggered and $L'=2$. If $R=1$ (cases A, $p=0$ and B, $p=2$), its left neighbour $C\in\{1,3\}$ has $y=1$, so $R'=2$. The centre, when it equals $1$ or $3$, is triggered exactly when $y_L=0$ and $y_R=1$, that is when $p\ne1$ and $R=1$: this happens in the cases A, $p=0$ and B, $p=2$ and in no other case (in the other cases $p=1$, or $R\in\{0,2\}$). The protector: $a=0\mapsto1$, $a=2\mapsto0$, $a=1\mapsto\{2,3\}$, and $a=3$ is triggered only if $y_L=1$, so $a=3\mapsto3$ when $p\in\{0,2\}$ and $a=3\mapsto\{2,3\}$ when $p=1$. In every case $a'\in\{p+1,3\}$. Thus each row maps the family into itself with $p$ replaced by $p+1$, and the images of $L$, $C$, $R$ are determined by $(L,C)$, since $R=L+\delta$; only $a'$ depends on the context. Reading off the core images gives the two $6$-cycles. The last statement follows from Lemma~\ref{hw:exact} applied to $W=X_A$ and to $W=X_B$.
+\end{proof}
+
+Only the protector depends on the context, through its own left neighbour. The left cell $L$ of a wall is therefore a column whose whole trajectory, forwards and backwards, is determined by the wall (backwards because the core map is a bijection), and the same holds for $C$ and $R$. Cells to the left of the wall feel the right side only through the $y$-sequence of $L$, and cells to the right feel the left side only through that of $R$.
+
+At a wall the centre takes one of two values, $C\in\{L+\delta,3\}$. Let $\iota$ exchange them; on each family it is a fixed-point-free involution changing only position $j=2$. On the core, $\iota$ is the shift by three steps of the $6$-cycle, so $\iota$ acts on the wall as $F^3$ acts on its core, while leaving every other cell alone. Define
+\[
+\beta_A(a\,L\,C\,R)=[C=3]+[L=2],\qquad \beta_B(a\,L\,C\,R)=[C=3]+[L=1]\qquad(\bmod 2).
+\]
+
+\begin{lemma}\label{hw:59flip}
+Let $F=F_{59}$, $X\in\{A,B\}$, and let $c$ have an $X$-wall at $i$. Then $F(\iota_ic)=\iota_iF(c)$ and $F^{-1}(\iota_ic)=\iota_iF^{-1}(c)$. Moreover $\beta_X\circ\iota=\beta_X+1$, and $\beta_X(F(c)_{[i,i+4)})=\beta_X(c_{[i,i+4)})+1$ in every context.
+\end{lemma}
+
+\begin{proof}
+The configurations $\iota_ic$ and $c$ differ only at the centre $i+2$, so $F(\iota_ic)$ and $F(c)$ can differ only at $i+1$, $i+2$, $i+3$. The images of $L$ and $R$ computed in the proof of Lemma~\ref{hw:59walls} do not depend on which of the two values $C$ has: $L$ and $R$ read $C$ only through its $y$-bit, and either $y_C=1$ for both values (A, $p=0$; B, $p=2$), or the cell reading $C$ is $L=1$ with $y_a=1$ and is never triggered ($p=1$), or $L$ and $R$ are in $\{0,2\}$ and ignore their neighbours. The centre's update is, by the table, a bijection from $\{L+\delta,3\}$ onto $\{L'+\delta,3\}$, the centre pair of the image wall. Hence $F(\iota_ic)_{i+2}$ is the element of that pair other than $F(c)_{i+2}$, that is, $(\iota_iF(c))_{i+2}$, and $F(\iota_ic)=\iota_iF(c)$. Applying this to $F^{-1}(c)$, which has an $X$-wall at $i$ by Lemma~\ref{hw:59walls}, gives the statement for $F^{-1}$. The partners under $\iota$ are $(0,1)\leftrightarrow(0,3)$, $(1,3)\leftrightarrow(1,2)$, $(2,3)\leftrightarrow(2,0)$ for A and $(0,2)\leftrightarrow(0,3)$, $(1,0)\leftrightarrow(1,3)$, $(2,1)\leftrightarrow(2,3)$ for B, and along the A-cycle $\beta_A$ takes the values $0,1,0,1,0,1$, along the B-cycle $\beta_B$ takes the values $0,1,0,1,0,1$; both statements about $\beta$ follow, since $\beta_X$ depends only on the core.
+\end{proof}
+
+In spacetime the centre column of an A-wall has $y$-history $1,1,1,1,0,0$ repeated, and $\iota$ replaces it by its shift by half a period; the neighbours read that column only at times when the two histories agree. By Lemma~\ref{hw:59flip}, $F^n(\iota_ic)=\iota_iF^n(c)$ for all $n\in\Z$, so flipping the bit of one wall changes exactly one column of the spacetime diagram, at all times.
+
+\begin{lemma}\label{hw:59overlap}
+Let $F=F_{59}$ and $W=X_A$, with $k=4$ and $j=2$.
+\begin{enumerate}
+\item[(i)] No configuration has A-walls at $i$ and $i+1$.
+\item[(ii)] If $c$ has A-walls at $0$ and $i\ne0$, then $\iota_0c$ has an A-wall at $i$, $\iota_0\iota_ic=\iota_i\iota_0c$, and the bit $\beta_A$ of the wall at $i$ is the same in $c$ and in $\iota_0c$.
+\end{enumerate}
+Hence \textup{(W1)}, \textup{(H1)}, \textup{(H2)}, \textup{(H3)} with $\varepsilon=1$, and \textup{(H4)} hold for $X_A$, $\iota$ and $\beta_A$.
+\end{lemma}
+
+\begin{proof}
+(i) Suppose $c$ has A-walls at $i$ and $i+1$, and let $p=c_{i+1}$. The left cell of the second wall is $c_{i+2}$, the centre of the first, which must then lie in $\{0,1,2\}$; so $c_{i+2}=p+1$. The protector of the second wall is $c_{i+1}=p$, which must lie in $\{p+1,3\}$; impossible.
+
+(ii) The flip $\iota_0$ changes only cell $2$, writing the element of $\{c_1+1,3\}$ other than $c_2$; it reads only $c_1$ and $c_2$. The window $[i,i+4)$ contains cell $2$ only if $-1\le i\le2$, so by (i) only if $i=2$. In that case cell $2$ is the protector of the wall at $2$, whose left cell is $c_3=c_1+1$, so its allowed protectors are $\{c_1+1,3\}$, the same pair; the wall at $2$ survives. In all cases the wall at $i$ survives, and its core $(c_{i+1},c_{i+2})$ is untouched, since $i+1\ne2$ by (i) and $i+2\ne2$. So its bit is unchanged. The same argument with $0$ and $i$ exchanged shows that $\iota_i$ does not touch $c_1$ or $c_2$; as each flip reads only the core of its own wall, the two flips commute. The hypotheses: (W1) is Lemma~\ref{hw:59walls}, (H1) and (H3) are Lemma~\ref{hw:59flip}, (H2) and (H4) are (ii).
+\end{proof}
+
+The same holds for walls of both families together; this is Lemma~\ref{hw:59classes}(i) below. Overlapping walls then occur only at distances $2$ and $3$, and by computation on all words of length at most $9$ both distances occur for all four type pairs AA, AB, BA, BB.
+
+\begin{theorem}\label{hw:59}
+For every $m\ge1$ there is an injective homomorphism $\Psi_m\colon S_m\to\Aut(X_{F_{59}})$ whose image consists of block maps of radius at most $2m+2$, and the images for different $m$ commute. So $\bigoplus_{m\ge1}S_m$ embeds in $\Aut(X_{F_{59}})$, which therefore contains every finite group and is not virtually $\Z^n$ for any $n$. The same holds for the rules $115$, $206$ and $220$, which are conjugate to $59$ by reflection and complement.
+\end{theorem}
+
+Here a train of length $m$ is a maximal chain of A-walls at gap $2$: A-walls at $i,i+2,\dots,i+2(m-1)$ and none at $i-2$ or $i+2m$. Consecutive walls overlap, the centre of each being the protector of the next, so a train looks like a staircase $a\;p\;C_1\,(p+1)\,C_2\,(p+2)\cdots C_m\,(p+m)$. This is not literally an instance of Theorem~\ref{hw:general}, which requires the gap $d$ to be at least the word length $k=4$, so that the members of a train can be written down independently; at gap $2$ they overlap, and the injectivity witness has to be built by hand. (With $d=4$, Theorem~\ref{hw:general} does apply to $X_A$, by Lemma~\ref{hw:59overlap}, with the weaker radius bound $4m+2$.)
+
+\begin{proof}
+By Lemma~\ref{hw:59overlap}, the hypotheses of Lemma~\ref{hw:trainlemma} hold for $W=X_A$ with $|K|=1$ and $\varepsilon=1$. Applying that lemma with $d=2$, the maps $\Psi_m(\sigma)$ are automorphisms of radius at most $2m+\max(2,1)=2m+2$, commuting with $F$, forming homomorphisms of the $S_m$ whose images commute for different $m$. It remains to prove injectivity, as in the proof of Theorem~\ref{hw:general} but with a different witness. Fix $m$, $p\in\{0,1,2\}$ and choices $C_t\in\{p+t,3\}$ for $1\le t\le m$, and let
+\[
+c=\cdots3\,3\,3\;p\;C_1\,(p+1)\,C_2\,(p+2)\cdots C_m\,(p+m)\;3\,3\,3\cdots,
+\]
+with $c_{-1}=p$, $c_{2t-2}=C_t$ and $c_{2t-1}=p+t$, and all other cells equal to $3$. For $1\le t\le m$ the window $c_{[2t-4,2t)}$ is $(c_{2t-4},\,p+t-1,\,C_t,\,p+t)$, with protector $c_{-2}=3$ for $t=1$ and $C_{t-1}\in\{p+t-1,3\}$ for $t\ge2$; so it is an A-wall. There is no A-wall at $-4$, since $c_{-3}=3$ is not a possible left cell, and none at $2m-2$, since $c_{2m+1}=3$ is not a possible right cell. So the walls at $-2,0,\dots,2m-4$ form a train of length $m$, and its bits $\beta_A=[C_t=3]+[p+t-1=2]$ can be prescribed arbitrarily by the choice of the $C_t$. (By direct check, for $m\le7$ these are the only walls of $c$ of either family, but this is not needed.) Given $(\sigma_{m'})_{m'}$ with $\sigma_m(r)\ne r$, choose the bits to be $1$ at $r$ and $0$ elsewhere; as in the proof of Theorem~\ref{hw:general}, the bit vector of this train in $\Psi((\sigma_{m'}))(c)$ is $b\circ\sigma_m^{-1}\ne b$. The statement for the conjugate rules follows because conjugation by the reflection or by the cellwise complement induces an isomorphism of the automorphism groups of the spacetime subshifts.
+\end{proof}
+
+By Remark~\ref{hw:cent}, $\Aut(X_{F_{59}})$ also contains the centralizer of $b\mapsto b+(1,\dots,1)$ in $\Sym((\Z/2)^m)$ for every $m$.
+
+\subsection{The radius-2 census of rule 59R}\label{hw:sec:census}
+
+For $X\in\{A,B\}$, call an $X$-wall at $i$ \emph{level} if $c_{i+4}=c_{i+3}$ (the cell after $R$ is in phase with $R$), and \emph{doubly protected} if $c_i=c_{i+1}$ and $c_{i-1}\in\{c_{i+1},3\}$ (the protector is itself protected). For a property $Q$ of $X$-walls, flipping the centre of every $X$-wall with property $Q$, all at once, defines a block map; we write $\tau_{X,=}$, $\tau_{X,\ne}$ for the maps that flip the level and the non-level $X$-walls, $\lambda_{X,\mathrm{pp}}$, $\lambda_{X,\lnot\mathrm{pp}}$ for those that flip the doubly protected and the other $X$-walls, and $\tau_X=\tau_{X,=}\tau_{X,\ne}=\lambda_{X,\mathrm{pp}}\lambda_{X,\lnot\mathrm{pp}}$ for the flip of all $X$-walls, which is the map $\tau_W$ of Corollary~\ref{hw:flipall} for $W=X_A$ or $W=X_B$. The maps $\tau_{X,=}$ and $\tau_{X,\ne}$ have radius $2$ and differ from the identity on $12$ and $36$ entries of the table for $X=A$; the maps $\lambda$ have radius $3$. Let
+\[
+T_R=\langle\tau_{A,=},\tau_{A,\ne},\tau_{B,=},\tau_{B,\ne}\rangle,\qquad T_L=\langle\lambda_{A,\mathrm{pp}},\lambda_{A,\lnot\mathrm{pp}},\lambda_{B,\mathrm{pp}},\lambda_{B,\lnot\mathrm{pp}}\rangle,\qquad T=T_RT_L .
+\]
+The \emph{class} of an $X$-wall at $i$ is the triple $(X,\text{level or not},\text{doubly protected or not})$; there are $8$ possible classes. The class reads the cells $i-1$, $i$, $i+1$, $i+3$, $i+4$ (the family is determined by $L$ and $R$), but not the centre $i+2$. Let $W=X_A\cup X_B$, with $k=4$, $j=2$, and $\iota$ exchanging the two values of the centre in each family. The flip $\iota_i$ of a wall at $i$ writes only cell $i+2$, and reads only cells $i+1$, $i+2$, $i+3$, since the new centre is the other element of $\{L+\delta,3\}$ and $\delta=R-L$. Let $Y=\{a\,p\,p:\ p\in\{0,1,2\},\ a\in\{p,3\}\}$. An $X$-wall at $i$ is doubly protected if and only if $c_{[i-1,i+2)}\in Y$, since $L=c_{i+1}\in\{0,1,2\}$. It is level if and only if $c_{[i+2,i+5)}\in Y$, since the centre always lies in $\{R,3\}$.
+
+\begin{lemma}\label{hw:59classes}
+Let $F=F_{59}$ and $W=X_A\cup X_B$.
+\begin{enumerate}
+\item[(i)] No configuration has walls, of either family, at two positions at distance $1$. The pair $(W,\iota)$ satisfies \textup{(W1)}, \textup{(H1)} and \textup{(H2)}, so Lemma~\ref{hw:flips}(a), (b), (d) applies to it.
+\item[(ii)] If $c$ has walls at $i$ and $i'$, possibly $i=i'$, then the wall at $i$ has the same class in $\iota_{i'}c$ as in $c$. Hence for every set $I$ of walls of $c$, the configuration $\iota_Ic$ has the same walls as $c$, with the same classes.
+\item[(iii)] $F(c)$ has a wall at $i$ of class $x$ if and only if $c$ does.
+\item[(iv)] All $8$ classes occur.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Suppose $c$ has walls at $i$ and $i+1$, and let $p=c_{i+1}$ and $\delta$ belong to the first wall. The left cell of the second wall is $c_{i+2}$, the centre of the first, so it lies in $\{0,1,2\}$, and hence $c_{i+2}=p+\delta$. The protector of the second wall is $c_{i+1}=p$, which must lie in $\{p+\delta,3\}$. This is impossible. (W1) is Lemma~\ref{hw:59walls} and (H1) is Lemma~\ref{hw:59flip}, applied to each family. For (H2), let $c$ have walls at $0$ and $i\ne0$, so $|i|\ge2$. The cell $2$ written by $\iota_0$ lies in the window $[i,i+4)$ only if $-1\le i\le2$, hence only if $i=2$. In that case cell $2$ is the protector of the wall at $2$ and the centre of the wall at $0$. The centre pair of the wall at $0$ is $\{R_0,3\}=\{c_3,3\}$, and $c_3$ is the left cell of the wall at $2$, so this pair is exactly the set of allowed protectors of that wall. In every case the wall at $i$ survives, with its family. The flip $\iota_i$ writes cell $i+2$, which is not among the cells $1$, $2$, $3$ read by $\iota_0$, since $|i|\ne1$ and $i\ne0$. Symmetrically, $\iota_0$ writes no cell that $\iota_i$ reads, so the two flips commute.
+
+(ii) If $i'=i$, the flip changes only the centre, which the class does not read. Otherwise $|i'-i|\ge2$. The cell $i'+2$ written by $\iota_{i'}$ is one of the cells $i-1$, $i$, $i+4$ read by the class only if $i'\in\{i-3,i-2,i+2\}$, because $i'+2\in\{i+1,i+3\}$ would give $|i'-i|=1$. The wall at $i$ survives by (i), and we check these three cases.
+\begin{itemize}
+\item $i'=i+2$: cell $i+4$ is the centre of the wall at $i+2$, whose left cell is $c_{i+3}$. Both possible values of that centre differ from its left cell. So the wall at $i$ is not level, before or after the flip.
+\item $i'=i-2$: the wall at $i-2$ has left cell $c_{i-1}\in\{0,1,2\}$ and right cell $c_{i+1}\ne c_{i-1}$. So $c_{i-1}\notin\{c_{i+1},3\}$, and the wall at $i$ is not doubly protected, before or after the flip. The flip writes $c_i$ but not $c_{i-1}$.
+\item $i'=i-3$: the flip exchanges $c_{i-1}$, the centre of the wall at $i-3$, between $c_i$ (its right cell) and $3$. If $c_i=c_{i+1}$, both values lie in $\{c_{i+1},3\}$, so the wall at $i$ is doubly protected before and after the flip. If $c_i\ne c_{i+1}$, it is doubly protected in neither.
+\end{itemize}
+For a set $I$, the walls and the class of a given wall read finitely many cells, so the second statement follows from the first, Lemma~\ref{hw:flips}(a), and induction, as in the proof of Lemma~\ref{hw:flips}.
+
+(iii) The family is preserved by Lemma~\ref{hw:59walls}. By the remark before the lemma, it remains to show that $F$ and $F^{-1}$ preserve the occurrences of $Y$. By Lemma~\ref{hw:exact} it suffices to check (W1) for $Y$ and $F$. Let $c_{[0,3)}=a\,p\,p$ with $a\in\{p,3\}$. Cells $1$ and $2$ have left neighbours in $\{p,3\}$. For $p\in\{0,2\}$ they advance to $p+1$ by \eqref{hw:clock}. For $p=1$ their left neighbours have $y=1$, so they are not triggered and also become $2=p+1$. The protector $a=p$ becomes $p+1$, or $3$ when $p=1$ and it is triggered. The protector $a=3$ can be triggered only if $y_1=1$, that is only if $p=1$, and then it becomes $2=p+1$. So $F(c)_{[0,3)}\in Y$.
+
+(iv) Let $X$ have $\delta$, and take a window $c_{[i-1,i+5)}=u\,a\,p\,C\,(p+\delta)\,v$ with $C\in\{p+\delta,3\}$. With $a=u=p$ the wall at $i$ is doubly protected; with $a=3$ it is not, since then $c_i\ne c_{i+1}$. With $v=p+\delta$ it is level; with $v=3$ it is not. For instance $000111$, $000113$, $030111$, $030113$ give the four A-classes, and $000222$, $000223$, $030222$, $030223$ give the four B-classes, each for the wall at position $1$.
+\end{proof}
+
+\begin{proposition}\label{hw:census}
+Let $F=F_{59}$. The $64$ elements of $T$ are distinct automorphisms commuting with $F$ and with each other, and each is an involution or the identity; $T_R\cong T_L\cong(\Z/2)^4$, $T_R\cap T_L=\{1,\tau_A,\tau_B,\tau_A\tau_B\}$, and $T\cong(\Z/2)^6$. The group $\Cent^{\times}_2(F)$ has exactly $133$ elements, and each of them has exactly one expression of one of the following forms:
+\begin{enumerate}
+\item[(i)] $\sh^aF^b$ with $|a|+|b|\le2$ ($13$ maps);
+\item[(ii)] $F^bt$ with $|b|\le2$ and $1\ne t\in T_R$ ($75$ maps);
+\item[(iii)] $\sh F^bt$ with $|b|\le1$ and $1\ne t\in T_L$ ($45$ maps).
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+\emph{The group $T$.} This part is exact. For a set $U$ of classes, let $I_U(c)$ be the set of walls of $c$ whose class lies in $U$, and $\varphi_U(c)=\iota_{I_U(c)}c$. This is a block map of radius $3$, since cell $n$ changes only if there is a wall at $n-2$, and its class is read from $c_{[n-3,n+3)}$. By Lemma~\ref{hw:59classes}(ii), $I_V(\iota_Jc)=I_V(c)$ for every set $J$ of walls of $c$. So Lemma~\ref{hw:flips}(b) gives
+\[
+\varphi_V\varphi_U(c)=\iota_{I_V(c)}\iota_{I_U(c)}c=\iota_{I_U(c)\triangle I_V(c)}c=\varphi_{U\triangle V}(c),
+\]
+and $U\mapsto\varphi_U$ is a homomorphism from the group of subsets of the $8$ classes under $\triangle$, which is $(\Z/2)^8$. In particular each $\varphi_U$ is an involution or the identity, hence an automorphism, and any two commute. By Lemma~\ref{hw:59classes}(iii), $I_U(F(c))=I_U(c)$, so $F\varphi_U=\varphi_UF$ by Lemma~\ref{hw:flips}(d). The homomorphism is injective. If $U\ne\emptyset$, pick $x\in U$ and, by Lemma~\ref{hw:59classes}(iv), a configuration $c$ with a wall of class $x$; then $\varphi_U$ changes the centre of that wall, so $\varphi_U\ne\mathrm{id}$.
+
+Write $R_{X,=}$, $R_{X,\ne}$ for the sets of the two level and the two non-level classes of family $X$, and $L_{X,\mathrm{pp}}$, $L_{X,\lnot\mathrm{pp}}$ for the sets of the two doubly protected and the two other classes. Then $\tau_{X,=}=\varphi_{R_{X,=}}$, $\tau_{X,\ne}=\varphi_{R_{X,\ne}}$, $\lambda_{X,\mathrm{pp}}=\varphi_{L_{X,\mathrm{pp}}}$ and $\lambda_{X,\lnot\mathrm{pp}}=\varphi_{L_{X,\lnot\mathrm{pp}}}$. Hence the map from $(\Z/2)^8$, indexed by the eight generators, onto $T$ that sends $s$ to the product of the generators with exponents $s$ sends $s$ to $\varphi_{U(s)}$. Here the class $(X,l,q)$ lies in $U(s)$ if and only if the exponents of $\tau_{X,l}$ and $\lambda_{X,q}$ have sum $1$. So $s$ lies in the kernel if and only if, for each $X$, the four exponents of $\tau_{X,=}$, $\tau_{X,\ne}$, $\lambda_{X,\mathrm{pp}}$, $\lambda_{X,\lnot\mathrm{pp}}$ are equal. The kernel has dimension $2$, so $|T|=2^6=64$ and $T\cong(\Z/2)^6$. The four sets $R_{X,l}$ are disjoint and nonempty, so $T_R\cong(\Z/2)^4$, and likewise $T_L\cong(\Z/2)^4$. A set of classes that is a union of sets $R_{X,l}$ and also a union of sets $L_{X,q}$ contains, for each $X$, either none or all four classes of $X$. So $T_R\cap T_L=\{\varphi_\emptyset,\varphi_A,\varphi_B,\varphi_{A\cup B}\}=\{1,\tau_A,\tau_B,\tau_A\tau_B\}$, where $\varphi_X$ flips all $X$-walls and so equals $\tau_X$. This also gives $\tau_X=\tau_{X,=}\tau_{X,\ne}=\lambda_{X,\mathrm{pp}}\lambda_{X,\lnot\mathrm{pp}}$.
+
+\emph{The census.} This part is a computation. $\Cent^{\times}_2(F)$ was enumerated as in Section~\ref{sec:method}, and every solution passed the pair-graph test. The tables of the maps in (i)--(iii) were computed by exact composition, and each of the $133$ tables was matched against them; each matched exactly one, so the three lists are disjoint. In (iii), $\sh\lambda$ has radius $2$ although $\lambda$ has radius $3$, because $\lambda$ reads three cells to the left of the flip cell and one to the right.
+\end{proof}
+
+The census is consistent with the picture of Theorem~\ref{hw:59}: radius $2$ is too small for any train of length $m\ge2$, and what appears instead are flips of whole classes of walls, defined by properties of the walls and their immediate surroundings that $F$ and the flips preserve.
+
+\begin{proposition}\label{hw:group}
+Let $F=F_{59}$ and $G=\langle\sh,F,\Cent^{\times}_2(F)\rangle$. Then:
+\begin{enumerate}
+\item[(i)] $G=\langle\sh,F\rangle\,T$, and $T\cong(\Z/2)^6$ is central in $G$;
+\item[(ii)] $\langle\sh,F\rangle\cap T=\{1\}$;
+\item[(iii)] $G\cong\Z^2\times(\Z/2)^6$.
+\end{enumerate}
+Every $t\ne1$ in $T$ has order $2$, and every $\sh^aF^bt$ with $(a,b)\ne(0,0)$ has infinite order.
+\end{proposition}
+
+\begin{proof}
+(i) By Proposition~\ref{hw:census} the generators of $G$ are of the form $\sh^aF^bt$ with $t\in T$. The elements of $T$ are automorphisms commuting with $F$, hence with $\sh$ and $F$, and with each other; so $T$ is central and $G=\langle\sh,F\rangle T$.
+
+(ii) If $\sh^aF^b=t\in T$, then $\sh^{2a}F^{2b}=t^2=1$, so $a=b=0$ by Theorem~\ref{cl:thm:A}(3); rule $59$ depends on its first and third arguments.
+
+(iii) By Theorem~\ref{cl:thm:A}(3), $\langle\sh,F\rangle\cong\Z^2$. By (ii) and since $T$ is central, $G\cong\langle\sh,F\rangle\times T\cong\Z^2\times(\Z/2)^6$.
+
+For the orders: $(\sh^aF^bt)^2=\sh^{2a}F^{2b}$, which has infinite order if $(a,b)\ne(0,0)$.
+\end{proof}
+
+\begin{corollary}\label{hw:order}
+$F_{59}$ has infinite order, and $\langle\sh,F_{59},\Cent^{\times}_2(F_{59})\rangle\cong\Z^2\times(\Z/2)^6$.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{cl:thm:A} and Proposition~\ref{hw:group}(iii).
+\end{proof}
+
+Some orbits of $F_{59}$ move slowly. Let $c_0$ be the configuration of spatial period $4000$ with period $(021)^{666}\,02\,0^{2000}$; it has no wall of either family, and a direct computation shows $F^n(c_0)\ne c_0$ for $1\le n\le400{,}000$. At the interface between the staircase $(021)^{666}02$ and the uniform block $0^{2000}$ of $c_0$, $F$ behaves like a binary odometer: the disturbance first reaches depth $k$ at times close to $2^{k+2}$ (at $t=501$, $1014$, $2037$, \dots, $131{,}055$ for $k=7,\dots,15$), so the period of $c_0$ under $F$, which is finite because $c_0$ is spatially periodic, is very large. Apart from walls, the dynamics of rule $59$R is rather tame. A single changed cell on random rings stayed, in all trials, between the cores of the nearest walls on either side, and after transients most columns are periodic in time.
+
+The walls of rule $59$R are not time-periodic in the sense of Corollary~\ref{hw:periodic}, because the protector depends on the context. For $p\not\equiv0\pmod6$ no word of $X_A\cup X_B$ is fixed by $F^p$ in every context, since $F^p$ moves the core along its $6$-cycle; for $p\in\{6,12,30,60,120\}$ a computer search found, for every word of $X_A\cup X_B$, a context in which $F^p$ changes the protector. We have not proved this for all multiples of $6$; nothing depends on it, since Lemma~\ref{hw:trainlemma} applies to the family $X_A$ as it stands.
+
+\subsection{Time-periodic walls: rules 127R, 179R and 223R}\label{hw:sec:tp}
+
+For these three rules the walls of Takesue are pairs of adjacent cells whose images do not depend on the context: for $127$R the pairs $b\,\kappa(b)$, $b\in\A$, and for $223$R the pairs $b\,b$, on which $F$ acts by the $4$-cycle $0\mapsto1\mapsto3\mapsto2\mapsto0$ in both cells, so that they have period $4$; and for $179$R the pairs of the two cycles $01\to12\to20\to01$ and $10\to21\to02\to10$, of period $3$ \cite[Fig.~2 and Table~III, walls (xii), (xiii), (xv), (xvi)]{Takesue1989}. Each word of the next proposition consists of two such pairs with one cell between them. The cell in the middle is the flip cell, and with it the words have period $8$, $8$ and $6$, twice the period of the pairs.
+
+\begin{proposition}\label{hw:tp}
+For $f\in\{127,179,223\}$ the following cycles of words of length $5$ satisfy the hypotheses of Corollary~\ref{hw:periodic} for $F=F_f$, with $k=5$, $j=2$ and $\iota=F^{P/2}$ on $W$:
+\begin{align*}
+127:&\quad 03112\to12230\to30021\to21103\to03312\to12330\to30221\to21003\quad(P=8),\\
+179:&\quad 01110\to12321\to20302\to01310\to12221\to20002\quad(P=6),\\
+223:&\quad 00122\to11300\to33211\to22133\to00322\to11200\to33011\to22033\quad(P=8).
+\end{align*}
+Hence $\bigoplus_{m\ge1}S_m$ embeds in $\Aut(X_{F_f})$, and so in $\Aut(X_{F_{f'}})$ for the conjugate rules $f'=254$, $205$ and $251$. Each word is fixed by $F^P$ in every context.
+\end{proposition}
+
+\begin{proof}
+(a) The images of the three interior cells of a word of length $5$ depend only on the word, and the arrows above are the result of evaluating \eqref{eq:F} on them and on the end cells. It remains to see that the images of the end cells do not depend on the outside neighbours, which enter only through their $y$-bits. For $f=127$, $f(a,b,c)=\lnot(a\land b\land c)$ depends on $a$ only when $b=c=1$ and on $c$ only when $a=b=1$; for $f=179$ the same is true, since $f(0,b,c)=f(1,b,c)$ unless $b=c=1$ and $f(a,b,0)=f(a,b,1)$ unless $a=b=1$; so for these two rules it suffices that the $y$-bits of the first two and of the last two letters of each word are not both $1$, which one reads off the words ($y$ is the parity of the letter: for $127$ the $y$-words are $01110$, $10010$, $10001$, $01101$, $01110$, $10110$, $10001$, $01001$, and for $179$ they are $01110$, $10101$, $00100$, $01110$, $10001$, $00000$). For $f=223$, $f(a,b,c)=\lnot(a\land\lnot b\land c)$ depends on $a$ only when $(b,c)=(0,1)$ and on $c$ only when $(a,b)=(1,0)$, and the $y$-words $00100$, $11100$, $11011$, $00111$, $00100$, $11000$, $11011$, $00011$ never begin with $01$ or end with $10$.
+(b) In each list the words $P/2$ apart differ exactly at position $2$, as one reads off: for instance $03112$ and $03312$, $01110$ and $01310$, $00122$ and $00322$.
+(c) Comparing suffixes with prefixes shows that two words of $W$ can overlap only at offsets $3$ and $4$ for $127$ and $223$, and only at offset $4$ for $179$; in particular never at offsets $1$ or $2=\max(j,k-1-j)$.
+Corollary~\ref{hw:periodic} applies. The rules $254$, $205$, $251$ are conjugate to $127$, $179$, $223$ by reflection and complement.
+\end{proof}
+
+For $179$, where $h=P/2=3$ is odd, one can also take $|K|=1$: $\beta(w_s)=s\bmod2$ satisfies (H3) with $\varepsilon=1$. For $127$ and $223$, where $h=4$, (H3) with a constant $\varepsilon$ is impossible, since it would give $\beta(\iota w)=\beta(F^4w)=\beta(w)+4\varepsilon=\beta(w)$; so the classes of (H3$'$) are genuinely needed there, and trains consist of walls in the same phase modulo $h$. By Corollary~\ref{hw:periodic} the flip of all walls is in each case an involutive automorphism of radius $2$ commuting with $F$; this was also confirmed by composing tables exactly at radius $4$ and by the pair-graph test. Rings of length $1500$ seeded with trains at gaps $5$, $6$ and $8$, with walls of other classes mixed in, confirmed commutation with $F$ and $F^{-1}$ and the homomorphism law, with no failures. We have not computed $\Cent^{\times}_2(F_f)$ for these three rules.
+
+\subsection{Rule 27R}\label{hw:sec:27}
+
+The class $\{27,83,202,216\}$ carries a version of the rule-$59$ mechanism with windows of length $6$. Rule $27$ has $f(a,0,c)=\lnot(a\land c)$ and $f(a,1,c)=\lnot a\land c$, so it differs from rule $59$ only at $(a,b,c)=(1,0,1)$. Call a cell $i$ \emph{pinched} if $y_{i-1}=y_{i+1}=1$. By \eqref{eq:F}, $F_{27}$ acts on cells with values $1$ and $3$ as in \eqref{hw:clock}, and
+\begin{equation}\label{hw:clock27}
+0\mapsto\begin{cases}0&\text{pinched}\\1&\text{otherwise,}\end{cases}\qquad 2\mapsto\begin{cases}1&\text{pinched}\\0&\text{otherwise.}\end{cases}
+\end{equation}
+Let
+\[
+W_{27}=\{\,a\,p\,p\,C\,(p+1)\,(p+1)\ :\ p\in\{0,1,2\},\ a\in\{p,3\},\ C\in\{p+1,3\}\,\},
+\]
+twelve words. As for rule $59$, call $a$ the \emph{protector}, $C$ the \emph{centre} and $(p,C)$ the \emph{core}. Let $\iota$ exchange the two values of $C$, at position $j=3$, and let
+\[
+\beta(a\,p\,p\,C\,(p+1)\,(p+1))=[C=3]+[p=2]\pmod 2.
+\]
+
+\begin{theorem}\label{hw:27}
+Let $F=F_{27}$. The family $W_{27}$, with $k=6$, $j=3$, $\iota$ and $\beta$ as above, satisfies \textup{(W1)}, \textup{(H1)}, \textup{(H2)}, \textup{(H3)} with $\varepsilon=1$, and \textup{(H4)}. Consequently, for every $d\ge6$ and $m\ge1$ the maps $\Psi_m$ of Definition~\ref{hw:train} form an injective homomorphism $S_m\to\Aut(X_{F_{27}})$ whose image consists of block maps of radius at most $md+3$, and the images for different $m$ commute. So $\bigoplus_{m\ge1}S_m$ embeds in $\Aut(X_{F_f})$ for $f\in\{27,83,202,216\}$; each of these groups contains every finite group and is not virtually $\Z^n$ for any $n$. The map that flips every occurrence of $W_{27}$ is an involutive automorphism of radius $3$ commuting with $F_{27}$.
+\end{theorem}
+
+\begin{proof}
+\emph{(W1) and the core.} Let $c_{[0,6)}=a\,p\,p\,C\,(p+1)\,(p+1)$. The cells $1,\dots,4$ read only cells of the word. Cells $0$ and $5$ read the outside neighbours, and only through their $y$-bits. By \eqref{hw:clock} and \eqref{hw:clock27}:
+\[
+\begin{array}{ccccl}
+ & (a,L,L,C,R,R) & (a',L',L',C',R',R') & C\mapsto C' & \text{context enters}\\ \hline
+p=0 & (\{0,3\},0,0,\{1,3\},1,1) & (\{1,3\},1,1,\{3,2\},2,2) & 1\mapsto3,\ 3\mapsto2 & \text{nowhere}\\
+p=1 & (\{1,3\},1,1,\{2,3\},2,2) & (\{2,3\},2,2,\{0,3\},0,0) & 2\mapsto0,\ 3\mapsto3 & \text{at }a\\
+p=2 & (\{2,3\},2,2,\{0,3\},0,0) & (\{0,3\},0,0,\{1,3\},1,1) & 0\mapsto1,\ 3\mapsto3 & \text{nowhere}
+\end{array}
+\]
+We justify the entries.
+\begin{itemize}
+\item $p=0$. Cells $1$ and $2$ have value $0$ and are neighbours of each other with $y=0$, so they are not pinched and become $1$. The centre has $y_2=0$ and $y_4=1$, so it is triggered: $1\mapsto3$, $3\mapsto2$. Cells $4$ and $5$ have value $1$ and left neighbours with $y=1$, so they are not triggered and become $2$. The protector has $y_1=0$, so it is neither pinched nor triggered: $0\mapsto1$, $3\mapsto3$.
+\item $p=1$. Cells $1$ and $2$ have value $1$ and left neighbours with $y=1$, so they become $2$. The centre $C=2$ has $y_4=0$, so it is not pinched and becomes $0$; the centre $C=3$ has $y_2=1$, so it is not triggered and stays $3$. Cells $4$ and $5$ have value $2$ and are neighbours of each other with $y=0$, so they become $0$. The protector has $y_1=1$ and is triggered exactly when $y_{-1}=0$, so $a'\in\{2,3\}$ depends on the context.
+\item $p=2$. Cells $1$ and $2$ have value $2$ and are neighbours of each other with $y=0$, so they become $0$. The centre $C=0$ has $y_2=0$, so it becomes $1$; the centre $C=3$ has $y_4=0$, so it stays $3$. Cells $4$ and $5$ have value $0$ and are neighbours of each other with $y=0$, so they become $1$. The protector has $y_1=0$: $2\mapsto0$, $3\mapsto3$.
+\end{itemize}
+In each case $F(c)_{[0,6)}\in W_{27}$ with $p$ replaced by $p+1$. This is (W1), and by Lemma~\ref{hw:exact} $F$ and $F^{-1}$ preserve the occurrences. The cells $1,\dots,5$ of the image depend only on the core, which runs through the $6$-cycle
+\[
+(0,1)\to(1,3)\to(2,3)\to(0,3)\to(1,2)\to(2,0)\to(0,1),
+\]
+the A-cycle of Lemma~\ref{hw:59walls}.
+
+\emph{(H3).} The map $\iota$ changes $[C=3]$ and not $p$, so $\beta\circ\iota=\beta+1$. Along the cycle, $\beta$ takes the values $0,1,0,1,0,1$. Since $\beta$ depends only on the core, $\beta(w_0(F(c)))=\beta(w_0(c))+1$ in every context, which is (H3) with $\varepsilon=1$.
+
+\emph{(H1).} The configurations $\iota_0c$ and $c$ differ only at cell $3$, so $F(\iota_0c)$ and $F(c)$ can differ only at cells $2$, $3$, $4$. In the justifications above, the images of cells $2$ and $4$ do not depend on which of the two values $C$ has. For $p=0$, cell $2$ is decided by cell $1$, and cell $4$ reads $C$ only through $y_C=1$. For $p=1$ and $p=2$, cell $2$ is decided by cell $1$ and cell $4$ by cell $5$. The centre map $C\mapsto C'$ is a bijection from $\{p+1,3\}$ onto $\{p+2,3\}$, the centre pair of the image word. So $F(\iota_0c)_3$ is the element of that pair other than $F(c)_3$, and $F(\iota_0c)=\iota_0F(c)$.
+
+\emph{Overlaps.} Suppose $c$ has occurrences at $0$ and $\delta\in\{1,2\}$, with $c_1=p$. If $\delta=1$, then $c_2=p$ and $c_3=C$ are both the left cell of the second word, so $C=p$, which contradicts $C\in\{p+1,3\}$. If $\delta=2$, then $c_3=C$ and $c_4=p+1$ are both the left cell of the second word, so its protector $c_2=p$ must lie in $\{p+1,3\}$, which is impossible. So distinct occurrences are at distance at least $3$. Distances $3$, $4$ and $5$ do occur: at distance $3$ the centre of the first word is the protector of the second.
+
+\emph{(H2) and (H4).} The flip $\iota_0$ writes only cell $3$. It reads only cells $1$ and $3$, since the new value is the element of $\{c_1+1,3\}$ other than $c_3$. The bit $\beta$ reads positions $1$ and $3$ of its word. Let $i\ne0$ be another occurrence, so $|i|\ge3$. The window $[i,i+6)$ contains cell $3$ only if $-2\le i\le3$, hence only if $i=3$. Then cell $3$ is the protector of the word at $3$, whose left cell is $c_4=c_1+1$. So its allowed protectors are $\{c_1+1,3\}$, the pair between which $\iota_0$ exchanges $c_3$. Hence the occurrence at $i$ survives in $\iota_0c$ in every case. Its positions $1$ and $3$, the cells $i+1$ and $i+3$, are not cell $3$, so its bit is unchanged; this is (H4). The flip $\iota_i$ writes cell $i+3$, which is neither $1$ nor $3$ since $i\notin\{-2,0\}$. Symmetrically, $\iota_0$ writes no cell read by $\iota_i$. So the two flips commute, which is (H2).
+
+\emph{Conclusion.} $W_{27}\ne\A^6$. Theorem~\ref{hw:general} applies with $d\ge k=6$ and gives the radius bound $md+\max(3,2)=md+3$. Corollary~\ref{hw:flipall} gives the statement about the flip-all map. The conjugate rules $83$, $202$, $216$ follow as in the proof of Theorem~\ref{hw:59}.
+\end{proof}
+
+Machine checks of each step of the proof are listed in Appendix~\ref{app:confirm}. At gap $3$ consecutive walls overlap, as at gap $2$ for rule $59$; Theorem~\ref{hw:general} does not cover this case, and we do not need it.
+
+As for $59$, the protector depends on the context; for instance the image of $1\,1\,1\,2\,2\,2$ is $2\,2\,2\,0\,0\,0$ or $3\,2\,2\,0\,0\,0$ depending on the left neighbour. The flip-all map has radius $3$, and the maps $\Psi_m$ have larger radius. This is consistent with the census of \cite{PaperD}, in which the block maps of radius at most $2$ that commute with $F_{27}$ are the $13$ maps $\sh^aF^b$ and one constant map. A computer search (Appendix~\ref{app:stated}) looked for invariant families with a hidden involution satisfying (W1) and (H1), with windows of length at most $6$, among the $57$ classes with no fixed word of length at most $3$. It considered the closure of each word under $F$ and $F^{-1}$ in all contexts, if that closure has at most $300$ words. It found such families only in the classes of $27$, $59$, $127$, $179$ and $223$, all of which have periodic walls in \cite[Section~4]{Takesue1989}. It says nothing about longer windows or larger families.
+
+\subsection{Rotating walls: rules 219R and 126R}\label{hw:sec:moving}
+
+In the walls of Sections~\ref{hw:sec:general}--\ref{hw:sec:27}, the cells next to the permuted information have context-free trajectories because they belong to a word with that property. For rules $219$ and $126$ the same effect comes from a relation between adjacent cells that $F$ preserves. The cells that satisfy it all evolve in every context by one permutation of the alphabet, of order $4$, so the walls they form stay in place but rotate through the symbols. We call them \emph{rotating walls}. Throughout this subsection $\pi$ is the cell permutation $\pi(x,y)=(y,1-x)$, the $4$-cycle $0\mapsto1\mapsto3\mapsto2\mapsto0$, so that $\pi^2=\kappa$ and $\pi\kappa=\kappa\pi$. The pairs of equal cells of Lemma~\ref{hw:bonds}, which rotate by $\pi$, are the wall (xv) of Takesue for $219$R, and the pairs $b\,\kappa(b)$ used for $126$R below are his wall (xvi), both of period $4$ \cite[Fig.~2, Table~III]{Takesue1989}. The source lists these walls without a proof, and it does not state that $F$ creates no such pair; so Lemma~\ref{hw:bonds} is proved here. The cars, the trains and the automorphisms are what is added.
+
+\begin{lemma}[bonds; cf.\ {\cite[Table~III, wall (xv)]{Takesue1989}}]\label{hw:bonds}
+Let $F=F_{219}$, and say that $c$ has a \emph{bond} at $(i,i+1)$ if $c_i=c_{i+1}$.
+\begin{enumerate}
+\item[(a)] $F(c)$ has a bond at $(i,i+1)$ if and only if $c$ does, and the same holds for $F^{-1}$.
+\item[(b)] If $c$ has a bond at $(i-1,i)$ or at $(i,i+1)$, then $F(c)_i=\pi(c_i)$, whatever the other cells of $c$ are.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The rule $219$ vanishes exactly on $010$ and $101$, so $f(a,b,c)=1$ whenever $a=b$ or $b=c$. If $c_i=c_{i+1}$, then $y_i=y_{i+1}$, so $f=1$ on the triples $(y_{i-1},y_i,y_{i+1})$ and $(y_i,y_{i+1},y_{i+2})$, and by \eqref{eq:F} $F(c)_i=(y_i,1-x_i)=\pi(c_i)$ and $F(c)_{i+1}=\pi(c_{i+1})$. This proves (b) and one half of (a). Conversely, if $F(c)_i=F(c)_{i+1}$, the first coordinates give $y_i=y_{i+1}$, hence $f=1$ at $i$ and at $i+1$ as before, and then the second coordinates give $1-x_i=1-x_{i+1}$; so $c_i=c_{i+1}$. The statement for $F^{-1}$ follows by applying this to $F^{-1}(c)$.
+\end{proof}
+
+So every maximal run of at least two equal cells keeps its position and length, and its symbol runs through the $4$-cycle $\pi$ in every context. A \emph{car} of $c$ is a position $p$ with $c_{p-2}=c_{p-1}=c_{p+1}=c_{p+2}\ne c_p$; the common value $s$ of its four neighbours is its \emph{wall symbol}. For $s\in\A$ and $a\ne s$ let $\varphi_s(a)$ be the middle letter of $F(s\,s\,a\,s\,s)$, which by \eqref{eq:F} depends only on $s$ and $a$.
+
+\begin{lemma}\label{hw:cars219}
+Let $F=F_{219}$.
+\begin{enumerate}
+\item[(a)] The cars of $F(c)$ are exactly the cars of $c$. A car $p$ of $c$ with wall symbol $s$ is a car of $F(c)$ with wall symbol $\pi(s)$, and $F(c)_p=\varphi_s(c_p)$; and $\varphi_s$ is a bijection $\A\setminus\{s\}\to\A\setminus\{\pi(s)\}$.
+\item[(b)] If $c'$ is obtained from $c$ by changing the values of some cars, each to a value different from its wall symbol, then $c'$ has the same bonds, the same cars and the same wall symbols as $c$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Let $p$ be a car of $c$ with wall symbol $s$. The cells $p\pm1$, $p\pm2$ carry bonds, so they become $\pi(s)$ by Lemma~\ref{hw:bonds}(b), and $F(c)_p=\varphi_s(c_p)$ because $F(c)_p$ reads only $c_{p-1},c_p,c_{p+1}$. By Lemma~\ref{hw:bonds}(a) there is no bond at $(p-1,p)$ or $(p,p+1)$ in $F(c)$, so $\varphi_s(c_p)\ne\pi(s)$ and $p$ is a car of $F(c)$. The same argument for $F^{-1}$, under which bonded cells evolve by $\pi^{-1}$, shows that every car of $F(c)$ is a car of $c$, and that the corresponding map $\A\setminus\{\pi(s)\}\to\A\setminus\{s\}$ is inverse to $\varphi_s$. (Explicitly, $\varphi_0=(1\mapsto2,\,2\mapsto0,\,3\mapsto3)$, $\varphi_1=(0\mapsto0,\,2\mapsto1,\,3\mapsto2)$, $\varphi_2=(0\mapsto1,\,1\mapsto2,\,3\mapsto3)$ and $\varphi_3=(0\mapsto0,\,1\mapsto3,\,2\mapsto1)$.)
+
+(b) Let $p$ be a changed car with wall symbol $s$. The bonds at $(p-2,p-1)$ and $(p+1,p+2)$ do not involve $p$, and there is no bond at $(p-1,p)$ or $(p,p+1)$ before or after, since the new value differs from $s$. Whether a position $q$ is a car depends on $c_{[q-2,q+2]}$. For $q\in\{p\pm1,p\pm2\}$ the cell $q$ carries a bond in $c$ and in $c'$, so it is not a car of either; for $|q-p|\ge3$ the window of $q$ does not contain $p$. Wall symbols are cells next to cars, which are not changed.
+\end{proof}
+
+Two cars at distance $3$ share the pair of wall cells between them, so they have the same wall symbol. A \emph{train of length $m$} of $c$ is a set $\{p,p+3,\dots,p+3(m-1)\}$ of cars of $c$ such that neither $p-3$ nor $p+3m$ is a car; its \emph{car vector} is $(c_p,c_{p+3},\dots,c_{p+3(m-1)})$. Every car lies in at most one train (it may also lie in an infinite progression of cars, which is not a train). By Lemma~\ref{hw:cars219}(a), $F(c)$ has the same trains as $c$, and $F$ applies the same bijection $\varphi_s$ to every entry of the car vector of a train with wall symbol $s$. By Lemma~\ref{hw:cars219}(b), changing car values within $\A\setminus\{s\}$ does not change the trains.
+
+\begin{theorem}\label{hw:219}
+Let $F=F_{219}$. For $\sigma\in S_m$ let $\Psi_m(\sigma)$ replace the car vector $(a_1,\dots,a_m)$ of every train of length $m$ by $(a_{\sigma^{-1}(1)},\dots,a_{\sigma^{-1}(m)})$ and leave every other cell unchanged. Then $\Psi_m(\sigma)$ is a block map of radius at most $3m+2$ that commutes with $F$, and the $\Psi_m$ assemble to an injective homomorphism $\bigoplus_{m\ge1}S_m\to\Aut(X_F)$. In particular $\Aut(X_{F_{219}})$ contains every finite group and is not virtually $\Z^n$ for any $n$.
+\end{theorem}
+
+\begin{proof}
+\emph{Locality.} Whether $q$ is the $r$-th member of a train of length exactly $m$ depends on whether the positions $q+3t$, $-r\le t\le m-r+1$, are cars, which is decided by $c_{[q-3r-2,\,q+3(m-r+1)+2]}$; the value written at $q$ is one of the cars of that train. So $\Psi_m(\sigma)$ is a block map of radius at most $3m+2$, and it commutes with $\sh$.
+
+\emph{Commutation.} Let $c'=\Psi_m(\sigma)(c)$. By Lemma~\ref{hw:cars219}(b), $c'$ has the bonds, cars, wall symbols and trains of $c$, and it differs from $c$ only at members of trains of length $m$. Let $q$ be the $r$-th member of such a train, with wall symbol $s$ and car vector $a$. Then $F(c')_q=\varphi_s(a_{\sigma^{-1}(r)})$ by Lemma~\ref{hw:cars219}(a), and the same train in $F(c)$ has car vector $(\varphi_s(a_1),\dots,\varphi_s(a_m))$, so $\Psi_m(\sigma)(F(c))_q=\varphi_s(a_{\sigma^{-1}(r)})$ as well. Let $q$ be any other position. Then $\Psi_m(\sigma)(F(c))_q=F(c)_q$, because $F(c)$ has the trains of $c$. If $q$ carries a bond in $c$, it carries one in $c'$, and $F(c')_q=\pi(c'_q)=\pi(c_q)=F(c)_q$ by Lemma~\ref{hw:bonds}(b). If $q$ carries no bond, its neighbours $q\pm1$ are not cars, because a neighbour of a car carries a bond; so $c'$ agrees with $c$ on $[q-1,q+1]$ and $F(c')_q=F(c)_q$. Hence $F\Psi_m(\sigma)=\Psi_m(\sigma)F$.
+
+\emph{Group law.} Since $\Psi_m(\rho)$ preserves trains and replaces each car vector $a$ of length $m$ by $a\circ\rho^{-1}$, $\Psi_m(\sigma)\Psi_m(\rho)$ replaces it by $a\circ\rho^{-1}\circ\sigma^{-1}=a\circ(\sigma\rho)^{-1}$; so $\Psi_m$ is a homomorphism, each $\Psi_m(\sigma)$ is invertible with inverse $\Psi_m(\sigma^{-1})$, and $\Psi_m(\sigma)\in\Aut(X_F)$ by Lemma~\ref{lem:spacetime}. For $m\ne m'$, $\Psi_m(\sigma)$ and $\Psi_{m'}(\rho)$ change disjoint sets of cells and preserve each other's trains and car vectors, so they commute, and the $\Psi_m$ assemble to a homomorphism $\Psi$ of $\bigoplus_mS_m$.
+
+\emph{Injectivity.} Let $g=\Psi((\sigma_{m'})_{m'})$ with $\sigma_m\ne\mathrm{id}$, and choose $r$ with $\sigma_m(r)\ne r$. Let $c$ be the configuration with $c_{3t}=1$ for $t=r$, $c_{3t}=2$ for $t\in\{1,\dots,m\}\setminus\{r\}$, and $c_q=0$ at every other position $q$. Every cell $0$ of $c$ carries a bond, so the cars of $c$ are exactly $3,6,\dots,3m$, which form one train of length $m$ with wall symbol $0$. Then $g(c)$ has the value $1$ at $3\sigma_m(r)\ne3r$, so $g(c)\ne c$. The last statement follows as in the proof of Theorem~\ref{thm:54}.
+\end{proof}
+
+Neither Theorem~\ref{thm:walls} nor Corollary~\ref{hw:periodic} applies to $219$R as stated. The walls are not fixed, since their symbol rotates, and the words $s\,s\,a\,s\,s$ with $a\ne s$, whose images are context-free by Lemma~\ref{hw:bonds}, have orbits of period $12$ under $F$ in which no word differs from the word half a period later at the car alone.
+
+\begin{proposition}\label{hw:219D}
+Let $F=F_{219}$, and for $s\in\A$ let $R_s=\varphi_{\pi^3(s)}\circ\varphi_{\pi^2(s)}\circ\varphi_{\pi(s)}\circ\varphi_s$, the permutation of $\A\setminus\{s\}$ by which $F^4$ acts on a car with wall symbol $s$. Let $D$ be the map that replaces the value $a$ of every car with wall symbol $s$ by $R_s(a)$ and leaves every other cell unchanged. Then $D$ is an automorphism of radius $2$ commuting with $F$, $D^3=\mathrm{id}\ne D$, and $D\notin\langle\sh,F\rangle\times\langle\kappa\rangle$.
+\end{proposition}
+
+\begin{proof}
+$D$ has radius $2$, since being a car and the wall symbol are read from $c_{[p-2,p+2]}$. Since $\pi^4=\mathrm{id}$, $R_{\pi(s)}\circ\varphi_s=\varphi_s\circ R_s$, so $F$ intertwines the action of $D$ on a car with wall symbol $s$ and on the same car, with wall symbol $\pi(s)$, in $F(c)$; at all other cells the commutation argument in the proof of Theorem~\ref{hw:219} applies verbatim, with Lemma~\ref{hw:cars219}(b). A direct computation gives $R_0=(1\mapsto3\mapsto2\mapsto1)$, $R_1=(0\mapsto2\mapsto3\mapsto0)$, $R_2=(0\mapsto3\mapsto1\mapsto0)$ and $R_3=(0\mapsto1\mapsto2\mapsto0)$, all $3$-cycles; so $D^3=\mathrm{id}\ne D$, and $D$ is invertible. By Proposition~\ref{cl:prop:kappa}, $\langle\sh,F\rangle\times\langle\kappa\rangle\cong\Z^2\times\Z/2$, which has no element of order $3$.
+\end{proof}
+
+The map $D$ is the analogue of the relabelling $D$ of $54$R. A variant of $\Psi_2$ with trains bounded by runs of at least three wall cells, which acts on the windows $s\,s\,s\,a\,s\,s\,b\,s\,s\,s$ ($a,b\ne s$) by exchanging $a$ and $b$, has radius $6$; it commutes with $F$ on all $4^{15}$ windows and is an involution (computer-assisted; Appendix~\ref{app:stated}).
+
+For rule $126$ the relation is $c_{i+1}=\kappa(c_i)$, and the walls are runs that alternate between a symbol and its complement. The two rules are related by the correspondence of \cite[(A.5)--(A.7)]{Takesue1989}: the cellwise map $\theta$ that complements the $y$-bit of the cells at odd sites and the $x$-bit of the cells at even sites satisfies $\theta F_{126}=F_{219}\,\sh\theta\sh^{-1}$, and it maps the pairs $b\,\kappa(b)$ to pairs of equal cells. It does not commute with $\sh$, so it does not identify the two automorphism groups, and the two rules are treated separately. Here Theorem~\ref{hw:general} applies verbatim.
+
+\begin{proposition}\label{hw:126}
+Let $F=F_{126}$ and
+\[
+W=\{\,b\;\kappa(b)\;q\;b\;\kappa(b)\ :\ b\in\A,\ q\in\A\setminus\{b,\kappa(b)\}\,\}\subsetneq\A^5,
+\]
+with $j=2$ and $\iota$ replacing the letter $q$ at position $2$ by $\kappa(q)$. Then \textup{(W1)}, \textup{(H1)}, \textup{(H2)}, \textup{(H4)} and \textup{(H3$'$)} hold, with the class of an occurrence $w=b\,\kappa(b)\,q\,b\,\kappa(b)$ equal to $b\in K=\A$, $\theta=\pi$, bit $\beta(w)=[q=\pi(b)]$ and $\varepsilon\equiv0$. Hence $\bigoplus_{m\ge1}S_m$ embeds in $\Aut(X_F)$. The flip-all map $E=\tau_W$ of Corollary~\ref{hw:flipall}, which replaces $c_p$ by $\kappa(c_p)$ whenever $c_{[p-2,p+2]}\in W$, is an involutive automorphism of radius $2$, and $E\notin\langle\sh,F\rangle\times\langle\kappa\rangle$.
+\end{proposition}
+
+\begin{proof}
+The rule $126$ vanishes exactly on $000$ and $111$. In every cell of $w\in W$ the $y$-bit differs from that of a neighbour inside $w$: for the cells $b$ and $\kappa(b)$ because $y(\kappa(b))=1-y(b)$, and for $q$ because its two neighbours $\kappa(b)$ and $b$ have different $y$-bits. So $f=1$ at every cell of an occurrence, whatever the outside neighbours, and $F$ maps the occurrence $w$ to the cellwise image $\pi(w)=\pi(b)\,\kappa(\pi(b))\,\pi(q)\,\pi(b)\,\kappa(\pi(b))$, which lies in $W$ because $\pi$ commutes with $\kappa$. This is (W1), and it also gives the class map $\theta=\pi$. For (H1), $\iota_0c$ again has an occurrence at $0$, which $F$ maps to $\pi(\iota(w))=\iota(\pi(w))$; outside $[0,5)$ the configurations $F(\iota_0c)$ and $F(c)$ agree, since $\iota_0$ changes only cell $2$. For (H3$'$), $q\in\A\setminus\{b,\pi^2(b)\}=\{\pi(b),\pi^3(b)\}$, and $\kappa=\pi^2$ exchanges these two values, so $\beta\circ\iota=\beta+1$; and $[\pi(q)=\pi(\pi(b))]=[q=\pi(b)]$, so $\varepsilon\equiv0$. Two occurrences cannot lie at distance $1$ or $2$: at distance $1$ the second would force $q=b$, and at distance $2$ it would force $q=\kappa(b)$. As in the proof of Corollary~\ref{hw:periodic}, this gives (H2) and (H4). Theorem~\ref{hw:general} and Corollary~\ref{hw:flipall} apply. Finally, $E\ne\mathrm{id}$, and $E\ne\kappa$ since $E$ fixes $(0,0)^{\Z}$, which contains no occurrence. By Proposition~\ref{cl:prop:kappa}, $\langle\sh,F\rangle\times\langle\kappa\rangle\cong\Z^2\times\Z/2$, whose only element of order $2$ is $\kappa$.
+\end{proof}
+
+\begin{sloppypar}
+The trains of Theorem~\ref{hw:general} here consist of occurrences $b\,\kappa(b)\,q\,b\,\kappa(b)$ in the same phase $b$, and the walls between their cars are alternating runs, which $F$ rotates by $\pi$ in every context. In both rules the commuting block maps of radius $2$ are too many to enumerate, so the census of \cite{PaperD} does not list these automorphisms of radius $2$.
+\end{sloppypar}
+
+\subsection{Blocking words}\label{hw:sec:kurka}
+
+\begin{remark}\label{hw:kurka}
+For a cellular automaton of radius $1$, a word $u$ is \emph{blocking} \cite{BT2000} if there is a position $q$ in $u$ such that $F^n(x)_q=F^n(x')_q$ for all $n\ge0$ and all $x,x'$ that contain $u$ at the same place; such a column separates the dynamics on its two sides, and by the argument in the proof of \cite[Theorem~3]{Kurka1997} a cellular automaton has a blocking word if and only if it has equicontinuity points, that is, if and only if it is not sensitive \cite[Corollary~2]{Kurka1997}. For the second-order elementary automata Takesue observed that the two sides of a wall cannot communicate and that a system with walls is not mixing \cite[Section~4]{Takesue1989}. Every word of $X_A\cup X_B$ is blocking for $F_{59}$, with $q$ the left cell (or the right cell), and also for $F_{59}^{-1}$, by Lemma~\ref{hw:59walls}. There are even blocking words of length $3$: the six words $a\,p\,p$ with $a\in\{p,3\}$, which are the walls of \cite[(4.3)]{Takesue1989} on three cells, form a family invariant under $F_{59}$ and $F_{59}^{-1}$ in which the last two cells have context-free images $p+1$, $p+1$, as follows from \eqref{hw:clock} (each of the two in-phase cells has its left neighbour in the same phase, hence is never triggered). The time-periodic walls of Proposition~\ref{hw:tp} are blocking as well, since their cells have context-free trajectories, and so are the words of $W_{27}$ for $F_{27}$, whose cells $1,\dots,5$ have context-free trajectories by the proof of Theorem~\ref{hw:27}. Words fixed in every context are blocking, but the converse fails, and the rules of this section show that the gap matters for automorphisms: rules $27$, $59$, $127$, $179$ and $223$ have no word of length at most $3$ fixed in every context (Table~\ref{tab:walls}), and rule $59$ has none of any length (Lemma~\ref{hw:nofixed}), yet they have blocking words and their automorphism groups contain every finite group. This is why Question~\ref{q:dichotomy} is phrased in terms of blocking words rather than fixed words. In the nonlinear examples of this paper, the automorphisms outside $\langle\sh,F\rangle$ all come from blocking words with a degree of freedom next to the blocking column: cars between fixed walls in Theorem~\ref{thm:walls}, a hidden bit inside a moving wall in Theorems~\ref{hw:general} and~\ref{hw:59}, and cars between rotating walls in Theorem~\ref{hw:219} and Proposition~\ref{hw:126}. For the affine rules $90$ and $165$ this fails: they have no blocking word, yet their automorphism groups contain every finite group (Corollary~\ref{lin:noblock}).
+\end{remark}

@@ -1,0 +1,8 @@
+219 return map R_0 on cars: {1: 3, 2: 1, 3: 2}
+219 return map R_1 on cars: {0: 2, 2: 3, 3: 0}
+219 return map R_2 on cars: {0: 3, 1: 0, 3: 1}
+219 return map R_3 on cars: {0: 1, 1: 2, 2: 0}
+219R  D: radius 2, entries differing from id 12, commutes with F on all 4^7 windows: True, with F^-1: True, pair-graph injective: True, ginv o g = id: True, g o ginv = id: True, equals some sigma^aF^b (|a|+|b|<=R): False, affine: False
+219R  D o D == D^2-table: True
+219R  D kappa == kappa D: True
+126R  E: radius 2, entries differing from id 8, commutes with F on all 4^7 windows: True, with F^-1: True, pair-graph injective: True, ginv o g = id: True, g o ginv = id: True, equals some sigma^aF^b (|a|+|b|<=R): False, affine: False

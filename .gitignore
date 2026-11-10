@@ -1,0 +1,53 @@
+# LaTeX build products (the compiled main.pdf of each paper is kept)
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+# the recorded logs of the computations are kept
+!paper-*/code/**/*.log
+!paper-*/code/**/*.out
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# scratch directories of `make check`
+.check/
+
+# compiled C programs
+*.o
+a.out
+paper-A/code/base_cases
+
+# large regenerated tables (see data/README.md)
+raw_solutions_*.txt
+raw_balanced_*.txt
+results_*.json
+search_k*.json
+raw_balanced_*.json
+*.pkl
+*.so
+paper-D/code/searches/w1
+paper-D/code/searches/hb
+paper-D/code/searches/factor
+paper-D/code/searches/conserved
+paper-E/code/rule95/verify7
+paper-E/code/rule95/sat_others_R*_P.npz
+paper-E/code/rule155/base*.bin
+paper-E/code/rule155/s4*.bin
+paper-E/code/rule155/lc
+paper-E/code/rule155/sc
+paper-E/code/closure/dc
+paper-E/code/closure/dc_omp
+paper-E/code/lemmaL/climb
+paper-E/code/lemmaL/climb_gains
+paper-E/code/sh/sh
+paper-C/code/marker_S3
+paper-C/code/rot_psi2
+paper-C/code/results/

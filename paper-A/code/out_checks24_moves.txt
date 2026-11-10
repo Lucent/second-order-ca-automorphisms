@@ -1,0 +1,8 @@
+66 moves = delta-lifts of 46 moves: 400 cases
+R 66 n 1 survivors 60 prefixes 15 expected 15 equal True
+R 66 n 2 survivors 240 prefixes 15 expected 15 equal True
+R 66 n 3 survivors 960 prefixes 15 expected 15 equal True
+R 66 n 4 survivors 3840 prefixes 15 expected 15 equal True
+R 66 n 5 survivors 15360 prefixes 15 expected 15 equal True
+R 189 n 4 survivors 3840 prefixes 15 expected 15 equal True
+ALL CHECKS PASSED

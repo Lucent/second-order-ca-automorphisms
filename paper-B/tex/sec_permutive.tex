@@ -1,0 +1,190 @@
+\section{The elementary permutive rules}\label{sec:permutive}
+
+We now apply Theorem~\ref{gen:main} with $r=1$ to the elementary rules that are permutive in an outer variable and not affine. There are $16$ such rules, in four conjugacy classes (Lemma~\ref{pm:lem:classes}).
+
+\begin{theorem}\label{pm:thm:main}
+Let $f$ be one of the sixteen rules
+\[
+30,\ 86,\ 106,\ 120,\qquad 45,\ 101,\ 166,\ 180,\qquad 75,\ 89,\ 154,\ 210,\qquad 135,\ 149,\ 169,\ 225,
+\]
+that is, an elementary rule that is permutive in its left or its right variable and is not affine. Then $\Aut(X_{F_f})=\langle\sh,F_f\rangle\cong\Z^2$: every invertible block map commuting with $F_f$ equals $\sh^aF_f^b$ for exactly one $(a,b)\in\Z^2$.
+\end{theorem}
+
+For rule $30$ this is Theorem~\ref{thm:rigidity30}. The proof is by hand. The hypotheses of Theorem~\ref{gen:main} are checked in Section~\ref{pm:sec:audit}: \textup{(N)} and \textup{(D)} are read off the rule, \textup{($\Lambda$)} is the certificate $(\mathrm T_1)$ or $(\mathrm T_2)$ on $4$ or $16$ column states, and \textup{(I)} comes from the $F$-orbits of the $4$ or $16$ configurations of spatial period $1$ or $2$.
+
+\subsection{The sixteen rules}\label{pm:sec:classes}
+
+An elementary rule $f$ is \emph{left-permutive} if $f(a,b,c)=a\oplus g(b,c)$ for a Boolean function $g$, and \emph{right-permutive} if $f(c,b,a)$ is left-permutive. For a left-permutive rule, $F_f$ is the automaton \eqref{gen:eq:F} with $r=1$ and $(\xi_0,\xi_1)=(b,c)$. Every $g$ has a unique algebraic normal form
+\[
+g(b,c)=g_{11}bc\oplus g_{10}b\oplus g_{01}c\oplus g_{00},\qquad g_{11},g_{10},g_{01},g_{00}\in\{0,1\},
+\]
+and $f$ is affine if and only if $g_{11}=0$. The Wolfram number of $f=a\oplus g(b,c)$ is $240-15N_g$, where $N_g=\sum_{b,c}g(b,c)2^{2b+c}$. Indeed, the bits with $a=0$ form $N_g$, and the bits with $a=1$ form $16(15-N_g)$.
+
+Two conjugacies act on second-order automata, the Boolean conjugation and the reflection of \cite[Section~2]{Takesue1989}. The cellwise complement $\kappa$ of Section~\ref{gen:sec:setting} conjugates $F_f$ to $F_{\kappa f}$ with $\kappa f(a,b,c)=f(1\oplus a,1\oplus b,1\oplus c)$, and it commutes with $\sh$: by \eqref{eq:F}, $\kappa F_f\kappa(c)_i=\bigl(y_i,\ x_i\oplus f(1\oplus y_{i-1},1\oplus y_i,1\oplus y_{i+1})\bigr)$. The reflection $\mathrm{rev}(c)_i=c_{-i}$ conjugates $F_f$ to $F_{f^r}$ with $f^r(a,b,c)=f(c,b,a)$ (Remark~\ref{gen:rem:scope}(2)), and $\mathrm{rev}\,\sh\,\mathrm{rev}=\sh^{-1}$. Both conjugacies preserve the radius of block maps. Hence $h\mapsto\theta h\theta^{-1}$, for $\theta\in\{\kappa,\mathrm{rev}\}$, maps $\Aut(X_{F_f})$ isomorphically onto the corresponding group for the conjugate rule, and it maps $\langle\sh,F_f\rangle$ onto $\langle\sh,F_{f'}\rangle$.
+
+\begin{lemma}\label{pm:lem:classes}
+The elementary rules that are permutive in their left or right variable and are not affine are the $16$ rules in Table~\ref{pm:tab:classes}. They form four classes under $\kappa$ and reflection. Each class contains two left-permutive rules, which $\kappa$ exchanges, and their two reflections, which are right-permutive and not left-permutive. On the coefficients of a left-permutive rule, $\kappa$ acts by
+\[
+(g_{11},g_{10},g_{01},g_{00})\longmapsto(g_{11},\ g_{10}+g_{11},\ g_{01}+g_{11},\ g_{10}+g_{01}+g_{00}+g_{11}+1).
+\]
+\end{lemma}
+
+\begin{proof}
+$f=a\oplus g$ is affine if and only if $g_{11}=0$. It is also permutive in $c$ if and only if $g(b,c)\oplus g(b,1\oplus c)=g_{11}b\oplus g_{01}$ is constant equal to $1$, which forces $g_{11}=0$. So the non-affine left-permutive rules are the eight with $g_{11}=1$, and none of them is right-permutive. Their reflections are the eight non-affine right-permutive rules, and none of those is left-permutive. Next,
+\[
+\kappa f(a,b,c)=(1\oplus a)\oplus g(1\oplus b,1\oplus c)=a\oplus\bigl(1\oplus g_{11}(1+b)(1+c)\oplus g_{10}(1+b)\oplus g_{01}(1+c)\oplus g_{00}\bigr),
+\]
+and expanding gives the displayed action. For $g_{11}=1$ it is $(g_{10},g_{01},g_{00})\mapsto(1+g_{10},\,1+g_{01},\,g_{10}+g_{01}+g_{00})$. This map has no fixed point, and it commutes with reflection. So the classes are $\{f,\kappa f,f^r,(\kappa f)^r\}$, four of size $4$. The numbers in the table come from $240-15N_g$ and from $f^r$.
+\end{proof}
+
+\begin{table}[ht]
+\caption{The non-affine rules that are permutive in an outer variable. Each left-permutive rule $f=a\oplus g(b,c)$ is listed with $g$ and $(g_{10},g_{01},g_{00})$ (here $g_{11}=1$), next to its reflection. Rows in the same block form one class under $\kappa$ and reflection.}
+\label{pm:tab:classes}
+\centering
+\begin{tabular}{cccc}
+\toprule
+left-permutive $f$ & $g(b,c)$ & $(g_{10},g_{01},g_{00})$ & reflection $f^r$\\
+\midrule
+$30$ & $b\vee c$ & $(1,1,0)$ & $86$\\
+$120$ & $b\wedge c$ & $(0,0,0)$ & $106$\\
+\midrule
+$45$ & $b\vee\neg c$ & $(0,1,1)$ & $101$\\
+$180$ & $b\wedge\neg c$ & $(1,0,0)$ & $166$\\
+\midrule
+$75$ & $\neg b\vee c$ & $(1,0,1)$ & $89$\\
+$210$ & $\neg b\wedge c$ & $(0,1,0)$ & $154$\\
+\midrule
+$135$ & $\neg(b\wedge c)$ & $(0,0,1)$ & $149$\\
+$225$ & $\neg(b\vee c)$ & $(1,1,1)$ & $169$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{proposition}\label{pm:prop:Z2}
+For every elementary rule $f$ that is permutive in its left or its right variable, affine or not, $(a,b)\mapsto\sh^aF_f^b$ is an isomorphism $\Z^2\to\langle\sh,F_f\rangle$.
+\end{proposition}
+
+\begin{proof}
+Reflection conjugates $\sh^aF_f^b$ to $\sh^{-a}F_{f^r}^b$, so we may assume that $f$ is left-permutive, and then this is Proposition~\ref{gen:prop:Z2} with $r=1$.
+\end{proof}
+
+\subsection{The hypotheses for \texorpdfstring{$30$, $45$, $75$ and $135$}{30, 45, 75 and 135}}\label{pm:sec:audit}
+
+By the conjugacies, it suffices to prove Theorem~\ref{pm:thm:main} for $f\in\{30,45,75,135\}$. In this subsection $f=a\oplus g(b,c)$ is one of these four rules, $F=F_f$, and $r=1$.
+
+\paragraph{\textup{(N)} and \textup{(D)}.} Here $\partial_0\partial_1g=g_{11}=1$, so $J(g)=1=r$ and \textup{(N)} holds. For $g_{11}=1$,
+\[
+g(1\oplus b,1\oplus c)\oplus g(b,c)\oplus1=b\oplus c\oplus g_{10}\oplus g_{01},
+\]
+which is not identically $0$. So $g$ is not self-dual, and \textup{(D)} holds. Both statements hold for every non-affine left-permutive elementary rule.
+
+\paragraph{\textup{($\Lambda$)}.} For $r=1$ a column state of period $P$ is a pair $s=(s_1,s_2)$ of functions $\Z/P\to\{0,1\}$, and
+\[
+\phi(s)_t=s_1(t-1)\oplus g\bigl(s_2(t),s_1(t)\bigr).
+\]
+If $\pi(s)=\sum_t\phi(s)_t=0$, the successors of $s$ are the two states $(s_2,z)$ with $z(t+1)=z(t)\oplus\phi(s)_t$.
+
+\begin{proposition}\label{pm:prop:window}
+The certificate $(\mathrm T_1)$ holds for $f=30$, $45$ and $75$, and $(\mathrm T_2)$ holds for $f=135$. Hence, for $f\in\{30,45,75,135\}$ and every $M\ge0$, the light-speed window graph $\Lambda_M$ is strongly connected.
+\end{proposition}
+
+\begin{proof}
+The last statement follows from the first by Proposition~\ref{gen:prop:TP}(3). By the definition of $S_\infty$, a state lies in $S_\infty$ as soon as it lies on a cycle of the successor relation, or is a successor of a state of $S_\infty$.
+
+For $P=1$ a state is a pair of bits $(s_1,s_2)$, $\phi(s)=\pi(s)=s_1\oplus g(s_2,s_1)$, and a state with $\phi(s)=0$ has the successors $(s_2,0)$ and $(s_2,1)$. The values of $\phi$ are:
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+$(s_1,s_2)$ & $(0,0)$ & $(0,1)$ & $(1,0)$ & $(1,1)$\\
+\midrule
+$30$:\ \ $s_1\oplus(s_2\vee s_1)$ & $0$ & $1$ & $0$ & $0$\\
+$45$:\ \ $s_1\oplus(s_2\vee\neg s_1)$ & $1$ & $1$ & $1$ & $0$\\
+$75$:\ \ $s_1\oplus(\neg s_2\vee s_1)$ & $1$ & $0$ & $0$ & $0$\\
+$135$:\ \ $s_1\oplus\neg(s_2\wedge s_1)$ & $1$ & $1$ & $0$ & $1$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For $30$, the state $(0,0)$ is its own successor, and its successor $(0,1)$ has $\pi=1$. For $45$, the state $(1,1)$ is its own successor, and its successor $(1,0)$ has $\pi=1$. For $75$, the states $(0,1)$ and $(1,0)$ are successors of each other, and the successor $(0,0)$ of $(1,0)$ has $\pi=1$. So $(\mathrm T_1)$ holds in these three cases. (For $135$ only $(1,0)$ has a successor, its successors $(0,0)$ and $(0,1)$ have none, and $S_\infty=\emptyset$: $(\mathrm T_1)$ fails.)
+
+For $f=135$ and $P=2$, write a function $z\colon\Z/2\to\{0,1\}$ as the word $z(0)z(1)$, and a state as $(s_1,s_2)$. Here $g(b,c)=\neg(b\wedge c)$ and $\phi(s)=\bigl(s_1(1)\oplus g(s_2(0),s_1(0)),\ s_1(0)\oplus g(s_2(1),s_1(1))\bigr)$. Then:
+\begin{center}
+\begin{tabular}{cccc}
+\toprule
+$s$ & $\phi(s)$ & $\pi(s)$ & successors\\
+\midrule
+$(01,01)$ & $(1\oplus1,\ 0\oplus0)=(0,0)$ & $0$ & $(01,00)$,\ $(01,11)$\\
+$(01,11)$ & $(1\oplus1,\ 0\oplus0)=(0,0)$ & $0$ & $(11,00)$,\ $(11,11)$\\
+$(11,00)$ & $(1\oplus1,\ 1\oplus1)=(0,0)$ & $0$ & $(00,00)$,\ $(00,11)$\\
+$(00,00)$ & $(0\oplus1,\ 0\oplus1)=(1,1)$ & $0$ & $(00,01)$,\ $(00,10)$\\
+$(00,01)$ & $(0\oplus1,\ 0\oplus1)=(1,1)$ & $0$ & $(01,01)$,\ $(01,10)$\\
+\midrule
+$(01,00)$ & $(1\oplus1,\ 0\oplus1)=(0,1)$ & $1$ & none\\
+\bottomrule
+\end{tabular}
+\end{center}
+The first five states form a cycle $(01,01)\to(01,11)\to(11,00)\to(00,00)\to(00,01)\to(01,01)$, so they lie in $S_\infty$, and so does the successor $(01,00)$ of $(01,01)$, which has $\pi=1$. So $(\mathrm T_2)$ holds.
+\end{proof}
+
+By Proposition~\ref{gen:prop:TP}(2), each of these certificates is a periodic history with odd holonomy. For $30$ it is the stationary loop \eqref{r30:eq:loop}.
+
+\paragraph{\textup{(I)}.} For $r=1$ the only prime dividing $2r$ is $2$, and $a_2=1$. For $n\ge1$, a configuration in $\mathrm{Per}_n$ is written by its $x$-row and $y$-row over one period, $(x_0\cdots x_{n-1};\,y_0\cdots y_{n-1})$.
+
+\begin{lemma}\label{pm:lem:Pinst}
+For $f=30,135,45,75$, the set $\mathrm{Per}_n$ contains the following $F$-orbit $O$ of even length $\ell$, with $\sh(O)=O$ and $\sh=F^j$ on $O$, and $O$ is the only $F$-orbit of length $\ell$ in $\mathrm{Per}_n$:
+\begin{center}
+\begin{tabular}{cccccc}
+\toprule
+$f$ & $n$ & orbit $O$ & $\ell$ & $j$ & other orbit lengths in $\mathrm{Per}_n$\\
+\midrule
+$30$ & $1$ & $(0;1)\to(1;0)$ & $2$ & $0$ & $1,1$\\
+$135$ & $1$ & $(0;0)\to(0;1)\to(1;1)\to(1;0)$ & $4$ & $0$ & none\\
+$45$ & $2$ & $(01;01)\to(01;10)\to(10;10)\to(10;01)$ & $4$ & $2$ & $3,8,1$\\
+$75$ & $2$ & $(00;01)\to(01;00)\to(00;10)\to(10;00)$ & $4$ & $2$ & $3,2,2,2,1,1,1$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{lemma}
+
+\begin{proof}
+On $\mathrm{Per}_1$, $F\bigl((x;y)\bigr)=(y;\,x\oplus f(y,y,y))$. For $30$, $f(y,y,y)=0$, which gives the transposition shown and two fixed points. For $135$, $f(y,y,y)=1$, which gives the $4$-cycle shown. (For $45$ and $75$, $f(0,0,0)=1$ and $f(1,1,1)=0$, which gives the $3$-cycle $(0;0)\to(0;1)\to(1;0)$ and the fixed point $(1;1)$; so $\mathrm{Per}_1$ contains no orbit of even length.)
+
+On $\mathrm{Per}_2$, $F(x_0x_1;y_0y_1)=(y_0y_1;\,x_0\oplus y_1\oplus g(y_0,y_1),\ x_1\oplus y_0\oplus g(y_1,y_0))$. Applying this to the $16$ points gives the following orbits. For $45$ ($g=b\vee\neg c$): the $3$-cycle $(00;00)\to(00;11)\to(11;00)$; the $8$-cycle $(00;01)\to(01;11)\to(11;01)\to(01;00)\to(00;10)\to(10;11)\to(11;10)\to(10;00)$; the $4$-cycle $O$; and the fixed point $(11;11)$. For $75$ ($g=\neg b\vee c$): the $3$-cycle $(00;00)\to(00;11)\to(11;00)$; the $4$-cycle $O$; the $2$-cycles $\{(01;10),(10;01)\}$, $\{(01;11),(11;01)\}$ and $\{(10;11),(11;10)\}$; and the fixed points $(01;01)$, $(10;10)$ and $(11;11)$. In both cases $\sh(x_0x_1;y_0y_1)=(x_1x_0;y_1y_0)$ maps the first element of $O$ to the third, so $\sh=F^2$ on $O$.
+\end{proof}
+
+\begin{lemma}\label{pm:lem:P}
+Condition $(\mathrm I)_2$ holds for $f\in\{30,45,75,135\}$.
+\end{lemma}
+
+\begin{proof}
+Let $O$, $n$, $\ell$ and $j$ be as in Lemma~\ref{pm:lem:Pinst}, and let $\mathcal L$ be the stabiliser of the points of $O$. The orbit $O$ is a single $\Z^2$-orbit, since $\sh(O)=O$. Its points have least spatial period $n$, and for $c\in O$ we have $\sh^aF^bc=F^{aj+b}c$, so
+\[
+\mathcal L=\{(a,b)\in\Z^2:\ \ell\mid aj+b\}.
+\]
+For $30$ and $135$ ($n=1$, $j=0$) this is $\Z\times\ell\Z$ with $\ell=2,4$, and for $45$ and $75$ ($n=2$, $j=2$, $\ell=4$) it is $\{(a,b):4\mid 2a+b\}=\langle(2,0),(-1,2)\rangle$. In each case $\mathcal L\subseteq\Z\times2\Z$, so $2\Z^2+\mathcal L\subseteq\Z\times2\Z$ does not contain $(a_2,1)=(1,1)$.
+
+It remains to see that $k(\mathcal L)=1$. Let $O'$ be a $\Z^2$-orbit with stabiliser $\mathcal L$. Since $\mathcal L\cap(\Z\times\{0\})=n\Z\times\{0\}$, its points have least period $n$ (Lemma~\ref{gen:lem:stab}), and since $\mathcal L\cap(\{0\}\times\Z)=\{0\}\times\ell\Z$, each of them has $F$-period exactly $\ell$. So $O'$ contains an $F$-orbit of length $\ell$ in $\mathrm{Per}_n$, which is $O$ by Lemma~\ref{pm:lem:Pinst}. Hence $O'=O$, $k(\mathcal L)=1$ is odd, and $\mathcal L$ is a witness for $(\mathrm I)_2$. In the notation $(n,b,s)$ of Section~\ref{gen:sec:examples} these witnesses are $(1,2,0)$ for $30$, $(1,4,0)$ for $135$, and $(2,2,1)$ for $45$ and $75$.
+\end{proof}
+
+\subsection{Proof of Theorem~\ref{pm:thm:main}}\label{pm:sec:proofs}
+
+\begin{proof}[Proof of Theorem~\ref{pm:thm:main}]
+By Lemma~\ref{pm:lem:classes} and the conjugacies $\kappa$ and $\mathrm{rev}$, which map $\Aut(X_{F_f})$ onto $\Aut(X_{F_{f'}})$ and $\langle\sh,F_f\rangle$ onto $\langle\sh,F_{f'}\rangle$, it suffices to take $f\in\{30,45,75,135\}$. For these rules \textup{(N)} and \textup{(D)} hold by the computation above, \textup{($\Lambda$)} by Proposition~\ref{pm:prop:window}, and \textup{(I)} by Lemma~\ref{pm:lem:P}. So Theorem~\ref{gen:main} with $r=1$ gives that every invertible block map commuting with $F_f$ equals $\sh^aF_f^b$ for exactly one $(a,b)$, and $\langle\sh,F_f\rangle\cong\Z^2$.
+\end{proof}
+
+\begin{remark}[what depends on the class]\label{pm:thm:135}
+The proof of Theorem~\ref{gen:main} is the proof of Theorem~\ref{thm:rigidity30} with two steps replaced, and only these two depend on the class. The stationary loop \eqref{r30:eq:loop} in the proof of Lemma~\ref{r30:lem:lambda} is replaced by a periodic history with odd holonomy, and the parity argument of Lemma~\ref{r30:lem:parity}, which uses $f(y,y,y)=0$, is replaced by the orbit count of Lemma~\ref{gen:lem:orbit}. For the class of $135$, for instance, the inputs are the six column states of period $2$ in the proof of Proposition~\ref{pm:prop:window} and the $4$-cycle of $F$ on $\mathrm{Per}_1$. Nonlinearity enters through $g_{11}=1$ only, in Lemma~\ref{gen:lem:steer}: for $r=1$ it is the identity $\partial_0g(b,c)\oplus\partial_0g(b\oplus\epsilon_1,c\oplus\epsilon_2)=g_{11}\epsilon_2$, which for rule $30$ is fact (c) in the proof of Lemma~\ref{r30:lem:gamma}.
+\end{remark}
+
+\subsection{Affine permutive rules}\label{pm:sec:linear}
+
+\begin{remark}\label{pm:rem:linear}
+For an affine left-permutive rule ($g_{11}=0$), hypothesis \textup{(N)} fails: $\partial_0g$ is constant, the right sides of \eqref{gen:eq:one} and \eqref{gen:eq:two} vanish, and the descent of Section~\ref{gen:sec:strip} no longer forces the correction term to be constant. This failure is genuine. For rule $150$, let $X$ act on $\F_2^{\Z}$ as $\sh$, so that $F=F_{150}$ acts on column vectors $(x,y)^{\mathsf T}$ as the matrix
+\[
+A=\begin{pmatrix}0&1\\1&X+1+X^{-1}\end{pmatrix}
+\]
+over the ring $\F_2[X,X^{-1}]$. The map $h=\mathrm{id}+\sh F$, with matrix $I+XA$, commutes with $F$, because $F$ is linear and commutes with $\sh$. It is invertible, because $\det(I+XA)=1+X(X+1+X^{-1})+X^2=X$ is a unit of $\F_2[X,X^{-1}]$. And it does not lie in $\langle\sh,F\rangle$, because $\det(\sh^aF^b)=X^{2a}(\det A)^b=X^{2a}$ has even degree, while $\det h=X$ has odd degree. So $\Aut(X_{F_{150}})\ne\langle\sh,F_{150}\rangle$.
+
+The front-offset part of the argument does not detect linearity: Theorem~\ref{gen:thm:front} holds for every left-permutive rule for which the graphs $\Lambda_M$ are strongly connected. For most affine left-permutive elementary rules they are: a direct construction of $\Lambda_M$ from the local rule (computer-assisted; Appendix~\ref{app:stated}) shows that $\Lambda_M$ is strongly connected for $M\le4$ for the rules $15$, $60$, $105$, $150$, $195$ and $240$, and not strongly connected for $90$ (for $1\le M\le8$) and $165$ (for $2\le M\le4$). So the failure of this step for rule $90$ is a feature of that rule, not a reflection of its linearity. For the two-copy window graph of Appendix~\ref{app:twocopy}, a direct construction of $\Gamma_{w,0}$ shows that the eventual image, of size $2^{3w+2}$, is not strongly connected for rule $90$ at $w=1$ and $w=2$, and for rule $150$ at $w=3$; for rule $150$ it is strongly connected at $w=1,2$.
+
+For cellular automata that are permutive in both outer variables, Moore and Boykett \cite{MooreBoykett1997} and Salo and T\"orm\"a \cite{SaloTorma2013} show that the commutant is small, and that a bipermutive affine automaton commutes only with affine ones. These results do not apply to $F_f$ directly: as a cellular automaton on the alphabet $\A$, $F_f$ is not permutive in either neighbour, because $F_f(c)_i$ does not depend on the $x$-bits of $c_{i\pm1}$.
+\end{remark}

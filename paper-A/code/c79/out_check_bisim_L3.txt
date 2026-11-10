@@ -1,0 +1,20 @@
+L 3 states 1152 move batches 14
+initial pairs 30784
+removed 17024 left 13760
+removed 5788 left 7972
+removed 2776 left 5196
+removed 1120 left 4076
+removed 776 left 3300
+removed 492 left 2808
+removed 408 left 2400
+removed 240 left 2160
+removed 276 left 1884
+removed 196 left 1688
+removed 160 left 1528
+removed 120 left 1408
+removed 116 left 1292
+removed 84 left 1208
+removed 52 left 1156
+removed 4 left 1152
+removed 0 left 1152
+diagonal: True pairs 1152

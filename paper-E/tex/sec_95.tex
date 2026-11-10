@@ -1,0 +1,415 @@
+\section{Rule 95R: two soliton systems, and the automorphism group}\label{cl:sec:95}
+
+For $f=95$ the group $\Aut(X_{F_{95}})$ is much larger than $\langle\sh,F\rangle$, and we determine it. Each of the two sublattices of a diagram of $95$R is a copy of the reversible automaton known as Rule~54, which is known to carry left- and right-moving particles whose only interaction is a delay by one step at each crossing \cite{BBGP1993}. We state this picture in the form that is needed below, for every point and with the fibres of the parametrisation, and prove it in that form (Theorem~\ref{cl:thm:95sol}): the system $\mathcal W$ on one sublattice is the image of the product $\mathsf G\times\mathsf G$ of two golden mean shifts under a continuous map $\Psi$, at most two-to-one, with $\Psi(\sh^ax,\sh^by)=\tau^{\theta_{x,y}(a,b)}\Psi(x,y)$ for a cocycle $\theta$, so that the delays are removed by a change of coordinates that depends on the point (Remark~\ref{cl:rem:95end}(2)), and its automorphisms are the pairs of automorphisms of the golden mean shift that conserve the number of particles (Theorem~\ref{cl:thm:95W}). After the group is determined (Theorem~\ref{cl:thm:95Aut}), we find the smallest radius of an automorphism outside $\langle\sh,F\rangle$ (Proposition~\ref{cl:prop:95small}), show that $F_{95}$ has no blocking word and no eigenfield of any speed (Propositions~\ref{cl:prop:95noblock} and~\ref{cl:prop:95eigen}), and identify the commuting block maps of radius at most $4$ (Proposition~\ref{cl:prop:95census}). Throughout this section $f=95$ and $F=F_{95}$.
+
+\emph{Relation to the reversible automaton Rule~54.} With $(t,x)=(j+k,k-j)$, equation \eqref{cl:eq:Whalf} below is the update rule $s_x^{t+1}=s_x^{t-1}\oplus(s_{x-1}^t\vee s_{x+1}^t)$ on the checkerboard lattice, so the half system $\mathcal W$ is the spacetime subshift of Rule~54 \cite{BBGP1993,BKP2021}. The literature on this automaton, and what is and is not contained in it, is described in Section~\ref{sec:lit}: the particle picture of Lemma~\ref{cl:lem:95split}, Theorem~\ref{cl:thm:95sol} and Corollary~\ref{cl:cor:95trans} is not new, and proofs are given here because no source states or proves the parametrisation of all points of $\mathcal W$ by $\mathsf G\times\mathsf G$ with its fibres, which the proofs of Theorems~\ref{cl:thm:95W} and~\ref{cl:thm:95Aut} need.
+
+\emph{The half system.} Let $\mathcal W$ be the set of all $u\colon\Z^2\to\{0,1\}$ with
+\begin{equation}\label{cl:eq:Whalf}
+u(j,k)\oplus u(j-1,k-1)=u(j,k-1)\vee u(j-1,k)\qquad\text{for all }(j,k)\in\Z^2 ,
+\end{equation}
+which is \eqref{cl:eq:half95} at every point of $\Z^2$. It is a closed subset of $\{0,1\}^{\Z^2}$, invariant under the translations $(\tau^nu)(P)=u(P+n)$, $n\in\Z^2$. Write $e_1=(1,0)$ and $e_2=(0,1)$. By \eqref{cl:eq:Whalf}, $u(j,k)$ is determined by $u(j-1,k-1)$, $u(j,k-1)$ and $u(j-1,k)$; so for every $m$ an element of $\mathcal W$ is determined by its restriction to $\{j\le m\}\cup\{k\le m\}$. Let $\Aut(\mathcal W)$ be the group of homeomorphisms of $\mathcal W$ that commute with all $\tau^n$; by the Curtis--Hedlund--Lyndon theorem each of them is given by a local rule: there is a finite $D\subset\Z^2$ such that $(hu)(P)$ is a function of $(u(P+d))_{d\in D}$. For a diagram $Y$ and $e\in\{0,1\}$ put
+\[
+u_e(j,k)=1\oplus Y[2j+e,2k+e].
+\]
+
+That the two sublattices evolve independently is noted for the rules that do not read their middle argument, among them $95$R, in \cite[p.~386]{Takesue1989} and in \cite[Section~4]{Takesue1995}, and that each is a copy of RCA54 is the decomposition of $250$R in \cite[Section~3.1]{IT2018}; the next lemma states this for $95$R with the formulas for $\sh$ and $F$ that are used below, and its short proof is included.
+
+\begin{lemma}[{splitting; cf.\ \cite[p.~386]{Takesue1989}, \cite[Section~4]{Takesue1995}, \cite{IT2018}}]\label{cl:lem:95split}
+The map $\Pi\colon c\mapsto(u_0,u_1)$, formed with $Y=Y_c$, is a homeomorphism of $\A^{\Z}$ onto $\mathcal W\times\mathcal W$, and
+\[
+\Pi\sh\Pi^{-1}(u_0,u_1)=(\tau^{-e_1}u_1,\ \tau^{e_2}u_0),\qquad
+\Pi F\Pi^{-1}(u_0,u_1)=(u_1,\ \tau^{e_1+e_2}u_0).
+\]
+Consequently $\Pi\,\sh F\,\Pi^{-1}=\tau^{e_2}\times\tau^{e_2}$, $\Pi\,\sh^{-1}F\,\Pi^{-1}=\tau^{e_1}\times\tau^{e_1}$ and $\Pi\sh^2\Pi^{-1}=\tau^{e_2-e_1}\times\tau^{e_2-e_1}$; and $\Pi(\Phi^+)=\mathcal W^+\times\mathcal W^+$, $\Pi(\Phi^-)=\mathcal W^-\times\mathcal W^-$, where $\mathcal W^+=\{u\in\mathcal W:\tau^{e_2}u=u\}$ and $\mathcal W^-=\{u\in\mathcal W:\tau^{e_1}u=u\}$.
+\end{lemma}
+
+\begin{proof}
+The map $c\mapsto Y_c$ is a bijection from $\A^{\Z}$ onto the set of functions on the lattice that satisfy \eqref{cl:eq:wave} at every centre, and it is a homeomorphism for the product topologies, since $Y_c(t,i)$ depends on finitely many cells of $c$ and $c_i=(Y_c(-1,i),Y_c(0,i))$. For $N=N_{95}$ the relation at the centre $[q,p]$ reads $Y(\mathsf N)\oplus Y(\mathsf S)\oplus Y(\mathsf W)\oplus Y(\mathsf E)=(1\oplus Y(\mathsf W))(1\oplus Y(\mathsf E))$, and with $u=1\oplus Y$ this is $u(\mathsf N)\oplus u(\mathsf S)=u(\mathsf W)\vee u(\mathsf E)$. For the centre $[2j+e-1,2k+e-1]$ the points $\mathsf N$, $\mathsf S$, $\mathsf W$, $\mathsf E$ are $[2j+e,2k+e]$, $[2j+e-2,2k+e-2]$, $[2j+e,2k+e-2]$ and $[2j+e-2,2k+e]$, so the relation is \eqref{cl:eq:Whalf} for $u_e$ at $(j,k)$; every centre is of this form for exactly one $e$ and $(j,k)$. Hence $Y$ is a diagram if and only if $u_0,u_1\in\mathcal W$, and $\Pi$ is a homeomorphism onto $\mathcal W\times\mathcal W$. The two formulas follow from $Y_{\sh c}[q,p]=Y_c[q-1,p+1]$ and $Y_{F(c)}[q,p]=Y_c[q+1,p+1]$: for instance $1\oplus Y_{\sh c}[2j,2k]=1\oplus Y_c[2(j-1)+1,2k+1]=u_1(j-1,k)$ and $1\oplus Y_{\sh c}[2j+1,2k+1]=u_0(j,k+1)$. The consequences are obtained by composing them, and the last statement holds because $\Phi^\pm$ is the set of fixed points of $\sh^{\pm1}F$.
+\end{proof}
+
+Let $\mathsf G\subset\{0,1\}^{\Z}$ be the golden mean shift, the set of sequences with no two consecutive $1$s, with the shift $(\sh x)_i=x_{i+1}$; a point of $\mathsf G$ is \emph{finite} if it has finitely many $1$s, and $|x|$ is their number. If $u(j,k)=x_j$ for all $(j,k)$, then \eqref{cl:eq:Whalf} says $x_j\oplus x_{j-1}=x_j\vee x_{j-1}$, that is $x_jx_{j-1}=0$; so $\mathcal W^+$ is the set of these $u$ with $x\in \mathsf G$, and likewise $\mathcal W^-$ is the set of the $u(j,k)=y_k$ with $y\in \mathsf G$. For $x\in \mathsf G$ let $A_x\colon\Z\to\Z$ be the counting function with
+\[
+A_x(0)=0,\qquad A_x(J+1)-A_x(J)=x_J ,
+\]
+so that $A_x(a+J)=A_x(a)+A_{\sh^ax}(J)$. For $x,y\in \mathsf G$ define $\theta=\theta_{x,y}\colon\Z^2\to\Z^2$ by
+\[
+\theta_{x,y}(J,K)=\bigl(J+A_y(K),\ K+A_x(J)\bigr).
+\]
+Thus $\theta(J+1,K)=\theta(J,K)+(1,x_J)$ and $\theta(J,K+1)=\theta(J,K)+(y_K,1)$.
+
+\begin{lemma}\label{cl:lem:95theta}
+Let $x,y\in \mathsf G$ and $\theta=\theta_{x,y}$.
+\begin{enumerate}
+\item[(i)] $\theta_{x,y}(a+J,b+K)=\theta_{x,y}(a,b)+\theta_{\sh^ax,\sh^by}(J,K)$ for all $a,b,J,K$.
+\item[(ii)] $\theta$ is surjective. Two distinct points have the same image if and only if they are $(J,K)$ and $(J+1,K-1)$ with $x_J=y_{K-1}=1$; in particular every fibre has at most two points.
+\item[(iii)] If $\theta(J,K)=(j,k)$, then $|J|,|K|\le2(|j|+|k|)+1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) is the additivity of $A_x$ and $A_y$. (iii) Since $x$ has no two consecutive $1$s, $|A_x(J)|\le(|J|+1)/2$, and likewise for $y$; so $|J|\le|j|+(|K|+1)/2$ and $|K|\le|k|+(|J|+1)/2$, which gives $|J|\le\frac43|j|+\frac23|k|+1$ and the same for $K$ with $j$ and $k$ exchanged. (ii) Fix $(j,k)$. A point $(J,K)$ has an image with second coordinate $k$ exactly if $K=K(J)=k-A_x(J)$, and then the first coordinate is $g(J)=J+A_y(K(J))$. Since $K(J+1)=K(J)-x_J$ and $A_y(K-1)=A_y(K)-y_{K-1}$,
+\[
+g(J+1)-g(J)=1-x_J\,y_{K(J)-1}\in\{0,1\}.
+\]
+If this difference is $0$, then $x_J=1$, so $x_{J+1}=0$ and the next difference is $1$. Hence $g$ is nondecreasing, unbounded in both directions and takes every integer value, at one $J$ or at two consecutive ones; the latter happens at $J$, $J+1$ exactly if $x_J=y_{K(J)-1}=1$, and then $K(J+1)=K(J)-1$.
+\end{proof}
+
+By (ii), if a point $P$ has the two preimages $(J,K)$ and $(J+1,K-1)$, then $x_J=1$ and $y_{K-1}=1$. So there is a unique function $u_{x,y}\colon\Z^2\to\{0,1\}$ with
+\begin{equation}\label{cl:eq:uxy}
+u_{x,y}\bigl(\theta_{x,y}(J,K)\bigr)=x_J\vee y_K\qquad\text{for all }(J,K)\in\Z^2 .
+\end{equation}
+For $y=0$ we have $\theta(J,K)=(J,K+A_x(J))$ and $u_{x,0}(j,k)=x_j$; likewise $u_{0,y}(j,k)=y_k$. In general $u_{x,y}$ is the superposition $x_J\vee y_K$ of a family of right-moving particles, the lines $J=\mathrm{const}$ with $x_J=1$, and a family of left-moving ones, the lines $K=\mathrm{const}$ with $y_K=1$, drawn in coordinates in which every particle is delayed by one step each time it crosses a particle of the other family.
+
+\begin{theorem}[structure of the half system; cf.\ \cite{BBGP1993,Gopalakrishnan2018}]\label{cl:thm:95sol}
+\leavevmode
+\begin{enumerate}
+\item[(a)] $u_{x,y}\in\mathcal W$ for all $x,y\in \mathsf G$.
+\item[(b)] $\tau^{n}u_{x,y}=u_{\sh^ax,\sh^by}$ whenever $n=\theta_{x,y}(a,b)$.
+\item[(c)] The map $\Psi\colon \mathsf G\times \mathsf G\to\mathcal W$, $(x,y)\mapsto u_{x,y}$, is continuous and surjective.
+\item[(d)] $u_{x,y}=u_{x',y'}$ if and only if $(x',y')=(\sh^ax,\sh^by)$ for some $(a,b)$ with $\theta_{x,y}(a,b)=(0,0)$; that is, if and only if $(x',y')=(x,y)$, or $x_0=y_{-1}=1$ and $(x',y')=(\sh x,\sh^{-1}y)$, or $x_{-1}=y_0=1$ and $(x',y')=(\sh^{-1}x,\sh y)$.
+\end{enumerate}
+\end{theorem}
+
+The proof of (c) uses the following consequence of Proposition~\ref{cl:prop:Fprime}.
+
+\begin{lemma}[incoming pairs]\label{cl:lem:95in}
+Let $c$ be a finite perturbation of $b_{11}$. Then there are $t\ge0$ and a placed pair $(P,X)$ with corner $[0,0]$ and background $11$, such that the diagrams of $P$ and $X$ have finitely many zeros and $Y_{F^{-t}(c)}=Y_{P,X}$.
+\end{lemma}
+
+\begin{proof}
+The configuration $\mu c$ is a finite perturbation of $\mu b_{11}=b_{11}$. By Proposition~\ref{cl:prop:Fprime}, applied to $\mu c$ with $\psi=\varphi=b_{11}$, there are $C$ and $T$ such that for $t\ge T$ the configuration $F^t(\mu c)$ agrees with a point $d^-\in\Phi^-$ on $(-\infty,t/2-C]$ and with a point $d^+\in\Phi^+$ on $[-t/2+C,\infty)$. Fix such a $t$ with $m=\lfloor t/2-C\rfloor\ge4$, and let $\xi'(p)$ and $\pi'(q)$ be the diagrams of $d^-$ and $d^+$, so that $d^-_i=(\xi'(i-1),\xi'(i))$ and $d^+_i=(\pi'(-1-i),\pi'(-i))$. For $|i|\le m$ both descriptions apply, so $\xi'(i)=\pi'(-i)$ and $\xi'(i-1)=\pi'(-1-i)$; hence $\xi'(i-1)=\xi'(i+1)$ for $-m\le i\le m-1$, and $\xi'$ is $2$-periodic on $[-m-1,m]$. A triple $(a,b,a)$ of a sequence of $\Phi_{95}$ has $a=1$, so $\xi'=1$ on $[-m-1,m]$, and then $\pi'=1$ on $[-m-1,m]$. Replacing $\xi'$ by $1$ on $[0,\infty)$ and $\pi'$ by $1$ on $[0,\infty)$ gives sequences of $\Phi_{95}$, because every triple of the new sequences is a triple of the old one or consists of $1$s; let $D^-\in\Phi^-$ and $D^+\in\Phi^+$ be the corresponding points. Then $F^t(\mu c)$ equals $D^-$ on the cells $i\le0$ and $D^+$ on the cells $i\ge0$, and $D^-_i=D^+_i=(1,1)$ for $|i|\le2$. Since $\mu F^t\mu=F^{-t}$, the configuration $F^{-t}(c)=\mu F^t(\mu c)$ equals $P=\mu D^+\in\Phi^+$ on the cells $i\le0$ and $X=\mu D^-\in\Phi^-$ on the cells $i\ge0$, and $P_i=X_i=(1,1)$ for $|i|\le2$. The diagrams of $P$ and $X$ are $\pi(q)=\pi''(-1-q)$ and $\xi(p)=\xi''(-1-p)$, where $\pi''$ and $\xi''$ are the diagrams of $D^+$ and $D^-$, which are $1$ on $[-m-1,\infty)$; so $\pi(q)=1$ for $q\le m$ and $\xi(p)=1$ for $p\le m$. Since $F^{-t}(c)$ is a finite perturbation of $b_{11}$, they are also $1$ for all large $q$, resp.\ $p$. So $(P,X)$ is a placed pair with corner $[0,0]$ and background $11$, and $F^{-t}(c)$ is the configuration that is $P$ on the left and $X$ on the right; by the paragraph on placed pairs, $Y_{F^{-t}(c)}=Y_{P,X}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{cl:thm:95sol}]
+Let $\theta=\theta_{x,y}$ and $u=u_{x,y}$.
+
+(a) Fix $(j,k)$, write $\mathsf S=(j-1,k-1)$, $\mathsf W=(j,k-1)=\mathsf S+e_1$, $\mathsf E=(j-1,k)=\mathsf S+e_2$ and $\mathsf N=(j,k)$, and choose a preimage $(J,K)$ of $\mathsf S$, by Lemma~\ref{cl:lem:95theta}(ii). Then $\theta(J+1,K)=\mathsf S+(1,x_J)$ and $\theta(J,K+1)=\mathsf S+(y_K,1)$. If $x_J=y_K=0$, then $\mathsf W=\theta(J+1,K)$, $\mathsf E=\theta(J,K+1)$ and $\mathsf N=\theta(J+1,K+1)$, so by \eqref{cl:eq:uxy} the four values at $\mathsf S,\mathsf W,\mathsf E,\mathsf N$ are $0$, $x_{J+1}$, $y_{K+1}$, $x_{J+1}\vee y_{K+1}$, and \eqref{cl:eq:Whalf} holds. If $x_J=1$ and $y_K=0$, then $x_{J+1}=0$, $\mathsf N=\theta(J+1,K)$ and $\mathsf E=\theta(J,K+1)$, so $u(\mathsf S)=1$, $u(\mathsf N)=x_{J+1}\vee y_K=0$ and $u(\mathsf E)=1$, and both sides of \eqref{cl:eq:Whalf} are $1$. The case $x_J=0$, $y_K=1$ is symmetric: $\mathsf N=\theta(J,K+1)$, $\mathsf W=\theta(J+1,K)$, $u(\mathsf S)=u(\mathsf W)=1$ and $u(\mathsf N)=0$. Finally let $x_J=y_K=1$, so $x_{J\pm1}=y_{K\pm1}=0$. Then $\mathsf N=\theta(J+1,K)$ and $u(\mathsf N)=x_{J+1}\vee y_K=1=u(\mathsf S)$; moreover $\theta(J+1,K-1)=\theta(J+1,K)-(y_{K-1},1)=\mathsf S+e_1=\mathsf W$ and $\theta(J-1,K+1)=\theta(J,K+1)-(1,x_{J-1})=\mathsf S+e_2=\mathsf E$, so $u(\mathsf W)=x_{J+1}\vee y_{K-1}=0$ and $u(\mathsf E)=x_{J-1}\vee y_{K+1}=0$, and both sides of \eqref{cl:eq:Whalf} are $0$.
+
+(b) By Lemma~\ref{cl:lem:95theta}(i) and \eqref{cl:eq:uxy}, for all $(J,K)$,
+\[
+u_{\sh^ax,\sh^by}\bigl(\theta_{\sh^ax,\sh^by}(J,K)\bigr)=x_{a+J}\vee y_{b+K}=u\bigl(\theta(a+J,b+K)\bigr)=(\tau^nu)\bigl(\theta_{\sh^ax,\sh^by}(J,K)\bigr),
+\]
+and $\theta_{\sh^ax,\sh^by}$ is surjective.
+
+(c) By Lemma~\ref{cl:lem:95theta}(iii), the restriction of $u_{x,y}$ to a finite set depends on finitely many coordinates of $x$ and $y$; so $\Psi$ is continuous, and its image $\mathcal U$ is compact. By (b) and the surjectivity of $\theta_{x,y}$, $\mathcal U$ is invariant under all $\tau^n$. Let $c$ be a finite perturbation of $b_{11}$, and take $t$ and $(P,X)$ from Lemma~\ref{cl:lem:95in}, with diagrams $\pi(q)$ and $\xi(p)$. Let $(u_0,u_1)=\Pi(F^{-t}(c))$, and for $e\in\{0,1\}$ put $x^e_j=1\oplus\pi(2j+e)$ and $y^e_k=1\oplus\xi(2k+e)$. These are finite points of $\mathsf G$, because $\Phi_{95}$ is the set of sequences with no two zeros at distance $2$, and they vanish on $(-\infty,0]$. Since $Y_{P,X}=\pi(q)$ on $\{p\le1\}$ and $Y_{P,X}=\xi(p)$ on $\{q\le1\}$, we have $u_e(j,k)=x^e_j$ for $k\le0$ and $u_e(j,k)=y^e_k$ for $j\le0$. On the other hand, if $x,y\in \mathsf G$ vanish on $(-\infty,0]$, then $A_x(J)\ge0$ for all $J$ and $A_y(K)=0$ for $K\le1$, so for $K\le0$ we get $\theta_{x,y}(J,K)=(J,K+A_x(J))$ and $u_{x,y}(J,K+A_x(J))=x_J$; thus $u_{x,y}(j,k)=x_j$ whenever $k\le0$, and symmetrically $u_{x,y}(j,k)=y_k$ whenever $j\le0$. An element of $\mathcal W$ is determined by its restriction to $\{j\le0\}\cup\{k\le0\}$, so $u_e=u_{x^e,y^e}\in\mathcal U$. By Lemma~\ref{cl:lem:95split}, the two components of $\Pi(c)=\Pi(F^t(F^{-t}(c)))$ are translates of $u_0$ and $u_1$, so they lie in $\mathcal U$. The finite perturbations of $b_{11}$ are dense in $\A^{\Z}$ and $\Pi$ is a homeomorphism onto $\mathcal W\times\mathcal W$, so $\mathcal U$ is dense in $\mathcal W$; being compact, it is $\mathcal W$.
+
+(d) We first describe $u$ near a point $P=\theta(J,K)$ in terms of the \emph{label} $(x_J,y_K)$ of the preimage. If the label is $(0,0)$, then $u(P)=0$. If it is $(1,1)$, then $u(P)=1$ and $u(P+e_1)=u(P+e_2)=0$, by the last case of (a) applied to $\mathsf S=P$. Let the label be $(1,0)$. Then $P+e_2=\theta(J,K+1)$ and $u(P+e_2)=1$. If $y_{K-1}=0$, then $P$ has no second preimage, and $P+e_1=\theta(J+1,K)-(y_{K-1},1)=\theta(J+1,K-1)$ carries $x_{J+1}\vee y_{K-1}=0$. If $y_{K-1}=1$, then $P=\theta(J+1,K-1)$ as well, with the label $(0,1)$, and $P+e_1=\theta(J+2,K-1)$ carries $1$. The label $(0,1)$ is symmetric. Hence the triple $(u(P),u(P+e_1),u(P+e_2))$ determines the labels of the preimages of $P$:
+\begin{equation}\label{cl:eq:types}
+\begin{array}{c|ccccc}
+(u(P),u(P+e_1),u(P+e_2))&(0,\cdot,\cdot)&(1,0,0)&(1,0,1)&(1,1,0)&(1,1,1)\\\hline
+\text{labels}&(0,0)&(1,1)&(1,0)&(0,1)&(1,0)\text{ and }(0,1)
+\end{array}
+\end{equation}
+where in the last column $P$ has two preimages, $(J,K)$ with the label $(1,0)$ and $(J+1,K-1)$ with the label $(0,1)$, and in the other columns it has one.
+
+Next we show that for each of the four neighbours $(J',K')$ of $(J,K)$ in $\Z^2$, the point $\theta(J',K')$ and the label $(x_{J'},y_{K'})$ are determined by $u$, the point $P=\theta(J,K)$ and the label $(x_J,y_K)$, by a rule that does not involve $x$ and $y$ otherwise. For $(J+1,K)$: the point is $Q=P+(1,x_J)$, and its label is $(x_{J+1},y_K)$, where $x_{J+1}$ is read off from \eqref{cl:eq:types} at $Q$, in the last column as the first entry of the label whose second entry is $y_K$. For $(J-1,K)$ we need $x_{J-1}$; then the point is $P-(1,x_{J-1})$ and the label is $(x_{J-1},y_K)$. If $x_J=1$, then $x_{J-1}=0$. If $x_J=0$ and $y_K=0$, then $x_{J-1}=u(P-e_1)$: if $x_{J-1}=0$, then $P-e_1=\theta(J-1,K)$ carries $0$, and if $x_{J-1}=1$, then $P-e_1=\theta(J-1,K)+(y_K,1)=\theta(J-1,K+1)$ carries $1$. If $x_J=0$ and $y_K=1$, then by Lemma~\ref{cl:lem:95theta}(ii) $x_{J-1}=1$ if and only if $P$ has the second preimage $(J-1,K+1)$, that is, if and only if the triple at $P$ is $(1,1,1)$. The neighbours $(J,K\pm1)$ are symmetric.
+
+Now let $u_{x,y}=u_{x',y'}=u$ and $\theta'=\theta_{x',y'}$. The point $(0,0)$ is a preimage of $(0,0)$ under $\theta'$; by \eqref{cl:eq:types} there is a preimage $(a,b)$ of $(0,0)$ under $\theta$ with the same label. By the previous paragraph and induction on $|J|+|K|$, $\theta'(J,K)=\theta(a+J,b+K)$ and $(x'_J,y'_K)=(x_{a+J},y_{b+K})$ for all $(J,K)$. So $(x',y')=(\sh^ax,\sh^by)$ with $\theta(a,b)=(0,0)$. The converse is (b) with $n=(0,0)$, and the list of cases is the description of the fibre of $\theta$ over $(0,0)=\theta(0,0)$ in Lemma~\ref{cl:lem:95theta}(ii).
+\end{proof}
+
+\begin{corollary}[translation property; cf.\ \cite{BBGP1993}]\label{cl:cor:95trans}
+Let $(P,X)$ be a placed pair for $f=95$ whose diagrams $\pi(q)$ and $\xi(p)$ have finitely many zeros, and for $e\in\{0,1\}$ let $n_e(P)$ and $n_e(X)$ be the numbers of zeros of $\pi$, resp.\ of $\xi$, in the class $e$ modulo $2$. Then $\mathcal S(P,X)=(\Gamma,\Omega)$, where the diagrams $\gamma$ of $\Gamma$ and $o$ of $\Omega$ are
+\[
+\gamma(p)=\xi\bigl(p-2n_e(P)\bigr)\quad(p\equiv e),\qquad o(q)=\pi\bigl(q-2n_e(X)\bigr)\quad(q\equiv e).
+\]
+So $\mathcal S$ translates the zeros of $X$ in each class by twice the number of zeros of $P$ in that class, and conversely.
+\end{corollary}
+
+\begin{proof}
+The translation $[q,p]\mapsto[q+2a,p+2b]$ of the lattice maps diagrams to diagrams and placed pairs to placed pairs, and the corner may be replaced by a smaller one; so we may assume that the corner is $[0,0]$. Define $u_e$, $x^e$ and $y^e$ from $Y_{P,X}$, $\pi$ and $\xi$ as in the proof of Theorem~\ref{cl:thm:95sol}(c); then $u_e=u_{x,y}$ with $x=x^e$, $y=y^e$, which vanish on $(-\infty,0]$, and $|x|=n_e(P)$, $|y|=n_e(X)$. For $K$ larger than every position of a $1$ of $y$ we have $A_y(K)=|y|$ and $y_K=0$, so $u_{x,y}(J+|y|,K+A_x(J))=x_J$; hence $u_e(j,k)=x_{j-|y|}$ for all large $k$, and symmetrically $u_e(j,k)=y_{k-|x|}$ for all large $j$. Reading $Y_{P,X}$ on the half-planes of Lemma~\ref{cl:lem:scatter}(ii) gives $1\oplus o(2j+e)=x^e_{j-|y|}=1\oplus\pi(2j+e-2n_e(X))$ and $1\oplus\gamma(2k+e)=1\oplus\xi(2k+e-2n_e(P))$.
+\end{proof}
+
+Lemma~\ref{cl:lem:pair95} is the case of one zero on each side. The corollary applies to every placed pair for $95$, because $11$ is the only valid background and so the diagrams of a placed pair have finitely many zeros. It shows that $\mathcal S$ and $\mathcal S^{-1}$ do not change the distances between the zeros of a point in one class; neither do $\mu$, $\mathrm{rev}$ and $\sh^{\pm1}$. Two zeros at distance $4$ lie in the same class and in a word of length $5$. Hence the set of points of $\Phi^+\cup\Phi^-$ that have no two zeros at distance $4$ contains the bare points and has the properties (C1)--(C3) of Definition~\ref{cl:def:CL}, and the property (C0) for every $L\ge5$. So for $L\ge5$ no point of the scattering closure $C_L$ contains the word $01110$ of $\Phi_{95}$, and $C_L\ne\Phi^+\cup\Phi^-$: for $95$ the argument of Theorem~\ref{cl:thm:dens} does not apply, and in fact its conclusion is false (Corollary~\ref{cl:cor:95G}).
+
+\emph{Particle-conserving automorphisms of the golden mean shift.} Let $\mathcal N$ be the set of automorphisms $\varphi$ of $(\mathsf G,\sh)$ with $|\varphi x|=|x|$ for every finite $x\in \mathsf G$. An automorphism of $\mathsf G$ fixes $0^\infty$, the only fixed point of $\sh$, and maps finite points to finite points; so $\mathcal N$ is a subgroup of $\Aut(\mathsf G,\sh)$, and $\sh\in\mathcal N$.
+
+That a block map conserves an additive quantity if and only if the change of the density is the difference of a flux and its translate is known: for cellular automata on full shifts it is in \cite[Theorems~2.1, 2.2, 2.6 and~2.7]{HT1991} and in \cite{BF1998,Pivato2002,MBG2004}; the framework on shifts of finite type is in \cite[Section~4.1]{KT2015}, where the implication from conserved to locally conserved is stated for full shifts. The next lemma is this criterion for automorphisms of the golden mean shift, together with the cocycle identities for the flux that are used below; it is not claimed as new, and its proof is included because the statement is needed in this form on the subshift $\mathsf G$.
+
+\begin{lemma}[flux]\label{cl:lem:95flux}
+For every $\varphi\in\mathcal N$ there is a unique continuous $\lambda_\varphi\colon \mathsf G\to\Z$ with $\lambda_\varphi(0^\infty)=0$ and
+\[
+(\varphi x)_0-x_0=\lambda_\varphi(x)-\lambda_\varphi(\sh x)\qquad(x\in \mathsf G).
+\]
+It satisfies $A_{\varphi x}(J)-A_x(J)=\lambda_\varphi(x)-\lambda_\varphi(\sh^Jx)$ for all $J\in\Z$, $\lambda_{\varphi\varphi'}=\lambda_\varphi\circ\varphi'+\lambda_{\varphi'}$ for $\varphi,\varphi'\in\mathcal N$, and $\lambda_{\sh}(x)=-x_0$. Conversely, if for an automorphism $\varphi$ of $(\mathsf G,\sh)$ there is a continuous $\lambda\colon\mathsf G\to\Z$ with $(\varphi x)_0-x_0=\lambda(x)-\lambda(\sh x)$ for all $x$, then $\varphi\in\mathcal N$.
+\end{lemma}
+
+\begin{proof}
+Let $r$ be a radius of $\varphi$. For $x\in \mathsf G$ and $a<b$ in $\Z\cup\{\infty\}$ let $x^{[a,b)}$ be the sequence that equals $x$ on $[a,b)$ and $0$ elsewhere; it lies in $\mathsf G$. Put $x^+=x^{[0,\infty)}$ and
+\[
+\varrho(x)=\sum_{-r\le i<r}(\varphi x^+)_i-\sum_{0\le i<r}(\varphi x)_i .
+\]
+This is a continuous function of $x$, and $\varrho(0^\infty)=0$. Note that $(\varphi x^+)_i=0$ for $i<-r$ and $(\varphi x^+)_i=(\varphi x)_i$ for $i\ge r$. Let $M>2r+2$. The points $x^{[0,M)}$ and $x^{[1,M)}$ are finite, and $\varphi$ preserves the number of $1$s, so
+\[
+x_0=\sum_i\Bigl((\varphi x^{[0,M)})_i-(\varphi x^{[1,M)})_i\Bigr).
+\]
+The terms with $i\ge r+1$ vanish, since the two points agree on $[1,\infty)$. For $i\le r$ we have $(\varphi x^{[0,M)})_i=(\varphi x^+)_i$ and $(\varphi x^{[1,M)})_i=(\varphi(\sh x)^+)_{i-1}$, because $x^{[1,\infty)}=\sh^{-1}((\sh x)^+)$. Hence
+\[
+x_0=\sum_{i<r}(\varphi x^+)_i+(\varphi x)_r-\sum_{i<r}(\varphi(\sh x)^+)_i ,
+\]
+and therefore $\varrho(x)-\varrho(\sh x)=x_0-(\varphi x)_r-(\varphi x)_0+(\varphi\sh x)_{r-1}=x_0-(\varphi x)_0$. So $\lambda_\varphi=-\varrho$ has the two properties. If $\lambda'$ is a second such function, then $\lambda_\varphi-\lambda'$ is continuous and $\sh$-invariant, hence constant on the closure of every orbit; $\mathsf G$ has a dense orbit, so it is constant, and it vanishes at $0^\infty$. The formula for $A_{\varphi x}-A_x$ follows by summing the defining relation along the orbit of $x$. The function $\lambda_\varphi\circ\varphi'+\lambda_{\varphi'}$ is continuous, vanishes at $0^\infty$ and satisfies the defining relation for $\varphi\varphi'$, because $\varphi'$ commutes with $\sh$; and $(\sh x)_0-x_0=x_1-x_0$. For the converse, let $x$ be finite; summing the relation along the orbit of $x$ gives $|\varphi x|-|x|=\lim_{n\to\infty}\bigl(\lambda(\sh^{-n}x)-\lambda(\sh^{n}x)\bigr)=0$, because $\sh^{\pm n}x\to0^\infty$ and $\lambda$ is continuous.
+\end{proof}
+
+\begin{theorem}[automorphisms of the half system]\label{cl:thm:95W}
+\leavevmode
+\begin{enumerate}
+\item[(a)] For $\varphi,\psi\in\mathcal N$ there is a unique map $H_{\varphi,\psi}\colon\mathcal W\to\mathcal W$ with
+\[
+H_{\varphi,\psi}(u_{x,y})=\tau^{(\lambda_\psi(y),\,\lambda_\varphi(x))}\,u_{\varphi x,\psi y}\qquad(x,y\in \mathsf G),
+\]
+and $H_{\varphi,\psi}\in\Aut(\mathcal W)$. It maps $u_{x,0}$ to $u_{\varphi x,0}$ and $u_{0,y}$ to $u_{0,\psi y}$.
+\item[(b)] The map $(\varphi,\psi)\mapsto H_{\varphi,\psi}$ is an isomorphism of groups $\mathcal N\times\mathcal N\to\Aut(\mathcal W)$, and $H_{\sh,\mathrm{id}}=\tau^{e_1}$, $H_{\mathrm{id},\sh}=\tau^{e_2}$.
+\item[(c)] A continuous map $\mathcal W\to\mathcal W$ that commutes with all $\tau^n$ and fixes every point of $\mathcal W^+\cup\mathcal W^-$ is the identity.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(c) Let $g$ be such a map. Then $\Pi^{-1}(g\times g)\Pi$ is a continuous map of $\A^{\Z}$ that commutes with $\sh$ and $F$, by the formulas of Lemma~\ref{cl:lem:95split}, so it is a block map commuting with $F$; and it fixes every point of $\Phi^+\cup\Phi^-$. By Corollary~\ref{cl:cor:95} it is the identity, so $g$ is the identity.
+
+(a) Write $\ell(x,y)=(\lambda_\psi(y),\lambda_\varphi(x))$. Let $x,y\in \mathsf G$, $(a,b)\in\Z^2$ and $n=\theta_{x,y}(a,b)$. By Lemma~\ref{cl:lem:95flux},
+\[
+\theta_{\varphi x,\psi y}(a,b)=\bigl(a+A_{\psi y}(b),\,b+A_{\varphi x}(a)\bigr)=n+\ell(x,y)-\ell(\sh^ax,\sh^by),
+\]
+so by Theorem~\ref{cl:thm:95sol}(b), applied to $(\varphi x,\psi y)$,
+\begin{equation}\label{cl:eq:Hwd}
+\tau^{\ell(\sh^ax,\sh^by)}u_{\varphi\sh^ax,\psi\sh^by}=\tau^{\ell(\sh^ax,\sh^by)}\tau^{\theta_{\varphi x,\psi y}(a,b)}u_{\varphi x,\psi y}=\tau^{n}\,\tau^{\ell(x,y)}u_{\varphi x,\psi y}.
+\end{equation}
+For $n=(0,0)$ this shows, with Theorem~\ref{cl:thm:95sol}(d), that $\tau^{\ell(x,y)}u_{\varphi x,\psi y}$ depends only on $u_{x,y}$; with Theorem~\ref{cl:thm:95sol}(c), $H=H_{\varphi,\psi}$ is well defined on $\mathcal W$, and unique. For general $(a,b)$, \eqref{cl:eq:Hwd} and Theorem~\ref{cl:thm:95sol}(b) say $H(\tau^nu_{x,y})=\tau^nH(u_{x,y})$, and every $n$ occurs, since $\theta_{x,y}$ is surjective. The map $H\circ\Psi$ is continuous, and $\Psi$ is a continuous surjection of compact metric spaces, hence a quotient map; so $H$ is continuous. By Lemma~\ref{cl:lem:95flux}, $\ell$ is additive under composition, and since the maps $H$ commute with translations, $H_{\varphi,\psi}H_{\varphi',\psi'}=H_{\varphi\varphi',\psi\psi'}$; as $H_{\mathrm{id},\mathrm{id}}=\mathrm{id}$, every $H_{\varphi,\psi}$ is a bijection, hence a homeomorphism. Since $u_{\varphi x,0}(j,k)=(\varphi x)_j$ does not depend on $k$, $H(u_{x,0})=u_{\varphi x,0}$, and likewise $H(u_{0,y})=u_{0,\psi y}$.
+
+(b) The map is a homomorphism by the proof of (a), and it is injective by the last statement of (a). By Theorem~\ref{cl:thm:95sol}(b), $u_{\sh x,y}=\tau^{\theta_{x,y}(1,0)}u_{x,y}=\tau^{(1,x_0)}u_{x,y}$, so $H_{\sh,\mathrm{id}}(u_{x,y})=\tau^{(0,-x_0)}u_{\sh x,y}=\tau^{e_1}u_{x,y}$, and likewise for $H_{\mathrm{id},\sh}$.
+
+It remains to show surjectivity. Let $h\in\Aut(\mathcal W)$, with a local rule on $D\subseteq[-r,r]^2$. The zero function is the only element of $\mathcal W$ fixed by all translations, so $h$ fixes it. Since $h$ commutes with $\tau^{e_2}$ and $\tau^{e_1}$, it maps $\mathcal W^+$ and $\mathcal W^-$ onto themselves, and there are bijections $\varphi,\psi$ of $\mathsf G$ with $h(u_{x,0})=u_{\varphi x,0}$ and $h(u_{0,y})=u_{0,\psi y}$; they are continuous, and they commute with $\sh$ because $\tau^{e_1}u_{x,0}=u_{\sh x,0}$ and $\tau^{e_2}u_{0,y}=u_{0,\sh y}$. So $\varphi,\psi\in\Aut(\mathsf G,\sh)$. We show that $\psi\in\mathcal N$. Let $y\in \mathsf G$ be finite, and let $x\in \mathsf G$ be finite and not $0^\infty$; since $\psi$ commutes with $\sh$, we may assume that $x$ and $y$ vanish on $(-\infty,0]$. Let $u=u_{x,y}$ and $v=hu$. As in the proofs of Theorem~\ref{cl:thm:95sol}(c) and Corollary~\ref{cl:cor:95trans}, $u(j,k)=x_j$ for $k\le0$, $u(j,k)=y_k$ for $j\le0$, and $u(j,k)=x_{j-|y|}$ for $k\ge k_1$, for some $k_1$. On these three sets $u$ agrees with $u_{x,0}$, with $u_{0,y}$ and with $\tau^{-|y|e_1}u_{x,0}$, so with $x'=\varphi x$ and $y'=\psi y$,
+\[
+v(j,k)=x'_j\ \ (k\le-r),\qquad v(j,k)=y'_k\ \ (j\le-r),\qquad v(j,k)=x'_{j-|y|}\ \ (k\ge k_1+r).
+\]
+The points $x'$ and $y'$ are finite and vanish on $(-\infty,-r]$, and $x'\ne0^\infty$. Let $x''=\sh^{-r-1}x'$ and $y''=\sh^{-r-1}y'$; they vanish on $(-\infty,0]$, and $v''=\tau^{-(r+1)(e_1+e_2)}v$ satisfies $v''(j,k)=x''_j$ for $k\le0$ and $v''(j,k)=y''_k$ for $j\le0$. Hence $v''=u_{x'',y''}$, and so $v''(j,k)=x''_{j-|y''|}$ for all large $k$; that is, $v(j,k)=x'_{j-|y'|}$ for all large $k$. Comparing with the third formula, $x'_{j-|y'|}=x'_{j-|y|}$ for all $j$; since $x'$ is finite and not zero, $|y'|=|y|$. So $\psi\in\mathcal N$, and by the symmetry of \eqref{cl:eq:Whalf} in $j$ and $k$, $\varphi\in\mathcal N$. The map $H_{\varphi,\psi}^{-1}h$ fixes every point of $\mathcal W^+\cup\mathcal W^-$, by (a), so it is the identity, by (c).
+\end{proof}
+
+\emph{Many particle-conserving automorphisms.} Let $x\in \mathsf G$. A $1$ of $x$ at $z$ is \emph{isolated} if $x_{z\pm1}=x_{z\pm2}=0$. A \emph{box} of $x$ of size $m\ge1$ is an interval $I=[a+1,a+m+4]$ such that $x$ has the word $10101$ at $[a-4,a]$ and at $[a+m+5,a+m+9]$, and $I$ contains exactly one $1$ of $x$, at a position $a+2+i$ with $1\le i\le m$. For a finitely supported family $\varpi=(\varpi_m)_{m\ge1}\in\bigoplus_mS_m$ let $\varphi_\varpi(x)$ be obtained from $x$ by moving, in every box, the $1$ at $a+2+i$ to $a+2+\varpi_m(i)$, where $m$ is the size of the box.
+
+\begin{lemma}\label{cl:lem:95box}
+The map $\varpi\mapsto\varphi_\varpi$ is an injective homomorphism $\bigoplus_{m\ge1}S_m\to\mathcal N$.
+\end{lemma}
+
+\begin{proof}
+The $1$ in a box is isolated, and the $1$s of the two words $10101$ next to the box are not. Two boxes $[a+1,a+m+4]$ and $[a+1,a+m'+4]$ with $m<m'$ cannot both occur, since the second would contain the non-isolated $1$ at $a+m+5$. Let $I$ and $I'$ be boxes of $x$, with $a<a'$. The three $1$s at $a'-4,a'-2,a'$ are not isolated, so they do not lie in $I$; since $a'>a$ and $a'\notin I$, $a'\ge a+m+5$; then $a'-4>a$ and $a'-4\notin I$ give $a'-4\ge a+m+5$; so $I'$ lies to the right of $I$, and distinct boxes are disjoint. Let $x'=\varphi_\varpi(x)$. A $1$ that is moved lies, before and after the move, in its box at distance at least $2$ from both ends of the box, so it is isolated in $x'$ and at distance at least $3$ from every $1$ of $x$ outside the box; since boxes are disjoint, $x'\in \mathsf G$, the $1$s of $x$ outside the boxes are $1$s of $x'$, and each of them is isolated in $x'$ if and only if it is isolated in $x$. A word $10101$ consists of non-isolated $1$s and the zeros between them, so $x$ and $x'$ have the word $10101$ at the same places. Every box of $x$ is therefore a box of $x'$. Conversely, let $I'=[a'+1,a'+m'+4]$ be a box of $x'$. Its $1$ is isolated in $x'$, and the $1$s at $a'$ and $a'+m'+5$ are not. If $I'$ meets a box $I$ of $x$, then $I'=I$, since $I$ is a box of $x'$ and distinct boxes of a point are disjoint. If $I'$ meets no box of $x$, then $x=x'$ on $I'$, and $I'$ is a box of $x$ as well. So $x$ and $x'$ have the same boxes, of the same sizes, and $\varphi_{\varpi'}(\varphi_\varpi(x))=\varphi_{\varpi'\varpi}(x)$. Each $\varphi_\varpi$ commutes with $\sh$, is given by a local rule (only the boxes of the finitely many sizes $m$ with $\varpi_m\ne\mathrm{id}$ matter), and is a bijection with inverse $\varphi_{\varpi^{-1}}$; it preserves the number of $1$s. If $\varpi_m(i)\ne i$, then $\varphi_\varpi$ moves the finite point with the word $10101\,00\,0^{i-1}10^{m-i}\,00\,10101$.
+\end{proof}
+
+\emph{The automorphism group of $95$R.} For $g\in\Aut(\mathcal W)$ put $\hat g=\Pi^{-1}(g\times g)\Pi$.
+
+\begin{theorem}\label{cl:thm:95Aut}
+The map $g\mapsto\hat g$ is an injective homomorphism $\Aut(\mathcal W)\to\Aut(X_{F_{95}})$ whose image $\hat{\mathcal H}$ has index $2$, and
+\[
+\Aut(X_{F_{95}})=\hat{\mathcal H}\cup\hat{\mathcal H}\,\sh .
+\]
+The shift $\sh$ commutes with every element of $\hat{\mathcal H}$, and $\sh^2=\widehat{\tau^{e_2-e_1}}$, $\sh F=\widehat{\tau^{e_2}}$, $\sh^{-1}F=\widehat{\tau^{e_1}}$. Consequently, with $\mathcal N$ as above,
+\[
+\Aut(X_{F_{95}})\;\cong\;\bigl(\mathcal N\times\mathcal N\times\Z\bigr)\big/\bigl\langle(\sh^{-1},\sh,-2)\bigr\rangle ,
+\]
+where $(\varphi,\psi,n)$ corresponds to $\widehat{H_{\varphi,\psi}}\,\sh^n$; under this isomorphism $\sh$ is the class of $(\mathrm{id},\mathrm{id},1)$ and $F$ the class of $(\mathrm{id},\sh,-1)$.
+\end{theorem}
+
+\begin{proof}
+For $g\in\Aut(\mathcal W)$ the map $g\times g$ commutes with $\Pi\sh\Pi^{-1}$ and $\Pi F\Pi^{-1}$, by the formulas of Lemma~\ref{cl:lem:95split}; so $\hat g$ is a homeomorphism of $\A^{\Z}$ commuting with $\sh$ and $F$, that is, an automorphism of $X_{F_{95}}$ (Lemma~\ref{lem:spacetime}), and it commutes with $\sh$. The map $g\mapsto\hat g$ is an injective homomorphism, and the formulas for $\sh^2$ and $\sh^{\pm1}F$ are those of Lemma~\ref{cl:lem:95split}. The shift is not in $\hat{\mathcal H}$: if $c$ is the bare defect $\Delta^-_0$, then $\Pi(c)=(u,0)$ with $u\ne0$, while $\Pi(\sh c)=(0,\tau^{e_2}u)$, and no map $g\times g$ with $g(0)=0$ maps the former to the latter.
+
+Let $h\in\Aut(X_{F_{95}})$. By Theorem~\ref{cl:thm:KR95} there are $\alpha^+\equiv\alpha^-\pmod2$ with $h\Delta^\pm_a=\Delta^\pm_{a+\alpha^\pm}$. Since $\sh\Delta^+_a=\Delta^+_{a+1}$ and $\sh\Delta^-_b=\Delta^-_{b-1}$, replacing $h$ by $h\sh$ changes the parity of both; so we may assume that $\alpha^+$ and $\alpha^-$ are even, and we show that then $h\in\hat{\mathcal H}$. Let $\tilde h=\Pi h\Pi^{-1}$; it commutes with $\tau^n\times\tau^n$ for all $n$, it has a local rule on some $D\subseteq[-r,r]^2$ in both components, and it fixes $(0,0)=\Pi(b_{11})$. It maps $\mathcal W^+\times\mathcal W^+$ and $\mathcal W^-\times\mathcal W^-$ onto themselves, so there are homeomorphisms $\Xi$ and $\Upsilon$ of $\mathsf G\times \mathsf G$, commuting with $\sh\times\sh$, with
+\[
+\tilde h(u_{x^0,0},u_{x^1,0})=(u_{\Xi(x)^0,0},u_{\Xi(x)^1,0}),\qquad\tilde h(u_{0,y^0},u_{0,y^1})=(u_{0,\Upsilon(y)^0},u_{0,\Upsilon(y)^1})
+\]
+for $x=(x^0,x^1)$ and $y=(y^0,y^1)$ in $\mathsf G\times \mathsf G$. Let $x^0,x^1,y^0,y^1$ be finite and vanish on $(-\infty,0]$. Exactly as in the proof of Theorem~\ref{cl:thm:95W}(b), applied to both components of $\tilde h(u_{x^0,y^0},u_{x^1,y^1})$, comparing the two descriptions of this pair on $\{k\ge k_1\}$ for large $k_1$ gives
+\begin{equation}\label{cl:eq:XiUps}
+\Xi\bigl(\sh^{-|y^0|}x^0,\ \sh^{-|y^1|}x^1\bigr)=\bigl(\sh^{-|\Upsilon(y)^0|}\Xi(x)^0,\ \sh^{-|\Upsilon(y)^1|}\Xi(x)^1\bigr),
+\end{equation}
+and this extends to all finite $x^e$, $y^e$, because $\Xi$ and $\Upsilon$ commute with $\sh\times\sh$ and the numbers $|y^e|$ and $|\Upsilon(y)^e|$ do not change when $y$ is replaced by $(\sh\times\sh)^sy$. Let $\mathbf 1_b\in \mathsf G$ be the point with a single $1$, at $b$. The bare defect $\Delta^-_{2b}$ has $\Pi(\Delta^-_{2b})=(u_{0,\mathbf 1_b},0)$, and $h\Delta^-_{2b}=\Delta^-_{2b+\alpha^-}$ with $\alpha^-$ even; so $\Upsilon(\mathbf 1_b,0^\infty)=(\mathbf 1_{b+\alpha^-/2},0^\infty)$. With $y=(\mathbf 1_b,0^\infty)$, \eqref{cl:eq:XiUps} says that $\Xi$ commutes with $\sh\times\mathrm{id}$ on the finite points, hence everywhere, since the finite points are dense and $\Xi$ is continuous. So $\Xi$ commutes with $\sh\times\mathrm{id}$ and with $\mathrm{id}\times\sh$. The coordinate $\Xi(x)^0_0$ depends only on $x^0$ and $x^1$ on some window $[-r',r']$, and it does not change if $x^1$ is replaced by $\sh^sx^1$; any two words of $\mathsf G$ of length $2r'+1$ occur in one point of $\mathsf G$, so $\Xi(x)^0_0$ does not depend on $x^1$. Hence $\Xi(x)^0=\varphi_0(x^0)$ and likewise $\Xi(x)^1=\varphi_1(x^1)$, with $\varphi_0,\varphi_1$ continuous and commuting with $\sh$; applying the same to $\Xi^{-1}$ shows that $\varphi_0,\varphi_1\in\Aut(\mathsf G,\sh)$. The same argument with the roles of $j$ and $k$ exchanged, using $\Delta^+$ and $\alpha^+$, gives $\Upsilon=\psi_0\times\psi_1$. Now \eqref{cl:eq:XiUps} with a finite $x^e\ne0^\infty$ gives $|\psi_e(y^e)|=|y^e|$ for all finite $y^e$, and symmetrically for $\varphi_e$; so $\varphi_e,\psi_e\in\mathcal N$. Finally, $\Pi\sh\Pi^{-1}$ acts on $\mathcal W^+\times\mathcal W^+$ by $(x^0,x^1)\mapsto(\sh^{-1}x^1,x^0)$ and on $\mathcal W^-\times\mathcal W^-$ by $(y^0,y^1)\mapsto(y^1,\sh y^0)$, and $\tilde h$ commutes with it; this gives $\varphi_0=\varphi_1$ and $\psi_0=\psi_1$. Let $g=H_{\varphi_0,\psi_0}$. Then $\hat g^{-1}h$ is an automorphism of $X_{F_{95}}$ that fixes every point of $\Phi^+\cup\Phi^-$, so it is the identity, by Corollary~\ref{cl:cor:95}; thus $h=\hat g$.
+
+So $\Aut(X_{F_{95}})=\hat{\mathcal H}\cup\hat{\mathcal H}\sh$, the map $(g,n)\mapsto\hat g\sh^n$ is a surjective homomorphism $\Aut(\mathcal W)\times\Z\to\Aut(X_{F_{95}})$, and $\hat g\sh^n=\mathrm{id}$ if and only if $n=2s$ is even and $g=\tau^{s(e_1-e_2)}$. By Theorem~\ref{cl:thm:95W}(b), $\tau^{e_2-e_1}=H_{\sh^{-1},\sh}$, which gives the last statement; $F=\sh^{-1}\cdot\sh F=\sh^{-1}\widehat{H_{\mathrm{id},\sh}}$.
+\end{proof}
+
+\begin{corollary}\label{cl:cor:95G}
+There is an injective homomorphism $\bigoplus_{m\ge1}S_m\to\Aut(X_{F_{95}})$, namely $\varpi\mapsto\widehat{H_{\varphi_\varpi,\mathrm{id}}}$. So $\Aut(X_{F_{95}})$ contains every finite group and is not virtually $\Z^n$ for any $n$, and $\Aut(X_{F_{95}})\ne\langle\sh,F\rangle$.
+\end{corollary}
+
+\begin{proof}
+Lemma~\ref{cl:lem:95box}, Theorem~\ref{cl:thm:95W}(b), Theorem~\ref{cl:thm:95Aut}, and Lemma~\ref{cl:lem:Z2}, by which $\langle\sh,F\rangle\cong\Z^2$ is torsion-free.
+\end{proof}
+
+\begin{corollary}\label{cl:cor:95quot}
+The subgroup $\langle\sh,F\rangle$ is central in $\Aut(X_{F_{95}})$, and
+\[
+\Aut(X_{F_{95}})/\langle\sh,F\rangle\;\cong\;\bigl(\mathcal N/\langle\sh\rangle\bigr)\times\bigl(\mathcal N/\langle\sh\rangle\bigr).
+\]
+In particular $\langle\sh,F\rangle$ has infinite index in $\Aut(X_{F_{95}})$.
+\end{corollary}
+
+\begin{proof}
+In the presentation of Theorem~\ref{cl:thm:95Aut}, $\langle\sh,F\rangle$ is the image of the subgroup of $\mathcal N\times\mathcal N\times\Z$ generated by $(\mathrm{id},\mathrm{id},1)$, $(\mathrm{id},\sh,-1)$ and $(\sh^{-1},\sh,-2)$. This subgroup contains $(\mathrm{id},\sh,0)$ and $(\sh^{-1},\mathrm{id},0)$, so it is $\langle\sh\rangle\times\langle\sh\rangle\times\Z$; it is central, because $\sh$ commutes with every element of $\mathcal N$, and it contains the kernel $\langle(\sh^{-1},\sh,-2)\rangle$. This gives the first two statements. The group $\bigoplus_mS_m$ is an infinite torsion group, and $\langle\sh\rangle\subset\mathcal N$ is torsion-free, since $\sh$ has infinite order on $\mathsf G$; so the image of $\bigoplus_mS_m$ under the embedding of Lemma~\ref{cl:lem:95box} meets $\langle\sh\rangle$ trivially, and $\mathcal N/\langle\sh\rangle$ is infinite.
+\end{proof}
+
+\begin{remark}\label{cl:rem:95end}
+(1) The construction of Theorem~\ref{cl:thm:95W}(a) does not use injectivity: if $\varphi,\psi\colon \mathsf G\to \mathsf G$ are block maps that preserve the number of $1$s of finite points, the same formula defines a continuous map $H_{\varphi,\psi}\colon\mathcal W\to\mathcal W$ commuting with translations, and $\Pi^{-1}(H_{\varphi,\psi}\times H_{\varphi,\psi})\Pi$, which we again denote by $\widehat{H_{\varphi,\psi}}$, is a block map commuting with $F_{95}$ and with $\sh$, which is not injective if $\varphi$ or $\psi$ is not. An example is the map $\varphi$ that moves every $1$ one step to the right unless there is a $1$ two steps to its right. By Proposition~\ref{cl:prop:95census} these maps, composed with powers of $\sh$, are all the non-constant block maps of radius at most $4$ that commute with $F_{95}$; in particular they account for the $20$ and the $220$ further maps of the census of Lemma~\ref{cl:lem:95cens}.
+
+(2) By Theorem~\ref{cl:thm:95sol}, $\mathcal W$ is the quotient of $\mathsf G\times\mathsf G$ by the identification of $(x,y)$ with $(\sh x,\sh^{-1}y)$ when $x_0=y_{-1}=1$, and $\sh^a\times\sh^b$ acts on the class of $(x,y)$ as the translation by $\theta_{x,y}(a,b)$. So the delays are removed by a change of coordinates that depends on the point, and in the new coordinates the two families of particles move freely.
+
+(3) Theorem~\ref{cl:thm:KR95} is consistent with Theorem~\ref{cl:thm:95Aut}: an automorphism $\widehat{H_{\varphi,\psi}}\sh^n$ maps bare defects to bare defects, because $\varphi$ and $\psi$ map points with one $1$ to points with one $1$. The automorphisms that fix every bare defect are the $\widehat{H_{\varphi,\psi}}$ with $\varphi(\mathbf 1_0)=\psi(\mathbf 1_0)=\mathbf 1_0$; they form a subgroup that contains the image of $\bigoplus_mS_m$, and for them the conclusion of Lemma~\ref{cl:lem:closure} holds while they are not the identity.
+\end{remark}
+
+\emph{The smallest radius.} A block map $\varphi\colon\mathsf G\to\mathsf G$ \emph{depends on $w$ consecutive cells} if there are $a\in\Z$ and a function $\hat\varphi$ on the words of $\mathsf G$ of length $w$ with $(\varphi x)_i=\hat\varphi(x_{i+a},\dots,x_{i+a+w-1})$ for all $x$ and $i$; it \emph{conserves particles} if $|\varphi x|=|x|$ for every finite $x$. By Remark~\ref{cl:rem:95end}(1) the maps $\widehat{H_{\varphi,\psi}}=\Pi^{-1}(H_{\varphi,\psi}\times H_{\varphi,\psi})\Pi$ are defined for all block maps $\varphi,\psi\colon\mathsf G\to\mathsf G$ that conserve particles, and they commute with $F$ and with $\sh$. By Lemma~\ref{cl:lem:95split} and Theorem~\ref{cl:thm:95W}(a), in terms of the points $x^e_j=1\oplus\pi(2j+e)$ of a point of $\Phi^+$ with diagram $\pi(q)$ and $y^e_k=1\oplus\xi(2k+e)$ of a point of $\Phi^-$ with diagram $\xi(p)$,
+\begin{equation}\label{cl:eq:95restr}
+\begin{aligned}
+\widehat{H_{\varphi,\psi}}&\colon\ (x^0,x^1)\mapsto(\varphi x^0,\varphi x^1),&\qquad(y^0,y^1)&\mapsto(\psi y^0,\psi y^1),\\
+\sh&\colon\ (x^0,x^1)\mapsto(\sh^{-1}x^1,x^0),&\qquad(y^0,y^1)&\mapsto(y^1,\sh y^0).
+\end{aligned}
+\end{equation}
+
+\begin{lemma}[windows]\label{cl:lem:95window}
+Let $h$ be a block map of radius $R\ge1$ that commutes with $F_{95}$.
+\begin{enumerate}
+\item[(i)] Let $Z\in\Phi^+$ have the diagram $\pi(q)$, and let $\pi'(q)$ be the diagram of $hZ$. Then $\pi'(q)$ depends only on $\pi(q-R),\dots,\pi(q+R)$. The same holds for $\Phi^-$ and the diagrams $\xi(p)$.
+\item[(ii)] Let $h=\widehat{H_{\varphi,\psi}}\,\sh^n$ with block maps $\varphi,\psi\colon\mathsf G\to\mathsf G$ that conserve particles, and let $s=\lfloor n/2\rfloor$. Then $\varphi\sh^{-s}$ and $\psi\sh^{s}$ depend on $2\lfloor R/2\rfloor+1$ consecutive cells if $n$ is even, and on $2\lceil R/2\rceil$ consecutive cells if $n$ is odd. In both cases they depend on $R+1$ consecutive cells.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Let $[q,p]=(t,i)$. The value $Y_{h(c)}(t,i)$ is the second component of $F^t(h(c))_i=h(F^t(c))_i$, so it depends only on the values $Y_c(t',j)$ with $t'\in\{t-1,t\}$ and $|j-i|\le R$; it is also the first component of $h(F^{t+1}(c))_i$, so it depends only on the values $Y_c(t',j)$ with $t'\in\{t,t+1\}$ and $|j-i|\le R$. For $c=Z$ these values are $\pi(t'-j)$, and $t'-j$ ranges over $[q-R-1,q+R]$ in the first case and over $[q-R,q+R+1]$ in the second. Let $\pi,\tilde\pi\in\Phi_{95}$ agree on $[q-R,q+R]$, and let $\pi''$ be equal to $\pi$ on $(-\infty,q+R]$ and to $\tilde\pi$ on $[q+R+1,\infty)$. Two positions at distance $2$ of which one is at least $q+R+1$ are both at least $q+R-1\ge q-R$, where $\pi''=\tilde\pi$; so $\pi''$ has no two zeros at distance $2$, that is, $\pi''\in\Phi_{95}$. It agrees with $\pi$ on $[q-R-1,q+R]$ and with $\tilde\pi$ on $[q-R,q+R+1]$, so the three sequences give the same value $\pi'(q)$. For $\Phi^-$ exchange the roles of $q$ and $p$.
+
+(ii) By \eqref{cl:eq:95restr}, $h$ acts on $\Phi^+$ by $(x^0,x^1)\mapsto(\varphi'x^0,\varphi'x^1)$ if $n=2s$ and by $(x^0,x^1)\mapsto(\varphi'\sh^{-1}x^1,\varphi'x^0)$ if $n=2s+1$, where $\varphi'=\varphi\sh^{-s}$. In the first case $(\varphi'x^e)_j=1\oplus\pi'(2j+e)$ is a function of $x^e$ alone, and by (i), applied with $x^{1-e}=0^\infty$, it depends only on the $x^e_{j'}$ with $|2j'-2j|\le R$; these are $2\lfloor R/2\rfloor+1$ consecutive cells. In the second case $(\varphi'x^0)_j=1\oplus\pi'(2j+1)$ depends only on the $x^0_{j'}$ with $|2j'-2j-1|\le R$, which are $2\lceil R/2\rceil$ consecutive cells. On $\Phi^-$, $h$ acts by $(y^0,y^1)\mapsto(\psi'y^0,\psi'y^1)$, resp.\ by $(y^0,y^1)\mapsto(\psi'y^1,\psi'\sh y^0)$, with $\psi'=\psi\sh^{s}$, and the same count applies to $(\psi'y^e)_k=1\oplus\xi'(2k+e)$, resp.\ to $(\psi'y^1)_k=1\oplus\xi'(2k)$.
+\end{proof}
+
+\begin{lemma}[computer-assisted]\label{cl:lem:95enum}
+For $w\le8$ the numbers of block maps $\mathsf G\to\mathsf G$ of the form $(\varphi x)_i=\hat\varphi(x_i,\dots,x_{i+w-1})$ that conserve particles, and of the injective ones among them, are those of Table~\ref{cl:tab:95enum}. For $w\le7$ the injective ones are the $w$ shifts $\sh^0,\dots,\sh^{w-1}$. For $w=8$ they are the eight shifts $\sh^0,\dots,\sh^7$ and the two maps $\sh^4\varphi_{\ast}$ and $\sh^3\bar\varphi_{\ast}$, where $\varphi_{\ast}\in\mathcal N$ is the involution that exchanges the words $0001001$ and $0000101$ wherever they occur, and $\bar\varphi_{\ast}$ the one that exchanges $1001000$ and $1010000$.
+\end{lemma}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrrrrrrr}
+\toprule
+$w$&$1$&$2$&$3$&$4$&$5$&$6$&$7$&$8$\\
+\midrule
+words of $\mathsf G$ of length $w$&$2$&$3$&$5$&$8$&$13$&$21$&$34$&$55$\\
+particle-conserving block maps&$1$&$2$&$3$&$6$&$15$&$54$&$476$&$13516$\\
+injective&$1$&$2$&$3$&$4$&$5$&$6$&$7$&$10$\\
+\bottomrule
+\end{tabular}
+\caption{Block maps of the golden mean shift that depend on $w$ consecutive cells and conserve the number of $1$s of finite points (Lemma~\ref{cl:lem:95enum}).}\label{cl:tab:95enum}
+\end{table}
+
+Two distinct occurrences of the words $0001001$ and $0000101$ in a point of $\mathsf G$ are disjoint, because no proper suffix of one of them is a prefix of one of them; so $\varphi_{\ast}$ is well defined, and $(\varphi_{\ast}x)_i$ depends on $x_{i-4},\dots,x_{i+3}$. It is an involution: $(\varphi_{\ast}\varphi_{\ast}x)_i$ depends on $x_{i-8},\dots,x_{i+6}$, and it equals $x_i$ for each of the $1597$ words of $\mathsf G$ of length $15$. The same holds for $\bar\varphi_{\ast}$, the conjugate of $\varphi_{\ast}$ by the reflection. The conservation of particles is decided exactly: for a block map $\varphi$ as in the lemma, with $w\ge2$, let $\mathsf B_w$ be the graph whose vertices are the words of $\mathsf G$ of length $w-1$ and whose edges are the words $\epsilon=\epsilon_0\cdots\epsilon_{w-1}$ of $\mathsf G$ of length $w$, from $\epsilon_0\cdots\epsilon_{w-2}$ to $\epsilon_1\cdots\epsilon_{w-1}$. A finite point is a closed walk through the vertex $0^{w-1}$, and $|\varphi x|-|x|$ is the sum of the weights $\hat\varphi(\epsilon)-\epsilon_0$ along it. Since $\mathsf B_w$ is strongly connected, the weight of every closed walk through $0^{w-1}$ vanishes if and only if the weight of every cycle vanishes, that is, if and only if there is a function $\lambda$ on the vertices with
+\[
+\hat\varphi(\epsilon)-\epsilon_0=\lambda(\epsilon_0\cdots\epsilon_{w-2})-\lambda(\epsilon_1\cdots\epsilon_{w-1})\qquad\text{for every edge }\epsilon;
+\]
+this is the local form of Lemma~\ref{cl:lem:95flux}. So the particle-conserving block maps correspond to the integer-valued functions $\lambda$ with $\lambda(0^{w-1})=0$ for which $\epsilon_0+\lambda(\epsilon_0\cdots\epsilon_{w-2})-\lambda(\epsilon_1\cdots\epsilon_{w-1})\in\{0,1\}$ on every edge and the resulting $\hat\varphi$ does not take the value $1$ on two consecutive edges. An injective block map of $\mathsf G$ into itself is an automorphism: $\mathsf G$ is an irreducible shift of finite type, the image of an injective block map has the entropy of $\mathsf G$ \cite[Theorem~8.1.16]{LM1995}, and a proper subshift of $\mathsf G$ has smaller entropy \cite[Corollary~4.4.9]{LM1995}, so the map is surjective; so the injective maps of the lemma are the elements of $\mathcal N$ that depend on $w$ consecutive cells.
+
+\begin{proposition}[the smallest radius; computer-assisted]\label{cl:prop:95small}
+\leavevmode
+\begin{enumerate}
+\item[(a)] Every automorphism of $X_{F_{95}}$ of radius at most $6$ lies in $\langle\sh,F\rangle$.
+\item[(b)] The automorphism $h_{\ast}=\sh^{-1}\widehat{H_{\varphi_{\ast},\mathrm{id}}}$ is a block map of radius $7$. It is not in $\langle\sh,F\rangle$, and $(\sh h_{\ast})^2=\mathrm{id}$. The bit $y'_i$ of $h_{\ast}(c)_i=(x'_i,y'_i)$ depends exactly on the $y_{i+m}$ with $m$ odd, $-7\le m\le5$, and the $x_{i+m}$ with $m$ even, $|m|\le6$; the bit $x'_i$ depends exactly on the $x_{i+m}$ with $m$ odd, $-5\le m\le7$, and the $y_{i+m}$ with $m$ even, $|m|\le6$.
+\item[(c)] The automorphisms of $X_{F_{95}}$ of radius at most $7$ that are not in $\langle\sh,F\rangle$ are the $36$ maps $\widehat{H_{\varphi,\psi}}\,\sh$ with $\varphi\in\{\sh^{-3},\dots,\sh^{4},\ \varphi_{\ast}\sh,\ \bar\varphi_{\ast}\}$ and $\psi\in\{\sh^{-4},\dots,\sh^{3},\ \varphi_{\ast},\ \bar\varphi_{\ast}\sh^{-1}\}$, not both powers of $\sh$. They are pairwise distinct, each has the neighbourhood $[-7,7]$, and $h_{\ast}$ is the one with $(\varphi,\psi)=(\varphi_{\ast}\sh,\sh^{-1})$.
+\end{enumerate}
+So the smallest radius of an automorphism of $X_{F_{95}}$ outside $\langle\sh,F\rangle$ is $7$.
+\end{proposition}
+
+\begin{proof}
+(a) Let $h$ be an automorphism of radius $R\le6$. By Theorem~\ref{cl:thm:95Aut}, $h=\widehat{H_{\varphi,\psi}}\sh^n$ with $\varphi,\psi\in\mathcal N$ and $n\in\Z$. By Lemma~\ref{cl:lem:95window}(ii), $\varphi\sh^{-s}$ and $\psi\sh^{s}$, with $s=\lfloor n/2\rfloor$, are elements of $\mathcal N$ that depend on $7$ consecutive cells. By Lemma~\ref{cl:lem:95enum} they are powers of $\sh$; so $\varphi$ and $\psi$ are powers of $\sh$, and $h\in\langle\sh,F\rangle$, because $\widehat{H_{\sh,\mathrm{id}}}=\sh^{-1}F$ and $\widehat{H_{\mathrm{id},\sh}}=\sh F$ by Theorems~\ref{cl:thm:95W}(b) and~\ref{cl:thm:95Aut}.
+
+(b) Let $h$ be the block map of radius $7$ defined by two tables $T_x,T_y$ of $2^{15}$ entries: $y'_i=T_y(b)$ with $b_m=y_{i+m}$ for odd $m$ and $b_m=x_{i+m}$ for even $m$, $|m|\le7$, and $x'_i=T_x(b)$ with $b_m=x_{i+m}$ for odd $m$ and $b_m=y_{i+m}$ for even $m$. The following are verified exhaustively (Appendix~\ref{app:95}). First, $hF=Fh$: each bit of $hF(c)_0$ and of $Fh(c)_0$ is a function of the $17$ bits of one of the two classes $\{y_k:k\text{ even}\}\cup\{x_k:k\text{ odd}\}$ and $\{x_k:k\text{ even}\}\cup\{y_k:k\text{ odd}\}$ in the cells $|k|\le8$, and the two sides agree for all $2\cdot2^{17}$ values. Second, $(\sh h)^2=\mathrm{id}$: each bit of $(\sh h)^2(c)_0$ is a function of the $29$ bits of one class in the cells $-12\le k\le16$, and it equals the corresponding bit of $c_0$ for all $2\cdot2^{29}$ values. Third, on the points of $\Phi^-$, $h$ is $\sh^{-1}$, and on the points of $\Phi^+$ it is $\sh^{-1}$ composed with $(x^0,x^1)\mapsto(\varphi_{\ast}x^0,\varphi_{\ast}x^1)$; a window of $15$ cells of a point of $\Phi^\pm$ is given by a word of length $16$ of $\Phi_{95}$, and all $55^2=3025$ of them are checked. Fourth, the tables depend on the bits listed in the statement and on no others. By the first and third facts and \eqref{cl:eq:95restr}, $h$ and $h_{\ast}$ are block maps that commute with $F$ and agree on $\Phi^+\cup\Phi^-$, so $h=h_{\ast}$ by Corollary~\ref{cl:cor:95}. The first two facts show, without Theorems~\ref{cl:thm:95sol}--\ref{cl:thm:95Aut}, that $h$ is an automorphism of $X_{F_{95}}$ and that $\sh h$ is an involution; it is not the identity, by the fourth, and $\langle\sh,F\rangle\cong\Z^2$ (Lemma~\ref{cl:lem:Z2}) has no element of order $2$. So $h_{\ast}\notin\langle\sh,F\rangle$. Explicitly, for the configuration $c$ of spatial period $5$ with the cells $(x_i,y_i)=00,00,00,01,10$, whose $F$-orbit has $15$ points, $h_{\ast}(c)$ has the cells $10,00,01,00,01$ and is not of the form $\sh^aF^b(c)$. By the fourth fact the neighbourhood of $h_{\ast}$ is $[-7,7]$ and no smaller interval.
+
+(c) Let $h=\widehat{H_{\varphi,\psi}}\sh^n$, with $\varphi,\psi\in\mathcal N$ (Theorem~\ref{cl:thm:95Aut}), be an automorphism of radius at most $7$. If $n=2s$, then $\varphi\sh^{-s}$ and $\psi\sh^{s}$ depend on $7$ consecutive cells by Lemma~\ref{cl:lem:95window}(ii), and $h\in\langle\sh,F\rangle$ as in (a). Let $n=2s+1$. Since $\sh^{2}=\widehat{H_{\sh^{-1},\sh}}$, we have $h=\widehat{H_{\varphi',\psi'}}\sh$ with $\varphi'=\varphi\sh^{-s}$ and $\psi'=\psi\sh^{s}$, and by the proof of Lemma~\ref{cl:lem:95window}(ii), $(\varphi'x)_j$ depends only on $x_{j-3},\dots,x_{j+4}$ and $(\psi'y)_k$ only on $y_{k-4},\dots,y_{k+3}$. By Lemma~\ref{cl:lem:95enum}, $\varphi'\sh^{3}$ and $\psi'\sh^{4}$ belong to $\{\sh^0,\dots,\sh^7,\sh^4\varphi_{\ast},\sh^3\bar\varphi_{\ast}\}$, which gives the two lists; and $h\in\langle\sh,F\rangle$ if both are powers of $\sh$. Conversely, for each of the $36$ pairs a block map of radius $7$ given by two tables as in (b) is verified, exhaustively, to commute with $F$ and to have the restrictions \eqref{cl:eq:95restr} of $\widehat{H_{\varphi,\psi}}\sh$ to $\Phi^+$ and $\Phi^-$; by Corollary~\ref{cl:cor:95} it is $\widehat{H_{\varphi,\psi}}\sh$. The $36$ pairs of tables are distinct, each depends on a bit of the cell $i-7$ and on a bit of the cell $i+7$, and by Corollary~\ref{cl:cor:95quot} none of the $36$ maps is in $\langle\sh,F\rangle$, because $\varphi_{\ast}$ and $\bar\varphi_{\ast}$ are not powers of $\sh$. Finally $h_{\ast}=\sh^{-1}\widehat{H_{\varphi_{\ast},\mathrm{id}}}=\widehat{H_{\varphi_{\ast}\sh,\sh^{-1}}}\sh$.
+\end{proof}
+
+\emph{Blocking words and eigenfields.} Blocking words, the graphs $W^{(k,p)}_M$ and eigenfields are defined in Section~\ref{sec:blocking}. In \cite{PaperC} the automorphisms outside $\langle\sh,F\rangle$ of rules that are not affine are built from blocking words. We show that $F_{95}$ has none, and that it has no eigenfield of any speed. For speed $0$ and words of at most $6$ cells the second statement is known: $95$R is among the rules without a local conservation law in \cite[Section~4, Table~IV]{Takesue1989}. We use the following consequences of Theorem~\ref{cl:thm:95sol}.
+
+\begin{lemma}\label{cl:lem:95finite}
+\leavevmode
+\begin{enumerate}
+\item[(i)] If $c$ is a finite perturbation of $b_{11}$, then there are finite points $x^0,y^0,x^1,y^1$ of $\mathsf G$ with $\Pi(c)=(u_{x^0,y^0},u_{x^1,y^1})$.
+\item[(ii)] Let $x,y\in\mathsf G$ be finite, with all $1$s of $x$ at positions $\le M_x$ and all $1$s of $y$ at positions $\le M_y$. Then $u_{x,y}(j,k)=0$ whenever $j>M_x+|y|$ and $k>M_y+|x|$.
+\item[(iii)] Let $x,y\in\mathsf G$, let $y$ be finite, and let $n$ be the number of $1$s of $y$ at positions $\ge0$. Then $\tau^{te_2}u_{x,y}\to u_{\sh^{-n}x,0}$ as $t\to\infty$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) The proof of Theorem~\ref{cl:thm:95sol}(c) gives $t\ge0$ and finite points $x^e,y^e$ with $\Pi(F^{-t}(c))=(u_{x^0,y^0},u_{x^1,y^1})$. By Lemma~\ref{cl:lem:95split} the components of $\Pi(c)$ are translates of these two functions, and by Theorem~\ref{cl:thm:95sol}(b) and the surjectivity of $\theta_{x,y}$ every translate of $u_{x,y}$ is $u_{\sh^ax,\sh^by}$ for some $(a,b)$.
+
+(ii) Let $(j,k)=\theta_{x,y}(J,K)=(J+A_y(K),K+A_x(J))$. Since $A_y(K)\le|y|$ and $A_x(J)\le|x|$, we get $J>M_x$ and $K>M_y$, so $u_{x,y}(j,k)=x_J\vee y_K=0$.
+
+(iii) Let $K>0$ be larger than every position of a $1$ of $y$. Then $A_y(K)=n$ and $y_K=0$, so $u_{x,y}(J+n,K+A_x(J))=x_J$ for every $J$. Hence for every $j$ we have $u_{x,y}(j,k)=x_{j-n}=u_{\sh^{-n}x,0}(j,k)$ for all large $k$, which is the convergence of $\tau^{te_2}u_{x,y}$ in the product topology.
+\end{proof}
+
+\begin{proposition}\label{cl:prop:95noblock}
+$F_{95}$ has no blocking word.
+\end{proposition}
+
+\begin{proof}
+Let $w$ be a word on an interval $I$ of cells, let $i_0\in I$, and let $c$ be the configuration that carries $w$ on $I$ and $(1,1)$ elsewhere. By Lemma~\ref{cl:lem:95finite}(i), $\Pi(c)=(u_{x,y},u_{x^1,y^1})$ with finite points. The point $(j,k)$ of the sublattice $e$ is the point $(t,i)=(j+k+e,k-j)$ of the diagram, so the points $(t,i_0)$ and $(t-1,i_0)$ have $j,k\ge(t-|i_0|-2)/2$; by Lemma~\ref{cl:lem:95finite}(ii) there is $t_1$ with $Y_c(t,i_0)=Y_c(t-1,i_0)=1$, that is $F^t(c)_{i_0}=(1,1)$, for all $t\ge t_1$.
+
+Let $J_0\ge2$ exceed every position of a $1$ of $x$ by at least $2$, and let $\tilde x=x+\mathbf 1_{J_0}\in\mathsf G$ and $c'=\Pi^{-1}(u_{\tilde x,y},u_{x^1,y^1})$. As $J_0\to\infty$ we have $\tilde x\to x$ and therefore $c'\to c$, by Theorem~\ref{cl:thm:95sol}(c) and Lemma~\ref{cl:lem:95split}; so $c'$ carries $w$ on $I$ if $J_0$ is large. The number $m=A_{\tilde x}(J_0)=A_x(J_0)$ does not depend on $J_0$, and the points
+\[
+\theta_{\tilde x,y}(J_0,K)=\bigl(J_0+A_y(K),\,K+m\bigr),\qquad K\in\Z,
+\]
+carry the value $\tilde x_{J_0}\vee y_K=1$ of $u_{\tilde x,y}$. Their columns $i=K-A_y(K)+m-J_0$ are nondecreasing in $K$ with steps $1-y_K\in\{0,1\}$ and unbounded in both directions, so one of these points lies in the column $i_0$; its time is $t=2j+i_0$ with $j=J_0+A_y(K)\ge J_0-|y|$. There $Y_{c'}(t,i_0)=0$, so $F^t(c')_{i_0}\ne(1,1)$, and $t\ge\max(t_1,0)$ if $J_0$ is large. Hence $F^t(c)_{i_0}\ne F^t(c')_{i_0}$ for two configurations that carry $w$ on $I$, and $w$ is not blocking with the column $i_0$.
+\end{proof}
+
+Equivalently, $F_{95}$ is sensitive to initial conditions and has no equicontinuity point \cite[Theorem~3 and Corollary~2]{Kurka1997}, \cite[Proposition~2.1]{BT2000}. In words: the column $i_0$ of $c$ is eventually $(1,1)$, and a single right-moving particle placed far to the left of $w$ crosses everything in its way, with finitely many delays, and passes through the column $i_0$ at a late time.
+
+\begin{proposition}\label{cl:prop:95eigen}
+Let $(k,p)\in\Z^2$ with $p\ge1$. Every continuous function $v\colon\A^{\Z}\to\{0,1\}$ with $v\circ\sh^kF_{95}^p=v$ is constant. Consequently the graphs $W^{(k,p)}_M$ of $95$R are strongly connected for all $(k,p)$ and all $M$; in particular there is no nonconstant block map $\vartheta\colon\A^{\Z}\to\{0,1\}^{\Z}$ with $\vartheta\circ F_{95}=\sh^{\mp1}\circ\vartheta$ or with $\vartheta\circ F_{95}=\vartheta$.
+\end{proposition}
+
+\begin{proof}
+The consequences follow from Lemma~\ref{cl:lem:eigen}. Let $v$ be continuous with $v\circ\sh^kF^p=v$, and let $c$ be a finite perturbation of $b_{11}$, equal to $(1,1)$ outside $[-L,L]$. The cell $i$ of $(\sh^kF^p)^t(c)$ is $F^{pt}(c)_{i+kt}=(Y_c(pt-1,i+kt),Y_c(pt,i+kt))$.
+
+If $|k|>p$, these values are $1$ for large $t$, because $Y_c(s,j)$ depends only on $c_{[j-s,j+s]}$ for $s\ge0$. If $|k|<p$, the points $(s,j)$ with $s\in\{pt-1,pt\}$ and $j=i+kt$ are the points $(j',k')$ of their sublattices with $j'+k'+e=s$ and $k'-j'=j$, so $j'$ and $k'$ tend to infinity with $t$, and the values are $1$ for large $t$ by Lemma~\ref{cl:lem:95finite}(i) and (ii). In both cases $(\sh^kF^p)^t(c)\to b_{11}$, so $v(c)=v(b_{11})$; the finite perturbations of $b_{11}$ are dense, and $v$ is constant.
+
+Let $k=p$; the case $k=-p$ follows by conjugation with the reflection $\mathrm{rev}$, which commutes with $F$ and conjugates $\sh$ to $\sh^{-1}$. For $x^0,x^1\in\mathsf G$ put
+\[
+V(x^0,x^1)=v\bigl(\Pi^{-1}(u_{x^0,0},u_{x^1,0})\bigr);
+\]
+this is a continuous function on $\mathsf G\times\mathsf G$, by Theorem~\ref{cl:thm:95sol}(c) and Lemma~\ref{cl:lem:95split}. Let $x^0,x^1,y^0,y^1\in\mathsf G$ be finite, let $c=\Pi^{-1}(u_{x^0,y^0},u_{x^1,y^1})$, and let $n_e$ be the number of $1$s of $y^e$ at positions $\ge0$. Since $\Pi(\sh F)^{t}\Pi^{-1}=\tau^{te_2}\times\tau^{te_2}$ by Lemma~\ref{cl:lem:95split}, Lemma~\ref{cl:lem:95finite}(iii) gives
+\[
+(\sh F)^{pt}(c)\ \longrightarrow\ \Pi^{-1}\bigl(u_{\sh^{-n_0}x^0,0},\,u_{\sh^{-n_1}x^1,0}\bigr)\qquad(t\to\infty).
+\] Since $v$ is continuous and invariant under $(\sh F)^p$,
+\begin{equation}\label{cl:eq:95V}
+v(c)=V\bigl(\sh^{-n_0}x^0,\sh^{-n_1}x^1\bigr).
+\end{equation}
+Now let $y^1=0^\infty$, and compare $y^0=0^\infty$ with $y^0=\mathbf 1_K$, $K>0$. The configurations $c_K=\Pi^{-1}(u_{x^0,\mathbf 1_K},u_{x^1,0})$ converge to $c_\infty=\Pi^{-1}(u_{x^0,0},u_{x^1,0})$ as $K\to\infty$, so $v(c_K)=v(c_\infty)$ for large $K$; by \eqref{cl:eq:95V}, $v(c_K)=V(\sh^{-1}x^0,x^1)$ and $v(c_\infty)=V(x^0,x^1)$. So $V\circ(\sh^{-1}\times\mathrm{id})=V$ on the pairs of finite points, hence everywhere, because these are dense and $V$ is continuous; in the same way $V\circ(\mathrm{id}\times\sh^{-1})=V$. The shift $\mathsf G$ has a point with a dense orbit, so the action of $\Z^2$ on $\mathsf G\times\mathsf G$ by $\sh^a\times\sh^b$ has a dense orbit, and $V$ is constant, equal to $V(0^\infty,0^\infty)=v(b_{11})$. By Lemma~\ref{cl:lem:95finite}(i) and \eqref{cl:eq:95V}, $v(c)=v(b_{11})$ for every finite perturbation $c$ of $b_{11}$; these are dense, so $v$ is constant.
+\end{proof}
+
+For $k=p$ the mechanism is that of Corollary~\ref{cl:cor:95trans}: the right-moving part into which a finite perturbation decays is translated, class by class, by every left-moving particle that it has crossed, and a left-moving particle can be added far away without changing a given window.
+
+\begin{corollary}\label{cl:cor:95dich}
+The rule $95$ is not affine, $F_{95}$ has no blocking word, all the graphs $W^{(k,p)}_M$ of $F_{95}$ are strongly connected, and $\Aut(X_{F_{95}})$ is not virtually $\Z^2$. So for an elementary rule $f$ that is not affine, the absence of blocking words of $F_f$ together with the strong connectivity of all the graphs $W^{(k,p)}_M$ does not imply that $\Aut(X_{F_f})$ is virtually $\Z^2$.
+\end{corollary}
+
+\begin{proof}
+$f_{95}(a,b,c)=1\oplus ac$ is not affine. The other statements are Propositions~\ref{cl:prop:95noblock} and~\ref{cl:prop:95eigen} and Corollary~\ref{cl:cor:95G}: a group that is virtually $\Z^2$ has a torsion-free subgroup of finite index, so the orders of its finite subgroups are bounded.
+\end{proof}
+
+\emph{The non-injective commuting maps.} We call a block map $h$ of radius $R$ of \emph{sublattice type} if each of the two bits of $h(c)_i$ depends only on the bits of one of the two classes $\{y_k:k\equiv i\}\cup\{x_k:k\not\equiv i\}$ and $\{x_k:k\equiv i\}\cup\{y_k:k\not\equiv i\}$ (congruences modulo $2$) in the cells $|k-i|\le R$. The maps $\widehat{H_{\varphi,\psi}}\sh^n$ are of sublattice type, because $\Pi\widehat{H_{\varphi,\psi}}\Pi^{-1}=H_{\varphi,\psi}\times H_{\varphi,\psi}$ and $\Pi\sh\Pi^{-1}$ exchanges the two components.
+
+The commuting block maps of small radius are known from an exhaustive enumeration.
+
+\begin{lemma}[census for $95$; computer-assisted]\label{cl:lem:95cens}
+For $R\le4$ the block maps of radius at most $R$ on $\A^{\Z}$ that commute with $F_{95}$ are the $2R^2+2R+1$ maps $\sh^aF^b$ with $|a|+|b|\le R$, which are pairwise distinct; the constant map with value $b_{11}$; and $0$, $0$, $20$ and $220$ further maps for $R=1,2,3,4$. In all there are $6$, $14$, $46$ and $262$ of them.
+\end{lemma}
+
+The lemma is the result of an enumeration, with a SAT solver, of all tables $\A^{2R+1}\to\A$ whose block map commutes with $F_{95}$, with no restriction on their form; every table found is checked again by direct evaluation, and the tables are compared with those of the maps $\sh^aF^b$ (Appendix~\ref{app:census}). The same programs are applied to all $88$ classes in \cite{PaperD}. The next proposition identifies the further maps.
+
+\begin{proposition}[computer-assisted]\label{cl:prop:95census}
+\leavevmode
+\begin{enumerate}
+\item[(a)] Every block map of radius at most $4$ that commutes with $F_{95}$ is the constant map with value $b_{11}$ or one of the maps $\widehat{H_{\varphi,\psi}}\sh^n$, $n\in\{0,1\}$, where $\varphi,\psi\colon\mathsf G\to\mathsf G$ are block maps that conserve particles. For radius $3$ these are $9$ maps with $n=0$ and $36$ with $n=1$; for radius $4$, $225$ maps with $n=0$ and $36$ with $n=1$. Such a map is injective if and only if $\varphi$ and $\psi$ are, and then it lies in $\langle\sh,F\rangle$; so the $20$ further maps of radius $3$ and the $220$ of radius $4$ of Lemma~\ref{cl:lem:95cens} are not injective, and they are exactly the maps $\widehat{H_{\varphi,\psi}}\sh^n$ of these radii in which $\varphi$ or $\psi$ is not injective.
+\item[(b)] The block maps of sublattice type and radius at most $5$ that commute with $F_{95}$ are the constant map and $3141$ maps $\widehat{H_{\varphi,\psi}}\sh^n$ with $\varphi,\psi$ as in (a), $225$ with $n=0$ and $2916$ with $n=1$: the $61$ maps $\sh^aF^b$ with $|a|+|b|\le5$ and $3080$ maps that are not injective.
+\item[(c)] For $R\le6$, every block map of sublattice type and radius at most $R$ that commutes with $F_{95}$ and is injective on $\Phi^+$ and on $\Phi^-$ is one of the maps $\sh^aF^b$. For $R=7$ there are, besides the $113$ maps $\sh^aF^b$ with $|a|+|b|\le7$, exactly $36$ such maps, and they are the $36$ automorphisms of Proposition~\ref{cl:prop:95small}(c).
+\end{enumerate}
+\end{proposition}
+
+In (a) and (b) the number of maps with $n=0$ is $\mathsf m_w^2$ with $w=2\lfloor R/2\rfloor+1$, and the number with $n=1$ is $\mathsf m_w^2$ with $w=2\lceil R/2\rceil$, where $\mathsf m_w$ is the number of particle-conserving block maps of Table~\ref{cl:tab:95enum}: every pair $(\varphi,\psi)$ allowed by Lemma~\ref{cl:lem:95window}(ii) occurs. Statement (c) does not use Lemma~\ref{cl:lem:95enum}; with Theorem~\ref{cl:thm:95Aut}, by which every automorphism is of sublattice type, it gives Proposition~\ref{cl:prop:95small}(a) and the list in Proposition~\ref{cl:prop:95small}(c) a second time. We do not know whether every block map that commutes with $F_{95}$ is constant or of the form $\widehat{H_{\varphi,\psi}}\sh^n$.
+
+\begin{proof}
+The computations are described in Appendix~\ref{app:95}. For (a), each table of the census of Lemma~\ref{cl:lem:95cens} of radius $3$ and $4$ is of sublattice type, and its restrictions to $\Phi^+$ and $\Phi^-$, read off from the table on all words of $\Phi_{95}$, are of the form \eqref{cl:eq:95restr} for $\widehat{H_{\varphi,\psi}}\sh^n$ with block maps $\varphi,\psi$ that satisfy the criterion stated after Lemma~\ref{cl:lem:95enum}; by Corollary~\ref{cl:cor:95}, two block maps that commute with $F$ and agree on $\Phi^+\cup\Phi^-$ are equal, so the table is that of $\widehat{H_{\varphi,\psi}}\sh^n$. If $\varphi$ or $\psi$ is not injective, neither is $\widehat{H_{\varphi,\psi}}\sh^n$, by \eqref{cl:eq:95restr}; if both are injective they are powers of $\sh$ by Lemma~\ref{cl:lem:95enum}. For (b) and (c) the commutation condition is solved for the tables of sublattice type, and in (b) each solution is identified in the same way.
+\end{proof}
+
+\begin{remark}[the class of $175$; computer-assisted]\label{cl:rem:175}
+The rules that do not read their middle argument are the $16$ rules of the classes of $0$, $5$, $10$, $15$, $90$, $95$, $165$, $175$ and $255$ \cite[p.~386]{Takesue1989}. Of these classes, those of $0$, $5$, $10$, $15$, $90$, $165$ and $255$ are treated in \cite{PaperC}, and for the class of $175$ the automorphism group is not known \cite{PaperD}. For $175$ the two sublattices of a diagram evolve independently, as for $95$, with $Y(\mathsf N)\oplus Y(\mathsf S)=\neg Y(\mathsf W)\vee Y(\mathsf E)$ in place of \eqref{cl:eq:Whalf}. The search of Appendix~\ref{app:95} for block maps of sublattice type that commute with $F_{175}$ finds, for every $R\le7$, only the $2R^2+2R+1$ maps $\sh^aF^b$ (computer-assisted, by two programs, each with two solvers; Appendix~\ref{app:175}); in particular it finds no non-injective maps of the kind that the class of $95$ has from radius $3$ on. We do not know whether every automorphism of $X_{F_{175}}$ is of sublattice type.
+\end{remark}

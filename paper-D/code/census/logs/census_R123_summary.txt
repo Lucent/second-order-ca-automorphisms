@@ -1,0 +1,418 @@
+=== rule 13R, radius R=1: 128 variables, 17818 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 13R, radius R=2: 2048 variables, 294298 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 13R, radius R=3: 32768 variables, 4717978 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 14R, radius R=1: 128 variables, 17636 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 14R, radius R=2: 2048 variables, 293924 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 14R, radius R=3: 32768 variables, 4717412 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 15R, radius R=1: 128 variables, 17786 clauses, 32 solutions
+  {'named': 5, 'const': 1, 'other': 26, 'invertible': 15, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 24, 'affine': 32}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 15R, radius R=2: 2048 variables, 294266 clauses, 512 solutions
+  {'named': 13, 'const': 1, 'other': 498, 'invertible': 45, 'layerwise-same': 32, 'layer-separable': 0, 'cross': 0, 'joint': 480, 'affine': 512}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 15R, radius R=3: 32768 variables, 4717946 clauses, 5000 solutions (CAPPED)
+=== rule 24R, radius R=1: 128 variables, 17444 clauses, 12 solutions
+  {'named': 5, 'const': 2, 'other': 5, 'invertible': 10, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 4, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 24R, radius R=2: 2048 variables, 293540 clauses, 28 solutions
+  {'named': 13, 'const': 2, 'other': 13, 'invertible': 26, 'layerwise-same': 12, 'layer-separable': 0, 'cross': 0, 'joint': 16, 'affine': 12}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 24R, radius R=3: 32768 variables, 4716836 clauses, 52 solutions
+  {'named': 25, 'const': 2, 'other': 25, 'invertible': 50, 'layerwise-same': 16, 'layer-separable': 0, 'cross': 0, 'joint': 36, 'affine': 16}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 25R, radius R=1: 128 variables, 17594 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 25R, radius R=2: 2048 variables, 293882 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 25R, radius R=3: 32768 variables, 4717370 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 26R, radius R=1: 128 variables, 17264 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 26R, radius R=2: 2048 variables, 292336 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 26R, radius R=3: 32768 variables, 4712432 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 27R, radius R=1: 128 variables, 17434 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 27R, radius R=2: 2048 variables, 293274 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 27R, radius R=3: 32768 variables, 4715866 clauses, 1742 solutions
+=== rule 28R, radius R=1: 128 variables, 17764 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 28R, radius R=2: 2048 variables, 294244 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 28R, radius R=3: 32768 variables, 4717924 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 29R, radius R=1: 128 variables, 17882 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 29R, radius R=2: 2048 variables, 294362 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 29R, radius R=3: 32768 variables, 4718042 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 30R, radius R=1: 128 variables, 17584 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 30R, radius R=2: 2048 variables, 293808 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 30R, radius R=3: 32768 variables, 4717232 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 31R, radius R=1: 128 variables, 17754 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 31R, radius R=2: 2048 variables, 294234 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 31R, radius R=3: 32768 variables, 4717914 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 41R, radius R=1: 128 variables, 17818 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 41R, radius R=2: 2048 variables, 294234 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 41R, radius R=3: 32768 variables, 4717850 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 42R, radius R=1: 128 variables, 17636 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 42R, radius R=2: 2048 variables, 293924 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 42R, radius R=3: 32768 variables, 4717412 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 43R, radius R=1: 128 variables, 17818 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 43R, radius R=2: 2048 variables, 294362 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 43R, radius R=3: 32768 variables, 4718042 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 45R, radius R=1: 128 variables, 17914 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 45R, radius R=2: 2048 variables, 294394 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 45R, radius R=3: 32768 variables, 4718074 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 46R, radius R=1: 128 variables, 17732 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 46R, radius R=2: 2048 variables, 294020 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 46R, radius R=3: 32768 variables, 4717508 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 47R, radius R=1: 128 variables, 17882 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 47R, radius R=2: 2048 variables, 294362 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 47R, radius R=3: 32768 variables, 4718042 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 56R, radius R=1: 128 variables, 17764 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 56R, radius R=2: 2048 variables, 294244 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 56R, radius R=3: 32768 variables, 4717924 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 57R, radius R=1: 128 variables, 17914 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 57R, radius R=2: 2048 variables, 294458 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 57R, radius R=3: 32768 variables, 4718138 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 58R, radius R=1: 128 variables, 17552 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 58R, radius R=2: 2048 variables, 293264 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 58R, radius R=3: 32768 variables, 4715344 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 59R, radius R=1: 128 variables, 17722 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 59R, radius R=2: 2048 variables, 294074 clauses, 1158 solutions
+  {'named': 13, 'const': 1, 'other': 1144, 'invertible': 133, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 1152, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 59R, radius R=3: 32768 variables, 4717626 clauses, 5000 solutions (CAPPED)
+=== rule 60R, radius R=1: 128 variables, 17860 clauses, 64 solutions
+  {'named': 5, 'const': 2, 'other': 57, 'invertible': 18, 'layerwise-same': 16, 'layer-separable': 0, 'cross': 0, 'joint': 48, 'affine': 64}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 60R, radius R=2: 2048 variables, 294340 clauses, 1024 solutions
+  {'named': 13, 'const': 2, 'other': 1009, 'invertible': 50, 'layerwise-same': 64, 'layer-separable': 0, 'cross': 0, 'joint': 960, 'affine': 1024}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 60R, radius R=3: 32768 variables, 4718020 clauses, 5000 solutions (CAPPED)
+=== rule 61R, radius R=1: 128 variables, 17978 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 61R, radius R=2: 2048 variables, 294458 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 61R, radius R=3: 32768 variables, 4718138 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 62R, radius R=1: 128 variables, 17680 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 62R, radius R=2: 2048 variables, 293904 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 62R, radius R=3: 32768 variables, 4717328 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 63R, radius R=1: 128 variables, 17850 clauses, 10 solutions
+  {'named': 5, 'const': 1, 'other': 4, 'invertible': 9, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 6, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 63R, radius R=2: 2048 variables, 294330 clauses, 26 solutions
+  {'named': 13, 'const': 1, 'other': 12, 'invertible': 25, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 20, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 63R, radius R=3: 32768 variables, 4718010 clauses, 50 solutions
+  {'named': 25, 'const': 1, 'other': 24, 'invertible': 49, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 42, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 74R, radius R=1: 128 variables, 17264 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 74R, radius R=2: 2048 variables, 292336 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 74R, radius R=3: 32768 variables, 4712432 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 75R, radius R=1: 128 variables, 17414 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 75R, radius R=2: 2048 variables, 292870 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 75R, radius R=3: 32768 variables, 4713862 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 77R, radius R=1: 128 variables, 17734 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 77R, radius R=2: 2048 variables, 293766 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 77R, radius R=3: 32768 variables, 4716486 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 78R, radius R=1: 128 variables, 17552 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 78R, radius R=2: 2048 variables, 293264 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 78R, radius R=3: 32768 variables, 4715344 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 79R, radius R=1: 128 variables, 17670 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 79R, radius R=2: 2048 variables, 293574 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 79R, radius R=3: 32768 variables, 4716102 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 90R, radius R=1: 128 variables, 17084 clauses, 32 solutions
+  {'named': 5, 'const': 2, 'other': 25, 'invertible': 10, 'layerwise-same': 16, 'layer-separable': 0, 'cross': 0, 'joint': 16, 'affine': 32}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 90R, radius R=2: 2048 variables, 290492 clauses, 5000 solutions (CAPPED)
+  {'named': 6, 'const': 2, 'other': 4992, 'invertible': 6, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 4991, 'affine': 33}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: False
+=== rule 90R, radius R=3: 32768 variables, 4701884 clauses, 5000 solutions (CAPPED)
+=== rule 91R, radius R=1: 128 variables, 17254 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 91R, radius R=2: 2048 variables, 291750 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 91R, radius R=3: 32768 variables, 4708710 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 94R, radius R=1: 128 variables, 17372 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 94R, radius R=2: 2048 variables, 292252 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 94R, radius R=3: 32768 variables, 4711004 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 95R, radius R=1: 128 variables, 17542 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 95R, radius R=2: 2048 variables, 292998 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 95R, radius R=3: 32768 variables, 4714182 clauses, 46 solutions
+  {'named': 25, 'const': 1, 'other': 20, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 38, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 105R, radius R=1: 128 variables, 17766 clauses, 16 solutions
+  {'named': 5, 'const': 1, 'other': 10, 'invertible': 9, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 16}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 105R, radius R=2: 2048 variables, 294246 clauses, 256 solutions
+  {'named': 13, 'const': 1, 'other': 242, 'invertible': 43, 'layerwise-same': 32, 'layer-separable': 0, 'cross': 0, 'joint': 224, 'affine': 256}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 105R, radius R=3: 32768 variables, 4717926 clauses, 4096 solutions
+=== rule 106R, radius R=1: 128 variables, 17584 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 106R, radius R=2: 2048 variables, 293808 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 106R, radius R=3: 32768 variables, 4717232 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 107R, radius R=1: 128 variables, 17734 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 107R, radius R=2: 2048 variables, 294214 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 107R, radius R=3: 32768 variables, 4717894 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 109R, radius R=1: 128 variables, 17862 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 109R, radius R=2: 2048 variables, 294342 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 109R, radius R=3: 32768 variables, 4718022 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 110R, radius R=1: 128 variables, 17680 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 110R, radius R=2: 2048 variables, 293904 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 110R, radius R=3: 32768 variables, 4717328 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 111R, radius R=1: 128 variables, 17798 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 111R, radius R=2: 2048 variables, 294214 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 111R, radius R=3: 32768 variables, 4717894 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 122R, radius R=1: 128 variables, 17372 clauses, 7 solutions
+  {'named': 5, 'const': 2, 'other': 0, 'invertible': 5, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 122R, radius R=2: 2048 variables, 292252 clauses, 15 solutions
+  {'named': 13, 'const': 2, 'other': 0, 'invertible': 13, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 122R, radius R=3: 32768 variables, 4711004 clauses, 27 solutions
+  {'named': 25, 'const': 2, 'other': 0, 'invertible': 25, 'layerwise-same': 9, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 9}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 123R, radius R=1: 128 variables, 17542 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 123R, radius R=2: 2048 variables, 293382 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 123R, radius R=3: 32768 variables, 4715654 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 126R, radius R=1: 128 variables, 17500 clauses, 12 solutions
+  {'named': 5, 'const': 2, 'other': 5, 'invertible': 10, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 4, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 126R, radius R=2: 2048 variables, 292956 clauses, 5000 solutions (CAPPED)
+  {'named': 4, 'const': 2, 'other': 4994, 'invertible': 4, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 4996, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: False
+=== rule 126R, radius R=3: 32768 variables, 4713948 clauses, 5000 solutions (CAPPED)
+=== rule 127R, radius R=1: 128 variables, 17670 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 127R, radius R=2: 2048 variables, 293702 clauses, 5000 solutions (CAPPED)
+  {'named': 5, 'const': 1, 'other': 4994, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 4996, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: False
+=== rule 127R, radius R=3: 32768 variables, 4716614 clauses, 5000 solutions (CAPPED)
+=== rule 133R, radius R=1: 128 variables, 17872 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 133R, radius R=2: 2048 variables, 294224 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 133R, radius R=3: 32768 variables, 4717744 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 134R, radius R=1: 128 variables, 17818 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 134R, radius R=2: 2048 variables, 294234 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 134R, radius R=3: 32768 variables, 4717850 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 135R, radius R=1: 128 variables, 17968 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 135R, radius R=2: 2048 variables, 294448 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 135R, radius R=3: 32768 variables, 4718128 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 141R, radius R=1: 128 variables, 18000 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 141R, radius R=2: 2048 variables, 294576 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 141R, radius R=3: 32768 variables, 4718256 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 142R, radius R=1: 128 variables, 17818 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 142R, radius R=2: 2048 variables, 294362 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 142R, radius R=3: 32768 variables, 4718042 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 143R, radius R=1: 128 variables, 17968 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 143R, radius R=2: 2048 variables, 294576 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 143R, radius R=3: 32768 variables, 4718256 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 150R, radius R=1: 128 variables, 17766 clauses, 16 solutions
+  {'named': 5, 'const': 1, 'other': 10, 'invertible': 9, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 16}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 150R, radius R=2: 2048 variables, 294246 clauses, 256 solutions
+  {'named': 13, 'const': 1, 'other': 242, 'invertible': 43, 'layerwise-same': 32, 'layer-separable': 0, 'cross': 0, 'joint': 224, 'affine': 256}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 150R, radius R=3: 32768 variables, 4717926 clauses, 4096 solutions
+=== rule 151R, radius R=1: 128 variables, 17936 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 151R, radius R=2: 2048 variables, 294480 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 151R, radius R=3: 32768 variables, 4718160 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 152R, radius R=1: 128 variables, 17594 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 152R, radius R=2: 2048 variables, 293882 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 152R, radius R=3: 32768 variables, 4717370 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 153R, radius R=1: 128 variables, 17744 clauses, 32 solutions
+  {'named': 5, 'const': 0, 'other': 27, 'invertible': 18, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 24, 'affine': 32}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 153R, radius R=2: 2048 variables, 294224 clauses, 512 solutions
+  {'named': 13, 'const': 0, 'other': 499, 'invertible': 50, 'layerwise-same': 32, 'layer-separable': 0, 'cross': 0, 'joint': 480, 'affine': 512}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 153R, radius R=3: 32768 variables, 4717904 clauses, 5000 solutions (CAPPED)
+=== rule 154R, radius R=1: 128 variables, 17414 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 154R, radius R=2: 2048 variables, 292870 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 154R, radius R=3: 32768 variables, 4713862 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 155R, radius R=1: 128 variables, 17584 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 155R, radius R=2: 2048 variables, 293744 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 155R, radius R=3: 32768 variables, 4716848 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 156R, radius R=1: 128 variables, 17914 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 156R, radius R=2: 2048 variables, 294458 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 156R, radius R=3: 32768 variables, 4718138 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 157R, radius R=1: 128 variables, 18032 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 157R, radius R=2: 2048 variables, 294576 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 157R, radius R=3: 32768 variables, 4718256 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 159R, radius R=1: 128 variables, 17904 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 159R, radius R=2: 2048 variables, 294576 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 159R, radius R=3: 32768 variables, 4718256 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 162R, radius R=1: 128 variables, 17818 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 162R, radius R=2: 2048 variables, 294298 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 162R, radius R=3: 32768 variables, 4717978 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 165R, radius R=1: 128 variables, 17968 clauses, 16 solutions
+  {'named': 5, 'const': 0, 'other': 11, 'invertible': 10, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 16}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 165R, radius R=2: 2048 variables, 294448 clauses, 1024 solutions
+  {'named': 13, 'const': 0, 'other': 1011, 'invertible': 26, 'layerwise-same': 32, 'layer-separable': 0, 'cross': 0, 'joint': 992, 'affine': 256}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 165R, radius R=3: 32768 variables, 4718128 clauses, 5000 solutions (CAPPED)
+=== rule 167R, radius R=1: 128 variables, 18064 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 167R, radius R=2: 2048 variables, 294576 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 167R, radius R=3: 32768 variables, 4718256 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 170R, radius R=1: 128 variables, 17786 clauses, 32 solutions
+  {'named': 5, 'const': 1, 'other': 26, 'invertible': 15, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 24, 'affine': 32}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 170R, radius R=2: 2048 variables, 294266 clauses, 512 solutions
+  {'named': 13, 'const': 1, 'other': 498, 'invertible': 45, 'layerwise-same': 32, 'layer-separable': 0, 'cross': 0, 'joint': 480, 'affine': 512}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 170R, radius R=3: 32768 variables, 4717946 clauses, 5000 solutions (CAPPED)
+=== rule 175R, radius R=1: 128 variables, 18032 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 175R, radius R=2: 2048 variables, 294576 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 175R, radius R=3: 32768 variables, 4718256 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 178R, radius R=1: 128 variables, 17734 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 178R, radius R=2: 2048 variables, 293766 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 178R, radius R=3: 32768 variables, 4716486 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 179R, radius R=1: 128 variables, 17904 clauses, 11 solutions
+  {'named': 5, 'const': 0, 'other': 6, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 179R, radius R=2: 2048 variables, 294384 clauses, 5000 solutions (CAPPED)
+  {'named': 1, 'const': 0, 'other': 4999, 'invertible': 1, 'layerwise-same': 1, 'layer-separable': 0, 'cross': 0, 'joint': 4999, 'affine': 1}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: False
+=== rule 179R, radius R=3: 32768 variables, 4718064 clauses, 5000 solutions (CAPPED)
+=== rule 183R, radius R=1: 128 variables, 18032 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 183R, radius R=2: 2048 variables, 294576 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 183R, radius R=3: 32768 variables, 4718256 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 184R, radius R=1: 128 variables, 17882 clauses, 6 solutions
+  {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 184R, radius R=2: 2048 variables, 294362 clauses, 14 solutions
+  {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 184R, radius R=3: 32768 variables, 4718042 clauses, 26 solutions
+  {'named': 25, 'const': 1, 'other': 0, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 187R, radius R=1: 128 variables, 17840 clauses, 9 solutions
+  {'named': 5, 'const': 0, 'other': 4, 'invertible': 9, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 6, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 187R, radius R=2: 2048 variables, 294320 clauses, 25 solutions
+  {'named': 13, 'const': 0, 'other': 12, 'invertible': 25, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 20, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 187R, radius R=3: 32768 variables, 4718000 clauses, 49 solutions
+  {'named': 25, 'const': 0, 'other': 24, 'invertible': 49, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 42, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 189R, radius R=1: 128 variables, 18096 clauses, 10 solutions
+  {'named': 5, 'const': 0, 'other': 5, 'invertible': 10, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 4, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 189R, radius R=2: 2048 variables, 294576 clauses, 26 solutions
+  {'named': 13, 'const': 0, 'other': 13, 'invertible': 26, 'layerwise-same': 10, 'layer-separable': 0, 'cross': 0, 'joint': 16, 'affine': 10}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 189R, radius R=3: 32768 variables, 4718256 clauses, 50 solutions
+  {'named': 25, 'const': 0, 'other': 25, 'invertible': 50, 'layerwise-same': 14, 'layer-separable': 0, 'cross': 0, 'joint': 36, 'affine': 14}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 191R, radius R=1: 128 variables, 17968 clauses, 5 solutions
+  {'named': 5, 'const': 0, 'other': 0, 'invertible': 5, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 191R, radius R=2: 2048 variables, 294576 clauses, 13 solutions
+  {'named': 13, 'const': 0, 'other': 0, 'invertible': 13, 'layerwise-same': 5, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 5}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+=== rule 191R, radius R=3: 32768 variables, 4718256 clauses, 25 solutions
+  {'named': 25, 'const': 0, 'other': 0, 'invertible': 25, 'layerwise-same': 7, 'layer-separable': 0, 'cross': 0, 'joint': 18, 'affine': 7}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True
+=== rule 219R, radius R=1: 128 variables, 17424 clauses, 10 solutions
+  {'named': 5, 'const': 0, 'other': 5, 'invertible': 10, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 4, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+=== rule 219R, radius R=2: 2048 variables, 292880 clauses, 5000 solutions (CAPPED)
+  {'named': 2, 'const': 0, 'other': 4998, 'invertible': 3, 'layerwise-same': 3, 'layer-separable': 0, 'cross': 0, 'joint': 4997, 'affine': 3}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: False
+=== rule 219R, radius R=3: 32768 variables, 4713872 clauses, 5000 solutions (CAPPED)

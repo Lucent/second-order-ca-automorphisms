@@ -1,0 +1,9 @@
+
+=== rule 95R, radius R=1 [minisat22]: 128 variables, 17542 clauses, encode 0.1s, enumeration 0.0s, 6 solutions
+  classification 0.0s: {'named': 5, 'const': 1, 'other': 0, 'invertible': 5, 'layerwise-same': 4, 'layer-separable': 0, 'cross': 0, 'joint': 2, 'affine': 4}; expected named sigma^a F^b with |a|+|b|<=R: 5; all named found: True
+
+=== rule 95R, radius R=2 [minisat22]: 2048 variables, 292998 clauses, encode 1.0s, enumeration 0.1s, 14 solutions
+  classification 1.7s: {'named': 13, 'const': 1, 'other': 0, 'invertible': 13, 'layerwise-same': 6, 'layer-separable': 0, 'cross': 0, 'joint': 8, 'affine': 6}; expected named sigma^a F^b with |a|+|b|<=R: 13; all named found: True
+
+=== rule 95R, radius R=3 [minisat22]: 32768 variables, 4714182 clauses, encode 16.8s, enumeration 10.7s, 46 solutions
+  classification 512.3s: {'named': 25, 'const': 1, 'other': 20, 'invertible': 25, 'layerwise-same': 8, 'layer-separable': 0, 'cross': 0, 'joint': 38, 'affine': 8}; expected named sigma^a F^b with |a|+|b|<=R: 25; all named found: True

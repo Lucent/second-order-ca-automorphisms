@@ -1,0 +1,24 @@
+rule 110 k=1 mode=cone fill=0: vertices 48, edges 64, classes 20, claimed classes 20, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 110 k=2 mode=cone fill=0: vertices 3072, edges 12288, classes 320, claimed classes 320, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 110 k=3 mode=cone fill=0: vertices 196608, edges 1310720, classes 5120, claimed classes 5120, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 110 k=4 mode=cone fill=0: vertices 12582912, edges 117440512, classes 81920, claimed classes 81920, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 1 1 1
+ALL CHECKS PASSED
+rule 42 k=1 mode=cone fill=0: vertices 48, edges 64, classes 20, claimed classes 20, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 2
+ALL CHECKS PASSED
+rule 42 k=2 mode=cone fill=0: vertices 3072, edges 12288, classes 384, claimed classes 384, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 3
+ALL CHECKS PASSED
+rule 42 k=3 mode=cone fill=0: vertices 196608, edges 1310720, classes 7168, claimed classes 7168, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 4
+ALL CHECKS PASSED
+rule 42 k=4 mode=cone fill=0: vertices 12582912, edges 117440512, classes 131072, claimed classes 131072, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 1 1 1 5
+ALL CHECKS PASSED
+rule 46 k=1 mode=cone fill=0: vertices 48, edges 32, classes 32, claimed classes 32, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 2 2 2 2
+ALL CHECKS PASSED
+rule 46 k=2 mode=cone fill=0: vertices 3072, edges 6144, classes 1024, claimed classes 1024, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 4 4 4 4
+ALL CHECKS PASSED
+rule 46 k=3 mode=cone fill=0: vertices 196608, edges 655360, classes 32768, claimed classes 32768, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 8 8 8 8
+ALL CHECKS PASSED
+rule 46 k=4 mode=cone fill=0: vertices 12582912, edges 58720256, classes 1048576, claimed classes 1048576, mismatches 0; classes per exterior cell 00,01,10,11 (cells further left (0,0)): 16 16 16 16
+ALL CHECKS PASSED

@@ -1,0 +1,601 @@
+\section{The two-copy window graph}\label{app:twocopy}
+
+This appendix is not used in the proof of any theorem of Sections~\ref{sec:intro}--\ref{sec:halfradius}. Those proofs follow one configuration along the front, through the graphs $\Lambda_M$. Here we follow both configurations of a front pair, through a \emph{two-copy} window graph $\Gamma_{w,M}$ that also records $w$ cells behind the front, and we determine its eventual image: its size, the number of steps after which every walk has entered it, and, for the rules $30$, $45$, $75$ and $135$, its strong connectivity (Theorem~\ref{r30:thm:window} and Proposition~\ref{pm:prop:twocopy}). Strong connectivity is reduced to a statement about the holonomy of closed walks at each layer behind the front. For $30$, $45$ and $75$ this holonomy is read off from explicit periodic histories, one family for all depths. For $135$ we know no such family, and the holonomy is obtained from a single closed walk of odd length by an induction on the depth (Proposition~\ref{pm:prop:odd}).
+
+Throughout this appendix $f(a,b,c)=a\oplus g(b,c)$ is a left-permutive elementary rule, with $g(b,c)=g_{11}bc\oplus g_{10}b\oplus g_{01}c\oplus g_{00}$ as in Section~\ref{pm:sec:classes}, and $F=F_f$. This is the automaton of Section~\ref{sec:general} with $r=1$, and we use the diagrams, pairs and front pairs of Section~\ref{gen:sec:profiles}; for rule $30$ they are those of Section~\ref{r30:sec:diagrams}. Every diagram satisfies
+\begin{equation}\label{pm:eq:rec}
+Y(t+1,i)\oplus Y(t-1,i)\oplus Y(t,i-1)=g\bigl(Y(t,i),Y(t,i+1)\bigr).
+\end{equation}
+
+\subsection{Window states}\label{tc:sec:window}
+
+
+Fix integers $w\ge1$ and $M\ge0$. A \emph{window state} is a pair $s=(a,b)$ of words $a=a_{p-w}\cdots a_{p+M}$ and $b=b_{p-w}\cdots b_{p+M}$ over $\A$, indexed by the sites $p-w,\dots,p+M$ for some integer $p$ (the \emph{front}), such that
+\begin{equation}\label{r30:eq:valid}
+a_i=b_i\ \ (p<i\le p+M),\qquad y(a_p)\ne y(b_p),\qquad x(a_p)=x(b_p).
+\end{equation}
+States that differ only by a translation of the indices are identified, and $\mathcal{W}=\mathcal{W}_{w,M}$ denotes the finite set of window states. The \emph{window} of a front pair $P=(c,c')$ at $p$ is
+\[
+W(P)=\bigl(c_{p-w}\cdots c_{p+M},\ c'_{p-w}\cdots c'_{p+M}\bigr)\in\mathcal{W}.
+\]
+Every $s\in\mathcal{W}$ is the window of some front pair: extend $a$ and $b$ by common cells.
+
+For $s=(a,b)\in\mathcal{W}$ with front $p$ and $\iota=(\iota_1,\iota_2)\in\A^2$, let $\tilde a,\tilde b$ be configurations that agree with $a,b$ on $[p-w,p+M]$ and satisfy $\tilde a_{p+M+1}=\tilde b_{p+M+1}=\iota_1$ and $\tilde a_{p+M+2}=\tilde b_{p+M+2}=\iota_2$. Define $s\cdot\iota=(a',b')$ as the pair of words $a'_i=F(\tilde a)_i$, $b'_i=F(\tilde b)_i$ for $p+1-w\le i\le p+1+M$, with front $p+1$. Since $F$ has radius $1$, $s\cdot\iota$ does not depend on the other cells of $\tilde a,\tilde b$. The \emph{window graph} $\Gamma=\Gamma_{w,M}$ has vertex set $\mathcal{W}$ and an edge $s\to s\cdot\iota$ for every $s\in\mathcal{W}$ and $\iota\in\A^2$.
+
+\begin{lemma}\label{r30:lem:edge}
+If $P=(c,c')$ is a front pair at $p$ with $W(P)=s$, then $FP$ is a front pair at $p+1$ and $W(FP)=s\cdot(c_{p+M+1},c_{p+M+2})$. In particular $s\cdot\iota\in\mathcal{W}$ for all $s,\iota$. For every $s\in\mathcal{W}$ and $\iota\in\A^2$ there is a front pair $P$ with $W(P)=s$ and $W(FP)=s\cdot\iota$.
+\end{lemma}
+
+\begin{proof}
+$FP$ is a front pair at $p+1$ by Lemma~\ref{gen:lem:flips}(1) with $r=1$. The cells $F(c)_i$ with $p+1-w\le i\le p+1+M$ read only $c_{p-w},\dots,c_{p+M+2}$, and $c_i=c'_i$ for $i>p$; this gives the formula for $W(FP)$. For the last statement, extend $s$ by common cells with $\iota_1,\iota_2$ at $p+M+1,p+M+2$.
+\end{proof}
+
+\begin{lemma}\label{r30:lem:inputs}
+Let $s=(a,b)\in\mathcal{W}$ have front $p$, and let $\iota=(\iota_1,\iota_2)\in\A^2$. Then $s\cdot\iota$ depends on $\iota$ only through
+\[
+(u,v)=\bigl(y(\iota_1),\ x(\iota_1)\oplus f(y(a_{p+M}),y(\iota_1),y(\iota_2))\bigr)\in\{0,1\}^2,
+\]
+and the map $\iota\mapsto(u,v)$ is $4$-to-$1$ onto $\{0,1\}^2$. The new cell at site $p+M+1$ is $(u,v)$ in $a'$ and $(u,v\oplus[M=0])$ in $b'$. Hence every state has exactly four successors, which are distinct; we write them $s\cdot(u,v)$.
+\end{lemma}
+
+\begin{proof}
+The new cells at sites $i\le p+M$ read only $\tilde a_{i-1},\tilde a_i,\tilde a_{i+1}$; site $p+M+1$ enters only for $i=p+M$, and only through its $y$-bit $u$. The new cell at $p+M+1$ is $F(\tilde a)_{p+M+1}=(u,v)$. In $b$ the same formula applies with $b_{p+M}$. If $M\ge1$, then $b_{p+M}=a_{p+M}$. If $M=0$, then $b_p$ differs from $a_p$ only in the $y$-bit, which enters $f$ as its left argument, hence through $\oplus$, so the new cell is $(u,v\oplus1)$. For each $u$ and each of the four values of $\iota_2$, exactly one value of $x(\iota_1)$ gives a prescribed $v$, so each $(u,v)$ arises from exactly four $\iota$. Different $(u,v)$ give different new cells at $p+M+1$, so the four successors are distinct.
+\end{proof}
+
+\paragraph{Layer coordinates.} For a window state $s=(a,b)$ with front $p$ and each copy $c\in\{a,b\}$ put
+\begin{equation}\label{tc:eq:layers}
+y_c[d]=y(c_{p-d})\ \ (-M\le d\le w),\qquad x_c[e]=x(c_{p-e-1})\ \ (-M-1\le e\le w-1).
+\end{equation}
+Thus the cell at site $p-d$ is $(x_c[d-1],y_c[d])$, and this is a bijection between words in $\A^{w+1+M}$ and assignments of bits to the layers $y[-M],\dots,y[w]$ and $x[-M-1],\dots,x[w-1]$. Write $\delta y[d]=y_a[d]\oplus y_b[d]$ and $\delta x[e]=x_a[e]\oplus x_b[e]$. In layer terms, \eqref{r30:eq:valid} says
+\begin{equation}\label{r30:eq:validlayers}
+\delta y[d]=[d=0]\ \ (-M\le d\le0),\qquad \delta x[e]=0\ \ (-M-1\le e\le-1).
+\end{equation}
+The $x$-bit of the front cell is $x[-1]$.
+
+\begin{lemma}[layer equation]\label{tc:lem:layer}
+Let $s'=s\cdot(u,v)$, with layers $y'_c,x'_c$. For each copy $c\in\{a,b\}$:
+\begin{enumerate}
+\item $x'_c[e]=y_c[e]$ for $-M\le e\le w-1$, and $x'_c[-M-1]=u$;
+\item $y'_c[-M]=v_c$, where $v_a=v$ and $v_b=v\oplus[M=0]$;
+\item for $-M+1\le d\le w$,
+\begin{equation}\label{pm:eq:L}
+y'_c[d]=y_c[d]\oplus x_c[d-2]\oplus g\bigl(y_c[d-1],y_c[d-2]\bigr),
+\end{equation}
+with the convention $y_c[-M-1]=u$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+The new cell at site $i\le p+M$ is $(y(c_i),\,x(c_i)\oplus y(c_{i-1})\oplus g(y(c_i),y(c_{i+1})))$, with $y(c_{p+M+1})=u$. With front $p+1$, $x'_c[e]$ is the $x$-bit of the new cell at $p-e$, which is $y(c_{p-e})=y_c[e]$ for $p-e\le p+M$; for $e=-M-1$ it is the $x$-bit $u$ of the new cell at $p+M+1$ (Lemma~\ref{r30:lem:inputs}). Likewise $y'_c[-M]$ is the $y$-bit of the new cell at $p+M+1$. For $-M+1\le d\le w$, $y'_c[d]$ is the $y$-bit of the new cell at $i=p+1-d\le p+M$, and $x(c_i)=x_c[d-2]$, $y(c_{i-1})=y_c[d]$, $y(c_i)=y_c[d-1]$, $y(c_{i+1})=y_c[d-2]$, where $y_c[-M-1]$ stands for $y(c_{p+M+1})=u$.
+\end{proof}
+
+If $P$ is a front pair at $p$ and $z_t[d]$ denotes the $y$-bit of $F^t(c)$ at site $p+t-d$, then the window of $F^tP$ has $y$-layers $z_t$ and $x$-layers $z_{t-1}$, and \eqref{pm:eq:L} is \eqref{pm:eq:rec} written in these comoving coordinates. It is lower triangular: $y'[d]$ reads only layers with index at most $d$, and the leftmost $x$-layer $x[w-1]$ is never read.
+
+\subsection{The eventual image}\label{tc:sec:image}
+
+\begin{theorem}\label{r30:thm:window}
+Let $f$ be rule $30$, and let $w\ge1$ and $M\ge0$. There is a set $\mathcal{T}=\mathcal{T}_{w,M}\subseteq\mathcal{W}_{w,M}$ with $|\mathcal{T}|=2^{3w+2}4^M$ such that:
+\begin{enumerate}
+\item if $s\in\mathcal{T}$, then $s\cdot\iota\in\mathcal{T}$ for every $\iota\in\A^2$;
+\item every walk in $\Gamma_{w,M}$ of length at least $\lceil w/2\rceil$ ends in $\mathcal{T}$;
+\item the subgraph of $\Gamma_{w,M}$ induced on $\mathcal{T}$ is strongly connected.
+\end{enumerate}
+Consequently $\mathcal{T}$ is the unique terminal strongly connected component of $\Gamma_{w,M}$, and for any $s,s'\in\mathcal{W}_{w,M}$ there are walks from $s$ and from $s'$ that end at a common state.
+\end{theorem}
+
+The consequences follow from (1)--(3). Every vertex has out-degree $4$, so from $s$ there is a walk of length $\lceil w/2\rceil$, which ends at some $t\in\mathcal{T}$ by (2). Likewise $s'$ reaches some $t'\in\mathcal{T}$, and by (3) there is a walk from $t$ to $t'$. So both $s$ and $s'$ reach $t'$. By (1) and (3), $\mathcal{T}$ is a terminal strongly connected component. Any terminal component $T$ contains the endpoints of walks of length $\lceil w/2\rceil$ that start in it, so $T$ meets $\mathcal{T}$, and hence $T=\mathcal{T}$.
+
+\subsection{The tower of factor graphs}\label{r30:sec:windowproof}
+
+In this subsection $f$ is any left-permutive elementary rule, except in Lemmas~\ref{r30:lem:stationary} and~\ref{r30:lem:holonomy}, which are specific to rule $30$. Thus parts (1) and (2) of Theorem~\ref{r30:thm:window} and the size of $\mathcal{T}$ are proved for every such rule, and part (3) is reduced to the existence of closed walks with prescribed holonomy (Lemma~\ref{r30:lem:ystep}). 
+Fix $w\ge1$ and $M\ge0$, and write $\Gamma=\Gamma_{w,M}$ and $\mathcal{W}=\mathcal{W}_{w,M}$. We use the layer coordinates \eqref{tc:eq:layers}. For a quantity $\Theta$ computed from one copy of a state we write $\Theta^a$, $\Theta^b$ for its values on the two copies, and $\delta\Theta=\Theta^a\oplus\Theta^b$. A state of $\mathcal{W}$ is called \emph{valid} to stress that it satisfies \eqref{r30:eq:validlayers}.
+
+\subsubsection*{Backward rows}
+For one copy of a window state put $J_0=[-M,w]$ and $J_m=[-M-1,\,w+1-2m]$ for $m\ge1$, and define $\beta_m\colon J_m\to\{0,1\}$ by $\beta_0(d)=y[d]$, $\beta_1(e)=x[e]$ and, for $m\ge1$ and $e\in J_{m+1}$,
+\begin{equation}\label{r30:eq:beta}
+\beta_{m+1}(e)=\beta_{m-1}(e+2)\oplus\beta_m(e+2)\oplus g\bigl(\beta_m(e+1),\beta_m(e)\bigr).
+\end{equation}
+The arguments lie in the stated domains. For $e\in J_{m+1}$ we have $e+2\le w+1-2m$, so $e,e+1,e+2\in J_m$. If $m\ge2$, then $e+2\in J_{m-1}$. If $m=1$, then $e+2\in[-M+1,w-1]\subseteq J_0$. Formula \eqref{r30:eq:beta} is \eqref{pm:eq:L} solved for the earlier row, so $\beta_m$ recomputes the history $m$ steps back.
+
+\begin{lemma}\label{r30:lem:history}
+Let $s_0\to s_1\to\dots\to s_n$ be a walk in $\Gamma$ with $s_{t+1}=s_t\cdot(u_t,v_t)$. For one copy, define $z_t[d]$ for $-1\le t\le n$ as follows:
+\begin{itemize}
+\item $z_t[d]=y[d]$ of $s_t$ for $0\le t\le n$ and $-M\le d\le w$;
+\item $z_{t-1}[e]=x[e]$ of $s_t$ for $0\le t\le n$ and $-M-1\le e\le w-1$.
+\end{itemize}
+This is consistent, and $z_t[-M-1]=u_t$ for $0\le t\le n-1$. The rows of $s_n$ satisfy $\beta_m(e)=z_{n-m}[e]$ for $0\le m\le n+1$ and $e\in J_m$.
+\end{lemma}
+
+\begin{proof}
+For $1\le t\le n$ and $-M\le e\le w-1$, Lemma~\ref{tc:lem:layer}(1) gives $x[e]$ of $s_t$ $=$ $y[e]$ of $s_{t-1}$, so the two definitions agree; and $x[-M-1]$ of $s_{t+1}$ is $u_t$. By Lemma~\ref{tc:lem:layer}(3), for $0\le t\le n-1$ and $-M+1\le d\le w$,
+\[
+z_{t+1}[d]=z_t[d]\oplus z_{t-1}[d-2]\oplus g\bigl(z_t[d-1],z_t[d-2]\bigr),
+\]
+where $z_t[-M-1]=u_t$ is the convention of \eqref{pm:eq:L}. The cases $m=0,1$ of the claim are the definitions. Let $1\le m\le n$ and $e\in J_{m+1}$, and assume the claim for $m-1$ and $m$. The displayed relation at $t=n-m\in[0,n-1]$ and $d=e+2\in[-M+1,w]$, solved for $z_{n-m-1}[e]$, reads $z_{n-m-1}[e]=z_{n-m+1}[e+2]\oplus z_{n-m}[e+2]\oplus g(z_{n-m}[e+1],z_{n-m}[e])$. By induction its right side is the right side of \eqref{r30:eq:beta}.
+\end{proof}
+
+\subsubsection*{The set $\mathcal{T}$}
+For $0\le j\le w-1$ define $(m_j,e_j)$ by
+\[
+(m_0,e_0)=(1,0),\qquad (m_j,e_j)=\bigl(\tfrac{j+3}2,-1\bigr)\ (j\text{ odd}),\qquad (m_j,e_j)=\bigl(\tfrac{j+2}2,0\bigr)\ (j\ge2\text{ even}).
+\]
+Then $j=e_j+2m_j-2$, and $e_j\in J_{m_j}$ because $e_j\le w+1-2m_j$ is equivalent to $j\le w-1$. The map $j\mapsto(m_j,e_j)$ is a bijection from $[0,w-1]$ onto the set of pairs $(m,e)$ with $m\ge1$, $e\in\{-1,0\}\cap J_m$ and $(m,e)\ne(1,-1)$. Condition $(C_j)$ on a window state is
+\[
+(C_j)\qquad \delta\beta_{m_j}(e_j)=[e_j=0],
+\]
+and $\mathcal{T}=\{s\in\mathcal{W}:\ s\text{ satisfies }(C_j)\text{ for all }0\le j\le w-1\}$. By Lemma~\ref{r30:lem:history}, $(C_j)$ says that the history recomputed from the state has its difference where the history of a front pair has it: a difference in the $y$-bit at the comoving front (layer $0$) and none one site ahead of it (layer $-1$). The excluded pair $(1,-1)$ is the validity condition $\delta x[-1]=0$.
+
+\begin{lemma}\label{r30:lem:triangular}
+For every $e\in J_1$, $\beta_1(e)=x[e]$. For $m\ge2$, $e\in J_m$ and $j=e+2m-2$,
+\[
+\beta_m(e)=y[j]\oplus x[j]\oplus\Phi_{m,e},
+\]
+where $\Phi_{m,e}$ is a function of $y[i]$ for $e+2\le i\le j-1$ and of $x[i]$ for $e\le i\le j-1$. In particular $\beta_m(e)$ reads only layers with index in $[e,j]$, and its $y$-layers have index in $[e+2,j]$.
+\end{lemma}
+
+\begin{proof}
+Induction on $m$. For $m=2$, $\beta_2(e)=y[e+2]\oplus x[e+2]\oplus g(x[e+1],x[e])$. Let $m\ge2$, $e\in J_{m+1}$ and $j'=e+2m$. In \eqref{r30:eq:beta}, by induction $\beta_m(e+2)=y[j']\oplus x[j']\oplus\Phi_{m,e+2}$, where $\Phi_{m,e+2}$ reads $y$ in $[e+4,j'-1]$ and $x$ in $[e+2,j'-1]$. The term $\beta_{m-1}(e+2)$ is $x[e+2]$ if $m=2$, and otherwise it reads $y$ in $[e+4,j'-2]$ and $x$ in $[e+2,j'-2]$. The terms $\beta_m(e+1)$ and $\beta_m(e)$ read $y$ in $[e+2,j'-1]$ and $x$ in $[e,j'-1]$. So $\Phi_{m+1,e}=\beta_{m-1}(e+2)\oplus\Phi_{m,e+2}\oplus g(\beta_m(e+1),\beta_m(e))$ has the stated dependence.
+\end{proof}
+
+\begin{lemma}\label{r30:lem:propagate}
+Let $s\in\mathcal{T}$. Then $\delta\beta_m(e)=[e=0]$ for all $m\ge0$ and all $e\in J_m$ with $e\le0$.
+\end{lemma}
+
+\begin{proof}
+Strong induction on $m$. For $m=0$ this is validity. For $m=1$ and $e\le-1$ it is validity, and for $e=0$ it is $(C_0)$; note $0\in J_1$ since $w\ge1$. For $m+1\ge2$ and $e\in\{-1,0\}$, it is $(C_j)$ for the $j$ with $(m_j,e_j)=(m+1,e)$. For $m+1\ge2$ and $e\le-2$, \eqref{r30:eq:beta} gives $\delta\beta_{m+1}(e)=\delta\beta_{m-1}(e+2)\oplus\delta\beta_m(e+2)\oplus\delta g(\beta_m(e+1),\beta_m(e))$. Since $e+2\le0$, the first two terms are $[e+2=0]\oplus[e+2=0]=0$ by induction. Both arguments of $g$ have $\delta=0$ by induction, as $e+1\le-1$, so the last term vanishes.
+\end{proof}
+
+\begin{lemma}\label{r30:lem:explicit}
+\begin{enumerate}
+\item $(C_0)$ is $\delta x[0]=1$. For $1\le j\le w-1$, with $\Phi_j=\Phi_{m_j,e_j}$, condition $(C_j)$ is
+\[
+\delta x[j]=\delta y[j]\oplus\Phi^a_j\oplus\Phi^b_j\oplus[j\text{ even}],
+\]
+and its right side depends only on $y_a[i],y_b[i]$ for $1\le i\le j$ and on $x_a[i],x_b[i]$ for $-1\le i\le j-1$. In particular the conditions $(C_j)$ involve only the cells at sites $[p-w,p]$, so $\mathcal{T}=\mathcal{T}^\circ_w\times\A^M$ for a set $\mathcal{T}^\circ_w$ of pairs of words on $[p-w,p]$ that does not depend on $M$.
+\item The map $s=(a,b)\mapsto\bigl(a,(\delta y[d])_{1\le d\le w}\bigr)$ is a bijection from $\mathcal{T}$ onto $\A^{w+1+M}\times\{0,1\}^w$. Hence $|\mathcal{T}|=2^{3w+2}4^M$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) Apply $\delta$ to Lemma~\ref{r30:lem:triangular}; for $j\ge1$ we have $m_j\ge2$ and $[e_j=0]=[j\text{ even}]$. Since $e_j\ge-1$, only layers with index $\ge-1$ are read, and $y$-layers only with index $\ge e_j+2\ge1$. The layer $x[e]$ with $e\ge-1$ and the layer $y[d]$ with $d\ge1$ lie in cells at sites $p-e-1$ and $p-d$, which are in $[p-w,p]$. The functions $\Phi_{m,e}$ do not involve $M$.
+
+(2) Given $a$ and $\delta y[1],\dots,\delta y[w]$, validity fixes $\delta y[d]$ for $d\le0$ and $\delta x[e]$ for $e\le-1$, and $(C_0),(C_1),\dots,(C_{w-1})$ determine $\delta x[0],\dots,\delta x[w-1]$ in turn, because the right side of $(C_j)$ involves only $\delta y[j]$ and layers with index $<j$ of both copies, which are already fixed. So $b$ exists and is unique. Thus $|\mathcal{T}|=4^{w+1+M}2^w=2^{3w+2}4^M$.
+\end{proof}
+
+\subsubsection*{Entrance, predecessors and closure}
+Let $\mathrm{Im}_n\subseteq\mathcal{W}$ be the set of endpoints of walks of length $n$ in $\Gamma$, so that $\mathrm{Im}_0=\mathcal{W}$.
+
+\begin{lemma}\label{r30:lem:entrance}
+For $n\ge1$, every $s\in\mathrm{Im}_n$ satisfies $(C_j)$ for all $0\le j\le\min(w-1,2n-1)$. In particular $\mathrm{Im}_n\subseteq\mathcal{T}$ for $n\ge\lceil w/2\rceil$.
+\end{lemma}
+
+\begin{proof}
+Take a walk $s_0\to\dots\to s_n=s$. By Lemma~\ref{r30:lem:history}, $\beta_{m_j}(e_j)=z_{n-m_j}[e_j]$ for both copies whenever $m_j\le n+1$. If $e_j=0$ and $m_j\le n$, then $z_{n-m_j}[0]$ is the layer $y[0]$ of the valid state $s_{n-m_j}$, so its $\delta$ is $1$. If $e_j=-1$ and $m_j\le n+1$, then $z_{n-m_j}[-1]$ is the layer $x[-1]$ of the valid state $s_{n-m_j+1}$, so its $\delta$ is $0$. For even $j$, $m_j\le n$ is equivalent to $j\le2n-2$; for odd $j$, $m_j\le n+1$ is equivalent to $j\le2n-1$. Finally $w-1\le2n-1$ if and only if $n\ge w/2$.
+\end{proof}
+
+\begin{lemma}\label{r30:lem:pred}
+Let $s\in\mathcal{T}$. There are exactly four pairs $(\hat s,(u,v))$ with $\hat s\in\mathcal{T}$ and $\hat s\cdot(u,v)=s$. In particular $s$ has a predecessor in $\mathcal{T}$.
+\end{lemma}
+
+\begin{proof}
+Let $\hat s\in\mathcal{W}$ have layers $\hat y_c,\hat x_c$, and let $y_c,x_c$ be the layers of $s$. By Lemma~\ref{tc:lem:layer}, $\hat s\cdot(u,v)=s$ if and only if:
+\begin{enumerate}
+\item[(i)] $\hat y_c[e]=x_c[e]$ for $-M\le e\le w-1$, and $u=x_c[-M-1]$ (this value is common to both copies, since $\delta x[-M-1]=0$);
+\item[(ii)] $v=y_a[-M]$ (then $y_b[-M]=v\oplus[M=0]$ holds automatically, since $\delta y[-M]=[M=0]$);
+\item[(iii)] for $-M+1\le d\le w$, $\hat x_c[d-2]=y_c[d]\oplus\hat y_c[d]\oplus g(\hat y_c[d-1],\hat y_c[d-2])$, with $\hat y_c[-M-1]=u$.
+\end{enumerate}
+So $(u,v)$ is determined by $s$. For $d\le w-1$, (i) turns (iii) into $\hat x_c[d-2]=y_c[d]\oplus x_c[d]\oplus g(x_c[d-1],x_c[d-2])=\beta^s_2(d-2)$, where $\beta^s_m$ are the rows of $s$; the convention $\hat y_c[-M-1]=u=x_c[-M-1]$ is used when $d-2=-M-1$. This determines $\hat x$ on $[-M-1,w-3]$. For $d=w$, (iii) gives $\hat x_c[w-2]=y_c[w]\oplus\hat y_c[w]\oplus g(x_c[w-1],x_c[w-2])$, where $\hat y_c[w]$ is free. Finally $\hat x_c[w-1]$ is unconstrained. Hence the candidates are parametrized by $\hat y_a[w],\hat y_b[w],\hat x_a[w-1],\hat x_b[w-1]$, and we must decide which give $\hat s\in\mathcal{T}$.
+
+\emph{Validity of $\hat s$.} For $-M\le d\le0$, $\delta\hat y[d]=\delta x[d]$, which is $0$ for $d\le-1$ by validity of $s$ and $1$ for $d=0$ by $(C_0)$ for $s$ (note $0\le w-1$). For $-M-1\le e\le\min(-1,w-3)$, $\delta\hat x[e]=\delta\beta^s_2(e)=0$ by Lemma~\ref{r30:lem:propagate}. If $w\ge2$ this covers all $e\le-1$. If $w=1$, the remaining condition is $\delta\hat x[-1]=0$, where $-1=w-2$.
+
+\emph{Transfer of conditions.} We claim $\beta^{\hat s}_0(e)=\beta^s_1(e)$ for $-M\le e\le w-1$, and $\beta^{\hat s}_m(e)=\beta^s_{m+1}(e)$ for $m\ge1$ and $e\in J_{m+1}$. For $m=0$ this is (i), and for $m=1$ it is the formula for $\hat x$ on $J_2=[-M-1,w-3]$ obtained above. For $m\ge1$ and $e\in J_{m+2}$, apply \eqref{r30:eq:beta} to both sides: the arguments are $\beta^{\hat s}_{m-1}(e+2)$, $\beta^{\hat s}_m(e+2)$, $\beta^{\hat s}_m(e+1)$, $\beta^{\hat s}_m(e)$ with $e,e+1,e+2\in J_{m+1}\subseteq J_m$ (and $e+2\in[-M,w-1]$ when $m-1=0$), so by induction they equal $\beta^s_m(e+2)$, $\beta^s_{m+1}(e+2)$, $\beta^s_{m+1}(e+1)$, $\beta^s_{m+1}(e)$, and \eqref{r30:eq:beta} for $s$ gives $\beta^{\hat s}_{m+1}(e)=\beta^s_{m+2}(e)$. Now $(m_j+1,e_j)=(m_{j+2},e_{j+2})$, and $e_j\in J_{m_j+1}$ if and only if $j\le w-3$. So for $j\le w-3$, condition $(C_j)$ for $\hat s$ is $(C_{j+2})$ for $s$, which holds.
+
+\emph{The two remaining conditions.} By Lemma~\ref{r30:lem:explicit}(1) applied to $\hat s$, condition $(C_j)$ for $\hat s$ reads $\delta\hat x[0]=1$ if $j=0$, and $\delta\hat x[j]=\delta\hat y[j]\oplus\hat\Phi^a_j\oplus\hat\Phi^b_j\oplus[j\text{ even}]$ if $j\ge1$, where $\hat\Phi_j$ reads $\hat y[i]$ for $i\le j-1$ and $\hat x[i]$ for $i\le j-1$.
+\begin{itemize}
+\item $j=w-2$ (when $w\ge2$). The left side is $\delta\hat x[w-2]=\delta y[w]\oplus\delta\hat y[w]\oplus\delta g(x[w-1],x[w-2])$, in which only $\delta\hat y[w]$ is not yet fixed, and it enters with coefficient $1$. The right side involves $\hat y[w-2]=x[w-2]$ and layers of $\hat s$ with index at most $w-3$, namely $\hat y[i]=x[i]$ and $\hat x[i]=\beta^s_2(i)$, all determined by $s$. So this condition determines $\delta\hat y[w]$, and $\hat y_a[w]$ is free. For $w=1$ the same argument applies to the validity condition $\delta\hat x[-1]=0$.
+\item $j=w-1$. The left side is $\delta\hat x[w-1]$. The right side involves $\hat y[w-1]=x[w-1]$ and layers of $\hat s$ with index at most $w-2$. Among these, $\hat x_a[w-2]$ and $\hat x_b[w-2]$ depend on the values $\hat y_a[w],\hat y_b[w]$ chosen in the previous step, and everything else is determined by $s$; $\hat x[w-1]$ does not occur on the right. So, for each choice made in the previous step, this condition determines $\delta\hat x[w-1]$, and $\hat x_a[w-1]$ is free.
+\end{itemize}
+Hence $\hat s\in\mathcal{T}$ if and only if $\delta\hat y[w]$ and $\delta\hat x[w-1]$ take the values just described, which leaves exactly two choices of $\hat y_a[w]$ and two of $\hat x_a[w-1]$, and the input $(u,v)$ is unique.
+\end{proof}
+
+\begin{proposition}\label{r30:prop:closure}
+\begin{enumerate}
+\item $\mathcal{T}\subseteq\mathrm{Im}_n$ for every $n\ge0$.
+\item $\mathrm{Im}_n=\mathcal{T}$ for every $n\ge\lceil w/2\rceil$.
+\item If $s\in\mathcal{T}$, then $s\cdot(u,v)\in\mathcal{T}$ for all $(u,v)$. Inside $\mathcal{T}$ every state has out-degree $4$ and in-degree $4$.
+\item Every walk in $\Gamma$ of length at least $\lceil w/2\rceil$ ends in $\mathcal{T}$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) Induction on $n$: if $\mathcal{T}\subseteq\mathrm{Im}_n$, then every $s\in\mathcal{T}$ has a predecessor in $\mathcal{T}\subseteq\mathrm{Im}_n$ by Lemma~\ref{r30:lem:pred}, so $s\in\mathrm{Im}_{n+1}$. (2) Combine (1) with Lemma~\ref{r30:lem:entrance}. (3) With $n=\lceil w/2\rceil$, $s\in\mathrm{Im}_n$ gives $s\cdot(u,v)\in\mathrm{Im}_{n+1}=\mathcal{T}$. The degrees come from Lemmas~\ref{r30:lem:inputs} and~\ref{r30:lem:pred}. (4) The endpoint of a walk of length $n$ lies in $\mathrm{Im}_n$.
+\end{proof}
+
+This proves parts (1) and (2) of Theorem~\ref{r30:thm:window}, and $|\mathcal{T}|=2^{3w+2}4^M$ is Lemma~\ref{r30:lem:explicit}(2); so far $f$ is any left-permutive elementary rule.
+
+\subsubsection*{Strong connectivity}
+Order the layers as
+\[
+L_1=x[-M-1],\ L_2=y[-M],\ L_3=x[-M],\ L_4=y[-M+1],\ \dots,\ x[w-1],\ L_{2(w+1+M)}=y[w],
+\]
+that is, $x[-M-1]$ first and then, for $d=-M,\dots,w$, the layer $y[d]$ followed by $x[d]$ (when $d\le w-1$). There are $2(w+1+M)$ coordinates, and each takes values in pairs of bits (the $a$-bit and the $b$-bit). Let $P_\nu=\{L_1,\dots,L_\nu\}$, let $\pi_\nu$ be the restriction of a state to $P_\nu$, and put $S_\nu=\pi_\nu(\mathcal{T})$.
+
+\begin{lemma}\label{r30:lem:tower}
+\begin{enumerate}
+\item $S_\nu$ is the set of assignments $\eta$ of bit pairs to $P_\nu$ that satisfy those conditions of \eqref{r30:eq:validlayers} that involve only coordinates in $P_\nu$, and $(C_j)$ for every $j$ with $x[j]\in P_\nu$.
+\item If $L_{\nu+1}$ is an $x$-layer or a layer $y[d]$ with $d\le0$, then each $\eta\in S_\nu$ has exactly two extensions in $S_{\nu+1}$, one for each value of the $a$-bit of $L_{\nu+1}$. If $L_{\nu+1}=y[d]$ with $d\ge1$, then each $\eta\in S_\nu$ has exactly four extensions, one for each value of the pair $(y_a[d],y_b[d])$.
+\item For $s\in\mathcal{T}$, $\pi_\nu(s\cdot(u,v))$ depends only on $\pi_\nu(s)$ and $(u,v)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) By Lemma~\ref{r30:lem:explicit}(1), $(C_j)$ has the form $\delta x[j]=$ (a function of $y[i]$, $i\le j$, and $x[i]$, $i\le j-1$), and all of these coordinates precede $x[j]$. So every element of $S_\nu$ satisfies the stated conditions. Conversely, let $\eta$ satisfy them, and extend $\eta$ one coordinate at a time: choose the $a$-bit arbitrarily; set $y_b[d]=y_a[d]\oplus[d=0]$ for $d\le0$, choose $y_b[d]$ arbitrarily for $d\ge1$, set $x_b[e]=x_a[e]$ for $e\le-1$, and choose $x_b[j]$ for $j\ge0$ so that $(C_j)$ holds, which is possible because $(C_j)$ prescribes $\delta x[j]$ in terms of earlier coordinates. The resulting state is valid and satisfies all $(C_j)$, so it lies in $\mathcal{T}$ and restricts to $\eta$.
+(2) follows from (1) and the same description.
+(3) By Lemma~\ref{tc:lem:layer}, the new value of each coordinate depends only on the input and on coordinates that precede it or equal it: $x'[e]$ reads $y[e]$ or $u$; $y'[-M]$ reads $v$; and $y'[d]$ reads $y[d]$, $x[d-2]$, $y[d-1]$, $y[d-2]$ (or $u$).
+\end{proof}
+
+Let $\Gamma_\nu$ be the graph with vertex set $S_\nu$ and, for each $\eta\in S_\nu$ and $(u,v)\in\{0,1\}^2$, an edge $\eta\to\eta\cdot(u,v):=\pi_\nu(s\cdot(u,v))$ labelled $(u,v)$, where $s\in\mathcal{T}$ is any state with $\pi_\nu(s)=\eta$. This is well defined by Lemma~\ref{r30:lem:tower}(3), and $\eta\cdot(u,v)\in S_\nu$ by Proposition~\ref{r30:prop:closure}(3). For $\nu=2(w+1+M)$, $\Gamma_\nu$ is the subgraph of $\Gamma$ induced on $\mathcal{T}$. Every walk in $\Gamma_\nu$ lifts to a walk in $\Gamma_{\nu+1}$ with the same labels, starting from any lift of its initial vertex.
+
+\begin{lemma}\label{r30:lem:base}
+$\Gamma_1$ and $\Gamma_2$ are complete digraphs with loops; in particular they are strongly connected.
+\end{lemma}
+
+\begin{proof}
+$S_1=\{0,1\}$ is the common value of $x[-M-1]$, and the edge labelled $(u,v)$ goes to $u$. $S_2=\{0,1\}^2$ consists of the common value of $x[-M-1]$ and the value of $y_a[-M]$ (and $y_b[-M]=y_a[-M]\oplus[M=0]$). By Lemma~\ref{tc:lem:layer}(1),(2), the edge labelled $(u,v)$ goes to $(u,v)$.
+\end{proof}
+
+\begin{lemma}\label{r30:lem:xstep}
+Let $L_{\nu+1}=x[e]$ with $e\ge-M$. If $\Gamma_\nu$ is strongly connected, so is $\Gamma_{\nu+1}$.
+\end{lemma}
+
+\begin{proof}
+Write the vertices of $\Gamma_{\nu+1}$ as $(\eta,\xi)$ with $\eta\in S_\nu$ and $\xi=x_a[e]$. The layer $x[e]$ is read by Lemma~\ref{tc:lem:layer} only in $y'[e+2]$, which is not in $P_{\nu+1}$, and its new value is $x'[e]=y[e]$ with $y[e]\in P_\nu$. So the edge labelled $(u,v)$ goes from $(\eta,\xi)$ to $(\eta\cdot(u,v),\,y_a[e](\eta))$. Let $(\eta_1,\xi_1),(\eta_2,\xi_2)\in S_{\nu+1}$. Lift $(\eta_2,\xi_2)$ to some $s\in\mathcal{T}$. By Lemma~\ref{r30:lem:pred} there are $\hat s\in\mathcal{T}$ and $(u,v)$ with $\hat s\cdot(u,v)=s$. Put $\hat\eta=\pi_\nu(\hat s)$; then $\hat\eta\cdot(u,v)=\eta_2$ and $y_a[e](\hat\eta)=x_a[e](s)=\xi_2$ by Lemma~\ref{tc:lem:layer}(1). Take a walk from $\eta_1$ to $\hat\eta$ in $\Gamma_\nu$ and lift it to $\Gamma_{\nu+1}$ starting at $(\eta_1,\xi_1)$. It ends at $(\hat\eta,\xi')$ for some $\xi'$, and the edge labelled $(u,v)$ then leads to $(\eta_2,\xi_2)$.
+\end{proof}
+
+\begin{lemma}\label{r30:lem:ystep}
+Let $L_{\nu+1}=y[d]$ with $d\ge-M+1$. Let $K=(\Z/2)^2$ and $z=(y_a[d],y_b[d])$ if $d\ge1$, and let $K=\Z/2$ and $z=y_a[d]$ if $d\le0$ (then $y_b[d]=y_a[d]\oplus[d=0]$). For an edge $\epsilon$ of $\Gamma_\nu$ from $\eta$ with label $(u,v)$ put
+\begin{equation}\label{pm:eq:phi}
+\varphi_c(\epsilon)=x_c[d-2]\oplus g(y_c[d-1],y_c[d-2]),
+\end{equation}
+evaluated on $\eta$ with $y_c[-M-1]=u$, and $\varphi(\epsilon)=(\varphi_a,\varphi_b)\in K$ if $d\ge1$, $\varphi(\epsilon)=\varphi_a\in K$ if $d\le0$. Then:
+\begin{enumerate}
+\item the edges of $\Gamma_{\nu+1}$ are $(\eta,z)\to(\eta\cdot(u,v),\,z+\varphi(\epsilon))$, and for $d\le0$, $\varphi_a=\varphi_b$;
+\item for a walk $\varsigma$ in $\Gamma_\nu$ let $\ell(\varsigma)\in K$ be the sum of $\varphi$ over its edges, and let $\mathrm{Hol}$ be the subgroup of $K$ generated by the values $\ell(\varsigma)$ of closed walks. If $\Gamma_\nu$ is strongly connected and $\mathrm{Hol}=K$, then $\Gamma_{\nu+1}$ is strongly connected.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) is \eqref{pm:eq:L}. The layers $x[d-2]$, $y[d-1]$, $y[d-2]$ lie in $P_\nu$. For $d\le0$ they have index at most $-1$, so they are common to both copies, as is $u$; hence $\varphi_a=\varphi_b$, and adding $\varphi$ preserves the relation $y_b[d]=y_a[d]\oplus[d=0]$.
+(2) By Lemma~\ref{r30:lem:tower}(2), $(\eta,z)\in S_{\nu+1}$ for every $\eta\in S_\nu$ and every $z\in K$. Fix $\eta_2\in S_\nu$, and let $\mathrm{Hol}_{\eta_2}$ be the set of values $\ell(\varsigma)$ of closed walks $\varsigma$ at $\eta_2$. It contains $0$ and is closed under addition (concatenation), so it is a submonoid of the finite group $K$, hence a subgroup. For a closed walk $\varsigma$ at any $\eta$, choose walks $\alpha$ from $\eta_2$ to $\eta$ and $\beta$ from $\eta$ to $\eta_2$. Then $\ell(\varsigma)=\ell(\alpha\varsigma\beta)-\ell(\alpha\beta)\in\mathrm{Hol}_{\eta_2}$, so $\mathrm{Hol}_{\eta_2}=\mathrm{Hol}=K$. Given $(\eta_1,z_1)$ and $(\eta_2,z_2)$, take a walk $\alpha$ from $\eta_1$ to $\eta_2$ and a closed walk $\varsigma$ at $\eta_2$ with $\ell(\varsigma)=z_2-z_1-\ell(\alpha)$. The lift of $\alpha\varsigma$ starting at $(\eta_1,z_1)$ ends at $(\eta_2,z_2)$.
+\end{proof}
+
+\begin{lemma}[stationary states]\label{r30:lem:stationary}
+Let $f$ be rule $30$, so that $g(b,c)=b\vee c$. Let $L_{\nu+1}=y[d]$ with $d\ge-M+1$, so that $P_\nu$ consists of the layers up to $x[d-1]$. Let $\eta$ be an assignment of bit pairs to $P_\nu$ that satisfies the conditions of \eqref{r30:eq:validlayers} on $P_\nu$, and suppose that for some bit $\chi$ and both copies $c$:
+\begin{itemize}
+\item $x_c[i]=y_c[i]$ for $-M\le i\le d-1$, and $x_c[-M-1]=\chi$;
+\item with $y_c[-M-1]:=\chi$, $y_c[i+1]\le y_c[i]$ for $-M-1\le i\le d-3$.
+\end{itemize}
+Then $\eta\in S_\nu$, the edge labelled $(\chi,y_a[-M])$ is a loop at $\eta$, and on this loop $\varphi_c=y_c[d-1]\wedge\neg y_c[d-2]$.
+\end{lemma}
+
+\begin{proof}
+\emph{The loop.} By Lemma~\ref{tc:lem:layer} with $u=\chi$ and $v=y_a[-M]$: $x'[i]=y[i]=x[i]$ for $-M\le i\le d-1$, and $x'[-M-1]=\chi$. Next, $y'_c[-M]=y_a[-M]\oplus[c=b][M=0]=y_c[-M]$ by validity. For $-M+1\le i\le d-1$, \eqref{pm:eq:L} and $x[i-2]=y[i-2]$ (for $i-2=-M-1$ both equal $\chi=u$) give
+\[
+y'[i]=y[i]\oplus\bigl(y[i-2]\oplus(y[i-1]\vee y[i-2])\bigr)=y[i]\oplus\bigl(y[i-1]\wedge\neg y[i-2]\bigr)=y[i],
+\]
+because $i-2\in[-M-1,d-3]$ and $y[i-1]\le y[i-2]$. The same identity gives $\varphi_c$.
+
+\emph{Membership.} By Lemma~\ref{r30:lem:tower}(1) we must check $(C_j)$ for $0\le j\le d-1$. Let $Z(i)=y_c[i]$ for $-M-1\le i\le d-1$, so that $y_c=Z$ on $[-M,d-1]$ and $x_c=Z$ on $[-M-1,d-1]$. We claim that $\beta_m(e)=Z(e)$ whenever $e\ge-M-1$ (and $e\ge-M$ if $m=0$) and $e+\max(2m-2,0)\le d-1$. For $m=0,1$ this holds by assumption. For $m+1\ge2$, the arguments $\beta_{m-1}(e+2)$, $\beta_m(e+2)$, $\beta_m(e+1)$ and $\beta_m(e)$ of \eqref{r30:eq:beta} all satisfy the claim's hypotheses, so $\beta_{m+1}(e)=Z(e+2)\oplus Z(e+2)\oplus(Z(e+1)\vee Z(e))=Z(e)$, because $e\le d-1-2m\le d-3$ gives $Z(e+1)\le Z(e)$. Every $(C_j)$ with $j\le d-1$ has $e_j+2m_j-2=j\le d-1$, so $\delta\beta_{m_j}(e_j)=\delta Z(e_j)$. For $e_j=0$ this is $\delta y[0]=1$. For $e_j=-1$ it is $\delta y[-1]=0$ if $M\ge1$, and $\delta\chi=0$ if $M=0$. So $(C_j)$ holds.
+\end{proof}
+
+\begin{lemma}\label{r30:lem:holonomy}
+Let $f$ be rule $30$. For every $d\in[-M+1,w]$, at the step $L_{\nu+1}=y[d]$ we have $\mathrm{Hol}=K$.
+\end{lemma}
+
+\begin{proof}
+In each case we give states satisfying the hypotheses of Lemma~\ref{r30:lem:stationary}, with $x=y$ on $[-M,d-1]$ in both copies, and read off $\varphi$ on their loops. Each loop is a closed walk, so its $\varphi$ lies in $\mathrm{Hol}$.
+
+\emph{Case $d\le0$.} All layers in $P_\nu$ have index at most $-1$; take them common, with $\chi=0$, $y[i]=0$ for $-M\le i\le d-2$, and $y[d-1]=1$. Validity holds since there are no differences, and monotonicity concerns only layers up to $d-2$, which are all $0$. Then $\varphi=y[d-1]\wedge\neg y[d-2]=1$ (when $d-2=-M-1$, $y[d-2]=\chi=0$), which generates $K=\Z/2$.
+
+\emph{Case $d=1$.} Take $\chi=0$, all common layers ($-M\le i\le-1$) equal to $0$, $y_a[0]=\sigma_0$ and $y_b[0]=1-\sigma_0$ for a bit $\sigma_0$. Then $\delta y[0]=1$, the $x$-bit of the front is common, and monotonicity concerns only layers up to $-1$. Here $\varphi_c=y_c[0]\wedge\neg y_c[-1]=y_c[0]$. So $\sigma_0=1$ gives $(1,0)$ and $\sigma_0=0$ gives $(0,1)$, which generate $(\Z/2)^2$.
+
+\emph{Case $d=2$.} Take $\chi=1$, all common layers equal to $1$, $y_a[0]=\sigma_0$, $y_b[0]=1-\sigma_0$, and $y_c[1]=\alpha_c$. Monotonicity is $1\ge\dots\ge1\ge y_c[0]$, which holds. Here $\varphi_c=\alpha_c\wedge\neg y_c[0]$. With $\sigma_0=0$, $\alpha_a=1$, $\alpha_b=0$ we get $(1,0)$; with $\sigma_0=1$, $\alpha_a=0$, $\alpha_b=1$ we get $(0,1)$.
+
+\emph{Case $d\ge3$.} Take $\chi=1$, all common layers equal to $1$, $y_a[0]=1$, $y_b[0]=0$, $y_c[i]=0$ for $1\le i\le d-2$, and $y_c[d-1]=\alpha_c$. The sequence $\chi,1,\dots,1,y_c[0],0,\dots,0$ up to layer $d-2$ is nonincreasing. Here $\varphi_c=\alpha_c\wedge\neg y_c[d-2]=\alpha_c$, so $(\alpha_a,\alpha_b)=(1,0)$ and $(0,1)$ generate $(\Z/2)^2$.
+\end{proof}
+
+In the case $d=2$ of this proof the common layers must equal $1$. Monotonicity forces this, because one of $y_a[0],y_b[0]$ is $1$. It is also forced by $(C_1)$, which reads $\delta x[1]=\delta y[1]\oplus\neg x[-1]$ (from $\beta_2(-1)=y[1]\oplus x[1]\oplus(x[0]\vee x[-1])$ and $\delta x[0]=1$), so a state with $x[1]=y[1]$ in both copies must have $x[-1]=1$.
+
+\begin{proof}[Proof of Theorem~\ref{r30:thm:window}]
+Parts (1) and (2) and the size of $\mathcal{T}$ were proved above. For (3), we show by induction on $\nu$ that $\Gamma_\nu$ is strongly connected. Lemma~\ref{r30:lem:base} covers $\nu=1,2$. Each later coordinate is either $x[e]$ with $e\ge-M$, covered by Lemma~\ref{r30:lem:xstep}, or $y[d]$ with $d\ge-M+1$, covered by Lemmas~\ref{r30:lem:ystep} and~\ref{r30:lem:holonomy}. For the last value of $\nu$, $\Gamma_\nu$ is the subgraph of $\Gamma$ induced on $\mathcal{T}$.
+\end{proof}
+
+
+\subsection{Closed walks from periodic histories}\label{pm:sec:hist}
+
+For the rules other than $30$, the stationary states of Lemma~\ref{r30:lem:stationary} are replaced by time-periodic solutions of the layer equation. In this subsection $f=a\oplus g(b,c)$ is a left-permutive elementary rule with $g_{11}=1$, and $\partial g(b,c)=g(b,c)\oplus g(1\oplus b,c)=c\oplus g_{10}$. Fix $d\in\Z$ and let $T\ge1$.
+
+\begin{definition}\label{pm:def:history}
+A \emph{periodic history below $d$} of period $T$ is a pair $Z=(Z^a,Z^b)$ of functions $Z^c\colon\Z\times(-\infty,d-1]\to\{0,1\}$, $(t,i)\mapsto Z^c_t(i)$, with $Z^c_{t+T}=Z^c_t$, such that for $c\in\{a,b\}$:
+\begin{enumerate}
+\item[(Z1)] $Z^c_{t+1}(i)=Z^c_t(i)\oplus Z^c_{t-1}(i-2)\oplus g\bigl(Z^c_t(i-1),Z^c_t(i-2)\bigr)$ for all $t\in\Z$ and $i\le d-1$;
+\item[(Z2)] $Z^a_t(i)=Z^b_t(i)$ for all $t$ and $i\le-1$, and, if $d\ge1$, $Z^a_t(0)\ne Z^b_t(0)$ for all $t$.
+\end{enumerate}
+If $d\le0$ the two copies coincide by (Z2), and we write $Z$ as one function. More generally, for any $d$ (in particular $d=1$), a \emph{single periodic history below $d$} of period $T$ is one function $Y\colon\Z\times(-\infty,d-1]\to\{0,1\}$ with $Y_{t+T}=Y_t$ that satisfies (Z1); no condition (Z2) is imposed. For $d\le0$ the single histories below $d$ are exactly the periodic histories below $d$, with $Z^a=Z^b=Y$. For $d=1$ a single history is not a periodic history below $1$, since (Z2) requires the copies to differ at layer $0$; Lemma~\ref{pm:lem:ops}(4) turns it into one. For a single history we write $\varphi_t$, $\ell(Y)$ and $N(Y,i)$ for the quantities below, computed from $Y$. For $c\in\{a,b\}$, $t\in\Z$ and $i\le d-1$ put
+\[
+\varphi^c_t=Z^c_{t-1}(d-2)\oplus g\bigl(Z^c_t(d-1),Z^c_t(d-2)\bigr),\qquad \ell_c(Z)=\sum_{t=0}^{T-1}\varphi^c_t,\qquad N_c(Z,i)=\sum_{t=0}^{T-1}\bigl(Z^c_t(i)\oplus g_{10}\bigr),
+\]
+with sums in $\Z/2$.
+\end{definition}
+
+Thus (Z1) is \eqref{pm:eq:L} for the $y$-layers of a comoving history, with $x$-layers equal to the $y$-layers at the preceding time, as in Lemma~\ref{r30:lem:history}. The bit $\varphi^c_t$ is the increment that a layer $d$ would have to follow, and $\ell_c(Z)$ is its sum over a period. If $Z$ extends to a periodic history below $d+1$, then $\ell_c(Z)=0$.
+
+\begin{lemma}\label{pm:lem:loops}
+Let $w\ge1$, $M\ge0$ and $-M+1\le d\le w$, and let $\Gamma_\nu$ be the graph of the tower of Section~\ref{r30:sec:windowproof} for $f$ at the step $L_{\nu+1}=y[d]$, so that $P_\nu$ consists of the layers $x[-M-1],y[-M],\dots,y[d-1],x[d-1]$. Let $Z$ be a periodic history below $d$ of period $T$. For $t\in\Z$ let $\eta_t$ be the assignment to $P_\nu$ given by
+\[
+y_c[i]=Z^c_t(i)\ \ (-M\le i\le d-1),\qquad x_c[e]=Z^c_{t-1}(e)\ \ (-M-1\le e\le d-1).
+\]
+Then $\eta_t\in S_\nu$, $\Gamma_\nu$ has an edge $\eta_t\to\eta_{t+1}$ with label $(u_t,v_t)=(Z^a_t(-M-1),\,Z^a_{t+1}(-M))$, and the closed walk $\eta_0\to\eta_1\to\dots\to\eta_T=\eta_0$ has $\ell=(\ell_a(Z),\ell_b(Z))$ if $d\ge1$ and $\ell=\ell_a(Z)$ if $d\le0$, in the notation of Lemma~\ref{r30:lem:ystep}. In particular these values lie in $\mathrm{Hol}$. Moreover $S_\nu$, the edges of $\Gamma_\nu$ and their increments \eqref{pm:eq:phi} do not depend on $w\ge d$.
+\end{lemma}
+
+\begin{proof}
+\emph{Validity.} By (Z2), $\delta y[i]=[i=0]$ for $-M\le i\le\min(0,d-1)$ and $\delta x[e]=0$ for $e\le-1$. These are the conditions of \eqref{r30:eq:validlayers} that involve only $P_\nu$.
+
+\emph{Membership.} By Lemma~\ref{r30:lem:tower}(1) it remains to check $(C_j)$ for $0\le j\le d-1$. By Lemma~\ref{r30:lem:triangular}, $\beta_m(e)$ reads only layers with index in $[e,e+2m-2]$, so it is defined on $\eta_n$ whenever $e+\max(2m-2,0)\le d-1$; such $e$ lie in $J_m$ because $d\le w$. We claim that for such $m,e$ (with $e\ge-M-1$, and $e\ge-M$ if $m=0$), the backward rows of $\eta_n$ satisfy $\beta_m(e)=Z_{n-m}(e)$ in each copy. For $m=0,1$ this is the definition of $\eta_n$. For $m\ge1$ the four arguments $(m-1,e+2)$, $(m,e+2)$, $(m,e+1)$ and $(m,e)$ in the recursion for $\beta_{m+1}(e)$ satisfy the same constraint, since $e+2m\le d-1$. So by induction
+\[
+\beta_{m+1}(e)=Z_{n-m+1}(e+2)\oplus Z_{n-m}(e+2)\oplus g\bigl(Z_{n-m}(e+1),Z_{n-m}(e)\bigr)=Z_{n-m-1}(e),
+\]
+the last step being (Z1) at time $n-m$ and layer $e+2\in[-M+1,d-1]$. Now $(C_j)$ with $j=e_j+2m_j-2\le d-1$ reads $\delta\beta_{m_j}(e_j)=\delta Z_{n-m_j}(e_j)=[e_j=0]$, by (Z2), since $e_j\in\{-1,0\}$.
+
+\emph{Edges.} By Lemma~\ref{r30:lem:tower}(3), the edge of $\Gamma_\nu$ from $\eta_t$ with label $(u,v)$ leads to the assignment computed from $\eta_t$ and $(u,v)$ by the formulas of Lemma~\ref{tc:lem:layer} restricted to $P_\nu$. With $(u,v)=(u_t,v_t)$, these formulas give $x'[e]=y[e]=Z_t(e)$ and $x'[-M-1]=u_t=Z_t(-M-1)$. They give $y'_c[-M]=v_c=Z^c_{t+1}(-M)$; for $c=b$ and $M=0$ this uses (Z2), and for $M\ge1$ the layer is common. For $-M+1\le i\le d-1$, \eqref{pm:eq:L} with the convention $y_c[-M-1]=u_t=Z_t(-M-1)$ gives $y'_c[i]=Z^c_t(i)\oplus Z^c_{t-1}(i-2)\oplus g(Z^c_t(i-1),Z^c_t(i-2))=Z^c_{t+1}(i)$ by (Z1). So the edge leads to $\eta_{t+1}$. Its increment \eqref{pm:eq:phi} is $Z^c_{t-1}(d-2)\oplus g(Z^c_t(d-1),Z^c_t(d-2))=\varphi^c_t$, again with the convention when $d-2=-M-1$. Summing over a period gives $\ell$.
+
+\emph{Independence of $w$.} By Lemma~\ref{r30:lem:tower}(1) and Lemma~\ref{r30:lem:explicit}(1), $S_\nu$ is cut out by conditions involving only $P_\nu$, and these do not depend on $w$. The same holds for the formulas of Lemma~\ref{tc:lem:layer} on $P_\nu$.
+\end{proof}
+
+\begin{lemma}\label{pm:lem:ops}
+Let $Z$ be a periodic history below $d$ of period $T$.
+\begin{enumerate}
+\item \emph{(Swap.)} Exchanging the two copies gives a periodic history below $d$ with $(\ell_a,\ell_b)$ exchanged.
+\item \emph{(Top flip.)} Let $\Sigma\subseteq\{a,b\}$ be nonempty, with $\Sigma=\{a,b\}$ if $d-1\le0$. Complementing $Z^c_t(d-1)$ for all $t$ and all $c\in\Sigma$ gives a periodic history $Z'$ below $d$ with $\ell_c(Z')=\ell_c(Z)\oplus N_c(Z,d-2)$ for $c\in\Sigma$ and $\ell_c(Z')=\ell_c(Z)$ for $c\notin\Sigma$.
+\item \emph{(Restriction.)} For $d'\le d$, the restriction of $Z$ to layers $i\le d'-1$ is a periodic history below $d'$.
+\item \emph{(Splitting the front.)} If $Y$ is a single periodic history below $1$, then $(Y,Y')$, where $Y'$ equals $Y$ except that $Y'_t(0)=1\oplus Y_t(0)$, is a periodic history below $1$ with $\ell_a\oplus\ell_b=N(Y,-1)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) and (3) are clear. (2) Among the equations (Z1) for $i\le d-1$, layer $d-1$ occurs only in the one for $i=d-1$, and only through $Z_{t+1}(d-1)\oplus Z_t(d-1)$, which complementation does not change. Condition (Z2) is preserved: if $d-1\le0$, both copies are complemented. In $\varphi^c_t$, $Z_{t-1}(d-2)$ is unchanged and $g(1\oplus z,Z_t(d-2))=g(z,Z_t(d-2))\oplus\partial g(z,Z_t(d-2))=g(z,Z_t(d-2))\oplus Z_t(d-2)\oplus g_{10}$, because $g_{11}=1$. Summing over $t$ gives the formula. (4) The pair $(Y,Y)$ is not a history below $1$, since it violates (Z2), so (2) does not apply to it. But the computation in the proof of (2) is made in one copy at a time and uses only (Z1). Applied with $d=1$ to the single history $Y$, it shows that $Y'$ satisfies (Z1) and that $\ell(Y')=\ell(Y)\oplus N(Y,-1)$. So $\ell_b=\ell_a\oplus N(Y,-1)$ for the pair $(Y,Y')$. Condition (Z2) holds because $Y$ and $Y'$ agree below layer $0$ and differ at layer $0$.
+\end{proof}
+
+\begin{lemma}\label{pm:lem:tail}
+Let $c\in\A^{\Z}$ satisfy $\sh^nc=c$ and $F^Lc=c$, and let $p\in\Z$. Then $Y_t(i)=y\bigl((F^tc)_{p+t-i}\bigr)$ is periodic in $t$ with a period dividing $\mathrm{lcm}(n,L)$, satisfies $Y_t(i+n)=Y_t(i)$, and satisfies (Z1) for every $i\in\Z$. So it is a single periodic history below every $d\le0$, and below $1$.
+\end{lemma}
+
+\begin{proof}
+Periodicity is clear. With $s=p+t+1-i$, (Z1) at $(t,i)$ reads $Y(t+1,s)=Y(t,s-1)\oplus Y(t-1,s)\oplus g(Y(t,s),Y(t,s+1))$ for the diagram $Y=Y_c$, which is \eqref{pm:eq:rec}.
+\end{proof}
+
+We call such a $Y$ the comoving diagram of the \emph{tail} $c$ with \emph{phase} $p$. At time $0$ the front sits at site $p$, and layer $i$ at time $t$ is site $p+t-i$.
+
+\begin{corollary}\label{pm:cor:crit}
+Let $w\ge d$, and let $M\ge0$ with $-M+1\le d$. Then $\mathrm{Hol}=K$ at the step $L_{\nu+1}=y[d]$ in each of the following cases:
+\begin{enumerate}
+\item[(a)] $d\le1$, and there is a single periodic history $Y$ below $d$ with $N(Y,d-2)=1$;
+\item[(b)] $d\ge1$, and there is a periodic history $Z$ below $d$ with $\ell_a(Z)\ne\ell_b(Z)$;
+\item[(c)] $d\ge2$, and there is a periodic history $Z$ below $d$ with $N_a(Z,d-2)\ne N_b(Z,d-2)$.
+\end{enumerate}
+If the history is the restriction of a tail or of a history defined on all layers $\le D-1$, then the conclusion holds for every such $M$ and $w$ at once, for all $d\le D$ covered by the case.
+\end{corollary}
+
+\begin{proof}
+(b) By Lemma~\ref{pm:lem:loops}, $(\ell_a,\ell_b)\in\{(1,0),(0,1)\}$ lies in $\mathrm{Hol}$, and by Lemma~\ref{pm:lem:ops}(1) so does the other element of this set. These two elements generate $K=(\Z/2)^2$. (a) For $d\le0$, $Y$ and its top flip (Lemma~\ref{pm:lem:ops}(2) with $\Sigma=\{a,b\}$) have $\ell$ differing by $1$, so one of them gives $\ell=1$, which generates $K=\Z/2$. For $d=1$, Lemma~\ref{pm:lem:ops}(4) gives a history with $\ell_a\ne\ell_b$, and (b) applies. (c) If $\ell_a(Z)\ne\ell_b(Z)$, use (b). Otherwise flip the top layer $d-1\ge1$ of the one copy $c$ with $N_c(Z,d-2)=1$. By Lemma~\ref{pm:lem:ops}(2) this changes $\ell_c$ and not the other, and (b) applies. The last sentence holds because the history is the same for all $M$ and $w$.
+\end{proof}
+
+\subsection{Histories ahead of the front}\label{pm:sec:loops}
+
+For $f=30$ the loops of Lemma~\ref{r30:lem:holonomy} are time-constant histories in the sense of Definition~\ref{pm:def:history}. For $45$, $75$ and $135$ we give histories explicitly. The conventions below are also used in Section~\ref{pm:sec:behind}. Tails are given by their $x$-row and $y$-row, with the phase stated by the site at which the front sits at time $0$. Every series below is listed over $t=0,1,\dots,T-1$. The column $\varphi$ lists the bits $Z_{t-1}(i-2)\oplus g(Z_t(i-1),Z_t(i-2))$ for $t=0,\dots,T-1$. Condition (Z1) at layer $i$ says exactly that $Z_{t+1}(i)=Z_t(i)\oplus\varphi_t$, which can be checked row by row. Layers that come from a tail satisfy (Z1) by Lemma~\ref{pm:lem:tail}, and need no check.
+
+\paragraph{Ahead of the front and layer $1$.} For $d\le1$ we use case (a) of Corollary~\ref{pm:cor:crit} with a tail whose $N(Y,i)$ is odd for every $i$. Any phase may be used.
+\begin{itemize}
+\item $f=45$, $g_{10}=0$. The tail is $x=y=\cdots111\cdots$, the configuration $(1,1)^{\Z}$. It is fixed by $F$, since $f(1,1,1)=0$. So $Y\equiv1$, $T=1$, and $N(Y,i)=1$.
+\item $f=75$, $g_{10}=1$. The tail is $x=y=\cdots0101\cdots$, with $x_s=y_s=[s\text{ odd}]$. It is fixed by $F$: for even $s$, $y'_s=x_s\oplus y_{s-1}\oplus g(y_s,y_{s+1})=0\oplus1\oplus g(0,1)=0$, and for odd $s$, $y'_s=1\oplus0\oplus g(1,0)=1$. So $Y_t(i)=[p+t-i\text{ odd}]$, $T=2$, and $N(Y,i)=(Y_0(i)\oplus1)+(Y_1(i)\oplus1)=1$.
+\item $f=135$, $g_{10}=0$. The tail is $x=y=\cdots0001\,0001\cdots$, with $x_s=y_s=[s\equiv3\bmod4]$. Its $F$-orbit has length $8$:
+\begin{align*}
+&(0001;0001)\to(0001;0110)\to(0110;1001)\to(1001;0100)\\
+&\quad\to(0100;0100)\to(0100;1001)\to(1001;0110)\to(0110;0001)\to(0001;0001),
+\end{align*}
+written over the sites $0,1,2,3$. With phase $p=0$ the comoving period is $T=8$, and the layers $i\equiv-1,-2,-3,-4\pmod4$ have series $01101000$, $00110100$, $10000110$, $01000011$. Each contains three $1$'s, so $N(Y,i)=1$ for all $i$. The same holds for the other three phases.
+\end{itemize}
+(For $f=30$ the tail $(0,0)^{\Z}$, with $Y\equiv0$ and $g_{10}=1$, serves the same purpose.)
+
+\begin{proposition}\label{pm:prop:ahead}
+Let $f\in\{30,45,75,135\}$, $w\ge1$ and $M\ge0$. Then $\mathrm{Hol}=K$ at every step $L_{\nu+1}=y[d]$ with $-M+1\le d\le\min(1,w)$.
+\end{proposition}
+
+\begin{proof}
+For $30$ this is the cases $d\le0$ and $d=1$ of Lemma~\ref{r30:lem:holonomy}. For $45$, $75$ and $135$, the tails above give, by Lemma~\ref{pm:lem:tail}, single periodic histories below every $d\le1$ with $N(Y,d-2)=1$, so Corollary~\ref{pm:cor:crit}(a) applies. Each tail is defined on all layers, so it serves every $M$ and $w$ at once.
+\end{proof}
+
+\subsection{Histories behind the front}\label{pm:sec:behind}
+
+The steps $y[d]$ with $d\ge2$ are behind the front. We prove that they have full holonomy for $45$, $75$ and $135$ (Proposition~\ref{pm:prop:hol}). For $45$ and $75$ the proof uses explicit histories, which are the time-periodic replacements for the stationary states of Lemma~\ref{r30:lem:stationary}; for $135$ it uses one explicit history and Proposition~\ref{pm:prop:odd}. The conventions are those of Section~\ref{pm:sec:loops}.
+
+\paragraph{Rule $75$ behind the front: a stationary wall.} Let $d\ge2$, and take $T=1$, so that (Z1) reads $Z(i-2)=g(Z(i-1),Z(i-2))$ for $i\le d-1$. Here $g=\neg b\vee c$, so $g(b,1)=1$ and $g(b,0)=\neg b$. Put
+\[
+Z(i)=1\ \ (i\le-1),\qquad Z^a(i)=[i\text{ even}],\ \ Z^b(i)=[i\text{ odd}]\ \ (0\le i\le d-2),
+\]
+and $Z^a(d-1)=Z^b(d-1)=0$.
+So $Z^a=(\dots1,1\mid1\mid0,1,0,\dots)$ and $Z^b=(\dots1,1\mid0\mid1,0,1,\dots)$, read from layer $-1$ through the front at layer $0$, with the top layer $d-1$ set to $0$. Condition (Z1) asks $Z(k)=g(Z(k+1),Z(k))$ for $k\le d-3$. This holds when $Z(k)=1$. When $Z(k)=0$, we have $0\le k\le d-3$, and the alternating pattern gives $Z(k+1)=1$ and $g(1,0)=0$. Condition (Z2) is clear. Now $\varphi^c=Z^c(d-2)\oplus g(0,Z^c(d-2))=Z^c(d-2)\oplus1$, and $Z^a(d-2)\ne Z^b(d-2)$, so $\ell_a\ne\ell_b$. Corollary~\ref{pm:cor:crit}(b) applies for every $d\ge2$.
+
+\paragraph{Rule $45$ at $d=2$: a loop of period $4$.} Here $g=b\vee\neg c$. The tail is $x=y=\cdots0101\cdots$, with $x_s=y_s=[s\text{ odd}]$, and phase $p=0$, so the front sits at a site where the cell is $(0,0)$. Its $F$-orbit is the $4$-cycle $O$ of Lemma~\ref{pm:lem:Pinst}, and the comoving period is $T=4$. For $i\le-1$ the layer series is $0011$ for even $i$ and $1100$ for odd $i$. The history below $2$ is
+\begin{center}
+\begin{tabular}{ccccc}
+\toprule
+layer $i$ & $Z^a(i)$ & $\varphi^a$ & $Z^b(i)$ & $\varphi^b$\\
+\midrule
+$-2$ & $0011$ & $0101$ & $0011$ & $0101$\\
+$-1$ & $1100$ & $0101$ & $1100$ & $0101$\\
+$0$ & $0011$ & $0101$ & $1100$ & $0101$\\
+$1$ & $0011$ & $0101$ & $0111$ & $1001$\\
+\midrule
+step $d=2$ & & $0110$ & & $0001$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Copy $a$ is the tail on layers $\le0$. Its layer $1$ is the complement of the tail's ($1100$), so it is a top flip. Copy $b$ is the tail with layer $0$ complemented (Lemma~\ref{pm:lem:ops}(4)). Only layer $1$ of copy $b$ needs checking. There, $\varphi^b_t=Z_{t-1}(-1)\oplus g(Z^b_t(0),Z_t(-1))$ equals $0\oplus g(1,1)$, $1\oplus g(1,1)$, $1\oplus g(0,0)$, $0\oplus g(0,0)$, that is, $1,0,0,1$. And $0111$ does follow these increments. The last row gives $\ell=(0,1)$, so Corollary~\ref{pm:cor:crit}(b) applies at $d=2$.
+
+\paragraph{Rule $45$ at $d\ge3$: a time-periodic wall.} Take $T=2$ and the all-ones tail on layers $\le-1$. Since $Z_{t-1}=Z_{t+1}$, condition (Z1) at layer $i$ says that both entries of $\varphi(i)=\bigl(Z_1(i-2)\oplus g(Z_0(i-1),Z_0(i-2)),\ Z_0(i-2)\oplus g(Z_1(i-1),Z_1(i-2))\bigr)$ equal $Z_0(i)\oplus Z_1(i)$. The series $(Z_0(i),Z_1(i))$ are:
+\begin{center}
+\begin{tabular}{ccccccccccc}
+\toprule
+layer $i$ & $\le-1$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $\cdots$\\
+\midrule
+$Z^a(i)$ & $11$ & $11$ & $11$ & $00$ & $01$ & $10$ & $00$ & $00$ & $01$ & period $4$ from $i=2$\\
+$\varphi^a(i)$ & $00$ & $00$ & $00$ & $00$ & $11$ & $11$ & $00$ & $00$ & $11$ & \\
+$Z^b(i)$ & $11$ & $00$ & $01$ & $10$ & $00$ & $00$ & $01$ & $10$ & $00$ & period $4$ from $i=0$\\
+$\varphi^b(i)$ & $00$ & $00$ & $11$ & $11$ & $00$ & $00$ & $11$ & $11$ & $00$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+For example, $\varphi^a(3)=(Z_1(1)\oplus g(Z_0(2),Z_0(1)),\,Z_0(1)\oplus g(Z_1(2),Z_1(1)))=(1\oplus g(0,1),\,1\oplus g(0,1))=(1,1)$, which matches $Z^a_0(3)\oplus Z^a_1(3)=1$. Condition (Z1) at layer $i$ reads only layers $i-2,i-1,i$. By the stated periodicities, these three layers coincide with the three layers four lower when $i-6\ge2$ in copy $a$ and when $i-6\ge0$ in copy $b$. So the checks at $i\ge8$ (copy $a$) and $i\ge6$ (copy $b$) repeat checks four layers lower, and every other check, at $i\le7$ and $i\le5$ respectively, is visible in the table. (The triples differ at $i=6,7$ in copy $a$ and at $i=5$ in copy $b$, so these indices cannot be lowered.) Condition (Z2) is clear. With $g_{10}=0$, $N_c(Z,i)=Z^c_0(i)\oplus Z^c_1(i)$. For $i\ge1$ this is $1$ for copy $a$ exactly when $i\equiv3,0\pmod4$, and $1$ for copy $b$ exactly when $i\equiv1,2\pmod4$. So $N_a(Z,i)\ne N_b(Z,i)$ for every $i\ge1$. For every $d\ge3$, the restriction of $Z$ to layers $\le d-1$ (Lemma~\ref{pm:lem:ops}(3)) satisfies Corollary~\ref{pm:cor:crit}(c). At $d=2$ it does not, since $N_a(Z,0)=N_b(Z,0)=0$; that step is covered by the period-$4$ loop above.
+
+\paragraph{Rule $135$ at $d=2,3$.} Here $g=\neg(b\wedge c)$. The tail is $x=y=\cdots011\,011\cdots$, with $x_s=y_s=[s\not\equiv0\bmod3]$, and phase $p=0$, so the front sits at a site where the cell is $(0,0)$. The tail is fixed by $F$. For $s\equiv0,1,2\pmod 3$, $y'_s=x_s\oplus y_{s-1}\oplus g(y_s,y_{s+1})$ equals $0\oplus1\oplus g(0,1)=0$, $1\oplus0\oplus g(1,1)=1$ and $1\oplus1\oplus g(1,0)=1$. Its comoving period is $T=3$, and the layers $i\equiv0,-1,-2\pmod3$ have series $011$, $110$, $101$. Two histories, below $2$ and below $3$:
+\begin{center}
+\begin{tabular}{c|cccc|cccc}
+\toprule
+& \multicolumn{4}{c|}{below $2$} & \multicolumn{4}{c}{below $3$}\\
+layer $i$ & $Z^a$ & $\varphi^a$ & $Z^b$ & $\varphi^b$ & $Z^a$ & $\varphi^a$ & $Z^b$ & $\varphi^b$\\
+\midrule
+$-2$ & $101$ & $110$ & $101$ & $110$ & $101$ & $110$ & $101$ & $110$\\
+$-1$ & $110$ & $011$ & $110$ & $011$ & $110$ & $011$ & $110$ & $011$\\
+$0$ & $011$ & $101$ & $100$ & $101$ & $011$ & $101$ & $100$ & $101$\\
+$1$ & $010$ & $110$ & $111$ & $000$ & $010$ & $110$ & $000$ & $000$\\
+$2$ & & & & & $000$ & $000$ & $011$ & $101$\\
+\midrule
+step $d$ & & $000$ & & $001$ & & $110$ & & $111$\\
+\bottomrule
+\end{tabular}
+\end{center}
+In both histories, copy $a$ is the tail on layers $\le0$, and its layer $1$ is a top flip of the tail's ($101$). Copy $b$ is the tail with layer $0$ complemented. The remaining rows are checked against the $\varphi$ columns. For example, for copy $b$ at layer $1$, $\varphi^b_t=Z_{t-1}(-1)\oplus g(Z^b_t(0),Z_t(-1))$ equals $0\oplus g(1,1)$, $1\oplus g(0,1)$, $1\oplus g(0,0)$, that is, $0,0,0$, so layer $1$ is constant ($111$ or $000$). The step rows give $\ell=(0,1)$ in both cases, so Corollary~\ref{pm:cor:crit}(b) applies at $d=2$ and $d=3$. Both histories have the odd period $3$; the history below $2$ supplies hypothesis (ii) of Proposition~\ref{pm:prop:odd} for $135$. The same works for the other two phases of this tail.
+
+\begin{remark}[stationary fronts]\label{pm:rem:stationary}
+Call a periodic history \emph{stationary} if $T=1$. A stationary history below $d$ with $d\ge2$ can exist only if $g_{10}(1+g_{01})+g_{00}=0$. Indeed, (Z1) at $i=1$ reads $Z(-1)=g(Z^c(0),Z(-1))$ for both copies, and $Z^a(0)\ne Z^b(0)$. So $\partial g(\cdot,Z(-1))=Z(-1)\oplus g_{10}$ vanishes, that is, $Z(-1)=g_{10}$. Then $g_{10}=g(0,g_{10})=g_{01}g_{10}\oplus g_{00}$. The quantity $g_{10}(1+g_{01})+g_{00}$ is invariant under $\kappa$. It is $0$ for the classes of $30$ and $75$ and $1$ for those of $45$ and $135$, so for the latter two classes the histories behind the front must be time-periodic. For $30$ and $75$, stationary histories for every $d\ge2$ are given explicitly (Lemma~\ref{r30:lem:holonomy} and the wall above). We do not claim the converse in general.
+\end{remark}
+
+\paragraph{All depths from one closed walk of odd length.}
+The histories above reach a fixed depth, or every depth when there is a wall. The next proposition needs neither: one closed walk of odd length at the step $y[2]$ gives full holonomy at every step behind it. Fix a left-permutive rule $f=a\oplus g(b,c)$ with $g_{11}=1$, and integers $w\ge2$ and $M\ge0$. For $1\le d\le w$ let $G_d$ be the graph $\Gamma_\nu$ of the tower of Section~\ref{r30:sec:windowproof} with $L_{\nu+1}=y[d]$. Its vertices are the elements of $S_\nu$, which assign bit pairs to the layers $x[-M-1],y[-M],\dots,y[d-1],x[d-1]$. For $d\ge2$ these are the layers of $G_{d-1}$ together with $y[d-1]$ and $x[d-1]$. Restricting the vertices of a walk $\varsigma$ in $G_d$ to the layers of $G_{d-1}$ gives a walk $\bar\varsigma$ in $G_{d-1}$ with the same labels (Lemma~\ref{r30:lem:tower}(3)), the \emph{projection} of $\varsigma$. For an edge $\epsilon$ of $G_d$ from $\eta$ put
+\[
+\psi_d(\epsilon)=\bigl(1,\ \varphi_a(\epsilon),\ \varphi_b(\epsilon),\ y_a[d-1](\eta)\oplus g_{10},\ y_b[d-1](\eta)\oplus g_{10}\bigr)\in(\Z/2)^5,
+\]
+where $\varphi=(\varphi_a,\varphi_b)$ is the increment \eqref{pm:eq:phi} at the step $y[d]$, as in Lemma~\ref{r30:lem:ystep}. For a walk $\varsigma$ in $G_d$ let $\Psi_d(\varsigma)$ be the sum of $\psi_d$ over its edges. We write
+\[
+\Psi_d(\varsigma)=\bigl(T(\varsigma),\ \ell_a(\varsigma),\ \ell_b(\varsigma),\ N_a(\varsigma),\ N_b(\varsigma)\bigr),
+\]
+so that $T(\varsigma)$ is the length of $\varsigma$ modulo $2$, $\ell(\varsigma)=(\ell_a,\ell_b)$ is the quantity of Lemma~\ref{r30:lem:ystep}, and $N_c(\varsigma)$ counts, modulo $2$, the vertices of $\varsigma$, the last one excepted, at which $y_c[d-1]\ne g_{10}$. Let $I_d\subseteq(\Z/2)^5$ be the set of values $\Psi_d(\varsigma)$ of closed walks $\varsigma$ in $G_d$. If $\varsigma$ is the closed walk of a periodic history $Z$ below $d$ of period $T$ (Lemma~\ref{pm:lem:loops}), then $\Psi_d(\varsigma)=\bigl(T,\ell_a(Z),\ell_b(Z),N_a(Z,d-1),N_b(Z,d-1)\bigr)$.
+
+\begin{lemma}\label{pm:lem:theta}
+Let $2\le d\le w$.
+\begin{enumerate}
+\item If $G_d$ is strongly connected, then $I_d$ is a subgroup of $(\Z/2)^5$.
+\item \emph{(Top flip.)} For $c\in\{a,b\}$ let $\tau_c$ complement the two bits $y_c[d-1]$ and $x_c[d-1]$ of an assignment. Then $\tau_c$ maps the vertex set of $G_d$ onto itself and maps every edge to an edge with the same label. For a closed walk $\varsigma$ in $G_d$ with projection $\bar\varsigma$,
+\[
+\Psi_d(\tau_a\varsigma)=\Psi_d(\varsigma)+\bigl(0,\,N_a(\bar\varsigma),\,0,\,T(\varsigma),\,0\bigr),\qquad
+\Psi_d(\tau_b\varsigma)=\Psi_d(\varsigma)+\bigl(0,\,0,\,N_b(\bar\varsigma),\,0,\,T(\varsigma)\bigr),
+\]
+where $N_c(\bar\varsigma)$ is computed in $G_{d-1}$.
+\item \emph{(Swap.)} The exchange $\mu$ of the two copies maps the vertex set of $G_d$ onto itself and edges to edges. It maps a closed walk $\varsigma$ to a closed walk $\mu\varsigma$ with $\Psi_d(\mu\varsigma)=(T,\ell_b,\ell_a,N_b,N_a)(\varsigma)$ and $N_a(\overline{\mu\varsigma})=N_b(\bar\varsigma)$, $N_b(\overline{\mu\varsigma})=N_a(\bar\varsigma)$.
+\item \emph{(Lifting.)} Let $\omega$ be a closed walk in $G_{d-1}$ with $\ell(\omega)=(0,0)$, where $\ell$ is taken at the step $y[d-1]$. Then there is a closed walk $\hat\omega$ in $G_d$ with projection $\omega$; in particular $\hat\omega$ has the same length as $\omega$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) $\Psi_d$ is additive under concatenation of walks. So the argument in the proof of Lemma~\ref{r30:lem:ystep}(2) applies with $\Psi_d$ in place of $\ell$. The values of closed walks at a fixed vertex $\eta_2$ form a submonoid of a finite group, hence a subgroup. For a closed walk $\varsigma$ at any vertex $\eta$, choose walks $\alpha$ from $\eta_2$ to $\eta$ and $\beta$ from $\eta$ to $\eta_2$; then $\Psi_d(\varsigma)=\Psi_d(\alpha\varsigma\beta)-\Psi_d(\alpha\beta)$ lies in that subgroup. Conversely that subgroup is contained in $I_d$, so $I_d$ is equal to it.
+
+(2) Let $\Gamma_\nu=G_d$. By Lemma~\ref{r30:lem:tower}(1), $S_\nu$ is defined by the conditions of \eqref{r30:eq:validlayers}, which involve only layers $y[i]$ with $i\le0$ and $x[e]$ with $e\le-1$, and by $(C_j)$ for $0\le j\le d-1$. By Lemmas~\ref{r30:lem:triangular} and~\ref{r30:lem:explicit}(1), $(C_0)$ is $\delta x[0]=1$, and for $j\ge1$ condition $(C_j)$ reads $\delta x[j]\oplus\delta y[j]=\Phi^a_j\oplus\Phi^b_j\oplus[j\text{ even}]$, where $\Phi_j$ reads only layers of index less than $j$. Since $d-1\ge1$, the layer $d-1$ occurs only in $(C_{d-1})$, and there only through $\delta x[d-1]\oplus\delta y[d-1]$, which $\tau_c$ does not change. So $\tau_c(S_\nu)=S_\nu$. By Lemma~\ref{tc:lem:layer}, the layer $x[d-1]$ is read only by $y'[d+1]$, and the layer $y[d-1]$ is read by $x'[d-1]=y[d-1]$, by $y'[d-1]$, in which it is a summand, and by $y'[d]$ and $y'[d+1]$. The layers $y[d]$ and $y[d+1]$ do not belong to $G_d$. The other layers of $G_d$ are neither changed by $\tau_c$ nor computed from the layer $d-1$. Since $\eta\cdot(u,v)$ is computed from $\eta$ and $(u,v)$ by these formulas (Lemma~\ref{r30:lem:tower}(3)), $\tau_c(\eta\cdot(u,v))=\tau_c(\eta)\cdot(u,v)$ for every vertex $\eta$ and every label. Now compare $\psi_d$ on an edge from $\eta$ and on its image. The increment $\varphi_c=x_c[d-2]\oplus g(y_c[d-1],y_c[d-2])$ changes by $\partial g(y_c[d-1],y_c[d-2])=y_c[d-2]\oplus g_{10}$, because $g_{11}=1$ (here $d-2\ge0>-M-1$, so the convention $y_c[-M-1]=u$ does not enter); the increment of the other copy does not change; the entry $y_c[d-1]\oplus g_{10}$ changes by $1$. Summing over the edges of $\varsigma$ gives the two formulas, since $\sum_t\bigl(y_c[d-2](\eta_t)\oplus g_{10}\bigr)=N_c(\bar\varsigma)$, the sum being over the vertices $\eta_t$ of $\varsigma$, the last one excepted.
+
+(3) The conditions \eqref{r30:eq:validlayers} and $(C_j)$ prescribe values of $\delta$, so they are symmetric in the two copies. The formulas of Lemma~\ref{tc:lem:layer} are the same for both copies, except that $v_b=v\oplus[M=0]$. So the exchange maps the edge with label $(u,v)$ to the edge with label $(u,v\oplus[M=0])$, and it exchanges the entries of $\psi_d$ and of $\psi_{d-1}$ belonging to the two copies.
+
+(4) Let $G_{d-1}=\Gamma_{\nu'}$, so that $L_{\nu'+1}=y[d-1]$, $L_{\nu'+2}=x[d-1]$ and $G_d=\Gamma_{\nu'+2}$. Recall that a walk lifts to the next graph of the tower, uniquely, from any lift of its initial vertex. Let $\omega=(\eta_0\to\dots\to\eta_T=\eta_0)$; we may assume $T\ge1$. Since $d-1\ge1$, every pair $(\eta_0,z)$ with $z\in(\Z/2)^2$ is a vertex of $\Gamma_{\nu'+1}$ (Lemma~\ref{r30:lem:tower}(2)). By Lemma~\ref{r30:lem:ystep}(1), the lift of $\omega$ to $\Gamma_{\nu'+1}$ starting at $(\eta_0,z)$ ends at $(\eta_0,z+\ell(\omega))=(\eta_0,z)$, so it is a closed walk $\omega_1$. Lift $\omega_1$ to $\Gamma_{\nu'+2}$, starting at any lift of its initial vertex. The lift ends at a vertex $\zeta$ over the same vertex, and by Lemma~\ref{tc:lem:layer}(1) the layer $x[d-1]$ of $\zeta$ is the layer $y[d-1]$ of the last vertex but one of $\omega_1$. Lift $\omega_1$ once more, starting at $\zeta$. The new lift ends at a vertex over the same vertex with the same layer $x[d-1]$, that is, at $\zeta$. This closed walk is $\hat\omega$.
+\end{proof}
+
+\begin{proposition}\label{pm:prop:odd}
+Let $f=a\oplus g(b,c)$ be left-permutive with $g_{11}=1$, and let $w\ge2$ and $M\ge0$. Suppose that
+\begin{enumerate}
+\item[(i)] $\mathrm{Hol}=K$ at every step $L_{\nu+1}=y[d]$ with $-M+1\le d\le1$, and
+\item[(ii)] $G_2$ has a closed walk of odd length.
+\end{enumerate}
+Then for every $2\le d\le w$ the graph $G_d$ is strongly connected and $I_d=(\Z/2)^5$. In particular $\mathrm{Hol}=K$ at every step $L_{\nu+1}=y[d]$ with $2\le d\le w$.
+\end{proposition}
+
+\begin{proof}
+The last statement follows from the first, since $I_d=(\Z/2)^5$ contains elements with every value of $(\ell_a,\ell_b)$. We prove the first by induction on $d$.
+
+\emph{The case $d=2$.} By Lemmas~\ref{r30:lem:base}, \ref{r30:lem:xstep} and~\ref{r30:lem:ystep}(2) and hypothesis (i), every graph of the tower up to $G_2$ is strongly connected, as in the proof of Theorem~\ref{r30:thm:window}. So $I_2$ is a group by Lemma~\ref{pm:lem:theta}(1). Let $\varsigma$ be a closed walk of odd length in $G_2$, and put $n_c=N_c(\bar\varsigma)$, computed in $G_1$. The top $y$-layer of $G_1$ is $y[0]$, and $y_b[0]=y_a[0]\oplus1$ at every vertex, so $n_a+n_b=T(\varsigma)=1$. By Lemma~\ref{pm:lem:theta}(2), $I_2$ contains $\Psi_2(\tau_a\varsigma)-\Psi_2(\varsigma)=(0,n_a,0,1,0)$ and $\Psi_2(\tau_b\varsigma)-\Psi_2(\varsigma)=(0,0,n_b,0,1)$. The same applied to $\mu\varsigma$ (Lemma~\ref{pm:lem:theta}(3)) gives $(0,n_b,0,1,0)$ and $(0,0,n_a,0,1)$. Since $\{n_a,n_b\}=\{0,1\}$, these four elements are
+\begin{equation}\label{pm:eq:four}
+(0,1,0,1,0),\qquad(0,0,0,1,0),\qquad(0,0,1,0,1),\qquad(0,0,0,0,1).
+\end{equation}
+They span $\{0\}\times(\Z/2)^4$. Together with $\Psi_2(\varsigma)$, whose first entry is $1$, they generate $(\Z/2)^5$.
+
+\emph{The step from $d-1$ to $d$, for $3\le d\le w$.} Assume that $G_{d-1}$ is strongly connected and $I_{d-1}=(\Z/2)^5$. Then $\mathrm{Hol}=K$ at the step $y[d-1]$, so $G_d$ is strongly connected by Lemmas~\ref{r30:lem:ystep}(2) and~\ref{r30:lem:xstep}, and $I_d$ is a group. Choose closed walks $\omega$ and $\omega'$ in $G_{d-1}$ with
+\[
+\Psi_{d-1}(\omega)=(1,0,0,1,1),\qquad\Psi_{d-1}(\omega')=(1,0,0,0,0).
+\]
+Both have $\ell=(0,0)$, so they have lifts $\hat\omega,\hat\omega'$ to closed walks in $G_d$ (Lemma~\ref{pm:lem:theta}(4)), of odd length. By Lemma~\ref{pm:lem:theta}(2), $I_d$ contains
+\[
+\Psi_d(\tau_a\hat\omega)-\Psi_d(\hat\omega)=(0,1,0,1,0),\qquad\Psi_d(\tau_b\hat\omega)-\Psi_d(\hat\omega)=(0,0,1,0,1),
+\]
+because $N_a(\omega)=N_b(\omega)=1$, and likewise $(0,0,0,1,0)$ and $(0,0,0,0,1)$ from $\hat\omega'$, because $N_a(\omega')=N_b(\omega')=0$. These are the elements \eqref{pm:eq:four}. Together with $\Psi_d(\hat\omega)$, whose first entry is $1$, they generate $(\Z/2)^5$.
+\end{proof}
+
+\begin{remark}\label{pm:rem:odd}
+(1) Hypothesis (ii) enters through the entry $T$: on a closed walk of even length the top flip does not change $N_c$. It holds as soon as there is a periodic history below $2$ of odd period, by Lemma~\ref{pm:lem:loops}; such a history serves every $M$ and every $w\ge2$. For $30$ and $75$ the stationary histories below $2$ (the case $d=2$ of Lemma~\ref{r30:lem:holonomy}, and the wall above) have period $1$, so Proposition~\ref{pm:prop:odd} gives a second proof of the case $d\ge2$ for these rules.
+
+(2) The proof uses $g_{11}=1$ only in the top flip. For an affine rule, $\partial g=g_{10}$ is constant, the top flip changes $\Psi_d$ by $(0,g_{10}T,0,T,0)$, and the argument gives nothing. The conclusion can fail: for rule $150$ with $w=3$ and $M=0$ the step $y[3]$ does not have $\mathrm{Hol}=K$, since the eventual image of $\Gamma_{3,0}$ is not strongly connected while that of $\Gamma_{2,0}$ is (Remark~\ref{pm:rem:linear}): the tower of $\Gamma_{3,0}$ through the step $x[2]$ is that of $\Gamma_{2,0}$ followed by one memory step (the last part of Lemma~\ref{pm:lem:loops}, whose proof does not use $g_{11}=1$), so the failure occurs at $y[3]$.
+
+(3) The proof is not constructive. The walks $\omega$ and $\omega'$ exist because $I_{d-1}$ is the whole group; they depend on $M$, and their bottom layers are arbitrary periodic input sequences rather than the layers of a tail.
+\end{remark}
+
+\begin{proposition}\label{pm:prop:hol}
+Let $f\in\{30,45,75,135\}$, $w\ge1$, $M\ge0$, and $-M+1\le d\le w$. Then $\mathrm{Hol}=K$ at the step $L_{\nu+1}=y[d]$.
+\end{proposition}
+
+\begin{proof}
+For $30$ this is Lemma~\ref{r30:lem:holonomy}. For the others it follows from Proposition~\ref{pm:prop:ahead} for $d\le1$. Let $d\ge2$. For $75$ and $45$ we use Corollary~\ref{pm:cor:crit} with the histories of this subsection: for $75$, the wall; for $45$, the period-$4$ loop for $d=2$ and the restricted wall for $d\ge3$. All of them are defined on all layers below their top, so they serve every $M$. For $135$ we use Proposition~\ref{pm:prop:odd}. Its hypothesis (i) is Proposition~\ref{pm:prop:ahead}. For (ii), the history below $2$ given above for $135$ has period $3$, so by Lemma~\ref{pm:lem:loops} it gives a closed walk of length $3$ in $G_2$, for every $M\ge0$ and $w\ge2$.
+\end{proof}
+
+\subsection{The lift certificate}\label{pm:sec:cert}
+
+This subsection is not used in any other proof. Proposition~\ref{pm:prop:odd} gives full holonomy for $135$ at every depth without exhibiting histories. The following finite computation produces explicit histories depth by depth. It confirms the behind-layer case of Proposition~\ref{pm:prop:hol} by an independent route: for $30$ and $45$ at every depth, and for $135$ at the depths $d\le105$. Its parameters are $f$, $n_{\max}$, $T_{\max}$ and the largest depth $D$ (Appendix~\ref{app:proofs}).
+
+\emph{Nodes.} A node of depth $k\ge0$ is a pair $(X,V)$. Here $X$ is a time series, taken up to rotation, of the four bits $(Z^a_t(k-1),Z^a_t(k),Z^b_t(k-1),Z^b_t(k))$ over its minimal period $m$, and $V\ge0$ is an integer. The node is \emph{realized} by a periodic history $Z$ on layers $\le k$ (that is, below $k+1$) of minimal period $T_Z$ if the top two layers of $Z$ have joint series $X$, up to a time shift of $Z$, and $V$ is the $2$-adic valuation $v_2(T_Z)$. Then $m\mid T_Z$.
+
+\emph{Start.} $\mathcal R_0$ consists of one node of depth $0$ for each $F$-orbit of a configuration $c$ with $\sh^nc=c$, $n\le n_{\max}$. It is realized by the comoving diagram of $c$ with phase $0$ in copy $a$ and the same diagram with layer $0$ complemented in copy $b$ (Lemmas~\ref{pm:lem:tail} and~\ref{pm:lem:ops}(4)). Here $V$ is $v_2$ of the minimal comoving period of the diagram.
+
+\emph{Test.} The bits $\varphi^c_t$ for the step $y[k+1]$ read only the top two layers, so they are $m$-periodic. Over the period $T_Z$, $\ell_c(Z)=(T_Z/m)\sum_{t<m}\varphi^c_t$, and $T_Z/m$ is odd exactly when $v_2(m)=V$. The test $\mathrm{test}(\mathcal R_k)$ is true if some node of $\mathcal R_k$ has $v_2(m)=V$ and $\sum_{t<m}\varphi^a_t\ne\sum_{t<m}\varphi^b_t$. Then any realization $Z$ of that node has $\ell_a(Z)\ne\ell_b(Z)$, and Corollary~\ref{pm:cor:crit}(b) gives $\mathrm{Hol}=K$ at the step $y[k+1]$, for every $M$.
+
+\emph{Lift.} By (Z1), a layer $k+1$ extending $Z$ in copy $c$ is a series with $Z_{t+1}(k+1)=Z_t(k+1)\oplus \varphi^c_t$. If $\sum_{t<m}\varphi^c_t=0$ there are two such series, of period $m$, one for each initial value. If the sum is $1$, there are again two such series, each of period $2m$ and not of period $m$; so the minimal period $m'$ of either one divides $2m$ and does not divide $m$, which gives $v_2(m')=v_2(m)+1$. (The minimal period need not be $2m$: for $m=3$ the series $010101$ has minimal period $2$.) Only this valuation is used. In this case only the series with initial value $0$ is kept. The new history has minimal period $\mathrm{lcm}(T_Z,m_a,m_b)$, where $m_c$ is the minimal period of the new layer in copy $c$, and its $2$-adic valuation is $\max(V,v_2(m_a),v_2(m_b))$. For each node of $\mathcal R_k$ and each choice of new layers, form the joint series of layers $(k,k+1)$; if its length is at most $T_{\max}$, it gives the node $(X',\max(V,v_2(m_a),v_2(m_b)))$. The set of these nodes is $\mathcal R_{k+1}$. Each node of $\mathcal R_{k+1}$ is realized, by extending a realization of its parent; condition (Z2) is unaffected since $k+1\ge1$.
+
+By construction $\mathcal R_k$ is a \emph{subset} of the nodes realized by periodic histories: lifts of period above $T_{\max}$ are omitted, and when both copies have odd increment sum, only one of the two relative phases of the new layers is included. This suffices, since only the existence of one good node per depth is used.
+
+\emph{Why a repetition covers all depths.} The new node set $\mathcal R_{k+1}=\mathcal N(\mathcal R_k)$ is computed by a map $\mathcal N$ that does not depend on $k$, and the test $\mathrm{test}(\mathcal R_k)$ depends only on $\mathcal R_k$. Hence if $\mathcal R_{k_0+\varrho}=\mathcal R_{k_0}$ for some $k_0\ge0$ and $\varrho\ge1$, then $\mathcal R_{k+\varrho}=\mathcal R_k$ for all $k\ge k_0$, by induction, and $\{\mathcal R_k:k\ge0\}=\{\mathcal R_0,\dots,\mathcal R_{k_0+\varrho-1}\}$. If $\mathrm{test}(\mathcal R_k)$ holds for $0\le k<k_0+\varrho$, it holds for all $k\ge0$. Then $\mathrm{Hol}=K$ at every step $y[d]$ with $d\ge1$, for every $M$.
+
+\begin{proposition}[computer-assisted]\label{pm:prop:cert}
+\begin{enumerate}
+\item For $f=45$, $n_{\max}=2$, $T_{\max}=4$: $\mathrm{test}(\mathcal R_k)$ holds for $0\le k\le22$, and $\mathcal R_{23}=\mathcal R_{19}$ (here $k_0=19$, $\varrho=4$, so the tests needed are those with $k\le22$). Hence $\mathrm{Hol}=K$ at $y[d]$ for every $d\ge1$.
+\item For $f=30$, $n_{\max}=2$, $T_{\max}=1$: $\mathrm{test}(\mathcal R_k)$ holds for $0\le k\le2$, and $\mathcal R_3=\mathcal R_2$.
+\item For $f=135$, $n_{\max}=4$, $T_{\max}=12$: $\mathrm{test}(\mathcal R_k)$ holds for $0\le k\le104$, so $\mathrm{Hol}=K$ at $y[d]$ for $1\le d\le105$, and the sets $\mathcal R_k$, $0\le k\le105$, are pairwise distinct.
+\end{enumerate}
+\end{proposition}
+
+This repeats the case $d\ge1$ of Proposition~\ref{pm:prop:hol} by an independent route, for $45$ and $30$ at every depth and for $135$ at the depths $d\le105$.
+
+\begin{proposition}\label{pm:prop:twocopy}
+For $f\in\{30,45,75,135\}$ the conclusions of Theorem~\ref{r30:thm:window} hold for all $w\ge1$ and $M\ge0$.
+\end{proposition}
+
+\begin{proof}
+Parts (1), (2) and the size of $\mathcal{T}$ hold for every left-permutive $f$ (Proposition~\ref{r30:prop:closure} and Lemma~\ref{r30:lem:explicit}), and part (3) holds once $\mathrm{Hol}=K$ at every step $y[d]$ with $-M+1\le d\le w$, by the proof of Theorem~\ref{r30:thm:window}. This is Proposition~\ref{pm:prop:hol}. The consequences listed in Theorem~\ref{r30:thm:window} follow from (1)--(3) as shown after that theorem.
+\end{proof}
+
+\subsection{The class of 135 behind the front}\label{pm:sec:135}
+
+For $135$ the holonomy behind the front is full at every depth (Proposition~\ref{pm:prop:hol}), and the conclusions of Theorem~\ref{r30:thm:window} hold for every $w$ (Proposition~\ref{pm:prop:twocopy}). The proof differs from that for the other three rules in one respect: it gives no uniform family of histories (Remark~\ref{pm:rem:odd}(3)). By Corollary~\ref{pm:cor:crit}(b), full holonomy at depth $d$ is witnessed by one periodic history below $d$ with $\ell_a\ne\ell_b$. For $30$ and $75$ stationary histories do this at every depth $d\ge2$. For $45$ a history of period $4$ does so at $d=2$, and for $d\ge3$ a wall of period $2$ does so after a top flip (Corollary~\ref{pm:cor:crit}(c)). For $135$ the certificate of Section~\ref{pm:sec:cert} gives such histories at every depth $d\le105$, and the node sets $\mathcal R_0,\dots,\mathcal R_{105}$ of Proposition~\ref{pm:prop:cert}(3) are pairwise distinct. We do not know whether rule $135$ has a wall like that of $45$, that is, a periodic history $Z$ defined on all layers $i\in\Z$ with $N_a(Z,i)\ne N_b(Z,i)$ for all large $i$. Nothing in this paper depends on the answer.

@@ -1,0 +1,16 @@
+vacuum: relation, F^3V=sigma V, rho V_w=V_{2-w}, left-blind; (even,odd) cells of V_0..V_5: [(0, 1), (0, 3), (0, 2), (1, 0), (3, 0), (2, 0)]
+constants: F maps 0,1,2,3 to [1, 2, 0, 3]
+F-orbits on Fix(sigma^2) (pairs = cells at even, odd sites): [[(0, 0), (1, 1), (2, 2)], [(0, 1), (0, 3), (0, 2), (1, 0), (3, 0), (2, 0)], [(1, 2), (3, 1), (3, 2), (2, 1), (1, 3), (2, 3)], [(3, 3)]]
+period-2 configurations: up to sigma, the 6-orbits of F are exactly the vacuum and W
+F^3 K^- = sigma K^-, F^3 K^+ = sigma^{-1} K^+, rho K^- = F^2 K^+ : ok
+first non-vacuum cell: p^-(m) = 2-floor((m-1)/3), q^+(n) = 2+floor((n+1)/3); right constants m mod 3, n+1 mod 3
+K^-_m is constant exactly on [2-floor((m+1)/3), oo), -12 <= m <= 12
+Fix(sigma^{-1}F^3) : vertices 107 recurrent components ['big37', 'const0', 'const1', 'const2', 'const3', 'vac', 'vac', 'vac']
+   vacuum 10 -> unique kink to const0 : 101010|00000
+   vacuum 03 -> unique kink to const1 : 030303|111111
+   vacuum 20 -> unique kink to const2 : 020202|22222
+Fix(sigma F^3) : vertices 107 recurrent components ['big37', 'const0', 'const1', 'const2', 'const3', 'vac', 'vac', 'vac']
+   vacuum 10 -> unique kink to const1 : 010101|11111
+   vacuum 03 -> unique kink to const2 : 030303|222222
+   vacuum 20 -> unique kink to const0 : 202020|00000
+kinks ok: W lies in the big component, which has no exit; the constant loops have no exits; each vacuum pair has exactly one kink to a constant

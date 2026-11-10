@@ -1,0 +1,6 @@
+B0 pairs of frames at offsets 1..12 other than 10 (shared marker): 36
+rho=(102): B1 failures 0 (J!=0 at 2048 windows) | B2 failures 0 | B3 frame-set failures 0, segment-label failures 0
+rho=(021): B1 failures 0 (J!=0 at 2048 windows) | B2 failures 0 | B3 frame-set failures 0, segment-label failures 0
+rho=(210): B1 failures 0 (J!=0 at 2048 windows) | B2 failures 0 | B3 frame-set failures 0, segment-label failures 0
+rho=(120): B1 failures 0 (J!=0 at 3072 windows) | B2 failures 0 | B3 frame-set failures 0, segment-label failures 0
+rho=(201): B1 failures 0 (J!=0 at 3072 windows) | B2 failures 0 | B3 frame-set failures 0, segment-label failures 0

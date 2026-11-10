@@ -1,0 +1,8 @@
+rule 133: wall 0330 fixed in every context: True; single-car map {0: 1, 1: 3, 2: 0, 3: 2}
+  D: radius 4, 4 windows changed; commutes with F on all 4^11 windows: True
+  injective on periodic configs of period<=9: True ; D^4=id there: True
+  D(0^Z)==0^Z: True ; F(0^Z) = 1 ^Z (const orbit: [1, 3, 0, 2] )
+rule 161: wall 3003 fixed in every context: True; single-car map {0: 1, 1: 3, 2: 0, 3: 2}
+  D: radius 4, 4 windows changed; commutes with F on all 4^11 windows: True
+  injective on periodic configs of period<=9: True ; D^4=id there: True
+  D(0^Z)==0^Z: True ; F(0^Z) = 1 ^Z (const orbit: [1, 3, 0, 2] )

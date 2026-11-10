@@ -1,0 +1,22 @@
+    ... 1000 solutions after 15s
+    ... 2000 solutions after 28s
+    ... 3000 solutions after 38s
+    ... 4000 solutions after 49s
+    ... 5000 solutions after 60s
+    ... 6000 solutions after 65s
+    ... 7000 solutions after 70s
+    ... 8000 solutions after 76s
+    ... 9000 solutions after 83s
+    ... 10000 solutions after 90s
+    ... 11000 solutions after 95s
+    ... 12000 solutions after 100s
+    ... 13000 solutions after 104s
+    ... 14000 solutions after 109s
+    ... 15000 solutions after 114s
+    ... 16000 solutions after 117s
+    ... 17000 solutions after 119s
+    ... 18000 solutions after 122s
+    ... 19000 solutions after 124s
+    ... 20000 solutions after 127s
+
+=== rule 54R, radius R=2: 2048 variables, 294244 clauses, encode 0.4s, enumeration 127.0s, 20000 solutions (CAPPED)

@@ -1,0 +1,14 @@
+|U_L| for L=1..18: [1, 1, 0, 0, 1, 2, 1, 0, 1, 3, 4, 4, 4, 5, 9, 16, 20, 17]
+N=0 L=11: explicit family of 1 words lies in U_L: True, distinct: True
+N=1 L=15: explicit family of 2 words lies in U_L: True, distinct: True
+90 failures {'integral': 0, 'frameset': 0, 'dpsi': 0, 'comm': 0, 'hom': 0, 'ab': 0, 'inv': 0} | nontrivial 1490 | noncommuting pairs 300
+165 failures {'integral': 0, 'frameset': 0, 'dpsi': 0, 'comm': 0, 'hom': 0, 'ab': 0, 'inv': 0} | nontrivial 1491 | noncommuting pairs 300
+negative control 165, no complement frames: commutation failures 296 of 300
+0 True 1
+1 True 2
+2 True 3
+3 True 4
+4 True 5
+5 True 6
+6 True 7
+7 True 8

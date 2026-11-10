@@ -1,0 +1,95 @@
+\section{Rule 54: walls}\label{sec:54}
+
+Rule $54$ is $f(a,b,c)=b\oplus(a\vee c)$; its values with $b=1$ are $f(0,1,0)=1$ and $f(a,1,c)=0$ whenever $a\vee c=1$. We need only
+\begin{equation}\label{eq:wall}
+f(\,\cdot\,,1,1)=f(1,1,\,\cdot\,)=0,\qquad f(1,0,\,\cdot\,)=f(\,\cdot\,,0,1)=1 .
+\end{equation}
+
+\subsection{Walls and segments}
+Call a pair of adjacent cells $(c_i,c_{i+1})=(3,3)$ a \emph{wall}; it is the wall (iv) of Takesue \cite[Fig.~2, Table~III]{Takesue1989}, whose list for this wall contains $54$R. A \emph{segment} of a configuration $c$ is a maximal interval $[i,j]$ such that $c_{i-2}=c_{i-1}=3$, $c_{j+1}=c_{j+2}=3$, $c_i\ne3$, $c_j\ne3$, and $c$ contains no wall inside $[i,j]$; its \emph{content} is the word $c_i\cdots c_j\in\A^{L}$, $L=j-i+1$, and $S_L\subset\A^L$ denotes the set of words that can occur as contents, namely those with first and last letter different from $3$ and without $33$ as a factor. Note that a segment may contain isolated $3$'s.
+
+\begin{lemma}\label{lem:walls}
+Let $F=F_{54}$.
+\begin{enumerate}
+\item[(i)] $F(c)$ has a wall at $(i,i+1)$ if and only if $c$ does. The same holds for $F^{-1}$.
+\item[(ii)] If $[i,j]$ is a segment of $c$ then $[i,j]$ is a segment of $F(c)$, and the content of $F(c)$ on $[i,j]$ depends only on the content of $c$ on $[i,j]$. Writing $F_L\colon S_L\to S_L$ for the induced map, $F_L$ is a permutation.
+\item[(iii)] $F_1$ is the $3$-cycle $\pi\colon0\mapsto1\mapsto2\mapsto0$ on $S_1=\{0,1,2\}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) If $c_i=c_{i+1}=3$ then $y_i=y_{i+1}=1$ and $x_i=x_{i+1}=1$, so by \eqref{eq:F} and \eqref{eq:wall}, $F(c)_i=(1,1\oplus f(y_{i-1},1,1))=3$ and $F(c)_{i+1}=(1,1\oplus f(1,1,y_{i+2}))=3$. Conversely, if $F(c)_i=F(c)_{i+1}=3$ then $y_i=y_{i+1}=1$, hence $f(y_{i-1},1,1)=f(1,1,y_{i+2})=0$, and the second coordinates force $x_i=x_{i+1}=1$. The statement for $F^{-1}$ follows by applying the forward statement to $F^{-1}(c)$.
+
+(ii) By (i) the walls of $F(c)$ are those of $c$, so the maximal wall-free intervals between walls are the same, and the condition $c_i\ne3$, $c_j\ne3$ holds for $F(c)$ as well, since otherwise $F(c)$ would have a wall at $(i-1,i)$ or $(j,j+1)$ that $c$ lacks. The new value at a position $k\in[i,j]$ depends on $c_{k-1},c_k,c_{k+1}$, and the only positions outside $[i,j]$ involved are $i-1$ and $j+1$, where $c$ equals $3$ regardless of the configuration; so the content of $F(c)$ on $[i,j]$ is a function of the content of $c$ on $[i,j]$. This function maps $S_L$ into $S_L$ by the first part, and it is injective since $F^{-1}$ induces its inverse by the same argument.
+
+(iii) For a segment $3\,s\,3$ with $s=(x,y)\ne3$, \eqref{eq:F} gives $F(c)$ at that position $=(y,x\oplus f(1,y,1))=(y,x\oplus y\oplus1)$, which sends $0\mapsto1\mapsto2\mapsto0$.
+\end{proof}
+
+\subsection{Relabelling automorphisms}
+
+\begin{definition}
+For $L\ge1$ and a permutation $\varphi$ of $S_L$, let $\Phi_L(\varphi)\colon\A^{\Z}\to\A^{\Z}$ be the map that replaces the content $s$ of every segment of length exactly $L$ by $\varphi(s)$ and leaves every other cell unchanged.
+\end{definition}
+
+Whether the cell at position $k$ belongs to a segment of length $L$, and if so which content and which position in it, is determined by $c_{k-L-1},\dots,c_{k+L+1}$: one needs at most $L-1$ cells on one side to reach the end of the segment and two more to see the wall. So $\Phi_L(\varphi)$ is a block map of radius at most $L+1$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:54}]
+Let $\varphi\in C_L$, the centralizer of $F_L$ in $\Sym(S_L)$, and $g=\Phi_L(\varphi)$. Since $\varphi(s)\in S_L$ has no wall inside and does not begin or end with $3$, the walls of $g(c)$ are the walls of $c$, so $g(c)$ has the same segments as $c$, and $\Phi_L(\varphi^{-1})$ inverts $g$. Hence $g$ is an automorphism of $\A^{\Z}$ and $\Phi_L$ is an injective homomorphism $\Sym(S_L)\to\Aut(\A^{\Z})$; injectivity is seen on a configuration consisting of one wall and one segment of length $L$ repeated periodically.
+
+To see that $g$ commutes with $F$, compare $F(g(c))$ and $g(F(c))$ cell by cell. Both configurations have the walls of $c$. At a position inside a segment of length $L$ with content $s$, the first is $F_L(\varphi(s))$ and the second is $\varphi(F_L(s))$ at the corresponding position, by Lemma~\ref{lem:walls}(ii) applied to $g(c)$ and to $c$ respectively, and these agree because $\varphi$ commutes with $F_L$. At a position $k$ inside a segment of another length, or inside a wall, or not in any segment, $g$ fixes $c_k$ and $F(c)_k$; moreover $F(c)_k$ and $F(g(c))_k$ agree, because the only cells where $g(c)$ differs from $c$ are inside segments of length $L$, and such a cell is adjacent to $k$ only if $k$ is a wall cell, whose image under $F$ is $3$ regardless of its neighbours by \eqref{eq:wall}.
+
+For $L\ne L'$ the maps in $\Phi_L(C_L)$ and $\Phi_{L'}(C_{L'})$ act on disjoint sets of cells and commute, so the $\Phi_L$ assemble to a homomorphism $\Phi$ on the restricted direct sum $\bigoplus_L C_L$. It is injective: suppose $\Phi(\varphi_{L_1},\dots,\varphi_{L_m})=\mathrm{id}$ with $\varphi_{L_i}\in C_{L_i}$. Fix $i$ and $s\in S_{L_i}$, and let $c$ be the periodic configuration $(3\,3\,s)^{\infty}$. Every segment of $c$ has length $L_i$, so the components $\varphi_{L_j}$ with $j\ne i$ act on $c$ as the identity, and $\Phi(\varphi_{L_1},\dots,\varphi_{L_m})(c)=\Phi_{L_i}(\varphi_{L_i})(c)=(3\,3\,\varphi_{L_i}(s))^{\infty}$. This equals $c$ only if $\varphi_{L_i}(s)=s$; as $s$ was arbitrary, $\varphi_{L_i}=\mathrm{id}$. Every $\Phi_L(\varphi)$ commutes with $\sh$, being a block map.
+
+Finally, $F_L\in C_L$, and $F_L\ne\mathrm{id}$ because the content $0^L$ is not fixed: by \eqref{eq:wall} its first cell becomes $(0,0\oplus f(1,0,0))=(0,1)$. So $o_L\ge2$ and $\Phi(\bigoplus_L\langle F_L\rangle)\cong\bigoplus_L\Z/o_L$ is an infinite direct sum of nontrivial finite cyclic groups; it is not finitely generated, since any finite set of elements lies in finitely many summands and generates a finite group. Every subgroup of a virtually $\Z^d$ group is finitely generated, since a subgroup $H$ meets the finite-index copy of $\Z^d$ in a finitely generated group of finite index in $H$. Hence $\Aut(X_F)$ is not virtually $\Z^d$ for any $d$. For $L=2$, both cells of a segment are adjacent to a wall, and by \eqref{eq:wall} each evolves as $(x,y)\mapsto(y,x\oplus y\oplus1)$ independently of the other, so $F_2=\pi\times\pi$ on $S_2=\{0,1,2\}^2$, a product of three $3$-cycles, and $C_2\cong\Z/3\wr S_3\cong(\Z/3)^3\rtimes S_3$, which is nonabelian. So $\Aut(X_F)$ is not abelian, and in particular is not $\langle\sh,F\rangle$. Note that $\bigoplus_L\Z/o_L$ is abelian and $\bigoplus_LC_L$ may or may not be virtually abelian; we do not know whether $\Aut(X_F)$ is virtually abelian.
+\end{proof}
+
+The element $D=\Phi_1(F_1)=\Phi_1(\pi)$ is the radius-$2$ block map that sends each window $3\,3\,s\,3\,3$ with $s\ne3$ to $\pi(s)$ and acts as the identity on every other window. Its table differs from that of the identity on exactly $3$ of the $1024$ entries. The orders $o_L$ of $F_L$ for $L=1,\dots,7$ are $3,3,6,90,2520,102702600$ and $4354384834800$; the content $0^L$ has period $3,3,6,9,18,21,18,21,30,33$ for $L=1,\dots,10$. More automorphisms come from the rest of $C_L$: for $L=2$, $S_2$ has $9$ elements on which $F_2$ acts as three $3$-cycles, so $C_2\cong(\Z/3)^3\rtimes S_3$ has order $162$, and $\Phi_2(C_2)$ consists of $162$ automorphisms of radius $3$, among them the elements of order $2$ that swap two of the three cycles.
+
+\subsection{The census at radius 2}
+
+\begin{theorem}\label{thm:54census}
+$\Cent^{\times}_2(F_{54})$ has exactly $23$ elements: the $13$ maps $\sh^aF^b$ with $|a|+|b|\le2$ and the $10$ maps $F^bD^k$ with $|b|\le2$ and $k\in\{1,2\}$. At radius $1$, $\Cent_1(F_{54})$ has $13$ elements: the $5$ maps $\sh^aF^b$, the $2$ constants, and $6$ non-injective maps $g_{\pm,k}$, $k=0,1,2$, where $g_{+,k}(c)_i=\pi^k(c_{i-1})$ if $(c_i,c_{i+1})=(3,3)$ and $g_{+,k}(c)_i=3$ otherwise, and $g_{-,k}$ is the mirror image. These record, on each wall, the cell just outside it; they commute with $F$ because by \eqref{eq:wall} the cell adjacent to a wall evolves by $\pi$ whatever its other neighbour is. 
+\end{theorem}
+
+\begin{proof}
+The radius-$1$ centralizer was enumerated completely; the $13$ tables are listed in the data accompanying the paper, and each can be checked by hand against \eqref{eq:constraints}. At radius $2$ the full centralizer exceeded the enumeration cap of $2\times10^4$ solutions (it contains, for instance, the compositions of the $g_{\pm,k}$ with the maps $\Phi_L$ and many other non-injective endomorphisms), so the balanced commuting maps were enumerated instead: there are exactly $23$, every one of them passed the pair-graph test, $13$ matched the tables of $\sh^aF^b$, and each of the remaining $10$ differs from the table of some $F^b$ on exactly the three windows $3\,3\,s\,3\,3$, $s\in\{0,1,2\}$, where it applies $\pi^{k}$ to the value that $F^b$ would produce. That is the table of $F^bD^k=D^kF^b$.
+\end{proof}
+
+The count is what the wall mechanism predicts. Maps $\Phi_L(\varphi)$ with $L\ge2$ have radius at least $3$, and $\sh^aD^k$ with $a\ne0$ has radius $3$, so the only elements of $\langle\sh,F\rangle\cdot\Phi(\bigoplus_LC_L)$ of radius at most $2$ are the $13+10$ listed. At radius $3$ the wall relabellings stop being the whole story.
+
+\subsection{Every finite group}\label{sec:trains}
+
+Call a maximal run of the symbol $3$ of length at least $2$ a \emph{wall of length} equal to the run length. By Lemma~\ref{lem:walls}, $F$ maps every wall onto itself and every maximal wall-free interval onto itself, so walls and their lengths are invariant. A \emph{car} is a cell $c_i\ne3$ with walls immediately on both sides, that is $c_{i-2}=c_{i-1}=c_{i+1}=c_{i+2}=3$. By \eqref{eq:wall} a car evolves by $\pi$, whatever lies beyond the walls. A \emph{train with $m$ cars} is a word
+\[
+W\;s_1\,3\,3\,s_2\,3\,3\cdots3\,3\,s_m\;W'
+\]
+in which every $s_j\ne3$ is a car, consecutive cars are separated by walls of length exactly $2$, and the outer walls $W,W'$ have length at least $3$. Trains are disjoint, and their positions, lengths and number of cars are invariant under $F$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:finite}]
+For $\sigma\in S_m$ let $\Psi_m(\sigma)$ replace the cars $(s_1,\dots,s_m)$ of every train with exactly $m$ cars by $(s_{\sigma^{-1}(1)},\dots,s_{\sigma^{-1}(m)})$ and leave every other cell unchanged. Whether a cell is the $j$-th car of an $m$-car train is decided by the cells within distance $3m+3$, so $\Psi_m(\sigma)$ is a block map of radius at most $3m+3$. It maps trains to trains with the same cars in other places, so it preserves the set of trains, $\Psi_m(\sigma)\Psi_m(\rho)=\Psi_m(\sigma\rho)$, and $\Psi_m(\sigma^{-1})$ inverts $\Psi_m(\sigma)$. It commutes with $F$: both $F\Psi_m(\sigma)(c)$ and $\Psi_m(\sigma)F(c)$ carry the walls and non-train cells of $F(c)$, because $\Psi_m(\sigma)$ changes only car cells and a car's neighbours are wall cells whose images are $3$ regardless, and in each $m$-car train both carry $(\pi(s_{\sigma^{-1}(1)}),\dots,\pi(s_{\sigma^{-1}(m)}))$, since $F$ applies the same $\pi$ to every car. The homomorphism is injective: on the periodic configuration whose period is one $m$-car train with a single car equal to $1$ in position $j$ and all other cars $0$, followed by a wall of length $3$, the map $\Psi_m(\sigma)$ moves the $1$ to position $\sigma(j)$, so $\sigma$ is determined by its action. Maps for different $m$ act on disjoint sets of cells and commute. Finally every finite group $G$ embeds in $S_{|G|}$ by Cayley's theorem.
+\end{proof}
+
+Since $\bigoplus_mS_m$ is not finitely generated and contains nonabelian finite groups, Theorem~\ref{thm:finite} also implies the qualitative conclusions of Theorem~\ref{thm:54}; the relabellings $\Phi$ remain of interest because they have small radius and account exactly for the automorphisms of radius $2$.
+
+
+\subsection{Trading wall cells for segment cells}\label{sec:tau}
+
+\begin{proof}[Proof of Theorem~\ref{thm:tau}]
+For a configuration $c$ let $P_1(c)$ be the set of positions $i$ with $c_{i-3}=c_{i-2}=c_{i-1}=3$, $c_i\ne3$, $c_{i+1}=c_{i+2}=3$ (a singleton whose left wall has length at least $3$), and $P_2(c)$ the set of positions $i$ with $c_{i-3}=c_{i-2}=3$, $c_{i-1}=\pi(c_i)$, $c_i\ne3$, $c_{i+1}=c_{i+2}=3$ (a two-cell segment of the form $(\pi(s),s)$). By definition $\tau(c)_{i-1}=\pi(c_i)$ for $i\in P_1(c)$, $\tau(c)_{i-1}=3$ for $i\in P_2(c)$, and $\tau(c)_j=c_j$ at every other position $j$. Whether $j$ is modified, and how, depends on $c_{j-2},\dots,c_{j+3}$, so $\tau$ is a block map of radius $3$. The sets $P_1(c)$ and $P_2(c)$ are disjoint, since $c_{i-1}=3$ in the first and $c_{i-1}\ne3$ in the second, and distinct $i$ give distinct modified positions $i-1$.
+
+\emph{Involution.} Modifying position $i-1$ for $i\in P_1(c)\cup P_2(c)$ changes no other membership. Indeed, a position $j\ne i$ in $P_1$ or $P_2$ reads the cells $j-3,\dots,j+2$, and $i-1$ lies among them only for $j\in\{i-3,i-2,i,i+1,i+2\}$; but $i+1$ and $i+2$ are wall cells in both patterns, $i-2$ is a wall cell, and $i-3$ is a wall cell in $P_1$ and in $P_2$, while membership of $j$ in $P_1\cup P_2$ requires $c_j\ne3$. So the modifications at different positions are independent, $P_1(\tau(c))=P_2(c)$ and $P_2(\tau(c))=P_1(c)$, and the two modifications undo each other. Hence $\tau^2=\mathrm{id}$, and $\tau$ is a bijection, so $\tau\in\Aut(\A^{\Z})$.
+
+\emph{Commutation.} By Lemma~\ref{lem:walls}, $F$ preserves walls. A cell adjacent to a wall evolves by $(x,y)\mapsto(y,x\oplus y\oplus1)$, which is $\pi$ on $\{0,1,2\}$, whatever its other neighbour is, by \eqref{eq:wall}. For $i\in P_1(c)$ the cell $c_i$ is adjacent to a wall, so $F(c)_i=\pi(c_i)\ne3$ and $i\in P_1(F(c))$. For $i\in P_2(c)$ both cells $c_{i-1}=\pi(s)$ and $c_i=s$ are adjacent to walls, so $F(c)$ carries $(\pi^2(s),\pi(s))=(\pi(\pi(s)),\pi(s))$ there and $i\in P_2(F(c))$. Thus $P_1(F(c))=P_1(c)$ and $P_2(F(c))=P_2(c)$. We compare $\tau(F(c))$ and $F(\tau(c))$ cell by cell. At $i-1$ with $i\in P_1(c)$: the first is $\pi(F(c)_i)=\pi^2(c_i)$; in $\tau(c)$ the cell $i-1$ holds $\pi(c_i)$ and has the wall $c_{i-3}c_{i-2}=3\,3$ on its left, so it evolves by $\pi$ and the second is $\pi^2(c_i)$ as well. At $i$ with $i\in P_1(c)$: both equal $\pi(c_i)$, since $c_i$ is adjacent to the wall on its right in $c$ and in $\tau(c)$. At $i-1$ with $i\in P_2(c)$: the first is $3$; in $\tau(c)$ the cell $i-1$ is $3$ with $3\,3$ on its left, hence part of a wall, and stays $3$. At $i$ with $i\in P_2(c)$: both equal $\pi(c_i)$. At any other position $j$, $\tau$ changes neither $c_j$ nor $F(c)_j$, and $F(\tau(c))_j=F(c)_j$ because the only cells where $\tau(c)$ differs from $c$ are the positions $i-1$, whose neighbours are $i$ (already treated) and $i-2$, a wall cell, whose image under $F$ is $3$ regardless of its right neighbour by \eqref{eq:wall}. So $\tau F=F\tau$.
+
+\emph{The rest.} $\tau$ sends $\cdots3\,3\,3\,0\,3\,3\cdots$ to $\cdots3\,3\,1\,0\,3\,3\cdots$, so it does not preserve walls, and therefore lies outside the subgroup generated by $\sh$, $F$ and the wall relabellings, all of which preserve walls. For $c=\cdots3\,3\,3\,0\,3\,3\,3\cdots$ one has $\tau D(c)=\tau(\cdots3\,3\,3\,1\,3\,3\,3\cdots)=\cdots3\,3\,2\,1\,3\,3\,3\cdots$, whereas $\tau(c)=\cdots3\,3\,1\,0\,3\,3\,3\cdots$ contains no singleton, so $D\tau(c)=\tau(c)\ne\tau D(c)$.
+\end{proof}
+
+
+\subsection{Radius 3}\label{sec:54r3}
+
+The enumeration of $\Cent^{\times}_3(F_{54})$ needs more than the balance filter, because the balanced commuting maps at radius $3$ number more than $2\times10^4$ and almost all of them are not injective. The computation adds to the CNF the injectivity of $g$ on all spatially periodic configurations of period at most $5$, and then learns further necessary conditions lazily: whenever the solver returns a non-injective map, a local witness is extracted, either a diamond (two words of length $13$ with the same prefix and suffix of length $6$ and equal images of length $7$, which by Hedlund's theorem no surjective map admits) or a pair of periodic configurations of period at most $10$ with equal images, and the clause forbidding that witness is added and shared among all worker processes. Every surviving map is decided by the pair-graph test. This enumeration is not complete, and we give no count of $\Cent^{\times}_3(F_{54})$ (Appendix~\ref{app:census}). Every automorphism of radius $3$ that it has produced differs from some $\sh^aF^b$, $|a|+|b|\le3$, only on windows of length $7$ that contain a wall, and most of them, like $\tau$, do not preserve walls. The wall relabellings of Theorem~\ref{thm:54} and the wall-trading involutions of Theorem~\ref{thm:tau} are two instances of one principle: between two walls, $F$ acts as a finite permutation, and a local, reversible re-encoding of the walls and segments that intertwines these permutations commutes with $F$.
+
+\begin{remark}
+Nothing in Lemma~\ref{lem:walls}(i),(ii) uses more of rule $54$ than the three values $f(0,1,1)=f(1,1,0)=f(1,1,1)=0$, so $33$ is a wall for the $32$ elementary rules with these values, among them rules $0$--$7$, $16$--$23$, $32$--$39$ and $48$--$55$, and each such second-order automaton admits the relabelling automorphisms $\Phi_L(\varphi)$ for $\varphi$ in the centralizer of its own $F_L$. Rule $110$ has $f(0,1,1)=1$, rule $30$ has $f(0,1,1)=1$, and rule $90$ has $f(0,1,1)=1$; none of them has $33$ as a wall. For rules $110$ and $30$ the automorphism groups are $\langle\sh,F\rangle\cong\Z^2$ \cite{PaperA,PaperB}.
+\end{remark}
+

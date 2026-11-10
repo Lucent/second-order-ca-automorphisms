@@ -1,0 +1,6 @@
+54R: persistent words (k, period, word) found: [(2, 1, '33'), (2, 2, '33'), (2, 3, '33'), (2, 4, '33'), (2, 5, '33'), (2, 6, '33')] (6 total, shortest length 2)
+     damage after 300 steps over 40 trials: left spread 15 (min -1), right spread 21 (min 0), healed 0/40
+110R: persistent words (k, period, word) found: [] (0 total, shortest length -)
+     damage after 300 steps over 40 trials: left spread 195 (min 167), right spread 41 (min 22), healed 0/40
+30R: persistent words (k, period, word) found: [] (0 total, shortest length -)
+     damage after 300 steps over 40 trials: left spread 98 (min 72), right spread 300 (min 299), healed 0/40

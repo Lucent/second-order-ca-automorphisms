@@ -1,0 +1,309 @@
++ python moves.py 110 --speeds 1/1 --kmax 7
+rule 110 bg ((0,), (0,)) states [((0,), (0,))] rho_ok True S 18
+  lib state 0 [(1, 1, [1, 3, 3], [3], 'gap', 2, 0.75)]
+k 1 edges 16 ctxdis 71 used t0 (bar0) [-2] (bar1) [-2]
+    ext 0 {'states': 3, 'orbits': 2, 'noread_orbits': 2, 'noread_states': 3, 'sizes': [1, 2]}
+    ext 1 {'states': 3, 'orbits': 1, 'noread_orbits': 1, 'noread_states': 3, 'sizes': [3]}
+    ext 2 {'states': 3, 'orbits': 1, 'noread_orbits': 1, 'noread_states': 3, 'sizes': [3]}
+    ext 3 {'states': 3, 'orbits': 1, 'noread_orbits': 1, 'noread_states': 3, 'sizes': [3]}
+k 2 edges 192 ctxdis 189 used t0 (bar0) [-3, -2, -1] (bar1) [-3, -2, -1]
+    ext 0 {'states': 12, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3, 9]}
+    ext 1 {'states': 12, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12]}
+    ext 2 {'states': 12, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12]}
+    ext 3 {'states': 12, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12]}
+k 3 edges 1280 ctxdis 685 used t0 (bar0) [-4, -3, -2, -1, 0] (bar1) [-4, -3, -2, -1, 0]
+    ext 0 {'states': 48, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12, 36]}
+    ext 1 {'states': 48, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [48]}
+    ext 2 {'states': 48, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [48]}
+    ext 3 {'states': 48, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [48]}
+k 4 edges 7168 ctxdis 2248 used t0 (bar0) [-5, -4, -3, -2, -1, 0, 1] (bar1) [-5, -4, -3, -2, -1, 0, 1]
+    ext 0 {'states': 192, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [48, 144]}
+    ext 1 {'states': 192, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [192]}
+    ext 2 {'states': 192, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [192]}
+    ext 3 {'states': 192, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [192]}
+k 5 edges 36864 ctxdis 7445 used t0 (bar0) [-6, -5, -4, -3, -2, -1, 0, 1, 2] (bar1) [-6, -5, -4, -3, -2, -1, 0, 1, 2]
+    ext 0 {'states': 768, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [192, 576]}
+    ext 1 {'states': 768, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [768]}
+    ext 2 {'states': 768, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [768]}
+    ext 3 {'states': 768, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [768]}
+k 6 edges 180224 ctxdis 25837 used t0 (bar0) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3] (bar1) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3]
+    ext 0 {'states': 3072, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [768, 2304]}
+    ext 1 {'states': 3072, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3072]}
+    ext 2 {'states': 3072, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3072]}
+    ext 3 {'states': 3072, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3072]}
+k 7 edges 851968 ctxdis 87694 used t0 (bar0) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4] (bar1) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+    ext 0 {'states': 12288, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3072, 9216]}
+    ext 1 {'states': 12288, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12288]}
+    ext 2 {'states': 12288, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12288]}
+    ext 3 {'states': 12288, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12288]}
++ python moves.py 46 --speeds 1/1 --kmax 8
+rule 46 bg ((0,), (0,)) states [((0,), (0,))] rho_ok True S 18
+  lib state 0 [(1, 1, [1, 3, 3], [3], 'gap', 2, 0.75)]
+k 1 edges 12 ctxdis 61 used t0 (bar0) [-3, -2, -1] (bar1) [-3, -2, -1]
+    ext 0 {'states': 3, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2]}
+    ext 1 {'states': 3, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2]}
+    ext 2 {'states': 3, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2]}
+    ext 3 {'states': 3, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2]}
+k 2 edges 132 ctxdis 167 used t0 (bar0) [-4, -3, -2, -1, 0] (bar1) [-4, -3, -2, -1, 0]
+    ext 0 {'states': 12, 'orbits': 4, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5]}
+    ext 1 {'states': 12, 'orbits': 4, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5]}
+    ext 2 {'states': 12, 'orbits': 4, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5]}
+    ext 3 {'states': 12, 'orbits': 4, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5]}
+k 3 edges 836 ctxdis 513 used t0 (bar0) [-5, -4, -3, -2, -1, 0, 1] (bar1) [-5, -4, -3, -2, -1, 0, 1]
+    ext 0 {'states': 48, 'orbits': 8, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 9]}
+    ext 1 {'states': 48, 'orbits': 8, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 9]}
+    ext 2 {'states': 48, 'orbits': 8, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 9]}
+    ext 3 {'states': 48, 'orbits': 8, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 9]}
+k 4 edges 4484 ctxdis 1495 used t0 (bar0) [-6, -5, -4, -3, -2, -1, 0, 1, 2] (bar1) [-6, -5, -4, -3, -2, -1, 0, 1, 2]
+    ext 0 {'states': 192, 'orbits': 16, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 1 {'states': 192, 'orbits': 16, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 2 {'states': 192, 'orbits': 16, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 3 {'states': 192, 'orbits': 16, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+k 5 edges 22276 ctxdis 4122 used t0 (bar0) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3] (bar1) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3]
+    ext 0 {'states': 768, 'orbits': 32, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 1 {'states': 768, 'orbits': 32, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 2 {'states': 768, 'orbits': 32, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 3 {'states': 768, 'orbits': 32, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+k 6 edges 105988 ctxdis 11495 used t0 (bar0) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4] (bar1) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+    ext 0 {'states': 3072, 'orbits': 64, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 1 {'states': 3072, 'orbits': 64, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 2 {'states': 3072, 'orbits': 64, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+    ext 3 {'states': 3072, 'orbits': 64, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 4, 5, 6, 8]}
+k 7 edges 490500 ctxdis 31511 used t0 (bar0) [-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5] (bar1) [-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    ext 0 {'states': 12288, 'orbits': 128, 'noread_orbits': 0, 'noread_states': 0, 'sizes': 'many'}
+    ext 1 {'states': 12288, 'orbits': 128, 'noread_orbits': 0, 'noread_states': 0, 'sizes': 'many'}
+    ext 2 {'states': 12288, 'orbits': 128, 'noread_orbits': 0, 'noread_states': 0, 'sizes': 'many'}
+    ext 3 {'states': 12288, 'orbits': 128, 'noread_orbits': 0, 'noread_states': 0, 'sizes': 'many'}
+k 8 edges 2226180 ctxdis 85392 used t0 (bar0) [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6] (bar1) [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+    ext 0 {'states': 49152, 'orbits': 256, 'noread_orbits': 0, 'noread_states': 0, 'sizes': 'many'}
+    ext 1 {'states': 49152, 'orbits': 256, 'noread_orbits': 0, 'noread_states': 0, 'sizes': 'many'}
+    ext 2 {'states': 49152, 'orbits': 256, 'noread_orbits': 0, 'noread_states': 0, 'sizes': 'many'}
+    ext 3 {'states': 49152, 'orbits': 256, 'noread_orbits': 0, 'noread_states': 0, 'sizes': 'many'}
++ python moves.py 42 --speeds 1/1 --kmax 8
+rule 42 bg ((0,), (0,)) states [((0,), (0,))] rho_ok True S 18
+  lib state 0 [(1, 1, [1, 3, 3], [3], 'gap', 2, 0.75)]
+k 1 edges 16 ctxdis 60 used t0 (bar0) [-2] (bar1) [-2]
+    ext 0 {'states': 3, 'orbits': 1, 'noread_orbits': 1, 'noread_states': 3, 'sizes': [3]}
+    ext 1 {'states': 3, 'orbits': 1, 'noread_orbits': 1, 'noread_states': 3, 'sizes': [3]}
+    ext 2 {'states': 3, 'orbits': 1, 'noread_orbits': 1, 'noread_states': 3, 'sizes': [3]}
+    ext 3 {'states': 3, 'orbits': 2, 'noread_orbits': 2, 'noread_states': 3, 'sizes': [1, 2]}
+k 2 edges 192 ctxdis 188 used t0 (bar0) [-3, -2, -1] (bar1) [-3, -2, -1]
+    ext 0 {'states': 12, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12]}
+    ext 1 {'states': 12, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12]}
+    ext 2 {'states': 12, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12]}
+    ext 3 {'states': 12, 'orbits': 3, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 9]}
+k 3 edges 1280 ctxdis 721 used t0 (bar0) [-4, -3, -2, -1, 0] (bar1) [-4, -3, -2, -1, 0]
+    ext 0 {'states': 48, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [48]}
+    ext 1 {'states': 48, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [48]}
+    ext 2 {'states': 48, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [48]}
+    ext 3 {'states': 48, 'orbits': 4, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 9, 36]}
+k 4 edges 7168 ctxdis 2262 used t0 (bar0) [-5, -4, -3, -2, -1, 0, 1] (bar1) [-5, -4, -3, -2, -1, 0, 1]
+    ext 0 {'states': 192, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [192]}
+    ext 1 {'states': 192, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [192]}
+    ext 2 {'states': 192, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [192]}
+    ext 3 {'states': 192, 'orbits': 5, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 9, 36, 144]}
+k 5 edges 36864 ctxdis 7590 used t0 (bar0) [-6, -5, -4, -3, -2, -1, 0, 1, 2] (bar1) [-6, -5, -4, -3, -2, -1, 0, 1, 2]
+    ext 0 {'states': 768, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [768]}
+    ext 1 {'states': 768, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [768]}
+    ext 2 {'states': 768, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [768]}
+    ext 3 {'states': 768, 'orbits': 6, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 9, 36, 144, 576]}
+k 6 edges 180224 ctxdis 25401 used t0 (bar0) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3] (bar1) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3]
+    ext 0 {'states': 3072, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3072]}
+    ext 1 {'states': 3072, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3072]}
+    ext 2 {'states': 3072, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3072]}
+    ext 3 {'states': 3072, 'orbits': 7, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 9, 36, 144, 576]}
+k 7 edges 851968 ctxdis 84749 used t0 (bar0) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4] (bar1) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+    ext 0 {'states': 12288, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12288]}
+    ext 1 {'states': 12288, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12288]}
+    ext 2 {'states': 12288, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [12288]}
+    ext 3 {'states': 12288, 'orbits': 8, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 9, 36, 144, 576]}
+k 8 edges 3932160 ctxdis 278629 used t0 (bar0) [-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5] (bar1) [-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    ext 0 {'states': 49152, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [49152]}
+    ext 1 {'states': 49152, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [49152]}
+    ext 2 {'states': 49152, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [49152]}
+    ext 3 {'states': 49152, 'orbits': 9, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2, 9, 36, 144, 576]}
++ python moves.py 87 --speeds 1/3 --kmax 6
+rule 87 bg ((0,), (0,)) states [((0,), (0,)), ((0,), (1,)), ((1,), (0,))] rho_ok True S 34
+  lib state 0 [(1, 3, [3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 3, 0.5), (1, 3, [2, 1, 0, 3, 0, 2, 0, 2, 0, 2], [2, 0], 'gap', 3, 0.035), (1, 3, [2, 1, 0, 1, 0, 1, 0, 1], [0, 1], 'gap', 3, 0.363), (1, 3, [2, 1, 0, 1, 2, 1, 2, 1, 2, 1], [2, 1], 'gap', 3, 0.328), (1, 3, [2, 0, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 3, 0.352), (1, 3, [2, 0, 2, 1, 0, 1, 0, 1, 0, 1], [0, 1], 'gap', 3, 0.137)]
+  lib state 1 [(1, 3, [2, 1, 2, 1, 2, 1], [2, 1], 'gap', 3, 0.5), (1, 3, [0, 3, 0, 3, 0, 2, 0, 2, 0, 2], [2, 0], 'gap', 3, 0.312), (1, 3, [0, 3, 0, 3, 1, 3, 1, 3, 1, 3], [1, 3], 'gap', 3, 0.348), (1, 3, [0, 3, 0, 2, 0, 2, 0, 2, 0], [2, 0], 'gap', 3, 0.254), (1, 3, [0, 3, 0, 2, 1, 0, 1, 0, 1, 0], [0, 1], 'gap', 3, 0.012), (1, 3, [0, 1, 2, 1, 2, 1, 2, 1], [2, 1], 'gap', 3, 0.348)]
+  lib state 2 [(1, 3, [3, 1, 3, 1, 3, 1, 3], [1, 3], 'gap', 2, 0.5), (1, 3, [3, 0, 3, 1, 3, 1, 3, 1, 3], [1, 3], 'gap', 2, 0.332), (1, 3, [3, 0, 3, 0, 3, 0, 2, 0, 2, 0], [2, 0], 'gap', 2, 0.074), (1, 3, [3, 0, 3, 0, 3, 1, 3, 1, 3, 1], [1, 3], 'gap', 2, 0.199), (1, 3, [3, 0, 3, 0, 2, 0, 2, 0, 2, 0], [2, 0], 'gap', 2, 0.152), (1, 3, [3, 0, 3, 0, 2, 1, 0, 1, 0, 1], [0, 1], 'gap', 2, 0.047)]
+k 1 edges 200 ctxdis 133 used t0 (bar0) [-5, -4, -3, -2, -1, 0, 1, 2, 3] (bar1) [-5, -4, -3, -2, -1, 0, 1, 2, 3]
+    ext 0 {'states': 9, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [2, 7]}
+    ext 1 {'states': 9, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [9]}
+    ext 2 {'states': 9, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [9]}
+    ext 3 {'states': 9, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [9]}
+k 2 edges 1248 ctxdis 600 used t0 (bar0) [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4] (bar1) [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+    ext 0 {'states': 36, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [9, 27]}
+    ext 1 {'states': 36, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [36]}
+    ext 2 {'states': 36, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [36]}
+    ext 3 {'states': 36, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [36]}
+k 3 edges 6784 ctxdis 2908 used t0 (bar0) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5] (bar1) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    ext 0 {'states': 144, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [36, 108]}
+    ext 1 {'states': 144, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [144]}
+    ext 2 {'states': 144, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [144]}
+    ext 3 {'states': 144, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [144]}
+k 4 edges 34304 ctxdis 14342 used t0 (bar0) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6] (bar1) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+    ext 0 {'states': 576, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [144, 432]}
+    ext 1 {'states': 576, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [576]}
+    ext 2 {'states': 576, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [576]}
+    ext 3 {'states': 576, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [576]}
+k 5 edges 168960 ctxdis 60581 used t0 (bar0) [-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7] (bar1) [-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+    ext 0 {'states': 2304, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [576, 1728]}
+    ext 1 {'states': 2304, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [2304]}
+    ext 2 {'states': 2304, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [2304]}
+    ext 3 {'states': 2304, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [2304]}
+k 6 edges 815104 ctxdis 239262 used t0 (bar0) [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8] (bar1) [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8]
+    ext 0 {'states': 9216, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [2304, 6912]}
+    ext 1 {'states': 9216, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [9216]}
+    ext 2 {'states': 9216, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [9216]}
+    ext 3 {'states': 9216, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [9216]}
++ python moves.py 162 --bx 00 --by 01 --speeds 1/3 --kmax 4
+rule 162 bg ((0, 0), (0, 1)) states [((0, 0), (0, 1)), ((0, 0), (1, 0)), ((0, 1), (1, 0)), ((1, 0), (0, 1)), ((1, 0), (0, 0)), ((0, 1), (0, 0))] rho_ok True S 34
+  lib state 0 [(1, 3, [1, 3, 3, 3, 3, 3, 3], [3], 'gap', 2, 0.387), (1, 3, [1, 3, 2, 3, 3, 0, 3, 0, 3, 0], [0, 3], 'gap', 2, 0.191), (1, 3, [1, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 2, 0.25), (1, 3, [1, 3, 2, 3, 2, 2, 2, 2, 2, 2], [2], 'gap', 2, 0.18), (1, 3, [1, 3, 1, 3, 3, 3, 3, 3, 3], [3], 'gap', 2, 0.488)]
+  lib state 1 [(1, 3, [1, 3, 3, 3, 3, 3, 3], [3], 'gap', 2, 0.387), (1, 3, [1, 3, 2, 3, 3, 0, 3, 0, 3, 0], [0, 3], 'gap', 2, 0.184), (1, 3, [1, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 2, 0.25), (1, 3, [1, 3, 2, 3, 2, 2, 2, 2, 2, 2], [2], 'gap', 2, 0.176), (1, 3, [1, 3, 1, 3, 3, 3, 3, 3, 3], [3], 'gap', 2, 0.477)]
+  lib state 2 [(1, 3, [3, 3, 1, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 3, 0.047), (1, 3, [3, 3, 1, 3, 1, 3, 0, 3, 0, 3], [0, 3], 'gap', 3, 0.004), (1, 3, [3, 3, 1, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 3, 0.031), (1, 3, [3, 3, 1, 3, 3, 3, 3, 3, 3], [3], 'gap', 3, 0.34), (1, 3, [3, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 3, 0.25), (1, 3, [3, 3, 0, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 3, 0.023)]
+  lib state 3 [(1, 3, [3, 3, 1, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 2, 0.094), (1, 3, [3, 3, 1, 3, 1, 3, 0, 3, 0, 3], [0, 3], 'gap', 2, 0.023), (1, 3, [3, 3, 1, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 2, 0.059), (1, 3, [3, 3, 1, 3, 3, 3, 3, 3, 3], [3], 'gap', 2, 0.211), (1, 3, [3, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 2, 0.25), (1, 3, [3, 3, 0, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 2, 0.047)]
+  lib state 4 [(1, 3, [3, 3, 1, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 3, 0.023), (1, 3, [3, 3, 1, 3, 1, 3, 0, 3, 0, 3], [0, 3], 'gap', 3, 0.004), (1, 3, [3, 3, 1, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 3, 0.188), (1, 3, [3, 3, 1, 3, 3, 3, 3, 3, 3], [3], 'gap', 3, 0.188), (1, 3, [3, 2, 3, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 3, 0.031)]
+  lib state 5 [(1, 3, [3, 3, 1, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 2, 0.051), (1, 3, [3, 3, 1, 3, 1, 3, 0, 3, 0, 3], [0, 3], 'gap', 2, 0.016), (1, 3, [3, 3, 1, 3, 2, 3, 2, 3, 2, 3], [2, 3], 'gap', 2, 0.25), (1, 3, [3, 3, 1, 3, 3, 3, 3, 3, 3], [3], 'gap', 2, 0.215), (1, 3, [3, 2, 3, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 2, 0.055), (1, 3, [3, 2, 3, 3, 1, 3, 0, 3, 0, 3], [0, 3], 'gap', 2, 0.016)]
+k 1 edges 88 ctxdis 339 used t0 (bar0) [-5, -4, -3, -2, -1, 0, 1, 2, 3] (bar1) [-5, -4, -3, -2, -1, 0, 1, 2, 3]
+    ext 0 {'states': 18, 'orbits': 11, 'noread_orbits': 7, 'noread_states': 11, 'sizes': [1, 1, 1, 1, 2, 2]}
+    ext 1 {'states': 18, 'orbits': 11, 'noread_orbits': 7, 'noread_states': 11, 'sizes': [1, 1, 1, 1, 2, 2]}
+    ext 2 {'states': 18, 'orbits': 11, 'noread_orbits': 7, 'noread_states': 11, 'sizes': [1, 1, 1, 1, 2, 2]}
+    ext 3 {'states': 18, 'orbits': 11, 'noread_orbits': 7, 'noread_states': 11, 'sizes': [1, 1, 1, 1, 2, 2]}
+k 2 edges 576 ctxdis 1245 used t0 (bar0) [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4] (bar1) [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+    ext 0 {'states': 72, 'orbits': 56, 'noread_orbits': 42, 'noread_states': 49, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 72, 'orbits': 54, 'noread_orbits': 42, 'noread_states': 49, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 72, 'orbits': 54, 'noread_orbits': 41, 'noread_states': 47, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 72, 'orbits': 52, 'noread_orbits': 41, 'noread_states': 47, 'sizes': [1, 1, 1, 1, 1, 1]}
+k 3 edges 3520 ctxdis 6610 used t0 (bar0) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5] (bar1) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+    ext 0 {'states': 288, 'orbits': 15, 'noread_orbits': 11, 'noread_states': 52, 'sizes': [2, 2, 2, 2, 2, 2]}
+    ext 1 {'states': 288, 'orbits': 13, 'noread_orbits': 11, 'noread_states': 52, 'sizes': [2, 2, 2, 2, 2, 2]}
+    ext 2 {'states': 288, 'orbits': 13, 'noread_orbits': 10, 'noread_states': 36, 'sizes': [2, 2, 2, 2, 2, 2]}
+    ext 3 {'states': 288, 'orbits': 12, 'noread_orbits': 10, 'noread_states': 36, 'sizes': [2, 2, 2, 2, 2, 2]}
+k 4 edges 18304 ctxdis 24508 used t0 (bar0) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6] (bar1) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6]
+    ext 0 {'states': 1152, 'orbits': 614, 'noread_orbits': 451, 'noread_states': 723, 'sizes': 'many'}
+    ext 1 {'states': 1152, 'orbits': 614, 'noread_orbits': 451, 'noread_states': 723, 'sizes': 'many'}
+    ext 2 {'states': 1152, 'orbits': 614, 'noread_orbits': 450, 'noread_states': 683, 'sizes': 'many'}
+    ext 3 {'states': 1152, 'orbits': 614, 'noread_orbits': 450, 'noread_states': 683, 'sizes': 'many'}
++ python moves.py 25 --bx 01 --by 10 --speeds 1/1 --kmax 4
+rule 25 bg ((0, 1), (1, 0)) states [((0, 1), (1, 0)), ((1, 0), (0, 1))] rho_ok True S 18
+  lib state 0 [(1, 1, [3, 3], [3], 'gap', 2, 0.75)]
+  lib state 1 [(1, 1, [3, 3], [3], 'gap', 2, 0.75)]
+k 1 edges 48 ctxdis 59 used t0 (bar0) [-3, -2, -1, 0] (bar1) [-3, -2, -1, 0]
+    ext 0 {'states': 6, 'orbits': 3, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 4]}
+    ext 1 {'states': 6, 'orbits': 3, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 4]}
+    ext 2 {'states': 6, 'orbits': 3, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 4]}
+    ext 3 {'states': 6, 'orbits': 3, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 4]}
+k 2 edges 320 ctxdis 196 used t0 (bar0) [-4, -3, -2, -1, 0, 1] (bar1) [-4, -3, -2, -1, 0, 1]
+    ext 0 {'states': 24, 'orbits': 6, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 1, 1, 6, 14]}
+    ext 1 {'states': 24, 'orbits': 7, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 1, 1, 5, 6]}
+    ext 2 {'states': 24, 'orbits': 7, 'noread_orbits': 2, 'noread_states': 6, 'sizes': [1, 1, 1, 1, 5, 6]}
+    ext 3 {'states': 24, 'orbits': 8, 'noread_orbits': 2, 'noread_states': 6, 'sizes': [1, 1, 1, 1, 4, 5]}
+k 3 edges 1792 ctxdis 547 used t0 (bar0) [-5, -4, -3, -2, -1, 0, 1, 2] (bar1) [-5, -4, -3, -2, -1, 0, 1, 2]
+    ext 0 {'states': 96, 'orbits': 14, 'noread_orbits': 8, 'noread_states': 13, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 96, 'orbits': 15, 'noread_orbits': 8, 'noread_states': 13, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 96, 'orbits': 15, 'noread_orbits': 9, 'noread_states': 19, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 96, 'orbits': 18, 'noread_orbits': 9, 'noread_states': 19, 'sizes': [1, 1, 1, 1, 1, 1]}
+k 4 edges 9216 ctxdis 1781 used t0 (bar0) [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3] (bar1) [-6, -5, -4, -3, -2, -1, 0, 1, 2, 3]
+    ext 0 {'states': 384, 'orbits': 43, 'noread_orbits': 27, 'noread_states': 49, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 384, 'orbits': 43, 'noread_orbits': 27, 'noread_states': 49, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 384, 'orbits': 43, 'noread_orbits': 27, 'noread_states': 49, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 384, 'orbits': 46, 'noread_orbits': 27, 'noread_states': 49, 'sizes': [1, 1, 1, 1, 1, 1]}
++ python moves.py 74 --speeds 1/1 --kmax 4
+rule 74 bg ((0,), (0,)) states [((0,), (0,))] rho_ok True S 18
+  lib state 0 [(1, 1, [1, 2, 1], [2, 1], 'gap', 2, 0.5), (1, 1, [1, 3, 2, 1, 2], [1, 2], 'gap', 2, 0.312)]
+k 1 edges 4 ctxdis 139 used t0 (bar0) [-2, -1, 0, 1] (bar1) [-2, -1, 0, 1]
+    ext 0 {'states': 3, 'orbits': 3, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 1]}
+    ext 1 {'states': 3, 'orbits': 2, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 2]}
+    ext 2 {'states': 3, 'orbits': 2, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 2]}
+    ext 3 {'states': 3, 'orbits': 1, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [3]}
+k 2 edges 48 ctxdis 516 used t0 (bar0) [-3, -2, -1, 0, 1, 2] (bar1) [-3, -2, -1, 0, 1, 2]
+    ext 0 {'states': 12, 'orbits': 5, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 1, 1, 8]}
+    ext 1 {'states': 12, 'orbits': 5, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 1, 3, 6]}
+    ext 2 {'states': 12, 'orbits': 5, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 1, 3, 6]}
+    ext 3 {'states': 12, 'orbits': 6, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 1, 2, 2, 5]}
+k 3 edges 320 ctxdis 1749 used t0 (bar0) [-4, -3, -2, -1, 0, 1, 2, 3] (bar1) [-4, -3, -2, -1, 0, 1, 2, 3]
+    ext 0 {'states': 48, 'orbits': 14, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 48, 'orbits': 13, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 48, 'orbits': 13, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 48, 'orbits': 13, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+k 4 edges 1792 ctxdis 6007 used t0 (bar0) [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4] (bar1) [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]
+    ext 0 {'states': 192, 'orbits': 35, 'noread_orbits': 10, 'noread_states': 10, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 192, 'orbits': 35, 'noread_orbits': 10, 'noread_states': 10, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 192, 'orbits': 35, 'noread_orbits': 10, 'noread_states': 10, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 192, 'orbits': 40, 'noread_orbits': 10, 'noread_states': 10, 'sizes': [1, 1, 1, 1, 1, 1]}
++ python moves.py 114 --bx 1 --by 1 --speeds 1/1 --kmax 4
+rule 114 bg ((1,), (1,)) states [((1,), (1,))] rho_ok True S 18
+  lib state 0 [(1, 1, [2, 0, 0], [0], 'gap', 2, 0.375)]
+k 1 edges 8 ctxdis 20 used t0 (bar0) [-2, -1, 1, 3] (bar1) [-2, -1]
+    ext 0 {'states': 3, 'orbits': 1, 'noread_orbits': 1, 'noread_states': 3, 'sizes': [3]}
+    ext 1 {'states': 3, 'orbits': 2, 'noread_orbits': 2, 'noread_states': 3, 'sizes': [1, 2]}
+    ext 2 {'states': 3, 'orbits': 2, 'noread_orbits': 2, 'noread_states': 3, 'sizes': [1, 2]}
+    ext 3 {'states': 3, 'orbits': 3, 'noread_orbits': 3, 'noread_states': 3, 'sizes': [1, 1, 1]}
+k 2 edges 64 ctxdis 113 used t0 (bar0) [-3, -2, -1, 0] (bar1) [-3, -2, -1, 0]
+    ext 0 {'states': 12, 'orbits': 4, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 1, 9]}
+    ext 1 {'states': 12, 'orbits': 5, 'noread_orbits': 1, 'noread_states': 1, 'sizes': [1, 1, 3, 3, 4]}
+    ext 2 {'states': 12, 'orbits': 5, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 1, 3, 3, 4]}
+    ext 3 {'states': 12, 'orbits': 4, 'noread_orbits': 0, 'noread_states': 0, 'sizes': [1, 3, 4, 4]}
+k 3 edges 384 ctxdis 375 used t0 (bar0) [-4, -3, -2, -1, 0, 1] (bar1) [-4, -3, -2, -1, 0, 1]
+    ext 0 {'states': 48, 'orbits': 9, 'noread_orbits': 4, 'noread_states': 7, 'sizes': [1, 1, 1, 4, 4, 4]}
+    ext 1 {'states': 48, 'orbits': 7, 'noread_orbits': 4, 'noread_states': 7, 'sizes': [1, 1, 1, 4, 11, 13]}
+    ext 2 {'states': 48, 'orbits': 7, 'noread_orbits': 3, 'noread_states': 3, 'sizes': [1, 1, 1, 4, 11, 13]}
+    ext 3 {'states': 48, 'orbits': 6, 'noread_orbits': 3, 'noread_states': 3, 'sizes': [1, 1, 1, 3, 11, 31]}
+k 4 edges 2048 ctxdis 1215 used t0 (bar0) [-5, -4, -3, -2, -1, 0, 1, 2] (bar1) [-5, -4, -3, -2, -1, 0, 1, 2]
+    ext 0 {'states': 192, 'orbits': 14, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 192, 'orbits': 14, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 192, 'orbits': 14, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 192, 'orbits': 15, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
++ python moves.py 191 --speeds 2/4 --kmax 4
+rule 191 bg ((0,), (0,)) states [((0,), (0,)), ((0,), (1,)), ((1,), (1,)), ((1,), (0,))] rho_ok True S 42
+  lib state 0 [(2, 4, [2, 1, 2, 1, 2, 1, 2, 1, 2], [1, 2], 'gap', 2, 0.75)]
+  lib state 1 [(2, 4, [0, 3, 0, 3, 0, 3, 0, 3, 0], [3, 0], 'gap', 2, 0.75)]
+  lib state 2 [(2, 4, [2, 1, 2, 1, 2, 1, 2, 1, 2], [1, 2], 'gap', 2, 0.75)]
+  lib state 3 [(2, 4, [3, 0, 3, 0, 3, 0, 3, 0, 3], [0, 3], 'gap', 2, 0.75)]
+k 1 edges 142 ctxdis 130 used t0 (bar0) [-5, -4, -3, -2, -1, 0] (bar1) [-5, -4, -3, -2, -1, 0, 1]
+    ext 0 {'states': 12, 'orbits': 7, 'noread_orbits': 3, 'noread_states': 6, 'sizes': [1, 1, 1, 2, 2, 2]}
+    ext 1 {'states': 12, 'orbits': 6, 'noread_orbits': 4, 'noread_states': 6, 'sizes': [1, 1, 2, 2, 3, 3]}
+    ext 2 {'states': 12, 'orbits': 6, 'noread_orbits': 2, 'noread_states': 3, 'sizes': [1, 1, 2, 2, 3, 3]}
+    ext 3 {'states': 12, 'orbits': 4, 'noread_orbits': 2, 'noread_states': 3, 'sizes': [1, 2, 4, 5]}
+k 2 edges 800 ctxdis 251 used t0 (bar0) [-6, -5, -4, -3, -2, -1, 0, 1] (bar1) [-6, -5, -4, -3, -2, -1, 0, 1]
+    ext 0 {'states': 48, 'orbits': 16, 'noread_orbits': 8, 'noread_states': 24, 'sizes': [1, 1, 1, 1, 2, 2]}
+    ext 1 {'states': 48, 'orbits': 16, 'noread_orbits': 8, 'noread_states': 24, 'sizes': [1, 1, 1, 1, 2, 2]}
+    ext 2 {'states': 48, 'orbits': 16, 'noread_orbits': 8, 'noread_states': 18, 'sizes': [1, 1, 1, 1, 2, 2]}
+    ext 3 {'states': 48, 'orbits': 16, 'noread_orbits': 8, 'noread_states': 18, 'sizes': [1, 1, 1, 1, 1, 2]}
+k 3 edges 4224 ctxdis 434 used t0 (bar0) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2] (bar1) [-7, -6, -5, -4, -3, -2, -1, 0, 1, 2]
+    ext 0 {'states': 192, 'orbits': 48, 'noread_orbits': 32, 'noread_states': 123, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 192, 'orbits': 48, 'noread_orbits': 32, 'noread_states': 123, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 192, 'orbits': 48, 'noread_orbits': 32, 'noread_states': 114, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 192, 'orbits': 48, 'noread_orbits': 32, 'noread_states': 114, 'sizes': [1, 1, 1, 1, 1, 1]}
+k 4 edges 20992 ctxdis 691 used t0 (bar0) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3] (bar1) [-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3]
+    ext 0 {'states': 768, 'orbits': 130, 'noread_orbits': 92, 'noread_states': 534, 'sizes': 'many'}
+    ext 1 {'states': 768, 'orbits': 130, 'noread_orbits': 92, 'noread_states': 534, 'sizes': 'many'}
+    ext 2 {'states': 768, 'orbits': 130, 'noread_orbits': 92, 'noread_states': 513, 'sizes': 'many'}
+    ext 3 {'states': 768, 'orbits': 132, 'noread_orbits': 92, 'noread_states': 513, 'sizes': 'many'}
++ python moves.py 159 --speeds 2/4 --kmax 4
+rule 159 bg ((0,), (0,)) states [((0,), (0,)), ((0,), (1,)), ((1,), (1,)), ((1,), (0,))] rho_ok True S 42
+  lib state 0 []
+  lib state 1 []
+  lib state 2 []
+  lib state 3 []
+k 1 edges 0 ctxdis 0 used t0 (bar0) [] (bar1) []
+    ext 0 {'states': 12, 'orbits': 12, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 12, 'orbits': 12, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 12, 'orbits': 12, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 12, 'orbits': 12, 'noread_orbits': 4, 'noread_states': 4, 'sizes': [1, 1, 1, 1, 1, 1]}
+k 2 edges 0 ctxdis 0 used t0 (bar0) [] (bar1) []
+    ext 0 {'states': 48, 'orbits': 48, 'noread_orbits': 24, 'noread_states': 24, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 1 {'states': 48, 'orbits': 48, 'noread_orbits': 24, 'noread_states': 24, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 2 {'states': 48, 'orbits': 48, 'noread_orbits': 24, 'noread_states': 24, 'sizes': [1, 1, 1, 1, 1, 1]}
+    ext 3 {'states': 48, 'orbits': 48, 'noread_orbits': 24, 'noread_states': 24, 'sizes': [1, 1, 1, 1, 1, 1]}
+k 3 edges 0 ctxdis 0 used t0 (bar0) [] (bar1) []
+    ext 0 {'states': 192, 'orbits': 192, 'noread_orbits': 96, 'noread_states': 96, 'sizes': 'many'}
+    ext 1 {'states': 192, 'orbits': 192, 'noread_orbits': 96, 'noread_states': 96, 'sizes': 'many'}
+    ext 2 {'states': 192, 'orbits': 192, 'noread_orbits': 96, 'noread_states': 96, 'sizes': 'many'}
+    ext 3 {'states': 192, 'orbits': 192, 'noread_orbits': 96, 'noread_states': 96, 'sizes': 'many'}
+k 4 edges 0 ctxdis 0 used t0 (bar0) [] (bar1) []
+    ext 0 {'states': 768, 'orbits': 768, 'noread_orbits': 384, 'noread_states': 384, 'sizes': 'many'}
+    ext 1 {'states': 768, 'orbits': 768, 'noread_orbits': 384, 'noread_states': 384, 'sizes': 'many'}
+    ext 2 {'states': 768, 'orbits': 768, 'noread_orbits': 384, 'noread_states': 384, 'sizes': 'many'}
+    ext 3 {'states': 768, 'orbits': 768, 'noread_orbits': 384, 'noread_states': 384, 'sizes': 'many'}

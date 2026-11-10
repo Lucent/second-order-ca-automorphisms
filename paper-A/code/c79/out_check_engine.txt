@@ -1,0 +1,2 @@
+tests 630 bad 0
+z bad 0

@@ -1,0 +1,2 @@
+disagreements between the two T_P implementations: 0
+{'nonaffine': 65504, 'N': 64512, 'N&D': 64288, 'sd_nonaffine': 240}

@@ -1,0 +1,4 @@
+rule 24R, radius 4: 84 solutions; 82 candidate maps, 82 of them among the solutions; {'sigma^a F^b': 41, 'kappa sigma^a F^b': 41, 'constant': 2, 'unidentified': 0}
+rule 189R, radius 4: 82 solutions; 82 candidate maps, 82 of them among the solutions; {'sigma^a F^b': 41, 'kappa sigma^a F^b': 41, 'constant': 0, 'unidentified': 0}
+rule 63R, radius 4: 82 solutions; 81 candidate maps, 81 of them among the solutions; {'sigma^a F^b': 81, 'kappa sigma^a F^b': 0, 'constant': 1, 'unidentified': 0}
+rule 187R, radius 4: 81 solutions; 81 candidate maps, 81 of them among the solutions; {'sigma^a F^b': 81, 'kappa sigma^a F^b': 0, 'constant': 0, 'unidentified': 0}

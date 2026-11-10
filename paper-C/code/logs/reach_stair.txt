@@ -1,0 +1,1 @@
+rules 240 tests 1440 Lemma 2.3 failures 0 Theorem 2.4 failures 0

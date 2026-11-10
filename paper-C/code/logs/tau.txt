@@ -1,0 +1,6 @@
+changed entries: 24
+commutes with F: True
+injective (pair graph): True ; periodic<=10: True
+involution on 2000 random cyclic configurations: True
+tau is a named map: False
+tau commutes with D (random test): False

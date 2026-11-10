@@ -1,0 +1,50 @@
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=2pt, align=center, font=\scriptsize, inner sep=2.5pt, minimum height=7mm},
+  comp/.style={box, dashed, fill=black!8},
+  arr/.style={-{Stealth[length=1.6mm]}, thin},
+  grp/.style={draw=black!45, dotted, rounded corners=4pt, inner sep=4pt}]
+\node[box] (kinks) at (0,0) {kinks\\ Lem.~\ref{cl:lem:kinks}};
+\node[box] (off) at (0,-1.3) {offsets\\ Prop.~\ref{cl:prop:offsets}};
+\node[box] (red) at (0,-2.6) {reduction\\ Prop.~\ref{cl:prop:reduce}};
+\node[box] (bounce) at (3,0) {bounce\\ Lem.~\ref{cl:lem:bounce}};
+\node[box] (H1) at (3,-1.3) {$(\mathrm H_1)$\\ Prop.~\ref{cl:prop:H1}};
+\node[box] (probe) at (3,-2.6) {probes, debris\\ Lem.~\ref{cl:lem:probe}};
+\node[box] (moves) at (3,-3.9) {edge moves\\ Lem.~\ref{cl:lem:edgemove}};
+\node[box] (clean) at (3,-5.2) {clean reading\\ Lem.~\ref{cl:lem:clean}};
+\node[box] (H2) at (5.6,-5.2) {$(\mathrm H_2)$\\ Prop.~\ref{cl:prop:H2}};
+\node[box] (cone) at (8.6,-1.3) {light cone\\ Lem.~\ref{cl:lem:movelocal}};
+\node[box] (Rt) at (8.6,-2.6) {transfer\\ Lem.~\ref{cl:lem:transfer}};
+\node[box] (Fk) at (10.7,-3.9) {$(\mathrm F_k)$ for all $k$\\ Thm.~\ref{cl:thm:Fk}};
+\node[box] (ctrl) at (10.7,-5.2) {$(\mathrm{CTRL}_k)$ for all $k$\\ Cor.~\ref{cl:cor:ctrl}};
+\node[box] (step) at (5.6,-6.6) {$(\mathrm H_k)$, $(\mathrm{CTRL}_k)\Rightarrow(\mathrm H_{k+1})$\\ Prop.~\ref{cl:prop:ctrlstep}};
+\node[box] (Hk) at (5.6,-7.9) {$(\mathrm H_k)$ for all $k$};
+\node[box] (K) at (3,-7.9) {Lemma K};
+\node[box] (thm) at (3,-9.2) {$\Aut(X_{F_{110}})=\langle\sh,F_{110}\rangle$\\ Thm.~\ref{cl:thm:110rigid}};
+\draw[arr] (kinks) -- (off);
+\draw[arr] (off) -- (red);
+\draw[arr] (kinks) -- (bounce);
+\draw[arr] (bounce) -- (H1);
+\draw[arr] (H1) -- (probe);
+\draw[arr] (probe) -- (moves);
+\draw[arr] (moves) -- (clean);
+\draw[arr] (moves.east) -| (H2.north);
+\draw[arr] (moves.east) -- (7.2,-3.9) |- (cone.west);
+\draw[arr] (cone) -- (Rt);
+\draw[arr] (Rt.east) -| (Fk.north);
+\draw[arr] (Fk) -- (ctrl);
+\draw[arr] (ctrl.south) |- (step.east);
+\draw[arr] (clean.south) |- ([xshift=-12mm]step.north) ;
+\draw[arr] (H2) -- (step);
+\draw[arr] (step) -- (Hk);
+\draw[arr] (Hk) -- (K);
+\draw[arr] (K) -- (thm);
+\draw[arr] (red) |- (thm.west);
+\begin{scope}[on background layer]
+\node[grp, fit=(cone)(Rt)(Fk)(ctrl), label={[font=\scriptsize\itshape]above:edge moves of $F$ alone (no $h$)}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{Dependencies in the proof for the class of $110$. Every step is proved by hand, for every $k$ and every radius. The boxes in the dotted frame concern the edge moves of $F$ alone and do not involve the block map $h$. For $42$ the same diagram applies with Theorem~\ref{cl:thm:Fk42}; for $46$ the controllability theorem is Theorem~\ref{cl:thm:Fk46}; for $66$ and $189$ the steps are those of Section~\ref{c24:sec}, with the controllability theorem for $46$ transported by the factor map $\delta$ (Lemma~\ref{c24:lem:moves46}); for $93$ the probes, moves and $(\mathrm H_2)$, $(\mathrm H_3)$ are replaced as described in Section~\ref{sec:79}, and the induction starts from Proposition~\ref{c79:prop:F3}, which describes the orbits of the moves at level $3$.}
+\label{fig:dep}
+\end{figure}

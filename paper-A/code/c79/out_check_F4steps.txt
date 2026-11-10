@@ -1,0 +1,2 @@
+transfer and Steps 1, 2, 4: all identities hold [('step1exc', 34560), ('step2', 217728), ('step4', 62208)]
+closure: Proposition (F*_3) for b, Fb, F^-1 b joins each of the five sets of (F_4) into one class: [(((0, 0), False), 864, True), (((0, 0), True), 288, True), (((0, 1), None), 1152, True), (((1, 0), None), 1152, True), (((1, 1), None), 1152, True)]

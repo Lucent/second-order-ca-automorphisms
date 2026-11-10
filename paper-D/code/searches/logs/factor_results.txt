@@ -1,0 +1,2660 @@
+rule 13 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k -5 classes 1
+rule 13 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k -4 classes 1
+rule 13 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k -3 classes 1
+rule 13 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k -2 classes 1
+rule 13 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k -1 classes 1
+rule 13 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k 0 classes 1
+rule 13 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k 1 classes 1
+rule 13 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k 2 classes 1
+rule 13 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k 3 classes 1
+rule 13 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k 4 classes 1
+rule 13 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 13 r 1 p 5 k 5 classes 1
+rule 13 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k -4 classes 1
+rule 13 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k -3 classes 1
+rule 13 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k -2 classes 1
+rule 13 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k -1 classes 1
+rule 13 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k 0 classes 1
+rule 13 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k 1 classes 1
+rule 13 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k 2 classes 1
+rule 13 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k 3 classes 1
+rule 13 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 13 r 2 p 4 k 4 classes 1
+rule 13 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 13 r 3 p 3 k -3 classes 1
+rule 13 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 13 r 3 p 3 k -2 classes 1
+rule 13 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 13 r 3 p 3 k -1 classes 1
+rule 13 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 13 r 3 p 3 k 0 classes 1
+rule 13 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 13 r 3 p 3 k 1 classes 1
+rule 13 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 13 r 3 p 3 k 2 classes 1
+rule 13 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 13 r 3 p 3 k 3 classes 1
+rule 13 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 13 r 4 p 2 k -2 classes 1
+rule 13 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 13 r 4 p 2 k -1 classes 1
+rule 13 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 13 r 4 p 2 k 0 classes 1
+rule 13 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 13 r 4 p 2 k 1 classes 1
+rule 13 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 13 r 4 p 2 k 2 classes 1
+rule 13 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 13 r 5 p 1 k -1 classes 1
+rule 13 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 13 r 5 p 1 k 0 classes 1
+rule 13 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 13 r 5 p 1 k 1 classes 1
+rule 14 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k -5 classes 1
+rule 14 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k -4 classes 1
+rule 14 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k -3 classes 1
+rule 14 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k -2 classes 1
+rule 14 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k -1 classes 1
+rule 14 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k 0 classes 1
+rule 14 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k 1 classes 1
+rule 14 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k 2 classes 1
+rule 14 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k 3 classes 1
+rule 14 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k 4 classes 1
+rule 14 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 14 r 1 p 5 k 5 classes 1
+rule 14 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k -4 classes 1
+rule 14 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k -3 classes 1
+rule 14 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k -2 classes 1
+rule 14 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k -1 classes 1
+rule 14 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k 0 classes 1
+rule 14 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k 1 classes 1
+rule 14 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k 2 classes 1
+rule 14 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k 3 classes 1
+rule 14 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 14 r 2 p 4 k 4 classes 1
+rule 14 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 14 r 3 p 3 k -3 classes 1
+rule 14 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 14 r 3 p 3 k -2 classes 1
+rule 14 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 14 r 3 p 3 k -1 classes 1
+rule 14 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 14 r 3 p 3 k 0 classes 1
+rule 14 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 14 r 3 p 3 k 1 classes 1
+rule 14 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 14 r 3 p 3 k 2 classes 1
+rule 14 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 14 r 3 p 3 k 3 classes 1
+rule 14 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 14 r 4 p 2 k -2 classes 1
+rule 14 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 14 r 4 p 2 k -1 classes 1
+rule 14 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 14 r 4 p 2 k 0 classes 1
+rule 14 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 14 r 4 p 2 k 1 classes 1
+rule 14 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 14 r 4 p 2 k 2 classes 1
+rule 14 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 14 r 5 p 1 k -1 classes 1
+rule 14 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 14 r 5 p 1 k 0 classes 1
+rule 14 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 14 r 5 p 1 k 1 classes 1
+rule 25 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k -5 classes 1
+rule 25 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k -4 classes 1
+rule 25 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k -3 classes 1
+rule 25 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k -2 classes 1
+rule 25 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k -1 classes 1
+rule 25 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k 0 classes 1
+rule 25 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k 1 classes 1
+rule 25 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k 2 classes 1
+rule 25 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k 3 classes 1
+rule 25 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k 4 classes 1
+rule 25 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 25 r 1 p 5 k 5 classes 1
+rule 25 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k -4 classes 1
+rule 25 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k -3 classes 1
+rule 25 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k -2 classes 1
+rule 25 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k -1 classes 1
+rule 25 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k 0 classes 1
+rule 25 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k 1 classes 1
+rule 25 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k 2 classes 1
+rule 25 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k 3 classes 1
+rule 25 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 25 r 2 p 4 k 4 classes 1
+rule 25 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 25 r 3 p 3 k -3 classes 1
+rule 25 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 25 r 3 p 3 k -2 classes 1
+rule 25 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 25 r 3 p 3 k -1 classes 1
+rule 25 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 25 r 3 p 3 k 0 classes 1
+rule 25 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 25 r 3 p 3 k 1 classes 1
+rule 25 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 25 r 3 p 3 k 2 classes 1
+rule 25 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 25 r 3 p 3 k 3 classes 1
+rule 25 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 25 r 4 p 2 k -2 classes 1
+rule 25 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 25 r 4 p 2 k -1 classes 1
+rule 25 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 25 r 4 p 2 k 0 classes 1
+rule 25 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 25 r 4 p 2 k 1 classes 1
+rule 25 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 25 r 4 p 2 k 2 classes 1
+rule 25 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 25 r 5 p 1 k -1 classes 1
+rule 25 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 25 r 5 p 1 k 0 classes 1
+rule 25 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 25 r 5 p 1 k 1 classes 1
+rule 26 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k -5 classes 1
+rule 26 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k -4 classes 1
+rule 26 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k -3 classes 1
+rule 26 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k -2 classes 1
+rule 26 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k -1 classes 1
+rule 26 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k 0 classes 1
+rule 26 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k 1 classes 1
+rule 26 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k 2 classes 1
+rule 26 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k 3 classes 1
+rule 26 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k 4 classes 1
+rule 26 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 26 r 1 p 5 k 5 classes 1
+rule 26 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k -4 classes 1
+rule 26 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k -3 classes 1
+rule 26 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k -2 classes 1
+rule 26 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k -1 classes 1
+rule 26 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k 0 classes 1
+rule 26 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k 1 classes 1
+rule 26 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k 2 classes 1
+rule 26 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k 3 classes 1
+rule 26 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 26 r 2 p 4 k 4 classes 1
+rule 26 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 26 r 3 p 3 k -3 classes 1
+rule 26 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 26 r 3 p 3 k -2 classes 1
+rule 26 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 26 r 3 p 3 k -1 classes 1
+rule 26 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 26 r 3 p 3 k 0 classes 1
+rule 26 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 26 r 3 p 3 k 1 classes 1
+rule 26 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 26 r 3 p 3 k 2 classes 1
+rule 26 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 26 r 3 p 3 k 3 classes 1
+rule 26 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 26 r 4 p 2 k -2 classes 1
+rule 26 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 26 r 4 p 2 k -1 classes 1
+rule 26 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 26 r 4 p 2 k 0 classes 1
+rule 26 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 26 r 4 p 2 k 1 classes 1
+rule 26 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 26 r 4 p 2 k 2 classes 1
+rule 26 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 26 r 5 p 1 k -1 classes 1
+rule 26 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 26 r 5 p 1 k 0 classes 1
+rule 26 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 26 r 5 p 1 k 1 classes 1
+rule 28 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k -5 classes 1
+rule 28 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k -4 classes 1
+rule 28 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k -3 classes 1
+rule 28 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k -2 classes 1
+rule 28 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k -1 classes 1
+rule 28 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k 0 classes 1
+rule 28 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k 1 classes 1
+rule 28 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k 2 classes 1
+rule 28 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k 3 classes 1
+rule 28 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k 4 classes 1
+rule 28 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 28 r 1 p 5 k 5 classes 1
+rule 28 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k -4 classes 1
+rule 28 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k -3 classes 1
+rule 28 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k -2 classes 1
+rule 28 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k -1 classes 1
+rule 28 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k 0 classes 1
+rule 28 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k 1 classes 1
+rule 28 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k 2 classes 1
+rule 28 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k 3 classes 1
+rule 28 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 28 r 2 p 4 k 4 classes 1
+rule 28 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 28 r 3 p 3 k -3 classes 1
+rule 28 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 28 r 3 p 3 k -2 classes 1
+rule 28 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 28 r 3 p 3 k -1 classes 1
+rule 28 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 28 r 3 p 3 k 0 classes 1
+rule 28 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 28 r 3 p 3 k 1 classes 1
+rule 28 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 28 r 3 p 3 k 2 classes 1
+rule 28 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 28 r 3 p 3 k 3 classes 1
+rule 28 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 28 r 4 p 2 k -2 classes 1
+rule 28 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 28 r 4 p 2 k -1 classes 1
+rule 28 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 28 r 4 p 2 k 0 classes 1
+rule 28 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 28 r 4 p 2 k 1 classes 1
+rule 28 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 28 r 4 p 2 k 2 classes 1
+rule 28 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 28 r 5 p 1 k -1 classes 1
+rule 28 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 28 r 5 p 1 k 0 classes 1
+rule 28 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 28 r 5 p 1 k 1 classes 1
+rule 29 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k -5 classes 1
+rule 29 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k -4 classes 1
+rule 29 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k -3 classes 1
+rule 29 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k -2 classes 1
+rule 29 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k -1 classes 1
+rule 29 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k 0 classes 1
+rule 29 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k 1 classes 1
+rule 29 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k 2 classes 1
+rule 29 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k 3 classes 1
+rule 29 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k 4 classes 1
+rule 29 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 29 r 1 p 5 k 5 classes 1
+rule 29 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k -4 classes 1
+rule 29 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k -3 classes 1
+rule 29 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k -2 classes 1
+rule 29 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k -1 classes 1
+rule 29 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k 0 classes 1
+rule 29 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k 1 classes 1
+rule 29 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k 2 classes 1
+rule 29 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k 3 classes 1
+rule 29 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 29 r 2 p 4 k 4 classes 1
+rule 29 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 29 r 3 p 3 k -3 classes 1
+rule 29 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 29 r 3 p 3 k -2 classes 1
+rule 29 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 29 r 3 p 3 k -1 classes 1
+rule 29 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 29 r 3 p 3 k 0 classes 1
+rule 29 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 29 r 3 p 3 k 1 classes 1
+rule 29 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 29 r 3 p 3 k 2 classes 1
+rule 29 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 29 r 3 p 3 k 3 classes 1
+rule 29 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 29 r 4 p 2 k -2 classes 1
+rule 29 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 29 r 4 p 2 k -1 classes 1
+rule 29 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 29 r 4 p 2 k 0 classes 1
+rule 29 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 29 r 4 p 2 k 1 classes 1
+rule 29 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 29 r 4 p 2 k 2 classes 1
+rule 29 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 29 r 5 p 1 k -1 classes 1
+rule 29 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 29 r 5 p 1 k 0 classes 1
+rule 29 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 29 r 5 p 1 k 1 classes 1
+rule 31 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k -5 classes 1
+rule 31 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k -4 classes 1
+rule 31 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k -3 classes 1
+rule 31 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k -2 classes 1
+rule 31 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k -1 classes 1
+rule 31 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k 0 classes 1
+rule 31 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k 1 classes 1
+rule 31 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k 2 classes 1
+rule 31 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k 3 classes 1
+rule 31 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k 4 classes 1
+rule 31 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 31 r 1 p 5 k 5 classes 1
+rule 31 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k -4 classes 1
+rule 31 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k -3 classes 1
+rule 31 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k -2 classes 1
+rule 31 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k -1 classes 1
+rule 31 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k 0 classes 1
+rule 31 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k 1 classes 1
+rule 31 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k 2 classes 1
+rule 31 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k 3 classes 1
+rule 31 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 31 r 2 p 4 k 4 classes 1
+rule 31 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 31 r 3 p 3 k -3 classes 1
+rule 31 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 31 r 3 p 3 k -2 classes 1
+rule 31 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 31 r 3 p 3 k -1 classes 1
+rule 31 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 31 r 3 p 3 k 0 classes 1
+rule 31 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 31 r 3 p 3 k 1 classes 1
+rule 31 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 31 r 3 p 3 k 2 classes 1
+rule 31 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 31 r 3 p 3 k 3 classes 1
+rule 31 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 31 r 4 p 2 k -2 classes 1
+rule 31 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 31 r 4 p 2 k -1 classes 1
+rule 31 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 31 r 4 p 2 k 0 classes 1
+rule 31 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 31 r 4 p 2 k 1 classes 1
+rule 31 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 31 r 4 p 2 k 2 classes 1
+rule 31 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 31 r 5 p 1 k -1 classes 1
+rule 31 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 31 r 5 p 1 k 0 classes 1
+rule 31 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 31 r 5 p 1 k 1 classes 1
+rule 41 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k -5 classes 1
+rule 41 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k -4 classes 1
+rule 41 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k -3 classes 1
+rule 41 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k -2 classes 1
+rule 41 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k -1 classes 1
+rule 41 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k 0 classes 1
+rule 41 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k 1 classes 1
+rule 41 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k 2 classes 1
+rule 41 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k 3 classes 1
+rule 41 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k 4 classes 1
+rule 41 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 41 r 1 p 5 k 5 classes 1
+rule 41 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k -4 classes 1
+rule 41 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k -3 classes 1
+rule 41 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k -2 classes 1
+rule 41 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k -1 classes 1
+rule 41 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k 0 classes 1
+rule 41 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k 1 classes 1
+rule 41 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k 2 classes 1
+rule 41 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k 3 classes 1
+rule 41 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 41 r 2 p 4 k 4 classes 1
+rule 41 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 41 r 3 p 3 k -3 classes 1
+rule 41 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 41 r 3 p 3 k -2 classes 1
+rule 41 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 41 r 3 p 3 k -1 classes 1
+rule 41 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 41 r 3 p 3 k 0 classes 1
+rule 41 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 41 r 3 p 3 k 1 classes 1
+rule 41 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 41 r 3 p 3 k 2 classes 1
+rule 41 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 41 r 3 p 3 k 3 classes 1
+rule 41 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 41 r 4 p 2 k -2 classes 1
+rule 41 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 41 r 4 p 2 k -1 classes 1
+rule 41 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 41 r 4 p 2 k 0 classes 1
+rule 41 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 41 r 4 p 2 k 1 classes 1
+rule 41 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 41 r 4 p 2 k 2 classes 1
+rule 41 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 41 r 5 p 1 k -1 classes 1
+rule 41 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 41 r 5 p 1 k 0 classes 1
+rule 41 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 41 r 5 p 1 k 1 classes 1
+rule 43 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k -5 classes 1
+rule 43 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k -4 classes 1
+rule 43 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k -3 classes 1
+rule 43 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k -2 classes 1
+rule 43 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k -1 classes 1
+rule 43 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k 0 classes 1
+rule 43 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k 1 classes 1
+rule 43 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k 2 classes 1
+rule 43 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k 3 classes 1
+rule 43 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k 4 classes 1
+rule 43 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 43 r 1 p 5 k 5 classes 1
+rule 43 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k -4 classes 1
+rule 43 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k -3 classes 1
+rule 43 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k -2 classes 1
+rule 43 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k -1 classes 1
+rule 43 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k 0 classes 1
+rule 43 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k 1 classes 1
+rule 43 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k 2 classes 1
+rule 43 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k 3 classes 1
+rule 43 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 43 r 2 p 4 k 4 classes 1
+rule 43 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 43 r 3 p 3 k -3 classes 1
+rule 43 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 43 r 3 p 3 k -2 classes 1
+rule 43 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 43 r 3 p 3 k -1 classes 1
+rule 43 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 43 r 3 p 3 k 0 classes 1
+rule 43 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 43 r 3 p 3 k 1 classes 1
+rule 43 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 43 r 3 p 3 k 2 classes 1
+rule 43 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 43 r 3 p 3 k 3 classes 1
+rule 43 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 43 r 4 p 2 k -2 classes 1
+rule 43 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 43 r 4 p 2 k -1 classes 1
+rule 43 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 43 r 4 p 2 k 0 classes 1
+rule 43 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 43 r 4 p 2 k 1 classes 1
+rule 43 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 43 r 4 p 2 k 2 classes 1
+rule 43 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 43 r 5 p 1 k -1 classes 1
+rule 43 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 43 r 5 p 1 k 0 classes 1
+rule 43 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 43 r 5 p 1 k 1 classes 1
+rule 46 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k -5 classes 1
+rule 46 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k -4 classes 1
+rule 46 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k -3 classes 1
+rule 46 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k -2 classes 1
+rule 46 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k -1 classes 1
+rule 46 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k 0 classes 4  <-- NONTRIVIAL FACTOR
+rule 46 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k 1 classes 1
+rule 46 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k 2 classes 1
+rule 46 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k 3 classes 1
+rule 46 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k 4 classes 1
+rule 46 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 46 r 1 p 5 k 5 classes 1
+rule 46 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k -4 classes 1
+rule 46 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k -3 classes 1
+rule 46 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k -2 classes 1
+rule 46 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k -1 classes 1
+rule 46 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k 0 classes 16  <-- NONTRIVIAL FACTOR
+rule 46 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k 1 classes 1
+rule 46 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k 2 classes 1
+rule 46 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k 3 classes 1
+rule 46 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 46 r 2 p 4 k 4 classes 1
+rule 46 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 46 r 3 p 3 k -3 classes 1
+rule 46 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 46 r 3 p 3 k -2 classes 1
+rule 46 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 46 r 3 p 3 k -1 classes 1
+rule 46 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 46 r 3 p 3 k 0 classes 64  <-- NONTRIVIAL FACTOR
+rule 46 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 46 r 3 p 3 k 1 classes 1
+rule 46 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 46 r 3 p 3 k 2 classes 1
+rule 46 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 46 r 3 p 3 k 3 classes 1
+rule 46 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 46 r 4 p 2 k -2 classes 1
+rule 46 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 46 r 4 p 2 k -1 classes 1
+rule 46 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 46 r 4 p 2 k 0 classes 256  <-- NONTRIVIAL FACTOR
+rule 46 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 46 r 4 p 2 k 1 classes 1
+rule 46 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 46 r 4 p 2 k 2 classes 1
+rule 46 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 46 r 5 p 1 k -1 classes 1
+rule 46 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 46 r 5 p 1 k 0 classes 1024  <-- NONTRIVIAL FACTOR
+rule 46 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 46 r 5 p 1 k 1 classes 1
+rule 47 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k -5 classes 1
+rule 47 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k -4 classes 1
+rule 47 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k -3 classes 1
+rule 47 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k -2 classes 1
+rule 47 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k -1 classes 1
+rule 47 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k 0 classes 1
+rule 47 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k 1 classes 1
+rule 47 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k 2 classes 1
+rule 47 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k 3 classes 1
+rule 47 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k 4 classes 1
+rule 47 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 47 r 1 p 5 k 5 classes 1
+rule 47 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k -4 classes 1
+rule 47 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k -3 classes 1
+rule 47 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k -2 classes 1
+rule 47 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k -1 classes 1
+rule 47 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k 0 classes 1
+rule 47 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k 1 classes 1
+rule 47 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k 2 classes 1
+rule 47 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k 3 classes 1
+rule 47 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 47 r 2 p 4 k 4 classes 1
+rule 47 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 47 r 3 p 3 k -3 classes 1
+rule 47 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 47 r 3 p 3 k -2 classes 1
+rule 47 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 47 r 3 p 3 k -1 classes 1
+rule 47 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 47 r 3 p 3 k 0 classes 1
+rule 47 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 47 r 3 p 3 k 1 classes 1
+rule 47 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 47 r 3 p 3 k 2 classes 1
+rule 47 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 47 r 3 p 3 k 3 classes 1
+rule 47 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 47 r 4 p 2 k -2 classes 1
+rule 47 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 47 r 4 p 2 k -1 classes 1
+rule 47 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 47 r 4 p 2 k 0 classes 1
+rule 47 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 47 r 4 p 2 k 1 classes 1
+rule 47 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 47 r 4 p 2 k 2 classes 1
+rule 47 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 47 r 5 p 1 k -1 classes 1
+rule 47 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 47 r 5 p 1 k 0 classes 1
+rule 47 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 47 r 5 p 1 k 1 classes 1
+rule 57 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k -5 classes 1
+rule 57 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k -4 classes 1
+rule 57 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k -3 classes 1
+rule 57 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k -2 classes 1
+rule 57 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k -1 classes 1
+rule 57 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k 0 classes 1
+rule 57 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k 1 classes 1
+rule 57 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k 2 classes 1
+rule 57 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k 3 classes 1
+rule 57 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k 4 classes 1
+rule 57 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 57 r 1 p 5 k 5 classes 1
+rule 57 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k -4 classes 1
+rule 57 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k -3 classes 1
+rule 57 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k -2 classes 1
+rule 57 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k -1 classes 1
+rule 57 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k 0 classes 1
+rule 57 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k 1 classes 1
+rule 57 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k 2 classes 1
+rule 57 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k 3 classes 1
+rule 57 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 57 r 2 p 4 k 4 classes 1
+rule 57 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 57 r 3 p 3 k -3 classes 1
+rule 57 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 57 r 3 p 3 k -2 classes 1
+rule 57 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 57 r 3 p 3 k -1 classes 1
+rule 57 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 57 r 3 p 3 k 0 classes 1
+rule 57 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 57 r 3 p 3 k 1 classes 1
+rule 57 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 57 r 3 p 3 k 2 classes 1
+rule 57 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 57 r 3 p 3 k 3 classes 1
+rule 57 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 57 r 4 p 2 k -2 classes 1
+rule 57 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 57 r 4 p 2 k -1 classes 1
+rule 57 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 57 r 4 p 2 k 0 classes 1
+rule 57 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 57 r 4 p 2 k 1 classes 1
+rule 57 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 57 r 4 p 2 k 2 classes 1
+rule 57 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 57 r 5 p 1 k -1 classes 1
+rule 57 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 57 r 5 p 1 k 0 classes 1
+rule 57 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 57 r 5 p 1 k 1 classes 1
+rule 58 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k -5 classes 1
+rule 58 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k -4 classes 1
+rule 58 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k -3 classes 1
+rule 58 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k -2 classes 1
+rule 58 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k -1 classes 1
+rule 58 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k 0 classes 1
+rule 58 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k 1 classes 1
+rule 58 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k 2 classes 1
+rule 58 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k 3 classes 1
+rule 58 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k 4 classes 1
+rule 58 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 58 r 1 p 5 k 5 classes 1
+rule 58 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k -4 classes 1
+rule 58 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k -3 classes 1
+rule 58 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k -2 classes 1
+rule 58 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k -1 classes 1
+rule 58 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k 0 classes 1
+rule 58 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k 1 classes 1
+rule 58 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k 2 classes 1
+rule 58 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k 3 classes 1
+rule 58 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 58 r 2 p 4 k 4 classes 1
+rule 58 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 58 r 3 p 3 k -3 classes 1
+rule 58 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 58 r 3 p 3 k -2 classes 1
+rule 58 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 58 r 3 p 3 k -1 classes 1
+rule 58 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 58 r 3 p 3 k 0 classes 1
+rule 58 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 58 r 3 p 3 k 1 classes 1
+rule 58 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 58 r 3 p 3 k 2 classes 1
+rule 58 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 58 r 3 p 3 k 3 classes 1
+rule 58 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 58 r 4 p 2 k -2 classes 1
+rule 58 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 58 r 4 p 2 k -1 classes 1
+rule 58 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 58 r 4 p 2 k 0 classes 1
+rule 58 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 58 r 4 p 2 k 1 classes 1
+rule 58 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 58 r 4 p 2 k 2 classes 1
+rule 58 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 58 r 5 p 1 k -1 classes 1
+rule 58 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 58 r 5 p 1 k 0 classes 1
+rule 58 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 58 r 5 p 1 k 1 classes 1
+rule 61 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k -5 classes 1
+rule 61 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k -4 classes 1
+rule 61 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k -3 classes 1
+rule 61 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k -2 classes 1
+rule 61 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k -1 classes 1
+rule 61 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k 0 classes 1
+rule 61 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k 1 classes 1
+rule 61 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k 2 classes 1
+rule 61 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k 3 classes 1
+rule 61 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k 4 classes 1
+rule 61 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 61 r 1 p 5 k 5 classes 1
+rule 61 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k -4 classes 1
+rule 61 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k -3 classes 1
+rule 61 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k -2 classes 1
+rule 61 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k -1 classes 1
+rule 61 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k 0 classes 1
+rule 61 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k 1 classes 1
+rule 61 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k 2 classes 1
+rule 61 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k 3 classes 1
+rule 61 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 61 r 2 p 4 k 4 classes 1
+rule 61 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 61 r 3 p 3 k -3 classes 1
+rule 61 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 61 r 3 p 3 k -2 classes 1
+rule 61 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 61 r 3 p 3 k -1 classes 1
+rule 61 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 61 r 3 p 3 k 0 classes 1
+rule 61 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 61 r 3 p 3 k 1 classes 1
+rule 61 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 61 r 3 p 3 k 2 classes 1
+rule 61 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 61 r 3 p 3 k 3 classes 1
+rule 61 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 61 r 4 p 2 k -2 classes 1
+rule 61 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 61 r 4 p 2 k -1 classes 1
+rule 61 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 61 r 4 p 2 k 0 classes 1
+rule 61 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 61 r 4 p 2 k 1 classes 1
+rule 61 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 61 r 4 p 2 k 2 classes 1
+rule 61 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 61 r 5 p 1 k -1 classes 1
+rule 61 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 61 r 5 p 1 k 0 classes 1
+rule 61 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 61 r 5 p 1 k 1 classes 1
+rule 62 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k -5 classes 1
+rule 62 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k -4 classes 1
+rule 62 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k -3 classes 1
+rule 62 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k -2 classes 1
+rule 62 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k -1 classes 1
+rule 62 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k 0 classes 1
+rule 62 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k 1 classes 1
+rule 62 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k 2 classes 1
+rule 62 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k 3 classes 1
+rule 62 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k 4 classes 1
+rule 62 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 62 r 1 p 5 k 5 classes 1
+rule 62 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k -4 classes 1
+rule 62 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k -3 classes 1
+rule 62 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k -2 classes 1
+rule 62 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k -1 classes 1
+rule 62 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k 0 classes 1
+rule 62 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k 1 classes 1
+rule 62 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k 2 classes 1
+rule 62 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k 3 classes 1
+rule 62 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 62 r 2 p 4 k 4 classes 1
+rule 62 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 62 r 3 p 3 k -3 classes 1
+rule 62 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 62 r 3 p 3 k -2 classes 1
+rule 62 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 62 r 3 p 3 k -1 classes 1
+rule 62 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 62 r 3 p 3 k 0 classes 1
+rule 62 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 62 r 3 p 3 k 1 classes 1
+rule 62 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 62 r 3 p 3 k 2 classes 1
+rule 62 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 62 r 3 p 3 k 3 classes 1
+rule 62 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 62 r 4 p 2 k -2 classes 1
+rule 62 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 62 r 4 p 2 k -1 classes 1
+rule 62 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 62 r 4 p 2 k 0 classes 1
+rule 62 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 62 r 4 p 2 k 1 classes 1
+rule 62 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 62 r 4 p 2 k 2 classes 1
+rule 62 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 62 r 5 p 1 k -1 classes 1
+rule 62 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 62 r 5 p 1 k 0 classes 1
+rule 62 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 62 r 5 p 1 k 1 classes 1
+rule 63 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k -5 classes 1
+rule 63 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k -4 classes 1
+rule 63 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k -3 classes 1
+rule 63 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k -2 classes 1
+rule 63 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k -1 classes 1
+rule 63 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k 0 classes 1
+rule 63 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k 1 classes 1
+rule 63 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k 2 classes 1
+rule 63 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k 3 classes 1
+rule 63 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k 4 classes 1
+rule 63 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 63 r 1 p 5 k 5 classes 1
+rule 63 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k -4 classes 1
+rule 63 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k -3 classes 1
+rule 63 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k -2 classes 1
+rule 63 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k -1 classes 1
+rule 63 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k 0 classes 1
+rule 63 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k 1 classes 1
+rule 63 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k 2 classes 1
+rule 63 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k 3 classes 1
+rule 63 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 63 r 2 p 4 k 4 classes 1
+rule 63 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 63 r 3 p 3 k -3 classes 1
+rule 63 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 63 r 3 p 3 k -2 classes 1
+rule 63 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 63 r 3 p 3 k -1 classes 1
+rule 63 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 63 r 3 p 3 k 0 classes 1
+rule 63 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 63 r 3 p 3 k 1 classes 1
+rule 63 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 63 r 3 p 3 k 2 classes 1
+rule 63 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 63 r 3 p 3 k 3 classes 1
+rule 63 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 63 r 4 p 2 k -2 classes 1
+rule 63 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 63 r 4 p 2 k -1 classes 1
+rule 63 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 63 r 4 p 2 k 0 classes 1
+rule 63 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 63 r 4 p 2 k 1 classes 1
+rule 63 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 63 r 4 p 2 k 2 classes 1
+rule 63 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 63 r 5 p 1 k -1 classes 1
+rule 63 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 63 r 5 p 1 k 0 classes 1
+rule 63 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 63 r 5 p 1 k 1 classes 1
+rule 77 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k -5 classes 1
+rule 77 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k -4 classes 1
+rule 77 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k -3 classes 1
+rule 77 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k -2 classes 1
+rule 77 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k -1 classes 1
+rule 77 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k 0 classes 1
+rule 77 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k 1 classes 1
+rule 77 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k 2 classes 1
+rule 77 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k 3 classes 1
+rule 77 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k 4 classes 1
+rule 77 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 77 r 1 p 5 k 5 classes 1
+rule 77 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k -4 classes 1
+rule 77 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k -3 classes 1
+rule 77 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k -2 classes 1
+rule 77 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k -1 classes 1
+rule 77 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k 0 classes 1
+rule 77 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k 1 classes 1
+rule 77 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k 2 classes 1
+rule 77 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k 3 classes 1
+rule 77 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 77 r 2 p 4 k 4 classes 1
+rule 77 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 77 r 3 p 3 k -3 classes 1
+rule 77 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 77 r 3 p 3 k -2 classes 1
+rule 77 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 77 r 3 p 3 k -1 classes 1
+rule 77 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 77 r 3 p 3 k 0 classes 1
+rule 77 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 77 r 3 p 3 k 1 classes 1
+rule 77 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 77 r 3 p 3 k 2 classes 1
+rule 77 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 77 r 3 p 3 k 3 classes 1
+rule 77 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 77 r 4 p 2 k -2 classes 1
+rule 77 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 77 r 4 p 2 k -1 classes 1
+rule 77 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 77 r 4 p 2 k 0 classes 1
+rule 77 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 77 r 4 p 2 k 1 classes 1
+rule 77 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 77 r 4 p 2 k 2 classes 1
+rule 77 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 77 r 5 p 1 k -1 classes 1
+rule 77 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 77 r 5 p 1 k 0 classes 1
+rule 77 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 77 r 5 p 1 k 1 classes 1
+rule 79 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k -5 classes 1
+rule 79 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k -4 classes 1
+rule 79 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k -3 classes 1
+rule 79 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k -2 classes 1
+rule 79 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k -1 classes 1
+rule 79 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k 0 classes 1
+rule 79 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k 1 classes 1
+rule 79 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k 2 classes 1
+rule 79 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k 3 classes 1
+rule 79 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k 4 classes 1
+rule 79 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 79 r 1 p 5 k 5 classes 1
+rule 79 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k -4 classes 1
+rule 79 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k -3 classes 1
+rule 79 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k -2 classes 1
+rule 79 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k -1 classes 1
+rule 79 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k 0 classes 1
+rule 79 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k 1 classes 1
+rule 79 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k 2 classes 1
+rule 79 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k 3 classes 1
+rule 79 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 79 r 2 p 4 k 4 classes 1
+rule 79 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 79 r 3 p 3 k -3 classes 1
+rule 79 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 79 r 3 p 3 k -2 classes 1
+rule 79 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 79 r 3 p 3 k -1 classes 1
+rule 79 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 79 r 3 p 3 k 0 classes 1
+rule 79 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 79 r 3 p 3 k 1 classes 1
+rule 79 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 79 r 3 p 3 k 2 classes 1
+rule 79 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 79 r 3 p 3 k 3 classes 1
+rule 79 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 79 r 4 p 2 k -2 classes 1
+rule 79 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 79 r 4 p 2 k -1 classes 1
+rule 79 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 79 r 4 p 2 k 0 classes 1
+rule 79 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 79 r 4 p 2 k 1 classes 1
+rule 79 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 79 r 4 p 2 k 2 classes 1
+rule 79 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 79 r 5 p 1 k -1 classes 1
+rule 79 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 79 r 5 p 1 k 0 classes 1
+rule 79 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 79 r 5 p 1 k 1 classes 1
+rule 91 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k -5 classes 1
+rule 91 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k -4 classes 1
+rule 91 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k -3 classes 1
+rule 91 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k -2 classes 1
+rule 91 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k -1 classes 1
+rule 91 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k 0 classes 1
+rule 91 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k 1 classes 1
+rule 91 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k 2 classes 1
+rule 91 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k 3 classes 1
+rule 91 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k 4 classes 1
+rule 91 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 91 r 1 p 5 k 5 classes 1
+rule 91 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k -4 classes 1
+rule 91 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k -3 classes 1
+rule 91 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k -2 classes 1
+rule 91 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k -1 classes 1
+rule 91 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k 0 classes 1
+rule 91 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k 1 classes 1
+rule 91 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k 2 classes 1
+rule 91 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k 3 classes 1
+rule 91 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 91 r 2 p 4 k 4 classes 1
+rule 91 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 91 r 3 p 3 k -3 classes 1
+rule 91 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 91 r 3 p 3 k -2 classes 1
+rule 91 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 91 r 3 p 3 k -1 classes 1
+rule 91 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 91 r 3 p 3 k 0 classes 1
+rule 91 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 91 r 3 p 3 k 1 classes 1
+rule 91 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 91 r 3 p 3 k 2 classes 1
+rule 91 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 91 r 3 p 3 k 3 classes 1
+rule 91 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 91 r 4 p 2 k -2 classes 1
+rule 91 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 91 r 4 p 2 k -1 classes 1
+rule 91 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 91 r 4 p 2 k 0 classes 1
+rule 91 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 91 r 4 p 2 k 1 classes 1
+rule 91 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 91 r 4 p 2 k 2 classes 1
+rule 91 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 91 r 5 p 1 k -1 classes 1
+rule 91 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 91 r 5 p 1 k 0 classes 1
+rule 91 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 91 r 5 p 1 k 1 classes 1
+rule 94 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k -5 classes 1
+rule 94 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k -4 classes 1
+rule 94 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k -3 classes 1
+rule 94 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k -2 classes 1
+rule 94 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k -1 classes 1
+rule 94 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k 0 classes 1
+rule 94 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k 1 classes 1
+rule 94 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k 2 classes 1
+rule 94 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k 3 classes 1
+rule 94 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k 4 classes 1
+rule 94 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 94 r 1 p 5 k 5 classes 1
+rule 94 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k -4 classes 1
+rule 94 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k -3 classes 1
+rule 94 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k -2 classes 1
+rule 94 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k -1 classes 1
+rule 94 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k 0 classes 1
+rule 94 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k 1 classes 1
+rule 94 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k 2 classes 1
+rule 94 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k 3 classes 1
+rule 94 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 94 r 2 p 4 k 4 classes 1
+rule 94 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 94 r 3 p 3 k -3 classes 1
+rule 94 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 94 r 3 p 3 k -2 classes 1
+rule 94 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 94 r 3 p 3 k -1 classes 1
+rule 94 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 94 r 3 p 3 k 0 classes 1
+rule 94 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 94 r 3 p 3 k 1 classes 1
+rule 94 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 94 r 3 p 3 k 2 classes 1
+rule 94 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 94 r 3 p 3 k 3 classes 1
+rule 94 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 94 r 4 p 2 k -2 classes 1
+rule 94 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 94 r 4 p 2 k -1 classes 1
+rule 94 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 94 r 4 p 2 k 0 classes 1
+rule 94 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 94 r 4 p 2 k 1 classes 1
+rule 94 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 94 r 4 p 2 k 2 classes 1
+rule 94 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 94 r 5 p 1 k -1 classes 1
+rule 94 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 94 r 5 p 1 k 0 classes 1
+rule 94 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 94 r 5 p 1 k 1 classes 1
+rule 95 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k -5 classes 1
+rule 95 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k -4 classes 1
+rule 95 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k -3 classes 1
+rule 95 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k -2 classes 1
+rule 95 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k -1 classes 1
+rule 95 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k 0 classes 1
+rule 95 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k 1 classes 1
+rule 95 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k 2 classes 1
+rule 95 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k 3 classes 1
+rule 95 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k 4 classes 1
+rule 95 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 95 r 1 p 5 k 5 classes 1
+rule 95 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k -4 classes 1
+rule 95 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k -3 classes 1
+rule 95 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k -2 classes 1
+rule 95 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k -1 classes 1
+rule 95 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k 0 classes 1
+rule 95 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k 1 classes 1
+rule 95 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k 2 classes 1
+rule 95 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k 3 classes 1
+rule 95 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 95 r 2 p 4 k 4 classes 1
+rule 95 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 95 r 3 p 3 k -3 classes 1
+rule 95 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 95 r 3 p 3 k -2 classes 1
+rule 95 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 95 r 3 p 3 k -1 classes 1
+rule 95 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 95 r 3 p 3 k 0 classes 1
+rule 95 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 95 r 3 p 3 k 1 classes 1
+rule 95 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 95 r 3 p 3 k 2 classes 1
+rule 95 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 95 r 3 p 3 k 3 classes 1
+rule 95 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 95 r 4 p 2 k -2 classes 1
+rule 95 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 95 r 4 p 2 k -1 classes 1
+rule 95 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 95 r 4 p 2 k 0 classes 1
+rule 95 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 95 r 4 p 2 k 1 classes 1
+rule 95 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 95 r 4 p 2 k 2 classes 1
+rule 95 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 95 r 5 p 1 k -1 classes 1
+rule 95 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 95 r 5 p 1 k 0 classes 1
+rule 95 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 95 r 5 p 1 k 1 classes 1
+rule 107 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k -5 classes 1
+rule 107 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k -4 classes 1
+rule 107 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k -3 classes 1
+rule 107 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k -2 classes 1
+rule 107 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k -1 classes 1
+rule 107 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k 0 classes 1
+rule 107 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k 1 classes 1
+rule 107 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k 2 classes 1
+rule 107 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k 3 classes 1
+rule 107 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k 4 classes 1
+rule 107 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 107 r 1 p 5 k 5 classes 1
+rule 107 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k -4 classes 1
+rule 107 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k -3 classes 1
+rule 107 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k -2 classes 1
+rule 107 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k -1 classes 1
+rule 107 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k 0 classes 1
+rule 107 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k 1 classes 1
+rule 107 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k 2 classes 1
+rule 107 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k 3 classes 1
+rule 107 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 107 r 2 p 4 k 4 classes 1
+rule 107 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 107 r 3 p 3 k -3 classes 1
+rule 107 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 107 r 3 p 3 k -2 classes 1
+rule 107 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 107 r 3 p 3 k -1 classes 1
+rule 107 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 107 r 3 p 3 k 0 classes 1
+rule 107 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 107 r 3 p 3 k 1 classes 1
+rule 107 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 107 r 3 p 3 k 2 classes 1
+rule 107 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 107 r 3 p 3 k 3 classes 1
+rule 107 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 107 r 4 p 2 k -2 classes 1
+rule 107 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 107 r 4 p 2 k -1 classes 1
+rule 107 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 107 r 4 p 2 k 0 classes 1
+rule 107 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 107 r 4 p 2 k 1 classes 1
+rule 107 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 107 r 4 p 2 k 2 classes 1
+rule 107 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 107 r 5 p 1 k -1 classes 1
+rule 107 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 107 r 5 p 1 k 0 classes 1
+rule 107 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 107 r 5 p 1 k 1 classes 1
+rule 109 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k -5 classes 1
+rule 109 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k -4 classes 1
+rule 109 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k -3 classes 1
+rule 109 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k -2 classes 1
+rule 109 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k -1 classes 1
+rule 109 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k 0 classes 1
+rule 109 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k 1 classes 1
+rule 109 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k 2 classes 1
+rule 109 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k 3 classes 1
+rule 109 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k 4 classes 1
+rule 109 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 109 r 1 p 5 k 5 classes 1
+rule 109 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k -4 classes 1
+rule 109 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k -3 classes 1
+rule 109 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k -2 classes 1
+rule 109 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k -1 classes 1
+rule 109 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k 0 classes 1
+rule 109 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k 1 classes 1
+rule 109 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k 2 classes 1
+rule 109 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k 3 classes 1
+rule 109 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 109 r 2 p 4 k 4 classes 1
+rule 109 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 109 r 3 p 3 k -3 classes 1
+rule 109 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 109 r 3 p 3 k -2 classes 1
+rule 109 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 109 r 3 p 3 k -1 classes 1
+rule 109 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 109 r 3 p 3 k 0 classes 1
+rule 109 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 109 r 3 p 3 k 1 classes 1
+rule 109 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 109 r 3 p 3 k 2 classes 1
+rule 109 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 109 r 3 p 3 k 3 classes 1
+rule 109 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 109 r 4 p 2 k -2 classes 1
+rule 109 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 109 r 4 p 2 k -1 classes 1
+rule 109 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 109 r 4 p 2 k 0 classes 1
+rule 109 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 109 r 4 p 2 k 1 classes 1
+rule 109 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 109 r 4 p 2 k 2 classes 1
+rule 109 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 109 r 5 p 1 k -1 classes 1
+rule 109 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 109 r 5 p 1 k 0 classes 1
+rule 109 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 109 r 5 p 1 k 1 classes 1
+rule 110 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k -5 classes 1
+rule 110 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k -4 classes 1
+rule 110 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k -3 classes 1
+rule 110 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k -2 classes 1
+rule 110 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k -1 classes 1
+rule 110 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k 0 classes 1
+rule 110 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k 1 classes 1
+rule 110 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k 2 classes 1
+rule 110 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k 3 classes 1
+rule 110 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k 4 classes 1
+rule 110 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 110 r 1 p 5 k 5 classes 1
+rule 110 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k -4 classes 1
+rule 110 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k -3 classes 1
+rule 110 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k -2 classes 1
+rule 110 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k -1 classes 1
+rule 110 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k 0 classes 1
+rule 110 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k 1 classes 1
+rule 110 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k 2 classes 1
+rule 110 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k 3 classes 1
+rule 110 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 110 r 2 p 4 k 4 classes 1
+rule 110 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 110 r 3 p 3 k -3 classes 1
+rule 110 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 110 r 3 p 3 k -2 classes 1
+rule 110 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 110 r 3 p 3 k -1 classes 1
+rule 110 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 110 r 3 p 3 k 0 classes 1
+rule 110 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 110 r 3 p 3 k 1 classes 1
+rule 110 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 110 r 3 p 3 k 2 classes 1
+rule 110 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 110 r 3 p 3 k 3 classes 1
+rule 110 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 110 r 4 p 2 k -2 classes 1
+rule 110 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 110 r 4 p 2 k -1 classes 1
+rule 110 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 110 r 4 p 2 k 0 classes 1
+rule 110 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 110 r 4 p 2 k 1 classes 1
+rule 110 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 110 r 4 p 2 k 2 classes 1
+rule 110 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 110 r 5 p 1 k -1 classes 1
+rule 110 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 110 r 5 p 1 k 0 classes 1
+rule 110 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 110 r 5 p 1 k 1 classes 1
+rule 111 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k -5 classes 1
+rule 111 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k -4 classes 1
+rule 111 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k -3 classes 1
+rule 111 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k -2 classes 1
+rule 111 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k -1 classes 1
+rule 111 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k 0 classes 1
+rule 111 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k 1 classes 1
+rule 111 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k 2 classes 1
+rule 111 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k 3 classes 1
+rule 111 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k 4 classes 1
+rule 111 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 111 r 1 p 5 k 5 classes 1
+rule 111 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k -4 classes 1
+rule 111 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k -3 classes 1
+rule 111 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k -2 classes 1
+rule 111 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k -1 classes 1
+rule 111 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k 0 classes 1
+rule 111 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k 1 classes 1
+rule 111 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k 2 classes 1
+rule 111 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k 3 classes 1
+rule 111 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 111 r 2 p 4 k 4 classes 1
+rule 111 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 111 r 3 p 3 k -3 classes 1
+rule 111 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 111 r 3 p 3 k -2 classes 1
+rule 111 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 111 r 3 p 3 k -1 classes 1
+rule 111 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 111 r 3 p 3 k 0 classes 1
+rule 111 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 111 r 3 p 3 k 1 classes 1
+rule 111 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 111 r 3 p 3 k 2 classes 1
+rule 111 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 111 r 3 p 3 k 3 classes 1
+rule 111 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 111 r 4 p 2 k -2 classes 1
+rule 111 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 111 r 4 p 2 k -1 classes 1
+rule 111 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 111 r 4 p 2 k 0 classes 1
+rule 111 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 111 r 4 p 2 k 1 classes 1
+rule 111 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 111 r 4 p 2 k 2 classes 1
+rule 111 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 111 r 5 p 1 k -1 classes 1
+rule 111 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 111 r 5 p 1 k 0 classes 1
+rule 111 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 111 r 5 p 1 k 1 classes 1
+rule 123 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k -5 classes 1
+rule 123 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k -4 classes 1
+rule 123 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k -3 classes 1
+rule 123 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k -2 classes 1
+rule 123 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k -1 classes 1
+rule 123 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k 0 classes 1
+rule 123 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k 1 classes 1
+rule 123 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k 2 classes 1
+rule 123 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k 3 classes 1
+rule 123 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k 4 classes 1
+rule 123 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 123 r 1 p 5 k 5 classes 1
+rule 123 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k -4 classes 1
+rule 123 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k -3 classes 1
+rule 123 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k -2 classes 1
+rule 123 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k -1 classes 1
+rule 123 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k 0 classes 1
+rule 123 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k 1 classes 1
+rule 123 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k 2 classes 1
+rule 123 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k 3 classes 1
+rule 123 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 123 r 2 p 4 k 4 classes 1
+rule 123 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 123 r 3 p 3 k -3 classes 1
+rule 123 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 123 r 3 p 3 k -2 classes 1
+rule 123 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 123 r 3 p 3 k -1 classes 1
+rule 123 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 123 r 3 p 3 k 0 classes 1
+rule 123 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 123 r 3 p 3 k 1 classes 1
+rule 123 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 123 r 3 p 3 k 2 classes 1
+rule 123 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 123 r 3 p 3 k 3 classes 1
+rule 123 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 123 r 4 p 2 k -2 classes 1
+rule 123 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 123 r 4 p 2 k -1 classes 1
+rule 123 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 123 r 4 p 2 k 0 classes 1
+rule 123 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 123 r 4 p 2 k 1 classes 1
+rule 123 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 123 r 4 p 2 k 2 classes 1
+rule 123 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 123 r 5 p 1 k -1 classes 1
+rule 123 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 123 r 5 p 1 k 0 classes 1
+rule 123 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 123 r 5 p 1 k 1 classes 1
+rule 133 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k -5 classes 1
+rule 133 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k -4 classes 1
+rule 133 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k -3 classes 1
+rule 133 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k -2 classes 1
+rule 133 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k -1 classes 1
+rule 133 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k 0 classes 1
+rule 133 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k 1 classes 1
+rule 133 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k 2 classes 1
+rule 133 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k 3 classes 1
+rule 133 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k 4 classes 1
+rule 133 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 133 r 1 p 5 k 5 classes 1
+rule 133 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k -4 classes 1
+rule 133 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k -3 classes 1
+rule 133 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k -2 classes 1
+rule 133 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k -1 classes 1
+rule 133 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k 0 classes 3  <-- NONTRIVIAL FACTOR
+rule 133 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k 1 classes 1
+rule 133 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k 2 classes 1
+rule 133 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k 3 classes 1
+rule 133 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 133 r 2 p 4 k 4 classes 1
+rule 133 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 133 r 3 p 3 k -3 classes 1
+rule 133 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 133 r 3 p 3 k -2 classes 1
+rule 133 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 133 r 3 p 3 k -1 classes 1
+rule 133 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 133 r 3 p 3 k 0 classes 6  <-- NONTRIVIAL FACTOR
+rule 133 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 133 r 3 p 3 k 1 classes 1
+rule 133 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 133 r 3 p 3 k 2 classes 1
+rule 133 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 133 r 3 p 3 k 3 classes 1
+rule 133 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 133 r 4 p 2 k -2 classes 1
+rule 133 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 133 r 4 p 2 k -1 classes 1
+rule 133 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 133 r 4 p 2 k 0 classes 14  <-- NONTRIVIAL FACTOR
+rule 133 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 133 r 4 p 2 k 1 classes 1
+rule 133 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 133 r 4 p 2 k 2 classes 1
+rule 133 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 133 r 5 p 1 k -1 classes 1
+rule 133 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 133 r 5 p 1 k 0 classes 41  <-- NONTRIVIAL FACTOR
+rule 133 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 133 r 5 p 1 k 1 classes 1
+rule 141 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k -5 classes 1
+rule 141 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k -4 classes 1
+rule 141 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k -3 classes 1
+rule 141 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k -2 classes 1
+rule 141 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k -1 classes 1
+rule 141 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k 0 classes 1
+rule 141 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k 1 classes 1
+rule 141 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k 2 classes 1
+rule 141 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k 3 classes 1
+rule 141 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k 4 classes 1
+rule 141 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 141 r 1 p 5 k 5 classes 1
+rule 141 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k -4 classes 1
+rule 141 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k -3 classes 1
+rule 141 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k -2 classes 1
+rule 141 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k -1 classes 1
+rule 141 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k 0 classes 1
+rule 141 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k 1 classes 1
+rule 141 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k 2 classes 1
+rule 141 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k 3 classes 1
+rule 141 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 141 r 2 p 4 k 4 classes 1
+rule 141 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 141 r 3 p 3 k -3 classes 1
+rule 141 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 141 r 3 p 3 k -2 classes 1
+rule 141 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 141 r 3 p 3 k -1 classes 1
+rule 141 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 141 r 3 p 3 k 0 classes 1
+rule 141 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 141 r 3 p 3 k 1 classes 1
+rule 141 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 141 r 3 p 3 k 2 classes 1
+rule 141 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 141 r 3 p 3 k 3 classes 1
+rule 141 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 141 r 4 p 2 k -2 classes 1
+rule 141 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 141 r 4 p 2 k -1 classes 1
+rule 141 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 141 r 4 p 2 k 0 classes 1
+rule 141 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 141 r 4 p 2 k 1 classes 1
+rule 141 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 141 r 4 p 2 k 2 classes 1
+rule 141 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 141 r 5 p 1 k -1 classes 1
+rule 141 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 141 r 5 p 1 k 0 classes 1
+rule 141 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 141 r 5 p 1 k 1 classes 1
+rule 143 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k -5 classes 1
+rule 143 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k -4 classes 1
+rule 143 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k -3 classes 1
+rule 143 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k -2 classes 1
+rule 143 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k -1 classes 1
+rule 143 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k 0 classes 1
+rule 143 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k 1 classes 1
+rule 143 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k 2 classes 1
+rule 143 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k 3 classes 1
+rule 143 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k 4 classes 1
+rule 143 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 143 r 1 p 5 k 5 classes 1
+rule 143 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k -4 classes 1
+rule 143 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k -3 classes 1
+rule 143 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k -2 classes 1
+rule 143 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k -1 classes 1
+rule 143 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k 0 classes 1
+rule 143 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k 1 classes 1
+rule 143 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k 2 classes 1
+rule 143 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k 3 classes 1
+rule 143 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 143 r 2 p 4 k 4 classes 1
+rule 143 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 143 r 3 p 3 k -3 classes 1
+rule 143 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 143 r 3 p 3 k -2 classes 1
+rule 143 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 143 r 3 p 3 k -1 classes 1
+rule 143 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 143 r 3 p 3 k 0 classes 1
+rule 143 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 143 r 3 p 3 k 1 classes 1
+rule 143 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 143 r 3 p 3 k 2 classes 1
+rule 143 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 143 r 3 p 3 k 3 classes 1
+rule 143 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 143 r 4 p 2 k -2 classes 1
+rule 143 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 143 r 4 p 2 k -1 classes 1
+rule 143 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 143 r 4 p 2 k 0 classes 1
+rule 143 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 143 r 4 p 2 k 1 classes 1
+rule 143 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 143 r 4 p 2 k 2 classes 1
+rule 143 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 143 r 5 p 1 k -1 classes 1
+rule 143 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 143 r 5 p 1 k 0 classes 1
+rule 143 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 143 r 5 p 1 k 1 classes 1
+rule 151 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k -5 classes 1
+rule 151 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k -4 classes 1
+rule 151 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k -3 classes 1
+rule 151 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k -2 classes 1
+rule 151 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k -1 classes 1
+rule 151 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k 0 classes 1
+rule 151 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k 1 classes 1
+rule 151 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k 2 classes 1
+rule 151 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k 3 classes 1
+rule 151 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k 4 classes 1
+rule 151 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 151 r 1 p 5 k 5 classes 1
+rule 151 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k -4 classes 1
+rule 151 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k -3 classes 1
+rule 151 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k -2 classes 1
+rule 151 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k -1 classes 1
+rule 151 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k 0 classes 1
+rule 151 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k 1 classes 1
+rule 151 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k 2 classes 1
+rule 151 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k 3 classes 1
+rule 151 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 151 r 2 p 4 k 4 classes 1
+rule 151 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 151 r 3 p 3 k -3 classes 1
+rule 151 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 151 r 3 p 3 k -2 classes 1
+rule 151 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 151 r 3 p 3 k -1 classes 1
+rule 151 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 151 r 3 p 3 k 0 classes 1
+rule 151 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 151 r 3 p 3 k 1 classes 1
+rule 151 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 151 r 3 p 3 k 2 classes 1
+rule 151 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 151 r 3 p 3 k 3 classes 1
+rule 151 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 151 r 4 p 2 k -2 classes 1
+rule 151 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 151 r 4 p 2 k -1 classes 1
+rule 151 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 151 r 4 p 2 k 0 classes 1
+rule 151 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 151 r 4 p 2 k 1 classes 1
+rule 151 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 151 r 4 p 2 k 2 classes 1
+rule 151 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 151 r 5 p 1 k -1 classes 1
+rule 151 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 151 r 5 p 1 k 0 classes 1
+rule 151 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 151 r 5 p 1 k 1 classes 1
+rule 155 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k -5 classes 1
+rule 155 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k -4 classes 1
+rule 155 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k -3 classes 1
+rule 155 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k -2 classes 1
+rule 155 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k -1 classes 1
+rule 155 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k 0 classes 1
+rule 155 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k 1 classes 1
+rule 155 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k 2 classes 1
+rule 155 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k 3 classes 1
+rule 155 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k 4 classes 1
+rule 155 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 155 r 1 p 5 k 5 classes 1
+rule 155 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k -4 classes 1
+rule 155 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k -3 classes 1
+rule 155 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k -2 classes 1
+rule 155 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k -1 classes 1
+rule 155 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k 0 classes 1
+rule 155 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k 1 classes 1
+rule 155 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k 2 classes 1
+rule 155 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k 3 classes 1
+rule 155 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 155 r 2 p 4 k 4 classes 1
+rule 155 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 155 r 3 p 3 k -3 classes 1
+rule 155 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 155 r 3 p 3 k -2 classes 1
+rule 155 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 155 r 3 p 3 k -1 classes 1
+rule 155 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 155 r 3 p 3 k 0 classes 1
+rule 155 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 155 r 3 p 3 k 1 classes 1
+rule 155 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 155 r 3 p 3 k 2 classes 1
+rule 155 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 155 r 3 p 3 k 3 classes 1
+rule 155 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 155 r 4 p 2 k -2 classes 1
+rule 155 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 155 r 4 p 2 k -1 classes 1
+rule 155 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 155 r 4 p 2 k 0 classes 1
+rule 155 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 155 r 4 p 2 k 1 classes 1
+rule 155 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 155 r 4 p 2 k 2 classes 1
+rule 155 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 155 r 5 p 1 k -1 classes 1
+rule 155 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 155 r 5 p 1 k 0 classes 1
+rule 155 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 155 r 5 p 1 k 1 classes 1
+rule 157 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k -5 classes 1
+rule 157 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k -4 classes 1
+rule 157 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k -3 classes 1
+rule 157 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k -2 classes 1
+rule 157 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k -1 classes 1
+rule 157 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k 0 classes 1
+rule 157 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k 1 classes 1
+rule 157 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k 2 classes 1
+rule 157 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k 3 classes 1
+rule 157 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k 4 classes 1
+rule 157 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 157 r 1 p 5 k 5 classes 1
+rule 157 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k -4 classes 1
+rule 157 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k -3 classes 1
+rule 157 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k -2 classes 1
+rule 157 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k -1 classes 1
+rule 157 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k 0 classes 1
+rule 157 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k 1 classes 1
+rule 157 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k 2 classes 1
+rule 157 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k 3 classes 1
+rule 157 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 157 r 2 p 4 k 4 classes 1
+rule 157 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 157 r 3 p 3 k -3 classes 1
+rule 157 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 157 r 3 p 3 k -2 classes 1
+rule 157 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 157 r 3 p 3 k -1 classes 1
+rule 157 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 157 r 3 p 3 k 0 classes 1
+rule 157 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 157 r 3 p 3 k 1 classes 1
+rule 157 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 157 r 3 p 3 k 2 classes 1
+rule 157 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 157 r 3 p 3 k 3 classes 1
+rule 157 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 157 r 4 p 2 k -2 classes 1
+rule 157 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 157 r 4 p 2 k -1 classes 1
+rule 157 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 157 r 4 p 2 k 0 classes 1
+rule 157 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 157 r 4 p 2 k 1 classes 1
+rule 157 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 157 r 4 p 2 k 2 classes 1
+rule 157 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 157 r 5 p 1 k -1 classes 1
+rule 157 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 157 r 5 p 1 k 0 classes 1
+rule 157 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 157 r 5 p 1 k 1 classes 1
+rule 159 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k -5 classes 1
+rule 159 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k -4 classes 1
+rule 159 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k -3 classes 1
+rule 159 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k -2 classes 1
+rule 159 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k -1 classes 1
+rule 159 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k 0 classes 1
+rule 159 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k 1 classes 1
+rule 159 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k 2 classes 1
+rule 159 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k 3 classes 1
+rule 159 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k 4 classes 1
+rule 159 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 159 r 1 p 5 k 5 classes 1
+rule 159 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k -4 classes 1
+rule 159 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k -3 classes 1
+rule 159 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k -2 classes 1
+rule 159 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k -1 classes 1
+rule 159 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k 0 classes 1
+rule 159 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k 1 classes 1
+rule 159 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k 2 classes 1
+rule 159 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k 3 classes 1
+rule 159 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 159 r 2 p 4 k 4 classes 1
+rule 159 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 159 r 3 p 3 k -3 classes 1
+rule 159 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 159 r 3 p 3 k -2 classes 1
+rule 159 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 159 r 3 p 3 k -1 classes 1
+rule 159 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 159 r 3 p 3 k 0 classes 1
+rule 159 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 159 r 3 p 3 k 1 classes 1
+rule 159 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 159 r 3 p 3 k 2 classes 1
+rule 159 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 159 r 3 p 3 k 3 classes 1
+rule 159 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 159 r 4 p 2 k -2 classes 1
+rule 159 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 159 r 4 p 2 k -1 classes 1
+rule 159 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 159 r 4 p 2 k 0 classes 1
+rule 159 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 159 r 4 p 2 k 1 classes 1
+rule 159 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 159 r 4 p 2 k 2 classes 1
+rule 159 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 159 r 5 p 1 k -1 classes 1
+rule 159 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 159 r 5 p 1 k 0 classes 1
+rule 159 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 159 r 5 p 1 k 1 classes 1
+rule 167 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k -5 classes 1
+rule 167 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k -4 classes 1
+rule 167 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k -3 classes 1
+rule 167 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k -2 classes 1
+rule 167 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k -1 classes 1
+rule 167 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k 0 classes 1
+rule 167 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k 1 classes 1
+rule 167 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k 2 classes 1
+rule 167 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k 3 classes 1
+rule 167 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k 4 classes 1
+rule 167 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 167 r 1 p 5 k 5 classes 1
+rule 167 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k -4 classes 1
+rule 167 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k -3 classes 1
+rule 167 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k -2 classes 1
+rule 167 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k -1 classes 1
+rule 167 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k 0 classes 1
+rule 167 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k 1 classes 1
+rule 167 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k 2 classes 1
+rule 167 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k 3 classes 1
+rule 167 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 167 r 2 p 4 k 4 classes 1
+rule 167 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 167 r 3 p 3 k -3 classes 1
+rule 167 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 167 r 3 p 3 k -2 classes 1
+rule 167 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 167 r 3 p 3 k -1 classes 1
+rule 167 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 167 r 3 p 3 k 0 classes 1
+rule 167 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 167 r 3 p 3 k 1 classes 1
+rule 167 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 167 r 3 p 3 k 2 classes 1
+rule 167 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 167 r 3 p 3 k 3 classes 1
+rule 167 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 167 r 4 p 2 k -2 classes 1
+rule 167 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 167 r 4 p 2 k -1 classes 1
+rule 167 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 167 r 4 p 2 k 0 classes 1
+rule 167 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 167 r 4 p 2 k 1 classes 1
+rule 167 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 167 r 4 p 2 k 2 classes 1
+rule 167 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 167 r 5 p 1 k -1 classes 1
+rule 167 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 167 r 5 p 1 k 0 classes 1
+rule 167 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 167 r 5 p 1 k 1 classes 1
+rule 175 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k -5 classes 1
+rule 175 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k -4 classes 1
+rule 175 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k -3 classes 1
+rule 175 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k -2 classes 1
+rule 175 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k -1 classes 1
+rule 175 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k 0 classes 1
+rule 175 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k 1 classes 1
+rule 175 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k 2 classes 1
+rule 175 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k 3 classes 1
+rule 175 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k 4 classes 1
+rule 175 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 175 r 1 p 5 k 5 classes 1
+rule 175 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k -4 classes 1
+rule 175 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k -3 classes 1
+rule 175 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k -2 classes 1
+rule 175 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k -1 classes 1
+rule 175 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k 0 classes 1
+rule 175 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k 1 classes 1
+rule 175 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k 2 classes 1
+rule 175 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k 3 classes 1
+rule 175 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 175 r 2 p 4 k 4 classes 1
+rule 175 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 175 r 3 p 3 k -3 classes 1
+rule 175 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 175 r 3 p 3 k -2 classes 1
+rule 175 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 175 r 3 p 3 k -1 classes 1
+rule 175 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 175 r 3 p 3 k 0 classes 1
+rule 175 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 175 r 3 p 3 k 1 classes 1
+rule 175 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 175 r 3 p 3 k 2 classes 1
+rule 175 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 175 r 3 p 3 k 3 classes 1
+rule 175 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 175 r 4 p 2 k -2 classes 1
+rule 175 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 175 r 4 p 2 k -1 classes 1
+rule 175 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 175 r 4 p 2 k 0 classes 1
+rule 175 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 175 r 4 p 2 k 1 classes 1
+rule 175 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 175 r 4 p 2 k 2 classes 1
+rule 175 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 175 r 5 p 1 k -1 classes 1
+rule 175 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 175 r 5 p 1 k 0 classes 1
+rule 175 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 175 r 5 p 1 k 1 classes 1
+rule 183 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k -5 classes 1
+rule 183 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k -4 classes 1
+rule 183 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k -3 classes 1
+rule 183 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k -2 classes 1
+rule 183 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k -1 classes 1
+rule 183 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k 0 classes 1
+rule 183 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k 1 classes 1
+rule 183 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k 2 classes 1
+rule 183 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k 3 classes 1
+rule 183 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k 4 classes 1
+rule 183 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 183 r 1 p 5 k 5 classes 1
+rule 183 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k -4 classes 1
+rule 183 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k -3 classes 1
+rule 183 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k -2 classes 1
+rule 183 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k -1 classes 1
+rule 183 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k 0 classes 1
+rule 183 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k 1 classes 1
+rule 183 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k 2 classes 1
+rule 183 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k 3 classes 1
+rule 183 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 183 r 2 p 4 k 4 classes 1
+rule 183 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 183 r 3 p 3 k -3 classes 1
+rule 183 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 183 r 3 p 3 k -2 classes 1
+rule 183 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 183 r 3 p 3 k -1 classes 1
+rule 183 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 183 r 3 p 3 k 0 classes 1
+rule 183 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 183 r 3 p 3 k 1 classes 1
+rule 183 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 183 r 3 p 3 k 2 classes 1
+rule 183 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 183 r 3 p 3 k 3 classes 1
+rule 183 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 183 r 4 p 2 k -2 classes 1
+rule 183 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 183 r 4 p 2 k -1 classes 1
+rule 183 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 183 r 4 p 2 k 0 classes 1
+rule 183 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 183 r 4 p 2 k 1 classes 1
+rule 183 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 183 r 4 p 2 k 2 classes 1
+rule 183 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 183 r 5 p 1 k -1 classes 1
+rule 183 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 183 r 5 p 1 k 0 classes 1
+rule 183 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 183 r 5 p 1 k 1 classes 1
+rule 187 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k -5 classes 1
+rule 187 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k -4 classes 1
+rule 187 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k -3 classes 1
+rule 187 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k -2 classes 1
+rule 187 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k -1 classes 1
+rule 187 r 1 p 5 k 0 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k 0 classes 1
+rule 187 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k 1 classes 1
+rule 187 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k 2 classes 1
+rule 187 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k 3 classes 1
+rule 187 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k 4 classes 1
+rule 187 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 187 r 1 p 5 k 5 classes 1
+rule 187 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k -4 classes 1
+rule 187 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k -3 classes 1
+rule 187 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k -2 classes 1
+rule 187 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k -1 classes 1
+rule 187 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k 0 classes 1
+rule 187 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k 1 classes 1
+rule 187 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k 2 classes 1
+rule 187 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k 3 classes 1
+rule 187 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 187 r 2 p 4 k 4 classes 1
+rule 187 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 187 r 3 p 3 k -3 classes 1
+rule 187 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 187 r 3 p 3 k -2 classes 1
+rule 187 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 187 r 3 p 3 k -1 classes 1
+rule 187 r 3 p 3 k 0 NOT-mode: inconsistent (no factor)
+rule 187 r 3 p 3 k 0 classes 1
+rule 187 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 187 r 3 p 3 k 1 classes 1
+rule 187 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 187 r 3 p 3 k 2 classes 1
+rule 187 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 187 r 3 p 3 k 3 classes 1
+rule 187 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 187 r 4 p 2 k -2 classes 1
+rule 187 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 187 r 4 p 2 k -1 classes 1
+rule 187 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 187 r 4 p 2 k 0 classes 1
+rule 187 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 187 r 4 p 2 k 1 classes 1
+rule 187 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 187 r 4 p 2 k 2 classes 1
+rule 187 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 187 r 5 p 1 k -1 classes 1
+rule 187 r 5 p 1 k 0 NOT-mode: inconsistent (no factor)
+rule 187 r 5 p 1 k 0 classes 1
+rule 187 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 187 r 5 p 1 k 1 classes 1
+rule 191 r 1 p 5 k -5 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k -5 classes 1
+rule 191 r 1 p 5 k -4 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k -4 classes 1
+rule 191 r 1 p 5 k -3 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k -3 classes 1
+rule 191 r 1 p 5 k -2 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k -2 classes 1
+rule 191 r 1 p 5 k -1 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k -1 classes 1
+rule 191 r 1 p 5 k 0 classes 2  <-- NONTRIVIAL FACTOR
+rule 191 r 1 p 5 k 0 NOT-mode: CONSISTENT (binary factor exists)
+rule 191 r 1 p 5 k 1 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k 1 classes 1
+rule 191 r 1 p 5 k 2 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k 2 classes 1
+rule 191 r 1 p 5 k 3 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k 3 classes 1
+rule 191 r 1 p 5 k 4 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k 4 classes 1
+rule 191 r 1 p 5 k 5 NOT-mode: inconsistent (no factor)
+rule 191 r 1 p 5 k 5 classes 1
+rule 191 r 2 p 4 k -4 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k -4 classes 1
+rule 191 r 2 p 4 k -3 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k -3 classes 1
+rule 191 r 2 p 4 k -2 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k -2 classes 1
+rule 191 r 2 p 4 k -1 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k -1 classes 1
+rule 191 r 2 p 4 k 0 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k 0 classes 16  <-- NONTRIVIAL FACTOR
+rule 191 r 2 p 4 k 1 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k 1 classes 1
+rule 191 r 2 p 4 k 2 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k 2 classes 1
+rule 191 r 2 p 4 k 3 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k 3 classes 1
+rule 191 r 2 p 4 k 4 NOT-mode: inconsistent (no factor)
+rule 191 r 2 p 4 k 4 classes 1
+rule 191 r 3 p 3 k -3 NOT-mode: inconsistent (no factor)
+rule 191 r 3 p 3 k -3 classes 1
+rule 191 r 3 p 3 k -2 NOT-mode: inconsistent (no factor)
+rule 191 r 3 p 3 k -2 classes 1
+rule 191 r 3 p 3 k -1 NOT-mode: inconsistent (no factor)
+rule 191 r 3 p 3 k -1 classes 1
+rule 191 r 3 p 3 k 0 classes 32  <-- NONTRIVIAL FACTOR
+rule 191 r 3 p 3 k 0 NOT-mode: CONSISTENT (binary factor exists)
+rule 191 r 3 p 3 k 1 NOT-mode: inconsistent (no factor)
+rule 191 r 3 p 3 k 1 classes 1
+rule 191 r 3 p 3 k 2 NOT-mode: inconsistent (no factor)
+rule 191 r 3 p 3 k 2 classes 1
+rule 191 r 3 p 3 k 3 NOT-mode: inconsistent (no factor)
+rule 191 r 3 p 3 k 3 classes 1
+rule 191 r 4 p 2 k -2 NOT-mode: inconsistent (no factor)
+rule 191 r 4 p 2 k -2 classes 1
+rule 191 r 4 p 2 k -1 NOT-mode: inconsistent (no factor)
+rule 191 r 4 p 2 k -1 classes 1
+rule 191 r 4 p 2 k 0 NOT-mode: inconsistent (no factor)
+rule 191 r 4 p 2 k 0 classes 256  <-- NONTRIVIAL FACTOR
+rule 191 r 4 p 2 k 1 NOT-mode: inconsistent (no factor)
+rule 191 r 4 p 2 k 1 classes 1
+rule 191 r 4 p 2 k 2 NOT-mode: inconsistent (no factor)
+rule 191 r 4 p 2 k 2 classes 1
+rule 191 r 5 p 1 k -1 NOT-mode: inconsistent (no factor)
+rule 191 r 5 p 1 k -1 classes 1
+rule 191 r 5 p 1 k 0 classes 512  <-- NONTRIVIAL FACTOR
+rule 191 r 5 p 1 k 0 NOT-mode: CONSISTENT (binary factor exists)
+rule 191 r 5 p 1 k 1 NOT-mode: inconsistent (no factor)
+rule 191 r 5 p 1 k 1 classes 1

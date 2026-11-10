@@ -1,0 +1,4 @@
+# solvers: glucose4, cadical153; 2 instances
+rule 110R R=4: 524288 variables, 75495952 clauses | glucose4: 43 cadical153: 43 | sets identical: True | all commute: True; named 41/41 const 2 other 0 | shipped log: set equal (determined by the log) | sha256 2e9edd27475ca68b | OK [1773s]
+rule 30R R=4: 524288 variables, 75495856 clauses | glucose4: 43 cadical153: 43 | sets identical: True | all commute: True; named 41/41 const 2 other 0 | shipped log: set equal (determined by the log) | sha256 24f49d513ec7a28b | OK [1954s]
+# 2 instances, 0 mismatches

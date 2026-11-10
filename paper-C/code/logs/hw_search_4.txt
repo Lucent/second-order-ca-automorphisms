@@ -1,0 +1,8 @@
+0 [0] fixedword families with hidden involution (size,j): [(2, 1), (2, 2)] n= 16 min closure size 1
+1 [1, 128] fixedword families with hidden involution (size,j): [(2, 1), (2, 2)] n= 6 min closure size 1
+2 [2, 8, 16, 64] fixedword families with hidden involution (size,j): [(2, 1), (2, 2), (4, 1), (4, 2), (6, 2), (8, 1), (8, 2)] n= 12 min closure size 1
+3 [3, 17, 136, 192] fixedword families with hidden involution (size,j): [(2, 1), (2, 2), (4, 2), (6, 2)] n= 5 min closure size 1
+4 [4, 32] fixedword families with hidden involution (size,j): [(2, 1), (2, 2), (4, 1), (4, 2)] n= 4 min closure size 1
+18 [18, 72] fixedword families with hidden involution (size,j): [(2, 1), (2, 2), (6, 1), (6, 2)] n= 4 min closure size 1
+19 [19, 200] fixedword families with hidden involution (size,j): [(2, 1), (2, 2), (6, 1), (6, 2)] n= 6 min closure size 1
+59 [59, 115, 206, 220] NOfixed families with hidden involution (size,j): [(12, 2)] n= 2 min closure size 6

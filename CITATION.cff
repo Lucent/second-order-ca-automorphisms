@@ -1,0 +1,65 @@
+cff-version: 1.2.0
+message: "If you use this software or the data, please cite the repository and the paper it accompanies."
+type: software
+title: "second-order-ca-automorphisms"
+abstract: "Programs, logs and paper sources for five papers on the automorphism groups (centralizers among invertible cellular automata) of the second-order reversible elementary cellular automata."
+authors:
+  - family-names: Dayah
+    given-names: Michael
+license: MIT
+keywords:
+  - cellular automata
+  - reversible cellular automata
+  - second-order cellular automata
+  - automorphism groups
+  - symbolic dynamics
+preferred-citation:
+  type: unpublished
+  title: "The 88 second-order elementary cellular automata: a classification by automorphism group"
+  authors:
+    - family-names: Dayah
+      given-names: Michael
+  year: 2026
+  status: in-preparation
+  notes: "In preparation."
+references:
+  - type: unpublished
+    title: "Reversible rule 110 has no hidden symmetries: six families of second-order cellular automata settled by edge moves"
+    authors:
+      - family-names: Dayah
+        given-names: Michael
+    year: 2026
+    status: in-preparation
+    notes: "In preparation."
+  - type: unpublished
+    title: "Fronts at the speed of light: rigidity of permutive second-order cellular automata"
+    authors:
+      - family-names: Dayah
+        given-names: Michael
+    year: 2026
+    status: in-preparation
+    notes: "In preparation."
+  - type: unpublished
+    title: "Every finite group from a wall: large automorphism groups of second-order cellular automata"
+    authors:
+      - family-names: Dayah
+        given-names: Michael
+    year: 2026
+    status: in-preparation
+    notes: "In preparation."
+  - type: unpublished
+    title: "The 88 second-order elementary cellular automata: a classification by automorphism group"
+    authors:
+      - family-names: Dayah
+        given-names: Michael
+    year: 2026
+    status: in-preparation
+    notes: "In preparation."
+  - type: unpublished
+    title: "The cellular automata that commute with Rule 54, and rigidity of the second-order automaton 94R"
+    authors:
+      - family-names: Dayah
+        given-names: Michael
+    year: 2026
+    status: in-preparation
+    notes: "In preparation."

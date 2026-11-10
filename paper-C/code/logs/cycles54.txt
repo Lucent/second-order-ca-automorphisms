@@ -1,0 +1,10 @@
+L=1: |S_L|=3, cycles=1, distinct lengths=1, max length=3, most repeated: 1 cycles of length 3
+L=2: |S_L|=9, cycles=3, distinct lengths=1, max length=3, most repeated: 3 cycles of length 3
+L=3: |S_L|=36, cycles=6, distinct lengths=1, max length=6, most repeated: 6 cycles of length 6
+L=4: |S_L|=135, cycles=11, distinct lengths=2, max length=15, most repeated: 6 cycles of length 15
+L=5: |S_L|=513, cycles=41, distinct lengths=8, max length=30, most repeated: 13 cycles of length 9
+L=6: |S_L|=1944, cycles=82, distinct lengths=13, max length=99, most repeated: 25 cycles of length 21
+L=7: |S_L|=7371, cycles=215, distinct lengths=24, max length=270, most repeated: 34 cycles of length 24
+L=8: |S_L|=27945, cycles=351, distinct lengths=52, max length=765, most repeated: 53 cycles of length 27
+L=9: |S_L|=105948, cycles=968, distinct lengths=91, max length=3114, most repeated: 126 cycles of length 30
+L=10: |S_L|=401679, cycles=1509, distinct lengths=194, max length=8727, most repeated: 181 cycles of length 33

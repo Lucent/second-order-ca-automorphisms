@@ -1,0 +1,4 @@
+*.bin binary
+*.npy binary
+*.npz binary
+*.pdf binary

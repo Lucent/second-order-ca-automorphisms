@@ -1,0 +1,2 @@
+lines: 65537 and 65537; differing lines: 0
+histogram of least P: {'-': 2, '1': 57512, '2': 6586, '3': 1392, '4': 44}

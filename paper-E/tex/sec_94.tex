@@ -1,0 +1,172 @@
+\section{The scattering closure and the automorphism group of 94R}\label{cl:sec:94}
+
+\emph{The scattering closure.} Let $f\in\{94,95\}$. The \emph{bare points} are the backgrounds and the bare kinks for $94$, and $b_{11}$ and the bare defects for $95$. An automorphism that fixes the bare points has two further properties: it fixes every point of $\Phi^\pm$ that agrees with points it fixes on every window of the size of its local rule, and by Lemma~\ref{cl:lem:inter} and Proposition~\ref{cl:prop:dual} its set of fixed points in $\Phi^+\cup\Phi^-$ is closed under scattering, forwards and backwards. The following definition collects these properties. A \emph{word of} a point of $\Phi^+$ or $\Phi^-$ is a finite word that occurs in its diagram, the sequence $\pi(q)$ or $\xi(p)$.
+
+\begin{definition}\label{cl:def:CL}
+Let $f\in\{94,95\}$ and $L\ge1$. The \emph{scattering closure} $C_L$ is the smallest subset of $\Phi^+\cup\Phi^-$ that contains the bare points and has the following properties:
+\begin{enumerate}
+\item[(C0)] if $Z\in\Phi^+$ and every word of length $L$ of $Z$ is a word of some point of $C_L\cap\Phi^+$, then $Z\in C_L$; and likewise with $\Phi^-$ in place of $\Phi^+$;
+\item[(C1)] it is invariant under $\sh$, $\sh^{-1}$, $\mathrm{rev}$ and $\mu=\mathrm{rev}\circ\rho$;
+\item[(C2)] if $P,X\in C_L$ and $(P,X)$ is a placed pair, then both components of $\mathcal S(P,X)$ lie in $C_L$;
+\item[(C3)] if $(P,X)$ is a placed pair and both components of $\mathcal S(P,X)$ lie in $C_L$, then $P,X\in C_L$.
+\end{enumerate}
+\end{definition}
+
+Each of these properties passes from a family of subsets of $\Phi^+\cup\Phi^-$ to its intersection (for (C0), a point of the intersection whose words of length $L$ are words of points of the intersection has them among the words of points of each member), so the smallest such set exists. In (C0) the words of $Z$ may be words of different points of $C_L$. Since $\mathrm{rev}$ maps $\Phi^+$ onto $\Phi^-$ and $\mu$ maps each of them onto itself (the paragraph before Proposition~\ref{cl:prop:dual}), $C_L\cap\Phi^-=\mathrm{rev}(C_L\cap\Phi^+)$. If $L\le L'$, every word of length $L$ of a point is part of a word of length $L'$ of that point, so $C_L$ has the property (C0) for $L'$, and $C_L\supseteq C_{L'}$.
+
+The property (C0) cannot be omitted: the set of bare points itself has the properties (C1)--(C3). Indeed, $\sh^{\pm1}$, $\mathrm{rev}$ and $\mu$ map bare points to bare points (the proof of Lemma~\ref{cl:lem:closure} below lists the images). If a placed pair $(P,X)$ of bare points contains no background, it is $(K^+_a,K^-_b)$ or $(\bar K^+_a,\bar K^-_b)$ for $94$ and $(\Delta^+_a,\Delta^-_b)$ for $95$, and both components of $\mathcal S(P,X)$ are bare points by \eqref{cl:eq:cross94}, resp.\ Lemma~\ref{cl:lem:pair95}. If $X$ is a background, they are bare points by Corollary~\ref{cl:cor:dual}(1); and if $P$ is a background, then, as in the proof of that corollary, $Y_{P,X}=\xi(p)$ everywhere, so $\mathcal S(P,X)$ consists of $X$ and a background. Finally, if $(P,X)$ is a placed pair and both components of $\mathcal S(P,X)=(\Gamma,\Omega)$ are bare points, then $(\mu\Omega,\mu\Gamma)$ is a placed pair of bare points and $\mathcal S(\mu\Omega,\mu\Gamma)=(\mu X,\mu P)$ by Proposition~\ref{cl:prop:dual}, so $P$ and $X$ are bare points.
+
+\begin{lemma}\label{cl:lem:closure}
+Let $f\in\{94,95\}$, $R\ge0$ and $L\ge2R+2$, and let $g$ be an automorphism of $X_{F_f}$ of radius at most $R$ that fixes every bare point. Then $g$ fixes every point of $C_L$.
+\end{lemma}
+
+\begin{proof}
+Let $\mathcal M$ be the set of automorphisms of radius at most $R$ that fix every bare point, and let $\mathcal F$ be the set of points of $\Phi^+\cup\Phi^-$ that are fixed by every element of $\mathcal M$. It contains the bare points. We show that $\mathcal F$ has the properties (C0)--(C3), with $\mathcal F$ in place of $C_L$; then $C_L\subseteq\mathcal F$.
+
+(C0) Let $Z\in\Phi^-$, with diagram $\zeta$, be such that every word of length $L$ of $Z$ is a word of a point of $\mathcal F\cap\Phi^-$, and let $g\in\mathcal M$ and $p\in\Z$. By \eqref{cl:eq:loc}, if two points of $\Phi^-$ have the same diagram on the window $[p-R-1,p+R]$, then their images under $g$ have the same diagram at $p$. The window has length $2R+2\le L$, so the word of $\zeta$ on it is part of a word of length $L$ of $Z$, and hence a word of some $Z'\in\mathcal F\cap\Phi^-$. Since $\sh$ acts on the diagrams of points of $\Phi^-$ by $\xi(p)\mapsto\xi(p+1)$ (the paragraph before Lemma~\ref{cl:lem:inter}), there is $s$ such that $Z''=\sh^sZ'$ has the same diagram as $Z$ on $[p-R-1,p+R]$. As $g$ commutes with $\sh$, $gZ''=Z''$. So the diagram of $gZ$ at $p$ is that of $gZ''=Z''$ at $p$, which is $\zeta(p)$. Hence $gZ=Z$. For $Z\in\Phi^+$ the argument is the same, with $q$ in place of $p$.
+
+(C1) An element $g$ of $\mathcal M$ commutes with $\sh^{\pm1}$, so it fixes $\sh^{\pm1}Z$ for $Z\in\mathcal F$. The map $\mathrm{rev}\,g\,\mathrm{rev}$ is an automorphism of radius at most $R$ by Lemma~\ref{lem:classes}, and $\mathrm{rev}$ maps bare points to bare points ($K^\pm_a\mapsto K^\mp_a$, $\bar K^\pm_a\mapsto\bar K^\mp_a$, $\Delta^\pm_a\mapsto\Delta^\mp_a$, backgrounds to themselves); so $\mathrm{rev}\,g\,\mathrm{rev}\in\mathcal M$, and for $Z\in\mathcal F$, $g(\mathrm{rev}\,Z)=\mathrm{rev}\,(\mathrm{rev}\,g\,\mathrm{rev})(Z)=\mathrm{rev}\,Z$. Likewise $\mu g\mu$ commutes with $\sh$ and, since $\mu F\mu=F^{-1}$, with $F$; it is invertible, it has radius at most $R$ because $\rho$ acts cellwise, and $\mu$ maps bare points to bare points, because it maps the diagram $\pi(q)$ to $\pi(-1-q)$ and $\xi(p)$ to $\xi(-1-p)$: $K^\pm_a\mapsto\bar K^\pm_{-a}$, $\bar K^\pm_a\mapsto K^\pm_{-a}$, $\Delta^\pm_a\mapsto\Delta^\pm_{-1-a}$. So $\mu g\mu\in\mathcal M$, and $g$ fixes $\mu Z$ for $Z\in\mathcal F$.
+
+(C2), (C3) Let $g\in\mathcal M$, and let $(P,X)$ be a placed pair with background $\beta$ and $\mathcal S(P,X)=(\Gamma,\Omega)$. Since $g(b_\beta)=b_\beta$, Lemma~\ref{cl:lem:inter} shows that $(gP,gX)$ is a placed pair and $\mathcal S(gP,gX)=(g\Gamma,g\Omega)$. If $P,X\in\mathcal F$, then $(\Gamma,\Omega)=\mathcal S(P,X)=\mathcal S(gP,gX)=(g\Gamma,g\Omega)$. If $\Gamma,\Omega\in\mathcal F$, then $\mathcal S(gP,gX)=(g\Gamma,g\Omega)=(\Gamma,\Omega)=\mathcal S(P,X)$, and since $\mathcal S$ is injective on placed pairs (Proposition~\ref{cl:prop:dual}), $gP=P$ and $gX=X$.
+\end{proof}
+
+For $94$ the closure contains every point with finitely many kinks and hence, by (C0), is all of $\Phi^+\cup\Phi^-$ (Theorem~\ref{cl:thm:objects} below), and this determines $\Aut(X_{F_{94}})$ (Theorem~\ref{cl:thm:dens}); for $95$ it is too small (Remark~\ref{cl:rem:dens}).
+
+\emph{Prepending a kink.} For the rest of this section, except in Remark~\ref{cl:rem:dens}, let $f=94$. By an \emph{object} we mean a $\Phi^-$ object, that is, a point of $\Phi^-$ with finitely many kinks; if it is not a background, its \emph{first kink} is its least kink. Let $U$ be an object that is not a background, with diagram $\upsilon$ and first kink $u$, and let $c$ be the value of $\upsilon$ on $\{p<u\}$. For $b\le u-2$ let $[b;U]\in\Phi^-$ be the point with the diagram
+\[
+\xi(p)=1\oplus c\ \ (p<b),\qquad \xi(p)=\upsilon(p)\ \ (p\ge b).
+\]
+It is an object whose kinks are $b$ and the kinks of $U$; the two triples of $\xi$ that are not triples of $\upsilon$ or constant are $(1\oplus c,1\oplus c,c)$ and $(1\oplus c,c,c)$, so $\xi\in\Phi_{94}$.
+
+\begin{lemma}[prepending a kink]\label{cl:lem:prepend}
+Let $L\ge1$, let $U\in C_L$ be an object that is not a background, with first kink $u$, and let $b\le u-2$. Then $[b;U]\in C_L$.
+\end{lemma}
+
+The proof scatters bare kinks off $[b;U]$ in such a way that the kink $b$ is never delayed, while the first kink of the rest is delayed at every second scattering. After $2L$ scatterings the two are so far apart that (C0) applies, and (C3) leads back to $[b;U]$. What the rest becomes in the course of this is not controlled, and does not need to be: it stays in $C_L$ by (C2).
+
+\begin{proof}
+We construct objects $U_0=U,U_1,U_2,\dots$ in $C_L$, none of them a background, with first kinks $u_0=u\le u_1\le u_2\le\cdots$, bare kinks $P_i\in\Phi^+$ and points $\Omega_i\in C_L$ such that, with $X_i=[b;U_i]$,
+\begin{equation}\label{cl:eq:chain}
+(P_i,X_i)\text{ is a placed pair},\qquad\mathcal S(P_i,X_i)=(X_{i+1},\Omega_i),
+\end{equation}
+and $u_{i+1}\ge u_i+1$ whenever the diagram of $U_i$ is $1$ on $\{p<u_i\}$. Let $U_i$ be given, with diagram $\upsilon_i$ and $\upsilon_i(p)=c$ for $p<u_i$, and $u_i\ge b+2$.
+
+\emph{The case $c=0$.} Here $X_i$ has the value $1$ on $\{p<b\}$. Let $P_i=\bar K^+_a$ with $a\not\equiv b\pmod2$, and choose a corner $[q_0,p_0]$ with $q_0\le a-2$, $p_0\le b-2$ and $q_0\equiv p_0\equiv b$. By Lemma~\ref{cl:lem:pair}(i) with $m=1$ and \eqref{cl:eq:cross94}, the pair $(\bar K^+_a,\bar K^-_b)$ has the diagram $Y_1=1\oplus\theta_a(q)\oplus\theta_b(p)$ on $G$, and $\mathcal S(\bar K^+_a,\bar K^-_b)=(K^-_b,K^+_a)$. The diagram of $\bar K^-_b$ is $0$ on $\{p\ge b\}$, and $Y_1[q,p]=\theta_a(q)$ for $p\ge b$, which is the diagram of $K^+_a$. So Lemma~\ref{cl:lem:glue} applies to this pair with $p_2=b$ and $X'=U_i$, whose diagram is $0$ for $p\le b+1$ because $u_i\ge b+2$; and $\bar K^-_b*U_i=X_i$. Hence $(P_i,X_i)$ is a placed pair, $(K^+_a,U_i)$ is a placed pair, and
+\[
+\mathcal S(P_i,X_i)=(K^-_b*\Gamma',\Omega'),\qquad(\Gamma',\Omega')=\mathcal S(K^+_a,U_i).
+\]
+Since $K^+_a$ and $U_i$ lie in $C_L$, so do $\Gamma'$ and $\Omega'$, by (C2). By Lemma~\ref{cl:lem:scatter}(ii), $\Gamma'$ is an object, and its diagram $\gamma'$ has the value $1$, the value of $\theta_a(q)$ for large $q$, on $\{p\le p_0'+1\}$ for every corner $[q_0',p_0']$ of the pair $(K^+_a,U_i)$; there are corners with $p_0'=u_i-2$, so $\gamma'(p)=1$ for $p<u_i$. By Corollary~\ref{cl:cor:dual}(2), $\Gamma'$ is not a background. Put $U_{i+1}=\Gamma'$ and $\Omega_i=\Omega'$. Then $u_{i+1}\ge u_i$, and $K^-_b*\Gamma'$, whose diagram is $\theta_b(p)$ for $p\le b+1$ and $\gamma'(p)$ for $p\ge b$, is $[b;U_{i+1}]$.
+
+\emph{The case $c=1$.} Here $X_i$ has the value $0$ on $\{p<b\}$. Let $P_i=K^+_a$ with $a\equiv u_i\pmod2$, and choose the corner as before. By Lemma~\ref{cl:lem:pair}(i) with $m=0$ and \eqref{cl:eq:cross94}, the pair $(K^+_a,K^-_b)$ has the diagram $Y_1=\theta_a(q)\oplus\theta_b(p)$ on $G$, and $\mathcal S(K^+_a,K^-_b)=(\bar K^-_b,\bar K^+_a)$. The diagram of $K^-_b$ is $1$ on $\{p\ge b\}$, and $Y_1[q,p]=1\oplus\theta_a(q)$ for $p\ge b$, which is the diagram of $\bar K^+_a$. So Lemma~\ref{cl:lem:glue} applies with $p_2=b$ and $X'=U_i$, whose diagram is $1$ for $p\le b+1$; and $K^-_b*U_i=X_i$. Hence $(P_i,X_i)$ and $(\bar K^+_a,U_i)$ are placed pairs, and
+\[
+\mathcal S(P_i,X_i)=(\bar K^-_b*\Gamma',\Omega'),\qquad(\Gamma',\Omega')=\mathcal S(\bar K^+_a,U_i).
+\]
+As before, $\Gamma',\Omega'\in C_L$, and $\Gamma'$ is an object that is not a background. We claim that its diagram $\gamma'$ vanishes on $\{p\le u_i\}$. Let $[q_0',p_0']$ be a corner with $q_0'\le a-2$, $p_0'\le u_i-2$ and $q_0'\equiv p_0'$, and $G'$ its quadrant. It is a corner of the pair $(\bar K^+_a,U_i)$ and of the pair $(\bar K^+_a,\bar K^-_{u_i})$, and the diagrams of $U_i$ and of $\bar K^-_{u_i}$ agree on $\{p\le u_i\}$, where they are $1$ for $p<u_i$ and $0$ at $u_i$. By Goursat causality the diagrams of the two pairs agree on $G'\cap\{p\le u_i\}$. By Lemma~\ref{cl:lem:pair}(ii), which applies because $a\equiv u_i$, the diagram of the second pair is $0$ at every point of $G'$ with $q\ge a$ and $p\le u_i$. Reading the diagram of the first pair on a half-plane $\{q\ge q_1\}$ on which it equals $\gamma'(p)$ (Lemma~\ref{cl:lem:scatter}(ii)) gives $\gamma'(p)=0$ for $p_0'\le p\le u_i$, and $\gamma'(p)=0$ for $p\le p_0'+1$ by the same lemma, $0$ being the value of $1\oplus\theta_a(q)$ for large $q$. This proves the claim. Put $U_{i+1}=\Gamma'$ and $\Omega_i=\Omega'$. Then $u_{i+1}\ge u_i+1$, and $\bar K^-_b*\Gamma'$, whose diagram is $1\oplus\theta_b(p)$ for $p\le b+1$ and $\gamma'(p)$ for $p\ge b$, is $[b;U_{i+1}]$.
+
+\emph{Conclusion.} In both cases the diagram of $U_{i+1}$ is $1\oplus c$ on $\{p<u_{i+1}\}$, so the two cases alternate, and $u_{i+2}\ge u_i+1$ for all $i$. Let $n=2L$; then $u_n\ge u_0+L\ge b+L+2$. A window $[s,s+L-1]$ with $s\ge b$ lies in $\{p\ge b\}$, where the diagram of $X_n$ is that of $U_n\in C_L$; a window with $s<b$ lies in $\{p<u_n\}$, where the diagram of $X_n$ is that of a bare kink with its kink at $b$. So every word of length $L$ of $X_n$ is a word of a point of $C_L\cap\Phi^-$, and $X_n\in C_L$ by (C0). If $X_{i+1}\in C_L$, then by \eqref{cl:eq:chain} both components of $\mathcal S(P_i,X_i)$ lie in $C_L$, and $X_i\in C_L$ by (C3). Hence $X_0=[b;U]$ lies in $C_L$.
+\end{proof}
+
+Starting from a bare kink, Lemma~\ref{cl:lem:prepend} gives every object in which any two consecutive kinks are at distance at least $2$. The remaining objects contain a $0$ between two $1$s. For $a,b\in\Z$ let $Z^+_a\in\Phi^+$ and $Z^-_b\in\Phi^-$ be the points whose diagrams are $1$ except for the value $0$ at $q=a$, resp.\ at $p=b$; we call them the \emph{isolated zeros}. The first of the next two lemmas produces them from objects of the first kind, and the second describes how they cross a kink and each other.
+
+\begin{lemma}[seed event]\label{cl:lem:B}
+Let $g\ge2$ and $a,b\in\Z$ with $a\equiv b+g\pmod2$, put $r=b+g$, and let $X\in\Phi^-$ have the diagram that is $0$ for $p<b$, $1$ for $b\le p<r$, $0$ for $p\in\{r,r+1\}$ and $1$ for $p\ge r+2$; so $X=0^\infty\,1^g\,00\,1^\infty$. Let $[q_0,p_0]$ be a corner with $q_0\le a-2$, $p_0\le b-2$ and $q_0\equiv p_0$. Then $(K^+_a,X)$ is a placed pair with background $00$, its diagram fires exactly at the centres $[a-1,r-1]$ and $[a+2,r+4]$, and $\mathcal S(K^+_a,X)=(\Gamma,Z^+_{a+1})$, where the diagram of $\Gamma$ is $1$ for $p<b$, $0$ for $b\le p\le r$, $1$ for $p\in\{r+1,r+2\}$, $0$ for $p=r+3$ and $1$ for $p\ge r+4$. So $\Gamma=1^\infty\,0^{g+1}\,11\,0\,1^\infty$.
+\end{lemma}
+
+\begin{proof}
+The first statement is clear. Lowering the corner, which does not change the diagram of the pair, we may assume $q_0\equiv b$. Let $X_1=K^-_b$, and let $X'$ have the diagram that is $1$ for $p<r$, $0$ for $p\in\{r,r+1\}$ and $1$ for $p\ge r+2$; since $r\ge b+2$, $X=X_1*X'$ with the cut at $p_2=b$. As in the second case of the proof of Lemma~\ref{cl:lem:prepend}, Lemma~\ref{cl:lem:pair}(i) and Lemma~\ref{cl:lem:glue} show that $Y_{K^+_a,X_1}$ does not fire, that $(\bar K^+_a,X')$ is a placed pair with corner $[q_0,b]$ and background $11$, that $Y_{K^+_a,X}$ equals $Y_{K^+_a,X_1}$ on $\{p\le b+1\}$ and $Y'=Y_{\bar K^+_a,X'}$ on $\{p\ge b\}$, and that $\mathcal S(K^+_a,X)=(\bar K^-_b*\Gamma',\Omega')$ with $(\Gamma',\Omega')=\mathcal S(\bar K^+_a,X')$. A centre $[q',p']$ with $p'\le b$ has its five points in $\{p\le b+1\}$, and one with $p'\ge b+1$ has them in $\{p\ge b\}$; so the firings of $Y_{K^+_a,X}$ are those of $Y'$, which by Lemma~\ref{cl:lem:scatter}(i) lie at centres with $p'>b$.
+
+We determine $Y'$ on the quadrant $G'=\{q\ge q_0,\ p\ge b\}$ by the ansatz of the proof of Lemma~\ref{cl:lem:pair}. Write $x=q-a$ and $y=p-r$, so $x\equiv y\pmod2$; the boundary values are $A(q)=1\oplus\alpha(x)$ and $B(p)=1\oplus\beta'(y)$ with $\alpha(x)=[x\ge0]$ and $\beta'(y)=[y\in\{0,1\}]$, and the corner value is $1$. Let $\Sigma=\{(-1,-1),(2,4)\}$ in these coordinates; both centres have $q'>q_0$ and $p'>b$. The function $Y_\Sigma=A\oplus B\oplus1\oplus\chi_\Sigma$ of that proof is
+\[
+Y_\Sigma(x,y)=1\oplus\alpha(x)\oplus\beta'(y)\oplus[x\text{ even},\,x\ge0,\,y\ge0]\oplus[x\text{ odd},\,x\ge3,\,y\ge5],
+\]
+that is: for $x<0$, $Y_\Sigma=0$ if $y\in\{0,1\}$ and $1$ otherwise; for even $x\ge0$, $Y_\Sigma=1$ if $y\ge2$ and $0$ if $y\le0$; for $x=1$, $Y_\Sigma=1$ if $y=1$ and $0$ otherwise; for odd $x\ge3$, $Y_\Sigma=1$ if $y=1$ or $y\ge5$ and $0$ if $y\le-1$ or $y=3$. A firing at $C=(x,y)$ needs $Y_\Sigma(C)=1$ and $Y_\Sigma=0$ at $\mathsf W=(x+1,y-1)$ and $\mathsf E=(x-1,y+1)$. If $x\le-2$, $\mathsf W$ and $\mathsf E$ lie in $\{x<0\}$ and would need $y-1,y+1\in\{0,1\}$, which is impossible. If $x=-1$, $Y_\Sigma(\mathsf E)=0$ needs $y+1\in\{0,1\}$, so $y=-1$, and $C=(-1,-1)$ does fire, as $Y_\Sigma(-1,-1)=1$ and $Y_\Sigma(0,-2)=Y_\Sigma(-2,0)=0$. If $x=0$, $Y_\Sigma(C)=1$ needs $y\ge2$, while $Y_\Sigma(\mathsf E)=Y_\Sigma(-1,y+1)=0$ needs $y\le0$. If $x=1$, $Y_\Sigma(C)=1$ needs $y=1$, and then $Y_\Sigma(\mathsf E)=Y_\Sigma(0,2)=1$. If $x\ge2$ is even, $Y_\Sigma(C)=1$ needs $y\ge2$, and $Y_\Sigma(\mathsf W)=0$ then needs $y-1=3$; for $x=2$ the centre $(2,4)$ fires, as $Y_\Sigma(3,3)=Y_\Sigma(1,5)=0$, and for $x\ge4$, $Y_\Sigma(\mathsf E)=Y_\Sigma(x-1,5)=1$. If $x\ge3$ is odd, $Y_\Sigma(\mathsf W)=0$ needs $y\le1$, so $y=1$, and $Y_\Sigma(\mathsf E)=Y_\Sigma(x-1,2)=1$. So $Y_\Sigma$ fires exactly on $\Sigma$, and $Y'=Y_\Sigma$ on $G'$.
+
+For large $x$, $Y_\Sigma$ is $0$ for $y\le0$, $1$ for $y\in\{1,2\}$, $0$ for $y=3$ and $1$ for $y\ge4$; for large $y$ it is $1$ except at $x=1$. Reading $Y'$ on the half-planes of Lemma~\ref{cl:lem:scatter}(ii), $\Gamma'$ has the diagram that is $0$ for $p\le r$, $1$ for $p\in\{r+1,r+2\}$, $0$ for $p=r+3$ and $1$ for $p\ge r+4$, and $\Omega'=Z^+_{a+1}$. With the diagram $1\oplus\theta_b(p)$ of $\bar K^-_b$ for $p\le b+1$, this gives $\Gamma$.
+\end{proof}
+
+\begin{corollary}\label{cl:cor:zero}
+For every $L\ge1$, the isolated zeros $Z^+_a$ and $Z^-_a$, $a\in\Z$, lie in $C_L$.
+\end{corollary}
+
+\begin{proof}
+In Lemma~\ref{cl:lem:B} with $g=2$, $X=[b;[r;K^-_{r+2}]]$, where $[r;K^-_{r+2}]$ has the first kink $r=b+2$. By two applications of Lemma~\ref{cl:lem:prepend}, starting from the bare kink $K^-_{r+2}$, $X\in C_L$. The probe $K^+_a$ is a bare kink, so $Z^+_{a+1}\in C_L$ by (C2). Since $\sh$ acts on the diagrams of points of $\Phi^+$ by $\pi(q)\mapsto\pi(q-1)$, (C1) gives all $Z^+_a$, and $Z^-_a=\mathrm{rev}\,Z^+_a$ (Step~6 of the proof of Theorem~\ref{cl:thm:KR94}).
+\end{proof}
+
+\begin{lemma}[isolated zeros]\label{cl:lem:exchange}
+Let $f=94$, and let $[q_0,p_0]$ be a corner, with quadrant $G$.
+\begin{enumerate}
+\item[(i)] Let $a\equiv d\pmod2$, $q_0\le a-2$ and $p_0\le d-2$. Then $(\bar K^+_a,Z^-_d)$ is a placed pair with background $11$, its diagram $Y$ fires exactly at the centres $[a-1,d-1]$ and $[a+2,d+2]$,
+\[
+\mathcal S(\bar K^+_a,Z^-_d)=(K^-_{d+2},Z^+_{a+1}),
+\]
+and $Y[q,p]=1\oplus[q=a+1]$, the diagram of $Z^+_{a+1}$, at every point of $G$ with $p\ge d+2$.
+\item[(ii)] Let $a\equiv u\pmod2$, $q_0\le a-2$ and $p_0\le u-2$. Then $(Z^+_a,\bar K^-_u)$ is a placed pair with background $11$, and its diagram is $1\oplus[p=u+1]$ at every point of $G$ with $q\ge a+2$.
+\item[(iii)] Let $a\not\equiv d\pmod2$, $q_0\le a-2$ and $p_0\le d-2$. Then $(Z^+_a,Z^-_d)$ is a placed pair with background $11$, its diagram is $1\oplus[q=a]\oplus[p=d]$ on $G$, it does not fire, and $\mathcal S(Z^+_a,Z^-_d)=(Z^-_d,Z^+_a)$.
+\end{enumerate}
+\end{lemma}
+
+In (i) the kink of the probe and the zero of the object exchange their roles: the probe leaves as an isolated zero and the object as a bare kink. In (iii) the two zeros lie on different sublattices and do not meet.
+
+\begin{proof}
+That the pairs are placed is clear. We use the ansatz of the proof of Lemma~\ref{cl:lem:pair}, with the functions $Y_\Sigma$ defined there.
+
+(i) Write $x=q-a$ and $y=p-d$, so $x\equiv y\pmod2$; the boundary values are $A(q)=1\oplus[x\ge0]$ and $B(p)=1\oplus[y=0]$, and the corner value is $1$. Let $\Sigma=\{(-1,-1),(2,2)\}$ in these coordinates; both centres have $q'>q_0$ and $p'>p_0$. The first contributes to $\chi_\Sigma$ at the points with $x\ge0$, $y\ge0$ and $x$ even, the second at those with $x\ge3$, $y\ge3$ and $x$ odd, so
+\[
+Y_\Sigma(x,y)=1\oplus[x\ge0]\oplus[y=0]\oplus[x\text{ even},\,x\ge0,\,y\ge0]\oplus[x\text{ odd},\,x\ge3,\,y\ge3],
+\]
+that is: for $x<0$, $Y_\Sigma=0$ if $y=0$ and $1$ otherwise; for even $x\ge0$, $Y_\Sigma=1$ if $y\ge2$ and $0$ if $y\le0$; for $x=1$, $Y_\Sigma=0$; for odd $x\ge3$, $Y_\Sigma=1$ if $y\ge3$ and $0$ if $y\le1$. A firing at $C=(x,y)$ needs $Y_\Sigma(C)=1$ and $Y_\Sigma=0$ at $\mathsf W=(x+1,y-1)$ and $\mathsf E=(x-1,y+1)$. If $x\le-2$, $\mathsf W$ and $\mathsf E$ lie in $\{x<0\}$ and would need $y-1=0$ and $y+1=0$. If $x=-1$, $Y_\Sigma(\mathsf E)=0$ needs $y=-1$, and $C=(-1,-1)$ does fire, as $Y_\Sigma(-1,-1)=1$ and $Y_\Sigma(0,-2)=Y_\Sigma(-2,0)=0$. If $x=0$, $Y_\Sigma(C)=1$ needs $y\ge2$, while $Y_\Sigma(\mathsf E)=Y_\Sigma(-1,y+1)=0$ needs $y=-1$. If $x=1$, $Y_\Sigma(C)=0$. If $x=2$, $Y_\Sigma(C)=1$ needs $y\ge2$ and $Y_\Sigma(\mathsf W)=Y_\Sigma(3,y-1)=0$ needs $y\le2$, and $C=(2,2)$ does fire, as $Y_\Sigma(2,2)=1$ and $Y_\Sigma(3,1)=Y_\Sigma(1,3)=0$. If $x\ge3$ is odd, $Y_\Sigma(C)=1$ needs $y\ge3$, while $Y_\Sigma(\mathsf W)=0$, at the even $x+1$, needs $y-1\le0$. If $x\ge4$ is even, $Y_\Sigma(C)=1$ needs $y\ge2$, while $Y_\Sigma(\mathsf E)=0$, at the odd $x-1\ge3$, needs $y+1\le1$. So $Y_\Sigma$ fires exactly on $\Sigma$, and $Y=Y_\Sigma$ on $G$. For $x\ge3$, $Y_\Sigma$ is $0$ for $y\le1$ and $1$ for $y\ge2$; for $y\ge2$ it is $1$ except at $x=1$, where it is $0$. This is the last statement of (i), and reading $Y$ on the half-planes of Lemma~\ref{cl:lem:scatter}(ii) gives $\mathcal S(\bar K^+_a,Z^-_d)$.
+
+(ii) The reflection $[q,p]\mapsto[p,q]$ maps solutions of \eqref{cl:eq:goursat} to solutions, since $N$ is invariant under reversal of the triple, and it exchanges the two boundary rays. So the diagram of $(Z^+_a,\bar K^-_u)$ on $G$ is $Y'[q,p]=Y[p,q]$, where $Y$ is the diagram of the pair $(\bar K^+_u,Z^-_a)$ of (i) at the corner $[p_0,q_0]$. By the last statement of (i), $Y[p,q]=1\oplus[p=u+1]$ whenever $q\ge a+2$.
+
+(iii) Take $\Sigma=\emptyset$, so $Y_\emptyset=1\oplus[q=a]\oplus[p=d]$. Since $q\equiv p$ at every point and $a\not\equiv d$, at most one of $q=a$, $p=d$ holds, and $Y_\emptyset[q,p]=0$ exactly if $q=a$ or $p=d$. A firing at $C=[q,p]$ needs $Y_\emptyset=0$ at $\mathsf W=[q+1,p-1]$ and at $\mathsf E=[q-1,p+1]$, that is, $q+1=a$ or $p-1=d$, and $q-1=a$ or $p+1=d$. Of the four combinations, two are contradictory, and the other two, $q+1=a$ with $p+1=d$ and $p-1=d$ with $q-1=a$, give $a\equiv d$. So $Y_\emptyset$ does not fire, it is the diagram on $G$, and reading it on the half-planes of Lemma~\ref{cl:lem:scatter}(ii) gives $\mathcal S(Z^+_a,Z^-_d)=(Z^-_d,Z^+_a)$.
+\end{proof}
+
+Let $U$ be an object that is not a background, with diagram $\upsilon$ and first kink $u$, such that $\upsilon=1$ on $\{p<u\}$. For $d\le u-3$ let $\langle d;U\rangle\in\Phi^-$ be the point whose diagram is $\upsilon$ except for the value $0$ at $p=d$. Its triples that contain $d$ are $110$, $101$ and $011$, since $\upsilon(d+1)=\upsilon(d+2)=1$; so it is an object, with the kinks $d$, $d+1$ and those of $U$.
+
+\begin{lemma}[prepending an isolated zero]\label{cl:lem:prependZ}
+Let $L\ge1$, let $U\in C_L$ be an object that is not a background, with first kink $u$ and diagram $1$ on $\{p<u\}$, and let $d\le u-3$. Then $\langle d;U\rangle\in C_L$.
+\end{lemma}
+
+\begin{proof}
+Let $\upsilon$ be the diagram of $U$. For every $a$, $Z^+_a\in C_L$ by Corollary~\ref{cl:cor:zero}.
+
+\emph{The case $u\ge d+4$.} Let $a\equiv d\pmod2$ and $P=\bar K^+_a$, and choose a corner $[q_0,p_0]$ with $q_0\le a-2$, $p_0\le d-2$ and $q_0\equiv p_0\equiv d$. By Lemma~\ref{cl:lem:exchange}(i), $\mathcal S(P,Z^-_d)=(K^-_{d+2},Z^+_{a+1})$, and the diagram of the pair $(P,Z^-_d)$ equals that of $Z^+_{a+1}$ on the rays $p\in\{d+2,d+3\}$ of $G$; the diagram of $Z^-_d$ is $1$ on $\{p\ge d+2\}$. So Lemma~\ref{cl:lem:glue} applies with $p_2=d+2$ and $X'=U$, whose diagram is $1$ for $p\le d+3$ because $u\ge d+4$; and $Z^-_d*U=\langle d;U\rangle$. Hence $(P,\langle d;U\rangle)$ and $(Z^+_{a+1},U)$ are placed pairs, and
+\[
+\mathcal S(P,\langle d;U\rangle)=(K^-_{d+2}*\Gamma',\Omega'),\qquad(\Gamma',\Omega')=\mathcal S(Z^+_{a+1},U).
+\]
+Since $Z^+_{a+1},U\in C_L$, also $\Gamma',\Omega'\in C_L$ by (C2). As in the proof of Lemma~\ref{cl:lem:prepend}, $\Gamma'$ is an object that is not a background, and its diagram $\gamma'$ is $1$ on $\{p<u\}$, by Lemma~\ref{cl:lem:scatter}(ii) at a corner with $p_0'=u-2$ and Corollary~\ref{cl:cor:dual}(2). So the first kink of $\Gamma'$ is at least $u\ge d+4$, and $K^-_{d+2}*\Gamma'$, whose diagram is $\theta_{d+2}(p)$ for $p\le d+3$ and $\gamma'(p)$ for $p\ge d+2$, is $[d+2;\Gamma']$. By Lemma~\ref{cl:lem:prepend} it lies in $C_L$. Both components of $\mathcal S(P,\langle d;U\rangle)$ lie in $C_L$, so $\langle d;U\rangle\in C_L$ by (C3).
+
+\emph{The case $u=d+3$.} Let $a\not\equiv d\pmod2$, so that $a\equiv u$, and $P=Z^+_a$, and choose a corner $[q_0,p_0]$ with $q_0\le a-2$, $p_0\le d-2$ and $q_0\equiv p_0\equiv d+1$. By Lemma~\ref{cl:lem:exchange}(iii), $\mathcal S(P,Z^-_d)=(Z^-_d,Z^+_a)$, and the diagram of the pair $(P,Z^-_d)$ is $1\oplus[q=a]$, the diagram of $Z^+_a$, on $\{p\ge d+1\}$; the diagram of $Z^-_d$ is $1$ there. So Lemma~\ref{cl:lem:glue} applies with $p_2=d+1$ and $X'=U$, whose diagram is $1$ for $p\le d+2$; and $Z^-_d*U=\langle d;U\rangle$. Hence
+\[
+\mathcal S(P,\langle d;U\rangle)=(Z^-_d*\Gamma',\Omega'),\qquad(\Gamma',\Omega')=\mathcal S(Z^+_a,U),
+\]
+and $\Gamma',\Omega'\in C_L$ by (C2); $\Gamma'$ is an object that is not a background. We claim that its diagram $\gamma'$ is $1$ on $\{p\le u\}$. Let $[q_0',p_0']$ be a corner with $q_0'\le a-2$, $p_0'\le u-2$ and $q_0'\equiv p_0'$, and $G'$ its quadrant. It is a corner of the pairs $(Z^+_a,U)$ and $(Z^+_a,\bar K^-_u)$, and the diagrams of $U$ and $\bar K^-_u$ agree on $\{p\le u\}$. By Goursat causality the diagrams of the two pairs agree on $G'\cap\{p\le u\}$, and by Lemma~\ref{cl:lem:exchange}(ii) the second is $1$ at every point of $G'$ with $q\ge a+2$ and $p\le u$. Reading the first on a half-plane $\{q\ge q_1\}$ on which it equals $\gamma'(p)$ gives $\gamma'(p)=1$ for $p_0'\le p\le u$, and $\gamma'(p)=1$ for $p\le p_0'+1$ by Lemma~\ref{cl:lem:scatter}(ii). So the first kink $u'$ of $\Gamma'$ satisfies $u'\ge u+1=d+4$, and $Z^-_d*\Gamma'$, whose diagram is that of $Z^-_d$ for $p\le d+2$ and $\gamma'(p)$ for $p\ge d+1$, is $\langle d;\Gamma'\rangle$. By the first case, applied to $\Gamma'\in C_L$, it lies in $C_L$. Both components of $\mathcal S(P,\langle d;U\rangle)$ lie in $C_L$, so $\langle d;U\rangle\in C_L$ by (C3).
+\end{proof}
+
+\begin{theorem}\label{cl:thm:objects}
+Let $f=94$ and $L\ge1$. Every point of $\Phi^+\cup\Phi^-$ with finitely many kinks lies in $C_L$. Consequently $C_L=\Phi^+\cup\Phi^-$.
+\end{theorem}
+
+\begin{proof}
+Since $\mathrm{rev}$ maps the point of $\Phi^-$ with the diagram $\xi(p)$ to the point of $\Phi^+$ with the diagram $\xi(q)$, and $C_L$ is invariant under $\mathrm{rev}$, it suffices to treat $\Phi^-$. Let $X\in\Phi^-$ have the diagram $\xi$ and the kinks $b_1<\dots<b_k$; we use induction on $k$. If $k\le1$, $X$ is a bare point. Let $k\ge2$.
+
+If $b_2-b_1\ge2$, let $U$ be the point with the diagram that is $\xi(p)$ for $p\ge b_1$ and $\xi(b_1)$ for $p<b_1$. Its triples are constant, or triples of $\xi$, or the triple $(\xi(b_1),\xi(b_1),\xi(b_1+1))$, whose first two letters are equal; so it lies in $\Phi^-$. It is an object with the kinks $b_2<\dots<b_k$, so $U\in C_L$ by the induction hypothesis, and $X=[b_1;U]\in C_L$ by Lemma~\ref{cl:lem:prepend}.
+
+If $b_2-b_1=1$, then $\xi(b_1)$ differs from $\xi(b_1-1)$ and from $\xi(b_1+1)$, and since $\xi$ contains no $010$, $\xi(b_1)=0$ and $\xi(b_1\pm1)=1$. If $k=2$, then $X=Z^-_{b_1}$, which lies in $C_L$ by Corollary~\ref{cl:cor:zero}. If $k\ge3$, then $b_3-b_2\ge2$, since $1\,0$ cannot follow $\xi(b_1)\xi(b_2)=01$. Let $U$ be the point with the diagram that is $\xi(p)$ for $p>b_1$ and $1$ for $p\le b_1$. Its triples that are not triples of $\xi$ begin with $11$, since $\xi(b_1+1)=1$, so it lies in $\Phi^-$. It is an object with the kinks $b_3<\dots<b_k$ and the value $1$ to the left of its first kink $b_3\ge b_1+3$, so $U\in C_L$ by the induction hypothesis, and $X=\langle b_1;U\rangle\in C_L$ by Lemma~\ref{cl:lem:prependZ}.
+
+For the last statement, let $w=w_1\cdots w_n$ be a word of a sequence of $\Phi_{94}$. The sequence that continues $w$ by $w_1$ to the left and by $w_n$ to the right has finitely many kinks, and its triples that are not triples of $w$ have two equal neighbouring letters, so it lies in $\Phi_{94}$. Hence every word of a sequence of $\Phi_{94}$ is a word of a point of $C_L\cap\Phi^-$, and of a point of $C_L\cap\Phi^+$. In particular this holds for every word of length $L$ of an arbitrary point of $\Phi^-$ or of $\Phi^+$, which therefore lies in $C_L$ by (C0).
+\end{proof}
+
+\begin{theorem}\label{cl:thm:dens}
+$\Aut(X_{F_{94}})=\langle\sh,F_{94}\rangle\cong\Z^2$, and the same holds for rule $122$.
+\end{theorem}
+
+\begin{proof}
+Let $h\in\Aut(X_{F_{94}})$. By Theorem~\ref{cl:thm:KR94} there are $x,y$ such that $g=\sh^xF^yh$ fixes every bare point. Let $R$ be the radius of $g$ and $L=2R+2$. By Lemma~\ref{cl:lem:closure}, $g$ fixes every point of $C_L$, and $C_L=\Phi^+\cup\Phi^-$ by Theorem~\ref{cl:thm:objects}; so $g$ fixes every point of $\Phi^+\cup\Phi^-$. By Theorem~\ref{cl:thm:L}, $g=\mathrm{id}$, so $h=F^{-y}\sh^{-x}\in\langle\sh,F\rangle$. Finally $\langle\sh,F\rangle\cong\Z^2$ by Lemma~\ref{cl:lem:Z2}, since $\Phi_{94}$ contains sequences that are not periodic, and the statement for $122$, the other rule of the class, follows by Lemma~\ref{lem:classes}.
+\end{proof}
+
+The proof has two steps, as have the proofs of $\Aut(X_{F_f})=\langle\sh,F_f\rangle$ for the permutive rules and for rule $110$ \cite{PaperB,PaperA}: the normalisation is Theorem~\ref{cl:thm:KR94}, and a normalised automorphism is the identity by Lemma~\ref{cl:lem:closure}, Theorem~\ref{cl:thm:objects} and Lemma~L. Both steps rest on what happens when two kinks cross on the background $11$ at equal parity (Lemma~\ref{cl:lem:pair}(ii)): in Theorem~\ref{cl:thm:KR94} the firing detects the descending kinks of the image of a bare kink (Lemma~\ref{cl:lem:ray}), and in Lemma~\ref{cl:lem:prepend} the delay moves one kink away from another.
+
+\begin{remark}[the closure for $95$]\label{cl:rem:dens}
+For $95$ the closure $C_L$ is not all of $\Phi^+\cup\Phi^-$ for $L\ge5$: by Corollary~\ref{cl:cor:95trans} below, $\mathcal S$ translates the zeros of each class, and no point of $C_L$ contains the word $01110$ of $\Phi_{95}$ (see the paragraph after that corollary). So the argument of Theorem~\ref{cl:thm:dens} does not apply to $95$, and its conclusion fails: $\Aut(X_{F_{95}})$ is determined in Section~\ref{cl:sec:95} and is not $\langle\sh,F\rangle$.
+\end{remark}

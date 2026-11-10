@@ -1,0 +1,24 @@
+rule 91 R 1 base 23 of 64
+COMPLETE after 2 passes
+rule 91 R 2 base 85 of 1024
+COMPLETE after 4 passes
+rule 91 R 3 base 295 of 16384
+COMPLETE after 8 passes
+rule 91 R 4 base 1005 of 262144
+COMPLETE after 12 passes
+rule 94 R 1 base 22 of 64
+COMPLETE after 2 passes
+rule 94 R 2 base 72 of 1024
+COMPLETE after 4 passes
+rule 94 R 3 base 226 of 16384
+COMPLETE after 7 passes
+rule 94 R 4 base 700 of 262144
+COMPLETE after 10 passes
+rule 155 R 1 base 8 of 64
+COMPLETE after 3 passes
+rule 155 R 2 base 16 of 1024
+COMPLETE after 10 passes
+rule 155 R 3 base 30 of 16384
+COMPLETE after 18 passes
+rule 155 R 4 base 54 of 262144
+COMPLETE after 25 passes

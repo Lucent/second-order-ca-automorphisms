@@ -1,0 +1,68 @@
+\section{Computations}\label{app:comp}
+
+This appendix describes the finite computations used in the paper. Every result marked as computer-assisted in the text is the output of a terminating exact search over a finite set; where random sampling is used, this is said, and such runs serve only as checks. The code and its output accompany the paper. Section~\ref{app:census} describes the censuses of commuting block maps, Section~\ref{app:proofs} the computations on which proofs rely, Section~\ref{app:stated} the computations whose results are stated in the text without a proof by hand, and Section~\ref{app:confirm} computational confirmations of results that are proved by hand. Section~\ref{app:repro} lists running times.
+
+\subsection{The censuses}\label{app:census}
+
+The censuses of Theorem~\ref{thm:54census} and Proposition~\ref{hw:census}, and the dimension counts of Theorem~\ref{thm:90}(c), Proposition~\ref{prop:150} and Remark~\ref{aff:rem:endo}, use the encoding, the enumeration, the re-verification and the invertibility test of Section~\ref{sec:method}.
+
+\emph{Rule $54$ at radius $2$.} The full centralizer $\Cent_2(F_{54})$ exceeds the enumeration cap of $2\times10^4$ solutions, so the balanced commuting maps were enumerated, with the balance condition as native cardinality constraints; there are $23$, and all pass the pair-graph test.
+
+\emph{Rule $54$ at radius $3$.} The enumeration of $\Cent^{\times}_3(F_{54})$ described in Section~\ref{sec:54r3} adds to the CNF the injectivity of $g$ on all spatially periodic configurations of period at most $5$ and learns necessary conditions lazily (diamonds of length $13$, and collisions of periodic configurations of period at most $10$), shared among the worker processes; the balanced commuting maps number more than $2\times10^4$. The enumeration is not complete, and the paper uses from it only the qualitative statements of Section~\ref{sec:54r3}.
+
+\emph{Rule $59$ at radius $2$} (Proposition~\ref{hw:census}). $\Cent^{\times}_2(F_{59})$ was enumerated as in Section~\ref{sec:method}; each of the $133$ solutions passed the pair-graph test, and each was matched against the tables of the maps (i)--(iii) of the proposition, computed by exact composition.
+
+\emph{Rule $90$ at radius $2$.} The invertibility of the $2^{17}$ commuting maps was decided with the balance condition and the pair-graph test, in $5{,}851$ seconds: $98{,}222$ of them are balanced, and $26$ are invertible, all affine.
+
+\emph{Linear rules.} The dimensions of $\Cent_R(F_{90})$ and $\Cent_R(F_{150})$ for $R\le3$ were computed by the elimination of Section~\ref{sec:method}, and for $R\le2$ cross-checked against the SAT enumeration of all solutions. For Theorem~\ref{thm:90}(c) the tables of the three families were built directly, each re-verified to commute, and their span was computed by a rank computation over $\F_2$.
+
+\emph{Affine rules} (Remark~\ref{aff:rem:endo}). For $f\in\{170,102,153,150\}$ and $R\le3$ the commutation condition, an affine system over $\F_2$ in the $2\cdot4^{2R+1}$ table bits (with a constant term for $153$), was solved by elimination in an implementation independent of the SAT encoding. The solution spaces are consistent and have dimensions $5,9,13$ for $170$, $6,10,14$ for $102$, $5,9,13$ for $153$ and $4,8,12$ for $150$, at $R=1,2,3$, which are the dimensions $4R+1$, $4R+2$, $4R+1$ and $4R$ of the affine commuting maps. By reflection the same holds for $240$, $60$ and $195$, and by the conjugation \eqref{aff:eq:kappa} for $85$, $15$ and $105$.
+
+\subsection{Computations used in proofs}\label{app:proofs}
+
+\emph{Fixed words of all lengths} (Proposition~\ref{cl:prop:133}(3) and Corollary~\ref{cor:48}). For each of the $256$ rules and each $k\le40$, the words $w\in\{0,1\}^k$ that are fixed in every context are found as walks in the graph on the four pairs $(w_j,w_{j+1})$, as in the proof. Fixed words exist exactly for the $81$ rules of Table~\ref{tab:walls} at length at most $3$, and, among the other rules, only for $133$ and $161$, at the lengths $4$, $7$, $8$ and every $k$ with $10\le k\le40$. A brute-force search over all of $\A^k$, $k\le4$, agrees with the reduction to $\{0,3\}^k$. For each rule of Table~\ref{tab:walls}, the set $C$ of Theorem~\ref{thm:walls} for the listed word has at least two elements.
+
+\subsection{Computer-assisted statements}\label{app:stated}
+
+The following results are stated in the text as computations. For each we give the method in brief.
+
+\emph{Walls and searches} (Sections~\ref{hw:sec:59} and~\ref{hw:sec:27}). Words fixed or time-periodic in every context, and invariant families of type (W1), are found by computing, for each word, its images under $F^{\pm p}$ in all contexts. The search for invariant families with a hidden involution satisfying (W1) and (H1), with windows of length at most $6$, considers the closure of each word under $F$ and $F^{-1}$ in all contexts when that closure has at most $300$ words. For $59$R and $p\in\{6,12,30,60,120\}$, a search finds, for every word of $X_A\cup X_B$, a context in which $F^p$ changes the protector. The overlaps of walls of rule $59$ at distances $2$ and $3$ were found on all words of length at most $9$.
+
+\emph{The marker example} (Example~\ref{lin:ex:S3}). The statements about frames are checked exhaustively on all binary words of length $31$ and $21$, as stated there.
+
+\emph{Rule $219$} (after Proposition~\ref{hw:219D}). The radius-$6$ variant of $\Psi_2$ is checked to commute with $F$ on all $4^{15}$ windows and to be an involution.
+
+\emph{Linear rules} (Remark~\ref{lin:rem:window}). The graphs $\Lambda_M$ are built directly from the local rule and tested for strong connectivity, for $M\le4$ for the affine left-permutive rules listed there, and for $M\le8$ for rule $90$.
+
+\emph{Rule $54$} (after Theorem~\ref{thm:54} and Table~\ref{tab:spread}). The orders $o_L$ of $F_L$ and the periods of the content $0^L$ were computed by iterating $F_L$ on $S_L$. The spreading data of Table~\ref{tab:spread} come from simulation on random configurations, as stated in its caption.
+
+\subsection{Confirmations of results proved by hand}\label{app:confirm}
+
+The following computations check results that the paper proves by hand. None of them is used in a proof.
+
+\emph{Walls.} The construction of Theorem~\ref{thm:finite} was checked on $3{,}000$ random cyclic configurations of length about $60$ containing trains of $2$ to $4$ cars: $\Psi_m(\sigma)$ commuted with $F$, was inverted by $\Psi_m(\sigma^{-1})$ and composed as a homomorphism, and it acted nontrivially on $476$ of them. For each rule of Table~\ref{tab:walls}, the construction of Theorem~\ref{thm:walls} was checked on $1{,}500$ random cyclic configurations. The table of $\tau$ (Theorem~\ref{thm:tau}) differs from that of the identity on exactly $24$ of the $16{,}384$ entries, commutes with $F$ on all $4^9$ windows, composes with itself to the identity on all $4^{13}$ windows of length $13$, and differs from $D\tau$ on $147{,}456$ of them; the pair-graph test reports $\tau$ injective, and $\tau$ is injective on all spatially periodic configurations of period at most $10$. The automorphism $D$ of Proposition~\ref{cl:prop:133} commutes with $F$ on all $4^{11}$ windows of length $11$.
+
+\emph{Hidden and rotating walls.} For Proposition~\ref{hw:census}, the elements of $T_R$ were composed exactly on windows of radius $4$, and the eight generators were checked to commute with $F$ exhaustively at radius $3$. For $59$R (Theorem~\ref{hw:59}), on rings of length $2000$ seeded with trains of length up to $6$, with all $m=2,\dots,6$ permuted at once, $F\Psi=\Psi F$, $F^{-1}\Psi=\Psi F^{-1}$ and the homomorphism law held for $60$ steps, and the radius bound $2m+2$ held when all cells outside the window were re-randomized. For $127$R, $179$R and $223$R (Proposition~\ref{hw:tp}), the flip of all walls was composed exactly at radius $4$ and passed the pair-graph test, and rings of length $1500$ seeded with trains at gaps $5$, $6$ and $8$, with walls of other classes mixed in, showed no failure of commutation with $F$ and $F^{-1}$ or of the homomorphism law. For $27$R (Theorem~\ref{hw:27}), (W1) and (H1) were checked for the $12$ words in all $16$ contexts, for $F$ and $F^{-1}$; (H2) and (H4) on all pairs of occurrences at distances $3$, $4$, $5$, that is, on words of length at most $11$; over all $16$ contexts, $\beta$ and $\beta+1$ are the only maps $W_{27}\to\Z/2$ with $\beta\circ\iota=\beta+1$ that satisfy (H3) for some $\varepsilon$; and simulations on rings with trains at gaps $3$, $6$ and $7$ showed no failure of commutation or of the homomorphism law. For $219$R and $126$R (Theorem~\ref{hw:219} and Proposition~\ref{hw:126}), the hypotheses were checked on all contexts by two implementations; the bond invariance, the $\pi$-evolution of bonded cells, the maps $\varphi_s$ and $R_s$, and the commutation of $D$ and $E$ with $F$ on all $4^7$ windows were checked, $D$ and $E$ are injective by the pair-graph test, and $\Psi_1$, $\Psi_2$, $\Psi_3$ were tested on planted rings.
+
+\emph{Markers for $90$R and $165$R} (Theorem~\ref{lin:movers}). The maps $\Phi$ and $\Phi'$ were checked on all cyclic configurations of periods $10$ and $11$ and on planted random rings for commutation with $F$, the group law and the commutation of the two movers, with no failures; as a negative control, for $165$R the frames $111\,u\,111$ alone, whose integral is not complement-invariant, give commutation failures. The construction of Lemma~\ref{lin:markers} with $N=2$, three words of length $19$, was checked in the same way.
+
+\emph{Theorem~\ref{cl:thm:A} and Lemma~\ref{cl:lem:stair}.} Parts (1) and (2) were checked by exhaustion for all $256$ rules and $n\le4$, and the construction of Lemma~\ref{cl:lem:stair} with random staircase data for all $240$ rules reading $c$ and $n\le31$.
+
+\subsection{Running times and reproducibility}\label{app:repro}
+
+The censuses were run on one core of a machine with 32\,GB of memory under Linux, using Python~3.12 or later, NumPy and PySAT~1.9 with CaDiCaL~1.5.3 and MiniCard. Table~\ref{tab:times} lists instance sizes and times. The $54$R radius-$2$ invertible census used MiniCard's native cardinality constraints for the balance condition. The code for all computations of this appendix accompanies this paper, with its logs and with the solution tables of the complete enumerations for $54$R at radius $1$, for the $23$ balanced maps of $54$R at radius $2$, and for $59$R; the larger solution sets are regenerated by the programs.
+
+\begin{table}[h]
+\caption{Instance sizes and running times (encode / enumerate / classify, in seconds).}
+\label{tab:times}
+\centering
+\begin{tabular}{lrrrl}
+\toprule
+instance & variables & clauses & solutions & time (s)\\
+\midrule
+54R, $R=2$, balanced & $2{,}048+4{,}096$ & $2.9\times10^5$+card. & 23 & $3$ / $11$ / --\\
+90R, $R=2$, pair-graph test & --- & --- & $2^{17}$ maps tested & $5{,}851$\\
+90R, $R=3$, elimination & $4{,}096$ classes & $2.6\times10^5$ eqs & $2^{65}$ & $4$\\
+\bottomrule
+\end{tabular}
+\end{table}

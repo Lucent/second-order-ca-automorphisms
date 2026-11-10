@@ -1,0 +1,713 @@
+\section{Permutive automata of any radius}\label{sec:general}
+
+In this section we extend Theorem~\ref{thm:rigidity30} to second-order automata of any radius $r\ge1$ over $\F_2=\{0,1\}$ whose rule is permutive in its leftmost variable. Most of the proof carries over once the speed $1$ of the fronts is replaced by $r$, and we state each such step at radius $r$ with its proof, or with a precise reference to the proof for rule $30$ and the indices that change. Three steps need new arguments. The correction term is removed by a descent on the largest coordinates that it reads, which works when a second derivative of the rule reaches far enough to the right (Section~\ref{gen:sec:strip}). The strong connectivity of the light-speed window graph is reduced to a finite certificate that covers all window lengths at once (Section~\ref{gen:sec:tower}). And the parity step is replaced by an orbit-counting obstruction on spatially periodic points (Section~\ref{gen:sec:index}), because the offsets determine an automorphism only up to an index $2r$. The elementary rules are treated as the case $r=1$ in Section~\ref{sec:permutive}.
+
+\subsection{Setting, hypotheses and results}\label{gen:sec:setting}
+
+Fix $r\ge1$ and a Boolean function $g\colon\{0,1\}^{2r}\to\{0,1\}$. Put
+\begin{equation}\label{gen:eq:f}
+f(y_{i-r},\dots,y_{i+r})=y_{i-r}\oplus g(\xi_0,\dots,\xi_{2r-1}),\qquad \xi_k=y_{i-r+1+k}\ \ (0\le k\le 2r-1),
+\end{equation}
+and define $F$ on $\A^{\Z}$, $\A=\{0,1\}^2$ with cells $(x,y)$, by
+\begin{equation}\label{gen:eq:F}
+F(c)_i=\bigl(y_i,\;x_i\oplus f(y_{i-r},\dots,y_{i+r})\bigr).
+\end{equation}
+For $r=1$ this is \eqref{eq:F} for an elementary rule of the form $f(a,b,c)=a\oplus g(b,c)$; rule $30$ is $g(b,c)=b\vee c$. The map $F$ is reversible, with $F^{-1}(c)_i=\bigl(y_i\oplus f(x_{i-r},\dots,x_{i+r}),\,x_i\bigr)$, and $F$ and $F^{-1}$ have radius $r$. Lemma~\ref{lem:spacetime} holds for every reversible cellular automaton, so $\Aut(X_F)$ is the group of invertible block maps commuting with $F$, and $\langle\sh,\tau\rangle$ corresponds to $\langle\sh,F\rangle$. From now on the letter $g$ denotes this function, and automorphisms are denoted $h,h_1,\dots$, as before.
+
+For $\varphi\colon\{0,1\}^{2r}\to\{0,1\}$ and $0\le j\le 2r-1$, let $\xi^{(j)}$ be $\xi$ with its coordinate $\xi_j$ complemented, and $\partial_j\varphi(\xi)=\varphi(\xi)\oplus\varphi(\xi^{(j)})$. Then $\partial_j\varphi\equiv0$ if and only if $\varphi$ does not depend on $\xi_j$, $\partial_j\partial_k=\partial_k\partial_j$ and $\partial_j\partial_j=0$. We write $\mathbf 1=(1,\dots,1)$.
+
+\begin{definition}[light-speed window graph]\label{gen:def:lambda}
+Fix $M\ge0$. The graph $\Lambda_M$ has vertex set $\A^{M+1}$ and, for every vertex $\omega=\omega_0\cdots\omega_M$ and every word $\iota=\iota_1\cdots\iota_{2r}\in\A^{2r}$, an edge $\omega\to\omega\cdot\iota$, where
+\[
+(\omega\cdot\iota)_k=F(\tilde c)_{p+r+k}\qquad(0\le k\le M)
+\]
+and $\tilde c$ is any configuration with $\tilde c_{p+k}=\omega_k$ for $0\le k\le M$ and $\tilde c_{p+M+j}=\iota_j$ for $1\le j\le 2r$. Since $F$ has radius $r$, the cells $F(\tilde c)_i$ with $p+r\le i\le p+r+M$ read only $\tilde c$ on $[p,p+M+2r]$, so $\omega\cdot\iota$ depends neither on $p$ nor on the other cells of $\tilde c$. A vertex is the word of one configuration on a front cell $p$ and the $M$ cells ahead of it, and an edge advances the front by $r$ sites, at the speed of light. For $r=1$ this is the graph $\Lambda_M$ of Section~\ref{r30:sec:window}.
+\end{definition}
+
+The cellwise complement is $\kappa(c)_i=(1\oplus x_i,\,1\oplus y_i)$. We call $g$ \emph{self-dual} if $g(\xi\oplus\mathbf 1)=g(\xi)\oplus1$ for every $\xi$.
+
+\begin{lemma}\label{gen:lem:kappa}
+$\kappa$ is an involution commuting with $\sh$, and $\kappa F=F\kappa$ if and only if $g$ is self-dual.
+\end{lemma}
+
+\begin{proof}
+The first statement is clear. By \eqref{gen:eq:F}, $F(\kappa c)_i=(1\oplus y_i,\,1\oplus x_i\oplus f(y\oplus\mathbf 1))$ and $\kappa F(c)_i=(1\oplus y_i,\,1\oplus x_i\oplus f(y))$, where $y$ stands for $(y_{i-r},\dots,y_{i+r})$. By \eqref{gen:eq:f}, $f(y\oplus\mathbf 1)\oplus f(y)=1\oplus g(\xi\oplus\mathbf 1)\oplus g(\xi)$. This vanishes for all $y$ exactly when $g$ is self-dual.
+\end{proof}
+
+\paragraph{Spatially periodic points.} For $n\ge1$ let $\mathrm{Per}_n=\{c\in\A^{\Z}:\sh^nc=c\}$, a finite set of $4^n$ points, and $\mathrm{Per}=\bigcup_n\mathrm{Per}_n$. The group $\Z^2$ acts on $\mathrm{Per}$ by $(a,b)\cdot c=\sh^aF^bc$, and $\mathrm{Stab}(c)=\{(a,b):\sh^aF^bc=c\}$.
+
+\begin{lemma}\label{gen:lem:stab}
+Let $c\in\mathrm{Per}$ have least spatial period $n$. Then $\mathrm{Stab}(c)\cap(\Z\times\{0\})=n\Z\times\{0\}$, and $\mathrm{Stab}(c)$ has finite index in $\Z^2$. All points of a $\Z^2$-orbit have the same stabiliser. If $\mathcal L$ is a subgroup of finite index and $\mathcal L\cap(\Z\times\{0\})=n\Z\times\{0\}$, then every orbit with stabiliser $\mathcal L$ consists of points of least period $n$. In particular the number $k(\mathcal L)$ of $\Z^2$-orbits in $\mathrm{Per}$ whose stabiliser is exactly $\mathcal L$ is finite, and it is computed exactly by enumerating the points of least period $n$ in $\mathrm{Per}_n$.
+\end{lemma}
+
+\begin{proof}
+The first statement is the definition of the least period. $F$ commutes with $\sh$ and is injective, so it permutes the finite set $\mathrm{Per}_n$, and $F^\ell c=c$ for some $\ell\ge1$. So $(n,0),(0,\ell)\in\mathrm{Stab}(c)$. Stabilisers are constant on orbits because $\Z^2$ is abelian. The rest follows.
+\end{proof}
+
+\begin{definition}[index condition]\label{gen:def:index}
+For a subgroup $\mathcal L\subseteq\Z^2$ of finite index let $k(\mathcal L)$ be the number of $\Z^2$-orbits in $\mathrm{Per}$ whose stabiliser is exactly $\mathcal L$ (Lemma~\ref{gen:lem:stab}). For a prime $q$ dividing $2r$ put
+\[
+a_q=0\ \text{ if $q$ is odd},\qquad a_2=r\bmod2 .
+\]
+Condition $(\mathrm{I})_q$ is: \emph{there is a subgroup $\mathcal L\subseteq\Z^2$ of finite index with $q\nmid k(\mathcal L)$ and $(a_q,1)\notin q\Z^2+\mathcal L$.}
+\end{definition}
+
+Since $q\mid0$, a subgroup witnessing $(\mathrm{I})_q$ is the stabiliser of at least one orbit. We call such an $\mathcal L$ a \emph{witness}.
+
+\begin{definition}[hypotheses]\label{gen:def:hyp}
+\begin{itemize}
+\item[(N)] \emph{Stripping condition.} $\partial_0g$ is not constant, and
+\[
+J(g)=\max\{j\in[1,2r-1]:\ \partial_0\partial_jg\not\equiv0\}\quad\text{satisfies}\quad J(g)\ge r.
+\]
+(Since $\partial_0\partial_0g=0$, $\partial_0g$ is non-constant exactly when this set is nonempty.) For $r\ge2$ this is strictly stronger than non-affineness of $g$.
+\item[(D)] \emph{Not self-dual.} $g(\xi\oplus\mathbf 1)\ne g(\xi)\oplus1$ for some $\xi$; equivalently (Lemma~\ref{gen:lem:kappa}), $\kappa$ does not commute with $F$.
+\item[($\Lambda$)] \emph{Light-speed connectivity.} $\Lambda_M$ is strongly connected for every $M\ge0$.
+\item[(I)] \emph{Index condition.} $(\mathrm{I})_q$ holds for every prime $q$ dividing $2r$.
+\end{itemize}
+\end{definition}
+
+For $r=1$, $\partial_0\partial_1g$ is the coefficient of $\xi_0\xi_1$ in the algebraic normal form of $g$, so (N) says that $f$ is not affine. For $r=2$, \textup{(N)} holds for $64\,512$ of the $65\,504$ non-affine $g$, and \textup{(N)} and \textup{(D)} both hold for $64\,288$ of them. Hypothesis ($\Lambda$) is established by the finite computation of Section~\ref{gen:sec:tower}, a sufficient certificate that covers all $M$ at once, and (I) by enumerating spatially periodic points (Section~\ref{gen:sec:index}). Both computations are semi-decision procedures: a positive answer proves the hypothesis, and a negative answer at a given size proves nothing.
+
+The offsets $e^\pm$ below are those of Proposition~\ref{gen:prop:offsets}. They are the radius-$r$ versions of the offsets of Corollary~\ref{r30:cor:offsets}.
+
+\begin{theorem}\label{gen:main}
+Assume \textup{(N)}, \textup{(D)}, \textup{($\Lambda$)} and \textup{(I)}. Then every invertible block map $h$ commuting with $F$ equals $\sh^aF^b$ for exactly one $(a,b)\in\Z^2$, namely
+\[
+a=-\tfrac12\bigl(e^+(h)+e^-(h)\bigr),\qquad b=\tfrac1{2r}\bigl(e^+(h)-e^-(h)\bigr).
+\]
+Hence $\Aut(X_F)=\langle\sh,F\rangle\cong\Z^2$.
+\end{theorem}
+
+The next theorem records what each hypothesis contributes. Write $e=(e^+,e^-)$.
+
+\begin{theorem}\label{gen:structure}
+\begin{enumerate}
+\item[(a)] The map $(a,b)\mapsto\sh^aF^b$ is an isomorphism $\Z^2\to\langle\sh,F\rangle$; this needs no hypothesis. Assume \textup{($\Lambda$)}. Then every $h\in\Aut(X_F)$ has offsets $e^\pm(h)\in\Z$ (Proposition~\ref{gen:prop:offsets}), and $e^+,e^-$ are homomorphisms $\Aut(X_F)\to\Z$ with
+\[
+e(\sh^aF^b)=(rb-a,\ -a-rb).
+\]
+The image of $\langle\sh,F\rangle$ under $e$ is $L=\{(m,n)\in\Z^2:m\equiv n\pmod{2r}\}$. It has index $2r$ in $\Z^2$, and $(m,n)\mapsto m-n$ induces $\Z^2/L\cong\Z/2r$.
+\item[(b)] Assume \textup{($\Lambda$)} and \textup{(N)}. Then $\ker e=\{\mathrm{id}\}$ if \textup{(D)} holds, and $\ker e=\{\mathrm{id},\kappa\}$ if $g$ is self-dual. Consequently, under \textup{($\Lambda$)}, \textup{(N)} and \textup{(D)}, $e$ is injective, $\Aut(X_F)\cong\Z^2$, and $\langle\sh,F\rangle$ has index dividing $2r$ in $\Aut(X_F)$, with cyclic quotient.
+\item[(c)] If $g$ is self-dual, then $\kappa\in\Aut(X_F)$ has order $2$, commutes with $\sh$ and $F$, and does not lie in $\langle\sh,F\rangle$; so \textup{(D)} is necessary for $\Aut(X_F)=\langle\sh,F\rangle$. If moreover \textup{($\Lambda$)} and \textup{(N)} hold, then $\kappa$ is central in $\Aut(X_F)$.
+\item[(d)] Assume \textup{($\Lambda$)}, \textup{(N)} and \textup{(D)}, and let $q$ be a prime dividing $2r$. Then $q$ divides $[\Aut(X_F):\langle\sh,F\rangle]$ if and only if $h_1^q=\sh^aF$ for some $h_1\in\Aut(X_F)$ and some $a\in\Z$, and in that case necessarily $a\equiv-r\equiv a_q\pmod q$. Condition $(\mathrm{I})_q$ rules out $h_1^q=\sh^aF$ with $a\equiv a_q\pmod q$, without any further hypothesis. Hence $(\mathrm{I})_q$ implies that $q$ does not divide the index, and \textup{(I)} removes the index entirely.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[scope]\label{gen:rem:scope}
+\begin{enumerate}
+\item For $r=1$, (N) is non-affineness, and (D) then holds automatically (Section~\ref{pm:sec:audit}). The four hypotheses hold for the eight non-affine left-permutive elementary rules (Section~\ref{sec:permutive}).
+\item The reflection $\mathrm{rev}(c)_i=c_{-i}$ conjugates $F$ to the automaton of the reflected rule $f^r(y_{i-r},\dots,y_{i+r})=f(y_{i+r},\dots,y_{i-r})$, since by \eqref{gen:eq:F},
+\[
+\mathrm{rev}\,F\,\mathrm{rev}(c)_i=F(\mathrm{rev}\,c)_{-i}=\bigl(y_i,\,x_i\oplus f(y_{i+r},\dots,y_{i-r})\bigr).
+\]
+It satisfies $\mathrm{rev}\,\sh\,\mathrm{rev}=\sh^{-1}$, so it maps $\langle\sh,F\rangle$ onto the corresponding group, and it preserves radii. So the theorem also applies to rules permutive in their rightmost variable, after reflection. Rules permutive in both outer variables are included when the hypotheses hold; an example with $r=2$ is in Table~\ref{gen:tab:r2}.
+\item If $g$ is affine, then $\partial_0g$ is constant and (N) fails. This is not an artefact of the method: for rule $150$, the map $\mathrm{id}+\sh F$ is an automorphism outside $\langle\sh,F\rangle$ (Remark~\ref{pm:rem:linear}).
+\end{enumerate}
+\end{remark}
+
+The hypotheses enter as follows. ($\Lambda$) gives the offsets (Sections~\ref{gen:sec:front}--\ref{gen:sec:allpairs}). (N) forces the correction term to be constant (Section~\ref{gen:sec:strip}). (D) excludes the constant $1$, that is, $\kappa$ (Section~\ref{gen:sec:kernel}). (I) removes the remaining index (Section~\ref{gen:sec:index}). The proofs of the two theorems are in Section~\ref{gen:sec:proofs}.
+
+\medskip
+\noindent\textbf{Conventions.} Those of Section~\ref{sec:rigidity30}: $[S]\in\{0,1\}$ is the truth value of $S$, intervals are intervals of integers, and $-\infty+k=-\infty<n$, $\max\emptyset=-\infty$.
+
+\subsection{Diagrams, profiles and flips}\label{gen:sec:profiles}
+
+The definitions of Section~\ref{r30:sec:diagrams} are used without change: the diagram $Y_c(t,i)$ is the $y$-bit of $F^t(c)$ at site $i$, so that the $x$-row of $F^t(c)$ is row $t-1$ and $c_i=(Y_c(-1,i),Y_c(0,i))$; pairs $Q=(c,c')$ are ordered pairs of distinct configurations that agree far to the right; $\Delta_Q=Y_c\oplus Y_{c'}$; and $\rho(c)_i=(y_i,x_i)$. By \eqref{gen:eq:F}, every diagram satisfies
+\begin{equation}\label{gen:eq:rec}
+Y(t+1,i)\oplus Y(t-1,i)\oplus Y(t,i-r)=g\bigl(Y(t,i-r+1),\dots,Y(t,i+r)\bigr)\qquad\text{for all }(t,i).
+\end{equation}
+This is an exclusive or in each of $Y(t+1,i)$, $Y(t-1,i)$ and $Y(t,i-r)$, so two consecutive rows determine the diagram, and $c\mapsto Y_c$ is a bijection onto the solutions of \eqref{gen:eq:rec}. Equations \eqref{r30:eq:transl} and \eqref{r30:eq:rows} hold as stated, since their proofs do not involve the radius. The computation before \eqref{r30:eq:rho}, with the formula for $F^{-1}$ above, gives $\rho F\rho=F^{-1}$ and \eqref{r30:eq:rho}, so $h\mapsto\rho h\rho$ is an automorphism of $\Aut(X_F)$. If rows $t-1$ and $t$ of $\Delta_Q$ vanish to the right of $s$, then by \eqref{gen:eq:rec} rows $t+1$ and $t-2$ vanish to the right of $s+r$; hence every row of $\Delta_Q$ vanishes far to the right, and the profile $\lambda_t=\lambda_t(Q)=\max\{i:\Delta_Q(t,i)=1\}\in\Z\cup\{-\infty\}$ is defined.
+
+\begin{lemma}\label{gen:lem:R}
+For every pair and every $t$:
+\begin{enumerate}
+\item $\lambda_{t+1}\le\max(\lambda_{t-1},\lambda_t+r)$, with equality if $\lambda_{t-1}\ne\lambda_t+r$;
+\item $\lambda_{t-1}\le\max(\lambda_{t+1},\lambda_t+r)$, with equality if $\lambda_{t+1}\ne\lambda_t+r$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+By \eqref{gen:eq:rec}, $\Delta(t+1,i)=\Delta(t-1,i)\oplus\Delta(t,i-r)\oplus D_i$, where $D_i$ is the difference of the two values of $g$, which read row $t$ on $[i-r+1,i+r]$. Let $m=\max(\lambda_{t-1},\lambda_t+r)$. For $i\ge\lambda_t+r$ we have $i-r+1>\lambda_t$, so $D_i=0$. For $i>m$ all three terms vanish. If $m$ is finite, then $D_m=0$, $\Delta(t-1,m)=[m=\lambda_{t-1}]$ and $\Delta(t,m-r)=[m=\lambda_t+r]$. At least one of these is $1$, and both are $1$ only if $\lambda_{t-1}=\lambda_t+r$. This proves (1). Part (2) is the same argument for \eqref{gen:eq:rec} solved for $Y(t-1,i)$, which has the same form with $t\pm1$ exchanged.
+\end{proof}
+
+\begin{proposition}\label{gen:prop:profile}
+Let $Q$ be a pair, and put
+\[
+I^+=\{t:\lambda_t\ne-\infty,\ \lambda_{t-1}<\lambda_t+r\},\qquad I^-=\{t:\lambda_t\ne-\infty,\ \lambda_{t+1}<\lambda_t+r\}.
+\]
+\begin{enumerate}
+\item No two consecutive $\lambda_t$ equal $-\infty$.
+\item If $t\in I^+$, then $\lambda_{t+1}=\lambda_t+r$ and $t+1\in I^+$. If $t\in I^-$, then $\lambda_{t-1}=\lambda_t+r$ and $t-1\in I^-$. The sets $I^\pm$ are disjoint, and every element of $I^-$ is smaller than every element of $I^+$.
+\item $\Z\setminus(I^+\cup I^-)$ has at most one element. If $m$ is such an element (a \emph{middle row}), then $m-1\in I^-$, $m+1\in I^+$, and $\lambda_{m-1}=\lambda_{m+1}\ge\lambda_m+r$. If $I^+=\emptyset$ then $I^-=\Z$, and if $I^-=\emptyset$ then $I^+=\Z$.
+\item Put $U=\lambda_t-rt$ for $t\in I^+$ and $V=\lambda_t+rt$ for $t\in I^-$, with $U=-\infty$ if $I^+=\emptyset$ and $V=-\infty$ if $I^-=\emptyset$ (the \emph{forward} and \emph{backward intercepts}). Then $\lambda_t\le\max(rt+U,\,V-rt)$ for every $t$; that is, $\Delta_Q(t,i)=1$ implies $i-rt\le U$ or $i+rt\le V$.
+\item Suppose $U,V$ are finite. If $2r\mid V-U$, there is a middle row $m=(V-U)/2r$, and $I^+=[m+1,\infty)$, $I^-=(-\infty,m-1]$. Otherwise there is no middle row, and $I^+=[t_+,\infty)$, $I^-=(-\infty,t_+-1]$ with $t_+=\lceil(V-U)/2r\rceil$. In particular $I^+$ and $I^-$ are determined by $(U,V)$, also when $U$ or $V$ is $-\infty$.
+\item For every $t$, $U\le\max\bigl(\lambda_t-rt,\ \lambda_{t-1}-r(t+1)\bigr)$ and $V\le\max\bigl(\lambda_t+rt,\ \lambda_{t+1}+r(t-1)\bigr)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+This is the proof of Proposition~\ref{r30:prop:profile} with the step $1$ replaced by $r$, using Lemma~\ref{gen:lem:R}. We give the points where $r$ enters.
+(1) Two vanishing consecutive rows give $c=c'$.
+(2) If $t\in I^+$, Lemma~\ref{gen:lem:R}(1) gives $\lambda_{t+1}=\lambda_t+r$, and then $\lambda_t<\lambda_{t+1}+r$, so $t+1\in I^+$. Symmetrically for $I^-$. If $t\in I^+$ then $\lambda_{t+1}=\lambda_t+r$, so $t\notin I^-$; and $a\in I^+$, $b\in I^-$, $a\le b$ would give $b\in I^+$.
+(3) Let $t\notin I^+\cup I^-$. If $\lambda_t=-\infty$, then $\lambda_{t\pm1}$ are finite by (1), so $t+1\in I^+$ and $t-1\in I^-$. If $\lambda_t$ is finite, then $\lambda_{t-1}\ge\lambda_t+r$ and $\lambda_{t+1}\ge\lambda_t+r$, which give $t-1\in I^-$ and $t+1\in I^+$. Uniqueness and the last sentence follow from (2) as before. For the values: if $\lambda_{m-1}\ne\lambda_m+r$, Lemma~\ref{gen:lem:R}(1) gives $\lambda_{m+1}=\max(\lambda_{m-1},\lambda_m+r)=\lambda_{m-1}$; if $\lambda_{m-1}=\lambda_m+r$, then $\lambda_m+r\le\lambda_{m+1}\le\max(\lambda_{m-1},\lambda_m+r)=\lambda_m+r$.
+(4) On $I^\pm$ this is the definition. For a middle row, $\lambda_m\le\lambda_{m-1}-r=V-rm$.
+(5) If there is no middle row, $I^-=(-\infty,t_+-1]$ and $I^+=[t_+,\infty)$. Now $t_+\in I^+$ reads $V-r(t_+-1)<rt_++U+r$, that is $V-U<2rt_+$, and $t_+-1\in I^-$ reads $rt_++U<V-r(t_+-1)+r$, that is $V-U>2r(t_+-1)$. If there is a middle row $m$, then $\lambda_{m+1}=\lambda_{m-1}$ reads $r(m+1)+U=V-r(m-1)$, that is $V-U=2rm$. Divisibility of $V-U$ by $2r$ decides which case occurs. If $U=-\infty$ then $I^-=\Z$, and if $V=-\infty$ then $I^+=\Z$, by (3).
+(6) Put $\mu_t=\max(\lambda_t-rt,\ \lambda_{t-1}-r(t+1))$. By Lemma~\ref{gen:lem:R}(1), $\lambda_{t+1}-r(t+1)\le\max(\lambda_{t-1}-r(t+1),\lambda_t-rt)\le\mu_t$, and $\lambda_t-r(t+2)<\mu_t$, so $\mu_{t+1}\le\mu_t$. If $t-1\in I^+$, then $\mu_t=\max(U,U-2r)=U$. Hence $U\le\mu_t$ for all $t$. The statement for $V$ follows in the same way from Lemma~\ref{gen:lem:R}(2), with $\nu_t=\max(\lambda_t+rt,\lambda_{t+1}+r(t-1))$, which is nondecreasing and equals $V$ when $t+1\in I^-$.
+\end{proof}
+
+\begin{lemma}\label{gen:lem:transl}
+For every pair $Q$ and all $j,k\in\Z$: $U(F^kQ)=U(Q)+rk$ and $V(F^kQ)=V(Q)-rk$; $U(\sh^jQ)=U(Q)-j$ and $V(\sh^jQ)=V(Q)-j$; $U(\rho Q)=V(Q)+r$ and $V(\rho Q)=U(Q)-r$. The value $-\infty$ is preserved in each case.
+\end{lemma}
+
+\begin{proof}
+$\lambda_t(F^kQ)=\lambda_{t+k}(Q)$ and $\lambda_t(\sh^jQ)=\lambda_t(Q)-j$, so $I^\pm(F^kQ)=I^\pm(Q)-k$ and $I^\pm(\sh^jQ)=I^\pm(Q)$; for $t\in I^+(F^kQ)$, $\lambda_{t+k}-rt=U+rk$. By \eqref{r30:eq:rho}, $\lambda_t(\rho Q)=\lambda_{-1-t}(Q)$, so $t\in I^+(\rho Q)$ iff $-1-t\in I^-(Q)$, and then $\lambda_t(\rho Q)-rt=V-r(-1-t)-rt=V+r$; similarly $t\in I^-(\rho Q)$ iff $-1-t\in I^+(Q)$, and then $\lambda_t(\rho Q)+rt=U+r(-1-t)+rt=U-r$.
+\end{proof}
+
+A pair $(c,c')$ is a \emph{front pair at $p$} if $c_i=c'_i$ for $i>p$, $y(c_p)\ne y(c'_p)$ and $x(c_p)=x(c'_p)$; equivalently, $\lambda_0=p>\lambda_{-1}$. The \emph{$y$-flip} and the \emph{$x$-flip at $j$} complement the bit $y(c_j)$, respectively $x(c_j)$. The \emph{$yx$-flip at $j$} complements both $y(c_j)$ and $x(c_{j+r})$.
+
+\begin{lemma}\label{gen:lem:flips}
+\begin{enumerate}
+\item If $Q$ is a front pair at $p$, then $U(Q)=p$, and $F^tQ$ is a front pair at $p+rt$ for every $t\ge0$.
+\item A $y$-flip at $j$ is a front pair at $j$, and $(U,V)=(j,\,j-2r)$.
+\item If $Q$ is an $x$-flip at $j$, then $FQ$ is a front pair at $j$, and $(U,V)=(j-r,\,j-r)$.
+\item A $yx$-flip at $j$ has $V=j$, and either $U=-\infty$ or $U\le j-1$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) $\lambda_{-1}<\lambda_0<\lambda_0+r$, so $0\in I^+$ and $U=p$. By Proposition~\ref{gen:prop:profile}(2), $\lambda_t=p+rt$ for $t\ge0$, so $\lambda_0(F^tQ)=p+rt>p+r(t-1)=\lambda_{-1}(F^tQ)$ for $t\ge1$.
+(2) $\lambda_0=j$ and $\lambda_{-1}=-\infty$, so $U=j$. Lemma~\ref{gen:lem:R}(2) at $t=-1$ gives $\lambda_{-2}=\max(\lambda_0,\lambda_{-1}+r)=j$, and $\lambda_{-1}<\lambda_{-2}+r$, so $-2\in I^-$ and $V=j-2r$.
+(3) $\lambda_{-1}=j$ and $\lambda_0=-\infty$. Lemma~\ref{gen:lem:R}(1) at $t=0$ gives $\lambda_1=j$. So $FQ$ is a front pair at $j$, $1\in I^+$ and $U=j-r$; and $\lambda_0<\lambda_{-1}+r$ gives $-1\in I^-$ and $V=j-r$.
+(4) $\lambda_0=j$ and $\lambda_{-1}=j+r$, so $\lambda_0<\lambda_{-1}+r$, $-1\in I^-$ and $V=\lambda_{-1}-r=j$. For $i>j+r$, all three terms of $\Delta(1,i)=\Delta(-1,i)\oplus\Delta(0,i-r)\oplus D_i$ vanish, since $i-r>j=\lambda_0$. At $i=j+r$, $D_{j+r}$ reads row $0$ on $[j+1,j+2r]$, where $\Delta$ vanishes, so $\Delta(1,j+r)=1\oplus1\oplus0=0$. Hence $\lambda_1\le j+r-1$, and Proposition~\ref{gen:prop:profile}(6) at $t=1$ gives $U\le\max(\lambda_1-r,\lambda_0-2r)\le j-1$.
+\end{proof}
+
+By Proposition~\ref{gen:prop:profile}(5), statement (4) determines $I^\pm$ of every pair with the intercepts of a $yx$-flip at $j$. This is used in Proposition~\ref{gen:prop:edges}.
+
+\begin{proposition}\label{gen:prop:Z2}
+$(a,b)\mapsto\sh^aF^b$ is an isomorphism $\Z^2\to\langle\sh,F\rangle$.
+\end{proposition}
+
+\begin{proof}
+It is a surjective homomorphism since $\sh F=F\sh$. Let $Q$ be a $y$-flip at $0$, so $(U,V)=(0,-2r)$. By Lemma~\ref{gen:lem:transl}, $\sh^aF^bQ$ has $(U,V)=(rb-a,\,-2r-a-rb)$. If $\sh^aF^b=\mathrm{id}$, then $rb-a=0=a+rb$, so $a=b=0$.
+\end{proof}
+
+\subsection{The front offset}\label{gen:sec:front}
+
+In this subsection $h$ is an invertible block map commuting with $F$, $R\ge1$ bounds the radii of $h$ and $h^{-1}$, and
+\[
+M_R=2r(R+1)+2R .
+\]
+For $r=1$, $M_R=4R+2$ as in Section~\ref{r30:sec:front}.
+
+\begin{lemma}[onset]\label{gen:lem:onset}
+Let $P$ be a front pair at $p$, and let $t_+=\min I^+(hP)$. Then $U(hP)$ is finite, $t_+\le\lfloor R/r\rfloor+1$, and $|U(hP)-p|\le R$. In particular $\lambda_t(hP)=rt+U(hP)$ for every $t\ge R+1$, and for $r\ge2$ already $t_+\le R$.
+\end{lemma}
+
+\begin{proof}
+Write $\lambda_t=\lambda_t(hP)$ and $P=(c,c')$, and let $t\ge0$. By Lemma~\ref{gen:lem:flips}(1), $F^tP$ is a front pair at $p+rt$. By \eqref{r30:eq:rows}, rows $t-1$ and $t$ of $\Delta_{hP}$ record the $x$- and $y$-differences of $h(F^tc)$ and $h(F^tc')$. These agree beyond $p+rt+R$, so $\lambda_t,\lambda_{t-1}\le p+rt+R$; and since $h^{-1}$ has radius at most $R$, they differ somewhere in $[p+rt-R,p+rt+R]$, so $\max(\lambda_t,\lambda_{t-1})\ge p+rt-R$.
+
+Suppose $t_+\ge2$ (including $t_+=\infty$ if $I^+=\emptyset$). By Proposition~\ref{gen:prop:profile}(2),(3), every $t\le t_+-2$ lies in $I^-$, and $t_+-1$ lies in $I^-$ or is the middle row, so $\lambda_t\le V-rt$ for $t\le t_+-1$, with $V=V(hP)$ finite. As $-1\in I^-$, the upper bound at $t=0$ gives $V+r=\lambda_{-1}\le p+R$. For $1\le t\le t_+-1$,
+\[
+p+rt-R\le\max(\lambda_t,\lambda_{t-1})\le V-r(t-1)\le p+R-rt,
+\]
+so $t\le R/r$. If $t_+=\infty$ this fails at $t=\lfloor R/r\rfloor+1$. Otherwise $t=t_+-1$ gives $t_+\le\lfloor R/r\rfloor+1$. In all cases $U$ is finite and $t_+\le\lfloor R/r\rfloor+1\le R+1$. For $r\ge2$, $\lfloor R/r\rfloor+1\le R$.
+
+For the bounds on $U$, take $t=R+2$. Then $t-1\ge t_+$, so $t$ and $t-1$ lie in $I^+$, and $\lambda_{t-1}=\lambda_t-r<\lambda_t$. The two bounds give $p+rt-R\le\lambda_t=rt+U\le p+rt+R$.
+\end{proof}
+
+For $r=1$, $t\in I^+$ already gives $\lambda_{t-1}\le\lambda_t$, and the proof of Lemma~\ref{r30:lem:onset} reads the lower bound at $t=R+1$. For $r\ge2$, $t\in I^+$ only gives $\lambda_{t-1}<\lambda_t+r$, and the lower bound needs $t-1\in I^+$ as well. This is why the proof takes $t=R+2$, for every $r$.
+
+For a front pair $P$ at $p$ put $E(P)=U(hP)-p$.
+
+\begin{lemma}\label{gen:lem:E}
+Let $P=(c,c')$ be a front pair at $p$.
+\begin{enumerate}
+\item $E(P)\in[-R,R]$, and $E(P)$ depends only on $c$ and $c'$ on $[p-2R,\,p+M_R]$.
+\item $E(\sh^jP)=E(P)$ for every $j$, and $E(FP)=E(P)$.
+\item $(c',c)$ is a front pair at $p$ and $E(c',c)=E(c,c')$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) The bound is Lemma~\ref{gen:lem:onset}. Put $t_0=R+1$. By that lemma $t_0\in I^+(hP)$, so $U(hP)=\lambda_{t_0}(hP)-rt_0$, and $\lambda_{t_0}(hP)\in[p+rt_0-R,\,p+rt_0+R]$. By \eqref{r30:eq:rows}, $\lambda_{t_0}(hP)$ is the largest site in this interval at which the $y$-bits of $h(F^{t_0}c)$ and $h(F^{t_0}c')$ differ. These bits depend only on $F^{t_0}c$ and $F^{t_0}c'$ on $[p+rt_0-2R,\,p+rt_0+2R]$, and, since $F^{t_0}$ has radius $rt_0$, only on $c$ and $c'$ on $[p-2R,\,p+2rt_0+2R]=[p-2R,p+M_R]$. The same description applies to any front pair at $p$ that agrees with $P$ on this interval.
+(2) $\sh^jP$ is a front pair at $p-j$ and $U(h\sh^jP)=U(hP)-j$ by Lemma~\ref{gen:lem:transl}. $FP$ is a front pair at $p+r$ and $U(hFP)=U(FhP)=U(hP)+r$.
+(3) The definition is symmetric, and $\Delta_{h(c',c)}=\Delta_{h(c,c')}$.
+\end{proof}
+
+Front pairs exist and $E$ takes values in $[-R,R]$, so $e_{\max}=\max\{E(P)\}$ over all front pairs exists.
+
+\begin{lemma}[maximum principle]\label{gen:lem:max}
+Let $P=(c,c')$ be a front pair at $p$ with $E(P)=e_{\max}$. If $c''$ agrees with $c'$ at every site $i\ge p$, then $(c,c'')$ is a front pair at $p$ and $E(c,c'')=e_{\max}$. The same holds with the roles of $c$ and $c'$ exchanged.
+\end{lemma}
+
+\begin{proof}
+We follow the proof of Lemma~\ref{r30:lem:max}. The pair $(c,c'')$ is a front pair at $p$. Let $c^*$ agree with $c''$ on $[p-2R,\infty)$ and with $c'$ elsewhere. By Lemma~\ref{gen:lem:E}(1), $E(c,c^*)=E(c,c'')$. The configurations $c'$ and $c^*$ differ in finitely many bits, at sites in $[p-2R,p-1]$; if they are equal there is nothing to prove. Complementing these bits one at a time gives $c'=c^0,\dots,c^N=c^*$, and each $Q_k=(c^{k-1},c^k)$ is a $y$-flip or an $x$-flip at some $\ell_k\le p-1$.
+
+Let $t\ge R+2$. If $Q_k$ is a $y$-flip, it is a front pair at $\ell_k$, and Lemma~\ref{gen:lem:onset} gives $\lambda_t(hQ_k)=\ell_k+rt+E(Q_k)\le p-1+rt+e_{\max}$. If $Q_k$ is an $x$-flip, $FQ_k$ is a front pair at $\ell_k$ (Lemma~\ref{gen:lem:flips}(3)), and $\lambda_t(hQ_k)=\lambda_{t-1}(hFQ_k)=\ell_k+r(t-1)+E(FQ_k)\le p-1-r+rt+e_{\max}$, since $t-1\ge R+1$. In both cases row $t$ of $\Delta_{hQ_k}$ vanishes at all sites $\ge p+rt+e_{\max}$, while row $t$ of $\Delta_{hP}$ has its rightmost $1$ exactly at $p+rt+e_{\max}$ (Lemma~\ref{gen:lem:onset}). The telescoping identity $\Delta_{h(c,c^*)}=\Delta_{hP}\oplus\bigoplus_k\Delta_{hQ_k}$ of the proof of Lemma~\ref{r30:lem:max}, which uses no linearity of $h$, gives $\lambda_t(h(c,c^*))=p+rt+e_{\max}$ for $t\ge R+2$. By Lemma~\ref{gen:lem:onset} these $t$ lie in $I^+(h(c,c^*))$, so $U(h(c,c^*))=p+e_{\max}$. The last statement follows from Lemma~\ref{gen:lem:E}(3), as in Lemma~\ref{r30:lem:max}(2).
+\end{proof}
+
+\begin{corollary}\label{gen:cor:word}
+Let $P_1=(c_1,c'_1)$ and $P_2=(c_2,c'_2)$ be front pairs at $p_1$ and $p_2$ with $(c_1)_{p_1+k}=(c_2)_{p_2+k}$ for $0\le k\le M_R$. Then $E(P_1)=e_{\max}$ if and only if $E(P_2)=e_{\max}$.
+\end{corollary}
+
+\begin{proof}
+The proof of Corollary~\ref{r30:cor:word} applies verbatim with $M=M_R$, using Lemma~\ref{gen:lem:E}(1),(2) and Lemma~\ref{gen:lem:max} in place of Lemmas~\ref{r30:lem:E} and~\ref{r30:lem:max}.
+\end{proof}
+
+\begin{theorem}[front offset]\label{gen:thm:front}
+If $\Lambda_{M_R}$ is strongly connected, there is an integer $e^+(h)\in[-R,R]$ such that $U(hP)=p+e^+(h)$ for every front pair $P$ at every $p$. Then $\lambda_t(hP)=p+rt+e^+(h)$ for $t\ge R+1$, and $e^+(h)$ does not depend on $R$.
+\end{theorem}
+
+\begin{proof}
+Let $\mathcal S\subseteq\A^{M_R+1}$ be the set of words $\omega$ such that $E(P)=e_{\max}$ for some front pair $P=(c,c')$ at some $p$ with $c_{p+k}=\omega_k$ for $0\le k\le M_R$. By Corollary~\ref{gen:cor:word}, $E(P)=e_{\max}$ then holds for every such front pair. Every word occurs, with $c'$ the $y$-flip of $c$ at $p$. The set $\mathcal S$ is nonempty. It is forward-closed in $\Lambda_{M_R}$: for $\omega\in\mathcal S$ and $\iota\in\A^{2r}$, choose $c$ with word $\omega$ on $[p,p+M_R]$ and $\iota$ on $[p+M_R+1,p+M_R+2r]$, and let $c'$ be its $y$-flip at $p$. Then $FP$ is a front pair at $p+r$ with $E(FP)=E(P)=e_{\max}$, and the word of $F(c)$ on $[p+r,p+r+M_R]$ is $\omega\cdot\iota$. By strong connectivity, $\mathcal S=\A^{M_R+1}$, so $E\equiv e_{\max}$. Put $e^+(h)=e_{\max}$. It is independent of $R$ because $E$ is. The formula for $\lambda_t$ is Lemma~\ref{gen:lem:onset}.
+\end{proof}
+
+\subsection{Offsets of all pairs}\label{gen:sec:allpairs}
+
+\begin{lemma}\label{gen:lem:allpairs}
+Let $h$ and $R$ be as in Section~\ref{gen:sec:front}, and assume that $\Lambda_{M_R}$ is strongly connected. Let $Q$ be any pair. If $U(Q)$ is finite, then $U(hQ)=U(Q)+e^+(h)$. If $U(Q)=-\infty$, then $U(hQ)=-\infty$.
+\end{lemma}
+
+\begin{proof}
+Write $e^+$ for $e^+(h)$. Theorem~\ref{gen:thm:front} applies to $h$ and to $h^{-1}$. Let $U(Q)$ be finite and $t_0\in I^+(Q)$. Since $U(F^{t_0}Q)=U(Q)+rt_0$ and $U(hF^{t_0}Q)=U(hQ)+rt_0$, we may assume $0\in I^+(Q)$. Write $Q=(c,c')$ and $j=\lambda_0(Q)=U(Q)$, so that $\lambda_{-1}(Q)<j+r$. If $\lambda_{-1}(Q)<j$, then $Q$ is a front pair at $j$ and Theorem~\ref{gen:thm:front} applies. So assume $j\le\lambda_{-1}(Q)\le j+r-1$.
+
+Let $c''$ be $c'$ with $y(c'_j)$ complemented. Then $(c'',c')$ is a $y$-flip at $j$, and $\lambda_t(h(c'',c'))=rt+j+e^+$ for $t\ge R+1$. The pair $(c,c'')$ has $y$-differences only at sites $\le j-1$ and $x$-differences only at sites $\le j+r-1$, and $c\ne c''$.
+
+\emph{Claim: $\lambda_t(h(c,c''))\le rt+j-1+e^+$ for every $t\ge R+1$.} Let $t\ge R+1$ and $i>rt+j-1+e^+$. The bit $Y_{hc}(t,i)$ depends only on $c$ on $[i-R-rt,\,i+R+rt]$. Let $\tilde c$ agree with $c''$ on $[i-R-rt,\infty)$ and with $c$ elsewhere, so $Y_{h\tilde c}(t,i)=Y_{hc''}(t,i)$. Complementing the finitely many differing bits of $c$ and $\tilde c$ one at a time gives $c=c^0,\dots,c^N=\tilde c$, where each $Q_k=(c^{k-1},c^k)$ is a $y$-flip at some $\ell\le j-1$ or an $x$-flip at some $\ell\le j+r-1$. For a $y$-flip, $U(hQ_k)=\ell+e^+\le j-1+e^+$. For an $x$-flip, $FQ_k$ is a front pair at $\ell$, so $U(hQ_k)=U(hFQ_k)-r=\ell-r+e^+\le j-1+e^+$. In both cases $hc^{k-1}$ and $hc^k$ agree beyond $\ell+R\le j+r-1+R$, so rows $-1$ and $0$ of $\Delta_{hQ_k}$ vanish beyond $j+r-1+R$. Proposition~\ref{gen:prop:profile}(6) at $t=-1$ gives $V(hQ_k)\le\max(\lambda_{-1}-r,\lambda_0-2r)\le j+R-1$. By Proposition~\ref{gen:prop:profile}(4), $\Delta_{hQ_k}(t,i)=1$ would need $i-rt\le j-1+e^+$ or $i+rt\le j+R-1$. The first fails by the choice of $i$. The second fails because $i+rt>2rt+j-1+e^+\ge2r(R+1)+j-1-R$, and $2r(R+1)-R\ge R$, that is, $2r(R+1)\ge2R$. So $Y_{hc^{k-1}}(t,i)=Y_{hc^k}(t,i)$ for all $k$, and $Y_{hc}(t,i)=Y_{hc''}(t,i)$. This proves the claim.
+
+Now $\Delta_{hQ}=\Delta_{h(c,c'')}\oplus\Delta_{h(c'',c')}$, and for $t\ge R+1$ the second term has its rightmost $1$ in row $t$ at $rt+j+e^+$ while the first vanishes there and beyond. So $\lambda_t(hQ)=rt+j+e^+$ for $t\ge R+1$. For $t\ge R+2$ this gives $\lambda_{t-1}(hQ)<\lambda_t(hQ)+r$, so $t\in I^+(hQ)$ and $U(hQ)=j+e^+$.
+
+If $U(Q)=-\infty$ but $U(hQ)$ were finite, the first part for $h^{-1}$ and the pair $hQ$ would make $U(Q)$ finite.
+\end{proof}
+
+\begin{proposition}[offsets]\label{gen:prop:offsets}
+Assume \textup{($\Lambda$)}. For $h\in\Aut(X_F)$ let $e^+(h)$ be the integer of Theorem~\ref{gen:thm:front}, and put $e^-(h)=e^+(\rho h\rho)$. Then:
+\begin{enumerate}
+\item for every pair $Q$, $U(hQ)=U(Q)+e^+(h)$ and $V(hQ)=V(Q)+e^-(h)$, where $-\infty+k=-\infty$;
+\item $e^+$ and $e^-$ are homomorphisms $\Aut(X_F)\to\Z$, and $e(\sh^aF^b)=(rb-a,\,-a-rb)$;
+\item $e(\langle\sh,F\rangle)=L=\{(m,n):m\equiv n\pmod{2r}\}$, a subgroup of index $2r$ with $\Z^2/L\cong\Z/2r$ via $(m,n)\mapsto m-n$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Under ($\Lambda$), Lemma~\ref{gen:lem:allpairs} applies to every $h$ and every $R$. (1) The statement for $U$ is that lemma. For $V$, apply it to $\rho h\rho$ and $\rho Q$, and use $U(\rho Q)=V(Q)+r$ and $\rho h\rho\,\rho Q=\rho hQ$ (Lemma~\ref{gen:lem:transl}). (2) Additivity follows from (1) applied to a front pair, as in Corollary~\ref{r30:cor:offsets}(2), and from $\rho h_1h_2\rho=(\rho h_1\rho)(\rho h_2\rho)$. By Lemma~\ref{gen:lem:transl}, $e(F)=(r,-r)$ and $e(\sh)=(-1,-1)$. (3) $m-n=2rb$ on the image. Conversely, if $m\equiv n\pmod{2r}$, then $m+n$ is even, and $a=-(m+n)/2$, $b=(m-n)/2r$ give $e(\sh^aF^b)=(m,n)$. The homomorphism $(m,n)\mapsto m-n\bmod 2r$ is onto $\Z/2r$ with kernel $L$.
+\end{proof}
+
+\subsection{Cone causality and the two edges}\label{gen:sec:cone}
+
+In this subsection $h\in\Aut(X_F)$ \emph{preserves both intercepts}: $U(hQ)=U(Q)$ and $V(hQ)=V(Q)$ for every pair $Q$, including the value $-\infty$. Under ($\Lambda$) this means $e^+(h)=e^-(h)=0$, by Proposition~\ref{gen:prop:offsets}(1). Let $R\ge1$ bound the radii of $h$ and $h^{-1}$.
+
+\begin{proposition}\label{gen:prop:cone}
+If $y(c_i)=y(c'_i)$ for all $i\ge0$ and $x(c_i)=x(c'_i)$ for all $i\ge r$, then $y((hc)_0)=y((hc')_0)$.
+\end{proposition}
+
+\begin{proof}
+As in Proposition~\ref{r30:prop:cone}, let $c''$ agree with $c'$ on $[-R,R]$ and with $c$ elsewhere, and complement the differing bits of $c$ and $c''$ one at a time. They are $y$-bits at sites $j\le-1$, giving $y$-flips with $(U,V)=(j,j-2r)$, and $x$-bits at sites $j\le r-1$, giving $x$-flips with $(U,V)=(j-r,j-r)$ (Lemma~\ref{gen:lem:flips}). In all cases $U<0$ and $V<0$. The images under $h$ have the same intercepts, so by Proposition~\ref{gen:prop:profile}(4) their difference diagrams vanish at $(0,0)$. Hence $Y_{hc}(0,0)=Y_{hc''}(0,0)=Y_{hc'}(0,0)$.
+\end{proof}
+
+\paragraph{Cone codes.} The cone code of a diagram $Y$ at $(t,i)$ is $\omega^{(t,i)}(Y)\in\A^{\mathbb N}$ with entries
+\[
+\omega^{(t,i)}_k=(\mu_k,\nu_k)=\bigl(Y(t,i+k),\ Y(t-1,i+k+r)\bigr)\qquad(k\ge0),
+\]
+and $\omega(Y)=\omega^{(0,0)}(Y)$. Every $\omega\in\A^{\mathbb N}$ is $\omega(Y_c)$ for some $c$: put $y(c_k)=\mu_k$ and $x(c_{k+r})=\nu_k$. By Proposition~\ref{gen:prop:cone} there is $\psi\colon\A^{\mathbb N}\to\{0,1\}$, depending only on $\omega_0,\dots,\omega_R$, with $Y_{hc}(0,0)=\psi(\omega(Y_c))$, and the computation \eqref{r30:eq:psi} gives
+\begin{equation}\label{gen:eq:psi}
+Y_{hc}(t,i)=\psi\bigl(\omega^{(t,i)}(Y_c)\bigr)\qquad\text{for all }(t,i).
+\end{equation}
+Let $\sh$ also denote the shift of $\A^{\mathbb N}$, and define
+\begin{align*}
+\hat G(\omega)_k&=\bigl(\nu_k\oplus\mu_k\oplus g(\mu_{k+1},\dots,\mu_{k+2r}),\ \mu_{k+2r}\bigr),\\
+\hat H(\omega)_k&=\bigl(\nu_k,\ \mu_{k+2r}\oplus\nu_k\oplus g(\nu_{k+1},\dots,\nu_{k+2r})\bigr).
+\end{align*}
+$D_1$ complements $\mu_0$, and $D_2$ complements $\mu_0$ and $\nu_0$.
+
+\begin{lemma}\label{gen:lem:I}
+\begin{enumerate}
+\item $\omega^{(1,r)}(Y)=\hat G\omega(Y)$, $\omega^{(-1,r)}(Y)=\hat H\omega(Y)$ and $\omega^{(0,k)}(Y)=\sh^k\omega(Y)$ for every diagram $Y$ and $k\ge0$.
+\item For every $\omega\in\A^{\mathbb N}$,
+\begin{equation}\label{gen:eq:I}
+\psi(\hat G\omega)\oplus\psi(\hat H\omega)\oplus\psi(\omega)\oplus g\bigl(\psi(\sh\omega),\dots,\psi(\sh^{2r}\omega)\bigr)=0.
+\end{equation}
+\item $\hat G\sh=\sh\hat G$, $\hat H\sh=\sh\hat H$, $\hat GD_1=D_1\hat G$, $\hat HD_1=\hat H$, $\hat HD_2=D_2\hat H$ and $\hat GD_2=\hat G$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) By \eqref{gen:eq:rec} at $(0,r+k)$, $Y(1,r+k)=Y(-1,r+k)\oplus Y(0,k)\oplus g(Y(0,k+1),\dots,Y(0,k+2r))=\nu_k\oplus\mu_k\oplus g(\mu_{k+1},\dots,\mu_{k+2r})$, and $Y(0,2r+k)=\mu_{k+2r}$. By \eqref{gen:eq:rec} at $(-1,2r+k)$, $Y(-2,2r+k)=Y(0,2r+k)\oplus Y(-1,r+k)\oplus g(Y(-1,r+k+1),\dots,Y(-1,3r+k))=\mu_{k+2r}\oplus\nu_k\oplus g(\nu_{k+1},\dots,\nu_{k+2r})$, and $Y(-1,r+k)=\nu_k$. The last identity is immediate.
+(2) $Y_{hc}$ satisfies \eqref{gen:eq:rec} at $(0,r)$: $Y_{hc}(1,r)\oplus Y_{hc}(-1,r)\oplus Y_{hc}(0,0)=g(Y_{hc}(0,1),\dots,Y_{hc}(0,2r))$. Substitute \eqref{gen:eq:psi} and (1).
+(3) Both maps are given by the same rule at every index. In $\hat G$, $\mu_0$ occurs only in the first component of $\hat G(\omega)_0$, through $\nu_0\oplus\mu_0$, since $g$ reads $\mu_{k+1},\dots,\mu_{k+2r}$ and the second component reads $\mu_{k+2r}$. And $\nu_0$ occurs nowhere else in $\hat G$. In $\hat H$, $\mu$ occurs only with indices $\ge2r\ge2$, and $\nu_0$ occurs only in $\hat H(\omega)_0=(\nu_0,\ \mu_{2r}\oplus\nu_0\oplus g(\nu_1,\dots,\nu_{2r}))$, where complementing it complements both components.
+\end{proof}
+
+\begin{proposition}\label{gen:prop:edges}
+For every $\omega$, $\psi(D_1\omega)\ne\psi(\omega)$ and $\psi(D_2\omega)\ne\psi(\omega)$.
+\end{proposition}
+
+\begin{proof}
+Choose $c$ with $\omega(Y_c)=\omega$. If $c'$ is the $y$-flip of $c$ at $0$, then $\omega(Y_{c'})=D_1\omega$, and $hQ$, $Q=(c,c')$, has $(U,V)=(0,-2r)$. Since $2r\mid V-U$, Proposition~\ref{gen:prop:profile}(5) gives a middle row $m=-1$ and $I^+(hQ)=[0,\infty)$, so $\lambda_0(hQ)=U=0$ and $\Delta_{hQ}(0,0)=1$. If $c'$ is the $yx$-flip of $c$ at $0$, which complements $y(c_0)$ and $x(c_r)$, then $\omega(Y_{c'})=D_2\omega$, and $hQ$ has $V=0$ and $U\in\{-\infty\}\cup(-\infty,-1]$ (Lemma~\ref{gen:lem:flips}(4)). If $U=-\infty$, then $I^-(hQ)=\Z$. Otherwise $V-U\ge1$, and Proposition~\ref{gen:prop:profile}(5) gives $I^-(hQ)=(-\infty,m-1]$ with $m=(V-U)/2r\ge1$, or $I^-(hQ)=(-\infty,t_+-1]$ with $t_+=\lceil(V-U)/2r\rceil\ge1$. In every case $0\in I^-(hQ)$, so $\lambda_0(hQ)=V=0$ and $\Delta_{hQ}(0,0)=1$.
+\end{proof}
+
+\begin{corollary}\label{gen:cor:psi}
+There is $\gamma\colon\A^{\mathbb N}\to\{0,1\}$, depending only on the coordinates $0,\dots,R-1$, with $\psi(\omega)=\mu_0\oplus\gamma(\sh\omega)$.
+\end{corollary}
+
+\begin{proof}
+The proof of Corollary~\ref{r30:cor:psi} applies verbatim.
+\end{proof}
+
+\subsection{The stripping descent}\label{gen:sec:strip}
+
+\begin{proposition}\label{gen:prop:strip}
+Let $\gamma\colon\A^{\mathbb N}\to\{0,1\}$ depend on finitely many coordinates, and suppose that $\psi(\omega)=\mu_0\oplus\gamma(\sh\omega)$ satisfies \eqref{gen:eq:I}. If \textup{(N)} holds, then $\gamma$ is constant. The constant $\gamma\equiv0$ always satisfies \eqref{gen:eq:I}, and $\gamma\equiv1$ does so if and only if $g$ is self-dual.
+\end{proposition}
+
+The proof occupies the rest of this subsection. For $\theta\in\A^{\mathbb N}$ write $\theta_k=(\xi_k,\zeta_k)$, and let $D_1$, $D_2$, $\hat G$, $\hat H$ act on $\theta$ by the formulas above, with $(\mu,\nu)$ renamed $(\xi,\zeta)$. Thus
+\[
+\hat G(\theta)_k=\bigl(\zeta_k\oplus\xi_k\oplus g(\xi_{k+1},\dots,\xi_{k+2r}),\ \xi_{k+2r}\bigr),\qquad \hat H(\theta)_k=\bigl(\zeta_k,\ \xi_{k+2r}\oplus\zeta_k\oplus g(\zeta_{k+1},\dots,\zeta_{k+2r})\bigr).
+\]
+
+\emph{Coordinates read.} A function $\varphi$ on $\A^{\mathbb N}$ that depends on finitely many coordinates \emph{reads} the coordinate $\xi_k$ (or $\zeta_k$) if complementing that coordinate changes the value of $\varphi$ at some point. If $\varphi$ depends only on the coordinates in a finite set $S$ and does not read $s\in S$, then it depends only on $S\setminus\{s\}$. Hence $\varphi$ depends only on the coordinates it reads, and a function that reads no coordinate is constant.
+
+\emph{Step 1: the stripped identity.} Put $\theta=\sh\omega$, so $\xi_k=\mu_{k+1}(\omega)$ and $\zeta_k=\nu_{k+1}(\omega)$, and
+\[
+\Gamma_k=\gamma(\sh^{k+1}\theta)\qquad(0\le k\le2r-1).
+\]
+Then $\psi(\sh^{k+1}\omega)=\xi_k\oplus\Gamma_k$, $\psi(\omega)=\mu_0\oplus\gamma(\theta)$, $\psi(\hat H\omega)=\nu_0\oplus\gamma(\hat H\theta)$ and $\psi(\hat G\omega)=\nu_0\oplus\mu_0\oplus g(\xi)\oplus\gamma(\hat G\theta)$, where $g(\xi)=g(\xi_0,\dots,\xi_{2r-1})$ and we used $\sh\hat G=\hat G\sh$, $\sh\hat H=\hat H\sh$. The bits $\mu_0$ and $\nu_0$ cancel in \eqref{gen:eq:I}, which becomes
+\begin{equation}\label{gen:eq:star}
+\gamma(\hat G\theta)\oplus\gamma(\hat H\theta)\oplus\gamma(\theta)=g(\xi)\oplus g(\xi\oplus\Gamma),\qquad \xi\oplus\Gamma=(\xi_0\oplus\Gamma_0,\dots,\xi_{2r-1}\oplus\Gamma_{2r-1}),
+\end{equation}
+for every $\theta\in\A^{\mathbb N}$, since $\omega$ is arbitrary. The $\Gamma_k$ do not read $\theta_0$.
+
+\emph{Step 2: two difference equations.} Put $\varpi=\partial_0g$ and $\delta_i=\gamma\oplus\gamma\circ D_i$ for $i=1,2$. Since $\partial_0\varpi=0$ and $\partial_j\varpi=\partial_j\partial_0g\equiv0$ for $j>J=J(g)$, $\varpi$ is a function of $\xi_1,\dots,\xi_J$ only, which we write $\varpi(\xi_1,\dots,\xi_J)$. Put
+\[
+\Omega(\theta)=\varpi(\xi_1,\dots,\xi_J)\oplus\varpi(\xi_1\oplus\Gamma_1,\dots,\xi_J\oplus\Gamma_J).
+\]
+Add \eqref{gen:eq:star} at $D_1\theta$ to \eqref{gen:eq:star} at $\theta$. The map $D_1$ complements $\xi_0$ and fixes every $\Gamma_k$, so the right sides add up to $\varpi(\xi)\oplus\varpi(\xi\oplus\Gamma)=\Omega(\theta)$. On the left, $\gamma(\hat GD_1\theta)=\gamma(D_1\hat G\theta)$ and $\gamma(\hat HD_1\theta)=\gamma(\hat H\theta)$ by Lemma~\ref{gen:lem:I}(3). Doing the same with $D_2$, using $\hat GD_2=\hat G$ and $\hat HD_2=D_2\hat H$, gives the second equation:
+\begin{align}
+\delta_1(\hat G\theta)\oplus\delta_1(\theta)&=\Omega(\theta),\label{gen:eq:one}\\
+\delta_2(\hat H\theta)\oplus\delta_2(\theta)&=\Omega(\theta).\label{gen:eq:two}
+\end{align}
+
+\emph{Step 3: read-ranges.} Suppose $\gamma$ is not constant. Let $a$ be the largest $k$ such that $\gamma$ reads $\xi_k$, and $b$ the largest $k$ such that $\gamma$ reads $\zeta_k$, with $a=-1$ (respectively $b=-1$) if there is no such $k$. Then $(a,b)\ne(-1,-1)$. Since $D_i$ only complements coordinates of $\theta_0$, $\delta_1$ and $\delta_2$ read $\xi_k$ only for $k\le a$ and $\zeta_k$ only for $k\le b$. The first component of $\hat G(\theta)_k$ reads $\zeta_k$ and $\xi_k,\dots,\xi_{k+2r}$, and its second component reads $\xi_{k+2r}$. The first component of $\hat H(\theta)_k$ reads $\zeta_k$, and its second component reads $\xi_{k+2r}$ and $\zeta_k,\dots,\zeta_{k+2r}$. Hence:
+\begin{itemize}
+\item the left side of \eqref{gen:eq:one} reads $\zeta_k$ only for $k\le\max(a,b)$, and $\xi_k$ only for $k\le\max(a,b)+2r$;
+\item the left side of \eqref{gen:eq:two} reads $\xi_k$ only for $k\le\max(a,b+2r)$ if $b\ge0$, and only for $k\le a$ if $b=-1$; it reads $\zeta_k$ only for $k\le\max(a,b+2r)$.
+\end{itemize}
+Only two of these four ranges are used: the $\zeta$-range of \eqref{gen:eq:one}, in move (A) below, and the $\xi$-range of \eqref{gen:eq:two}, in move (B). The function $\Gamma_k$ reads $\xi_{k+1+i}$ for $i\le a$ and $\zeta_{k+1+i}$ for $i\le b$. So the coordinates $\zeta_{J+1+b}$ (if $b\ge0$) and $\xi_{J+1+a}$ (if $a\ge0$) enter $\Omega$ only through $\Gamma_J$. They are read by no $\Gamma_k$ with $k<J$, since those read indices $\le J+b$, respectively $\le J+a$. And $\xi_{J+1+a}$ is not one of $\xi_1,\dots,\xi_J$, because $a\ge0$.
+
+\emph{Step 4: steering.}
+\begin{lemma}\label{gen:lem:steer}
+Assume $\partial_0g$ is not constant, and let $J=J(g)$. If $b\ge0$, then $\Omega$ reads $\zeta_{J+1+b}$. If $a\ge0$, then $\Omega$ reads $\xi_{J+1+a}$.
+\end{lemma}
+
+\begin{proof}
+Let $z$ be $\zeta_{J+1+b}$ or $\xi_{J+1+a}$, respectively. This is the coordinate $\zeta_b$, respectively $\xi_a$, of $\sh^{J+1}\theta$, which $\gamma$ reads. So the coordinates of $\theta_{\ge J+1}$ other than $z$ can be fixed so that complementing $z$ complements $\Gamma_J=\gamma(\sh^{J+1}\theta)$. Fix them in this way, and put $\theta_J=(0,0)$.
+
+The function $\partial_J\varpi=\partial_J\partial_0g$ is not identically $0$ by the definition of $J$. It does not depend on $\xi_J$, nor on $\xi_k$ for $k>J$ or $k=0$, so it is a function of $\xi_1,\dots,\xi_{J-1}$. Choose $\mathbf w=(w_1,\dots,w_{J-1})\in\{0,1\}^{J-1}$ with $\partial_J\varpi(\mathbf w)=1$; for $J=1$, $\partial_1\varpi$ is the constant $1$. Now choose $\theta_k$ for $k=J-1,J-2,\dots,1$, in this order. At step $k$ the function $\Gamma_k$ reads only $\theta_{k+1},\theta_{k+2},\dots$, which are already fixed, and it does not read $z$. Put $\zeta_k=0$ and $\xi_k=w_k\oplus\Gamma_k$. Then $\eta_k:=\xi_k\oplus\Gamma_k=w_k$ for $1\le k\le J-1$. Choose $\theta_0$ arbitrarily.
+
+Complementing $z$ changes neither $\xi_1,\dots,\xi_J$ nor $\Gamma_1,\dots,\Gamma_{J-1}$ (Step 3), and complements $\Gamma_J$. So it changes $\Omega$ by
+\[
+\varpi(\mathbf w,\eta_J)\oplus\varpi(\mathbf w,\eta_J\oplus1)=\partial_J\varpi(\mathbf w)=1.\qedhere
+\]
+\end{proof}
+
+\emph{Step 5: the moves, and where they get stuck.} Equations \eqref{gen:eq:one} and \eqref{gen:eq:two} hold identically, so a coordinate read by $\Omega$ must be read by the left side of each. Lemma~\ref{gen:lem:steer} and the ranges of Step 3 give two contradictions:
+\begin{itemize}
+\item[(A)] If $b\ge0$ and $J+1+b>\max(a,b)$, then $\Omega$ reads $\zeta_{J+1+b}$ but the left side of \eqref{gen:eq:one} does not. So $\gamma$ cannot read $\zeta_b$, contradicting the choice of $b$.
+\item[(B)] If $a\ge0$, and either $b=-1$ or $J+1+a>\max(a,b+2r)$, then $\Omega$ reads $\xi_{J+1+a}$ but the left side of \eqref{gen:eq:two} does not. So $\gamma$ cannot read $\xi_a$, contradicting the choice of $a$.
+\end{itemize}
+Since $J+1+b>b$ and $J+1+a>a$, (A) applies unless $b=-1$ or $a\ge J+1+b$, and (B) applies unless $a=-1$, or $b\ge0$ and $a\le b+2r-J-1$. If $b=-1$, then $a\ge0$, and (B) applies. If $b\ge0$ and (A) does not apply, then $a\ge J+1+b\ge0$, and (B) does not apply only if $a\le b+2r-J-1$. Hence both moves fail exactly on the \emph{stuck region}
+\[
+\bigl\{(a,b):\ b\ge0,\ \ J+1+b\le a\le b+2r-J-1\bigr\}.
+\]
+It is nonempty if and only if $J+1\le2r-J-1$, that is, $J\le r-1$. Under (N), $J\ge r$, so the stuck region is empty and a non-constant $\gamma$ is impossible. Thus $\gamma$ is constant.
+
+The same argument in the language of a descent: if $\gamma$ depends only on $\theta_0,\dots,\theta_m$, then the moves strip the top $\zeta$-coordinate while $a-b\le J$, and the top $\xi$-coordinate once $a-b\ge2r-J$; for $J\ge r$ one of the two always applies. (For instance, if $J=r\ge2$, $a=m$ and $b=m-1$, then (B) does not apply, and (A) removes $\zeta_{m-1},\zeta_{m-2},\dots$ until $a-b\ge2r-J$; only then does (B) remove $\xi_m$.) For $r=1$, where $J=1$, this is the descent in the proof of Lemma~\ref{r30:lem:gamma}. If $J\le r-1$, the descent may stop at a pair $(a,b)$ in the stuck region, and the argument gives nothing. If $\partial_0g$ is constant, then $\Omega\equiv0$, and the argument gives nothing either.
+
+\emph{Step 6: the constants.} If $\gamma\equiv\epsilon\in\{0,1\}$, then $\Gamma=\epsilon\mathbf 1$ and \eqref{gen:eq:star} reads $\epsilon=g(\xi)\oplus g(\xi\oplus\epsilon\mathbf 1)$ for all $\xi$. For $\epsilon=0$ this always holds, and for $\epsilon=1$ it says that $g$ is self-dual. Since \eqref{gen:eq:star} is equivalent to \eqref{gen:eq:I} for $\psi=\mu_0\oplus\gamma\circ\sh$, this proves Proposition~\ref{gen:prop:strip}.
+
+\subsection{The kernel of the offsets}\label{gen:sec:kernel}
+
+\begin{proposition}\label{gen:prop:kernel}
+Assume \textup{(N)}. If $h\in\Aut(X_F)$ preserves both intercepts of every pair, then $h=\mathrm{id}$, or $g$ is self-dual and $h=\kappa$. Conversely, if $g$ is self-dual, then $\kappa\in\Aut(X_F)$ preserves both intercepts of every pair.
+\end{proposition}
+
+\begin{proof}
+By Corollary~\ref{gen:cor:psi}, Lemma~\ref{gen:lem:I}(2) and Proposition~\ref{gen:prop:strip}, $\psi(\omega)=\mu_0\oplus\epsilon$ for a constant $\epsilon$, with $\epsilon=0$ unless $g$ is self-dual. By \eqref{gen:eq:psi}, $Y_{hc}=Y_c\oplus\epsilon$. Rows $-1$ and $0$ of the diagram are the two bits of the cells, so $h=\mathrm{id}$ if $\epsilon=0$ and $h=\kappa$ if $\epsilon=1$. Conversely, if $g$ is self-dual, then $\kappa$ is an involutive block map commuting with $F$ (Lemma~\ref{gen:lem:kappa}), so $F^t\kappa c=\kappa F^tc$ and $Y_{\kappa c}=Y_c\oplus1$. Hence $\Delta_{\kappa Q}=\Delta_Q$ for every pair.
+\end{proof}
+
+\subsection{The index step}\label{gen:sec:index}
+
+\begin{lemma}[orbit counting]\label{gen:lem:orbit}
+Let $q$ be a prime, $a\in\Z$, and let $\mathcal L$ be a subgroup of finite index with $q\nmid k(\mathcal L)$. If some $h_1\in\Aut(X_F)$ satisfies $h_1^q=\sh^aF$, then $(a,1)\in q\Z^2+\mathcal L$. Consequently $(\mathrm{I})_q$ excludes $h_1^q=\sh^aF$ with $a\equiv a_q\pmod q$.
+\end{lemma}
+
+\begin{proof}
+Since $h_1$ commutes with $\sh$ and $F$, it maps $\mathrm{Per}$ to itself and each $\Z^2$-orbit onto a $\Z^2$-orbit, $h_1(v\cdot c)=v\cdot h_1(c)$. Since $h_1$ is injective, $\mathrm{Stab}(h_1c)=\mathrm{Stab}(c)$, and distinct orbits have distinct images. So $h_1$ induces a permutation $\pi$ of the finite set $\mathcal O_{\mathcal L}$ of orbits with stabiliser $\mathcal L$, which has $k(\mathcal L)$ elements. The power $\pi^q$ is induced by $\sh^aF$, which maps every orbit to itself, so $\pi^q=\mathrm{id}$ and every cycle of $\pi$ has length $1$ or $q$. Since $q\nmid k(\mathcal L)$, some orbit $O$ is fixed by $\pi$. Fix $c_0\in O$ and write $h_1(c_0)=v_0\cdot c_0$ with $v_0\in\Z^2$. Then $h_1(v\cdot c_0)=(v+v_0)\cdot c_0$ for every $v$, so $h_1^q(c_0)=(qv_0)\cdot c_0$, while $\sh^aF(c_0)=(a,1)\cdot c_0$. Hence $(a,1)-qv_0\in\mathrm{Stab}(c_0)=\mathcal L$. If $a\equiv a_q\pmod q$, then $(a_q,1)=(a,1)-(a-a_q,0)\in q\Z^2+\mathcal L$, contrary to $(\mathrm{I})_q$.
+\end{proof}
+
+\begin{lemma}[the root]\label{gen:lem:root}
+Assume \textup{($\Lambda$)}, and that $e=(e^+,e^-)$ is injective on $\Aut(X_F)$. Then $\Aut(X_F)\cong e(\Aut(X_F))\cong\Z^2$, and $\Aut(X_F)/\langle\sh,F\rangle\cong e(\Aut(X_F))/L$ is cyclic of order dividing $2r$. For a prime $q$, $q$ divides the index if and only if $h_1^q=\sh^aF$ for some $h_1\in\Aut(X_F)$ and $a\in\Z$. In that case necessarily $a\equiv-r\equiv a_q\pmod q$.
+\end{lemma}
+
+\begin{proof}
+By Proposition~\ref{gen:prop:offsets}, $L\subseteq e(\Aut(X_F))\subseteq\Z^2$, and $L$ has index $2r$. So $e(\Aut(X_F))$ is free abelian of rank $2$, and the quotient embeds in $\Z^2/L\cong\Z/2r$, which is cyclic. If $q$ divides the order of the quotient, then the quotient contains the subgroup of order $q$ of $\Z/2r$. So there is $v=(m,n)\in e(\Aut(X_F))$ with $m-n\equiv2r/q\pmod{2r}$. Then $q(m-n)\equiv0\pmod{2r}$, so $qv\in L$, and $qv=e(\sh^aF^b)$ with $2rb=q(m-n)\equiv2r\pmod{2rq}$, that is, $b\equiv1\pmod q$. Replacing $v$ by $v-\frac{b-1}q\,e(F)$ we may assume $b=1$. Then $qm=r-a$ and $qn=-a-r$, so $a=-qn-r\equiv-r\pmod q$. If $q$ is odd, then $q\mid r$ and $-r\equiv0=a_q$. If $q=2$, then $-r\equiv r\bmod 2=a_2$. Let $h_1=e^{-1}(v)$. Then $e(h_1^q)=e(\sh^aF)$, so $h_1^q=\sh^aF$ by injectivity. Conversely, if $h_1^q=\sh^aF$, then $e(h_1)=(m,n)$ with $qm=r-a$ and $qn=-a-r$, so $a\equiv-r\equiv a_q\pmod q$ by the computation above, and $q(m-n)=2r$, so the class of $e(h_1)$ in $\Z^2/L\cong\Z/2r$ is $2r/q$, which has order $q$. Hence $q$ divides the order of the quotient.
+\end{proof}
+
+For $r=1$ the only prime is $q=2$, with $a_2=1$, and for rule $30$ the orbit count of Lemma~\ref{gen:lem:orbit}, applied to the $2$-cycle of $F$ on the constant configurations, is the parity argument of Lemma~\ref{r30:lem:parity}. For $r\ge2$ the index $2r$ can have odd prime factors, which the parity argument of Lemma~\ref{r30:lem:parity} does not see.
+
+\subsection{Proofs of Theorems~\ref{gen:main} and~\ref{gen:structure}}\label{gen:sec:proofs}
+
+\begin{proof}[Proof of Theorem~\ref{gen:structure}]
+(a) The isomorphism is Proposition~\ref{gen:prop:Z2}, and the rest is Proposition~\ref{gen:prop:offsets}.
+(b) Under ($\Lambda$), $h\in\ker e$ if and only if $h$ preserves both intercepts of every pair (Proposition~\ref{gen:prop:offsets}(1)). Proposition~\ref{gen:prop:kernel} then gives $\ker e=\{\mathrm{id}\}$ under (D) and $\ker e=\{\mathrm{id},\kappa\}$ for self-dual $g$. The consequences are Lemma~\ref{gen:lem:root}.
+(c) By Lemma~\ref{gen:lem:kappa}, $\kappa\in\Aut(X_F)$, it has order $2$, and it commutes with $\sh$ and $F$. By Proposition~\ref{gen:prop:Z2}, $\langle\sh,F\rangle$ is torsion-free, so $\kappa\notin\langle\sh,F\rangle$. If ($\Lambda$) and (N) hold and $h\in\Aut(X_F)$, then $e(h\kappa h^{-1})=e(\kappa)=0$ by Proposition~\ref{gen:prop:kernel}, so $h\kappa h^{-1}\in\ker e=\{\mathrm{id},\kappa\}$ by (b). Since $h\kappa h^{-1}\ne\mathrm{id}$, it equals $\kappa$. Without ($\Lambda$) and (N) we only know that $\kappa$ commutes with $\sh$ and $F$.
+(d) By (b), $e$ is injective, and the first two statements are Lemma~\ref{gen:lem:root}. The third is Lemma~\ref{gen:lem:orbit}, which uses no hypothesis. Combining them, $(\mathrm{I})_q$ implies $q\nmid[\Aut(X_F):\langle\sh,F\rangle]$. Under (I) this holds for every prime $q\mid2r$, and the index divides $2r$, so it is $1$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{gen:main}]
+By Theorem~\ref{gen:structure}(b),(d), $e$ is injective and $e(\Aut(X_F))=e(\langle\sh,F\rangle)=L$. Let $h\in\Aut(X_F)$. Then $e(h)=e(\sh^aF^b)$ for some $(a,b)$, so $h=\sh^aF^b$. Since $e(\sh^aF^b)=(rb-a,-a-rb)$, we get $a=-\frac12(e^+(h)+e^-(h))$ and $b=\frac1{2r}(e^+(h)-e^-(h))$. Uniqueness of $(a,b)$ is Proposition~\ref{gen:prop:Z2}, and Lemma~\ref{lem:spacetime} translates the result to $\Aut(X_F)$.
+\end{proof}
+
+\subsection{The light-speed graph: a tower and a finite certificate}\label{gen:sec:tower}
+
+We prove that a finite computation, the certificate $(\mathrm T_P)$, implies ($\Lambda$) for every $M$. The method is that of the proof of Lemma~\ref{r30:lem:lambda}: a tower of factor graphs of $\Lambda_M$, in which the stationary loop \eqref{r30:eq:loop} is replaced by closed walks that come from time-periodic histories. Fix $M\ge0$.
+
+\paragraph{Layer coordinates.} For a vertex $\omega$ of $\Lambda_M$, on the sites $[p,p+M]$, put
+\[
+y[d]=y(\omega\text{ at site }p-d)\ \ (-M\le d\le0),\qquad x[j]=x(\omega\text{ at site }p-j-r)\ \ (-M-r\le j\le-r).
+\]
+So the cell at site $p-d$ is $(x[d-r],y[d])$, and $\omega$ is the same as an arbitrary assignment of bits to these $2(M+1)$ layers. Put
+\[
+I_u=[-M-r,\,-M-1],\qquad B_y=[-M,\,\min(0,-M+r-1)],
+\]
+\[
+B_x=[-M-r,\,\min(-r,-M-1)].
+\]
+The \emph{base layers} are $y[d]$ for $d\in B_y$ and $x[j]$ for $j\in B_x$. If $M\ge r-1$ there are $r$ of each.
+
+\begin{lemma}[layer equation]\label{gen:lem:layer}
+Let $\omega$ be a vertex, $\iota\in\A^{2r}$, and $\omega'=\omega\cdot\iota$ with layers $y',x'$. Let $u_k$ ($k\in I_u$) be the $y$-bit of the input cell at site $p-k\in[p+M+1,p+M+r]$, and $v_d$ ($d\in B_y$) the $y$-bit of the new cell at site $p+r-d$. With the convention $y[k]=u_k$ for $k\in I_u$:
+\begin{enumerate}
+\item $x'[j]=y[j]$ for $-M-r\le j\le-r$;
+\item $y'[d]=v_d$ for $d\in B_y$;
+\item $y'[d]=y[d]\oplus x[d-2r]\oplus g\bigl(y[d-1],y[d-2],\dots,y[d-2r]\bigr)$ for $-M+r\le d\le0$.
+\end{enumerate}
+For every vertex $\omega$ and every $(u,v)\in\{0,1\}^{I_u}\times\{0,1\}^{B_y}$ there is $\iota$ with these values. So the successors of $\omega$ in $\Lambda_M$ are the vertices $\omega\cdot(u,v)$ given by (1)--(3).
+\end{lemma}
+
+\begin{proof}
+The new front is $p+r$. (1) $x'[j]$ is the new $x$-bit at site $p-j$, which is the old $y$-bit there. This is $y[j]$ if $j\ge-M$, and $u_j$ if $j\in I_u$. (2) is the definition of $v_d$. (3) $y'[d]$ is the new $y$-bit at $i=p+r-d$, which is $x_i\oplus y_{i-r}\oplus g(y_{i-r+1},\dots,y_{i+r})$. For $d\ge-M+r$ the site $i$ is in $[p,p+M]$, and $x_i=x[d-2r]$ with $d-2r\ge-M-r$. Next, $y_{i-r}=y[d]$, and $y_{i-r+1+k}$ is the $y$-bit at site $p-(d-1-k)$, which is $y[d-1-k]$. Its index $d-1-k\ge-M-r$ is a layer or lies in $I_u$. For the last statement, set the $y$-bits of the input cells at $p+M+1,\dots,p+M+r$ to $u$. For $d\in B_y$ the site $p+r-d$ lies in $[p+M+1,p+M+r]$. The $x$-bit of the input cell there is read by $F$ only in the new $y$-bit at that site, through $\oplus$, so it can be chosen to make that bit $v_d$.
+\end{proof}
+
+\paragraph{The tower.} Order the $N=2(M+1)$ layers as $L_1,\dots,L_N$: first the base layers, in any order, then, for $k=-M,-M+1,\dots,0$ in turn, the layer $y[k]$ if $k\ge-M+r$, followed by $x[k]$ if $-M\le k\le-r$. Each layer occurs exactly once. Let $P_n=\{L_1,\dots,L_n\}$ and $\pi_n$ the restriction to $P_n$.
+
+\begin{lemma}\label{gen:lem:tower}
+For each $n$, $\pi_n(\omega\cdot(u,v))$ depends only on $\pi_n(\omega)$ and $(u,v)$. Let $\Lambda^{(n)}$ be the graph on $\{0,1\}^{P_n}$ with edges $\eta\to\eta\cdot(u,v):=\pi_n(\omega\cdot(u,v))$ for any $\omega$ with $\pi_n(\omega)=\eta$. Then $\Lambda^{(N)}$ has the same successor sets as $\Lambda_M$. Every walk of $\Lambda^{(n)}$ lifts, with the same labels, to a walk of $\Lambda^{(n+1)}$ from any vertex restricting to its initial vertex.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{gen:lem:layer}, the new value of each layer depends only on $(u,v)$ and on layers that precede it or equal it. The new values of the base layers $x[j]$ ($j\in B_x\subseteq I_u$) and $y[d]$ ($d\in B_y$) are $u_j$ and $v_d$. The layer $x'[k]$ ($k\ge-M$) is $y[k]$, which precedes $x[k]$. The layer $y'[d]$ ($d\ge-M+r$) reads $y[d]$, the layer $x[d-2r]$, which is a base layer or comes at index $d-2r<d$, and the layers $y[d-1],\dots,y[d-2r]$ or $u$. The rest follows from Lemma~\ref{gen:lem:layer}, since strong connectivity depends only on successor sets.
+\end{proof}
+
+At the step $L_{n+1}=y[d]$ with $d\ge-M+r$, the set $P_n$ consists of all layers with index $\le d-1$, since every base layer has index $\le-M+r-1\le d-1$.
+
+\begin{lemma}\label{gen:lem:base}
+Let $n_0$ be the number of base layers. Then $\Lambda^{(n_0)}$ is a complete digraph with loops.
+\end{lemma}
+
+\begin{proof}
+From every vertex, the edge labelled $(u,v)$ leads to the assignment $x[j]=u_j$ ($j\in B_x$), $y[d]=v_d$ ($d\in B_y$).
+\end{proof}
+
+If $M\le r-1$, every layer is a base layer, so $\Lambda_M$ itself is complete.
+
+\begin{lemma}[predecessors]\label{gen:lem:pred}
+Every vertex $\omega_2$ of $\Lambda_M$ has an in-neighbour. Every in-neighbour $\hat\omega$ of $\omega_2$ satisfies $\hat y[j]=x_2[j]$ for $-M\le j\le-r$.
+\end{lemma}
+
+\begin{proof}
+The second statement is Lemma~\ref{gen:lem:layer}(1). For the first, we construct $\hat\omega$ and $(u,v)$ with $\hat\omega\cdot(u,v)=\omega_2$. Put $u_j=x_2[j]$ for $j\in I_u$ with $j\le-r$ (other $u_j$ are arbitrary), $v_d=y_2[d]$ for $d\in B_y$, $\hat y[j]=x_2[j]$ for $-M\le j\le-r$, and $\hat y[d]=0$ for $\max(-M,-r+1)\le d\le0$. With the convention $\hat y[k]=u_k$ for $k\in I_u$, all values $\hat y[k]$, $-M-r\le k\le0$, are now fixed. For $-M+r\le d\le0$ put
+\[
+\hat x[d-2r]=y_2[d]\oplus\hat y[d]\oplus g\bigl(\hat y[d-1],\dots,\hat y[d-2r]\bigr).
+\]
+The indices $d-2r$ are distinct and lie in $[-M-r,-2r]$, so this is consistent, and the remaining layers $\hat x[j]$ are arbitrary. By Lemma~\ref{gen:lem:layer}, conditions (1), (2) and (3) give $x'=x_2$, $y'=y_2$ on $B_y$, and $y'=y_2$ on $[-M+r,0]$.
+\end{proof}
+
+The property used below is that a predecessor with a prescribed bit $y[j]$ exists: it is any predecessor of a successor whose $x[j]$ is that bit. The number of predecessors plays no role.
+
+\begin{lemma}[memory steps]\label{gen:lem:xstep}
+Let $L_{n+1}=x[j]$ with $-M\le j\le-r$. If $\Lambda^{(n)}$ is strongly connected, so is $\Lambda^{(n+1)}$.
+\end{lemma}
+
+\begin{proof}
+Write vertices of $\Lambda^{(n+1)}$ as $(\eta,\chi)$ with $\chi$ the bit $x[j]$. By Lemma~\ref{gen:lem:layer}, $x[j]$ is read only by $y'[j+2r]$, which is not in $P_{n+1}$, and $x'[j]=y[j]$ with $y[j]\in P_n$. So the edge labelled $(u,v)$ goes from $(\eta,\chi)$ to $(\eta\cdot(u,v),\,y[j](\eta))$. Let $(\eta_1,\chi_1)$ and $(\eta_2,\chi_2)$ be vertices. Extend $(\eta_2,\chi_2)$ to a vertex $\omega_2$ of $\Lambda_M$, and take an in-neighbour $\hat\omega$ of $\omega_2$, with label $(u,v)$, by Lemma~\ref{gen:lem:pred}. Then $\hat y[j]=x_2[j]=\chi_2$, and $\hat\eta=\pi_n(\hat\omega)$ has an edge labelled $(u,v)$ to $\eta_2$. Take a walk from $\eta_1$ to $\hat\eta$ in $\Lambda^{(n)}$, lift it from $(\eta_1,\chi_1)$ to a walk ending at some $(\hat\eta,\chi')$, and append the edge labelled $(u,v)$, which leads to $(\eta_2,\hat y[j])=(\eta_2,\chi_2)$.
+\end{proof}
+
+\begin{lemma}[$\Z/2$ steps]\label{gen:lem:ystep}
+Let $L_{n+1}=y[d]$ with $-M+r\le d\le0$. For an edge of $\Lambda^{(n)}$ from $\eta$ with label $(u,v)$ put
+\[
+\phi=x[d-2r]\oplus g\bigl(y[d-1],\dots,y[d-2r]\bigr),
+\]
+evaluated on $\eta$ with $y[k]=u_k$ for $k\in I_u$. Then the edges of $\Lambda^{(n+1)}$ are $(\eta,z)\to(\eta\cdot(u,v),\,z\oplus\phi)$. If $\Lambda^{(n)}$ is strongly connected and some closed walk of $\Lambda^{(n)}$ has odd total $\sum\phi$ (its \emph{holonomy}), then $\Lambda^{(n+1)}$ is strongly connected.
+\end{lemma}
+
+\begin{proof}
+The first statement is Lemma~\ref{gen:lem:layer}(3), all of whose inputs other than $y[d]$ are in $P_n$ or in $(u,v)$. For the second, let $\varsigma$ be a closed walk at some $\eta$ with odd holonomy, and let $\eta_2$ be any vertex. Choose walks $\alpha$ from $\eta_2$ to $\eta$ and $\beta$ from $\eta$ to $\eta_2$. The closed walks $\alpha\beta$ and $\alpha\varsigma\beta$ at $\eta_2$ have holonomies of different parity. So there are closed walks of both parities at every vertex. Given $(\eta_1,z_1)$ and $(\eta_2,z_2)$, take a walk from $\eta_1$ to $\eta_2$ followed by a closed walk at $\eta_2$ of the right parity, and lift it from $(\eta_1,z_1)$.
+\end{proof}
+
+\paragraph{Periodic histories.} The closed walks come from time-periodic solutions of \eqref{gen:eq:rec} in comoving coordinates.
+
+\begin{definition}\label{gen:def:history}
+Let $D\in\Z$ and $T\ge1$. A \emph{periodic history below $D$} of period $T$ is a function $Y\colon\Z\times(-\infty,D-1]\to\{0,1\}$, $(t,i)\mapsto Y_t(i)$, with $Y_{t+T}=Y_t$, such that
+\begin{equation}\label{gen:eq:hist}
+Y_{t+1}(i)=Y_t(i)\oplus Y_{t-1}(i-2r)\oplus g\bigl(Y_t(i-1),\dots,Y_t(i-2r)\bigr)\qquad\text{for all $t\in\Z$ and $i\le D-1$.}
+\end{equation}
+Its \emph{increment} at level $D$ is $\phi_t=Y_{t-1}(D-2r)\oplus g(Y_t(D-1),\dots,Y_t(D-2r))$, and its \emph{holonomy} is $\ell(Y)=\sum_{t=0}^{T-1}\phi_t\in\Z/2$.
+\end{definition}
+
+Equation \eqref{gen:eq:hist} is \eqref{gen:eq:rec} for $Y_t(i)=Y_c(t,p+rt-i)$, and it is invariant under shifts of $i$. If $Y$ extends to a periodic history below $D+1$ of the same period, then $\phi_t=Y_{t+1}(D)\oplus Y_t(D)$ and $\ell(Y)=0$. So odd holonomy means that the history cannot be continued one layer up with the same period.
+
+\begin{lemma}\label{gen:lem:loops}
+Let $-M+r\le d\le0$, let $L_{n+1}=y[d]$, and let $Y$ be a periodic history below $d$ of period $T$. For $t\in\Z$ let $\eta_t\in\{0,1\}^{P_n}$ be given by $y[i]=Y_t(i)$ for $-M\le i\le d-1$ and $x[j]=Y_{t-1}(j)$ for $-M-r\le j\le\min(d-1,-r)$. Then $\Lambda^{(n)}$ has an edge $\eta_t\to\eta_{t+1}$ labelled $u_k=Y_t(k)$ ($k\in I_u$), $v_k=Y_{t+1}(k)$ ($k\in B_y$), whose value of $\phi$ is the increment $\phi_t$ of $Y$ at level $d$. So $\eta_0\to\eta_1\to\dots\to\eta_T=\eta_0$ is a closed walk with holonomy $\ell(Y)$.
+\end{lemma}
+
+\begin{proof}
+We check Lemma~\ref{gen:lem:layer} on the layers of $P_n$, with $y[k]=u_k=Y_t(k)$ for $k\in I_u$. By (1), $x'[j]=Y_t(j)$, which is $x[j]$ of $\eta_{t+1}$. By (2), $y'[k]=Y_{t+1}(k)$ for $k\in B_y$. By (3), for $-M+r\le k\le d-1$, $y'[k]=Y_t(k)\oplus Y_{t-1}(k-2r)\oplus g(Y_t(k-1),\dots,Y_t(k-2r))=Y_{t+1}(k)$ by \eqref{gen:eq:hist}. The value of $\phi$ on this edge is $Y_{t-1}(d-2r)\oplus g(Y_t(d-1),\dots,Y_t(d-2r))=\phi_t$. Finally, $\eta_T=\eta_0$ by periodicity.
+\end{proof}
+
+\paragraph{The certificate.} Fix $P\ge1$. A \emph{column state} is a $2r$-tuple $s=(s_1,\dots,s_{2r})$ of functions $s_j\colon\Z/P\to\{0,1\}$; there are $2^{2rP}$ of them. Think of $s_j$ as the time series of layer $D-2r-1+j$ of a $P$-periodic history, so that $s_1$ is the oldest layer $D-2r$ and $s_{2r}$ is layer $D-1$. Put
+\[
+\phi(s)_t=s_1(t-1)\oplus g\bigl(s_{2r}(t),s_{2r-1}(t),\dots,s_1(t)\bigr),\qquad \pi(s)=\sum_{t\in\Z/P}\phi(s)_t\in\Z/2 .
+\]
+If $\pi(s)=0$, the \emph{successors} of $s$ are the two states $(s_2,\dots,s_{2r},z)$ with $z(t+1)=z(t)\oplus\phi(s)_t$ for all $t\in\Z/P$; these are consistent because $\pi(s)=0$. If $\pi(s)=1$, then $s$ has no successor. Let $\mathrm{Im}_0$ be the set of all column states, $\mathrm{Im}_{m+1}$ the set of successors of elements of $\mathrm{Im}_m$, and $S_\infty=\bigcap_m\mathrm{Im}_m$.
+
+\smallskip
+\noindent$(\mathrm T_P)$\quad\emph{Some $s\in S_\infty$ has $\pi(s)=1$.}
+
+\begin{proposition}\label{gen:prop:TP}
+\begin{enumerate}
+\item $\mathrm{Im}_{m+1}\subseteq\mathrm{Im}_m$ for all $m$, and the sequence is constant, equal to $S_\infty$, from some $m_0\le2^{2rP}$ on. Every element of $S_\infty$ is a successor of an element of $S_\infty$. In particular $S_\infty$, and hence the truth of $(\mathrm T_P)$, is computed in finitely many steps.
+\item For every $s\in S_\infty$ and every $D\in\Z$ there is a periodic history $Y$ below $D$ of period $P$ whose layers $D-2r,\dots,D-1$ are $s_1,\dots,s_{2r}$, and $\ell(Y)=\pi(s)$.
+\item If $(\mathrm T_P)$ holds for some $P\ge1$, then $\Lambda_M$ is strongly connected for every $M\ge0$. That is, ($\Lambda$) holds.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(1) $\mathrm{Im}_1\subseteq\mathrm{Im}_0$, and taking successors is monotone, so the sequence decreases by induction. A decreasing sequence of subsets of a set with $2^{2rP}$ elements is constant from some $m_0\le2^{2rP}$ on. Then $S_\infty=\mathrm{Im}_{m_0+1}$ is the set of successors of elements of $\mathrm{Im}_{m_0}=S_\infty$.
+
+(2) By (1), choose $s^{(0)}=s$ and $s^{(-1)},s^{(-2)},\dots\in S_\infty$ with $s^{(-m)}$ a successor of $s^{(-m-1)}$. Define $Y(D-1-m)$, as a function of $t$, to be the last component of $s^{(-m)}$. Consecutive states overlap in $2r-1$ components, so by induction $s^{(-m)}=(Y(D-2r-m),\dots,Y(D-1-m))$. For the layer $i=D-1-m$, the successor relation from $s^{(-m-1)}=(Y(i-2r),\dots,Y(i-1))$ reads $Y_{t+1}(i)=Y_t(i)\oplus Y_{t-1}(i-2r)\oplus g(Y_t(i-1),\dots,Y_t(i-2r))$, which is \eqref{gen:eq:hist}. The increment of $Y$ at level $D$ is $\phi(s)$, so $\ell(Y)=\pi(s)$.
+
+(3) Let $M\ge0$. We show by induction on $n$ that $\Lambda^{(n)}$ is strongly connected for $n_0\le n\le N$. For $n=n_0$ this is Lemma~\ref{gen:lem:base}. A layer $L_{n+1}=x[j]$ with $-M\le j\le-r$ is covered by Lemma~\ref{gen:lem:xstep}. For a layer $L_{n+1}=y[d]$ with $-M+r\le d\le0$, take $s\in S_\infty$ with $\pi(s)=1$, and apply (2) with $D=d$. Lemma~\ref{gen:lem:loops} then gives a closed walk of $\Lambda^{(n)}$ with odd holonomy, and Lemma~\ref{gen:lem:ystep} applies. By Lemma~\ref{gen:lem:tower}, $\Lambda_M$ is strongly connected. The same state $s$ serves every $d$ and every $M$, because \eqref{gen:eq:hist} is invariant under shifts of the layer index.
+\end{proof}
+
+\begin{remark}\label{gen:rem:TPimpl}
+\begin{enumerate}
+\item The certificate is a finite computation on the $2^{2rP}$ states, described in Appendix~\ref{app:general}. Increasing $P$ gives a semi-decision procedure for a sufficient condition. We do not claim that ($\Lambda$) implies $(\mathrm T_P)$ for some $P$.
+\item For rule $30$, the stationary loop \eqref{r30:eq:loop} is the periodic history of period $1$ given by the column state $(s_1,s_2)=(0,1)$, which lies in $S_\infty$ and has $\pi=1$. Certificates for the other elementary classes, small enough to check by hand, are given in Proposition~\ref{pm:prop:window}.
+\end{enumerate}
+\end{remark}
+
+\subsection{Examples}\label{gen:sec:examples}
+
+The statements of this subsection are computer-assisted, except those for $r=1$; the computations are specified in Appendix~\ref{app:general}. A function $g$ of $2r$ variables is given either by a formula or by its \emph{truth table}, the integer whose binary digit of weight $2^{\xi_0+2\xi_1+\dots+2^{2r-1}\xi_{2r-1}}$ is $g(\xi_0,\dots,\xi_{2r-1})$, written in hexadecimal; for $r=2$, $\xi_3$ is \texttt{ff00} and $\xi_0\xi_2$ is \texttt{a0a0}. A witness $\mathcal L=\langle(n,0),(s,b)\rangle$ for $(\mathrm I)_q$ is written $(n,b,s)$; its points have least spatial period $n$, and $k(\mathcal L)$ is computed exactly by Lemma~\ref{gen:lem:stab}.
+
+\paragraph{Radius $1$.} The four hypotheses hold for the eight non-affine left-permutive elementary rules, by hand (Section~\ref{sec:permutive}). Two affine rules serve as controls. Rule $90$ ($g=\xi_1$) fails \textup{($\Lambda$)}: $\Lambda_M$ is not strongly connected for $1\le M\le8$, and $(\mathrm T_P)$ fails for $P\le5$. Rule $150$ ($g=\xi_0\oplus\xi_1$) satisfies $(\mathrm T_1)$ but fails \textup{(N)}, and $(\mathrm I)_2$ has no witness in $\mathrm{Per}_n$ for $n\le4$. This is consistent with the automorphism $\mathrm{id}+\sh F$ of Remark~\ref{pm:rem:linear}.
+
+\paragraph{Radius $2$.} Here $\xi_k=y_{i-1+k}$ and $f=y_{i-2}\oplus g(y_{i-1},y_i,y_{i+1},y_{i+2})$, the index of $\langle\sh,F\rangle$ divides $4$, and \textup{(I)} is $(\mathrm I)_2$ with $a_2=0$, that is, $(0,1)\notin2\Z^2+\mathcal L$. There are $65\,536$ functions $g$, of which $32$ are affine.
+
+\begin{proposition}[computer-assisted, radius $2$]\label{gen:prop:r2TP}
+Every non-affine $g\colon\{0,1\}^4\to\{0,1\}$ satisfies $(\mathrm T_P)$ for some $P\le4$. Hence \textup{($\Lambda$)} holds for all $65\,504$ non-affine rules of radius $2$. The least such $P$ is $1$ for $57\,482$ of them, $2$ for $6\,586$, $3$ for $1\,392$, and $4$ for $44$; the smallest truth table with least $P=4$ is \textup{\texttt{0339}}. Among the $32$ affine $g$, $(\mathrm T_1)$ holds for $30$, and $(\mathrm T_P)$ fails for $P\le4$ for $g=\xi_3$ and $g=1\oplus\xi_3$.
+\end{proposition}
+
+So Conjecture~\ref{gen:conj:lambda} below holds for $r=2$. Combined with Theorem~\ref{gen:structure}(b) and the count after Definition~\ref{gen:def:hyp}: for each of the $64\,288$ functions $g$ of four variables that satisfy \textup{(N)} and \textup{(D)}, $\Aut(X_F)\cong\Z^2$, and $\langle\sh,F\rangle$ has index $1$, $2$ or $4$ in it. For $g=\xi_3$ the graph $\Lambda_M$ is not strongly connected for $2\le M\le5$.
+
+\begin{proposition}[computer-assisted, radius $2$]\label{gen:prop:r2}
+For the rules $\xi_0\xi_2$, $\xi_0\xi_3$ and $\xi_3\oplus\xi_0\xi_1\xi_2$, and for the ten functions $g$ of Table~\ref{gen:tab:r2ten}, the hypotheses \textup{(N)}, \textup{(D)}, \textup{($\Lambda$)} and \textup{(I)} hold. Hence $\Aut(X_F)=\langle\sh,F\rangle\cong\Z^2$ for these thirteen rules. Here \textup{(N)} and \textup{(D)} are read off the algebraic normal form, \textup{($\Lambda$)} is the certificate $(\mathrm T_P)$ with $P\le2$ (Proposition~\ref{gen:prop:TP}), and \textup{(I)} is a witness in $\mathrm{Per}_n$ with $n\le4$ (Lemma~\ref{gen:lem:orbit}).
+\end{proposition}
+
+\begin{table}[ht]
+\caption{Radius-$2$ rules given by formulas. $J=J(g)$ (``--'' if $\partial_0g$ is constant); s.d.\ $=$ self-dual; $P$ is the least period with $(\mathrm T_P)$; the column $(\mathrm I)_2$ gives a witness $(n,b,s)$, which has $k(\mathcal L)=1$ in every row; ``strip'' is the number of functions $\gamma\not\equiv0$ of $\theta_0,\dots,\theta_m$ that satisfy \eqref{gen:eq:star}, for $m=1$ and $m=2$ (the count stops at $20$); ``extra'' is the number of invertible block maps of radius at most $R$ that commute with $F$ and do not lie in $\langle\sh,F\rangle$, for $R=1$ and $R=2$.}
+\label{gen:tab:r2}
+\centering
+\small
+\begin{tabular}{lcccccc l}
+\toprule
+$g$ & $J$ & s.d. & $P$ & $(\mathrm I)_2$ & strip & extra & status\\
+\midrule
+$\xi_0\xi_2$ & $2$ & no & $1$ & $(1,2,0)$ & $0,0$ & $0/0$ & Thm.~\ref{gen:main} applies\\
+$\xi_0\xi_3$ & $3$ & no & $1$ & $(1,2,0)$ & $0,0$ & $0/0$ & applies\\
+$\xi_3\oplus\xi_0\xi_1\xi_2$ (bipermutive) & $2$ & no & $1$ & $(2,1,1)$ & $0,0$ & $0/0$ & applies\\
+\midrule
+$\xi_0\xi_1$ & $1$ & no & $1$ & $(1,2,0)$ & $0,0$ & $0/0$ & (N) fails\\
+$\xi_1\xi_2$ & -- & no & $1$ & $(1,2,0)$ & $0,0$ & $0/0$ & (N) fails\\
+$\mathrm{maj}(\xi_0,\xi_2,\xi_3)$ & $3$ & yes & $1$ & $(1,2,0)$ & $1,1$ & $3/7$ & (D) fails\\
+$\xi_0\oplus\xi_3$ (affine) & -- & no & $1$ & none, $n\le5$ & $15,{\ge}20$ & $0/4$ & (N) fails; no witness, $n\le5$\\
+$\xi_1$ (affine) & -- & yes & $1$ & $(1,2,0)$ & ${\ge}20,{\ge}20$ & $5/$-- & (N), (D) fail\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\caption{Ten further radius-$2$ rules to which Theorem~\ref{gen:main} applies, given by their truth tables. None is self-dual. Columns as in Table~\ref{gen:tab:r2}; $k=k(\mathcal L)$ for the witness shown. The last rule also has the witness $(3,4,0)$ with $k=1$.}
+\label{gen:tab:r2ten}
+\centering
+\small
+\begin{tabular}{ccccc@{\qquad\qquad}ccccc}
+\toprule
+$g$ & $J$ & $P$ & $(\mathrm I)_2$ & $k$ & $g$ & $J$ & $P$ & $(\mathrm I)_2$ & $k$\\
+\midrule
+\texttt{ad44} & $3$ & $1$ & $(1,2,0)$ & $1$ & \texttt{5ff8} & $3$ & $1$ & $(4,2,2)$ & $1$\\
+\texttt{34ff} & $3$ & $2$ & $(1,4,0)$ & $1$ & \texttt{5980} & $3$ & $1$ & $(4,4,2)$ & $1$\\
+\texttt{3f7b} & $3$ & $2$ & $(1,4,0)$ & $1$ & \texttt{4f98} & $3$ & $1$ & $(2,1,1)$ & $1$\\
+\texttt{baec} & $3$ & $1$ & $(1,2,0)$ & $1$ & \texttt{e98e} & $3$ & $1$ & $(1,2,0)$ & $1$\\
+\texttt{fa9b} & $3$ & $1$ & $(4,6,2)$ & $1$ & \texttt{6152} & $2$ & $1$ & $(3,2,0)$ & $7$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In the column ``extra'' of Table~\ref{gen:tab:r2}, the extra automorphisms for $\mathrm{maj}(\xi_0,\xi_2,\xi_3)$ are the maps $\kappa\sh^aF^b$ of radius at most $R$, as Theorem~\ref{gen:structure}(c) predicts. The two rules of that table with \textup{(N)} failing and $g$ not affine have no extra automorphism of radius at most $2$ and no non-constant solution of \eqref{gen:eq:star} on $\theta_0,\theta_1,\theta_2$.
+
+\paragraph{Radius $3$.} Here $2r=6$, the primes are $q=2$ ($a_2=1$) and $q=3$ ($a_3=0$), and the index divides $6$.
+
+\begin{proposition}[computer-assisted, radius $3$]\label{gen:prop:r3}
+For the six functions $g$ of six variables in Table~\ref{gen:tab:r3}, the hypotheses \textup{(N)}, \textup{(D)}, \textup{($\Lambda$)} and \textup{(I)} hold, so $\Aut(X_F)=\langle\sh,F\rangle\cong\Z^2$. All six have $J(g)=5$ and none is self-dual; every witness shown has $k(\mathcal L)=1$.
+\end{proposition}
+
+\begin{table}[ht]
+\caption{Six radius-$3$ rules to which Theorem~\ref{gen:main} applies, given by their truth tables. $P$ is the least period with $(\mathrm T_P)$; the witnesses $(n,b,s)$ for $(\mathrm I)_2$ and $(\mathrm I)_3$ have $k(\mathcal L)=1$. The witness $(5,50,0)$ lies in $\Z\times2\Z$, so it avoids $(1,1)$ modulo $2\Z^2$.}
+\label{gen:tab:r3}
+\centering
+\small
+\begin{tabular}{cccc}
+\toprule
+$g$ & $P$ & $(\mathrm I)_2$ & $(\mathrm I)_3$\\
+\midrule
+\texttt{02f8aca0c96b3825} & $1$ & $(1,4,0)$ & $(2,3,0)$\\
+\texttt{9207dbf3d68f59b4} & $1$ & $(1,2,0)$ & $(2,3,0)$\\
+\texttt{6241805bcece3963} & $2$ & $(1,4,0)$ & $(2,3,0)$\\
+\texttt{dfc519edc1a14412} & $1$ & $(1,2,0)$ & $(3,3,0)$\\
+\texttt{822cd8c8f65243a3} & $1$ & $(5,50,0)$ & $(1,3,0)$\\
+\texttt{8557d3586049b4bb} & $1$ & $(4,4,2)$ & $(1,3,0)$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Two conjectures}\label{gen:sec:open}
+
+Hypothesis \textup{(N)} is used only in Proposition~\ref{gen:prop:strip}, through the emptiness of the stuck region.
+
+\begin{conjecture}\label{gen:conj:N}
+Theorem~\ref{gen:main} remains true with \textup{(N)} replaced by the condition that $g$ is not affine. This would follow from the conclusion of Proposition~\ref{gen:prop:strip} for every non-affine $g$.
+\end{conjecture}
+
+The implication holds because \textup{(N)} is used only through Proposition~\ref{gen:prop:strip}. The converse is not clear: a non-constant solution $\gamma$ of \eqref{gen:eq:star} need not come from an automorphism, since the triangular map it defines need not be injective. For affine $g$ the conclusion of Theorem~\ref{gen:main} fails in general: rule $150$ at $r=1$ and $\xi_0\oplus\xi_3$ at $r=2$ (Table~\ref{gen:tab:r2}) are not self-dual and have automorphisms outside $\langle\sh,F\rangle$.
+
+\begin{conjecture}\label{gen:conj:lambda}
+\textup{($\Lambda$)} holds for every non-affine $g$, of every radius.
+\end{conjecture}
+
+The conjecture holds for $r=1$, with $(\mathrm T_P)$ for some $P\le2$ (Proposition~\ref{pm:prop:window}, and its images under $\kappa$), and for $r=2$, with $P\le4$ (Proposition~\ref{gen:prop:r2TP}). For affine $g$, \textup{($\Lambda$)} can fail (rule $90$, and $g=\xi_3$ at $r=2$) or hold (rule $150$, and $g=\xi_1$, $\xi_0\oplus\xi_3$ at $r=2$). A uniform proof of \textup{($\Lambda$)}, in the spirit of the stationary loop \eqref{r30:eq:loop}, would need a periodic history with odd holonomy for every non-affine $g$, and we do not have one. Together, Conjectures~\ref{gen:conj:N} and~\ref{gen:conj:lambda} would reduce Theorem~\ref{gen:main} for non-affine, non-self-dual $g$ to the index condition \textup{(I)}.
+
+\begin{remark}\label{gen:rem:Zp}
+We do not treat the alphabets $(\Z/p)^2$ with $p$ odd. The profile and maximum-principle steps use only the group structure of the differences, but the remaining steps use $p=2$.
+\end{remark}

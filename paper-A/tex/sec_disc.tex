@@ -1,0 +1,60 @@
+\section{Discussion}\label{sec:disc}
+
+\subsection{Scope of the method}\label{sec:scope}
+The proof uses three properties of a rule, beyond the normalisation by offsets. (1) A \emph{stuck edge}: a spatially periodic background $B$ (the constant $(0,0)^{\Z}$ for $110$, $42$ and $46$, either constant $(\beta,\beta)^{\Z}$ for $66$, the vacuum for $93$) such that a configuration that agrees with $B$ to the right of a cell $r$ and differs from it at $r$ keeps this property under $F$ and $F^{-1}$, with the same $r$. (2) \emph{Clean probes}: kinks between $B$ and a second fixed configuration of some $\sh^aF^b$ which, glued next to the edge, leave the configuration again of the form (1) after a bounded time, change it only near the edge, and are themselves fixed by a normalised block map. (3) \emph{Controllability}: the moves produced by the probes reach, for every depth $k$, a configuration from which column $r-k$ can be read off through a permutive entry of the spacetime relation. Properties (1) and (2) give $(\mathrm H_1)$ and the commutation of $h$ with the moves; property (3) gives the induction.
+
+For the classes of $110$, $14$, $46$, $24$, $189$ and $79$ all three hold; for $189$ they hold for the rule $66$, whose automaton has the same fourth power. For $66$, property~(3) is transported from $46$ by a factor map (Section~\ref{c24:sec}). For a rule without any background with property~(1) the construction cannot start: there is no edge at which to glue a kink, and the debris of a probe is not a configuration of the same kind. For the classes of $25$ and $191$ we observed, in exploratory computations that are not part of this paper, that backgrounds and probes exist, but that the orbits of the moves they produce at small depth do not reach the configurations required by $(\mathrm{CTRL}_k)$. This is an observation, not a result proved here, and it concerns only the probes that were tried. Whether $\Aut(X_{F_f})=\langle\sh,F_f\rangle$ for these rules is open.
+
+\subsection{Endomorphisms}\label{sec:End}
+Lemma K does not assume invertibility, and it gives the following description of the endomorphisms of $X_F$, that is, of the block maps commuting with $F$.
+
+\begin{corollary}\label{cor:End}
+Let $f\in\{110,42,46\}$, $F=F_f$, and let $g$ be a block map commuting with $F$. Then $g\eta_0$ is $(0,0)^{\Z}$, $(1,1)^{\Z}$ or a kink $\eta_a$, and $g\rho\eta_0$ is $(0,0)^{\Z}$, $(1,1)^{\Z}$ or a kink $\rho\eta_b$. If $g\eta_0=\eta_a$ and $g\rho\eta_0=\rho\eta_b$, then $a\equiv b\pmod 2$ and $g=\sh^{\alpha}F^{\beta}$ with $\alpha=-\frac12(a+b)$, $\beta=\frac12(a-b)$.
+\end{corollary}
+
+\begin{proof}
+Since $g$ commutes with $\sh$ and $F$, it maps the fixed points of $\sh F$ to fixed points of $\sh F$, and those of $\sh^{-1}F$ to fixed points of $\sh^{-1}F$; by Lemma~\ref{cl:lem:kinks}, which holds for $42$ and $46$ by Lemma~\ref{cl:lem:shared}(1), this gives the first statement. Suppose $g\eta_0=\eta_a$ and $g\rho\eta_0=\rho\eta_b$. As $g$ commutes with $\sh$, $g\eta_p=\eta_{p+a}$ and $g\rho\eta_p=\rho\eta_{p+b}$ for all $p$. By Proposition~\ref{cl:prop:offsets}, $\sh^{\alpha'}F^{\beta'}$ shifts the two families by $\beta'-\alpha'$ and $-\alpha'-\beta'$.
+
+If $a+b$ is even, take $(\alpha,\beta)$ as in the statement; then $h=F^{-\beta}\sh^{-\alpha}g$ is a block map commuting with $F$ that fixes $\eta_0$ and $\rho\eta_0$, so $h=\mathrm{id}$ by Lemma~K, which holds for $110$, $42$ and $46$ by Theorems~\ref{cl:thm:110rigid}, \ref{cl:thm:14rigid} and~\ref{cl:thm:46rigid}. Hence $g=\sh^\alpha F^\beta$.
+
+Suppose $a+b$ is odd, and put $\alpha=-\frac12(a+b+1)$, $\beta=\frac12(a-b-1)$. Then $g_1=F^{-\beta}\sh^{-\alpha}g$ fixes every $\eta_p$ and maps $\rho\eta_p$ to $\rho\eta_{p-1}$. So $g_1^2$ maps $\rho\eta_p$ to $\rho\eta_{p-2}$, as does $\sh F$, and both fix every $\eta_p$; by Lemma~K applied to the block map $F^{-1}\sh^{-1}g_1^2$, $g_1^2=\sh F$. Now $g_1$ maps fixed points of $\sh$ to fixed points of $\sh$, so it induces a map $\phi$ on the set of the four constant configurations, which commutes with the transposition $\pi$ induced by $F$ (proof of Proposition~\ref{cl:prop:reduce}). Since $\sh$ acts trivially on constants, $\phi^2=\pi$. In particular $\phi$ is a bijection, so $\phi$ lies in the centralizer of $\pi$ in $\Sym(4)$, every element of which has order at most $2$; hence $\phi^2=\mathrm{id}\ne\pi$, a contradiction. So $a+b$ is even.
+\end{proof}
+
+By conjugation (Section~\ref{sec:conj}) the corollary transfers to the other rules of the classes of $110$, $14$ and $46$, with the kinks replaced by their images. It leaves the endomorphisms that map a kink to a constant configuration. The two constant maps onto $(0,0)^{\Z}$ and $(1,1)^{\Z}$ are such endomorphisms.
+
+Lemma~K$_{93}$ does not assume invertibility either, and the class of $79$ has the following analogue.
+
+\begin{corollary}\label{cor:End93}
+Let $F=F_{93}$, and let $g$ be a block map commuting with $F$. If neither $gK^-$ nor $gK^+$ is a constant configuration, then $g\in\langle\sh,F\rangle$.
+\end{corollary}
+
+\begin{proof}
+As in the proof of Proposition~\ref{c79:prop:offsets}, $g$ maps the four constant configurations, the fixed points of $\sh$, to constant configurations, and the induced map $\phi$ commutes with the permutation $\pi$ induced by $F$, which is the $3$-cycle $(0,0)^{\Z}\mapsto(0,1)^{\Z}\mapsto(1,0)^{\Z}$ and fixes $(1,1)^{\Z}$. Hence $\phi((1,1)^{\Z})$ is fixed by $\pi$, so it is $(1,1)^{\Z}$; and $\phi$ maps the $3$-cycle either onto itself, as a power $\pi^j$, or entirely to the fixed point $(1,1)^{\Z}$.
+
+In the second case $gK^-$, which agrees with $g((0,0)^{\Z})=(1,1)^{\Z}$ on a right half-line, lies in $\mathrm{Fix}_1$, and agrees on a left half-line with $gV_0$, a configuration of period $2$. The configurations of period $2$ are the four constants, the six vacua and the six points of $\mathcal W$ (proof of Proposition~\ref{c79:prop:offsets}). By Lemma~\ref{c79:lem:kinks}(c), $gK^-$ is then constant, or one of the $K^-_{j'}$; but the right constants of the $K^-_{j'}$ are $(0,0)^{\Z}$, $(0,1)^{\Z}$ and $(1,0)^{\Z}$ (Lemma~\ref{c79:lem:kinks}(b)). So $gK^-$ is constant, which is excluded.
+
+In the first case $g'=F^{-j}g$ fixes every constant configuration, and $g'K^-=F^{-j}gK^-$ is not constant. As above, $g'K^-\in\mathrm{Fix}_1$ agrees with $g'V_0$ on a left half-line and with $(0,0)^{\Z}$ on a right half-line; by Lemma~\ref{c79:lem:kinks}(c), $g'V_0$ is neither a constant nor in $\mathcal W$, so it is a vacuum $V_{\omega_0}$, and $g'K^-=K^-_{j'}$ for some $j'$. Likewise $g'K^+\in\mathrm{Fix}_{-1}$ agrees with $V_{\omega_0}$ on a left half-line and with $(0,1)^{\Z}$ on a right half-line, so $g'K^+=K^+_{j''}$ for some $j''$. From here the proof of Proposition~\ref{c79:prop:offsets} applies without change and gives $a,b\in\Z$ such that $h=F^{-3b}\sh^{-a}g'$ fixes $K^-$ and $K^+$. By Lemma~\ref{c79:lem:K}, which does not assume that $h$ is invertible, $h=\mathrm{id}$, so $g=F^j\sh^aF^{3b}$.
+\end{proof}
+
+The constant map onto $(1,1)^{\Z}$, which $F$ fixes, commutes with $F$ and maps both kinks to a constant configuration.
+
+\begin{question}\label{q:End}
+Let $f\in\{110,42,46\}$. Is every block map commuting with $F_f$ either an element of $\langle\sh,F_f\rangle$ or one of the two constant maps onto $(0,0)^{\Z}$ and $(1,1)^{\Z}$?
+\end{question}
+
+For $f=110$ and radius at most $4$ the SAT enumeration announced in \cite{PaperD} finds no other block map commuting with $F_{110}$. By Corollary~\ref{cor:End}, a positive answer is equivalent to the statement that an endomorphism mapping $\eta_0$ or $\rho\eta_0$ to a constant configuration is constant.
+
+\subsection{Reversing and extended symmetries}\label{sec:rev}
+Following \cite{BRY2018}, an \emph{extended symmetry} of the $\Z^2$-action $(\sh,\tau)$ on $X_F$ is a homeomorphism $\psi$ of $X_F$ such that $\psi\sh^a\tau^b\psi^{-1}=\sh^{a'}\tau^{b'}$ with $(a',b')=M(a,b)$ for a matrix $M\in\mathrm{GL}(2,\Z)$ independent of $(a,b)$; the extended symmetries form a group that contains $\Aut(X_F)$ as a normal subgroup, the kernel of $\psi\mapsto M$. Since $\rho F\rho=F^{-1}$ and $\rho\sh=\sh\rho$ for every $f$, the time reversal $\rho$ induces an extended symmetry with $M=\mathrm{diag}(1,-1)$. For the rules of Theorem~\ref{thm:main} the extended symmetry group therefore contains $\langle\sh,F_f\rangle\rtimes\langle\rho\rangle\cong\Z^2\rtimes\Z/2$, with $\rho$ acting by $(a,b)\mapsto(a,-b)$. For $46$ the class has two elements, and $\kappa\circ\mathrm{rev}$ conjugates $F_{46}$ to itself and $\sh$ to $\sh^{-1}$ (Section~\ref{sec:conj}); so for $46$ the group contains $\Z^2\rtimes(\Z/2)^2$, with matrices $\mathrm{diag}(\pm1,\pm1)$. For the classes of $110$, $14$ and $79$, which have four elements, no composite of $\kappa$ and $\mathrm{rev}$ maps $f$ to itself. For $f\in\{66,189\}$ the composites that map $f$ to itself are $\mathrm{id}$ and $\kappa$, which lies in $\Aut(X_{F_f})$; as $\rho$ commutes with $\kappa$, the extended symmetry group contains $(\langle\sh,F_f\rangle\times\langle\kappa\rangle)\rtimes\langle\rho\rangle$.
+
+\begin{question}\label{q:ext}
+Is the extended symmetry group of $X_{F_{110}}$ equal to $\langle\sh,F_{110}\rangle\rtimes\langle\rho\rangle$? Which matrices $M$ occur for the rules of Theorem~\ref{thm:main}?
+\end{question}
+
+\subsection{Open problems}\label{sec:open}
+\begin{enumerate}
+\item Questions~\ref{q:End} and~\ref{q:ext}.
+\item Is $F_{110}$ computationally universal?
+\item Determine $\Aut(X_{F_f})$ for the classes of $25$ and $191$ (see Section~\ref{sec:scope}), and for the open classes in which no configuration has a stuck edge, of which there are at least $10$ \cite{PaperD}. The absence of a stuck edge does not decide the group: the classes of $94$ and $95$ have none, and $\Aut(X_{F_{94}})=\langle\sh,F_{94}\rangle$, while $\Aut(X_{F_{95}})$ contains every finite group \cite{PaperE}.
+\item Give a uniform criterion on $f$ under which the induction of Theorem~\ref{cl:thm:Fk} closes.
+\end{enumerate}

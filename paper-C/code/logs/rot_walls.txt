@@ -1,0 +1,11 @@
+219 pi-evolution failures 0 | bond not F-invariant 0 | not F^-1-invariant 0
+126 pi-evolution failures 0 | bond not F-invariant 0 | not F^-1-invariant 0
+pi cycle on cells: [0, 1, 3, 2] pi^2 == kappa: True
+219 car map between s=0 walls: {1: 2, 2: 0, 3: 3}  image avoids pi(s)=1: True
+219 car map between s=1 walls: {0: 0, 2: 1, 3: 2}  image avoids pi(s)=3: True
+219 car map between s=2 walls: {0: 1, 1: 2, 3: 3}  image avoids pi(s)=0: True
+219 car map between s=3 walls: {0: 0, 1: 3, 2: 1}  image avoids pi(s)=2: True
+126 car map, left nb 3 right nb 0: {1: 3, 2: 0}  == pi: True  image avoids {pi a, pi b}: True
+126 car map, left nb 2 right nb 1: {0: 1, 3: 2}  == pi: True  image avoids {pi a, pi b}: True
+126 car map, left nb 1 right nb 2: {0: 1, 3: 2}  == pi: True  image avoids {pi a, pi b}: True
+126 car map, left nb 0 right nb 3: {1: 3, 2: 0}  == pi: True  image avoids {pi a, pi b}: True
