@@ -267,7 +267,7 @@ rule95-sat: setup rule95
 	  && test `grep -c "both types together {'named': [0-9]*, 'const': 0, 'other': 0}" out_175.txt` -eq 5 \
 	  || $(call FAIL,sat_sublattice.py for rule 175 differs from the lines R <= 5 of logs/sat_sublattice_rule175.log)
 	@$(H) cd $(W)/rule95 && $(PY) sublattice_any.py 175 5 > out_any175.txt \
-	  && diff out_any175.txt <(head -n `wc -l < out_any175.txt` logs/sublattice_any_rule175.log) > /dev/null \
+	  && diff <($(NT) out_any175.txt) <(head -n `wc -l < out_any175.txt` logs/sublattice_any_rule175.log | $(NT)) > /dev/null \
 	  || $(call FAIL,sublattice_any.py 175 5 differs from the lines R <= 5 of logs/sublattice_any_rule175.log)
 	@$(H) cd $(W)/rule95 && $(PY) sat_sublattice.py 3 all cadical153 250 > out_250.txt \
 	  && diff <($(NT) out_250.txt) <($(NT) logs/sat_sublattice_rule250_R3.log) > /dev/null \
