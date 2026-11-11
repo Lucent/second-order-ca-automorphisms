@@ -1,4 +1,4 @@
-"""Markers for 90R and 165R at the level of cells (Theorem 7.9 and Example 7.11).
+"""Markers for 90R and 165R at the level of cells (Theorem 7.10 and Example 7.12).
 (1) exact identities on all small windows (these make commutation an exact consequence of J o sigma = sigma o J
     and J(not z) = J(z));
 (2) the S_3 instance Phi^a_rho(c) = c + iota(J_rho(d(c))), Phi^b_rho(c) = c + iota'(J_rho(e(c))) on ALL rings of

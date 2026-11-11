@@ -1,4 +1,4 @@
-"""The lift certificate (Appendix B of the paper, the subsection "The lift certificate").
+"""The lift certificate (the supplement to the paper, the section "The lift certificate").
 
 Usage:  python lift_cert.py RULE NMAX TMAX D
 

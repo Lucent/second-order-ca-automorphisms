@@ -1,7 +1,7 @@
 \section{Rules 110 and 30}\label{sec:110}
 
 \begin{table}[t]
-\caption{Block maps of radius at most $R$ commuting with $F_f$. ``Named'' are the maps $\sh^aF^b$ with $|a|+|b|\le R$, of which there are $2R^2+2R+1$. ``Other'' are maps that are neither named nor constant. The column ``invertible'' counts the invertible commuting maps, that is, the automorphisms of $X_F$ of radius at most $R$. The rows for $54$R, $90$R and $150$R are controls; they repeat enumerations of \cite{PaperC} (computer-assisted there), and the numbers of invertible maps for $150$R are those of \cite{PaperC}. $D$ and the affine maps are described after the proof of Theorem~\ref{thm:110}, and ``linear commutant'' means that the commuting maps are the linear maps $(aI+bM)c$.}
+\caption{Block maps of radius at most $R$ commuting with $F_f$. ``Named'' are the maps $\sh^aF^b$ with $|a|+|b|\le R$, of which there are $2R^2+2R+1$. ``Other'' are maps that are neither named nor constant. The column ``invertible'' counts the invertible commuting maps, that is, the automorphisms of $X_F$ of radius at most $R$. The rows for $54$R, $90$R and $150$R are controls, one for each rule; they repeat enumerations of \cite{PaperC} (computer-assisted there), the number of invertible maps for $150$R is that of \cite{PaperC}, and the other radii are in Table~\ref{tab:controls}. $D$ and the affine maps are described after the proof of Theorem~\ref{thm:110}, and ``linear commutant'' means that the commuting maps are the linear maps $(aI+bM)c$.}
 \label{tab:census}
 \centering\small
 \begin{tabular}{llrrrrrl}
@@ -16,13 +16,8 @@ rule & $R$ & commuting & named & constants & other & invertible & automorphisms 
 30R & 2 & 15 & 13 & 2 & 0 & 13 & none\\
 30R & 3 & 27 & 25 & 2 & 0 & 25 & none\\
 30R & 4 & 43 & 41 & 2 & 0 & 41 & none\\
-54R & 1 & 13 & 5 & 2 & 6 & 5 & none (the $6$ others are not injective)\\
 54R & 2 & $>2\times10^4$ & 13 & 2 & rest & 23 & $10$: $F^bD^k$, $|b|\le2$, $k=1,2$\\
-90R & 1 & $2^{5}$ & 5 & 2 & 25 & 10 & $5$, all affine\\
 90R & 2 & $2^{17}$ & 13 & 2 & rest & 26 & $13$, all affine\\
-90R & 3 & $2^{65}$ & 25 & 2 & rest & --- & ---\\
-150R & 1 & $2^{4}$ & 5 & 1 & 10 & 9 & $4$; linear commutant\\
-150R & 2 & $2^{8}$ & 13 & 1 & rest & 43 & $30$; linear commutant\\
 150R & 3 & $2^{12}$ & 25 & 1 & rest & 115 & $90$; linear commutant\\
 \bottomrule
 \end{tabular}
@@ -38,4 +33,4 @@ The enumeration described in Section~\ref{sec:method} was run for $f=110$ and $f
 
 The theorem says that $\Cent_4(F)$, the set of endomorphisms of $X_F$ of radius at most $4$, consists of the elements of $\langle\sh,F\rangle$ of radius at most $4$ and the two constants. For automorphisms the conclusion holds at every radius: $\Aut(X_{F_{110}})=\langle\sh,F_{110}\rangle$ by \eqref{imp:110}, and $\Aut(X_{F_{30}})=\langle\sh,F_{30}\rangle$ by \eqref{imp:perm}; for the non-invertible commuting block maps of these two rules, Theorem~\ref{thm:110} is what is known. It is a statement about all block maps on the four-symbol alphabet: a search among the maps that act on the two layers separately, $g(x,y)=(\phi x,\phi y)$ for a binary block map $\phi$, would see only the shifts and the two constants, since $\sh^aF^b$ mixes the layers for $b\ne0$.
 
-The rows of Table~\ref{tab:census} for $54$, $90$ and $150$ serve as controls of the encoding; the automorphisms they find are explained in \cite{PaperC}: for $54$R, $D$ is the relabelling of radius $2$ that acts as the $3$-cycle $0\to1\to2\to0$ on every single cell between two walls $33$ and as the identity elsewhere, and for $90$R the automorphisms of radius at most $2$ outside $\langle\sh,F\rangle$ are affine maps $c\mapsto(aI+bM)c+k$ in the notation of Remark~\ref{cl:rem:affine}.
+The rows of Table~\ref{tab:census} for $54$, $90$ and $150$ serve as controls: in each of them the enumeration finds automorphisms outside $\langle\sh,F\rangle$, so the search detects such automorphisms when they exist. That the censuses with no such automorphism are complete rests on the exhaustiveness of the enumeration and on its verification (Section~\ref{sec:method}), not on the controls. The automorphisms found in the controls are explained in \cite{PaperC}: for $54$R, $D$ is the relabelling of radius $2$ that acts as the $3$-cycle $0\to1\to2\to0$ on every single cell between two walls $33$ and as the identity elsewhere, and for $90$R the automorphisms of radius at most $2$ outside $\langle\sh,F\rangle$ are affine maps $c\mapsto(aI+bM)c+k$ in the notation of Remark~\ref{cl:rem:affine}.

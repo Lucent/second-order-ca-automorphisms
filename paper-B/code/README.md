@@ -63,7 +63,7 @@ Running times on one core: `tp_direct.py` 10 s, `scan_r2.py` 1 min, `scan_r2b.py
 There are 65 504 non-affine g; 64 512 of them satisfy (N), and 64 288 satisfy (N) and (D).
 The tables `out_leastP_r2.txt` and `out_leastP_r2_scan.txt` are identical.
 
-## The holonomy behind the front (Appendix B of the paper)
+## The holonomy behind the front (the supplement to the paper)
 
 These four programs confirm Lemma `pm:lem:theta` and Proposition `pm:prop:odd` of the appendix on
 the two-copy window graph. They use the cell rule F(c)_i = (y_i, x_i XOR f(y_{i-1}, y_i, y_{i+1}))

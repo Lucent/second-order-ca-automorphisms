@@ -35,7 +35,7 @@ Tier: **quick** rows are run by `make check` (about 90 seconds on one core in al
 | 90R, R ≤ 3: the affine maps and the two families through the eigen-factors span the solution space | computer-assisted | `code/census/span90_R3.py`, `verify_90_structure.py` | `code/census`: `python3 span90_R3.py`; `python3 verify_90_structure.py` | `logs/span_90_R3.txt`, `logs/verify_90_structure.txt` (identical) | 3 s and 3 s, 100 MB | quick |
 | Table 1, 150R at R ≤ 3: 2^4, 2^8, 2^12 maps | computer-assisted | `code/census/rank90_packed.py` | `code/census`: `python3 rank90_packed.py 150 1` (also `150 2`, `150 3`) | `logs/rank_150_R123.txt` (equal up to running times; `kernel dim` 4, 8, 12) | 4 s, 380 MB | quick |
 | Section 3.4: for 90R and R = 2 the dimension was compared with the SAT enumeration of all 2^17 solutions | computer-assisted | — | — | log not included in this release (for R = 1 the 32 solutions are in `logs/census_54_90_R1.txt`; at R = 2 the committed SAT runs for rule 90 stop at a cap) | — | — |
-| Table 5 (instance sizes and running times) | — | — | — | the lines `=== rule …` of the logs above give variables, clauses and the three times | — | — |
+| Table 6 (instance sizes and running times) | — | — | — | the lines `=== rule …` of the logs above give variables, clauses and the three times | — | — |
 
 ## Computer-assisted statements (Appendix A.2)
 

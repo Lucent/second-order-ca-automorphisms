@@ -93,7 +93,10 @@ skipped with a message and the others still run. To use another interpreter:
     make pdf
 
 compiles the five papers from `paper-X/tex/` (three passes of `pdflatex`
-each). A compiled `main.pdf` is committed in each `tex/` folder.
+each), and the supplement to Paper B, `paper-B/tex/supplement.tex` (the
+two-copy window graph), which reads the labels of Paper B and is compiled
+after it. A compiled `main.pdf` is committed in each `tex/` folder, and
+`supplement.pdf` in `paper-B/tex/`.
 
 ## Two tiers of computation
 

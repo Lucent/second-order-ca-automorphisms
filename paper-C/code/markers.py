@@ -1,4 +1,4 @@
-# Check of the marker-permutation construction for 90R and 165R in the paper (Theorem 7.9):
+# Check of the marker-permutation construction for 90R and 165R in the paper (Theorem 7.10):
 # segment words U_L (first/last letter 0, no 11, no 000, even- and odd-position sums 0), frames 111 u 111
 # and complementary frames 000 ubar 000; psi_rho permutes the segment words; J is the integral;
 # Phi_a(c) = c + iota(J(d c)), Phi_b(c) = c + iota'(J(e c)).

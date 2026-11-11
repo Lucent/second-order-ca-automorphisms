@@ -1,13 +1,13 @@
-\section{The two-copy window graph}\label{app:twocopy}
+\section{Window states}\label{tc:sec:window}
 
-This appendix is not used in the proof of any theorem of Sections~\ref{sec:intro}--\ref{sec:halfradius}. Those proofs follow one configuration along the front, through the graphs $\Lambda_M$. Here we follow both configurations of a front pair, through a \emph{two-copy} window graph $\Gamma_{w,M}$ that also records $w$ cells behind the front, and we determine its eventual image: its size, the number of steps after which every walk has entered it, and, for the rules $30$, $45$, $75$ and $135$, its strong connectivity (Theorem~\ref{r30:thm:window} and Proposition~\ref{pm:prop:twocopy}). Strong connectivity is reduced to a statement about the holonomy of closed walks at each layer behind the front. For $30$, $45$ and $75$ this holonomy is read off from explicit periodic histories, one family for all depths. For $135$ we know no such family, and the holonomy is obtained from a single closed walk of odd length by an induction on the depth (Proposition~\ref{pm:prop:odd}).
 
-Throughout this appendix $f(a,b,c)=a\oplus g(b,c)$ is a left-permutive elementary rule, with $g(b,c)=g_{11}bc\oplus g_{10}b\oplus g_{01}c\oplus g_{00}$ as in Section~\ref{pm:sec:classes}, and $F=F_f$. This is the automaton of Section~\ref{sec:general} with $r=1$, and we use the diagrams, pairs and front pairs of Section~\ref{gen:sec:profiles}; for rule $30$ they are those of Section~\ref{r30:sec:diagrams}. Every diagram satisfies
+
+Throughout $f(a,b,c)=a\oplus g(b,c)$ is a left-permutive elementary rule, with $g(b,c)=g_{11}bc\oplus g_{10}b\oplus g_{01}c\oplus g_{00}$ as in Section~\Bref{pm:sec:classes}, and $F=F_f$. This is the automaton of Section~\Bref{sec:general} with $r=1$, and we use the diagrams, pairs and front pairs of Section~\Bref{gen:sec:profiles}; for rule $30$ they are those of Section~\Bref{r30:sec:diagrams}. Every diagram satisfies
 \begin{equation}\label{pm:eq:rec}
 Y(t+1,i)\oplus Y(t-1,i)\oplus Y(t,i-1)=g\bigl(Y(t,i),Y(t,i+1)\bigr).
 \end{equation}
 
-\subsection{Window states}\label{tc:sec:window}
+
 
 
 Fix integers $w\ge1$ and $M\ge0$. A \emph{window state} is a pair $s=(a,b)$ of words $a=a_{p-w}\cdots a_{p+M}$ and $b=b_{p-w}\cdots b_{p+M}$ over $\A$, indexed by the sites $p-w,\dots,p+M$ for some integer $p$ (the \emph{front}), such that
@@ -27,7 +27,7 @@ If $P=(c,c')$ is a front pair at $p$ with $W(P)=s$, then $FP$ is a front pair at
 \end{lemma}
 
 \begin{proof}
-$FP$ is a front pair at $p+1$ by Lemma~\ref{gen:lem:flips}(1) with $r=1$. The cells $F(c)_i$ with $p+1-w\le i\le p+1+M$ read only $c_{p-w},\dots,c_{p+M+2}$, and $c_i=c'_i$ for $i>p$; this gives the formula for $W(FP)$. For the last statement, extend $s$ by common cells with $\iota_1,\iota_2$ at $p+M+1,p+M+2$.
+$FP$ is a front pair at $p+1$ by Lemma~\Bref{gen:lem:flips}(1) with $r=1$. The cells $F(c)_i$ with $p+1-w\le i\le p+1+M$ read only $c_{p-w},\dots,c_{p+M+2}$, and $c_i=c'_i$ for $i>p$; this gives the formula for $W(FP)$. For the last statement, extend $s$ by common cells with $\iota_1,\iota_2$ at $p+M+1,p+M+2$.
 \end{proof}
 
 \begin{lemma}\label{r30:lem:inputs}
@@ -71,7 +71,7 @@ The new cell at site $i\le p+M$ is $(y(c_i),\,x(c_i)\oplus y(c_{i-1})\oplus g(y(
 
 If $P$ is a front pair at $p$ and $z_t[d]$ denotes the $y$-bit of $F^t(c)$ at site $p+t-d$, then the window of $F^tP$ has $y$-layers $z_t$ and $x$-layers $z_{t-1}$, and \eqref{pm:eq:L} is \eqref{pm:eq:rec} written in these comoving coordinates. It is lower triangular: $y'[d]$ reads only layers with index at most $d$, and the leftmost $x$-layer $x[w-1]$ is never read.
 
-\subsection{The eventual image}\label{tc:sec:image}
+\section{The eventual image}\label{tc:sec:image}
 
 \begin{theorem}\label{r30:thm:window}
 Let $f$ be rule $30$, and let $w\ge1$ and $M\ge0$. There is a set $\mathcal{T}=\mathcal{T}_{w,M}\subseteq\mathcal{W}_{w,M}$ with $|\mathcal{T}|=2^{3w+2}4^M$ such that:
@@ -85,7 +85,7 @@ Consequently $\mathcal{T}$ is the unique terminal strongly connected component o
 
 The consequences follow from (1)--(3). Every vertex has out-degree $4$, so from $s$ there is a walk of length $\lceil w/2\rceil$, which ends at some $t\in\mathcal{T}$ by (2). Likewise $s'$ reaches some $t'\in\mathcal{T}$, and by (3) there is a walk from $t$ to $t'$. So both $s$ and $s'$ reach $t'$. By (1) and (3), $\mathcal{T}$ is a terminal strongly connected component. Any terminal component $T$ contains the endpoints of walks of length $\lceil w/2\rceil$ that start in it, so $T$ meets $\mathcal{T}$, and hence $T=\mathcal{T}$.
 
-\subsection{The tower of factor graphs}\label{r30:sec:windowproof}
+\section{The tower of factor graphs}\label{r30:sec:windowproof}
 
 In this subsection $f$ is any left-permutive elementary rule, except in Lemmas~\ref{r30:lem:stationary} and~\ref{r30:lem:holonomy}, which are specific to rule $30$. Thus parts (1) and (2) of Theorem~\ref{r30:thm:window} and the size of $\mathcal{T}$ are proved for every such rule, and part (3) is reduced to the existence of closed walks with prescribed holonomy (Lemma~\ref{r30:lem:ystep}). 
 Fix $w\ge1$ and $M\ge0$, and write $\Gamma=\Gamma_{w,M}$ and $\mathcal{W}=\mathcal{W}_{w,M}$. We use the layer coordinates \eqref{tc:eq:layers}. For a quantity $\Theta$ computed from one copy of a state we write $\Theta^a$, $\Theta^b$ for its values on the two copies, and $\delta\Theta=\Theta^a\oplus\Theta^b$. A state of $\mathcal{W}$ is called \emph{valid} to stress that it satisfies \eqref{r30:eq:validlayers}.
@@ -311,7 +311,7 @@ Parts (1) and (2) and the size of $\mathcal{T}$ were proved above. For (3), we s
 \end{proof}
 
 
-\subsection{Closed walks from periodic histories}\label{pm:sec:hist}
+\section{Closed walks from periodic histories}\label{pm:sec:hist}
 
 For the rules other than $30$, the stationary states of Lemma~\ref{r30:lem:stationary} are replaced by time-periodic solutions of the layer equation. In this subsection $f=a\oplus g(b,c)$ is a left-permutive elementary rule with $g_{11}=1$, and $\partial g(b,c)=g(b,c)\oplus g(1\oplus b,c)=c\oplus g_{10}$. Fix $d\in\Z$ and let $T\ge1$.
 
@@ -390,7 +390,7 @@ If the history is the restriction of a tail or of a history defined on all layer
 (b) By Lemma~\ref{pm:lem:loops}, $(\ell_a,\ell_b)\in\{(1,0),(0,1)\}$ lies in $\mathrm{Hol}$, and by Lemma~\ref{pm:lem:ops}(1) so does the other element of this set. These two elements generate $K=(\Z/2)^2$. (a) For $d\le0$, $Y$ and its top flip (Lemma~\ref{pm:lem:ops}(2) with $\Sigma=\{a,b\}$) have $\ell$ differing by $1$, so one of them gives $\ell=1$, which generates $K=\Z/2$. For $d=1$, Lemma~\ref{pm:lem:ops}(4) gives a history with $\ell_a\ne\ell_b$, and (b) applies. (c) If $\ell_a(Z)\ne\ell_b(Z)$, use (b). Otherwise flip the top layer $d-1\ge1$ of the one copy $c$ with $N_c(Z,d-2)=1$. By Lemma~\ref{pm:lem:ops}(2) this changes $\ell_c$ and not the other, and (b) applies. The last sentence holds because the history is the same for all $M$ and $w$.
 \end{proof}
 
-\subsection{Histories ahead of the front}\label{pm:sec:loops}
+\section{Histories ahead of the front}\label{pm:sec:loops}
 
 For $f=30$ the loops of Lemma~\ref{r30:lem:holonomy} are time-constant histories in the sense of Definition~\ref{pm:def:history}. For $45$, $75$ and $135$ we give histories explicitly. The conventions below are also used in Section~\ref{pm:sec:behind}. Tails are given by their $x$-row and $y$-row, with the phase stated by the site at which the front sits at time $0$. Every series below is listed over $t=0,1,\dots,T-1$. The column $\varphi$ lists the bits $Z_{t-1}(i-2)\oplus g(Z_t(i-1),Z_t(i-2))$ for $t=0,\dots,T-1$. Condition (Z1) at layer $i$ says exactly that $Z_{t+1}(i)=Z_t(i)\oplus\varphi_t$, which can be checked row by row. Layers that come from a tail satisfy (Z1) by Lemma~\ref{pm:lem:tail}, and need no check.
 
@@ -415,7 +415,7 @@ Let $f\in\{30,45,75,135\}$, $w\ge1$ and $M\ge0$. Then $\mathrm{Hol}=K$ at every 
 For $30$ this is the cases $d\le0$ and $d=1$ of Lemma~\ref{r30:lem:holonomy}. For $45$, $75$ and $135$, the tails above give, by Lemma~\ref{pm:lem:tail}, single periodic histories below every $d\le1$ with $N(Y,d-2)=1$, so Corollary~\ref{pm:cor:crit}(a) applies. Each tail is defined on all layers, so it serves every $M$ and $w$ at once.
 \end{proof}
 
-\subsection{Histories behind the front}\label{pm:sec:behind}
+\section{Histories behind the front}\label{pm:sec:behind}
 
 The steps $y[d]$ with $d\ge2$ are behind the front. We prove that they have full holonomy for $45$, $75$ and $135$ (Proposition~\ref{pm:prop:hol}). For $45$ and $75$ the proof uses explicit histories, which are the time-periodic replacements for the stationary states of Lemma~\ref{r30:lem:stationary}; for $135$ it uses one explicit history and Proposition~\ref{pm:prop:odd}. The conventions are those of Section~\ref{pm:sec:loops}.
 
@@ -426,7 +426,7 @@ Z(i)=1\ \ (i\le-1),\qquad Z^a(i)=[i\text{ even}],\ \ Z^b(i)=[i\text{ odd}]\ \ (0
 and $Z^a(d-1)=Z^b(d-1)=0$.
 So $Z^a=(\dots1,1\mid1\mid0,1,0,\dots)$ and $Z^b=(\dots1,1\mid0\mid1,0,1,\dots)$, read from layer $-1$ through the front at layer $0$, with the top layer $d-1$ set to $0$. Condition (Z1) asks $Z(k)=g(Z(k+1),Z(k))$ for $k\le d-3$. This holds when $Z(k)=1$. When $Z(k)=0$, we have $0\le k\le d-3$, and the alternating pattern gives $Z(k+1)=1$ and $g(1,0)=0$. Condition (Z2) is clear. Now $\varphi^c=Z^c(d-2)\oplus g(0,Z^c(d-2))=Z^c(d-2)\oplus1$, and $Z^a(d-2)\ne Z^b(d-2)$, so $\ell_a\ne\ell_b$. Corollary~\ref{pm:cor:crit}(b) applies for every $d\ge2$.
 
-\paragraph{Rule $45$ at $d=2$: a loop of period $4$.} Here $g=b\vee\neg c$. The tail is $x=y=\cdots0101\cdots$, with $x_s=y_s=[s\text{ odd}]$, and phase $p=0$, so the front sits at a site where the cell is $(0,0)$. Its $F$-orbit is the $4$-cycle $O$ of Lemma~\ref{pm:lem:Pinst}, and the comoving period is $T=4$. For $i\le-1$ the layer series is $0011$ for even $i$ and $1100$ for odd $i$. The history below $2$ is
+\paragraph{Rule $45$ at $d=2$: a loop of period $4$.} Here $g=b\vee\neg c$. The tail is $x=y=\cdots0101\cdots$, with $x_s=y_s=[s\text{ odd}]$, and phase $p=0$, so the front sits at a site where the cell is $(0,0)$. Its $F$-orbit is the $4$-cycle $O$ of Lemma~\Bref{pm:lem:Pinst}, and the comoving period is $T=4$. For $i\le-1$ the layer series is $0011$ for even $i$ and $1100$ for odd $i$. The history below $2$ is
 \begin{center}
 \begin{tabular}{ccccc}
 \toprule
@@ -549,7 +549,7 @@ because $N_a(\omega)=N_b(\omega)=1$, and likewise $(0,0,0,1,0)$ and $(0,0,0,0,1)
 \begin{remark}\label{pm:rem:odd}
 (1) Hypothesis (ii) enters through the entry $T$: on a closed walk of even length the top flip does not change $N_c$. It holds as soon as there is a periodic history below $2$ of odd period, by Lemma~\ref{pm:lem:loops}; such a history serves every $M$ and every $w\ge2$. For $30$ and $75$ the stationary histories below $2$ (the case $d=2$ of Lemma~\ref{r30:lem:holonomy}, and the wall above) have period $1$, so Proposition~\ref{pm:prop:odd} gives a second proof of the case $d\ge2$ for these rules.
 
-(2) The proof uses $g_{11}=1$ only in the top flip. For an affine rule, $\partial g=g_{10}$ is constant, the top flip changes $\Psi_d$ by $(0,g_{10}T,0,T,0)$, and the argument gives nothing. The conclusion can fail: for rule $150$ with $w=3$ and $M=0$ the step $y[3]$ does not have $\mathrm{Hol}=K$, since the eventual image of $\Gamma_{3,0}$ is not strongly connected while that of $\Gamma_{2,0}$ is (Remark~\ref{pm:rem:linear}): the tower of $\Gamma_{3,0}$ through the step $x[2]$ is that of $\Gamma_{2,0}$ followed by one memory step (the last part of Lemma~\ref{pm:lem:loops}, whose proof does not use $g_{11}=1$), so the failure occurs at $y[3]$.
+(2) The proof uses $g_{11}=1$ only in the top flip. For an affine rule, $\partial g=g_{10}$ is constant, the top flip changes $\Psi_d$ by $(0,g_{10}T,0,T,0)$, and the argument gives nothing. The conclusion can fail: for rule $150$ with $w=3$ and $M=0$ the step $y[3]$ does not have $\mathrm{Hol}=K$, since the eventual image of $\Gamma_{3,0}$ is not strongly connected while that of $\Gamma_{2,0}$ is (Remark~\Bref{pm:rem:linear}): the tower of $\Gamma_{3,0}$ through the step $x[2]$ is that of $\Gamma_{2,0}$ followed by one memory step (the last part of Lemma~\ref{pm:lem:loops}, whose proof does not use $g_{11}=1$), so the failure occurs at $y[3]$.
 
 (3) The proof is not constructive. The walks $\omega$ and $\omega'$ exist because $I_{d-1}$ is the whole group; they depend on $M$, and their bottom layers are arbitrary periodic input sequences rather than the layers of a tail.
 \end{remark}
@@ -562,9 +562,9 @@ Let $f\in\{30,45,75,135\}$, $w\ge1$, $M\ge0$, and $-M+1\le d\le w$. Then $\mathr
 For $30$ this is Lemma~\ref{r30:lem:holonomy}. For the others it follows from Proposition~\ref{pm:prop:ahead} for $d\le1$. Let $d\ge2$. For $75$ and $45$ we use Corollary~\ref{pm:cor:crit} with the histories of this subsection: for $75$, the wall; for $45$, the period-$4$ loop for $d=2$ and the restricted wall for $d\ge3$. All of them are defined on all layers below their top, so they serve every $M$. For $135$ we use Proposition~\ref{pm:prop:odd}. Its hypothesis (i) is Proposition~\ref{pm:prop:ahead}. For (ii), the history below $2$ given above for $135$ has period $3$, so by Lemma~\ref{pm:lem:loops} it gives a closed walk of length $3$ in $G_2$, for every $M\ge0$ and $w\ge2$.
 \end{proof}
 
-\subsection{The lift certificate}\label{pm:sec:cert}
+\section{The lift certificate}\label{pm:sec:cert}
 
-This subsection is not used in any other proof. Proposition~\ref{pm:prop:odd} gives full holonomy for $135$ at every depth without exhibiting histories. The following finite computation produces explicit histories depth by depth. It confirms the behind-layer case of Proposition~\ref{pm:prop:hol} by an independent route: for $30$ and $45$ at every depth, and for $135$ at the depths $d\le105$. Its parameters are $f$, $n_{\max}$, $T_{\max}$ and the largest depth $D$ (Appendix~\ref{app:proofs}).
+This subsection is not used in any other proof. Proposition~\ref{pm:prop:odd} gives full holonomy for $135$ at every depth without exhibiting histories. The following finite computation produces explicit histories depth by depth. It confirms the behind-layer case of Proposition~\ref{pm:prop:hol} by an independent route: for $30$ and $45$ at every depth, and for $135$ at the depths $d\le105$. Its parameters are $f$, $n_{\max}$, $T_{\max}$ and the largest depth $D$ (Section~\ref{tc:sec:comp}).
 
 \emph{Nodes.} A node of depth $k\ge0$ is a pair $(X,V)$. Here $X$ is a time series, taken up to rotation, of the four bits $(Z^a_t(k-1),Z^a_t(k),Z^b_t(k-1),Z^b_t(k))$ over its minimal period $m$, and $V\ge0$ is an integer. The node is \emph{realized} by a periodic history $Z$ on layers $\le k$ (that is, below $k+1$) of minimal period $T_Z$ if the top two layers of $Z$ have joint series $X$, up to a time shift of $Z$, and $V$ is the $2$-adic valuation $v_2(T_Z)$. Then $m\mid T_Z$.
 
@@ -596,6 +596,6 @@ For $f\in\{30,45,75,135\}$ the conclusions of Theorem~\ref{r30:thm:window} hold 
 Parts (1), (2) and the size of $\mathcal{T}$ hold for every left-permutive $f$ (Proposition~\ref{r30:prop:closure} and Lemma~\ref{r30:lem:explicit}), and part (3) holds once $\mathrm{Hol}=K$ at every step $y[d]$ with $-M+1\le d\le w$, by the proof of Theorem~\ref{r30:thm:window}. This is Proposition~\ref{pm:prop:hol}. The consequences listed in Theorem~\ref{r30:thm:window} follow from (1)--(3) as shown after that theorem.
 \end{proof}
 
-\subsection{The class of 135 behind the front}\label{pm:sec:135}
+\section{The class of 135 behind the front}\label{pm:sec:135}
 
 For $135$ the holonomy behind the front is full at every depth (Proposition~\ref{pm:prop:hol}), and the conclusions of Theorem~\ref{r30:thm:window} hold for every $w$ (Proposition~\ref{pm:prop:twocopy}). The proof differs from that for the other three rules in one respect: it gives no uniform family of histories (Remark~\ref{pm:rem:odd}(3)). By Corollary~\ref{pm:cor:crit}(b), full holonomy at depth $d$ is witnessed by one periodic history below $d$ with $\ell_a\ne\ell_b$. For $30$ and $75$ stationary histories do this at every depth $d\ge2$. For $45$ a history of period $4$ does so at $d=2$, and for $d\ge3$ a wall of period $2$ does so after a top flip (Corollary~\ref{pm:cor:crit}(c)). For $135$ the certificate of Section~\ref{pm:sec:cert} gives such histories at every depth $d\le105$, and the node sets $\mathcal R_0,\dots,\mathcal R_{105}$ of Proposition~\ref{pm:prop:cert}(3) are pairwise distinct. We do not know whether rule $135$ has a wall like that of $45$, that is, a periodic history $Z$ defined on all layers $i\in\Z$ with $N_a(Z,i)\ne N_b(Z,i)$ for all large $i$. Nothing in this paper depends on the answer.

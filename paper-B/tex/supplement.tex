@@ -1,0 +1,67 @@
+\documentclass[11pt]{amsart}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage{xr-hyper}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\Cent}{\mathcal{C}}
+\newcommand{\sh}{\sigma}
+
+\externaldocument[B-]{main}
+\newcommand{\Bref}[1]{\ref*{B-#1} of \cite{PaperB}}
+
+\title[The two-copy window graph]{The two-copy window graph of a permutive second-order cellular automaton}
+\author{Michael Dayah}
+\email{michael@dayah.com}
+\date{November 10, 2026}
+
+\subjclass[2020]{Primary 37B15; Secondary 37B10, 05C20}
+\begin{document}
+
+\begin{abstract}
+This note is a supplement to \cite{PaperB}. For a second-order automaton $F_f$ with $f$ a left-permutive elementary rule, the two-copy window graph $\Gamma_{w,M}$ follows both configurations of a pair that differ behind a front moving at the speed of light, on the $w$ cells behind the front and the $M$ cells ahead of it. We determine its eventual image: it has $2^{3w+2}4^M$ states and every walk of length $\lceil w/2\rceil$ ends in it. For the rules $30$, $45$, $75$ and $135$ we prove that it is strongly connected for all $w$ and $M$. Strong connectivity is reduced to the holonomy of closed walks at each layer behind the front; for $30$, $45$ and $75$ this is read off from explicit periodic histories, and for $135$ it is obtained from a single closed walk of odd length by an induction on the depth.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{tc:sec:intro}
+
+The proofs of \cite{PaperB} follow one configuration along the front, through the graphs $\Lambda_M$. Here we follow both configurations of a front pair, through a \emph{two-copy} window graph $\Gamma_{w,M}$ that also records $w$ cells behind the front, and we determine its eventual image: its size, the number of steps after which every walk has entered it, and, for the rules $30$, $45$, $75$ and $135$, its strong connectivity (Theorem~\ref{r30:thm:window} and Proposition~\ref{pm:prop:twocopy}). Strong connectivity is reduced to a statement about the holonomy of closed walks at each layer behind the front. For $30$, $45$ and $75$ this holonomy is read off from explicit periodic histories, one family for all depths. For $135$ we know no such family, and the holonomy is obtained from a single closed walk of odd length by an induction on the depth (Proposition~\ref{pm:prop:odd}). No theorem of \cite{PaperB} uses these results. We use the notation of \cite{PaperB} throughout, and references of the form ``Section~3 of \cite{PaperB}'' are to that paper.
+
+\input{sec_twocopy}
+
+\input{supp_comp}
+
+\medskip
+\noindent\textbf{Use of AI tools.} Large language models (Anthropic's Claude models) were used extensively in this work: to propose and develop proofs, to design, write and run the computer searches and their independent re-implementations, to check proofs and computations, and to draft the manuscript. The models are not authors. The author has reviewed the content and takes full responsibility for it. All code and computational output accompany \cite{PaperB} (Section~\ref{tc:sec:comp}).
+
+\begin{thebibliography}{9}
+
+\bibitem{PaperB} M.~Dayah, Fronts at the speed of light: rigidity of permutive second-order cellular automata, in preparation.
+
+\end{thebibliography}
+
+\end{document}

@@ -19,6 +19,8 @@ pdf:
 	@for p in $(PAPERS); do \
 	  ( cd paper-$$p/tex && for i in 1 2 3; do pdflatex -interaction=nonstopmode -halt-on-error main.tex > /dev/null || { echo "paper-$$p: pdflatex failed, see paper-$$p/tex/main.log"; exit 1; }; done \
 	    && echo "paper-$$p/tex/main.pdf" ) || exit 1; done
+	@( cd paper-B/tex && for i in 1 2 3; do pdflatex -interaction=nonstopmode -halt-on-error supplement.tex > /dev/null || { echo "paper-B: pdflatex failed, see paper-B/tex/supplement.log"; exit 1; }; done \
+	    && echo "paper-B/tex/supplement.pdf" )
 
 clean:
 	@for p in $(PAPERS); do $(MAKE) --no-print-directory -C paper-$$p clean; done
