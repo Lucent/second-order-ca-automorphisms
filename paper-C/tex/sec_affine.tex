@@ -28,7 +28,7 @@ So a class with $\bigoplus_mS_m\le\Aut(X_{F_f})$ always has automorphisms that a
 
 Let $\beta$ be an action of $\Z^d$ by continuous automorphisms of a compact abelian group $G$, with normalised Haar measure $\lambda_G$. The action is \emph{irreducible} if every closed $\beta$-invariant subgroup $H\subsetneq G$ is finite, and \emph{mixing} if it is mixing with respect to $\lambda_G$. A \emph{measurable conjugacy} between two such actions $(G,\beta)$ and $(G',\beta')$ is a measure-preserving map $\varphi\colon(G,\lambda_G)\to(G',\lambda_{G'})$, invertible modulo null sets, with $\varphi\circ\beta^{v}=\beta'^{v}\circ\varphi$ almost everywhere for every $v\in\Z^d$.
 
-\begin{theorem}[Kitchens--Schmidt \cite{KS2000}; see also {\cite[Theorem~8.4]{Schmidt2002}}]\label{aff:thm:KS}
+\begin{theorem}[Kitchens--Schmidt {\cite[Theorem~1.1]{KS2000}}; see also {\cite[Theorem~8.4]{Schmidt2002}}]\label{aff:thm:KS}
 Let $d\ge2$, and let $(G,\beta)$ and $(G',\beta')$ be irreducible and mixing actions of $\Z^d$ by continuous automorphisms of compact zero-dimensional abelian groups. Then every measurable conjugacy $\varphi$ between them is affine almost everywhere: there are a continuous surjective group homomorphism $A\colon G\to G'$ and $g'\in G'$ with $\varphi(g)=A(g)+g'$ for $\lambda_G$-almost every $g$.
 \end{theorem}
 
@@ -100,7 +100,7 @@ Indeed, the line $s=0$ meets $E$ where $tz^2=0$, that is at $P_0$ simply and at 
 
 Let $\mathcal D$ be the group of divisors of degree $0$ supported on $\{P_0,\dots,P_3\}$, which is free of rank $3$, and define $\theta\colon\mathcal D\to\Z/4$ by $\theta(\sum n_iP_i)=2n_0+n_1-n_2$. It vanishes on the three divisors above (on $\operatorname{div}t$ the value is $4$), and it is onto. The three divisors span a subgroup $L\subseteq\ker\theta$ of index $|\det|=4$ in $\mathcal D$, in the basis $P_0-P_3,P_1-P_3,P_2-P_3$, where they are $(1,-1,1)$, $(1,1,-1)$ and $(0,1,1)$. Since $\ker\theta$ also has index $4$, $L=\ker\theta$. In particular $s,t,g$ generate a free abelian group $W$ of rank $3$, and $\operatorname{div}\colon W\to L$ is an isomorphism.
 
-Now let $u\in\mathcal O^{\times}$. Both $u$ and $u^{-1}$ are regular on the affine curve, so $D=\operatorname{div}u\in\mathcal D$. The values $\theta(P_i-P_3)$ are $2,1,3,0$ for $i=0,1,2,3$, so there is an $i$ with $D-(P_i-P_3)\in\ker\theta=L$, say $D-(P_i-P_3)=\operatorname{div}w$ with $w\in W$. Then $P_i-P_3=\operatorname{div}(u/w)$ is principal, and on an elliptic curve a divisor $P-P'$ is principal only if $P=P'$ \cite[Cor.~III.3.5]{Silverman2009}. So $i=3$, $u/w$ has no zeros or poles, and $u/w\in\F_2^{\times}=\{1\}$. Hence $\mathcal O^{\times}=W$. Finally (R2) holds since $\operatorname{div}(s^at^b)=(a+b,\,b-a,\,a-b)$ in the basis above vanishes only for $a=b=0$.
+Now let $u\in\mathcal O^{\times}$. Both $u$ and $u^{-1}$ are regular on the affine curve, so $D=\operatorname{div}u\in\mathcal D$. The values $\theta(P_i-P_3)$ are $2,1,3,0$ for $i=0,1,2,3$, so there is an $i$ with $D-(P_i-P_3)\in\ker\theta=L$, say $D-(P_i-P_3)=\operatorname{div}w$ with $w\in W$. Then $P_i-P_3=\operatorname{div}(u/w)$ is principal, and on an elliptic curve a divisor $P-P'$ is principal only if $P=P'$ \cite[Lemma~III.3.3]{Silverman2009}. So $i=3$, $u/w$ has no zeros or poles, and $u/w\in\F_2^{\times}=\{1\}$. Hence $\mathcal O^{\times}=W$. Finally (R2) holds since $\operatorname{div}(s^at^b)=(a+b,\,b-a,\,a-b)$ in the basis above vanishes only for $a=b=0$.
 \end{proof}
 
 \subsection{The automorphism groups}\label{aff:sec:groups}
